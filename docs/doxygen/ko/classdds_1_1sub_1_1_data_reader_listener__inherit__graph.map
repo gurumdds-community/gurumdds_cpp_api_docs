@@ -1,0 +1,5 @@
+<map id="dds::sub::DataReaderListener&lt; T &gt;" name="dds::sub::DataReaderListener&lt; T &gt;">
+<area shape="rect" id="Node000001" target="_top" title="입력 DataReader로부터 데이터 가용성 및 상태 알림 수신" alt="" coords="5,5,221,32"/>
+<area shape="rect" id="Node000002" href="$classdds_1_1sub_1_1_no_op_data_reader_listener.html" target="_top" title="필요한 callback만 재정의할 수 있도록 DataReader callback의 기본 빈 구현을 제공합니다." alt="" coords="27,80,200,123"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="115,45,116,81,111,79,111,49"/>
+</map>

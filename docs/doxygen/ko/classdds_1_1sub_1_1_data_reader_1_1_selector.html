@@ -1,0 +1,656 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/xhtml;charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=11" http-equiv="X-UA-Compatible"/>
+<meta content="Doxygen 1.18.0" name="generator"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>GurumDDS C++ API Reference: dds::sub::DataReader&lt; T, DELEGATE &gt;::Selector 클래스</title>
+<link href="gurum-networks-logo.png" rel="icon" type="image/x-icon"/>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script src="dynsections.js" type="text/javascript"></script>
+<script src="codefolding.js" type="text/javascript"></script>
+<script src="clipboard.js" type="text/javascript"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script src="navtreedata.js" type="text/javascript"></script>
+<script src="navtree.js" type="text/javascript"></script>
+<script src="cookie.js" type="text/javascript"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script src="search/searchdata.js" type="text/javascript"></script>
+<script src="search/search.js" type="text/javascript"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+<link href="ReferenceBranding.css" rel="stylesheet" type="text/css"/>
+<script defer="True" src="ReferenceUi.js"></script><link href="../en/classdds_1_1sub_1_1_data_reader_1_1_selector.html" hreflang="en" rel="alternate"/><link href="../ko/classdds_1_1sub_1_1_data_reader_1_1_selector.html" hreflang="ko" rel="alternate"/><link href="../language.css" rel="stylesheet"/><script defer="defer" src="../language.js"></script></head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellpadding="0" cellspacing="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">GurumDDS C++ API Reference<span id="projectnumber"> 1.3.2</span>
+   </div>
+  </td>
+ <td class="doc-language-cell"><label class="doc-language"><select aria-label="문서 언어" data-current="1"><option lang="en" value="../en/classdds_1_1sub_1_1_data_reader_1_1_selector.html">English</option><option lang="en" selected="selected" value="../ko/classdds_1_1sub_1_1_data_reader_1_1_selector.html">Korean</option></select></label></td></tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script id="doxygen-config" type="application/json">
+{
+  "relPath": "",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script src="menudata.js" type="text/javascript"></script>
+<script src="menu.js" type="text/javascript"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> 주 메뉴 표시 전환</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div class="MSearchBoxInactive" id="MSearchBox">
+        <span class="left">
+          <span class="search-icon" id="MSearchSelect"><span class="search-icon-dropdown"></span></span>
+          <input accesskey="S" id="MSearchField" placeholder="검색" type="text" value=""/>
+          </span><span class="right">
+            <a href="javascript:searchBox.CloseResultsWindow()" id="MSearchClose"><div class="close-icon" id="MSearchCloseImg"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div class="ui-resizable side-nav-resizable" id="side-nav">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div class="sync" id="nav-sync"></div>
+    </div>
+  </div>
+  <div class="ui-resizable-handle" id="splitbar">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('classdds_1_1sub_1_1_data_reader_1_1_selector.html','','classdds_1_1sub_1_1_data_reader_1_1_selector-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">로딩중...</div>
+<div class="SRStatus" id="Searching">검색중...</div>
+<div class="SRStatus" id="NoMatches">일치하는것 없음</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">dds::sub::DataReader&lt; T, DELEGATE &gt;::Selector 클래스</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p class="dds-class-include"><code>#include &lt;gurumdds/cpp/sub/TDataReader.hpp&gt;</code></p>
+
+<p>상태, instance, 개수를 기준으로 sample을 선택합니다.  
+ <a href="#details">더 자세히 ...</a></p>
+<a id="details" name="details"></a><h2 class="groupheader" id="header-details">상세한 설명</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename T, template&lt; typename Q &gt; class DELEGATE&gt;<br/>
+class dds::sub::DataReader&lt; T, DELEGATE &gt;::Selector</div><p>상태, instance, 개수를 기준으로 sample을 선택합니다. </p>
+<p>새로운 선택자는 nil instance handle로 시작하고, 모든 상태 마스크가 사용되며, 명시적인 sample 제한이 없습니다. 해당 instance에만 레코드를 선택하도록 instance handle을 설정합니다. 선택자는 <span class="tt"><a class="el" href="classdds_1_1sub_1_1_data_reader.html#a5d0ac7ed32117e5fa49bf63ecf407a3d" title="DataReader의 기본 상태 필터를 가져옵니다">DataReader::default_filter_state()</a></span>와 독립적으로 자체 상태 마스크를 저장합니다.</p>
+<p>읽거나 가져오기 전에 이 선택자의 <span class="tt"><a class="el" href="#ae7e230bc8a985d2f0829115af34ef73e" title="선택한 sample 수 제한">max_samples()</a></span>로 sample 한도를 설정하세요. loaned collection을 반환하는 오버로드와 반복자를 받는 오버로드에 모두 적용합니다. 순방향 반복자를 받는 오버로드에서는 기본 구현 객체가 선택자의 한도를 사용하며, 대상에 반환하는 모든 레코드를 수용할 공간이 있어야 합니다. </p>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-pub-methods"><a id="pub-methods" name="pub-methods"></a>
+공개 멤버 함수</h2></td></tr>
+<tr class="memitem:ae723f956e7b018cebde01909ba197290" id="r_ae723f956e7b018cebde01909ba197290"><td class="memItemLeft"> </td><td class="memItemRight"><a class="el" href="#ae723f956e7b018cebde01909ba197290">Selector</a> (<a class="el" href="classdds_1_1sub_1_1_data_reader.html#adfb0369ca408857cac5a09dd871b1250">DataReader&lt;T&gt;</a> &amp;dr)</td></tr>
+<tr class="memdesc:ae723f956e7b018cebde01909ba197290"><td class="mdescLeft"> </td><td class="mdescRight">이 DataReader의 선택자를 생성합니다.  <br/></td></tr>
+<tr class="memitem:a4385e63265161ff676026a1aa36a7b43" id="r_a4385e63265161ff676026a1aa36a7b43"><td class="memItemLeft"><a class="el" href="#ae723f956e7b018cebde01909ba197290">Selector</a> &amp; </td><td class="memItemRight"><a class="el" href="#a4385e63265161ff676026a1aa36a7b43">instance</a> (const <a class="el" href="group__dds__core.html#ga8ee18acd2002fb15f2650f5c7cb055d0">dds::core::InstanceHandle</a> &amp;h)</td></tr>
+<tr class="memdesc:a4385e63265161ff676026a1aa36a7b43"><td class="mdescLeft"> </td><td class="mdescRight">선택 범위를 특정 instance로 제한합니다.  <br/></td></tr>
+<tr class="memitem:af60e340287752e5facc7ba3e6a733bb1" id="r_af60e340287752e5facc7ba3e6a733bb1"><td class="memItemLeft"><a class="el" href="#ae723f956e7b018cebde01909ba197290">Selector</a> &amp; </td><td class="memItemRight"><a class="el" href="#af60e340287752e5facc7ba3e6a733bb1">state</a> (const <a class="el" href="classdds_1_1sub_1_1status_1_1_data_state.html">dds::sub::status::DataState</a> &amp;s)</td></tr>
+<tr class="memdesc:af60e340287752e5facc7ba3e6a733bb1"><td class="mdescLeft"> </td><td class="mdescRight">선택에 적용할 sample, 뷰, instance 마스크를 설정합니다.  <br/></td></tr>
+<tr class="memitem:a4a62b0b2d63d754e3db62529b946d2db" id="r_a4a62b0b2d63d754e3db62529b946d2db"><td class="memItemLeft"><a class="el" href="#ae723f956e7b018cebde01909ba197290">Selector</a> &amp; </td><td class="memItemRight"><a class="el" href="#a4a62b0b2d63d754e3db62529b946d2db">content</a> (const <a class="el" href="classdds_1_1sub_1_1_query.html">dds::sub::Query</a> &amp;query)</td></tr>
+<tr class="memdesc:a4a62b0b2d63d754e3db62529b946d2db"><td class="mdescLeft"> </td><td class="mdescRight">쿼리 선택자 입력 지점을 노출합니다  <br/></td></tr>
+<tr class="memitem:ae7e230bc8a985d2f0829115af34ef73e" id="r_ae7e230bc8a985d2f0829115af34ef73e"><td class="memItemLeft"><a class="el" href="#ae723f956e7b018cebde01909ba197290">Selector</a> &amp; </td><td class="memItemRight"><a class="el" href="#ae7e230bc8a985d2f0829115af34ef73e">max_samples</a> (uint32_t n)</td></tr>
+<tr class="memdesc:ae7e230bc8a985d2f0829115af34ef73e"><td class="mdescLeft"> </td><td class="mdescRight">선택한 sample 수 제한  <br/></td></tr>
+<tr class="memitem:a38e6f7ed5f975b7b102a5c93192ce475" id="r_a38e6f7ed5f975b7b102a5c93192ce475"><td class="memItemLeft"><a class="el" href="classdds_1_1sub_1_1_loaned_samples.html">dds::sub::LoanedSamples</a>&lt; T, ::dds::sub::detail::SampleInfo &gt; </td><td class="memItemRight"><a class="el" href="#a38e6f7ed5f975b7b102a5c93192ce475">read</a> ()</td></tr>
+<tr class="memdesc:a38e6f7ed5f975b7b102a5c93192ce475"><td class="mdescLeft"> </td><td class="mdescRight">선택한 sample과 일치하는 것을 읽습니다  <br/></td></tr>
+<tr class="memitem:a8e3726a2c14c91ae076e04cbfdc70d4e" id="r_a8e3726a2c14c91ae076e04cbfdc70d4e"><td class="memItemLeft"><a class="el" href="classdds_1_1sub_1_1_loaned_samples.html">dds::sub::LoanedSamples</a>&lt; T, ::dds::sub::detail::SampleInfo &gt; </td><td class="memItemRight"><a class="el" href="#a8e3726a2c14c91ae076e04cbfdc70d4e">take</a> ()</td></tr>
+<tr class="memdesc:a8e3726a2c14c91ae076e04cbfdc70d4e"><td class="mdescLeft"> </td><td class="mdescRight">선택 조건과 일치하는 sample을 가져옵니다.  <br/></td></tr>
+<tr class="memitem:a4a30fd428fb66720a21a150886665bb8" id="r_a4a30fd428fb66720a21a150886665bb8"><td class="memItemLeft">dds::sub::LoanedSamplesWInfoEx&lt; T &gt; </td><td class="memItemRight"><a class="el" href="#a4a30fd428fb66720a21a150886665bb8">take_w_sampleinfoex</a> ()</td></tr>
+<tr class="memdesc:a4a30fd428fb66720a21a150886665bb8"><td class="mdescLeft"> </td><td class="mdescRight">확장된 메타데이터로 sample에 대한 액세스 선언  <br/></td></tr>
+<tr class="memitem:a1033f76dc2b9a14cc6526bb40bd70167" id="r_a1033f76dc2b9a14cc6526bb40bd70167"><td class="memItemLeft">dds::sub::LoanedSamplesWInfoEx&lt; T &gt; </td><td class="memItemRight"><a class="el" href="#a1033f76dc2b9a14cc6526bb40bd70167">read_w_sampleinfoex</a> ()</td></tr>
+<tr class="memdesc:a1033f76dc2b9a14cc6526bb40bd70167"><td class="mdescLeft"> </td><td class="mdescRight">확장된 메타데이터로 sample에 대한 액세스 선언  <br/></td></tr>
+<tr class="memitem:a1b006b7e6091a8bf47f25fbdf2a92f66" id="r_a1b006b7e6091a8bf47f25fbdf2a92f66"><td class="memTemplParams" colspan="2">template&lt;typename SamplesFWIterator&gt; </td></tr>
+<tr class="memitem:a1b006b7e6091a8bf47f25fbdf2a92f66 template"><td class="memItemLeft">uint32_t </td><td class="memItemRight"><a class="el" href="#a1b006b7e6091a8bf47f25fbdf2a92f66">read</a> (SamplesFWIterator sfit, uint32_t max_samples)</td></tr>
+<tr class="memdesc:a1b006b7e6091a8bf47f25fbdf2a92f66"><td class="mdescLeft"> </td><td class="mdescRight">선택한 sample을 기존 저장소로 읽어들임  <br/></td></tr>
+<tr class="memitem:abb9c8f58a3f696ba50a0c2ac2c0e851b" id="r_abb9c8f58a3f696ba50a0c2ac2c0e851b"><td class="memTemplParams" colspan="2">template&lt;typename SamplesFWIterator&gt; </td></tr>
+<tr class="memitem:abb9c8f58a3f696ba50a0c2ac2c0e851b template"><td class="memItemLeft">uint32_t </td><td class="memItemRight"><a class="el" href="#abb9c8f58a3f696ba50a0c2ac2c0e851b">take</a> (SamplesFWIterator sfit, uint32_t max_samples)</td></tr>
+<tr class="memdesc:abb9c8f58a3f696ba50a0c2ac2c0e851b"><td class="mdescLeft"> </td><td class="mdescRight">선택한 sample을 가져와 기존 저장 공간에 씁니다.  <br/></td></tr>
+<tr class="memitem:af52c0799c5c9e100682ea3de606597af" id="r_af52c0799c5c9e100682ea3de606597af"><td class="memTemplParams" colspan="2">template&lt;typename SamplesBIIterator&gt; </td></tr>
+<tr class="memitem:af52c0799c5c9e100682ea3de606597af template"><td class="memItemLeft">uint32_t </td><td class="memItemRight"><a class="el" href="#af52c0799c5c9e100682ea3de606597af">read</a> (SamplesBIIterator sbit)</td></tr>
+<tr class="memdesc:af52c0799c5c9e100682ea3de606597af"><td class="mdescLeft"> </td><td class="mdescRight">선택한 sample을 확장 가능한 컨테이너로 읽습니다.  <br/></td></tr>
+<tr class="memitem:a16290acbb29099a0f52e0490521f285b" id="r_a16290acbb29099a0f52e0490521f285b"><td class="memTemplParams" colspan="2">template&lt;typename SamplesBIIterator&gt; </td></tr>
+<tr class="memitem:a16290acbb29099a0f52e0490521f285b template"><td class="memItemLeft">uint32_t </td><td class="memItemRight"><a class="el" href="#a16290acbb29099a0f52e0490521f285b">take</a> (SamplesBIIterator sbit)</td></tr>
+<tr class="memdesc:a16290acbb29099a0f52e0490521f285b"><td class="mdescLeft"> </td><td class="mdescRight">선택한 sample을 가져와 확장 가능한 컨테이너에 추가합니다.  <br/></td></tr>
+</table>
+<a id="doc-constructors" name="doc-constructors"></a><h2 class="groupheader" id="header-doc-constructors">생성자와 소멸자</h2>
+<a id="ae723f956e7b018cebde01909ba197290" name="ae723f956e7b018cebde01909ba197290"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae723f956e7b018cebde01909ba197290">◆ </a></span>Selector()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T, template&lt; typename Q &gt; class DELEGATE&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdds_1_1sub_1_1_data_reader.html">dds::sub::DataReader&lt;T&gt;</a>&lt; T, DELEGATE &gt;::Selector::Selector </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdds_1_1sub_1_1_data_reader.html#adfb0369ca408857cac5a09dd871b1250">DataReader&lt;T&gt;</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>dr</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>이 DataReader의 선택자를 생성합니다. </p>
+<p>selector는 모든 instance, 모든 데이터 상태로 시작하며 명시적인 sample 수 제한은 없습니다.</p>
+<dl class="params"><dt>매개변수</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[입력]</td><td class="paramname">dr</td><td>sample을 선택할 <a class="el" href="classdds_1_1sub_1_1_data_reader.html" title="Topic에서 지정된 타입의 sample을 수신합니다.">DataReader&lt;T&gt;</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="doc-func-members" name="doc-func-members"></a><h2 class="groupheader" id="header-doc-func-members">멤버 함수</h2>
+<a id="a4a62b0b2d63d754e3db62529b946d2db" name="a4a62b0b2d63d754e3db62529b946d2db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a62b0b2d63d754e3db62529b946d2db">◆ </a></span>content()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T, template&lt; typename Q &gt; class DELEGATE&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#ae723f956e7b018cebde01909ba197290">Selector</a> &amp; <a class="el" href="classdds_1_1sub_1_1_data_reader.html">dds::sub::DataReader&lt;T&gt;</a>&lt; T, DELEGATE &gt;::Selector::content </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdds_1_1sub_1_1_query.html">dds::sub::Query</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>query</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>쿼리 선택자 입력 지점을 노출합니다 </p>
+<p>기본 GurumDDS 구현 객체는 쿼리 작업을 구현되지 않은 상태로 남깁니다. 표현식 기반 구독에 대해서는 ContentFilteredTopic을 사용하십시오.</p>
+<dl class="params"><dt>매개변수</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[입력]</td><td class="paramname">query</td><td>쿼리 표현식 및 매개변수</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>반환값</dt><dd>구현 객체에 의해 구현될 때 이 선택자 </dd></dl>
+
+</div>
+</div>
+<a id="a4385e63265161ff676026a1aa36a7b43" name="a4385e63265161ff676026a1aa36a7b43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4385e63265161ff676026a1aa36a7b43">◆ </a></span>instance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T, template&lt; typename Q &gt; class DELEGATE&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#ae723f956e7b018cebde01909ba197290">Selector</a> &amp; <a class="el" href="classdds_1_1sub_1_1_data_reader.html">dds::sub::DataReader&lt;T&gt;</a>&lt; T, DELEGATE &gt;::Selector::instance </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__dds__core.html#ga8ee18acd2002fb15f2650f5c7cb055d0">dds::core::InstanceHandle</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>h</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>선택 범위를 특정 instance로 제한합니다. </p>
+<dl class="params"><dt>매개변수</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[입력]</td><td class="paramname">h</td><td>instance handle 또는 모든 instance에서 선택할 nil handle</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>반환값</dt><dd>이 선택자 </dd></dl>
+
+</div>
+</div>
+<a id="ae7e230bc8a985d2f0829115af34ef73e" name="ae7e230bc8a985d2f0829115af34ef73e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7e230bc8a985d2f0829115af34ef73e">◆ </a></span>max_samples()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T, template&lt; typename Q &gt; class DELEGATE&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#ae723f956e7b018cebde01909ba197290">Selector</a> &amp; <a class="el" href="classdds_1_1sub_1_1_data_reader.html">dds::sub::DataReader&lt;T&gt;</a>&lt; T, DELEGATE &gt;::Selector::max_samples </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>n</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>선택한 sample 수 제한 </p>
+<p>기본 구현 객체는 0을 기본 무제한 값으로 매핑합니다. 작업이 고정 용량 스토리지에 맞춰져야 할 경우 32 비트 정수로 표현할 수 있는 양의 한계를 사용합니다.</p>
+<dl class="params"><dt>매개변수</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[입력]</td><td class="paramname">n</td><td>최대 sample 수, 또는 명시적 제한이 없으면 0</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>반환값</dt><dd>이 선택자 </dd></dl>
+
+</div>
+</div>
+<a id="a38e6f7ed5f975b7b102a5c93192ce475" name="a38e6f7ed5f975b7b102a5c93192ce475"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38e6f7ed5f975b7b102a5c93192ce475">◆ </a></span>read() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T, template&lt; typename Q &gt; class DELEGATE&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdds_1_1sub_1_1_loaned_samples.html">dds::sub::LoanedSamples</a>&lt; T, ::dds::sub::detail::SampleInfo &gt; <a class="el" href="classdds_1_1sub_1_1_data_reader.html">dds::sub::DataReader&lt;T&gt;</a>&lt; T, DELEGATE &gt;::Selector::read </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>선택한 sample과 일치하는 것을 읽습니다 </p>
+<p>반환된 sample은 <a class="el" href="classdds_1_1sub_1_1_data_reader.html" title="Topic에서 지정된 타입의 sample을 수신합니다.">DataReader&lt;T&gt;</a> 기록에 남아 있으며 읽음으로 표시됩니다.</p>
+<dl class="section return"><dt>반환값</dt><dd>일치하는 레코드 또는 네이티브 호출에서 데이터가 없거나 오류가 보고되는 경우 비어 있는 컬렉션 </dd></dl>
+
+</div>
+</div>
+<a id="af52c0799c5c9e100682ea3de606597af" name="af52c0799c5c9e100682ea3de606597af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af52c0799c5c9e100682ea3de606597af">◆ </a></span>read() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T, template&lt; typename Q &gt; class DELEGATE&gt; </div>
+<div class="memtemplate">
+template&lt;typename SamplesBIIterator&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t <a class="el" href="classdds_1_1sub_1_1_data_reader.html">dds::sub::DataReader&lt;T&gt;</a>&lt; T, DELEGATE &gt;::Selector::read </td>
+          <td>(</td>
+          <td class="paramtype">SamplesBIIterator</td>          <td class="paramname"><span class="paramname"><em>sbit</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>선택한 sample을 확장 가능한 컨테이너로 읽습니다. </p>
+<p>읽기는 이러한 기록을 <a class="el" href="classdds_1_1sub_1_1_data_reader.html" title="Topic에서 지정된 타입의 sample을 수신합니다.">DataReader&lt;T&gt;</a> history에 유지합니다.</p>
+<dl class="params"><dt>매개변수</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[출력]</td><td class="paramname">sbit</td><td>대상에 대한 백삽입 반복자</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>반환값</dt><dd>추가된 레코드 수 </dd></dl>
+
+</div>
+</div>
+<a id="a1b006b7e6091a8bf47f25fbdf2a92f66" name="a1b006b7e6091a8bf47f25fbdf2a92f66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b006b7e6091a8bf47f25fbdf2a92f66">◆ </a></span>read() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T, template&lt; typename Q &gt; class DELEGATE&gt; </div>
+<div class="memtemplate">
+template&lt;typename SamplesFWIterator&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t <a class="el" href="classdds_1_1sub_1_1_data_reader.html">dds::sub::DataReader&lt;T&gt;</a>&lt; T, DELEGATE &gt;::Selector::read </td>
+          <td>(</td>
+          <td class="paramtype">SamplesFWIterator</td>          <td class="paramname"><span class="paramname"><em>sfit</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>max_samples</em></span> )</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>선택한 sample을 기존 저장소로 읽어들임 </p>
+<p>읽기는 이러한 기록을 <a class="el" href="classdds_1_1sub_1_1_data_reader.html" title="Topic에서 지정된 타입의 sample을 수신합니다.">DataReader&lt;T&gt;</a> history에 유지합니다.</p>
+<dl class="params"><dt>매개변수</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[출력]</td><td class="paramname">sfit</td><td>선택한 모든 레코드에 충분히 큰 저장소의 첫번째 쓰기 위치 </td></tr>
+    <tr><td class="paramdir">[입력]</td><td class="paramname">max_samples</td><td>기본 델리게이트에 의해 인수가 무시되었습니다. <span class="tt"><a class="el" href="#ae7e230bc8a985d2f0829115af34ef73e" title="선택한 sample 수 제한">Selector::max_samples()</a></span>로 한도를 설정하십시오</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>반환값</dt><dd>복사된 기록 수 </dd></dl>
+
+</div>
+</div>
+<a id="a1033f76dc2b9a14cc6526bb40bd70167" name="a1033f76dc2b9a14cc6526bb40bd70167"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1033f76dc2b9a14cc6526bb40bd70167">◆ </a></span>read_w_sampleinfoex()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T, template&lt; typename Q &gt; class DELEGATE&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">dds::sub::LoanedSamplesWInfoEx&lt; T &gt; <a class="el" href="classdds_1_1sub_1_1_data_reader.html">dds::sub::DataReader&lt;T&gt;</a>&lt; T, DELEGATE &gt;::Selector::read_w_sampleinfoex </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>확장된 메타데이터로 sample에 대한 액세스 선언 </p>
+<p>기본 GurumDDS 선택자 구현 객체는 이 오버로드를 제공하지 않습니다. 해당하는 <a class="el" href="classdds_1_1sub_1_1_data_reader.html" title="Topic에서 지정된 타입의 sample을 수신합니다.">DataReader&lt;T&gt;</a> 멤버를 사용합니다.</p>
+<dl class="section return"><dt>반환값</dt><dd>구현 객체이 구현한 경우 확장 메타데이터가 있는 선택된 sample 기록 </dd></dl>
+
+</div>
+</div>
+<a id="af60e340287752e5facc7ba3e6a733bb1" name="af60e340287752e5facc7ba3e6a733bb1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af60e340287752e5facc7ba3e6a733bb1">◆ </a></span>state()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T, template&lt; typename Q &gt; class DELEGATE&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#ae723f956e7b018cebde01909ba197290">Selector</a> &amp; <a class="el" href="classdds_1_1sub_1_1_data_reader.html">dds::sub::DataReader&lt;T&gt;</a>&lt; T, DELEGATE &gt;::Selector::state </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdds_1_1sub_1_1status_1_1_data_state.html">dds::sub::status::DataState</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>s</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>선택에 적용할 sample, 뷰, instance 마스크를 설정합니다. </p>
+<dl class="params"><dt>매개변수</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[입력]</td><td class="paramname">s</td><td>상태 필터</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>반환값</dt><dd>이 선택자 </dd></dl>
+
+</div>
+</div>
+<a id="a8e3726a2c14c91ae076e04cbfdc70d4e" name="a8e3726a2c14c91ae076e04cbfdc70d4e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e3726a2c14c91ae076e04cbfdc70d4e">◆ </a></span>take() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T, template&lt; typename Q &gt; class DELEGATE&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdds_1_1sub_1_1_loaned_samples.html">dds::sub::LoanedSamples</a>&lt; T, ::dds::sub::detail::SampleInfo &gt; <a class="el" href="classdds_1_1sub_1_1_data_reader.html">dds::sub::DataReader&lt;T&gt;</a>&lt; T, DELEGATE &gt;::Selector::take </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>선택 조건과 일치하는 sample을 가져옵니다. </p>
+<p>DataReader의 기록에서 반환된 sample을 제거합니다. 결과는 해당 컬렉션 스토리지가 생존하는 한 레코드를 소유합니다.</p>
+<dl class="section return"><dt>반환값</dt><dd>일치하는 레코드 또는 네이티브 호출에서 데이터가 없거나 오류가 보고되는 경우 비어 있는 컬렉션 </dd></dl>
+
+</div>
+</div>
+<a id="a16290acbb29099a0f52e0490521f285b" name="a16290acbb29099a0f52e0490521f285b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16290acbb29099a0f52e0490521f285b">◆ </a></span>take() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T, template&lt; typename Q &gt; class DELEGATE&gt; </div>
+<div class="memtemplate">
+template&lt;typename SamplesBIIterator&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t <a class="el" href="classdds_1_1sub_1_1_data_reader.html">dds::sub::DataReader&lt;T&gt;</a>&lt; T, DELEGATE &gt;::Selector::take </td>
+          <td>(</td>
+          <td class="paramtype">SamplesBIIterator</td>          <td class="paramname"><span class="paramname"><em>sbit</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>선택한 sample을 가져와 확장 가능한 컨테이너에 추가합니다. </p>
+<p>대상에 복사하기 전에 선택한 기록을 <a class="el" href="classdds_1_1sub_1_1_data_reader.html" title="Topic에서 지정된 타입의 sample을 수신합니다.">DataReader&lt;T&gt;</a> history에서 제거합니다. 대상에 쓰기가 실패하면, 일부 기록만 포함될 수 있습니다. 모든 제거된 기록은 <a class="el" href="classdds_1_1sub_1_1_data_reader.html" title="Topic에서 지정된 타입의 sample을 수신합니다.">DataReader&lt;T&gt;</a> history에서 제외됩니다.</p>
+<dl class="params"><dt>매개변수</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[출력]</td><td class="paramname">sbit</td><td>대상에 대한 백삽입 반복자</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>반환값</dt><dd>추가된 레코드 수 </dd></dl>
+
+</div>
+</div>
+<a id="abb9c8f58a3f696ba50a0c2ac2c0e851b" name="abb9c8f58a3f696ba50a0c2ac2c0e851b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb9c8f58a3f696ba50a0c2ac2c0e851b">◆ </a></span>take() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T, template&lt; typename Q &gt; class DELEGATE&gt; </div>
+<div class="memtemplate">
+template&lt;typename SamplesFWIterator&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t <a class="el" href="classdds_1_1sub_1_1_data_reader.html">dds::sub::DataReader&lt;T&gt;</a>&lt; T, DELEGATE &gt;::Selector::take </td>
+          <td>(</td>
+          <td class="paramtype">SamplesFWIterator</td>          <td class="paramname"><span class="paramname"><em>sfit</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>max_samples</em></span> )</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>선택한 sample을 가져와 기존 저장 공간에 씁니다. </p>
+<p>대상에 복사하기 전에 선택한 기록을 <a class="el" href="classdds_1_1sub_1_1_data_reader.html" title="Topic에서 지정된 타입의 sample을 수신합니다.">DataReader&lt;T&gt;</a> history에서 제거합니다. 대상에 쓰기가 실패하면, 일부 기록만 포함될 수 있습니다. 모든 제거된 기록은 <a class="el" href="classdds_1_1sub_1_1_data_reader.html" title="Topic에서 지정된 타입의 sample을 수신합니다.">DataReader&lt;T&gt;</a> history에서 제외됩니다.</p>
+<dl class="params"><dt>매개변수</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[출력]</td><td class="paramname">sfit</td><td>선택한 모든 레코드에 충분히 큰 저장소의 첫번째 쓰기 위치 </td></tr>
+    <tr><td class="paramdir">[입력]</td><td class="paramname">max_samples</td><td>기본 델리게이트에 의해 인수가 무시되었습니다. <span class="tt"><a class="el" href="#ae7e230bc8a985d2f0829115af34ef73e" title="선택한 sample 수 제한">Selector::max_samples()</a></span>로 한도를 설정하십시오</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>반환값</dt><dd>복사된 기록 수 </dd></dl>
+
+</div>
+</div>
+<a id="a4a30fd428fb66720a21a150886665bb8" name="a4a30fd428fb66720a21a150886665bb8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a30fd428fb66720a21a150886665bb8">◆ </a></span>take_w_sampleinfoex()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T, template&lt; typename Q &gt; class DELEGATE&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">dds::sub::LoanedSamplesWInfoEx&lt; T &gt; <a class="el" href="classdds_1_1sub_1_1_data_reader.html">dds::sub::DataReader&lt;T&gt;</a>&lt; T, DELEGATE &gt;::Selector::take_w_sampleinfoex </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>확장된 메타데이터로 sample에 대한 액세스 선언 </p>
+<p>기본 GurumDDS 선택자 구현 객체는 이 오버로드를 제공하지 않습니다. 해당하는 <a class="el" href="classdds_1_1sub_1_1_data_reader.html" title="Topic에서 지정된 타입의 sample을 수신합니다.">DataReader&lt;T&gt;</a> 멤버를 사용합니다.</p>
+<dl class="section return"><dt>반환값</dt><dd>구현 객체이 구현한 경우 확장 메타데이터가 있는 선택된 sample 기록 </dd></dl>
+
+</div>
+</div>
+<hr/>이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.:<ul>
+<li>include/gurumdds/cpp/sub/<b>TDataReader.hpp</b></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div class="page-nav-panel" id="page-nav">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div class="navpath" id="nav-path"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="namespacedds.html">dds</a></li><li class="navelem"><a href="namespacedds_1_1sub.html">sub</a></li><li class="navelem"><a href="classdds_1_1sub_1_1_data_reader.html">DataReader&lt;T&gt;</a></li><li class="navelem"><a href="classdds_1_1sub_1_1_data_reader_1_1_selector.html">Selector</a></li>
+    <li class="footer">다음에 의해 생성됨 :  <a href="https://www.doxygen.org/index.html"><img alt="doxygen" class="footer" height="31" src="doxygen.svg" width="104"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

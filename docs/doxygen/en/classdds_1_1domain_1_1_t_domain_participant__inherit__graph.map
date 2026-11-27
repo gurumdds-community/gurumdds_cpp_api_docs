@@ -1,0 +1,7 @@
+<map id="dds::domain::TDomainParticipant&lt; DELEGATE &gt;" name="dds::domain::TDomainParticipant&lt; DELEGATE &gt;">
+<area shape="rect" id="Node000001" target="_top" title="Joins a DDS domain and owns the entities created within it." alt="" coords="5,187,210,229"/>
+<area shape="rect" id="Node000002" href="$classdds_1_1core_1_1_t_entity.html" target="_top" title="Provides common operations on a DDS entity handle." alt="" coords="50,96,165,139"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="109,152,110,188,105,186,106,156"/>
+<area shape="rect" id="Node000003" href="$classdds_1_1core_1_1_reference.html" target="_top" title="Defines shared&#45;handle operations for DDS reference types." alt="" coords="41,5,174,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="109,61,110,97,105,95,107,65"/>
+</map>

@@ -1,0 +1,883 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/xhtml;charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=11" http-equiv="X-UA-Compatible"/>
+<meta content="Doxygen 1.18.0" name="generator"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>GurumDDS C++ API Reference: XML에서 QoS profile 읽기</title>
+<link href="gurum-networks-logo.png" rel="icon" type="image/x-icon"/>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script src="dynsections.js" type="text/javascript"></script>
+<script src="codefolding.js" type="text/javascript"></script>
+<script src="clipboard.js" type="text/javascript"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script src="navtreedata.js" type="text/javascript"></script>
+<script src="navtree.js" type="text/javascript"></script>
+<script src="cookie.js" type="text/javascript"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script src="search/searchdata.js" type="text/javascript"></script>
+<script src="search/search.js" type="text/javascript"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+<link href="ReferenceBranding.css" rel="stylesheet" type="text/css"/>
+<script defer="True" src="ReferenceUi.js"></script><link href="../en/dds_example_new_helloworld_qosprofile.html" hreflang="en" rel="alternate"/><link href="../ko/dds_example_new_helloworld_qosprofile.html" hreflang="ko" rel="alternate"/><link href="../language.css" rel="stylesheet"/><script defer="defer" src="../language.js"></script></head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellpadding="0" cellspacing="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">GurumDDS C++ API Reference<span id="projectnumber"> 1.3.2</span>
+   </div>
+  </td>
+ <td class="doc-language-cell"><label class="doc-language"><select aria-label="문서 언어" data-current="1"><option lang="en" value="../en/dds_example_new_helloworld_qosprofile.html">English</option><option lang="en" selected="selected" value="../ko/dds_example_new_helloworld_qosprofile.html">Korean</option></select></label></td></tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script id="doxygen-config" type="application/json">
+{
+  "relPath": "",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script src="menudata.js" type="text/javascript"></script>
+<script src="menu.js" type="text/javascript"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> 주 메뉴 표시 전환</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div class="MSearchBoxInactive" id="MSearchBox">
+        <span class="left">
+          <span class="search-icon" id="MSearchSelect"><span class="search-icon-dropdown"></span></span>
+          <input accesskey="S" id="MSearchField" placeholder="검색" type="text" value=""/>
+          </span><span class="right">
+            <a href="javascript:searchBox.CloseResultsWindow()" id="MSearchClose"><div class="close-icon" id="MSearchCloseImg"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div class="ui-resizable side-nav-resizable" id="side-nav">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div class="sync" id="nav-sync"></div>
+    </div>
+  </div>
+  <div class="ui-resizable-handle" id="splitbar">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('dds_example_new_helloworld_qosprofile.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">로딩중...</div>
+<div class="SRStatus" id="Searching">검색중...</div>
+<div class="SRStatus" id="NoMatches">일치하는것 없음</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">XML에서 QoS profile 읽기 </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p>XML에서 QoS profile을 읽고 각 정책을 기본 QoS 값과 비교합니다.</p>
+<div class="image">
+<object data="dds-diagram-xml-qos-load-ko.svg" style="pointer-events: none;" type="image/svg+xml"></object>
+<div class="caption">
+XML QoS profile 읽기와 확인</div></div>
+ <h1 class="doxsection"><a class="anchor" id="dds_example_new_helloworld_qosprofile_run"></a>
+예제 실행하기</h1>
+<div class="fragment"><div class="line">./helloworld_qosprofile</div>
+</div><!-- fragment --><p>프로그램은 C XML QoS API로 profile을 읽습니다. 먼저 <span class="tt">Default QoS -&gt; XML profile QoS</span>를 비교하세요. <span class="tt">Base profile -&gt; Inherited profile</span>에서는 profile 상속으로 달라진 값을 확인합니다.</p>
+<h1 class="doxsection"><a class="anchor" id="dds_example_new_helloworld_qosprofile_source"></a>
+소스 파일</h1>
+<h2 class="doxsection"><a class="anchor" id="dds_example_new_helloworld_qosprofile_qos_profile_xml"></a>
+qos_profile.xml</h2>
+<div class="fragment"><div class="line">&lt;?<span class="keyword">xml</span> <span class="keyword">version</span>=<span class="stringliteral">"1.0"</span> <span class="keyword">encoding</span>=<span class="stringliteral">"UTF-8"</span>?&gt;</div>
+<div class="line">&lt;<span class="keywordtype">dds</span>&gt;</div>
+<div class="line">    &lt;<span class="keywordtype">qos_library</span> <span class="keyword">name</span>=<span class="stringliteral">"HelloWorldQos"</span>&gt;</div>
+<div class="line">        &lt;<span class="keywordtype">qos_profile</span> <span class="keyword">name</span>=<span class="stringliteral">"HelloWorldQosProfile"</span>&gt;</div>
+<div class="line">            &lt;<span class="keywordtype">datawriter_qos</span>&gt;</div>
+<div class="line">                &lt;<span class="keywordtype">durability</span>&gt;</div>
+<div class="line">                    &lt;<span class="keywordtype">kind</span>&gt;<span class="keyword">TRANSIENT_LOCAL_DURABILITY_QOS</span>&lt;/<span class="keywordtype">kind</span>&gt;</div>
+<div class="line">                    <span class="comment">&lt;!-- &lt;kind&gt;VOLATILE_DURABILITY_QOS&lt;/kind&gt; --&gt;</span></div>
+<div class="line">                    <span class="comment">&lt;!-- &lt;kind&gt;TRANSIENT_DURABILITY_QOS&lt;/kind&gt; --&gt;</span></div>
+<div class="line">                    <span class="comment">&lt;!-- &lt;kind&gt;PERSISTENT_DURABILITY_QOS&lt;/kind&gt; --&gt;</span></div>
+<div class="line">                &lt;/<span class="keywordtype">durability</span>&gt;</div>
+<div class="line">                &lt;<span class="keywordtype">durability_service</span>&gt;</div>
+<div class="line">                    &lt;<span class="keywordtype">service_cleanup_delay</span>&gt;</div>
+<div class="line">                        &lt;<span class="keywordtype">sec</span>&gt;2&lt;/<span class="keywordtype">sec</span>&gt;</div>
+<div class="line">                        &lt;<span class="keywordtype">nanosec</span>&gt;0&lt;/<span class="keywordtype">nanosec</span>&gt;</div>
+<div class="line">                    &lt;/<span class="keywordtype">service_cleanup_delay</span>&gt;</div>
+<div class="line">                    &lt;<span class="keywordtype">history_kind</span>&gt;<span class="keyword">KEEP_LAST_HISTORY_QOS</span>&lt;/<span class="keywordtype">history_kind</span>&gt;</div>
+<div class="line">                    <span class="comment">&lt;!-- &lt;history_kind&gt;KEEP_ALL_HISTORY_QOS&lt;/history_kind&gt; --&gt;</span></div>
+<div class="line">                    &lt;<span class="keywordtype">history_depth</span>&gt;4&lt;/<span class="keywordtype">history_depth</span>&gt;</div>
+<div class="line">                    &lt;<span class="keywordtype">max_samples</span>&gt;128&lt;/<span class="keywordtype">max_samples</span>&gt;</div>
+<div class="line">                    &lt;<span class="keywordtype">max_instances</span>&gt;16&lt;/<span class="keywordtype">max_instances</span>&gt;</div>
+<div class="line">                    &lt;<span class="keywordtype">max_samples_per_instance</span>&gt;8&lt;/<span class="keywordtype">max_samples_per_instance</span>&gt;</div>
+<div class="line">                &lt;/<span class="keywordtype">durability_service</span>&gt;</div>
+<div class="line">                &lt;<span class="keywordtype">deadline</span>&gt;</div>
+<div class="line">                    &lt;<span class="keywordtype">period</span>&gt;</div>
+<div class="line">                        &lt;<span class="keywordtype">sec</span>&gt;3&lt;/<span class="keywordtype">sec</span>&gt;</div>
+<div class="line">                        &lt;<span class="keywordtype">nanosec</span>&gt;0&lt;/<span class="keywordtype">nanosec</span>&gt;</div>
+<div class="line">                    &lt;/<span class="keywordtype">period</span>&gt;</div>
+<div class="line">                &lt;/<span class="keywordtype">deadline</span>&gt;</div>
+<div class="line">                &lt;<span class="keywordtype">latency_budget</span>&gt;</div>
+<div class="line">                    &lt;<span class="keywordtype">duration</span>&gt;</div>
+<div class="line">                        &lt;<span class="keywordtype">sec</span>&gt;0&lt;/<span class="keywordtype">sec</span>&gt;</div>
+<div class="line">                        &lt;<span class="keywordtype">nanosec</span>&gt;10000000&lt;/<span class="keywordtype">nanosec</span>&gt;</div>
+<div class="line">                    &lt;/<span class="keywordtype">duration</span>&gt;</div>
+<div class="line">                &lt;/<span class="keywordtype">latency_budget</span>&gt;</div>
+<div class="line">                &lt;<span class="keywordtype">liveliness</span>&gt;</div>
+<div class="line">                    &lt;<span class="keywordtype">kind</span>&gt;<span class="keyword">MANUAL_BY_PARTICIPANT_LIVELINESS_QOS</span>&lt;/<span class="keywordtype">kind</span>&gt;</div>
+<div class="line">                    <span class="comment">&lt;!-- &lt;kind&gt;AUTOMATIC_LIVELINESS_QOS&lt;/kind&gt; --&gt;</span></div>
+<div class="line">                    <span class="comment">&lt;!-- &lt;kind&gt;MANUAL_BY_TOPIC_LIVELINESS_QOS&lt;/kind&gt; --&gt;</span></div>
+<div class="line">                    &lt;<span class="keywordtype">lease_duration</span>&gt;</div>
+<div class="line">                        &lt;<span class="keywordtype">sec</span>&gt;10&lt;/<span class="keywordtype">sec</span>&gt;</div>
+<div class="line">                        &lt;<span class="keywordtype">nanosec</span>&gt;0&lt;/<span class="keywordtype">nanosec</span>&gt;</div>
+<div class="line">                    &lt;/<span class="keywordtype">lease_duration</span>&gt;</div>
+<div class="line">                &lt;/<span class="keywordtype">liveliness</span>&gt;</div>
+<div class="line">                &lt;<span class="keywordtype">reliability</span>&gt;</div>
+<div class="line">                    &lt;<span class="keywordtype">kind</span>&gt;<span class="keyword">RELIABLE_RELIABILITY_QOS</span>&lt;/<span class="keywordtype">kind</span>&gt;</div>
+<div class="line">                    <span class="comment">&lt;!-- &lt;kind&gt;BEST_EFFORT_RELIABILITY_QOS&lt;/kind&gt; --&gt;</span></div>
+<div class="line">                    &lt;<span class="keywordtype">max_blocking_time</span>&gt;</div>
+<div class="line">                        &lt;<span class="keywordtype">sec</span>&gt;0&lt;/<span class="keywordtype">sec</span>&gt;</div>
+<div class="line">                        &lt;<span class="keywordtype">nanosec</span>&gt;200000000&lt;/<span class="keywordtype">nanosec</span>&gt;</div>
+<div class="line">                    &lt;/<span class="keywordtype">max_blocking_time</span>&gt;</div>
+<div class="line">                &lt;/<span class="keywordtype">reliability</span>&gt;</div>
+<div class="line">                &lt;<span class="keywordtype">destination_order</span>&gt;</div>
+<div class="line">                    &lt;<span class="keywordtype">kind</span>&gt;<span class="keyword">BY_SOURCE_TIMESTAMP_DESTINATIONORDER_QOS</span>&lt;/<span class="keywordtype">kind</span>&gt;</div>
+<div class="line">                    <span class="comment">&lt;!-- &lt;kind&gt;BY_RECEPTION_TIMESTAMP_DESTINATIONORDER_QOS&lt;/kind&gt; --&gt;</span></div>
+<div class="line">                &lt;/<span class="keywordtype">destination_order</span>&gt;</div>
+<div class="line">                &lt;<span class="keywordtype">history</span>&gt;</div>
+<div class="line">                    &lt;<span class="keywordtype">kind</span>&gt;<span class="keyword">KEEP_LAST_HISTORY_QOS</span>&lt;/<span class="keywordtype">kind</span>&gt;</div>
+<div class="line">                    <span class="comment">&lt;!-- &lt;kind&gt;KEEP_ALL_HISTORY_QOS&lt;/kind&gt; --&gt;</span></div>
+<div class="line">                    &lt;<span class="keywordtype">depth</span>&gt;4&lt;/<span class="keywordtype">depth</span>&gt;</div>
+<div class="line">                &lt;/<span class="keywordtype">history</span>&gt;</div>
+<div class="line">                &lt;<span class="keywordtype">resource_limits</span>&gt;</div>
+<div class="line">                    &lt;<span class="keywordtype">max_samples</span>&gt;128&lt;/<span class="keywordtype">max_samples</span>&gt;</div>
+<div class="line">                    &lt;<span class="keywordtype">max_instances</span>&gt;16&lt;/<span class="keywordtype">max_instances</span>&gt;</div>
+<div class="line">                    &lt;<span class="keywordtype">max_samples_per_instance</span>&gt;8&lt;/<span class="keywordtype">max_samples_per_instance</span>&gt;</div>
+<div class="line">                &lt;/<span class="keywordtype">resource_limits</span>&gt;</div>
+<div class="line">                &lt;<span class="keywordtype">transport_priority</span>&gt;</div>
+<div class="line">                    &lt;<span class="keywordtype">value</span>&gt;10&lt;/<span class="keywordtype">value</span>&gt;</div>
+<div class="line">                &lt;/<span class="keywordtype">transport_priority</span>&gt;</div>
+<div class="line">                &lt;<span class="keywordtype">lifespan</span>&gt;</div>
+<div class="line">                    &lt;<span class="keywordtype">duration</span>&gt;</div>
+<div class="line">                        &lt;<span class="keywordtype">sec</span>&gt;30&lt;/<span class="keywordtype">sec</span>&gt;</div>
+<div class="line">                        &lt;<span class="keywordtype">nanosec</span>&gt;0&lt;/<span class="keywordtype">nanosec</span>&gt;</div>
+<div class="line">                    &lt;/<span class="keywordtype">duration</span>&gt;</div>
+<div class="line">                &lt;/<span class="keywordtype">lifespan</span>&gt;</div>
+<div class="line">                &lt;<span class="keywordtype">user_data</span>&gt;</div>
+<div class="line">                    &lt;<span class="keywordtype">value</span>&gt;<span class="keyword">SGVsbG8h</span>&lt;/<span class="keywordtype">value</span>&gt; <span class="comment">&lt;!-- Base64 for Hello! --&gt;</span></div>
+<div class="line">                &lt;/<span class="keywordtype">user_data</span>&gt;</div>
+<div class="line">                &lt;<span class="keywordtype">ownership</span>&gt;</div>
+<div class="line">                    &lt;<span class="keywordtype">kind</span>&gt;<span class="keyword">EXCLUSIVE_OWNERSHIP_QOS</span>&lt;/<span class="keywordtype">kind</span>&gt;</div>
+<div class="line">                    <span class="comment">&lt;!-- &lt;kind&gt;SHARED_OWNERSHIP_QOS&lt;/kind&gt; --&gt;</span></div>
+<div class="line">                &lt;/<span class="keywordtype">ownership</span>&gt;</div>
+<div class="line">                &lt;<span class="keywordtype">ownership_strength</span>&gt;</div>
+<div class="line">                    &lt;<span class="keywordtype">value</span>&gt;20&lt;/<span class="keywordtype">value</span>&gt;</div>
+<div class="line">                &lt;/<span class="keywordtype">ownership_strength</span>&gt;</div>
+<div class="line">                &lt;<span class="keywordtype">writer_data_lifecycle</span>&gt;</div>
+<div class="line">                    &lt;<span class="keywordtype">autodispose_unregistered_instances</span>&gt;<span class="keyword">false</span>&lt;/<span class="keywordtype">autodispose_unregistered_instances</span>&gt;</div>
+<div class="line">                &lt;/<span class="keywordtype">writer_data_lifecycle</span>&gt;</div>
+<div class="line">                &lt;<span class="keywordtype">data_representation</span>&gt;</div>
+<div class="line">                    &lt;<span class="keywordtype">value</span>&gt;</div>
+<div class="line">                        &lt;<span class="keywordtype">element</span>&gt;<span class="keyword">XCDR_DATA_REPRESENTATION</span>&lt;/<span class="keywordtype">element</span>&gt;</div>
+<div class="line">                        <span class="comment">&lt;!-- &lt;element&gt;XML_DATA_REPRESENTATION&lt;/element&gt; --&gt;</span></div>
+<div class="line">                        <span class="comment">&lt;!-- &lt;element&gt;XCDR2_DATA_REPRESENTATION&lt;/element&gt; --&gt;</span></div>
+<div class="line">                    &lt;/<span class="keywordtype">value</span>&gt;</div>
+<div class="line">                &lt;/<span class="keywordtype">data_representation</span>&gt;</div>
+<div class="line">                &lt;<span class="keywordtype">property</span>&gt;</div>
+<div class="line">                    &lt;<span class="keywordtype">value</span>&gt;</div>
+<div class="line">                        &lt;<span class="keywordtype">element</span>&gt;</div>
+<div class="line">                            &lt;<span class="keywordtype">name</span>&gt;<span class="keyword">example.endpoint</span>&lt;/<span class="keywordtype">name</span>&gt;</div>
+<div class="line">                            &lt;<span class="keywordtype">value</span>&gt;<span class="keyword">writer</span>&lt;/<span class="keywordtype">value</span>&gt;</div>
+<div class="line">                            &lt;<span class="keywordtype">propagate</span>&gt;<span class="keyword">true</span>&lt;/<span class="keywordtype">propagate</span>&gt;</div>
+<div class="line">                        &lt;/<span class="keywordtype">element</span>&gt;</div>
+<div class="line">                    &lt;/<span class="keywordtype">value</span>&gt;</div>
+<div class="line">                    &lt;<span class="keywordtype">binary_value</span>&gt;</div>
+<div class="line">                        <span class="comment">&lt;!-- GurumDDS appends a zero byte after decoding Base64. --&gt;</span></div>
+<div class="line">                        &lt;<span class="keywordtype">element</span>&gt;</div>
+<div class="line">                            &lt;<span class="keywordtype">name</span>&gt;<span class="keyword">example.marker</span>&lt;/<span class="keywordtype">name</span>&gt;</div>
+<div class="line">                            &lt;<span class="keywordtype">value</span>&gt;<span class="keyword">AQI</span>=&lt;/<span class="keywordtype">value</span>&gt;</div>
+<div class="line">                            &lt;<span class="keywordtype">propagate</span>&gt;<span class="keyword">false</span>&lt;/<span class="keywordtype">propagate</span>&gt;</div>
+<div class="line">                        &lt;/<span class="keywordtype">element</span>&gt;</div>
+<div class="line">                    &lt;/<span class="keywordtype">binary_value</span>&gt;</div>
+<div class="line">                &lt;/<span class="keywordtype">property</span>&gt;</div>
+<div class="line">                &lt;<span class="keywordtype">data_tags</span>&gt;</div>
+<div class="line">                    &lt;<span class="keywordtype">tags</span>&gt;</div>
+<div class="line">                        &lt;<span class="keywordtype">element</span>&gt;</div>
+<div class="line">                            &lt;<span class="keywordtype">name</span>&gt;<span class="keyword">example</span>&lt;/<span class="keywordtype">name</span>&gt;</div>
+<div class="line">                            &lt;<span class="keywordtype">value</span>&gt;<span class="keyword">helloworld_qosprofile</span>&lt;/<span class="keywordtype">value</span>&gt;</div>
+<div class="line">                        &lt;/<span class="keywordtype">element</span>&gt;</div>
+<div class="line">                    &lt;/<span class="keywordtype">tags</span>&gt;</div>
+<div class="line">                &lt;/<span class="keywordtype">data_tags</span>&gt;</div>
+<div class="line">            &lt;/<span class="keywordtype">datawriter_qos</span>&gt;</div>
+<div class="line">            &lt;<span class="keywordtype">datareader_qos</span>&gt;</div>
+<div class="line">                &lt;<span class="keywordtype">durability</span>&gt;</div>
+<div class="line">                    &lt;<span class="keywordtype">kind</span>&gt;<span class="keyword">TRANSIENT_LOCAL_DURABILITY_QOS</span>&lt;/<span class="keywordtype">kind</span>&gt;</div>
+<div class="line">                    <span class="comment">&lt;!-- &lt;kind&gt;VOLATILE_DURABILITY_QOS&lt;/kind&gt; --&gt;</span></div>
+<div class="line">                    <span class="comment">&lt;!-- &lt;kind&gt;TRANSIENT_DURABILITY_QOS&lt;/kind&gt; --&gt;</span></div>
+<div class="line">                    <span class="comment">&lt;!-- &lt;kind&gt;PERSISTENT_DURABILITY_QOS&lt;/kind&gt; --&gt;</span></div>
+<div class="line">                &lt;/<span class="keywordtype">durability</span>&gt;</div>
+<div class="line">                &lt;<span class="keywordtype">deadline</span>&gt;</div>
+<div class="line">                    &lt;<span class="keywordtype">period</span>&gt;</div>
+<div class="line">                        &lt;<span class="keywordtype">sec</span>&gt;5&lt;/<span class="keywordtype">sec</span>&gt;</div>
+<div class="line">                        &lt;<span class="keywordtype">nanosec</span>&gt;0&lt;/<span class="keywordtype">nanosec</span>&gt;</div>
+<div class="line">                    &lt;/<span class="keywordtype">period</span>&gt;</div>
+<div class="line">                &lt;/<span class="keywordtype">deadline</span>&gt;</div>
+<div class="line">                &lt;<span class="keywordtype">latency_budget</span>&gt;</div>
+<div class="line">                    &lt;<span class="keywordtype">duration</span>&gt;</div>
+<div class="line">                        &lt;<span class="keywordtype">sec</span>&gt;0&lt;/<span class="keywordtype">sec</span>&gt;</div>
+<div class="line">                        &lt;<span class="keywordtype">nanosec</span>&gt;20000000&lt;/<span class="keywordtype">nanosec</span>&gt;</div>
+<div class="line">                    &lt;/<span class="keywordtype">duration</span>&gt;</div>
+<div class="line">                &lt;/<span class="keywordtype">latency_budget</span>&gt;</div>
+<div class="line">                &lt;<span class="keywordtype">liveliness</span>&gt;</div>
+<div class="line">                    &lt;<span class="keywordtype">kind</span>&gt;<span class="keyword">MANUAL_BY_PARTICIPANT_LIVELINESS_QOS</span>&lt;/<span class="keywordtype">kind</span>&gt;</div>
+<div class="line">                    <span class="comment">&lt;!-- &lt;kind&gt;AUTOMATIC_LIVELINESS_QOS&lt;/kind&gt; --&gt;</span></div>
+<div class="line">                    <span class="comment">&lt;!-- &lt;kind&gt;MANUAL_BY_TOPIC_LIVELINESS_QOS&lt;/kind&gt; --&gt;</span></div>
+<div class="line">                    &lt;<span class="keywordtype">lease_duration</span>&gt;</div>
+<div class="line">                        &lt;<span class="keywordtype">sec</span>&gt;15&lt;/<span class="keywordtype">sec</span>&gt;</div>
+<div class="line">                        &lt;<span class="keywordtype">nanosec</span>&gt;0&lt;/<span class="keywordtype">nanosec</span>&gt;</div>
+<div class="line">                    &lt;/<span class="keywordtype">lease_duration</span>&gt;</div>
+<div class="line">                &lt;/<span class="keywordtype">liveliness</span>&gt;</div>
+<div class="line">                &lt;<span class="keywordtype">reliability</span>&gt;</div>
+<div class="line">                    &lt;<span class="keywordtype">kind</span>&gt;<span class="keyword">RELIABLE_RELIABILITY_QOS</span>&lt;/<span class="keywordtype">kind</span>&gt;</div>
+<div class="line">                    <span class="comment">&lt;!-- &lt;kind&gt;BEST_EFFORT_RELIABILITY_QOS&lt;/kind&gt; --&gt;</span></div>
+<div class="line">                    &lt;<span class="keywordtype">max_blocking_time</span>&gt;</div>
+<div class="line">                        &lt;<span class="keywordtype">sec</span>&gt;0&lt;/<span class="keywordtype">sec</span>&gt;</div>
+<div class="line">                        &lt;<span class="keywordtype">nanosec</span>&gt;200000000&lt;/<span class="keywordtype">nanosec</span>&gt;</div>
+<div class="line">                    &lt;/<span class="keywordtype">max_blocking_time</span>&gt;</div>
+<div class="line">                &lt;/<span class="keywordtype">reliability</span>&gt;</div>
+<div class="line">                &lt;<span class="keywordtype">destination_order</span>&gt;</div>
+<div class="line">                    &lt;<span class="keywordtype">kind</span>&gt;<span class="keyword">BY_SOURCE_TIMESTAMP_DESTINATIONORDER_QOS</span>&lt;/<span class="keywordtype">kind</span>&gt;</div>
+<div class="line">                    <span class="comment">&lt;!-- &lt;kind&gt;BY_RECEPTION_TIMESTAMP_DESTINATIONORDER_QOS&lt;/kind&gt; --&gt;</span></div>
+<div class="line">                &lt;/<span class="keywordtype">destination_order</span>&gt;</div>
+<div class="line">                &lt;<span class="keywordtype">history</span>&gt;</div>
+<div class="line">                    &lt;<span class="keywordtype">kind</span>&gt;<span class="keyword">KEEP_LAST_HISTORY_QOS</span>&lt;/<span class="keywordtype">kind</span>&gt;</div>
+<div class="line">                    <span class="comment">&lt;!-- &lt;kind&gt;KEEP_ALL_HISTORY_QOS&lt;/kind&gt; --&gt;</span></div>
+<div class="line">                    &lt;<span class="keywordtype">depth</span>&gt;4&lt;/<span class="keywordtype">depth</span>&gt;</div>
+<div class="line">                &lt;/<span class="keywordtype">history</span>&gt;</div>
+<div class="line">                &lt;<span class="keywordtype">resource_limits</span>&gt;</div>
+<div class="line">                    &lt;<span class="keywordtype">max_samples</span>&gt;128&lt;/<span class="keywordtype">max_samples</span>&gt;</div>
+<div class="line">                    &lt;<span class="keywordtype">max_instances</span>&gt;16&lt;/<span class="keywordtype">max_instances</span>&gt;</div>
+<div class="line">                    &lt;<span class="keywordtype">max_samples_per_instance</span>&gt;8&lt;/<span class="keywordtype">max_samples_per_instance</span>&gt;</div>
+<div class="line">                &lt;/<span class="keywordtype">resource_limits</span>&gt;</div>
+<div class="line">                &lt;<span class="keywordtype">user_data</span>&gt;</div>
+<div class="line">                    &lt;<span class="keywordtype">value</span>&gt;<span class="keyword">SGVsbG8h</span>&lt;/<span class="keywordtype">value</span>&gt; <span class="comment">&lt;!-- Base64 for Hello! --&gt;</span></div>
+<div class="line">                &lt;/<span class="keywordtype">user_data</span>&gt;</div>
+<div class="line">                &lt;<span class="keywordtype">ownership</span>&gt;</div>
+<div class="line">                    &lt;<span class="keywordtype">kind</span>&gt;<span class="keyword">EXCLUSIVE_OWNERSHIP_QOS</span>&lt;/<span class="keywordtype">kind</span>&gt;</div>
+<div class="line">                    <span class="comment">&lt;!-- &lt;kind&gt;SHARED_OWNERSHIP_QOS&lt;/kind&gt; --&gt;</span></div>
+<div class="line">                &lt;/<span class="keywordtype">ownership</span>&gt;</div>
+<div class="line">                &lt;<span class="keywordtype">time_based_filter</span>&gt;</div>
+<div class="line">                    &lt;<span class="keywordtype">minimum_separation</span>&gt;</div>
+<div class="line">                        &lt;<span class="keywordtype">sec</span>&gt;0&lt;/<span class="keywordtype">sec</span>&gt;</div>
+<div class="line">                        &lt;<span class="keywordtype">nanosec</span>&gt;50000000&lt;/<span class="keywordtype">nanosec</span>&gt;</div>
+<div class="line">                    &lt;/<span class="keywordtype">minimum_separation</span>&gt;</div>
+<div class="line">                &lt;/<span class="keywordtype">time_based_filter</span>&gt;</div>
+<div class="line">                &lt;<span class="keywordtype">reader_data_lifecycle</span>&gt;</div>
+<div class="line">                    &lt;<span class="keywordtype">autopurge_nowriter_samples_delay</span>&gt;</div>
+<div class="line">                        &lt;<span class="keywordtype">sec</span>&gt;20&lt;/<span class="keywordtype">sec</span>&gt;</div>
+<div class="line">                        &lt;<span class="keywordtype">nanosec</span>&gt;0&lt;/<span class="keywordtype">nanosec</span>&gt;</div>
+<div class="line">                    &lt;/<span class="keywordtype">autopurge_nowriter_samples_delay</span>&gt;</div>
+<div class="line">                    &lt;<span class="keywordtype">autopurge_disposed_samples_delay</span>&gt;</div>
+<div class="line">                        &lt;<span class="keywordtype">sec</span>&gt;10&lt;/<span class="keywordtype">sec</span>&gt;</div>
+<div class="line">                        &lt;<span class="keywordtype">nanosec</span>&gt;250000000&lt;/<span class="keywordtype">nanosec</span>&gt;</div>
+<div class="line">                    &lt;/<span class="keywordtype">autopurge_disposed_samples_delay</span>&gt;</div>
+<div class="line">                &lt;/<span class="keywordtype">reader_data_lifecycle</span>&gt;</div>
+<div class="line">                &lt;<span class="keywordtype">data_representation</span>&gt;</div>
+<div class="line">                    &lt;<span class="keywordtype">value</span>&gt;</div>
+<div class="line">                        &lt;<span class="keywordtype">element</span>&gt;<span class="keyword">XCDR_DATA_REPRESENTATION</span>&lt;/<span class="keywordtype">element</span>&gt;</div>
+<div class="line">                        &lt;<span class="keywordtype">element</span>&gt;<span class="keyword">XCDR2_DATA_REPRESENTATION</span>&lt;/<span class="keywordtype">element</span>&gt;</div>
+<div class="line">                        <span class="comment">&lt;!-- &lt;element&gt;XML_DATA_REPRESENTATION&lt;/element&gt; --&gt;</span></div>
+<div class="line">                    &lt;/<span class="keywordtype">value</span>&gt;</div>
+<div class="line">                &lt;/<span class="keywordtype">data_representation</span>&gt;</div>
+<div class="line">                &lt;<span class="keywordtype">type_consistency</span>&gt;</div>
+<div class="line">                    &lt;<span class="keywordtype">kind</span>&gt;<span class="keyword">ALLOW_TYPE_COERCION_TYPECONSISTENCY_QOS</span>&lt;/<span class="keywordtype">kind</span>&gt;</div>
+<div class="line">                    <span class="comment">&lt;!-- &lt;kind&gt;DISALLOW_TYPE_COERCION_TYPECONSISTENCY_QOS&lt;/kind&gt; --&gt;</span></div>
+<div class="line">                    &lt;<span class="keywordtype">ignore_sequence_bounds</span>&gt;<span class="keyword">false</span>&lt;/<span class="keywordtype">ignore_sequence_bounds</span>&gt;</div>
+<div class="line">                    &lt;<span class="keywordtype">ignore_string_bounds</span>&gt;<span class="keyword">false</span>&lt;/<span class="keywordtype">ignore_string_bounds</span>&gt;</div>
+<div class="line">                    &lt;<span class="keywordtype">ignore_member_names</span>&gt;<span class="keyword">true</span>&lt;/<span class="keywordtype">ignore_member_names</span>&gt;</div>
+<div class="line">                    &lt;<span class="keywordtype">prevent_type_widening</span>&gt;<span class="keyword">true</span>&lt;/<span class="keywordtype">prevent_type_widening</span>&gt;</div>
+<div class="line">                    &lt;<span class="keywordtype">force_type_validation</span>&gt;<span class="keyword">true</span>&lt;/<span class="keywordtype">force_type_validation</span>&gt;</div>
+<div class="line">                &lt;/<span class="keywordtype">type_consistency</span>&gt;</div>
+<div class="line">                &lt;<span class="keywordtype">property</span>&gt;</div>
+<div class="line">                    &lt;<span class="keywordtype">value</span>&gt;</div>
+<div class="line">                        &lt;<span class="keywordtype">element</span>&gt;</div>
+<div class="line">                            &lt;<span class="keywordtype">name</span>&gt;<span class="keyword">example.endpoint</span>&lt;/<span class="keywordtype">name</span>&gt;</div>
+<div class="line">                            &lt;<span class="keywordtype">value</span>&gt;<span class="keyword">reader</span>&lt;/<span class="keywordtype">value</span>&gt;</div>
+<div class="line">                            &lt;<span class="keywordtype">propagate</span>&gt;<span class="keyword">true</span>&lt;/<span class="keywordtype">propagate</span>&gt;</div>
+<div class="line">                        &lt;/<span class="keywordtype">element</span>&gt;</div>
+<div class="line">                    &lt;/<span class="keywordtype">value</span>&gt;</div>
+<div class="line">                    &lt;<span class="keywordtype">binary_value</span>&gt;</div>
+<div class="line">                        &lt;<span class="keywordtype">element</span>&gt;</div>
+<div class="line">                            &lt;<span class="keywordtype">name</span>&gt;<span class="keyword">example.marker</span>&lt;/<span class="keywordtype">name</span>&gt;</div>
+<div class="line">                            &lt;<span class="keywordtype">value</span>&gt;<span class="keyword">AwQ</span>=&lt;/<span class="keywordtype">value</span>&gt;</div>
+<div class="line">                            &lt;<span class="keywordtype">propagate</span>&gt;<span class="keyword">false</span>&lt;/<span class="keywordtype">propagate</span>&gt;</div>
+<div class="line">                        &lt;/<span class="keywordtype">element</span>&gt;</div>
+<div class="line">                    &lt;/<span class="keywordtype">binary_value</span>&gt;</div>
+<div class="line">                &lt;/<span class="keywordtype">property</span>&gt;</div>
+<div class="line">                &lt;<span class="keywordtype">data_tags</span>&gt;</div>
+<div class="line">                    &lt;<span class="keywordtype">tags</span>&gt;</div>
+<div class="line">                        &lt;<span class="keywordtype">element</span>&gt;</div>
+<div class="line">                            &lt;<span class="keywordtype">name</span>&gt;<span class="keyword">example</span>&lt;/<span class="keywordtype">name</span>&gt;</div>
+<div class="line">                            &lt;<span class="keywordtype">value</span>&gt;<span class="keyword">helloworld_qosprofile</span>&lt;/<span class="keywordtype">value</span>&gt;</div>
+<div class="line">                        &lt;/<span class="keywordtype">element</span>&gt;</div>
+<div class="line">                    &lt;/<span class="keywordtype">tags</span>&gt;</div>
+<div class="line">                &lt;/<span class="keywordtype">data_tags</span>&gt;</div>
+<div class="line">            &lt;/<span class="keywordtype">datareader_qos</span>&gt;</div>
+<div class="line">        &lt;/<span class="keywordtype">qos_profile</span>&gt;</div>
+<div class="line">        &lt;<span class="keywordtype">qos_profile</span> <span class="keyword">name</span>=<span class="stringliteral">"HelloWorldInheritedQosProfile"</span> <span class="keyword">base_name</span>=<span class="stringliteral">"HelloWorldQosProfile"</span>&gt;</div>
+<div class="line">            &lt;<span class="keywordtype">datawriter_qos</span>&gt;</div>
+<div class="line">                &lt;<span class="keywordtype">history</span>&gt;</div>
+<div class="line">                    &lt;<span class="keywordtype">depth</span>&gt;5&lt;/<span class="keywordtype">depth</span>&gt;</div>
+<div class="line">                &lt;/<span class="keywordtype">history</span>&gt;</div>
+<div class="line">            &lt;/<span class="keywordtype">datawriter_qos</span>&gt;</div>
+<div class="line">            &lt;<span class="keywordtype">datareader_qos</span>&gt;</div>
+<div class="line">                &lt;<span class="keywordtype">history</span>&gt;</div>
+<div class="line">                    &lt;<span class="keywordtype">depth</span>&gt;5&lt;/<span class="keywordtype">depth</span>&gt;</div>
+<div class="line">                &lt;/<span class="keywordtype">history</span>&gt;</div>
+<div class="line">            &lt;/<span class="keywordtype">datareader_qos</span>&gt;</div>
+<div class="line">        &lt;/<span class="keywordtype">qos_profile</span>&gt;</div>
+<div class="line">    &lt;/<span class="keywordtype">qos_library</span>&gt;</div>
+<div class="line">&lt;/<span class="keywordtype">dds</span>&gt;</div>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="dds_example_new_helloworld_qosprofile_src_main_cpp"></a>
+src/main.cpp</h2>
+<div class="fragment"><div class="line"><span class="preprocessor">#include "qos_output.hpp"</span></div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">#include &lt;gurumdds/cpp/core/Exception.hpp&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;gurumdds/cpp/domain/ddsdomain.hpp&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;gurumdds/cpp/pub/Publisher.hpp&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;gurumdds/cpp/sub/Subscriber.hpp&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;gurumdds/xml.h&gt;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;string_view&gt;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">namespace </span>{</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">inline</span> <span class="keyword">constexpr</span> <span class="keywordtype">char</span> DEFAULT_XML_PATH[] = HELLOWORLD_QOSPROFILE_XML;</div>
+<div class="line">    <span class="keyword">inline</span> <span class="keyword">constexpr</span> <span class="keywordtype">char</span> DEFAULT_PROFILE[] = <span class="stringliteral">"HelloWorldQos::HelloWorldQosProfile"</span>;</div>
+<div class="line">    <span class="keyword">inline</span> <span class="keyword">constexpr</span> <span class="keywordtype">char</span> DEFAULT_INHERITED_PROFILE[] = <span class="stringliteral">"HelloWorldQos::HelloWorldInheritedQosProfile"</span>;</div>
+<div class="line">    <span class="keyword">inline</span> <span class="keyword">constexpr</span> <a class="code hl_typedef" href="namespacedds_1_1domain.html#a492326d51518fe7033886c54a25d4bf0">dds::domain::DomainId</a> DOMAIN_ID = 0;</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordtype">void</span> Run(<span class="keyword">const</span> <span class="keywordtype">char</span>* pXmlPath, <span class="keyword">const</span> <span class="keywordtype">char</span>* pProfileName, <span class="keyword">const</span> <span class="keywordtype">char</span>* pInheritedProfileName) {</div>
+<div class="line">        <span class="keyword">auto</span>* pFactory = dds_DomainParticipantFactory_get_instance();</div>
+<div class="line">        <span class="keywordflow">if</span>(!pFactory) {</div>
+<div class="line">            std::cerr &lt;&lt; <span class="stringliteral">"[DDS ERROR] Could not initialize the DomainParticipantFactory.\n"</span>;</div>
+<div class="line">            <span class="keywordflow">return</span>;</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        <span class="comment">// The XML loader modifies existing QoS, including the sequences for list-valued policies.</span></div>
+<div class="line">        dds_DataWriterQos xmlWriterQos{};</div>
+<div class="line">        <span class="keywordflow">if</span>(dds_DataWriterQos_copy(&amp;xmlWriterQos, &amp;dds_DATAWRITER_QOS_DEFAULT) != dds_RETCODE_OK) {</div>
+<div class="line">            std::cerr &lt;&lt; <span class="stringliteral">"[DDS ERROR] Could not initialize DataWriter QoS for the XML loader.\n"</span>;</div>
+<div class="line">            <span class="keywordflow">return</span>;</div>
+<div class="line">        }</div>
+<div class="line">        <span class="keyword">const</span> std::unique_ptr&lt;dds_DataWriterQos, <span class="keyword">decltype</span>(&amp;dds_DataWriterQos_finalize)&gt; xmlWriterGuard(</div>
+<div class="line">            &amp;xmlWriterQos, dds_DataWriterQos_finalize);</div>
+<div class="line"> </div>
+<div class="line">        dds_DataReaderQos xmlReaderQos{};</div>
+<div class="line">        <span class="keywordflow">if</span>(dds_DataReaderQos_copy(&amp;xmlReaderQos, &amp;dds_DATAREADER_QOS_DEFAULT) != dds_RETCODE_OK) {</div>
+<div class="line">            std::cerr &lt;&lt; <span class="stringliteral">"[DDS ERROR] Could not initialize DataReader QoS for the XML loader.\n"</span>;</div>
+<div class="line">            <span class="keywordflow">return</span>;</div>
+<div class="line">        }</div>
+<div class="line">        <span class="keyword">const</span> std::unique_ptr&lt;dds_DataReaderQos, <span class="keyword">decltype</span>(&amp;dds_DataReaderQos_finalize)&gt; xmlReaderGuard(</div>
+<div class="line">            &amp;xmlReaderQos, dds_DataReaderQos_finalize);</div>
+<div class="line"> </div>
+<div class="line">        <span class="keyword">const</span> <span class="keyword">auto</span> writerResult =</div>
+<div class="line">            dds_xml_QosProfile_get_datawriter_qos(pFactory, pXmlPath, pProfileName, &amp;xmlWriterQos);</div>
+<div class="line">        <span class="keywordflow">if</span>(writerResult != dds_RETCODE_OK) {</div>
+<div class="line">            std::cerr &lt;&lt; <span class="stringliteral">"[DDS ERROR] Could not load DataWriter QoS (code "</span> &lt;&lt; writerResult &lt;&lt; <span class="stringliteral">") for "</span> &lt;&lt; pProfileName</div>
+<div class="line">                      &lt;&lt; <span class="stringliteral">" from "</span> &lt;&lt; pXmlPath &lt;&lt; <span class="charliteral">'\n'</span>;</div>
+<div class="line">            <span class="keywordflow">return</span>;</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        <span class="keyword">const</span> <span class="keyword">auto</span> readerResult =</div>
+<div class="line">            dds_xml_QosProfile_get_datareader_qos(pFactory, pXmlPath, pProfileName, &amp;xmlReaderQos);</div>
+<div class="line">        <span class="keywordflow">if</span>(readerResult != dds_RETCODE_OK) {</div>
+<div class="line">            std::cerr &lt;&lt; <span class="stringliteral">"[DDS ERROR] Could not load DataReader QoS (code "</span> &lt;&lt; readerResult &lt;&lt; <span class="stringliteral">") for "</span> &lt;&lt; pProfileName</div>
+<div class="line">                      &lt;&lt; <span class="stringliteral">" from "</span> &lt;&lt; pXmlPath &lt;&lt; <span class="charliteral">'\n'</span>;</div>
+<div class="line">            <span class="keywordflow">return</span>;</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        <span class="comment">// The C++ QoS objects share the sequences owned by the loaded C profiles.</span></div>
+<div class="line">        <span class="keyword">const</span> <a class="code hl_typedef" href="group__dds__publication.html#ga35ad9728577d4bdccfe8677bba0bcf5d">dds::pub::qos::DataWriterQos</a> profileWriterQos(xmlWriterQos);</div>
+<div class="line">        <span class="keyword">const</span> <a class="code hl_typedef" href="group__dds__subscription.html#gac759142c11b5f0cb2b2a8f6c41405966">dds::sub::qos::DataReaderQos</a> profileReaderQos(xmlReaderQos);</div>
+<div class="line"> </div>
+<div class="line">        <span class="keyword">const</span> <a class="code hl_typedef" href="group__dds__domain.html#gab1bd86ffa9ac0869166a446dd0120f3d">dds::domain::DomainParticipant</a> participant(DOMAIN_ID);</div>
+<div class="line">        <span class="keyword">const</span> <a class="code hl_typedef" href="group__dds__publication.html#gada2751fd8ce0e148138e6950f7ef7d37">dds::pub::Publisher</a> publisher(participant);</div>
+<div class="line">        <span class="keyword">const</span> <a class="code hl_typedef" href="group__dds__subscription.html#ga9a6d78b2a23f864211da5bd2edf28750">dds::sub::Subscriber</a> subscriber(participant);</div>
+<div class="line"> </div>
+<div class="line">        <span class="keyword">const</span> <span class="keyword">auto</span> defaultWriterQos = publisher.default_writer_qos();</div>
+<div class="line">        <span class="keyword">const</span> <span class="keyword">auto</span> defaultReaderQos = subscriber.default_datareader_qos();</div>
+<div class="line">        std::cout &lt;&lt; <span class="stringliteral">"XML: "</span> &lt;&lt; pXmlPath &lt;&lt; <span class="stringliteral">"\nProfile: "</span> &lt;&lt; pProfileName &lt;&lt; <span class="stringliteral">"\nDefault QoS -&gt; XML profile QoS\n"</span>;</div>
+<div class="line">        helloworld_qosprofile::PrintWriterQos(std::cout, defaultWriterQos, profileWriterQos);</div>
+<div class="line">        helloworld_qosprofile::PrintReaderQos(std::cout, defaultReaderQos, profileReaderQos);</div>
+<div class="line">        <span class="keywordflow">if</span>(!pInheritedProfileName) {</div>
+<div class="line">            <span class="keywordflow">return</span>;</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        <span class="comment">// Start with the same defaults so GurumDDS resolves the inheritance in the XML itself.</span></div>
+<div class="line">        dds_DataWriterQos inheritedWriterQos{};</div>
+<div class="line">        <span class="keywordflow">if</span>(dds_DataWriterQos_copy(&amp;inheritedWriterQos, &amp;dds_DATAWRITER_QOS_DEFAULT) != dds_RETCODE_OK) {</div>
+<div class="line">            std::cerr &lt;&lt; <span class="stringliteral">"[DDS ERROR] Could not initialize inherited DataWriter QoS.\n"</span>;</div>
+<div class="line">            <span class="keywordflow">return</span>;</div>
+<div class="line">        }</div>
+<div class="line">        <span class="keyword">const</span> std::unique_ptr&lt;dds_DataWriterQos, <span class="keyword">decltype</span>(&amp;dds_DataWriterQos_finalize)&gt; inheritedWriterGuard(</div>
+<div class="line">            &amp;inheritedWriterQos, dds_DataWriterQos_finalize);</div>
+<div class="line"> </div>
+<div class="line">        dds_DataReaderQos inheritedReaderQos{};</div>
+<div class="line">        <span class="keywordflow">if</span>(dds_DataReaderQos_copy(&amp;inheritedReaderQos, &amp;dds_DATAREADER_QOS_DEFAULT) != dds_RETCODE_OK) {</div>
+<div class="line">            std::cerr &lt;&lt; <span class="stringliteral">"[DDS ERROR] Could not initialize inherited DataReader QoS.\n"</span>;</div>
+<div class="line">            <span class="keywordflow">return</span>;</div>
+<div class="line">        }</div>
+<div class="line">        <span class="keyword">const</span> std::unique_ptr&lt;dds_DataReaderQos, <span class="keyword">decltype</span>(&amp;dds_DataReaderQos_finalize)&gt; inheritedReaderGuard(</div>
+<div class="line">            &amp;inheritedReaderQos, dds_DataReaderQos_finalize);</div>
+<div class="line"> </div>
+<div class="line">        <span class="keyword">const</span> <span class="keyword">auto</span> inheritedWriterResult =</div>
+<div class="line">            dds_xml_QosProfile_get_datawriter_qos(pFactory, pXmlPath, pInheritedProfileName, &amp;inheritedWriterQos);</div>
+<div class="line">        <span class="keywordflow">if</span>(inheritedWriterResult != dds_RETCODE_OK) {</div>
+<div class="line">            std::cerr &lt;&lt; <span class="stringliteral">"[DDS ERROR] Could not load DataWriter QoS (code "</span> &lt;&lt; inheritedWriterResult &lt;&lt; <span class="stringliteral">") for "</span></div>
+<div class="line">                      &lt;&lt; pInheritedProfileName &lt;&lt; <span class="stringliteral">" from "</span> &lt;&lt; pXmlPath &lt;&lt; <span class="charliteral">'\n'</span>;</div>
+<div class="line">            <span class="keywordflow">return</span>;</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        <span class="keyword">const</span> <span class="keyword">auto</span> inheritedReaderResult =</div>
+<div class="line">            dds_xml_QosProfile_get_datareader_qos(pFactory, pXmlPath, pInheritedProfileName, &amp;inheritedReaderQos);</div>
+<div class="line">        <span class="keywordflow">if</span>(inheritedReaderResult != dds_RETCODE_OK) {</div>
+<div class="line">            std::cerr &lt;&lt; <span class="stringliteral">"[DDS ERROR] Could not load DataReader QoS (code "</span> &lt;&lt; inheritedReaderResult &lt;&lt; <span class="stringliteral">") for "</span></div>
+<div class="line">                      &lt;&lt; pInheritedProfileName &lt;&lt; <span class="stringliteral">" from "</span> &lt;&lt; pXmlPath &lt;&lt; <span class="charliteral">'\n'</span>;</div>
+<div class="line">            <span class="keywordflow">return</span>;</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        <span class="keyword">const</span> <a class="code hl_typedef" href="group__dds__publication.html#ga35ad9728577d4bdccfe8677bba0bcf5d">dds::pub::qos::DataWriterQos</a> inheritedProfileWriterQos(inheritedWriterQos);</div>
+<div class="line">        <span class="keyword">const</span> <a class="code hl_typedef" href="group__dds__subscription.html#gac759142c11b5f0cb2b2a8f6c41405966">dds::sub::qos::DataReaderQos</a> inheritedProfileReaderQos(inheritedReaderQos);</div>
+<div class="line">        std::cout &lt;&lt; <span class="stringliteral">"\nBase profile -&gt; Inherited profile\n"</span> &lt;&lt; pProfileName &lt;&lt; <span class="stringliteral">" -&gt; "</span> &lt;&lt; pInheritedProfileName &lt;&lt; <span class="charliteral">'\n'</span>;</div>
+<div class="line">        helloworld_qosprofile::PrintWriterQos(std::cout, profileWriterQos, inheritedProfileWriterQos);</div>
+<div class="line">        helloworld_qosprofile::PrintReaderQos(std::cout, profileReaderQos, inheritedProfileReaderQos);</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">} <span class="comment">// namespace</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>* argv[]) {</div>
+<div class="line">    <span class="keyword">const</span> <span class="keywordtype">bool</span> showHelp = argc == 2 &amp;&amp; std::string_view(argv[1]) == <span class="stringliteral">"--help"</span>;</div>
+<div class="line">    <span class="keywordflow">if</span>(showHelp || argc &gt; 4) {</div>
+<div class="line">        <span class="keyword">auto</span>&amp; output = showHelp ? std::cout : std::cerr;</div>
+<div class="line">        output &lt;&lt; <span class="stringliteral">"Usage: helloworld_qosprofile [xml-path [library::profile [library::inherited-profile]]]\n"</span></div>
+<div class="line">               &lt;&lt; <span class="stringliteral">"Default XML: "</span> &lt;&lt; DEFAULT_XML_PATH &lt;&lt; <span class="stringliteral">"\nDefault profile: "</span> &lt;&lt; DEFAULT_PROFILE</div>
+<div class="line">               &lt;&lt; <span class="stringliteral">"\nInherited profile (no arguments): "</span> &lt;&lt; DEFAULT_INHERITED_PROFILE &lt;&lt; <span class="charliteral">'\n'</span>;</div>
+<div class="line">        <span class="keywordflow">return</span> showHelp ? 0 : -1;</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">const</span> <span class="keywordtype">char</span>* pXmlPath = argc &gt;= 2 ? argv[1] : DEFAULT_XML_PATH;</div>
+<div class="line">    <span class="keyword">const</span> <span class="keywordtype">char</span>* pProfileName = argc &gt;= 3 ? argv[2] : DEFAULT_PROFILE;</div>
+<div class="line">    <span class="keyword">const</span> <span class="keywordtype">char</span>* pInheritedProfileName = argc == 4 ? argv[3] : <span class="keyword">nullptr</span>;</div>
+<div class="line">    <span class="keywordflow">if</span>(argc == 1) {</div>
+<div class="line">        pInheritedProfileName = DEFAULT_INHERITED_PROFILE;</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">try</span> {</div>
+<div class="line">        Run(pXmlPath, pProfileName, pInheritedProfileName);</div>
+<div class="line">        <span class="keywordflow">return</span> 0;</div>
+<div class="line">    } <span class="keywordflow">catch</span>(<span class="keyword">const</span> <a class="code hl_class" href="classdds_1_1core_1_1_exception.html">dds::core::Exception</a>&amp; error) {</div>
+<div class="line">        std::cerr &lt;&lt; <span class="stringliteral">"[DDS ERROR] "</span> &lt;&lt; error.<a class="code hl_function" href="classdds_1_1core_1_1_exception.html#a51f0ecff258b8ea97c1e20dc72f10770">what</a>() &lt;&lt; <span class="charliteral">'\n'</span>;</div>
+<div class="line">        <span class="keywordflow">return</span> -1;</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+<div class="ttc" id="aclassdds_1_1core_1_1_exception_html"><div class="ttname"><a href="classdds_1_1core_1_1_exception.html">dds::core::Exception</a></div><div class="ttdoc">DDS 예외에 대한 기본 인터페이스</div><div class="ttdef"><b>정의</b> Exception.hpp:35</div></div>
+<div class="ttc" id="aclassdds_1_1core_1_1_exception_html_a51f0ecff258b8ea97c1e20dc72f10770"><div class="ttname"><a href="classdds_1_1core_1_1_exception.html#a51f0ecff258b8ea97c1e20dc72f10770">dds::core::Exception::what</a></div><div class="ttdeci">virtual const char * what() const =0</div><div class="ttdoc">진단 메시지를 가져옵니다</div></div>
+<div class="ttc" id="agroup__dds__domain_html_gab1bd86ffa9ac0869166a446dd0120f3d"><div class="ttname"><a href="group__dds__domain.html#gab1bd86ffa9ac0869166a446dd0120f3d">dds::domain::DomainParticipant</a></div><div class="ttdeci">::dds::domain::detail::DomainParticipant DomainParticipant</div><div class="ttdoc">DDS domain에 가입하고 관리하는 데 사용되는 DomainParticipant handle</div><div class="ttdef"><b>정의</b> DomainParticipant.hpp:30</div></div>
+<div class="ttc" id="agroup__dds__publication_html_ga35ad9728577d4bdccfe8677bba0bcf5d"><div class="ttname"><a href="group__dds__publication.html#ga35ad9728577d4bdccfe8677bba0bcf5d">dds::pub::qos::DataWriterQos</a></div><div class="ttdeci">dds::pub::qos::detail::DataWriterQos DataWriterQos</div><div class="ttdoc">QoS DataWriter를 구성하는 데 사용되는 정책 세트</div><div class="ttdef"><b>정의</b> DataWriterQos.hpp:30</div></div>
+<div class="ttc" id="agroup__dds__publication_html_gada2751fd8ce0e148138e6950f7ef7d37"><div class="ttname"><a href="group__dds__publication.html#gada2751fd8ce0e148138e6950f7ef7d37">dds::pub::Publisher</a></div><div class="ttdeci">dds::pub::detail::Publisher Publisher</div><div class="ttdoc">DataWriter를 소유하고 기본값을 설정하는 데 사용되는 Publisher handle</div><div class="ttdef"><b>정의</b> Publisher.hpp:31</div></div>
+<div class="ttc" id="agroup__dds__subscription_html_ga9a6d78b2a23f864211da5bd2edf28750"><div class="ttname"><a href="group__dds__subscription.html#ga9a6d78b2a23f864211da5bd2edf28750">dds::sub::Subscriber</a></div><div class="ttdeci">dds::sub::detail::Subscriber Subscriber</div><div class="ttdoc">DataReader를 소유하고 기본값을 설정하는 데 사용되는 Subscriber handle</div><div class="ttdef"><b>정의</b> Subscriber.hpp:31</div></div>
+<div class="ttc" id="agroup__dds__subscription_html_gac759142c11b5f0cb2b2a8f6c41405966"><div class="ttname"><a href="group__dds__subscription.html#gac759142c11b5f0cb2b2a8f6c41405966">dds::sub::qos::DataReaderQos</a></div><div class="ttdeci">dds::sub::qos::detail::DataReaderQos DataReaderQos</div><div class="ttdoc">QoS DataReader를 구성하는 데 사용되는 정책 세트</div><div class="ttdef"><b>정의</b> DataReaderQos.hpp:12</div></div>
+<div class="ttc" id="anamespacedds_1_1domain_html_a492326d51518fe7033886c54a25d4bf0"><div class="ttname"><a href="namespacedds_1_1domain.html#a492326d51518fe7033886c54a25d4bf0">dds::domain::DomainId</a></div><div class="ttdeci">int32_t DomainId</div><div class="ttdoc">DDS domain을 식별하는 숫자</div><div class="ttdef"><b>정의</b> ddsdomain.hpp:10</div></div>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="dds_example_new_helloworld_qosprofile_src_qos_output_cpp"></a>
+src/qos_output.cpp</h2>
+<div class="fragment"><div class="line"><span class="preprocessor">#include "qos_output.hpp"</span></div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">#include &lt;gurumdds/cpp/core/policy/CorePolicy.hpp&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;gurumdds/typesupport.h&gt;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">#include &lt;cstdint&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;initializer_list&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;iomanip&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;ostream&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;sstream&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;utility&gt;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">namespace </span>helloworld_qosprofile {</div>
+<div class="line">    <span class="keyword">namespace </span>{</div>
+<div class="line">        <span class="keyword">using namespace </span><a class="code hl_namespace" href="namespacedds_1_1core_1_1policy.html">dds::core::policy</a>;</div>
+<div class="line"> </div>
+<div class="line">        <span class="keyword">template</span> &lt;<span class="keyword">typename</span> TKind&gt;</div>
+<div class="line">        std::string FormatKind(TKind value, std::initializer_list&lt;std::pair&lt;TKind, const char*&gt;&gt; names) {</div>
+<div class="line">            <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span>&amp; [kind, pName]: names) {</div>
+<div class="line">                <span class="keywordflow">if</span>(value == kind) {</div>
+<div class="line">                    <span class="keywordflow">return</span> pName;</div>
+<div class="line">                }</div>
+<div class="line">            }</div>
+<div class="line">            <span class="keywordflow">return</span> <span class="stringliteral">"UNKNOWN("</span> + std::to_string(value) + <span class="charliteral">')'</span>;</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        std::string FormatValue(dds_DurabilityQosPolicyKind value) {</div>
+<div class="line">            <span class="keywordflow">return</span> FormatKind(value, {{dds_VOLATILE_DURABILITY_QOS, <span class="stringliteral">"VOLATILE"</span>},</div>
+<div class="line">                                      {dds_TRANSIENT_LOCAL_DURABILITY_QOS, <span class="stringliteral">"TRANSIENT_LOCAL"</span>},</div>
+<div class="line">                                      {dds_TRANSIENT_DURABILITY_QOS, <span class="stringliteral">"TRANSIENT"</span>},</div>
+<div class="line">                                      {dds_PERSISTENT_DURABILITY_QOS, <span class="stringliteral">"PERSISTENT"</span>}});</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        std::string FormatValue(LivelinessKind::Type value) {</div>
+<div class="line">            <span class="keywordflow">return</span> FormatKind(value, {{LivelinessKind::AUTOMATIC, <span class="stringliteral">"AUTOMATIC"</span>},</div>
+<div class="line">                                      {LivelinessKind::MANUAL_BY_PARTICIPANT, <span class="stringliteral">"MANUAL_BY_PARTICIPANT"</span>},</div>
+<div class="line">                                      {LivelinessKind::MANUAL_BY_TOPIC, <span class="stringliteral">"MANUAL_BY_TOPIC"</span>}});</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        std::string FormatValue(ReliabilityKind::Type value) {</div>
+<div class="line">            <span class="keywordflow">return</span> FormatKind(value,</div>
+<div class="line">                              {{ReliabilityKind::BEST_EFFORT, <span class="stringliteral">"BEST_EFFORT"</span>}, {ReliabilityKind::RELIABLE, <span class="stringliteral">"RELIABLE"</span>}});</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        std::string FormatValue(DestinationOrderKind::Type value) {</div>
+<div class="line">            <span class="keywordflow">return</span> FormatKind(value, {{DestinationOrderKind::BY_RECEPTION_TIMESTAMP, <span class="stringliteral">"BY_RECEPTION_TIMESTAMP"</span>},</div>
+<div class="line">                                      {DestinationOrderKind::BY_SOURCE_TIMESTAMP, <span class="stringliteral">"BY_SOURCE_TIMESTAMP"</span>}});</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        std::string FormatValue(dds_HistoryQosPolicyKind value) {</div>
+<div class="line">            <span class="keywordflow">return</span> FormatKind(value,</div>
+<div class="line">                              {{dds_KEEP_LAST_HISTORY_QOS, <span class="stringliteral">"KEEP_LAST"</span>}, {dds_KEEP_ALL_HISTORY_QOS, <span class="stringliteral">"KEEP_ALL"</span>}});</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        std::string FormatValue(HistoryKind::Type value) {</div>
+<div class="line">            <span class="keywordflow">return</span> FormatKind(value, {{HistoryKind::KEEP_LAST, <span class="stringliteral">"KEEP_LAST"</span>}, {HistoryKind::KEEP_ALL, <span class="stringliteral">"KEEP_ALL"</span>}});</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        std::string FormatValue(OwnershipKind::Type value) {</div>
+<div class="line">            <span class="keywordflow">return</span> FormatKind(value, {{OwnershipKind::SHARED, <span class="stringliteral">"SHARED"</span>}, {OwnershipKind::EXCLUSIVE, <span class="stringliteral">"EXCLUSIVE"</span>}});</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        std::string FormatValue(dds_TypeConsistencyKind value) {</div>
+<div class="line">            <span class="keywordflow">return</span> FormatKind(value, {{dds_DISALLOW_TYPE_COERCION_TYPECONSISTENCY_QOS, <span class="stringliteral">"DISALLOW_TYPE_COERCION"</span>},</div>
+<div class="line">                                      {dds_ALLOW_TYPE_COERCION_TYPECONSISTENCY_QOS, <span class="stringliteral">"ALLOW_TYPE_COERCION"</span>}});</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        std::string FormatValue(dds_Duration_t value) {</div>
+<div class="line">            <span class="keywordflow">if</span>(value.sec == dds_DURATION_INFINITE_SEC &amp;&amp; value.nanosec == dds_DURATION_INFINITE_NSEC) {</div>
+<div class="line">                <span class="keywordflow">return</span> <span class="stringliteral">"INFINITE"</span>;</div>
+<div class="line">            }</div>
+<div class="line">            std::ostringstream output;</div>
+<div class="line">            output &lt;&lt; value.sec &lt;&lt; <span class="charliteral">'.'</span> &lt;&lt; std::setfill(<span class="charliteral">'0'</span>) &lt;&lt; std::setw(9) &lt;&lt; value.nanosec &lt;&lt; <span class="stringliteral">" s"</span>;</div>
+<div class="line">            <span class="keywordflow">return</span> output.str();</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        std::string FormatValue(<span class="keyword">const</span> dds::core::Duration&amp; value) {</div>
+<div class="line">            <span class="keywordflow">return</span> FormatValue(dds_Duration_t{value.<a class="code hl_function" href="classdds_1_1core_1_1_duration.html#a654bd98c6540f9bcf7b09e6c123b9c99">sec</a>(), value.<a class="code hl_function" href="classdds_1_1core_1_1_duration.html#afde0a44c966ef659221f5f3f5d129e78">nanosec</a>()});</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        std::string FormatLimit(int32_t value) {</div>
+<div class="line">            <span class="keywordflow">return</span> value == dds_LENGTH_UNLIMITED ? <span class="stringliteral">"LENGTH_UNLIMITED"</span> : std::to_string(value);</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        <span class="keyword">template</span> &lt;<span class="keyword">typename</span> TPr<span class="keywordtype">int</span>Element&gt; std::string FormatList(uint32_t size, TPrintElement printElement) {</div>
+<div class="line">            std::ostringstream output;</div>
+<div class="line">            output &lt;&lt; <span class="charliteral">'['</span>;</div>
+<div class="line">            <span class="keywordflow">for</span>(uint32_t i = 0; i &lt; size; ++i) {</div>
+<div class="line">                <span class="keywordflow">if</span>(i != 0) {</div>
+<div class="line">                    output &lt;&lt; <span class="stringliteral">", "</span>;</div>
+<div class="line">                }</div>
+<div class="line">                printElement(output, i);</div>
+<div class="line">            }</div>
+<div class="line">            output &lt;&lt; <span class="charliteral">']'</span>;</div>
+<div class="line">            <span class="keywordflow">return</span> output.str();</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        <span class="keywordtype">void</span> PrintByte(std::ostream&amp; output, uint8_t value) {</div>
+<div class="line">            output &lt;&lt; <span class="stringliteral">"0x"</span> &lt;&lt; std::hex &lt;&lt; std::uppercase &lt;&lt; std::setfill(<span class="charliteral">'0'</span>) &lt;&lt; std::setw(2)</div>
+<div class="line">                   &lt;&lt; <span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">int</span><span class="keyword">&gt;</span>(value) &lt;&lt; std::dec;</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        std::string FormatValue(<span class="keyword">const</span> UserData&amp; value) {</div>
+<div class="line">            <span class="keyword">const</span> <span class="keyword">auto</span>* pBytes = value.begin();</div>
+<div class="line">            <span class="keyword">const</span> <span class="keyword">auto</span> size = <span class="keyword">static_cast&lt;</span>uint32_t<span class="keyword">&gt;</span>(value.end() - pBytes);</div>
+<div class="line">            <span class="keywordflow">return</span> FormatList(size, [&amp;](<span class="keyword">auto</span>&amp; output, uint32_t i) { PrintByte(output, pBytes[i]); });</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        std::string FormatValue(dds_DataRepresentationIdSeq* pValues) {</div>
+<div class="line">            <span class="keyword">const</span> <span class="keyword">auto</span> size = pValues ? dds_DataRepresentationIdSeq_length(pValues) : 0;</div>
+<div class="line">            <span class="keywordflow">return</span> FormatList(size, [&amp;](<span class="keyword">auto</span>&amp; output, uint32_t i) {</div>
+<div class="line">                output &lt;&lt; FormatKind&lt;dds_DataRepresentationId_t&gt;(dds_DataRepresentationIdSeq_get(pValues, i),</div>
+<div class="line">                                                                 {{dds_XCDR_DATA_REPRESENTATION, <span class="stringliteral">"XCDR"</span>},</div>
+<div class="line">                                                                  {dds_XML_DATA_REPRESENTATION, <span class="stringliteral">"XML"</span>},</div>
+<div class="line">                                                                  {dds_XCDR2_DATA_REPRESENTATION, <span class="stringliteral">"XCDR2"</span>}});</div>
+<div class="line">            });</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        std::string FormatValue(dds_PropertySeq* pValues) {</div>
+<div class="line">            <span class="keyword">const</span> <span class="keyword">auto</span> size = pValues ? dds_PropertySeq_length(pValues) : 0;</div>
+<div class="line">            <span class="keywordflow">return</span> FormatList(size, [&amp;](<span class="keyword">auto</span>&amp; output, uint32_t i) {</div>
+<div class="line">                <span class="keyword">const</span> <span class="keyword">auto</span>* pEntry = dds_PropertySeq_get(pValues, i);</div>
+<div class="line">                output &lt;&lt; std::quoted(pEntry-&gt;name) &lt;&lt; <span class="charliteral">'='</span> &lt;&lt; std::quoted(pEntry-&gt;value)</div>
+<div class="line">                       &lt;&lt; <span class="stringliteral">" (propagate="</span> &lt;&lt; std::boolalpha &lt;&lt; pEntry-&gt;propagate &lt;&lt; <span class="charliteral">')'</span>;</div>
+<div class="line">            });</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        std::string FormatValue(dds_BinaryPropertySeq* pValues) {</div>
+<div class="line">            <span class="keyword">const</span> <span class="keyword">auto</span> size = pValues ? dds_BinaryPropertySeq_length(pValues) : 0;</div>
+<div class="line">            <span class="keywordflow">return</span> FormatList(size, [&amp;](<span class="keyword">auto</span>&amp; output, uint32_t i) {</div>
+<div class="line">                <span class="keyword">const</span> <span class="keyword">auto</span>* pEntry = dds_BinaryPropertySeq_get(pValues, i);</div>
+<div class="line">                <span class="keyword">const</span> <span class="keyword">auto</span> bytes =</div>
+<div class="line">                    FormatList(dds_OctetSeq_length(pEntry-&gt;value), [&amp;](<span class="keyword">auto</span>&amp; byteOutput, uint32_t index) {</div>
+<div class="line">                        PrintByte(byteOutput, dds_OctetSeq_get(pEntry-&gt;value, index));</div>
+<div class="line">                    });</div>
+<div class="line">                output &lt;&lt; std::quoted(pEntry-&gt;name) &lt;&lt; <span class="charliteral">'='</span> &lt;&lt; bytes &lt;&lt; <span class="stringliteral">" (propagate="</span> &lt;&lt; std::boolalpha</div>
+<div class="line">                       &lt;&lt; pEntry-&gt;propagate &lt;&lt; <span class="charliteral">')'</span>;</div>
+<div class="line">            });</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        std::string FormatValue(dds_TagSeq* pValues) {</div>
+<div class="line">            <span class="keyword">const</span> <span class="keyword">auto</span> size = pValues ? dds_TagSeq_length(pValues) : 0;</div>
+<div class="line">            <span class="keywordflow">return</span> FormatList(size, [&amp;](<span class="keyword">auto</span>&amp; output, uint32_t i) {</div>
+<div class="line">                <span class="keyword">const</span> <span class="keyword">auto</span>* pEntry = dds_TagSeq_get(pValues, i);</div>
+<div class="line">                output &lt;&lt; std::quoted(pEntry-&gt;name) &lt;&lt; <span class="charliteral">'='</span> &lt;&lt; std::quoted(pEntry-&gt;value);</div>
+<div class="line">            });</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        std::string FormatValue(<span class="keywordtype">bool</span> value) {</div>
+<div class="line">            <span class="keywordflow">return</span> value ? <span class="stringliteral">"true"</span> : <span class="stringliteral">"false"</span>;</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        <span class="keyword">template</span> &lt;<span class="keyword">typename</span> TValue&gt;</div>
+<div class="line">        <span class="keywordtype">void</span> PrintValue(std::ostream&amp; output, <span class="keyword">const</span> <span class="keywordtype">char</span>* pName, <span class="keyword">const</span> TValue&amp; original, <span class="keyword">const</span> TValue&amp; updated) {</div>
+<div class="line">            output &lt;&lt; (original != updated ? <span class="stringliteral">"* "</span> : <span class="stringliteral">"  "</span>) &lt;&lt; pName &lt;&lt; <span class="stringliteral">": "</span> &lt;&lt; original &lt;&lt; <span class="stringliteral">" -&gt; "</span> &lt;&lt; updated &lt;&lt; <span class="charliteral">'\n'</span>;</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        <span class="keyword">template</span> &lt;<span class="keyword">typename</span> TPolicy, <span class="keyword">typename</span> TQos&gt; <span class="keyword">auto</span> GetPolicies(<span class="keyword">const</span> TQos&amp; defaultQos, <span class="keyword">const</span> TQos&amp; profileQos) {</div>
+<div class="line">            <span class="keywordflow">return</span> std::pair&lt;const TPolicy&amp;, const TPolicy&amp;&gt;(defaultQos.template policy&lt;TPolicy&gt;(),</div>
+<div class="line">                                                             profileQos.template policy&lt;TPolicy&gt;());</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        <span class="keyword">template</span> &lt;<span class="keyword">typename</span> TQos&gt;</div>
+<div class="line">        <span class="keywordtype">void</span> PrintCommonQos(std::ostream&amp; output, <span class="keyword">const</span> TQos&amp; defaultQos, <span class="keyword">const</span> TQos&amp; profileQos) {</div>
+<div class="line">            <span class="keyword">const</span> <span class="keyword">auto</span>&amp; defaults = defaultQos.delegate();</div>
+<div class="line">            <span class="keyword">const</span> <span class="keyword">auto</span>&amp; profile = profileQos.delegate();</div>
+<div class="line">            <span class="comment">// The native durability kind also preserves TRANSIENT and PERSISTENT from XML.</span></div>
+<div class="line">            PrintValue(output, <span class="stringliteral">"durability.kind"</span>, FormatValue(defaults.durability.kind),</div>
+<div class="line">                       FormatValue(profile.durability.kind));</div>
+<div class="line">            <span class="keyword">const</span> <span class="keyword">auto</span> [defaultDeadline, profileDeadline] = GetPolicies&lt;Deadline&gt;(defaultQos, profileQos);</div>
+<div class="line">            PrintValue(output, <span class="stringliteral">"deadline.period"</span>, FormatValue(defaultDeadline.period()),</div>
+<div class="line">                       FormatValue(profileDeadline.period()));</div>
+<div class="line">            <span class="keyword">const</span> <span class="keyword">auto</span> [defaultLatency, profileLatency] = GetPolicies&lt;LatencyBudget&gt;(defaultQos, profileQos);</div>
+<div class="line">            PrintValue(output, <span class="stringliteral">"latency_budget.duration"</span>, FormatValue(defaultLatency.duration()),</div>
+<div class="line">                       FormatValue(profileLatency.duration()));</div>
+<div class="line">            <span class="keyword">const</span> <span class="keyword">auto</span> [defaultLiveliness, profileLiveliness] = GetPolicies&lt;Liveliness&gt;(defaultQos, profileQos);</div>
+<div class="line">            PrintValue(output, <span class="stringliteral">"liveliness.kind"</span>, FormatValue(defaultLiveliness.kind()),</div>
+<div class="line">                       FormatValue(profileLiveliness.kind()));</div>
+<div class="line">            PrintValue(output, <span class="stringliteral">"liveliness.lease_duration"</span>, FormatValue(defaultLiveliness.lease_duration()),</div>
+<div class="line">                       FormatValue(profileLiveliness.lease_duration()));</div>
+<div class="line">            <span class="keyword">const</span> <span class="keyword">auto</span> [defaultReliability, profileReliability] = GetPolicies&lt;Reliability&gt;(defaultQos, profileQos);</div>
+<div class="line">            PrintValue(output, <span class="stringliteral">"reliability.kind"</span>, FormatValue(defaultReliability.kind()),</div>
+<div class="line">                       FormatValue(profileReliability.kind()));</div>
+<div class="line">            PrintValue(output, <span class="stringliteral">"reliability.max_blocking_time"</span>, FormatValue(defaultReliability.max_blocking_time()),</div>
+<div class="line">                       FormatValue(profileReliability.max_blocking_time()));</div>
+<div class="line">            <span class="keyword">const</span> <span class="keyword">auto</span> [defaultOrder, profileOrder] = GetPolicies&lt;DestinationOrder&gt;(defaultQos, profileQos);</div>
+<div class="line">            PrintValue(output, <span class="stringliteral">"destination_order.kind"</span>, FormatValue(defaultOrder.kind()),</div>
+<div class="line">                       FormatValue(profileOrder.kind()));</div>
+<div class="line">            <span class="keyword">const</span> <span class="keyword">auto</span> [defaultHistory, profileHistory] = GetPolicies&lt;History&gt;(defaultQos, profileQos);</div>
+<div class="line">            PrintValue(output, <span class="stringliteral">"history.kind"</span>, FormatValue(defaultHistory.kind()), FormatValue(profileHistory.kind()));</div>
+<div class="line">            PrintValue(output, <span class="stringliteral">"history.depth"</span>, FormatLimit(defaultHistory.depth()),</div>
+<div class="line">                       FormatLimit(profileHistory.depth()));</div>
+<div class="line">            <span class="keyword">const</span> <span class="keyword">auto</span> [defaultLimits, profileLimits] = GetPolicies&lt;ResourceLimits&gt;(defaultQos, profileQos);</div>
+<div class="line">            PrintValue(output, <span class="stringliteral">"resource_limits.max_samples"</span>, FormatLimit(defaultLimits.max_samples()),</div>
+<div class="line">                       FormatLimit(profileLimits.max_samples()));</div>
+<div class="line">            PrintValue(output, <span class="stringliteral">"resource_limits.max_instances"</span>, FormatLimit(defaultLimits.max_instances()),</div>
+<div class="line">                       FormatLimit(profileLimits.max_instances()));</div>
+<div class="line">            PrintValue(output, <span class="stringliteral">"resource_limits.max_samples_per_instance"</span>,</div>
+<div class="line">                       FormatLimit(defaultLimits.max_samples_per_instance()),</div>
+<div class="line">                       FormatLimit(profileLimits.max_samples_per_instance()));</div>
+<div class="line">            <span class="keyword">const</span> <span class="keyword">auto</span> [defaultUserData, profileUserData] = GetPolicies&lt;UserData&gt;(defaultQos, profileQos);</div>
+<div class="line">            PrintValue(output, <span class="stringliteral">"user_data.value"</span>, FormatValue(defaultUserData), FormatValue(profileUserData));</div>
+<div class="line">            <span class="keyword">const</span> <span class="keyword">auto</span> [defaultOwnership, profileOwnership] = GetPolicies&lt;Ownership&gt;(defaultQos, profileQos);</div>
+<div class="line">            PrintValue(output, <span class="stringliteral">"ownership.kind"</span>, FormatValue(defaultOwnership.kind()),</div>
+<div class="line">                       FormatValue(profileOwnership.kind()));</div>
+<div class="line">            <span class="comment">// These XML policies have no corresponding C++ entity QoS accessors in this SDK.</span></div>
+<div class="line">            PrintValue(output, <span class="stringliteral">"data_representation.value"</span>, FormatValue(defaults.data_representation.value),</div>
+<div class="line">                       FormatValue(profile.data_representation.value));</div>
+<div class="line">            PrintValue(output, <span class="stringliteral">"property.value"</span>, FormatValue(defaults.property.value),</div>
+<div class="line">                       FormatValue(profile.property.value));</div>
+<div class="line">            PrintValue(output, <span class="stringliteral">"property.binary_value"</span>, FormatValue(defaults.property.binary_value),</div>
+<div class="line">                       FormatValue(profile.property.binary_value));</div>
+<div class="line">            PrintValue(output, <span class="stringliteral">"data_tags.tags"</span>, FormatValue(defaults.data_tags.tags),</div>
+<div class="line">                       FormatValue(profile.data_tags.tags));</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">    } <span class="comment">// namespace</span></div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordtype">void</span> PrintWriterQos(std::ostream&amp; output, <span class="keyword">const</span> <a class="code hl_typedef" href="group__dds__publication.html#ga35ad9728577d4bdccfe8677bba0bcf5d">dds::pub::qos::DataWriterQos</a>&amp; defaultQos,</div>
+<div class="line">                        <span class="keyword">const</span> <a class="code hl_typedef" href="group__dds__publication.html#ga35ad9728577d4bdccfe8677bba0bcf5d">dds::pub::qos::DataWriterQos</a>&amp; profileQos) {</div>
+<div class="line">        <span class="keyword">const</span> <span class="keyword">auto</span>&amp; defaults = defaultQos.delegate();</div>
+<div class="line">        <span class="keyword">const</span> <span class="keyword">auto</span>&amp; profile = profileQos.delegate();</div>
+<div class="line">        output &lt;&lt; <span class="stringliteral">"\n[DataWriter QoS]\n"</span>;</div>
+<div class="line">        PrintCommonQos(output, defaultQos, profileQos);</div>
+<div class="line"> </div>
+<div class="line">        <span class="keyword">const</span> <span class="keyword">auto</span>&amp; originalService = defaults.durability_service;</div>
+<div class="line">        <span class="keyword">const</span> <span class="keyword">auto</span>&amp; updatedService = profile.durability_service;</div>
+<div class="line">        PrintValue(output, <span class="stringliteral">"durability_service.service_cleanup_delay"</span>,</div>
+<div class="line">                   FormatValue(originalService.service_cleanup_delay),</div>
+<div class="line">                   FormatValue(updatedService.service_cleanup_delay));</div>
+<div class="line">        PrintValue(output, <span class="stringliteral">"durability_service.history_kind"</span>, FormatValue(originalService.history_kind),</div>
+<div class="line">                   FormatValue(updatedService.history_kind));</div>
+<div class="line">        PrintValue(output, <span class="stringliteral">"durability_service.history_depth"</span>, FormatLimit(originalService.history_depth),</div>
+<div class="line">                   FormatLimit(updatedService.history_depth));</div>
+<div class="line">        PrintValue(output, <span class="stringliteral">"durability_service.max_samples"</span>, FormatLimit(originalService.max_samples),</div>
+<div class="line">                   FormatLimit(updatedService.max_samples));</div>
+<div class="line">        PrintValue(output, <span class="stringliteral">"durability_service.max_instances"</span>, FormatLimit(originalService.max_instances),</div>
+<div class="line">                   FormatLimit(updatedService.max_instances));</div>
+<div class="line">        PrintValue(output, <span class="stringliteral">"durability_service.max_samples_per_instance"</span>,</div>
+<div class="line">                   FormatLimit(originalService.max_samples_per_instance),</div>
+<div class="line">                   FormatLimit(updatedService.max_samples_per_instance));</div>
+<div class="line">        <span class="keyword">const</span> <span class="keyword">auto</span> [defaultPriority, profilePriority] = GetPolicies&lt;TransportPriority&gt;(defaultQos, profileQos);</div>
+<div class="line">        PrintValue(output, <span class="stringliteral">"transport_priority.value"</span>, defaultPriority.value(), profilePriority.value());</div>
+<div class="line">        <span class="keyword">const</span> <span class="keyword">auto</span> [defaultLifespan, profileLifespan] = GetPolicies&lt;Lifespan&gt;(defaultQos, profileQos);</div>
+<div class="line">        PrintValue(output, <span class="stringliteral">"lifespan.duration"</span>, FormatValue(defaultLifespan.duration()),</div>
+<div class="line">                   FormatValue(profileLifespan.duration()));</div>
+<div class="line">        <span class="keyword">const</span> <span class="keyword">auto</span> [defaultStrength, profileStrength] = GetPolicies&lt;OwnershipStrength&gt;(defaultQos, profileQos);</div>
+<div class="line">        PrintValue(output, <span class="stringliteral">"ownership_strength.value"</span>, defaultStrength.value(), profileStrength.value());</div>
+<div class="line">        <span class="keyword">const</span> <span class="keyword">auto</span> [defaultLifecycle, profileLifecycle] = GetPolicies&lt;WriterDataLifecycle&gt;(defaultQos, profileQos);</div>
+<div class="line">        PrintValue(output, <span class="stringliteral">"writer_data_lifecycle.autodispose_unregistered_instances"</span>,</div>
+<div class="line">                   FormatValue(defaultLifecycle.autodispose_unregistered_instances()),</div>
+<div class="line">                   FormatValue(profileLifecycle.autodispose_unregistered_instances()));</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordtype">void</span> PrintReaderQos(std::ostream&amp; output, <span class="keyword">const</span> <a class="code hl_typedef" href="group__dds__subscription.html#gac759142c11b5f0cb2b2a8f6c41405966">dds::sub::qos::DataReaderQos</a>&amp; defaultQos,</div>
+<div class="line">                        <span class="keyword">const</span> <a class="code hl_typedef" href="group__dds__subscription.html#gac759142c11b5f0cb2b2a8f6c41405966">dds::sub::qos::DataReaderQos</a>&amp; profileQos) {</div>
+<div class="line">        <span class="keyword">const</span> <span class="keyword">auto</span>&amp; defaults = defaultQos.delegate();</div>
+<div class="line">        <span class="keyword">const</span> <span class="keyword">auto</span>&amp; profile = profileQos.delegate();</div>
+<div class="line">        output &lt;&lt; <span class="stringliteral">"\n[DataReader QoS]\n"</span>;</div>
+<div class="line">        PrintCommonQos(output, defaultQos, profileQos);</div>
+<div class="line"> </div>
+<div class="line">        <span class="keyword">const</span> <span class="keyword">auto</span> [defaultFilter, profileFilter] = GetPolicies&lt;TimeBasedFilter&gt;(defaultQos, profileQos);</div>
+<div class="line">        PrintValue(output, <span class="stringliteral">"time_based_filter.minimum_separation"</span>, FormatValue(defaultFilter.minimum_separation()),</div>
+<div class="line">                   FormatValue(profileFilter.minimum_separation()));</div>
+<div class="line">        <span class="keyword">const</span> <span class="keyword">auto</span> [defaultLifecycle, profileLifecycle] = GetPolicies&lt;ReaderDataLifecycle&gt;(defaultQos, profileQos);</div>
+<div class="line">        PrintValue(output, <span class="stringliteral">"reader_data_lifecycle.autopurge_nowriter_samples_delay"</span>,</div>
+<div class="line">                   FormatValue(defaultLifecycle.autopurge_nowriter_samples_delay()),</div>
+<div class="line">                   FormatValue(profileLifecycle.autopurge_nowriter_samples_delay()));</div>
+<div class="line">        PrintValue(output, <span class="stringliteral">"reader_data_lifecycle.autopurge_disposed_samples_delay"</span>,</div>
+<div class="line">                   FormatValue(defaultLifecycle.autopurge_disposed_samples_delay()),</div>
+<div class="line">                   FormatValue(profileLifecycle.autopurge_disposed_samples_delay()));</div>
+<div class="line"> </div>
+<div class="line">        <span class="keyword">const</span> <span class="keyword">auto</span>&amp; originalConsistency = defaults.type_consistency;</div>
+<div class="line">        <span class="keyword">const</span> <span class="keyword">auto</span>&amp; updatedConsistency = profile.type_consistency;</div>
+<div class="line">        PrintValue(output, <span class="stringliteral">"type_consistency.kind"</span>, FormatValue(originalConsistency.kind),</div>
+<div class="line">                   FormatValue(updatedConsistency.kind));</div>
+<div class="line">        PrintValue(output, <span class="stringliteral">"type_consistency.ignore_sequence_bounds"</span>,</div>
+<div class="line">                   FormatValue(originalConsistency.ignore_sequence_bounds),</div>
+<div class="line">                   FormatValue(updatedConsistency.ignore_sequence_bounds));</div>
+<div class="line">        PrintValue(output, <span class="stringliteral">"type_consistency.ignore_string_bounds"</span>,</div>
+<div class="line">                   FormatValue(originalConsistency.ignore_string_bounds),</div>
+<div class="line">                   FormatValue(updatedConsistency.ignore_string_bounds));</div>
+<div class="line">        PrintValue(output, <span class="stringliteral">"type_consistency.ignore_member_names"</span>, FormatValue(originalConsistency.ignore_member_names),</div>
+<div class="line">                   FormatValue(updatedConsistency.ignore_member_names));</div>
+<div class="line">        PrintValue(output, <span class="stringliteral">"type_consistency.prevent_type_widening"</span>,</div>
+<div class="line">                   FormatValue(originalConsistency.prevent_type_widening),</div>
+<div class="line">                   FormatValue(updatedConsistency.prevent_type_widening));</div>
+<div class="line">        PrintValue(output, <span class="stringliteral">"type_consistency.force_type_validation"</span>,</div>
+<div class="line">                   FormatValue(originalConsistency.force_type_validation),</div>
+<div class="line">                   FormatValue(updatedConsistency.force_type_validation));</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">} <span class="comment">// namespace helloworld_qosprofile</span></div>
+<div class="ttc" id="aclassdds_1_1core_1_1_duration_html_a654bd98c6540f9bcf7b09e6c123b9c99"><div class="ttname"><a href="classdds_1_1core_1_1_duration.html#a654bd98c6540f9bcf7b09e6c123b9c99">dds::core::Duration::sec</a></div><div class="ttdeci">int32_t sec() const</div><div class="ttdoc">초 단위의 구성 요소를 가져옵니다</div></div>
+<div class="ttc" id="aclassdds_1_1core_1_1_duration_html_afde0a44c966ef659221f5f3f5d129e78"><div class="ttname"><a href="classdds_1_1core_1_1_duration.html#afde0a44c966ef659221f5f3f5d129e78">dds::core::Duration::nanosec</a></div><div class="ttdeci">uint32_t nanosec() const</div><div class="ttdoc">나노초 구성요소를 가져옵니다</div></div>
+<div class="ttc" id="anamespacedds_1_1core_1_1policy_html"><div class="ttname"><a href="namespacedds_1_1core_1_1policy.html">dds::core::policy</a></div><div class="ttdoc">DDS Entity의 QoS 정책</div><div class="ttdef"><b>정의</b> CorePolicy.hpp:50</div></div>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="dds_example_new_helloworld_qosprofile_src_qos_output_hpp"></a>
+src/qos_output.hpp</h2>
+<div class="fragment"><div class="line"><span class="preprocessor">#ifndef HELLOWORLD_QOSPROFILE_QOS_OUTPUT_HPP</span></div>
+<div class="line"><span class="preprocessor">#define HELLOWORLD_QOSPROFILE_QOS_OUTPUT_HPP</span></div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">#include &lt;gurumdds/cpp/pub/qos/DataWriterQos.hpp&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;gurumdds/cpp/sub/qos/DataReaderQos.hpp&gt;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">#include &lt;iosfwd&gt;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">namespace </span>helloworld_qosprofile {</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordtype">void</span> PrintWriterQos(std::ostream&amp; output, <span class="keyword">const</span> <a class="code hl_typedef" href="group__dds__publication.html#ga35ad9728577d4bdccfe8677bba0bcf5d">dds::pub::qos::DataWriterQos</a>&amp; defaultQos,</div>
+<div class="line">                        <span class="keyword">const</span> <a class="code hl_typedef" href="group__dds__publication.html#ga35ad9728577d4bdccfe8677bba0bcf5d">dds::pub::qos::DataWriterQos</a>&amp; profileQos);</div>
+<div class="line">    <span class="keywordtype">void</span> PrintReaderQos(std::ostream&amp; output, <span class="keyword">const</span> <a class="code hl_typedef" href="group__dds__subscription.html#gac759142c11b5f0cb2b2a8f6c41405966">dds::sub::qos::DataReaderQos</a>&amp; defaultQos,</div>
+<div class="line">                        <span class="keyword">const</span> <a class="code hl_typedef" href="group__dds__subscription.html#gac759142c11b5f0cb2b2a8f6c41405966">dds::sub::qos::DataReaderQos</a>&amp; profileQos);</div>
+<div class="line"> </div>
+<div class="line">} <span class="comment">// namespace helloworld_qosprofile</span></div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">#endif </span><span class="comment">// HELLOWORLD_QOSPROFILE_QOS_OUTPUT_HPP</span></div>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="dds_example_new_helloworld_qosprofile_cmakelists_txt"></a>
+CMakeLists.txt</h2>
+<div class="fragment"><div class="line">cmake_minimum_required(VERSION 3.20)</div>
+<div class="line">project(helloworld_qosprofile VERSION 1.0.0 LANGUAGES CXX)</div>
+<div class="line"> </div>
+<div class="line">add_executable(helloworld_qosprofile</div>
+<div class="line">    src/main.cpp</div>
+<div class="line">    src/qos_output.cpp</div>
+<div class="line">)</div>
+<div class="line">target_link_libraries(helloworld_qosprofile PRIVATE gurumdds::cxx)</div>
+<div class="line">target_compile_definitions(helloworld_qosprofile PRIVATE</div>
+<div class="line">    HELLOWORLD_QOSPROFILE_XML=<span class="stringliteral">"${CMAKE_CURRENT_SOURCE_DIR}/qos_profile.xml"</span></div>
+<div class="line">)</div>
+</div><!-- fragment --> </div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div class="page-nav-panel" id="page-nav">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div class="navpath" id="nav-path"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="examples.html">예제</a></li><li class="navelem"><a href="dds_examples_new.html">New(C++17)</a></li>
+    <li class="footer">다음에 의해 생성됨 :  <a href="https://www.doxygen.org/index.html"><img alt="doxygen" class="footer" height="31" src="doxygen.svg" width="104"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1140" height="236" viewBox="0 0 1140 236" role="img" aria-label="For the same key, register or look up the instance on the Writer. After receiving the data, look up the instance separately on the Reader." data-dds-diagram="true">
+  <title id="key-handle-scope-en-title">Key lookup on the Writer and Reader</title>
+  <desc>For the same key, register or look up the instance on the Writer. After receiving the data, look up the instance separately on the Reader.</desc>
+  <defs>
+    <marker id="key-handle-scope-en-arrow" viewBox="0 0 10 12" refX="9" refY="6" markerWidth="9" markerHeight="10" orient="auto" markerUnits="userSpaceOnUse"><path d="M 1,1 L 9,6 L 1,11" fill="none" stroke="#20354B" stroke-width="1.2"/></marker>
+    <marker id="key-handle-scope-en-blue" viewBox="0 0 11 10" refX="10" refY="5" markerWidth="10" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M 0,0 L 11,5 L 0,10 Z" fill="#356B96"/></marker>
+    <marker id="key-handle-scope-en-uml" viewBox="0 0 15 15" refX="14" refY="7.5" markerWidth="15" markerHeight="15" orient="auto" markerUnits="userSpaceOnUse"><path d="M 1,1 L 14,7.5 L 1,14 Z" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/></marker>
+  </defs>
+  <rect width="1140" height="236" fill="#FFFFFF"/>
+  <g fill="#20354B" font-family="Arial, Malgun Gothic, sans-serif">
+    <path d="M 244 107 H 269 V 74 H 294" fill="none" stroke="#20354B" stroke-width="1.15" marker-end="url(#key-handle-scope-en-arrow)"/>
+    <path d="M 269 107 V 143 H 294" fill="none" stroke="#20354B" stroke-width="1.15" marker-end="url(#key-handle-scope-en-arrow)"/>
+    <path d="M 651 74 H 703" fill="none" stroke="#20354B" stroke-width="1.15" marker-end="url(#key-handle-scope-en-arrow)"/>
+    <path d="M 651 143 H 703" fill="none" stroke="#20354B" stroke-width="1.15" marker-end="url(#key-handle-scope-en-arrow)"/>
+    <rect x="24" y="76" width="220" height="63" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <text x="134" y="101.5" text-anchor="middle" font-size="16" font-weight="bold">key 7</text>
+    <text x="134" y="123.5" text-anchor="middle" font-size="15">Keyed sample</text>
+    <rect x="294" y="45" width="357" height="57" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <text x="472.5" y="67.5" text-anchor="middle" font-size="16" font-weight="bold">DataWriter</text>
+    <text x="472.5" y="89.5" text-anchor="middle" font-size="15" font-family="Consolas, Menlo, monospace" textLength="327" lengthAdjust="spacingAndGlyphs">register_instance() / lookup_instance()</text>
+    <rect x="294" y="115" width="357" height="57" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <text x="472.5" y="137.5" text-anchor="middle" font-size="16" font-weight="bold">DataReader</text>
+    <text x="472.5" y="159.5" text-anchor="middle" font-size="15" font-family="Consolas, Menlo, monospace">lookup_instance()</text>
+    <rect x="703" y="45" width="412" height="57" fill="#EFF5FA" stroke="#20354B" stroke-width="1.15"/>
+    <text x="909" y="67.5" text-anchor="middle" font-size="16" font-weight="bold">Writer's handle</text>
+    <text x="909" y="89.5" text-anchor="middle" font-size="15" font-family="Consolas, Menlo, monospace">write() / dispose_instance()</text>
+    <rect x="703" y="115" width="412" height="57" fill="#EFF5FA" stroke="#20354B" stroke-width="1.15"/>
+    <text x="909" y="137.5" text-anchor="middle" font-size="16" font-weight="bold">Reader's handle</text>
+    <text x="909" y="159.5" text-anchor="middle" font-size="15" font-family="Consolas, Menlo, monospace">select().instance() / key_value()</text>
+    <text x="570" y="209" text-anchor="middle" font-size="15">Pass the handle to the endpoint that returned it. Check for nil after lookup.</text>
+  </g>
+</svg>

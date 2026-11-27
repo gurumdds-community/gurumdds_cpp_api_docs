@@ -1,0 +1,186 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/xhtml;charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=11" http-equiv="X-UA-Compatible"/>
+<meta content="Doxygen 1.18.0" name="generator"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>GurumDDS C++ API Reference: include/gurumdds/cpp/sub/LoanedSamples.hpp 파일</title>
+<link href="gurum-networks-logo.png" rel="icon" type="image/x-icon"/>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script src="dynsections.js" type="text/javascript"></script>
+<script src="codefolding.js" type="text/javascript"></script>
+<script src="clipboard.js" type="text/javascript"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script src="navtreedata.js" type="text/javascript"></script>
+<script src="navtree.js" type="text/javascript"></script>
+<script src="cookie.js" type="text/javascript"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script src="search/searchdata.js" type="text/javascript"></script>
+<script src="search/search.js" type="text/javascript"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+<link href="ReferenceBranding.css" rel="stylesheet" type="text/css"/>
+<script defer="True" src="ReferenceUi.js"></script><link href="../en/_loaned_samples_8hpp.html" hreflang="en" rel="alternate"/><link href="../ko/_loaned_samples_8hpp.html" hreflang="ko" rel="alternate"/><link href="../language.css" rel="stylesheet"/><script defer="defer" src="../language.js"></script></head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellpadding="0" cellspacing="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">GurumDDS C++ API Reference<span id="projectnumber"> 1.3.2</span>
+   </div>
+  </td>
+ <td class="doc-language-cell"><label class="doc-language"><select aria-label="문서 언어" data-current="1"><option lang="en" value="../en/_loaned_samples_8hpp.html">English</option><option lang="en" selected="selected" value="../ko/_loaned_samples_8hpp.html">Korean</option></select></label></td></tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script id="doxygen-config" type="application/json">
+{
+  "relPath": "",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script src="menudata.js" type="text/javascript"></script>
+<script src="menu.js" type="text/javascript"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> 주 메뉴 표시 전환</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div class="MSearchBoxInactive" id="MSearchBox">
+        <span class="left">
+          <span class="search-icon" id="MSearchSelect"><span class="search-icon-dropdown"></span></span>
+          <input accesskey="S" id="MSearchField" placeholder="검색" type="text" value=""/>
+          </span><span class="right">
+            <a href="javascript:searchBox.CloseResultsWindow()" id="MSearchClose"><div class="close-icon" id="MSearchCloseImg"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div class="ui-resizable side-nav-resizable" id="side-nav">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div class="sync" id="nav-sync"></div>
+    </div>
+  </div>
+  <div class="ui-resizable-handle" id="splitbar">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('_loaned_samples_8hpp.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">로딩중...</div>
+<div class="SRStatus" id="Searching">검색중...</div>
+<div class="SRStatus" id="NoMatches">일치하는것 없음</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">LoanedSamples.hpp 파일</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>DataReader sample loan 및 반복  
+<a href="#details">더 자세히 ...</a></p>
+<div class="textblock"><code>#include &lt;<a class="el" href="ref__traits_8hpp.html">gurumdds/cpp/core/ref_traits.hpp</a>&gt;</code><br/>
+<code>#include &lt;gurumdds/cpp/sub/Sample.hpp&gt;</code><br/>
+<code>#include &lt;gurumdds/cpp/sub/detail/LoanedSamples.hpp&gt;</code><br/>
+<code>#include "gurumdds/cpp/core/detail/SampleInfoEx.hpp"</code><br/>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-nested-classes"><a id="nested-classes" name="nested-classes"></a>
+클래스</h2></td></tr>
+<tr class="memitem:dds_3A_3Asub_3A_3ALoanedSamples_3C_20T_2C_20TInfo_2C_20DELEGATE_20_3E" id="r_dds_3A_3Asub_3A_3ALoanedSamples_3C_20T_2C_20TInfo_2C_20DELEGATE_20_3E"><td class="memItemLeft">클래스  </td><td class="memItemRight"><a class="el" href="classdds_1_1sub_1_1_loaned_samples.html">dds::sub::LoanedSamples&lt; T, TInfo, DELEGATE &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft"> </td><td class="mdescRight">수신된 sample을 보관하고 미들웨어 loan을 관리합니다.  <a href="classdds_1_1sub_1_1_loaned_samples.html#details">더 자세히 ...</a><br/></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-namespaces"><a id="namespaces" name="namespaces"></a>
+네임스페이스</h2></td></tr>
+<tr class="memitem:dds" id="r_dds"><td class="memItemLeft">네임스페이스  </td><td class="memItemRight"><a class="el" href="namespacedds.html">dds</a></td></tr>
+<tr class="memdesc:namespacedds"><td class="mdescLeft"> </td><td class="mdescRight">GurumDDS C++ API의 최상위 네임스페이스 <br/></td></tr>
+<tr class="memitem:dds_3A_3Asub" id="r_dds_3A_3Asub"><td class="memItemLeft">네임스페이스  </td><td class="memItemRight"><a class="el" href="namespacedds_1_1sub.html">dds::sub</a></td></tr>
+<tr class="memdesc:namespacedds_1_1sub"><td class="mdescLeft"> </td><td class="mdescRight"><a class="el" href="group__dds__subscription.html#ga9a6d78b2a23f864211da5bd2edf28750" title="DataReader를 소유하고 기본값을 설정하는 데 사용되는 Subscriber handle">Subscriber</a>, <a class="el" href="classdds_1_1sub_1_1_data_reader.html" title="Topic에서 지정된 타입의 sample을 수신합니다.">DataReader&lt;T&gt;</a>, 수신 sample <br/></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-define-members"><a id="define-members" name="define-members"></a>
+매크로</h2></td></tr>
+<tr class="memitem:a1f6a1a1b0fd49f617b28142a5ecb5f00" id="r_a1f6a1a1b0fd49f617b28142a5ecb5f00"><td class="memItemLeft"><a id="a1f6a1a1b0fd49f617b28142a5ecb5f00" name="a1f6a1a1b0fd49f617b28142a5ecb5f00"></a>
+#define </td><td class="memItemRight"><b>LOANED_SAMPLES_INITIAL_LENGTH</b>   8</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-typedef-members"><a id="typedef-members" name="typedef-members"></a>
+타입정의</h2></td></tr>
+<tr class="memitem:abcfc1416133033122f41595090f07711" id="r_abcfc1416133033122f41595090f07711"><td class="memTemplParams" colspan="2"><a id="abcfc1416133033122f41595090f07711" name="abcfc1416133033122f41595090f07711"></a>
+template&lt;typename T, template&lt; typename Q, typename W &gt; class DELEGATE = detail::LoanedSamples&gt; </td></tr>
+<tr class="memitem:abcfc1416133033122f41595090f07711 template"><td class="memItemLeft">using </td><td class="memItemRight"><b>dds::sub::LoanedSamplesWInfoEx</b> = <a class="el" href="classdds_1_1sub_1_1_loaned_samples.html">LoanedSamples</a>&lt;T, ::dds::core::detail::SampleInfoEx, DELEGATE&gt;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-func-members"><a id="func-members" name="func-members"></a>
+함수</h2></td></tr>
+<tr class="memitem:a9c5c3d55fd9edd11aa59e262a5e0a2d3" id="r_a9c5c3d55fd9edd11aa59e262a5e0a2d3"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
+<tr class="memitem:a9c5c3d55fd9edd11aa59e262a5e0a2d3 template"><td class="memItemLeft">T::iterator </td><td class="memItemRight"><a class="el" href="namespacedds_1_1sub.html#a9c5c3d55fd9edd11aa59e262a5e0a2d3">dds::sub::begin</a> (T &amp;t)</td></tr>
+<tr class="memdesc:a9c5c3d55fd9edd11aa59e262a5e0a2d3"><td class="mdescLeft"> </td><td class="mdescRight">첫번째 sample 반복자를 가져옵니다  <br/></td></tr>
+<tr class="memitem:a16b8566b8d863b4d3279960b72b58d09" id="r_a16b8566b8d863b4d3279960b72b58d09"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
+<tr class="memitem:a16b8566b8d863b4d3279960b72b58d09 template"><td class="memItemLeft">T::iterator </td><td class="memItemRight"><a class="el" href="namespacedds_1_1sub.html#a16b8566b8d863b4d3279960b72b58d09">dds::sub::end</a> (T &amp;t)</td></tr>
+<tr class="memdesc:a16b8566b8d863b4d3279960b72b58d09"><td class="mdescLeft"> </td><td class="mdescRight">끝 반복자를 가져옵니다  <br/></td></tr>
+<tr class="memitem:a235c8adf93bde23669bf772c9cb56346" id="r_a235c8adf93bde23669bf772c9cb56346"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
+<tr class="memitem:a235c8adf93bde23669bf772c9cb56346 template"><td class="memItemLeft">T::const_iterator </td><td class="memItemRight"><a class="el" href="namespacedds_1_1sub.html#a235c8adf93bde23669bf772c9cb56346">dds::sub::cbegin</a> (const T &amp;t)</td></tr>
+<tr class="memdesc:a235c8adf93bde23669bf772c9cb56346"><td class="mdescLeft"> </td><td class="mdescRight">첫번째 sample 반복자를 가져옵니다  <br/></td></tr>
+<tr class="memitem:af82c3e8335e6dd11b4d87920389fffeb" id="r_af82c3e8335e6dd11b4d87920389fffeb"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
+<tr class="memitem:af82c3e8335e6dd11b4d87920389fffeb template"><td class="memItemLeft">T::const_iterator </td><td class="memItemRight"><a class="el" href="namespacedds_1_1sub.html#af82c3e8335e6dd11b4d87920389fffeb">dds::sub::cend</a> (const T &amp;t)</td></tr>
+<tr class="memdesc:af82c3e8335e6dd11b4d87920389fffeb"><td class="mdescLeft"> </td><td class="mdescRight">끝 반복자를 가져옵니다  <br/></td></tr>
+<tr class="memitem:a2b1eba80422c7d0d997cbe140d977ad3" id="r_a2b1eba80422c7d0d997cbe140d977ad3"><td class="memTemplParams" colspan="2">template&lt;typename T, typename TInfo, template&lt; typename Q, typename W &gt; class D&gt; </td></tr>
+<tr class="memitem:a2b1eba80422c7d0d997cbe140d977ad3 template"><td class="memItemLeft"><a class="el" href="classdds_1_1sub_1_1_loaned_samples.html">LoanedSamples</a>&lt; T, D&lt; T, TInfo &gt; &gt; </td><td class="memItemRight"><a class="el" href="namespacedds_1_1sub.html#a2b1eba80422c7d0d997cbe140d977ad3">dds::sub::move</a> (<a class="el" href="classdds_1_1sub_1_1_loaned_samples.html">LoanedSamples</a>&lt; T, D&lt; T, TInfo &gt; &gt; &amp;a)</td></tr>
+<tr class="memdesc:a2b1eba80422c7d0d997cbe140d977ad3"><td class="mdescLeft"> </td><td class="mdescRight">loan handle 사이에서 저장된 구현 객체를 이전합니다.  <br/></td></tr>
+</table>
+<a id="details" name="details"></a><h2 class="groupheader" id="header-details">상세한 설명</h2>
+<div class="textblock"><p>DataReader sample loan 및 반복 </p>
+</div></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="page-nav-panel" id="page-nav">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div class="navpath" id="nav-path"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><b>include</b></li><li class="navelem"><b>gurumdds</b></li><li class="navelem"><b>cpp</b></li><li class="navelem"><b>sub</b></li><li class="navelem"><a href="_loaned_samples_8hpp.html">LoanedSamples.hpp</a></li>
+    <li class="footer">다음에 의해 생성됨 :  <a href="https://www.doxygen.org/index.html"><img alt="doxygen" class="footer" height="31" src="doxygen.svg" width="104"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

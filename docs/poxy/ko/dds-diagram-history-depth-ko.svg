@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1140" height="285" viewBox="0 0 1140 285" role="img" aria-label="Writer가 같은 key로 first, second, third를 보냅니다. Reader의 history depth는 2입니다. 세 번째 샘플이 도착하면 reader.read()는 second와 third를 반환합니다." data-dds-diagram="true">
+  <title id="history-depth-ko-title">KeepLast(2)가 key별 최신 값 두 개를 보관</title>
+  <desc>Writer가 같은 key로 first, second, third를 보냅니다. Reader의 history depth는 2입니다. 세 번째 샘플이 도착하면 reader.read()는 second와 third를 반환합니다.</desc>
+  <defs>
+    <marker id="history-depth-ko-arrow" viewBox="0 0 10 12" refX="9" refY="6" markerWidth="9" markerHeight="10" orient="auto" markerUnits="userSpaceOnUse"><path d="M 1,1 L 9,6 L 1,11" fill="none" stroke="#20354B" stroke-width="1.2"/></marker>
+    <marker id="history-depth-ko-blue" viewBox="0 0 11 10" refX="10" refY="5" markerWidth="10" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M 0,0 L 11,5 L 0,10 Z" fill="#356B96"/></marker>
+  </defs>
+  <rect width="1140" height="285" fill="#FFFFFF"/>
+  <g fill="#20354B" font-family="Arial, Malgun Gothic, sans-serif">
+    <path d="M 327 92 H 1080" fill="none" stroke="#20354B" stroke-width="1.15" marker-end="url(#history-depth-ko-arrow)"/>
+    <path d="M 530 171 H 581" fill="none" stroke="#20354B" stroke-width="1.15" marker-end="url(#history-depth-ko-arrow)"/>
+    <path d="M 801 171 H 852" fill="none" stroke="#356B96" stroke-width="1.7" marker-end="url(#history-depth-ko-blue)"/>
+    <text x="22" y="67" text-anchor="start" font-size="16" font-weight="bold">Writer 전송</text>
+    <text x="22" y="91" text-anchor="start" font-size="14" font-family="Consolas, Menlo, monospace">History::KeepLast(3)</text>
+    <text x="22" y="166" text-anchor="start" font-size="16" font-weight="bold">Reader history</text>
+    <text x="22" y="190" text-anchor="start" font-size="14" font-family="Consolas, Menlo, monospace">History::KeepLast(2)</text>
+    <text x="420" y="70" text-anchor="middle" font-size="16" font-family="Consolas, Menlo, monospace">&quot;first&quot;</text>
+    <path d="M 420 92 V 129" fill="none" stroke="#20354B" stroke-width="1.15" stroke-dasharray="5 4"/>
+    <rect x="310" y="129" width="220" height="85" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <rect x="381" y="152" width="78" height="38" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <text x="420" y="176" text-anchor="middle" font-size="15" font-family="Consolas, Menlo, monospace">first</text>
+    <text x="691" y="70" text-anchor="middle" font-size="16" font-family="Consolas, Menlo, monospace">&quot;second&quot;</text>
+    <path d="M 691 92 V 129" fill="none" stroke="#20354B" stroke-width="1.15" stroke-dasharray="5 4"/>
+    <rect x="581" y="129" width="220" height="85" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <rect x="607.5" y="152" width="78" height="38" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <text x="646.5" y="176" text-anchor="middle" font-size="15" font-family="Consolas, Menlo, monospace">first</text>
+    <rect x="696.5" y="152" width="78" height="38" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <text x="735.5" y="176" text-anchor="middle" font-size="15" font-family="Consolas, Menlo, monospace">second</text>
+    <text x="962" y="70" text-anchor="middle" font-size="16" font-family="Consolas, Menlo, monospace">&quot;third&quot;</text>
+    <path d="M 962 92 V 129" fill="none" stroke="#20354B" stroke-width="1.15" stroke-dasharray="5 4"/>
+    <rect x="852" y="129" width="220" height="85" fill="#EFF5FA" stroke="#20354B" stroke-width="1.15"/>
+    <rect x="878.5" y="152" width="78" height="38" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <text x="917.5" y="176" text-anchor="middle" font-size="15" font-family="Consolas, Menlo, monospace">second</text>
+    <rect x="967.5" y="152" width="78" height="38" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <text x="1006.5" y="176" text-anchor="middle" font-size="15" font-family="Consolas, Menlo, monospace">third</text>
+    <text x="570" y="254" text-anchor="middle" font-size="15">같은 key(userId = 7). third가 도착한 뒤 read()는 second와 third를 반환합니다.</text>
+  </g>
+</svg>

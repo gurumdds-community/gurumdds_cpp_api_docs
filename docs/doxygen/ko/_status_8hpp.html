@@ -1,0 +1,188 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/xhtml;charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=11" http-equiv="X-UA-Compatible"/>
+<meta content="Doxygen 1.18.0" name="generator"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>GurumDDS C++ API Reference: include/gurumdds/cpp/core/status/Status.hpp 파일</title>
+<link href="gurum-networks-logo.png" rel="icon" type="image/x-icon"/>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script src="dynsections.js" type="text/javascript"></script>
+<script src="codefolding.js" type="text/javascript"></script>
+<script src="clipboard.js" type="text/javascript"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script src="navtreedata.js" type="text/javascript"></script>
+<script src="navtree.js" type="text/javascript"></script>
+<script src="cookie.js" type="text/javascript"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script src="search/searchdata.js" type="text/javascript"></script>
+<script src="search/search.js" type="text/javascript"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+<link href="ReferenceBranding.css" rel="stylesheet" type="text/css"/>
+<script defer="True" src="ReferenceUi.js"></script><link href="../en/_status_8hpp.html" hreflang="en" rel="alternate"/><link href="../ko/_status_8hpp.html" hreflang="ko" rel="alternate"/><link href="../language.css" rel="stylesheet"/><script defer="defer" src="../language.js"></script></head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellpadding="0" cellspacing="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">GurumDDS C++ API Reference<span id="projectnumber"> 1.3.2</span>
+   </div>
+  </td>
+ <td class="doc-language-cell"><label class="doc-language"><select aria-label="문서 언어" data-current="1"><option lang="en" value="../en/_status_8hpp.html">English</option><option lang="en" selected="selected" value="../ko/_status_8hpp.html">Korean</option></select></label></td></tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script id="doxygen-config" type="application/json">
+{
+  "relPath": "",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script src="menudata.js" type="text/javascript"></script>
+<script src="menu.js" type="text/javascript"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> 주 메뉴 표시 전환</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div class="MSearchBoxInactive" id="MSearchBox">
+        <span class="left">
+          <span class="search-icon" id="MSearchSelect"><span class="search-icon-dropdown"></span></span>
+          <input accesskey="S" id="MSearchField" placeholder="검색" type="text" value=""/>
+          </span><span class="right">
+            <a href="javascript:searchBox.CloseResultsWindow()" id="MSearchClose"><div class="close-icon" id="MSearchCloseImg"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div class="ui-resizable side-nav-resizable" id="side-nav">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div class="sync" id="nav-sync"></div>
+    </div>
+  </div>
+  <div class="ui-resizable-handle" id="splitbar">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('_status_8hpp.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">로딩중...</div>
+<div class="SRStatus" id="Searching">검색중...</div>
+<div class="SRStatus" id="NoMatches">일치하는것 없음</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Status.hpp 파일</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>DDS 통신 상태 값 및 상태 마스크 특성  
+<a href="#details">더 자세히 ...</a></p>
+<div class="textblock"><code>#include &lt;gurumdds/cpp/core/status/detail/Status.hpp&gt;</code><br/>
+<code>#include &lt;gurumdds/cpp/core/status/State.hpp&gt;</code><br/>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-nested-classes"><a id="nested-classes" name="nested-classes"></a>
+클래스</h2></td></tr>
+<tr class="memitem:dds_3A_3Acore_3A_3Astatus_3A_3ADataAvailableStatus" id="r_dds_3A_3Acore_3A_3Astatus_3A_3ADataAvailableStatus"><td class="memItemLeft">클래스  </td><td class="memItemRight"><a class="el" href="classdds_1_1core_1_1status_1_1_data_available_status.html">dds::core::status::DataAvailableStatus</a></td></tr>
+<tr class="memitem:dds_3A_3Acore_3A_3Astatus_3A_3ADataOnReadersStatus" id="r_dds_3A_3Acore_3A_3Astatus_3A_3ADataOnReadersStatus"><td class="memItemLeft">클래스  </td><td class="memItemRight"><a class="el" href="classdds_1_1core_1_1status_1_1_data_on_readers_status.html">dds::core::status::DataOnReadersStatus</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-namespaces"><a id="namespaces" name="namespaces"></a>
+네임스페이스</h2></td></tr>
+<tr class="memitem:dds" id="r_dds"><td class="memItemLeft">네임스페이스  </td><td class="memItemRight"><a class="el" href="namespacedds.html">dds</a></td></tr>
+<tr class="memdesc:namespacedds"><td class="mdescLeft"> </td><td class="mdescRight">GurumDDS C++ API의 최상위 네임스페이스 <br/></td></tr>
+<tr class="memitem:dds_3A_3Acore" id="r_dds_3A_3Acore"><td class="memItemLeft">네임스페이스  </td><td class="memItemRight"><a class="el" href="namespacedds_1_1core.html">dds::core</a></td></tr>
+<tr class="memdesc:namespacedds_1_1core"><td class="mdescLeft"> </td><td class="mdescRight">공통 <a class="el" href="group__dds__core.html#ga9c487d701cb3e2131d9da3ddd608a9b4" title="DDS 엔터티가 공유하는 작업을 처리">Entity</a> handle, 시간 타입, 예외, 상태, QoS 정책 <br/></td></tr>
+<tr class="memitem:dds_3A_3Acore_3A_3Astatus" id="r_dds_3A_3Acore_3A_3Astatus"><td class="memItemLeft">네임스페이스  </td><td class="memItemRight"><a class="el" href="namespacedds_1_1core_1_1status.html">dds::core::status</a></td></tr>
+<tr class="memdesc:namespacedds_1_1core_1_1status"><td class="mdescLeft"> </td><td class="mdescRight">DDS 상태 값과 상태 마스크 <br/></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-typedef-members"><a id="typedef-members" name="typedef-members"></a>
+타입정의</h2></td></tr>
+<tr class="memitem:abe411539687fdab9d40418fd9ab8e3e2" id="r_abe411539687fdab9d40418fd9ab8e3e2"><td class="memItemLeft"><a id="abe411539687fdab9d40418fd9ab8e3e2" name="abe411539687fdab9d40418fd9ab8e3e2"></a>
+typedef ::dds::core::status::detail::InconsistentTopicStatus </td><td class="memItemRight"><b>dds::core::status::InconsistentTopicStatus</b></td></tr>
+<tr class="memitem:a5314c4075763105161d295a7933db13d" id="r_a5314c4075763105161d295a7933db13d"><td class="memItemLeft"><a id="a5314c4075763105161d295a7933db13d" name="a5314c4075763105161d295a7933db13d"></a>
+typedef ::dds::core::status::detail::LivelinessChangedStatus </td><td class="memItemRight"><b>dds::core::status::LivelinessChangedStatus</b></td></tr>
+<tr class="memitem:aebef4a75ba7d826d09d17734e2f750dd" id="r_aebef4a75ba7d826d09d17734e2f750dd"><td class="memItemLeft"><a id="aebef4a75ba7d826d09d17734e2f750dd" name="aebef4a75ba7d826d09d17734e2f750dd"></a>
+typedef ::dds::core::status::detail::LivelinessLostStatus </td><td class="memItemRight"><b>dds::core::status::LivelinessLostStatus</b></td></tr>
+<tr class="memitem:a6d37f53b0381146e58ae3fe09e18039b" id="r_a6d37f53b0381146e58ae3fe09e18039b"><td class="memItemLeft"><a id="a6d37f53b0381146e58ae3fe09e18039b" name="a6d37f53b0381146e58ae3fe09e18039b"></a>
+typedef ::dds::core::status::detail::OfferedDeadlineMissedStatus </td><td class="memItemRight"><b>dds::core::status::OfferedDeadlineMissedStatus</b></td></tr>
+<tr class="memitem:a2c4ab6bc72a7028757b34ea215563354" id="r_a2c4ab6bc72a7028757b34ea215563354"><td class="memItemLeft"><a id="a2c4ab6bc72a7028757b34ea215563354" name="a2c4ab6bc72a7028757b34ea215563354"></a>
+typedef ::dds::core::status::detail::OfferedIncompatibleQosStatus </td><td class="memItemRight"><b>dds::core::status::OfferedIncompatibleQosStatus</b></td></tr>
+<tr class="memitem:afab9a639df23ee8ec7c0f006482e5a0d" id="r_afab9a639df23ee8ec7c0f006482e5a0d"><td class="memItemLeft"><a id="afab9a639df23ee8ec7c0f006482e5a0d" name="afab9a639df23ee8ec7c0f006482e5a0d"></a>
+typedef ::dds::core::status::detail::PublicationMatchedStatus </td><td class="memItemRight"><b>dds::core::status::PublicationMatchedStatus</b></td></tr>
+<tr class="memitem:a545c7d7cb2c055ebffb2f1770f76da01" id="r_a545c7d7cb2c055ebffb2f1770f76da01"><td class="memItemLeft"><a id="a545c7d7cb2c055ebffb2f1770f76da01" name="a545c7d7cb2c055ebffb2f1770f76da01"></a>
+typedef ::dds::core::status::detail::SampleRejectedStatus </td><td class="memItemRight"><b>dds::core::status::SampleRejectedStatus</b></td></tr>
+<tr class="memitem:afe3225b6689c6d6c32f99642822c2b0d" id="r_afe3225b6689c6d6c32f99642822c2b0d"><td class="memItemLeft"><a id="afe3225b6689c6d6c32f99642822c2b0d" name="afe3225b6689c6d6c32f99642822c2b0d"></a>
+typedef ::dds::core::status::detail::RequestedDeadlineMissedStatus </td><td class="memItemRight"><b>dds::core::status::RequestedDeadlineMissedStatus</b></td></tr>
+<tr class="memitem:a5eff3bdd977e5b923e3610f347a64449" id="r_a5eff3bdd977e5b923e3610f347a64449"><td class="memItemLeft"><a id="a5eff3bdd977e5b923e3610f347a64449" name="a5eff3bdd977e5b923e3610f347a64449"></a>
+typedef ::dds::core::status::detail::RequestedIncompatibleQosStatus </td><td class="memItemRight"><b>dds::core::status::RequestedIncompatibleQosStatus</b></td></tr>
+<tr class="memitem:a04af02f4c95b6f099b2eee842879808b" id="r_a04af02f4c95b6f099b2eee842879808b"><td class="memItemLeft"><a id="a04af02f4c95b6f099b2eee842879808b" name="a04af02f4c95b6f099b2eee842879808b"></a>
+typedef ::dds::core::status::detail::SampleLostStatus </td><td class="memItemRight"><b>dds::core::status::SampleLostStatus</b></td></tr>
+<tr class="memitem:abb43166d32256fc63bd26ce34140090d" id="r_abb43166d32256fc63bd26ce34140090d"><td class="memItemLeft"><a id="abb43166d32256fc63bd26ce34140090d" name="abb43166d32256fc63bd26ce34140090d"></a>
+typedef ::dds::core::status::detail::SubscriptionMatchedStatus </td><td class="memItemRight"><b>dds::core::status::SubscriptionMatchedStatus</b></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-func-members"><a id="func-members" name="func-members"></a>
+함수</h2></td></tr>
+<tr class="memitem:a71e44a652febc680d41a32d99cda5bff" id="r_a71e44a652febc680d41a32d99cda5bff"><td class="memTemplParams" colspan="2">template&lt;typename STATUS&gt; </td></tr>
+<tr class="memitem:a71e44a652febc680d41a32d99cda5bff template"><td class="memItemLeft"><a class="el" href="classdds_1_1core_1_1status_1_1_status_mask.html">StatusMask</a> </td><td class="memItemRight"><a class="el" href="namespacedds_1_1core_1_1status.html#a71e44a652febc680d41a32d99cda5bff">dds::core::status::get_status</a> ()</td></tr>
+<tr class="memdesc:a71e44a652febc680d41a32d99cda5bff"><td class="mdescLeft"> </td><td class="mdescRight">지원되는 상태 타입과 연결된 상태 마스크를 가져옵니다  <br/></td></tr>
+</table>
+<a id="details" name="details"></a><h2 class="groupheader" id="header-details">상세한 설명</h2>
+<div class="textblock"><p>DDS 통신 상태 값 및 상태 마스크 특성 </p>
+</div></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="page-nav-panel" id="page-nav">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div class="navpath" id="nav-path"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><b>include</b></li><li class="navelem"><b>gurumdds</b></li><li class="navelem"><b>cpp</b></li><li class="navelem"><b>core</b></li><li class="navelem"><b>status</b></li><li class="navelem"><a href="_status_8hpp.html">Status.hpp</a></li>
+    <li class="footer">다음에 의해 생성됨 :  <a href="https://www.doxygen.org/index.html"><img alt="doxygen" class="footer" height="31" src="doxygen.svg" width="104"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

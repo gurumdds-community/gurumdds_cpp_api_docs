@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1140" height="322" viewBox="0 0 1140 322" role="img" aria-label="DDS는 들어온 샘플에 필터를 적용합니다. 데이터 도착 콜백은 flag를 설정합니다. 애플리케이션은 flag를 해제하고 take로 수신 기록을 가져옵니다." data-dds-diagram="true">
+  <title id="filtered-listener-ko-title">content filter와 Listener를 거친 수신</title>
+  <desc>DDS는 들어온 샘플에 필터를 적용합니다. 데이터 도착 콜백은 flag를 설정합니다. 애플리케이션은 flag를 해제하고 take로 수신 기록을 가져옵니다.</desc>
+  <defs>
+    <marker id="filtered-listener-ko-arrow" viewBox="0 0 10 12" refX="9" refY="6" markerWidth="9" markerHeight="10" orient="auto" markerUnits="userSpaceOnUse"><path d="M 1,1 L 9,6 L 1,11" fill="none" stroke="#20354B" stroke-width="1.2"/></marker>
+    <marker id="filtered-listener-ko-blue" viewBox="0 0 11 10" refX="10" refY="5" markerWidth="10" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M 0,0 L 11,5 L 0,10 Z" fill="#356B96"/></marker>
+  </defs>
+  <rect width="1140" height="322" fill="#FFFFFF"/>
+  <g fill="#20354B" font-family="Arial, Malgun Gothic, sans-serif">
+    <path d="M 130 65 V 288" fill="none" stroke="#20354B" stroke-width="1.15" stroke-dasharray="5 4"/>
+    <path d="M 415 65 V 288" fill="none" stroke="#20354B" stroke-width="1.15" stroke-dasharray="5 4"/>
+    <path d="M 704 65 V 288" fill="none" stroke="#20354B" stroke-width="1.15" stroke-dasharray="5 4"/>
+    <path d="M 1000 65 V 288" fill="none" stroke="#20354B" stroke-width="1.15" stroke-dasharray="5 4"/>
+    <rect x="44" y="21" width="172" height="44" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <rect x="300" y="21" width="230" height="44" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <rect x="591" y="21" width="226" height="44" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <rect x="892" y="21" width="216" height="44" fill="#EFF5FA" stroke="#20354B" stroke-width="1.15"/>
+    <text x="130" y="47" text-anchor="middle" font-size="16" font-family="Consolas, Menlo, monospace">DataWriter&lt;T&gt;</text>
+    <text x="415" y="47" text-anchor="middle" font-size="16" font-weight="bold">필터를 적용한 DataReader</text>
+    <text x="704" y="47" text-anchor="middle" font-size="16" font-weight="bold">DDS Listener 콜백</text>
+    <text x="1000" y="47" text-anchor="middle" font-size="16" font-weight="bold">애플리케이션 스레드</text>
+    <path d="M 130 105 H 415" fill="none" stroke="#20354B" stroke-width="1.15" marker-end="url(#filtered-listener-ko-arrow)"/>
+    <text x="272" y="95" text-anchor="middle" font-size="14">샘플 전송</text>
+    <path d="M 415 147 H 704" fill="none" stroke="#20354B" stroke-width="1.15" marker-end="url(#filtered-listener-ko-arrow)"/>
+    <text x="559" y="136" text-anchor="middle" font-size="14">필터 통과 후 on_data_available()</text>
+    <path d="M 704 194 H 1000" fill="none" stroke="#356B96" stroke-width="1.7" stroke-dasharray="5 4" marker-end="url(#filtered-listener-ko-blue)"/>
+    <text x="852" y="182" text-anchor="middle" font-size="14">atomic ready flag 설정</text>
+    <path d="M 1000 244 H 415" fill="none" stroke="#356B96" stroke-width="1.7" marker-end="url(#filtered-listener-ko-blue)"/>
+    <text x="708" y="232" text-anchor="middle" font-size="14" paint-order="stroke" stroke="#FFFFFF" stroke-width="5" stroke-linejoin="round">flag를 해제하고 크기를 제한한 배치로 take()</text>
+    <path d="M 415 274 H 1000" fill="none" stroke="#20354B" stroke-width="1.15" stroke-dasharray="5 4" marker-end="url(#filtered-listener-ko-arrow)"/>
+    <text x="708" y="264" text-anchor="middle" font-size="14" paint-order="stroke" stroke="#FFFFFF" stroke-width="5" stroke-linejoin="round">빈 배치를 받을 때까지 반복</text>
+  </g>
+</svg>

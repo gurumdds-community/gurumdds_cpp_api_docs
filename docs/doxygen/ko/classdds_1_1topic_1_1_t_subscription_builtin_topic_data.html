@@ -1,0 +1,742 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/xhtml;charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=11" http-equiv="X-UA-Compatible"/>
+<meta content="Doxygen 1.18.0" name="generator"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>GurumDDS C++ API Reference: dds::topic::TSubscriptionBuiltinTopicData&lt; D &gt; 클래스 템플릿</title>
+<link href="gurum-networks-logo.png" rel="icon" type="image/x-icon"/>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script src="dynsections.js" type="text/javascript"></script>
+<script src="codefolding.js" type="text/javascript"></script>
+<script src="clipboard.js" type="text/javascript"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script src="navtreedata.js" type="text/javascript"></script>
+<script src="navtree.js" type="text/javascript"></script>
+<script src="cookie.js" type="text/javascript"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script src="search/searchdata.js" type="text/javascript"></script>
+<script src="search/search.js" type="text/javascript"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+<link href="ReferenceBranding.css" rel="stylesheet" type="text/css"/>
+<script defer="True" src="ReferenceUi.js"></script><link href="../en/classdds_1_1topic_1_1_t_subscription_builtin_topic_data.html" hreflang="en" rel="alternate"/><link href="../ko/classdds_1_1topic_1_1_t_subscription_builtin_topic_data.html" hreflang="ko" rel="alternate"/><link href="../language.css" rel="stylesheet"/><script defer="defer" src="../language.js"></script></head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellpadding="0" cellspacing="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">GurumDDS C++ API Reference<span id="projectnumber"> 1.3.2</span>
+   </div>
+  </td>
+ <td class="doc-language-cell"><label class="doc-language"><select aria-label="문서 언어" data-current="1"><option lang="en" value="../en/classdds_1_1topic_1_1_t_subscription_builtin_topic_data.html">English</option><option lang="en" selected="selected" value="../ko/classdds_1_1topic_1_1_t_subscription_builtin_topic_data.html">Korean</option></select></label></td></tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script id="doxygen-config" type="application/json">
+{
+  "relPath": "",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script src="menudata.js" type="text/javascript"></script>
+<script src="menu.js" type="text/javascript"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> 주 메뉴 표시 전환</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div class="MSearchBoxInactive" id="MSearchBox">
+        <span class="left">
+          <span class="search-icon" id="MSearchSelect"><span class="search-icon-dropdown"></span></span>
+          <input accesskey="S" id="MSearchField" placeholder="검색" type="text" value=""/>
+          </span><span class="right">
+            <a href="javascript:searchBox.CloseResultsWindow()" id="MSearchClose"><div class="close-icon" id="MSearchCloseImg"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div class="ui-resizable side-nav-resizable" id="side-nav">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div class="sync" id="nav-sync"></div>
+    </div>
+  </div>
+  <div class="ui-resizable-handle" id="splitbar">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('classdds_1_1topic_1_1_t_subscription_builtin_topic_data.html','','classdds_1_1topic_1_1_t_subscription_builtin_topic_data-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">로딩중...</div>
+<div class="SRStatus" id="Searching">검색중...</div>
+<div class="SRStatus" id="NoMatches">일치하는것 없음</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">dds::topic::TSubscriptionBuiltinTopicData&lt; D &gt; 클래스 템플릿</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p class="dds-class-include"><code>#include &lt;gurumdds/cpp/topic/TBuiltinTopic.hpp&gt;</code></p>
+
+<p>discovery에서 찾은 DataReader를 나타냅니다  
+ <a href="#details">더 자세히 ...</a></p>
+<a id="details" name="details"></a><h2 class="groupheader" id="header-details">상세한 설명</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename D&gt;<br/>
+class dds::topic::TSubscriptionBuiltinTopicData&lt; D &gt;</div><p>discovery에서 찾은 DataReader를 나타냅니다 </p>
+<p><span class="tt"><a class="el" href="namespacedds_1_1pub.html#a2a077f46734fa260830ef8f8e4f13a21" title="DataWriter와 연결된 subscription의 discovery 데이터를 반환합니다.">dds::pub::matched_subscription_data()</a></span>로 현재 매칭된 Subscription을 조회하세요. 반환값에는 <a class="el" href="classdds_1_1topic_1_1_topic.html" title="domain에서 Topic 이름을 DDS 데이터 타입과 연결합니다.">Topic&lt;T&gt;</a>, 타입, 공개된 QoS가 들어 있습니다. built-in key로 Subscription을 식별합니다.</p>
+<dl class="section see"><dt>참고</dt><dd><a class="el" href="group__dds__tutorial__discovery.html" title="Matching과 Discovery">Matching과 Discovery</a> </dd></dl>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-pub-methods"><a id="pub-methods" name="pub-methods"></a>
+공개 멤버 함수</h2></td></tr>
+<tr class="memitem:a394a17bb7b6ce2acd898f3da6582da63" id="r_a394a17bb7b6ce2acd898f3da6582da63"><td class="memItemLeft">const <a class="el" href="group__dds__topic.html#ga2ec7f4b9d23a714d90aeb3f61df5344c">dds::topic::BuiltinTopicKey</a> &amp; </td><td class="memItemRight"><a class="el" href="#a394a17bb7b6ce2acd898f3da6582da63">key</a> () const</td></tr>
+<tr class="memdesc:a394a17bb7b6ce2acd898f3da6582da63"><td class="mdescLeft"> </td><td class="mdescRight">발견된 구독의 built-in <a class="el" href="classdds_1_1topic_1_1_topic.html" title="domain에서 Topic 이름을 DDS 데이터 타입과 연결합니다.">Topic&lt;T&gt;</a> 키를 가져옵니다  <br/></td></tr>
+<tr class="memitem:af8e82f1ab482313a6d961641c468a8b0" id="r_af8e82f1ab482313a6d961641c468a8b0"><td class="memItemLeft">const <a class="el" href="group__dds__topic.html#ga2ec7f4b9d23a714d90aeb3f61df5344c">dds::topic::BuiltinTopicKey</a> &amp; </td><td class="memItemRight"><a class="el" href="#af8e82f1ab482313a6d961641c468a8b0">participant_key</a> () const</td></tr>
+<tr class="memdesc:af8e82f1ab482313a6d961641c468a8b0"><td class="mdescLeft"> </td><td class="mdescRight">endpoint의 DomainParticipant key를 반환하는 접근자에서 key를 가져옵니다.  <br/></td></tr>
+<tr class="memitem:a15aa13f0b62bdcf91b4de774e10efa1a" id="r_a15aa13f0b62bdcf91b4de774e10efa1a"><td class="memItemLeft">const std::string &amp; </td><td class="memItemRight"><a class="el" href="#a15aa13f0b62bdcf91b4de774e10efa1a">topic_name</a> () const</td></tr>
+<tr class="memdesc:a15aa13f0b62bdcf91b4de774e10efa1a"><td class="mdescLeft"> </td><td class="mdescRight">검색 시 기록된 <a class="el" href="classdds_1_1topic_1_1_topic.html" title="domain에서 Topic 이름을 DDS 데이터 타입과 연결합니다.">Topic&lt;T&gt;</a> 이름을 가져옵니다  <br/></td></tr>
+<tr class="memitem:aef3afb6bf781cebd649219b4607e1898" id="r_aef3afb6bf781cebd649219b4607e1898"><td class="memItemLeft">const std::string &amp; </td><td class="memItemRight"><a class="el" href="#aef3afb6bf781cebd649219b4607e1898">type_name</a> () const</td></tr>
+<tr class="memdesc:aef3afb6bf781cebd649219b4607e1898"><td class="mdescLeft"> </td><td class="mdescRight">검색시 기록된 등록된 데이터 타입 이름을 가져옵니다.  <br/></td></tr>
+<tr class="memitem:a004b19d93323c0aa1689111956324e22" id="r_a004b19d93323c0aa1689111956324e22"><td class="memItemLeft">const <a class="el" href="group__dds__qos.html#gaa70a30964093541160b34558877d3438">::dds::core::policy::Durability</a> &amp; </td><td class="memItemRight"><a class="el" href="#a004b19d93323c0aa1689111956324e22">durability</a> () const</td></tr>
+<tr class="memdesc:a004b19d93323c0aa1689111956324e22"><td class="mdescLeft"> </td><td class="mdescRight">발견된 구독에 대해 보고된 Durability QoS를 가져옵니다.  <br/></td></tr>
+<tr class="memitem:afe8493b438e4f790d86c3444ab5fca3c" id="r_afe8493b438e4f790d86c3444ab5fca3c"><td class="memItemLeft">const <a class="el" href="group__dds__qos.html#gaaa67e0ee7026fecfed9eb32f2c425721">::dds::core::policy::Deadline</a> &amp; </td><td class="memItemRight"><a class="el" href="#afe8493b438e4f790d86c3444ab5fca3c">deadline</a> () const</td></tr>
+<tr class="memdesc:afe8493b438e4f790d86c3444ab5fca3c"><td class="mdescLeft"> </td><td class="mdescRight">발견된 구독에 대해 보고된 Deadline QoS를 가져옵니다.  <br/></td></tr>
+<tr class="memitem:a909345d50794e5738e7ffdfbf1d8f4f2" id="r_a909345d50794e5738e7ffdfbf1d8f4f2"><td class="memItemLeft">const <a class="el" href="group__dds__qos.html#ga50f7bda0cda1b76fbd4e374627540e7c">::dds::core::policy::LatencyBudget</a> &amp; </td><td class="memItemRight"><a class="el" href="#a909345d50794e5738e7ffdfbf1d8f4f2">latency_budget</a> () const</td></tr>
+<tr class="memdesc:a909345d50794e5738e7ffdfbf1d8f4f2"><td class="mdescLeft"> </td><td class="mdescRight">발견된 구독에 대한 LatencyBudget QoS 보고를 가져옵니다.  <br/></td></tr>
+<tr class="memitem:a873eb9c3e6706918de8be5991fd17507" id="r_a873eb9c3e6706918de8be5991fd17507"><td class="memItemLeft">const <a class="el" href="group__dds__qos.html#ga6d270a5e784d2fc600382fdd467d6a56">::dds::core::policy::Liveliness</a> &amp; </td><td class="memItemRight"><a class="el" href="#a873eb9c3e6706918de8be5991fd17507">liveliness</a> () const</td></tr>
+<tr class="memdesc:a873eb9c3e6706918de8be5991fd17507"><td class="mdescLeft"> </td><td class="mdescRight">발견된 구독에 대해 보고된 Liveliness QoS를 가져옵니다.  <br/></td></tr>
+<tr class="memitem:a2f8754f9a9048920d19588ddeb23aa24" id="r_a2f8754f9a9048920d19588ddeb23aa24"><td class="memItemLeft">const <a class="el" href="group__dds__qos.html#gae1ee89c57fc5fa311721b4511e559783">::dds::core::policy::Reliability</a> &amp; </td><td class="memItemRight"><a class="el" href="#a2f8754f9a9048920d19588ddeb23aa24">reliability</a> () const</td></tr>
+<tr class="memdesc:a2f8754f9a9048920d19588ddeb23aa24"><td class="mdescLeft"> </td><td class="mdescRight">발견된 구독에 대해 보고된 Reliability QoS를 가져옵니다.  <br/></td></tr>
+<tr class="memitem:a90c32523af5e5982a0f69d504d86af86" id="r_a90c32523af5e5982a0f69d504d86af86"><td class="memItemLeft">const <a class="el" href="group__dds__qos.html#ga2b55aa93f052e74de626f42665c5785f">::dds::core::policy::Ownership</a> &amp; </td><td class="memItemRight"><a class="el" href="#a90c32523af5e5982a0f69d504d86af86">ownership</a> () const</td></tr>
+<tr class="memdesc:a90c32523af5e5982a0f69d504d86af86"><td class="mdescLeft"> </td><td class="mdescRight">발견된 구독에 대해 보고된 Ownership QoS를 가져옵니다.  <br/></td></tr>
+<tr class="memitem:a24a00ffb7ea15fb756767bbd450cefcf" id="r_a24a00ffb7ea15fb756767bbd450cefcf"><td class="memItemLeft">const <a class="el" href="group__dds__qos.html#gac7ed58b137ff6a6ddcb2c7d8690169c5">::dds::core::policy::DestinationOrder</a> &amp; </td><td class="memItemRight"><a class="el" href="#a24a00ffb7ea15fb756767bbd450cefcf">destination_order</a> () const</td></tr>
+<tr class="memdesc:a24a00ffb7ea15fb756767bbd450cefcf"><td class="mdescLeft"> </td><td class="mdescRight">발견된 구독에 대해 보고된 DestinationOrder QoS를 가져옵니다.  <br/></td></tr>
+<tr class="memitem:a45f4a8f15f0fc21534e2ddc44fa5ef84" id="r_a45f4a8f15f0fc21534e2ddc44fa5ef84"><td class="memItemLeft">const <a class="el" href="group__dds__qos.html#ga3082013b21e53c2cb3c462fcd1151d77">::dds::core::policy::UserData</a> &amp; </td><td class="memItemRight"><a class="el" href="#a45f4a8f15f0fc21534e2ddc44fa5ef84">user_data</a> () const</td></tr>
+<tr class="memdesc:a45f4a8f15f0fc21534e2ddc44fa5ef84"><td class="mdescLeft"> </td><td class="mdescRight">발견된 구독에 대해 보고된 사용자 데이터 QoS를 가져옵니다.  <br/></td></tr>
+<tr class="memitem:ab80bef738a311e254edb384808ec8ec1" id="r_ab80bef738a311e254edb384808ec8ec1"><td class="memItemLeft">const <a class="el" href="group__dds__qos.html#ga25ed9d287d76401671576ec64559df07">::dds::core::policy::TimeBasedFilter</a> &amp; </td><td class="memItemRight"><a class="el" href="#ab80bef738a311e254edb384808ec8ec1">time_based_filter</a> () const</td></tr>
+<tr class="memdesc:ab80bef738a311e254edb384808ec8ec1"><td class="mdescLeft"> </td><td class="mdescRight">발견된 구독에 대해 보고된 TimeBasedFilter QoS를 가져옵니다.  <br/></td></tr>
+<tr class="memitem:aba45ecab1b6f16c3c48476bc2c2f36a3" id="r_aba45ecab1b6f16c3c48476bc2c2f36a3"><td class="memItemLeft">const <a class="el" href="group__dds__qos.html#ga2b52bb5f851fa675b14a1d1ac57d6b15">::dds::core::policy::Presentation</a> &amp; </td><td class="memItemRight"><a class="el" href="#aba45ecab1b6f16c3c48476bc2c2f36a3">presentation</a> () const</td></tr>
+<tr class="memdesc:aba45ecab1b6f16c3c48476bc2c2f36a3"><td class="mdescLeft"> </td><td class="mdescRight">발견된 구독에 대해 보고된 Presentation QoS를 가져옵니다.  <br/></td></tr>
+<tr class="memitem:ad99e05ace914ba66dd1e01f681afe4d6" id="r_ad99e05ace914ba66dd1e01f681afe4d6"><td class="memItemLeft">const <a class="el" href="group__dds__qos.html#ga9676f77e95c6e5d1c732604d9e7ead38">::dds::core::policy::Partition</a> &amp; </td><td class="memItemRight"><a class="el" href="#ad99e05ace914ba66dd1e01f681afe4d6">partition</a> () const</td></tr>
+<tr class="memdesc:ad99e05ace914ba66dd1e01f681afe4d6"><td class="mdescLeft"> </td><td class="mdescRight">발견된 구독에 대해 보고된 Partition QoS를 가져옵니다.  <br/></td></tr>
+<tr class="memitem:aaf92ec3abefca4056ee10f46bbdc43b1" id="r_aaf92ec3abefca4056ee10f46bbdc43b1"><td class="memItemLeft">const <a class="el" href="group__dds__qos.html#ga15f95e2eef1f4dd215378d04701b71c9">::dds::core::policy::TopicData</a> &amp; </td><td class="memItemRight"><a class="el" href="#aaf92ec3abefca4056ee10f46bbdc43b1">topic_data</a> () const</td></tr>
+<tr class="memdesc:aaf92ec3abefca4056ee10f46bbdc43b1"><td class="mdescLeft"> </td><td class="mdescRight">발견된 구독에 대해 보고된 <a class="el" href="classdds_1_1topic_1_1_topic.html" title="domain에서 Topic 이름을 DDS 데이터 타입과 연결합니다.">Topic&lt;T&gt;</a> 데이터 QoS를 가져옵니다.  <br/></td></tr>
+<tr class="memitem:acaf323ce30dab6ae28dfb1fe3d0099aa" id="r_acaf323ce30dab6ae28dfb1fe3d0099aa"><td class="memItemLeft">const <a class="el" href="group__dds__qos.html#ga1bcd7764c7126aa6ac3edcc8c5231433">::dds::core::policy::GroupData</a> &amp; </td><td class="memItemRight"><a class="el" href="#acaf323ce30dab6ae28dfb1fe3d0099aa">group_data</a> () const</td></tr>
+<tr class="memdesc:acaf323ce30dab6ae28dfb1fe3d0099aa"><td class="mdescLeft"> </td><td class="mdescRight">발견된 구독에 대한 그룹 데이터 QoS를 가져옵니다  <br/></td></tr>
+<tr class="inherit_header pub_methods_classdds_1_1core_1_1_value"><td class="dyn-inherit" colspan="2"><span class="dynarrow"><span class="arrowhead closed"></span></span><a class="el" href="classdds_1_1core_1_1_value.html">dds::core::Value&lt; D &gt;</a>(으)로부터 상속된 공개 멤버 함수</td></tr>
+<tr class="memitem:a49230f95d9ef907d8837af272fdab462 inherit pub_methods_classdds_1_1core_1_1_value" id="r_a49230f95d9ef907d8837af272fdab462"><td class="memTemplParams" colspan="2">template&lt;typename ARG&gt; </td></tr>
+<tr class="memitem:a49230f95d9ef907d8837af272fdab462 inherit pub_methods_classdds_1_1core_1_1_value template"><td class="memItemLeft"> </td><td class="memItemRight"><a class="el" href="classdds_1_1core_1_1_value.html#a49230f95d9ef907d8837af272fdab462">Value</a> (const ARG &amp;arg)</td></tr>
+<tr class="memdesc:a49230f95d9ef907d8837af272fdab462 inherit pub_methods_classdds_1_1core_1_1_value"><td class="mdescLeft"> </td><td class="mdescRight">인수로부터 기본값을 구성합니다  <br/></td></tr>
+<tr class="memitem:a1d6a64fdead8e344e77e5c29d168f19f inherit pub_methods_classdds_1_1core_1_1_value" id="r_a1d6a64fdead8e344e77e5c29d168f19f"><td class="memTemplParams" colspan="2">template&lt;typename ... ARGS&gt; </td></tr>
+<tr class="memitem:a1d6a64fdead8e344e77e5c29d168f19f inherit pub_methods_classdds_1_1core_1_1_value template"><td class="memItemLeft"> </td><td class="memItemRight"><a class="el" href="classdds_1_1core_1_1_value.html#a1d6a64fdead8e344e77e5c29d168f19f">Value</a> (ARGS &amp;&amp;... args)</td></tr>
+<tr class="memdesc:a1d6a64fdead8e344e77e5c29d168f19f inherit pub_methods_classdds_1_1core_1_1_value"><td class="mdescLeft"> </td><td class="mdescRight">인수로부터 기본값을 구성합니다  <br/></td></tr>
+<tr class="memitem:a92bfa2b84ebde8e9cd81cb91e32ef9ec inherit pub_methods_classdds_1_1core_1_1_value" id="r_a92bfa2b84ebde8e9cd81cb91e32ef9ec"><td class="memItemLeft">
+ </td><td class="memItemRight"><b>~Value</b> ()</td></tr>
+<tr class="memdesc:a92bfa2b84ebde8e9cd81cb91e32ef9ec inherit pub_methods_classdds_1_1core_1_1_value"><td class="mdescLeft"> </td><td class="mdescRight">저장된 구현 객체 값을 파괴합니다 <br/></td></tr>
+<tr class="memitem:af9917371a74b095f63e8c95ca6ced25a inherit pub_methods_classdds_1_1core_1_1_value" id="r_af9917371a74b095f63e8c95ca6ced25a"><td class="memItemLeft">Value &amp; </td><td class="memItemRight"><a class="el" href="classdds_1_1core_1_1_value.html#af9917371a74b095f63e8c95ca6ced25a">operator=</a> (const Value &amp;other)</td></tr>
+<tr class="memdesc:af9917371a74b095f63e8c95ca6ced25a inherit pub_methods_classdds_1_1core_1_1_value"><td class="mdescLeft"> </td><td class="mdescRight">저장된 구현 객체 값을 복사합니다  <br/></td></tr>
+<tr class="memitem:a34fd669d0051ad90b89d98a323d2d96a inherit pub_methods_classdds_1_1core_1_1_value" id="r_a34fd669d0051ad90b89d98a323d2d96a"><td class="memItemLeft">bool </td><td class="memItemRight"><a class="el" href="classdds_1_1core_1_1_value.html#a34fd669d0051ad90b89d98a323d2d96a">operator==</a> (const Value &amp;other) const</td></tr>
+<tr class="memdesc:a34fd669d0051ad90b89d98a323d2d96a inherit pub_methods_classdds_1_1core_1_1_value"><td class="mdescLeft"> </td><td class="mdescRight">저장된 구현 객체 값을 비교합니다  <br/></td></tr>
+<tr class="memitem:a9b22715713bc0bfc10af93eeaeda80f4 inherit pub_methods_classdds_1_1core_1_1_value" id="r_a9b22715713bc0bfc10af93eeaeda80f4"><td class="memItemLeft">bool </td><td class="memItemRight"><a class="el" href="classdds_1_1core_1_1_value.html#a9b22715713bc0bfc10af93eeaeda80f4">operator!=</a> (const Value &amp;other) const</td></tr>
+<tr class="memdesc:a9b22715713bc0bfc10af93eeaeda80f4 inherit pub_methods_classdds_1_1core_1_1_value"><td class="mdescLeft"> </td><td class="mdescRight">저장된 구현 객체 값을 비교합니다  <br/></td></tr>
+<tr class="memitem:afe089b7e91e4ab927d069c460dac9f51 inherit pub_methods_classdds_1_1core_1_1_value" id="r_afe089b7e91e4ab927d069c460dac9f51"><td class="memItemLeft">
+const D * </td><td class="memItemRight"><b>operator-&gt;</b> () const</td></tr>
+<tr class="memdesc:afe089b7e91e4ab927d069c460dac9f51 inherit pub_methods_classdds_1_1core_1_1_value"><td class="mdescLeft"> </td><td class="mdescRight">구현 객체를 반환합니다. <br/></td></tr>
+<tr class="memitem:ae92f27b7ada7bce89417a4b8cb50381c inherit pub_methods_classdds_1_1core_1_1_value" id="r_ae92f27b7ada7bce89417a4b8cb50381c"><td class="memItemLeft">
+D * </td><td class="memItemRight"><b>operator-&gt;</b> ()</td></tr>
+<tr class="memdesc:ae92f27b7ada7bce89417a4b8cb50381c inherit pub_methods_classdds_1_1core_1_1_value"><td class="mdescLeft"> </td><td class="mdescRight">구현 객체를 반환합니다. <br/></td></tr>
+<tr class="memitem:a91c321ca94d6c95e70994d284099d17e inherit pub_methods_classdds_1_1core_1_1_value" id="r_a91c321ca94d6c95e70994d284099d17e"><td class="memItemLeft">
+const D &amp; </td><td class="memItemRight"><b>delegate</b> () const</td></tr>
+<tr class="memdesc:a91c321ca94d6c95e70994d284099d17e inherit pub_methods_classdds_1_1core_1_1_value"><td class="mdescLeft"> </td><td class="mdescRight">구현 객체를 반환합니다. <br/></td></tr>
+<tr class="memitem:aac41fc1f8bd4683d0dd6e559b33336e8 inherit pub_methods_classdds_1_1core_1_1_value" id="r_aac41fc1f8bd4683d0dd6e559b33336e8"><td class="memItemLeft">
+D &amp; </td><td class="memItemRight"><b>delegate</b> ()</td></tr>
+<tr class="memdesc:aac41fc1f8bd4683d0dd6e559b33336e8 inherit pub_methods_classdds_1_1core_1_1_value"><td class="mdescLeft"> </td><td class="mdescRight">구현 객체를 반환합니다. <br/></td></tr>
+<tr class="memitem:afebca1e70d9a8a69997a30534118b761 inherit pub_methods_classdds_1_1core_1_1_value" id="r_afebca1e70d9a8a69997a30534118b761"><td class="memItemLeft">
+ </td><td class="memItemRight"><b>operator D&amp;</b> ()</td></tr>
+<tr class="memdesc:afebca1e70d9a8a69997a30534118b761 inherit pub_methods_classdds_1_1core_1_1_value"><td class="mdescLeft"> </td><td class="mdescRight">캐스트 연산자 <br/></td></tr>
+<tr class="memitem:a3b691bb7dfa340e55660b78ac9951b22 inherit pub_methods_classdds_1_1core_1_1_value" id="r_a3b691bb7dfa340e55660b78ac9951b22"><td class="memItemLeft">
+ </td><td class="memItemRight"><b>operator const D &amp;</b> () const</td></tr>
+<tr class="memdesc:a3b691bb7dfa340e55660b78ac9951b22 inherit pub_methods_classdds_1_1core_1_1_value"><td class="mdescLeft"> </td><td class="mdescRight">캐스트 연산자 <br/></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-inherited"><a id="inherited" name="inherited"></a>
+추가로 상속된 멤버들</h2></td></tr>
+<tr class="inherit_header pro_methods_classdds_1_1core_1_1_value"><td class="dyn-inherit" colspan="2"><span class="dynarrow"><span class="arrowhead closed"></span></span><a class="el" href="classdds_1_1core_1_1_value.html">dds::core::Value&lt; D &gt;</a>(으)로부터 상속된 보호된 멤버 함수</td></tr>
+<tr class="memitem:aed6c6fc7dd9039a6e90b5f5b7e25b8a6 inherit pro_methods_classdds_1_1core_1_1_value" id="r_aed6c6fc7dd9039a6e90b5f5b7e25b8a6"><td class="memItemLeft"> </td><td class="memItemRight"><a class="el" href="classdds_1_1core_1_1_value.html#aed6c6fc7dd9039a6e90b5f5b7e25b8a6">Value</a> (const Value &amp;p)</td></tr>
+<tr class="memdesc:aed6c6fc7dd9039a6e90b5f5b7e25b8a6 inherit pro_methods_classdds_1_1core_1_1_value"><td class="mdescLeft"> </td><td class="mdescRight">저장된 delegate 를 파생값으로 복사합니다  <br/></td></tr>
+<tr class="inherit_header pro_attribs_classdds_1_1core_1_1_value"><td class="dyn-inherit" colspan="2"><span class="dynarrow"><span class="arrowhead closed"></span></span><a class="el" href="classdds_1_1core_1_1_value.html">dds::core::Value&lt; D &gt;</a>(으)로부터 상속된 보호된 속성</td></tr>
+<tr class="memitem:a524bb581d6961d26653838488712edf4 inherit pro_attribs_classdds_1_1core_1_1_value" id="r_a524bb581d6961d26653838488712edf4"><td class="memItemLeft">
+D </td><td class="memItemRight"><b>d_</b></td></tr>
+</table>
+<a id="doc-func-members" name="doc-func-members"></a><h2 class="groupheader" id="header-doc-func-members">멤버 함수</h2>
+<a id="afe8493b438e4f790d86c3444ab5fca3c" name="afe8493b438e4f790d86c3444ab5fca3c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe8493b438e4f790d86c3444ab5fca3c">◆ </a></span>deadline()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename D&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="group__dds__qos.html#gaaa67e0ee7026fecfed9eb32f2c425721">::dds::core::policy::Deadline</a> &amp; <a class="el" href="classdds_1_1topic_1_1_t_subscription_builtin_topic_data.html">dds::topic::TSubscriptionBuiltinTopicData</a>&lt; D &gt;::deadline </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>발견된 구독에 대해 보고된 Deadline QoS를 가져옵니다. </p>
+<dl class="section return"><dt>반환값</dt><dd>이 검색 sample의 정책에 대한 Const 참조 </dd></dl>
+
+</div>
+</div>
+<a id="a24a00ffb7ea15fb756767bbd450cefcf" name="a24a00ffb7ea15fb756767bbd450cefcf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24a00ffb7ea15fb756767bbd450cefcf">◆ </a></span>destination_order()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename D&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="group__dds__qos.html#gac7ed58b137ff6a6ddcb2c7d8690169c5">::dds::core::policy::DestinationOrder</a> &amp; <a class="el" href="classdds_1_1topic_1_1_t_subscription_builtin_topic_data.html">dds::topic::TSubscriptionBuiltinTopicData</a>&lt; D &gt;::destination_order </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>발견된 구독에 대해 보고된 DestinationOrder QoS를 가져옵니다. </p>
+<dl class="section return"><dt>반환값</dt><dd>이 검색 sample의 정책에 대한 Const 참조 </dd></dl>
+
+</div>
+</div>
+<a id="a004b19d93323c0aa1689111956324e22" name="a004b19d93323c0aa1689111956324e22"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a004b19d93323c0aa1689111956324e22">◆ </a></span>durability()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename D&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="group__dds__qos.html#gaa70a30964093541160b34558877d3438">::dds::core::policy::Durability</a> &amp; <a class="el" href="classdds_1_1topic_1_1_t_subscription_builtin_topic_data.html">dds::topic::TSubscriptionBuiltinTopicData</a>&lt; D &gt;::durability </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>발견된 구독에 대해 보고된 Durability QoS를 가져옵니다. </p>
+<dl class="section return"><dt>반환값</dt><dd>이 검색 sample의 정책에 대한 Const 참조 </dd></dl>
+
+</div>
+</div>
+<a id="acaf323ce30dab6ae28dfb1fe3d0099aa" name="acaf323ce30dab6ae28dfb1fe3d0099aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acaf323ce30dab6ae28dfb1fe3d0099aa">◆ </a></span>group_data()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename D&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="group__dds__qos.html#ga1bcd7764c7126aa6ac3edcc8c5231433">::dds::core::policy::GroupData</a> &amp; <a class="el" href="classdds_1_1topic_1_1_t_subscription_builtin_topic_data.html">dds::topic::TSubscriptionBuiltinTopicData</a>&lt; D &gt;::group_data </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>발견된 구독에 대한 그룹 데이터 QoS를 가져옵니다 </p>
+<dl class="section return"><dt>반환값</dt><dd>이 검색 sample의 정책에 대한 Const 참조 </dd></dl>
+
+</div>
+</div>
+<a id="a394a17bb7b6ce2acd898f3da6582da63" name="a394a17bb7b6ce2acd898f3da6582da63"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a394a17bb7b6ce2acd898f3da6582da63">◆ </a></span>key()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename D&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="group__dds__topic.html#ga2ec7f4b9d23a714d90aeb3f61df5344c">dds::topic::BuiltinTopicKey</a> &amp; <a class="el" href="classdds_1_1topic_1_1_t_subscription_builtin_topic_data.html">dds::topic::TSubscriptionBuiltinTopicData</a>&lt; D &gt;::key </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>발견된 구독의 built-in <a class="el" href="classdds_1_1topic_1_1_topic.html" title="domain에서 Topic 이름을 DDS 데이터 타입과 연결합니다.">Topic&lt;T&gt;</a> 키를 가져옵니다 </p>
+<dl class="section return"><dt>반환값</dt><dd>저장된 검색 키에 대한 Const 참조 </dd></dl>
+
+</div>
+</div>
+<a id="a909345d50794e5738e7ffdfbf1d8f4f2" name="a909345d50794e5738e7ffdfbf1d8f4f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a909345d50794e5738e7ffdfbf1d8f4f2">◆ </a></span>latency_budget()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename D&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="group__dds__qos.html#ga50f7bda0cda1b76fbd4e374627540e7c">::dds::core::policy::LatencyBudget</a> &amp; <a class="el" href="classdds_1_1topic_1_1_t_subscription_builtin_topic_data.html">dds::topic::TSubscriptionBuiltinTopicData</a>&lt; D &gt;::latency_budget </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>발견된 구독에 대한 LatencyBudget QoS 보고를 가져옵니다. </p>
+<dl class="section return"><dt>반환값</dt><dd>이 검색 sample의 정책에 대한 Const 참조 </dd></dl>
+
+</div>
+</div>
+<a id="a873eb9c3e6706918de8be5991fd17507" name="a873eb9c3e6706918de8be5991fd17507"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a873eb9c3e6706918de8be5991fd17507">◆ </a></span>liveliness()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename D&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="group__dds__qos.html#ga6d270a5e784d2fc600382fdd467d6a56">::dds::core::policy::Liveliness</a> &amp; <a class="el" href="classdds_1_1topic_1_1_t_subscription_builtin_topic_data.html">dds::topic::TSubscriptionBuiltinTopicData</a>&lt; D &gt;::liveliness </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>발견된 구독에 대해 보고된 Liveliness QoS를 가져옵니다. </p>
+<dl class="section return"><dt>반환값</dt><dd>이 검색 sample의 정책에 대한 Const 참조 </dd></dl>
+
+</div>
+</div>
+<a id="a90c32523af5e5982a0f69d504d86af86" name="a90c32523af5e5982a0f69d504d86af86"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90c32523af5e5982a0f69d504d86af86">◆ </a></span>ownership()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename D&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="group__dds__qos.html#ga2b55aa93f052e74de626f42665c5785f">::dds::core::policy::Ownership</a> &amp; <a class="el" href="classdds_1_1topic_1_1_t_subscription_builtin_topic_data.html">dds::topic::TSubscriptionBuiltinTopicData</a>&lt; D &gt;::ownership </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>발견된 구독에 대해 보고된 Ownership QoS를 가져옵니다. </p>
+<dl class="section return"><dt>반환값</dt><dd>이 검색 sample의 정책에 대한 Const 참조 </dd></dl>
+
+</div>
+</div>
+<a id="af8e82f1ab482313a6d961641c468a8b0" name="af8e82f1ab482313a6d961641c468a8b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8e82f1ab482313a6d961641c468a8b0">◆ </a></span>participant_key()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename D&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="group__dds__topic.html#ga2ec7f4b9d23a714d90aeb3f61df5344c">dds::topic::BuiltinTopicKey</a> &amp; <a class="el" href="classdds_1_1topic_1_1_t_subscription_builtin_topic_data.html">dds::topic::TSubscriptionBuiltinTopicData</a>&lt; D &gt;::participant_key </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>endpoint의 DomainParticipant key를 반환하는 접근자에서 key를 가져옵니다. </p>
+<p>현재 래퍼는 <a class="el" href="#a394a17bb7b6ce2acd898f3da6582da63" title="발견된 구독의 built-in Topic 키를 가져옵니다">key()</a>와 동일한 구현 객체 필드를 사용한다.</p>
+<dl class="section return"><dt>반환값</dt><dd>이 릴리스의 endpoint 키에 대한 Const 참조 </dd></dl>
+
+</div>
+</div>
+<a id="ad99e05ace914ba66dd1e01f681afe4d6" name="ad99e05ace914ba66dd1e01f681afe4d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad99e05ace914ba66dd1e01f681afe4d6">◆ </a></span>partition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename D&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="group__dds__qos.html#ga9676f77e95c6e5d1c732604d9e7ead38">::dds::core::policy::Partition</a> &amp; <a class="el" href="classdds_1_1topic_1_1_t_subscription_builtin_topic_data.html">dds::topic::TSubscriptionBuiltinTopicData</a>&lt; D &gt;::partition </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>발견된 구독에 대해 보고된 Partition QoS를 가져옵니다. </p>
+<dl class="section return"><dt>반환값</dt><dd>이 검색 sample의 정책에 대한 Const 참조 </dd></dl>
+
+</div>
+</div>
+<a id="aba45ecab1b6f16c3c48476bc2c2f36a3" name="aba45ecab1b6f16c3c48476bc2c2f36a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba45ecab1b6f16c3c48476bc2c2f36a3">◆ </a></span>presentation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename D&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="group__dds__qos.html#ga2b52bb5f851fa675b14a1d1ac57d6b15">::dds::core::policy::Presentation</a> &amp; <a class="el" href="classdds_1_1topic_1_1_t_subscription_builtin_topic_data.html">dds::topic::TSubscriptionBuiltinTopicData</a>&lt; D &gt;::presentation </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>발견된 구독에 대해 보고된 Presentation QoS를 가져옵니다. </p>
+<dl class="section return"><dt>반환값</dt><dd>이 검색 sample의 정책에 대한 Const 참조 </dd></dl>
+
+</div>
+</div>
+<a id="a2f8754f9a9048920d19588ddeb23aa24" name="a2f8754f9a9048920d19588ddeb23aa24"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f8754f9a9048920d19588ddeb23aa24">◆ </a></span>reliability()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename D&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="group__dds__qos.html#gae1ee89c57fc5fa311721b4511e559783">::dds::core::policy::Reliability</a> &amp; <a class="el" href="classdds_1_1topic_1_1_t_subscription_builtin_topic_data.html">dds::topic::TSubscriptionBuiltinTopicData</a>&lt; D &gt;::reliability </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>발견된 구독에 대해 보고된 Reliability QoS를 가져옵니다. </p>
+<dl class="section return"><dt>반환값</dt><dd>이 검색 sample의 정책에 대한 Const 참조 </dd></dl>
+
+</div>
+</div>
+<a id="ab80bef738a311e254edb384808ec8ec1" name="ab80bef738a311e254edb384808ec8ec1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab80bef738a311e254edb384808ec8ec1">◆ </a></span>time_based_filter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename D&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="group__dds__qos.html#ga25ed9d287d76401671576ec64559df07">::dds::core::policy::TimeBasedFilter</a> &amp; <a class="el" href="classdds_1_1topic_1_1_t_subscription_builtin_topic_data.html">dds::topic::TSubscriptionBuiltinTopicData</a>&lt; D &gt;::time_based_filter </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>발견된 구독에 대해 보고된 TimeBasedFilter QoS를 가져옵니다. </p>
+<dl class="section return"><dt>반환값</dt><dd>이 검색 sample의 정책에 대한 Const 참조 </dd></dl>
+
+</div>
+</div>
+<a id="aaf92ec3abefca4056ee10f46bbdc43b1" name="aaf92ec3abefca4056ee10f46bbdc43b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf92ec3abefca4056ee10f46bbdc43b1">◆ </a></span>topic_data()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename D&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="group__dds__qos.html#ga15f95e2eef1f4dd215378d04701b71c9">::dds::core::policy::TopicData</a> &amp; <a class="el" href="classdds_1_1topic_1_1_t_subscription_builtin_topic_data.html">dds::topic::TSubscriptionBuiltinTopicData</a>&lt; D &gt;::topic_data </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>발견된 구독에 대해 보고된 <a class="el" href="classdds_1_1topic_1_1_topic.html" title="domain에서 Topic 이름을 DDS 데이터 타입과 연결합니다.">Topic&lt;T&gt;</a> 데이터 QoS를 가져옵니다. </p>
+<dl class="section return"><dt>반환값</dt><dd>이 검색 sample의 정책에 대한 Const 참조 </dd></dl>
+
+</div>
+</div>
+<a id="a15aa13f0b62bdcf91b4de774e10efa1a" name="a15aa13f0b62bdcf91b4de774e10efa1a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15aa13f0b62bdcf91b4de774e10efa1a">◆ </a></span>topic_name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename D&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string &amp; <a class="el" href="classdds_1_1topic_1_1_t_subscription_builtin_topic_data.html">dds::topic::TSubscriptionBuiltinTopicData</a>&lt; D &gt;::topic_name </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>검색 시 기록된 <a class="el" href="classdds_1_1topic_1_1_topic.html" title="domain에서 Topic 이름을 DDS 데이터 타입과 연결합니다.">Topic&lt;T&gt;</a> 이름을 가져옵니다 </p>
+<dl class="section return"><dt>반환값</dt><dd>저장된 이름에 대한 Const 참조 </dd></dl>
+
+</div>
+</div>
+<a id="aef3afb6bf781cebd649219b4607e1898" name="aef3afb6bf781cebd649219b4607e1898"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef3afb6bf781cebd649219b4607e1898">◆ </a></span>type_name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename D&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string &amp; <a class="el" href="classdds_1_1topic_1_1_t_subscription_builtin_topic_data.html">dds::topic::TSubscriptionBuiltinTopicData</a>&lt; D &gt;::type_name </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>검색시 기록된 등록된 데이터 타입 이름을 가져옵니다. </p>
+<dl class="section return"><dt>반환값</dt><dd>저장된 이름에 대한 Const 참조 </dd></dl>
+
+</div>
+</div>
+<a id="a45f4a8f15f0fc21534e2ddc44fa5ef84" name="a45f4a8f15f0fc21534e2ddc44fa5ef84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45f4a8f15f0fc21534e2ddc44fa5ef84">◆ </a></span>user_data()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename D&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="group__dds__qos.html#ga3082013b21e53c2cb3c462fcd1151d77">::dds::core::policy::UserData</a> &amp; <a class="el" href="classdds_1_1topic_1_1_t_subscription_builtin_topic_data.html">dds::topic::TSubscriptionBuiltinTopicData</a>&lt; D &gt;::user_data </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>발견된 구독에 대해 보고된 사용자 데이터 QoS를 가져옵니다. </p>
+<dl class="section return"><dt>반환값</dt><dd>이 검색 sample의 정책에 대한 Const 참조 </dd></dl>
+
+</div>
+</div>
+<hr/>이 클래스에 대한 문서화 페이지는 다음의 파일들로부터 생성되었습니다.:<ul>
+<li>include/gurumdds/cpp/core/<b>TypeDefs.hpp</b></li>
+<li>include/gurumdds/cpp/topic/<b>TBuiltinTopic.hpp</b></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div class="page-nav-panel" id="page-nav">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div class="navpath" id="nav-path"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="namespacedds.html">dds</a></li><li class="navelem"><a href="namespacedds_1_1topic.html">topic</a></li><li class="navelem"><a href="classdds_1_1topic_1_1_t_subscription_builtin_topic_data.html">TSubscriptionBuiltinTopicData</a></li>
+    <li class="footer">다음에 의해 생성됨 :  <a href="https://www.doxygen.org/index.html"><img alt="doxygen" class="footer" height="31" src="doxygen.svg" width="104"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

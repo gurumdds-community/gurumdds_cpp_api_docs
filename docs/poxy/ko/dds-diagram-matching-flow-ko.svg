@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1140" height="326" viewBox="0 0 1140 326" role="img" aria-label="현재 매칭 수를 확인합니다. 매칭됐으면 새 샘플을 보내고 선택 조건을 확인합니다. 매칭되지 않았으면 QoS 불일치, discovery, Topic, Partition을 확인합니다." data-dds-diagram="true">
+  <title id="matching-flow-ko-title">Endpoint 매칭과 샘플 선택 조건 진단</title>
+  <desc>현재 매칭 수를 확인합니다. 매칭됐으면 새 샘플을 보내고 선택 조건을 확인합니다. 매칭되지 않았으면 QoS 불일치, discovery, Topic, Partition을 확인합니다.</desc>
+  <defs>
+    <marker id="matching-flow-ko-open" viewBox="0 0 10 12" refX="9" refY="6" markerWidth="9" markerHeight="10" orient="auto" markerUnits="userSpaceOnUse"><path d="M 1,1 L 9,6 L 1,11" fill="none" stroke="#20354B" stroke-width="1.2"/></marker>
+    <marker id="matching-flow-ko-arrow" viewBox="0 0 11 10" refX="10" refY="5" markerWidth="10" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M 0,0 L 11,5 L 0,10 Z" fill="#356B96"/></marker>
+    <marker id="matching-flow-ko-uml" viewBox="0 0 15 15" refX="14" refY="7.5" markerWidth="15" markerHeight="15" orient="auto" markerUnits="userSpaceOnUse"><path d="M 1,1 L 14,7.5 L 1,14 Z" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/></marker>
+  </defs>
+  <rect width="1140" height="326" fill="#FFFFFF"/>
+  <g fill="#20354B" font-family="Arial, Malgun Gothic, sans-serif">
+    <path d="M 268 158 H 294" fill="none" stroke="#20354B" stroke-width="1.15" marker-end="url(#matching-flow-ko-open)"/>
+    <path d="M 518 158 H 539 V 61 H 569" fill="none" stroke="#356B96" stroke-width="1.7" marker-end="url(#matching-flow-ko-arrow)"/>
+    <path d="M 518 158 H 539 V 220 H 569" fill="none" stroke="#20354B" stroke-width="1.15" marker-end="url(#matching-flow-ko-open)"/>
+    <path d="M 823 61 H 856" fill="none" stroke="#356B96" stroke-width="1.7" marker-end="url(#matching-flow-ko-arrow)"/>
+    <path d="M 823 205 H 840 V 163 H 856" fill="none" stroke="#20354B" stroke-width="1.15" marker-end="url(#matching-flow-ko-open)"/>
+    <path d="M 823 236 H 840 V 267 H 856" fill="none" stroke="#20354B" stroke-width="1.15" marker-end="url(#matching-flow-ko-open)"/>
+    <rect x="21" y="115" width="247" height="86" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <path d="M 294 158 L 406 102 L 518 158 L 406 214 Z" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <rect x="569" y="22" width="254" height="78" fill="#EFF5FA" stroke="#20354B" stroke-width="1.15"/>
+    <rect x="856" y="22" width="259" height="78" fill="#EFF5FA" stroke="#20354B" stroke-width="1.15"/>
+    <rect x="569" y="170" width="254" height="100" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <rect x="856" y="124" width="259" height="78" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <rect x="856" y="228" width="259" height="78" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <text x="144" y="148" text-anchor="middle" font-size="16" font-weight="bold">Reader 매칭 상태 조회</text>
+    <text x="144" y="177" text-anchor="middle" font-size="14" font-family="Consolas, Menlo, monospace" textLength="222" lengthAdjust="spacingAndGlyphs">subscription_matched_status()</text>
+    <text x="406" y="163" text-anchor="middle" font-size="15" font-family="Consolas, Menlo, monospace">current_count() &gt; 0</text>
+    <text x="548" y="50" text-anchor="middle" font-size="15">예</text>
+    <text x="547" y="212" text-anchor="middle" font-size="15">아니요</text>
+    <text x="696" y="51" text-anchor="middle" font-size="16" font-weight="bold">새 샘플 전송</text>
+    <text x="985" y="50" text-anchor="middle" font-size="16" font-weight="bold">샘플 선택 조건 확인</text>
+    <text x="985" y="78" text-anchor="middle" font-size="15" textLength="234" lengthAdjust="spacingAndGlyphs">content filter, instance, sample state</text>
+    <text x="696" y="199" text-anchor="middle" font-size="16" font-weight="bold">QoS 불일치 상태 조회</text>
+    <text x="696" y="224" text-anchor="middle" font-size="12.2" font-family="Consolas, Menlo, monospace" textLength="230" lengthAdjust="spacingAndGlyphs">requested_incompatible_qos_status()</text>
+    <text x="696" y="249" text-anchor="middle" font-size="15">불일치 건수가 늘었나?</text>
+    <text x="985" y="151" text-anchor="middle" font-size="16" font-weight="bold">불일치 건수가 늘었음</text>
+    <text x="985" y="179" text-anchor="middle" font-size="15" font-family="Consolas, Menlo, monospace">last_policy_id()</text>
+    <text x="985" y="255" text-anchor="middle" font-size="16" font-weight="bold">불일치 건수가 그대로임</text>
+    <text x="985" y="283" text-anchor="middle" font-size="15">discovery, Topic, Partition 확인</text>
+  </g>
+</svg>

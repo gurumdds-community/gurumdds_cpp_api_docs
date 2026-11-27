@@ -1,0 +1,756 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/xhtml;charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=11" http-equiv="X-UA-Compatible"/>
+<meta content="Doxygen 1.18.0" name="generator"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>GurumDDS C++ API Reference: dds::core::Time 클래스</title>
+<link href="gurum-networks-logo.png" rel="icon" type="image/x-icon"/>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script src="dynsections.js" type="text/javascript"></script>
+<script src="codefolding.js" type="text/javascript"></script>
+<script src="clipboard.js" type="text/javascript"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script src="navtreedata.js" type="text/javascript"></script>
+<script src="navtree.js" type="text/javascript"></script>
+<script src="cookie.js" type="text/javascript"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script src="search/searchdata.js" type="text/javascript"></script>
+<script src="search/search.js" type="text/javascript"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+<link href="ReferenceBranding.css" rel="stylesheet" type="text/css"/>
+<script defer="True" src="ReferenceUi.js"></script><link href="../en/classdds_1_1core_1_1_time.html" hreflang="en" rel="alternate"/><link href="../ko/classdds_1_1core_1_1_time.html" hreflang="ko" rel="alternate"/><link href="../language.css" rel="stylesheet"/><script defer="defer" src="../language.js"></script></head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellpadding="0" cellspacing="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">GurumDDS C++ API Reference<span id="projectnumber"> 1.3.2</span>
+   </div>
+  </td>
+ <td class="doc-language-cell"><label class="doc-language"><select aria-label="문서 언어" data-current="1"><option lang="en" value="../en/classdds_1_1core_1_1_time.html">English</option><option lang="en" selected="selected" value="../ko/classdds_1_1core_1_1_time.html">Korean</option></select></label></td></tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script id="doxygen-config" type="application/json">
+{
+  "relPath": "",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script src="menudata.js" type="text/javascript"></script>
+<script src="menu.js" type="text/javascript"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> 주 메뉴 표시 전환</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div class="MSearchBoxInactive" id="MSearchBox">
+        <span class="left">
+          <span class="search-icon" id="MSearchSelect"><span class="search-icon-dropdown"></span></span>
+          <input accesskey="S" id="MSearchField" placeholder="검색" type="text" value=""/>
+          </span><span class="right">
+            <a href="javascript:searchBox.CloseResultsWindow()" id="MSearchClose"><div class="close-icon" id="MSearchCloseImg"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div class="ui-resizable side-nav-resizable" id="side-nav">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div class="sync" id="nav-sync"></div>
+    </div>
+  </div>
+  <div class="ui-resizable-handle" id="splitbar">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('classdds_1_1core_1_1_time.html','','classdds_1_1core_1_1_time-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">로딩중...</div>
+<div class="SRStatus" id="Searching">검색중...</div>
+<div class="SRStatus" id="NoMatches">일치하는것 없음</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">dds::core::Time 클래스<div class="ingroups"><a class="el" href="group__dds__api__modules.html">API 모듈</a> » <a class="el" href="group__dds__core.html">Core</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p class="dds-class-include"><code>#include &lt;gurumdds/cpp/core/Time.hpp&gt;</code></p>
+
+<p>초와 나노초로 시간 스탬프를 나타냅니다  
+ <a href="#details">더 자세히 ...</a></p>
+<a id="details" name="details"></a><h2 class="groupheader" id="header-details">상세한 설명</h2>
+<div class="textblock"><p>초와 나노초로 시간 스탬프를 나타냅니다 </p>
+<p>기본 생성한 timestamp를 읽기 전에 두 성분을 모두 설정하세요. 정수로 지정한 시간에서 초 미만을 보존하려면 <span class="tt"><a class="el" href="#a8061c34c5ca4c5f8cc221b35a0f2fc04" title="마이크로초에서 timestamp를 만듭니다">from_microsecs()</a></span> 또는 <span class="tt"><a class="el" href="#a0ef12bc07de049fba4d6ae576617d9c5" title="밀리초로부터 시간 스탬프를 만듭니다">from_millisecs()</a></span>를 사용합니다. 현재 <span class="tt"><a class="el" href="#a84868bf0749743214e114a7ba1fcc770" title="초 단위 값의 정수부로 timestamp를 생성합니다.">from_secs(double)</a></span> 오버로드는 소수부를 버립니다. 더 정밀한 값이 필요하면 초와 나노초를 명시해서 생성하세요.</p>
+<p><span class="tt"><a class="el" href="#ac7e4e12e5ea870921c3ff6a346db2689" title="유효하지 않은 timestamp를 나타내는 특수 값을 가져옵니다">invalid()</a></span>는 비교나 산술을 위한 시간 스탬프가 아닌 마커를 나타냅니다. 비교를 위해서는, 정초 필드의 차이가 <span class="tt"><a class="el" href="#a0003de0d2ee6c6b0c4eb670a19e33268" title="두 시간 스탬프 값을 비교합니다">compare()</a></span>에서 사용하는 타입인 <span class="tt">int</span>에 맞는지 확인하십시오. </p>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-pub-methods"><a id="pub-methods" name="pub-methods"></a>
+공개 멤버 함수</h2></td></tr>
+<tr class="memitem:a3e7edeb7e88553ab1303036da0555f02" id="r_a3e7edeb7e88553ab1303036da0555f02"><td class="memItemLeft"> </td><td class="memItemRight"><a class="el" href="#a3e7edeb7e88553ab1303036da0555f02">Time</a> ()</td></tr>
+<tr class="memdesc:a3e7edeb7e88553ab1303036da0555f02"><td class="mdescLeft"> </td><td class="mdescRight">기본값으로 구성 요소를 초기화하지 않고 시간 스탬프를 생성합니다  <br/></td></tr>
+<tr class="memitem:aa5c6dab2ebdad40d0d993696f9518f2b" id="r_aa5c6dab2ebdad40d0d993696f9518f2b"><td class="memItemLeft"> </td><td class="memItemRight"><a class="el" href="#aa5c6dab2ebdad40d0d993696f9518f2b">Time</a> (int64_t sec, uint32_t nanosec=0)</td></tr>
+<tr class="memdesc:aa5c6dab2ebdad40d0d993696f9518f2b"><td class="mdescLeft"> </td><td class="mdescRight">두 개의 구성 요소로부터 timestamp를 생성합니다  <br/></td></tr>
+<tr class="memitem:a00d1279cc90c35bae0c76b789a86b55e" id="r_a00d1279cc90c35bae0c76b789a86b55e"><td class="memItemLeft">int64_t </td><td class="memItemRight"><a class="el" href="#a00d1279cc90c35bae0c76b789a86b55e">sec</a> () const</td></tr>
+<tr class="memdesc:a00d1279cc90c35bae0c76b789a86b55e"><td class="mdescLeft"> </td><td class="mdescRight">초 단위의 구성 요소를 가져옵니다  <br/></td></tr>
+<tr class="memitem:a2b88cdf987639b9cc8bded3af00d223e" id="r_a2b88cdf987639b9cc8bded3af00d223e"><td class="memItemLeft">void </td><td class="memItemRight"><a class="el" href="#a2b88cdf987639b9cc8bded3af00d223e">sec</a> (int64_t s)</td></tr>
+<tr class="memdesc:a2b88cdf987639b9cc8bded3af00d223e"><td class="mdescLeft"> </td><td class="mdescRight">정초 구성 요소 설정  <br/></td></tr>
+<tr class="memitem:a188415f8cfc8b0fec21a310364721b33" id="r_a188415f8cfc8b0fec21a310364721b33"><td class="memItemLeft">uint32_t </td><td class="memItemRight"><a class="el" href="#a188415f8cfc8b0fec21a310364721b33">nanosec</a> () const</td></tr>
+<tr class="memdesc:a188415f8cfc8b0fec21a310364721b33"><td class="mdescLeft"> </td><td class="mdescRight">나노초 구성요소를 가져옵니다  <br/></td></tr>
+<tr class="memitem:a2129ae44324df19df795fda61c9f5527" id="r_a2129ae44324df19df795fda61c9f5527"><td class="memItemLeft">void </td><td class="memItemRight"><a class="el" href="#a2129ae44324df19df795fda61c9f5527">nanosec</a> (uint32_t ns)</td></tr>
+<tr class="memdesc:a2129ae44324df19df795fda61c9f5527"><td class="mdescLeft"> </td><td class="mdescRight">나노초 구성 요소 설정  <br/></td></tr>
+<tr class="memitem:a0003de0d2ee6c6b0c4eb670a19e33268" id="r_a0003de0d2ee6c6b0c4eb670a19e33268"><td class="memItemLeft">int </td><td class="memItemRight"><a class="el" href="#a0003de0d2ee6c6b0c4eb670a19e33268">compare</a> (const <a class="el" href="#a3e7edeb7e88553ab1303036da0555f02">Time</a> &amp;that)</td></tr>
+<tr class="memdesc:a0003de0d2ee6c6b0c4eb670a19e33268"><td class="mdescLeft"> </td><td class="mdescRight">두 시간 스탬프 값을 비교합니다  <br/></td></tr>
+<tr class="memitem:af03934fc3f725d5ddb59d2973b246d20" id="r_af03934fc3f725d5ddb59d2973b246d20"><td class="memItemLeft">bool </td><td class="memItemRight"><a class="el" href="#af03934fc3f725d5ddb59d2973b246d20">operator&gt;</a> (const <a class="el" href="#a3e7edeb7e88553ab1303036da0555f02">Time</a> &amp;that)</td></tr>
+<tr class="memdesc:af03934fc3f725d5ddb59d2973b246d20"><td class="mdescLeft"> </td><td class="mdescRight">이 timestamp가 다른 timestamp보다 나중인지 확인합니다  <br/></td></tr>
+<tr class="memitem:acfbdee29a2be6d39511f74dbfe0e8d9a" id="r_acfbdee29a2be6d39511f74dbfe0e8d9a"><td class="memItemLeft">bool </td><td class="memItemRight"><a class="el" href="#acfbdee29a2be6d39511f74dbfe0e8d9a">operator&gt;=</a> (const <a class="el" href="#a3e7edeb7e88553ab1303036da0555f02">Time</a> &amp;that)</td></tr>
+<tr class="memdesc:acfbdee29a2be6d39511f74dbfe0e8d9a"><td class="mdescLeft"> </td><td class="mdescRight">이 timestamp가 다른 timestamp와 같거나 나중인지 확인합니다  <br/></td></tr>
+<tr class="memitem:a4b567910023d0c1a0f1782f94f20eba4" id="r_a4b567910023d0c1a0f1782f94f20eba4"><td class="memItemLeft">bool </td><td class="memItemRight"><a class="el" href="#a4b567910023d0c1a0f1782f94f20eba4">operator==</a> (const <a class="el" href="#a3e7edeb7e88553ab1303036da0555f02">Time</a> &amp;that)</td></tr>
+<tr class="memdesc:a4b567910023d0c1a0f1782f94f20eba4"><td class="mdescLeft"> </td><td class="mdescRight">이 timestamp가 다른 timestamp와 같은지 확인합니다  <br/></td></tr>
+<tr class="memitem:a13fb0ba5b45341a71810e220eb17ac34" id="r_a13fb0ba5b45341a71810e220eb17ac34"><td class="memItemLeft">bool </td><td class="memItemRight"><a class="el" href="#a13fb0ba5b45341a71810e220eb17ac34">operator&lt;=</a> (const <a class="el" href="#a3e7edeb7e88553ab1303036da0555f02">Time</a> &amp;that)</td></tr>
+<tr class="memdesc:a13fb0ba5b45341a71810e220eb17ac34"><td class="mdescLeft"> </td><td class="mdescRight">이 timestamp가 다른 timestamp와 같거나 앞서는지 확인합니다  <br/></td></tr>
+<tr class="memitem:abf2afd97dbaa8bb292bfceac3f1e9960" id="r_abf2afd97dbaa8bb292bfceac3f1e9960"><td class="memItemLeft">bool </td><td class="memItemRight"><a class="el" href="#abf2afd97dbaa8bb292bfceac3f1e9960">operator&lt;</a> (const <a class="el" href="#a3e7edeb7e88553ab1303036da0555f02">Time</a> &amp;that)</td></tr>
+<tr class="memdesc:abf2afd97dbaa8bb292bfceac3f1e9960"><td class="mdescLeft"> </td><td class="mdescRight">이 timestamp가 다른 timestamp보다 앞서는지 확인합니다  <br/></td></tr>
+<tr class="memitem:a96772df63db81f69d040df4ea7c529f5" id="r_a96772df63db81f69d040df4ea7c529f5"><td class="memItemLeft"><a class="el" href="#a3e7edeb7e88553ab1303036da0555f02">Time</a> &amp; </td><td class="memItemRight"><a class="el" href="#a96772df63db81f69d040df4ea7c529f5">operator+=</a> (const <a class="el" href="classdds_1_1core_1_1_duration.html">Duration</a> &amp;a_ti)</td></tr>
+<tr class="memdesc:a96772df63db81f69d040df4ea7c529f5"><td class="mdescLeft"> </td><td class="mdescRight">이 시간 스탬프에 지속시간을 추가합니다  <br/></td></tr>
+<tr class="memitem:aadcdd29124cabe16dedff467df3636f7" id="r_aadcdd29124cabe16dedff467df3636f7"><td class="memItemLeft"><a class="el" href="#a3e7edeb7e88553ab1303036da0555f02">Time</a> &amp; </td><td class="memItemRight"><a class="el" href="#aadcdd29124cabe16dedff467df3636f7">operator-=</a> (const <a class="el" href="classdds_1_1core_1_1_duration.html">Duration</a> &amp;a_ti)</td></tr>
+<tr class="memdesc:aadcdd29124cabe16dedff467df3636f7"><td class="mdescLeft"> </td><td class="mdescRight">이 시간 스탬프에서 지속시간을 뺀다  <br/></td></tr>
+<tr class="memitem:a974090214e3d33a16be288dd8207be08" id="r_a974090214e3d33a16be288dd8207be08"><td class="memItemLeft">int64_t </td><td class="memItemRight"><a class="el" href="#a974090214e3d33a16be288dd8207be08">to_millisecs</a> () const</td></tr>
+<tr class="memdesc:a974090214e3d33a16be288dd8207be08"><td class="mdescLeft"> </td><td class="mdescRight">timestamp를 정수로 변환합니다  <br/></td></tr>
+<tr class="memitem:acd807a97cb92bfcaec6d95e6b8ea980b" id="r_acd807a97cb92bfcaec6d95e6b8ea980b"><td class="memItemLeft">int64_t </td><td class="memItemRight"><a class="el" href="#acd807a97cb92bfcaec6d95e6b8ea980b">to_microsecs</a> ()</td></tr>
+<tr class="memdesc:acd807a97cb92bfcaec6d95e6b8ea980b"><td class="mdescLeft"> </td><td class="mdescRight">timestamp를 마이크로초로 변환합니다  <br/></td></tr>
+<tr class="memitem:a1fbeb3a74cdc26480a4458f4f3503221" id="r_a1fbeb3a74cdc26480a4458f4f3503221"><td class="memItemLeft">double </td><td class="memItemRight"><a class="el" href="#a1fbeb3a74cdc26480a4458f4f3503221">to_secs</a> () const</td></tr>
+<tr class="memdesc:a1fbeb3a74cdc26480a4458f4f3503221"><td class="mdescLeft"> </td><td class="mdescRight">timestamp를 소수점 이하를 포함한 초 단위 값으로 변환합니다  <br/></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-pub-static-methods"><a id="pub-static-methods" name="pub-static-methods"></a>
+공개 정적 멤버 함수</h2></td></tr>
+<tr class="memitem:ac7e4e12e5ea870921c3ff6a346db2689" id="r_ac7e4e12e5ea870921c3ff6a346db2689"><td class="memItemLeft">static const <a class="el" href="#a3e7edeb7e88553ab1303036da0555f02">Time</a> </td><td class="memItemRight"><a class="el" href="#ac7e4e12e5ea870921c3ff6a346db2689">invalid</a> ()</td></tr>
+<tr class="memdesc:ac7e4e12e5ea870921c3ff6a346db2689"><td class="mdescLeft"> </td><td class="mdescRight">유효하지 않은 timestamp를 나타내는 특수 값을 가져옵니다  <br/></td></tr>
+<tr class="memitem:a8061c34c5ca4c5f8cc221b35a0f2fc04" id="r_a8061c34c5ca4c5f8cc221b35a0f2fc04"><td class="memItemLeft">static const <a class="el" href="#a3e7edeb7e88553ab1303036da0555f02">Time</a> </td><td class="memItemRight"><a class="el" href="#a8061c34c5ca4c5f8cc221b35a0f2fc04">from_microsecs</a> (int64_t microseconds)</td></tr>
+<tr class="memdesc:a8061c34c5ca4c5f8cc221b35a0f2fc04"><td class="mdescLeft"> </td><td class="mdescRight">마이크로초에서 timestamp를 만듭니다  <br/></td></tr>
+<tr class="memitem:a0ef12bc07de049fba4d6ae576617d9c5" id="r_a0ef12bc07de049fba4d6ae576617d9c5"><td class="memItemLeft">static const <a class="el" href="#a3e7edeb7e88553ab1303036da0555f02">Time</a> </td><td class="memItemRight"><a class="el" href="#a0ef12bc07de049fba4d6ae576617d9c5">from_millisecs</a> (int64_t milliseconds)</td></tr>
+<tr class="memdesc:a0ef12bc07de049fba4d6ae576617d9c5"><td class="mdescLeft"> </td><td class="mdescRight">밀리초로부터 시간 스탬프를 만듭니다  <br/></td></tr>
+<tr class="memitem:a84868bf0749743214e114a7ba1fcc770" id="r_a84868bf0749743214e114a7ba1fcc770"><td class="memItemLeft">static const <a class="el" href="#a3e7edeb7e88553ab1303036da0555f02">Time</a> </td><td class="memItemRight"><a class="el" href="#a84868bf0749743214e114a7ba1fcc770">from_secs</a> (double seconds)</td></tr>
+<tr class="memdesc:a84868bf0749743214e114a7ba1fcc770"><td class="mdescLeft"> </td><td class="mdescRight">초 단위 값의 정수부로 timestamp를 생성합니다.  <br/></td></tr>
+</table>
+<a id="doc-constructors" name="doc-constructors"></a><h2 class="groupheader" id="header-doc-constructors">생성자와 소멸자</h2>
+<a id="a3e7edeb7e88553ab1303036da0555f02" name="a3e7edeb7e88553ab1303036da0555f02"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e7edeb7e88553ab1303036da0555f02">◆ </a></span>Time() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">dds::core::Time::Time </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>기본값으로 구성 요소를 초기화하지 않고 시간 스탬프를 생성합니다 </p>
+<p>사용 전에 초 및 나노초를 설정하거나 구성 요소 생성기를 사용하십시오. </p>
+
+</div>
+</div>
+<a id="aa5c6dab2ebdad40d0d993696f9518f2b" name="aa5c6dab2ebdad40d0d993696f9518f2b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5c6dab2ebdad40d0d993696f9518f2b">◆ </a></span>Time() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">dds::core::Time::Time </td>
+          <td>(</td>
+          <td class="paramtype">int64_t</td>          <td class="paramname"><span class="paramname"><em>sec</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>nanosec</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span> )</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel explicit">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>두 개의 구성 요소로부터 timestamp를 생성합니다 </p>
+<p>컨스트럭터는 공급된 구성요소를 직접 저장합니다.</p>
+<dl class="params"><dt>매개변수</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[입력]</td><td class="paramname">sec</td><td>초 구성 요소 </td></tr>
+    <tr><td class="paramdir">[입력]</td><td class="paramname">nanosec</td><td>나노초 구성요소, 기본값은 0 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="doc-func-members" name="doc-func-members"></a><h2 class="groupheader" id="header-doc-func-members">멤버 함수</h2>
+<a id="a0003de0d2ee6c6b0c4eb670a19e33268" name="a0003de0d2ee6c6b0c4eb670a19e33268"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0003de0d2ee6c6b0c4eb670a19e33268">◆ </a></span>compare()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int dds::core::Time::compare </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a3e7edeb7e88553ab1303036da0555f02">Time</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>that</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>두 시간 스탬프 값을 비교합니다 </p>
+<p>먼저 초를 비교한 다음 나노초를 비교합니다. 결과 타입에 구성 요소 차이가 들어맞는 정규화된 값을 사용합니다.</p>
+<dl class="params"><dt>매개변수</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[입력]</td><td class="paramname">that</td><td>비교할 값</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>반환값</dt><dd>앞선 timestamp이면 음수, 같으면 0, 뒤의 timestamp이면 양수 </dd></dl>
+
+</div>
+</div>
+<a id="a8061c34c5ca4c5f8cc221b35a0f2fc04" name="a8061c34c5ca4c5f8cc221b35a0f2fc04"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8061c34c5ca4c5f8cc221b35a0f2fc04">◆ </a></span>from_microsecs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="#a3e7edeb7e88553ab1303036da0555f02">Time</a> dds::core::Time::from_microsecs </td>
+          <td>(</td>
+          <td class="paramtype">int64_t</td>          <td class="paramname"><span class="paramname"><em>microseconds</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>마이크로초에서 timestamp를 만듭니다 </p>
+<dl class="params"><dt>매개변수</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[입력]</td><td class="paramname">microseconds</td><td>초 구성 요소의 범위 내에서 마이크로초 단위의 비음수값</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>반환값</dt><dd>timestamp를 정초와 나노초로 나누어 보여줍니다. </dd></dl>
+
+</div>
+</div>
+<a id="a0ef12bc07de049fba4d6ae576617d9c5" name="a0ef12bc07de049fba4d6ae576617d9c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ef12bc07de049fba4d6ae576617d9c5">◆ </a></span>from_millisecs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="#a3e7edeb7e88553ab1303036da0555f02">Time</a> dds::core::Time::from_millisecs </td>
+          <td>(</td>
+          <td class="paramtype">int64_t</td>          <td class="paramname"><span class="paramname"><em>milliseconds</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>밀리초로부터 시간 스탬프를 만듭니다 </p>
+<dl class="params"><dt>매개변수</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[입력]</td><td class="paramname">milliseconds</td><td>밀리초 단위의 비음수값으로, 초 구성 요소의 범위 내에 있습니다.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>반환값</dt><dd>timestamp를 정초와 나노초로 나누어 보여줍니다. </dd></dl>
+
+</div>
+</div>
+<a id="a84868bf0749743214e114a7ba1fcc770" name="a84868bf0749743214e114a7ba1fcc770"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a84868bf0749743214e114a7ba1fcc770">◆ </a></span>from_secs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="#a3e7edeb7e88553ab1303036da0555f02">Time</a> dds::core::Time::from_secs </td>
+          <td>(</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>seconds</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>초 단위 값의 정수부로 timestamp를 생성합니다. </p>
+<p>이 구현은 분수 부분을 잘립니다. 서브초 정확도를 유지하려면 <span class="tt"><a class="el" href="#a8061c34c5ca4c5f8cc221b35a0f2fc04" title="마이크로초에서 timestamp를 만듭니다">from_microsecs()</a></span> 또는 <span class="tt"><a class="el" href="#a0ef12bc07de049fba4d6ae576617d9c5" title="밀리초로부터 시간 스탬프를 만듭니다">from_millisecs()</a></span> 를 사용합니다.</p>
+<dl class="params"><dt>매개변수</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[입력]</td><td class="paramname">seconds</td><td>초 단위의 비음수 시간</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>반환값</dt><dd>초 정확도의 timestamp </dd></dl>
+
+</div>
+</div>
+<a id="ac7e4e12e5ea870921c3ff6a346db2689" name="ac7e4e12e5ea870921c3ff6a346db2689"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7e4e12e5ea870921c3ff6a346db2689">◆ </a></span>invalid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="#a3e7edeb7e88553ab1303036da0555f02">Time</a> dds::core::Time::invalid </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>유효하지 않은 timestamp를 나타내는 특수 값을 가져옵니다 </p>
+<dl class="section return"><dt>반환값</dt><dd>초 필드가 <span class="tt">-1</span>, 나노초 필드가 <span class="tt">0xffffffff</span>인 특수 값 </dd></dl>
+
+</div>
+</div>
+<a id="a188415f8cfc8b0fec21a310364721b33" name="a188415f8cfc8b0fec21a310364721b33"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a188415f8cfc8b0fec21a310364721b33">◆ </a></span>nanosec() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t dds::core::Time::nanosec </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>나노초 구성요소를 가져옵니다 </p>
+<dl class="section return"><dt>반환값</dt><dd>저장된 나노초 </dd></dl>
+
+</div>
+</div>
+<a id="a2129ae44324df19df795fda61c9f5527" name="a2129ae44324df19df795fda61c9f5527"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2129ae44324df19df795fda61c9f5527">◆ </a></span>nanosec() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void dds::core::Time::nanosec </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>ns</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>나노초 구성 요소 설정 </p>
+<p>다른 구성 요소는 변경되지 않습니다. 산술에 대한 값을 사용할 때 정규화된 쌍을 제공하십시오.</p>
+<dl class="params"><dt>매개변수</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[입력]</td><td class="paramname">ns</td><td>새로운 구성 요소 값 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a96772df63db81f69d040df4ea7c529f5" name="a96772df63db81f69d040df4ea7c529f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96772df63db81f69d040df4ea7c529f5">◆ </a></span>operator+=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a3e7edeb7e88553ab1303036da0555f02">Time</a> &amp; dds::core::Time::operator+= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdds_1_1core_1_1_duration.html">Duration</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>a_ti</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>이 시간 스탬프에 지속시간을 추가합니다 </p>
+<p>유한 피연산자와 seconds 구성 요소로 표현 가능한 결과를 사용합니다.</p>
+<dl class="params"><dt>매개변수</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[입력]</td><td class="paramname">a_ti</td><td>추가할 시간 간격</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>반환값</dt><dd>변경 후 이 시간 스탬프를 참조 </dd></dl>
+
+</div>
+</div>
+<a id="aadcdd29124cabe16dedff467df3636f7" name="aadcdd29124cabe16dedff467df3636f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aadcdd29124cabe16dedff467df3636f7">◆ </a></span>operator-=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a3e7edeb7e88553ab1303036da0555f02">Time</a> &amp; dds::core::Time::operator-= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdds_1_1core_1_1_duration.html">Duration</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>a_ti</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>이 시간 스탬프에서 지속시간을 뺀다 </p>
+<dl class="params"><dt>매개변수</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[입력]</td><td class="paramname">a_ti</td><td>빼는 시간 간격</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>반환값</dt><dd>빼기 후의 시간 스탬프</dd></dl>
+<dl class="exception"><dt>예외</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="classdds_1_1core_1_1_invalid_data_error.html" title="요청된 작업에서 사용할 수 없는 데이터 값을 보고합니다.">dds::core::InvalidDataError</a></td><td>간격이 시간 스탬프를 초과함 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="abf2afd97dbaa8bb292bfceac3f1e9960" name="abf2afd97dbaa8bb292bfceac3f1e9960"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf2afd97dbaa8bb292bfceac3f1e9960">◆ </a></span>operator&lt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool dds::core::Time::operator&lt; </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a3e7edeb7e88553ab1303036da0555f02">Time</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>that</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>이 timestamp가 다른 timestamp보다 앞서는지 확인합니다 </p>
+<dl class="params"><dt>매개변수</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[입력]</td><td class="paramname">that</td><td>비교할 값</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>반환값</dt><dd>이 시간 스탬프가 다른 값보다 앞서 있으면 true </dd></dl>
+
+</div>
+</div>
+<a id="a13fb0ba5b45341a71810e220eb17ac34" name="a13fb0ba5b45341a71810e220eb17ac34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13fb0ba5b45341a71810e220eb17ac34">◆ </a></span>operator&lt;=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool dds::core::Time::operator&lt;= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a3e7edeb7e88553ab1303036da0555f02">Time</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>that</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>이 timestamp가 다른 timestamp와 같거나 앞서는지 확인합니다 </p>
+<dl class="params"><dt>매개변수</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[입력]</td><td class="paramname">that</td><td>비교할 값</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>반환값</dt><dd>이 timestamp가 다른 값과 같거나 앞서면 true </dd></dl>
+
+</div>
+</div>
+<a id="a4b567910023d0c1a0f1782f94f20eba4" name="a4b567910023d0c1a0f1782f94f20eba4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b567910023d0c1a0f1782f94f20eba4">◆ </a></span>operator==()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool dds::core::Time::operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a3e7edeb7e88553ab1303036da0555f02">Time</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>that</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>이 timestamp가 다른 timestamp와 같은지 확인합니다 </p>
+<dl class="params"><dt>매개변수</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[입력]</td><td class="paramname">that</td><td>비교할 값</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>반환값</dt><dd>이 시간 스탬프가 다른 값과 같으면 true </dd></dl>
+
+</div>
+</div>
+<a id="af03934fc3f725d5ddb59d2973b246d20" name="af03934fc3f725d5ddb59d2973b246d20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af03934fc3f725d5ddb59d2973b246d20">◆ </a></span>operator&gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool dds::core::Time::operator&gt; </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a3e7edeb7e88553ab1303036da0555f02">Time</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>that</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>이 timestamp가 다른 timestamp보다 나중인지 확인합니다 </p>
+<dl class="params"><dt>매개변수</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[입력]</td><td class="paramname">that</td><td>비교할 값</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>반환값</dt><dd>이 timestamp가 다른 값보다 나중이면 true </dd></dl>
+
+</div>
+</div>
+<a id="acfbdee29a2be6d39511f74dbfe0e8d9a" name="acfbdee29a2be6d39511f74dbfe0e8d9a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acfbdee29a2be6d39511f74dbfe0e8d9a">◆ </a></span>operator&gt;=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool dds::core::Time::operator&gt;= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a3e7edeb7e88553ab1303036da0555f02">Time</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>that</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>이 timestamp가 다른 timestamp와 같거나 나중인지 확인합니다 </p>
+<dl class="params"><dt>매개변수</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[입력]</td><td class="paramname">that</td><td>비교할 값</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>반환값</dt><dd>이 timestamp가 다른 값과 같거나 나중이면 true </dd></dl>
+
+</div>
+</div>
+<a id="a00d1279cc90c35bae0c76b789a86b55e" name="a00d1279cc90c35bae0c76b789a86b55e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00d1279cc90c35bae0c76b789a86b55e">◆ </a></span>sec() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int64_t dds::core::Time::sec </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>초 단위의 구성 요소를 가져옵니다 </p>
+<dl class="section return"><dt>반환값</dt><dd>저장된 초 </dd></dl>
+
+</div>
+</div>
+<a id="a2b88cdf987639b9cc8bded3af00d223e" name="a2b88cdf987639b9cc8bded3af00d223e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b88cdf987639b9cc8bded3af00d223e">◆ </a></span>sec() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void dds::core::Time::sec </td>
+          <td>(</td>
+          <td class="paramtype">int64_t</td>          <td class="paramname"><span class="paramname"><em>s</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>정초 구성 요소 설정 </p>
+<p>다른 구성 요소는 변경되지 않습니다. 산술에 대한 값을 사용할 때 정규화된 쌍을 제공하십시오.</p>
+<dl class="params"><dt>매개변수</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[입력]</td><td class="paramname">s</td><td>새로운 구성 요소 값 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="acd807a97cb92bfcaec6d95e6b8ea980b" name="acd807a97cb92bfcaec6d95e6b8ea980b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd807a97cb92bfcaec6d95e6b8ea980b">◆ </a></span>to_microsecs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int64_t dds::core::Time::to_microsecs </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>timestamp를 마이크로초로 변환합니다 </p>
+<dl class="section return"><dt>반환값</dt><dd>초와 나노초는 마이크로초 단위로 표현되며, 서브마이크로초 정확도는 제외됩니다. </dd></dl>
+
+</div>
+</div>
+<a id="a974090214e3d33a16be288dd8207be08" name="a974090214e3d33a16be288dd8207be08"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a974090214e3d33a16be288dd8207be08">◆ </a></span>to_millisecs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int64_t dds::core::Time::to_millisecs </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>timestamp를 정수로 변환합니다 </p>
+<dl class="section return"><dt>반환값</dt><dd>밀리초 단위로 표현된 초와 나노초, 서브밀리초 정확도는 제외 </dd></dl>
+
+</div>
+</div>
+<a id="a1fbeb3a74cdc26480a4458f4f3503221" name="a1fbeb3a74cdc26480a4458f4f3503221"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1fbeb3a74cdc26480a4458f4f3503221">◆ </a></span>to_secs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double dds::core::Time::to_secs </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>timestamp를 소수점 이하를 포함한 초 단위 값으로 변환합니다 </p>
+<dl class="section return"><dt>반환값</dt><dd>초와 나노초 구성 요소를 초의 분수로 </dd></dl>
+
+</div>
+</div>
+<hr/>이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.:<ul>
+<li>include/gurumdds/cpp/core/<a class="el" href="_time_8hpp.html">Time.hpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div class="page-nav-panel" id="page-nav">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div class="navpath" id="nav-path"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="namespacedds.html">dds</a></li><li class="navelem"><a href="namespacedds_1_1core.html">core</a></li><li class="navelem"><a href="classdds_1_1core_1_1_time.html">Time</a></li>
+    <li class="footer">다음에 의해 생성됨 :  <a href="https://www.doxygen.org/index.html"><img alt="doxygen" class="footer" height="31" src="doxygen.svg" width="104"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1140" height="306" viewBox="0 0 1140 306" role="img" aria-label="Writer의 현재 매칭 목록에서 Reader handle을 얻습니다. 메타데이터 조회 전에 Reader가 종료되면 handle이 오래될 수 있습니다. 목록을 갱신합니다. 유일한 Reader가 종료되면 현재 매칭 수는 0이고 목록은 비어 있습니다." data-dds-diagram="true">
+  <title id="discovery-refresh-ko-title">Reader 종료 후 매칭 목록 갱신</title>
+  <desc>Writer의 현재 매칭 목록에서 Reader handle을 얻습니다. 메타데이터 조회 전에 Reader가 종료되면 handle이 오래될 수 있습니다. 목록을 갱신합니다. 유일한 Reader가 종료되면 현재 매칭 수는 0이고 목록은 비어 있습니다.</desc>
+  <defs>
+    <marker id="discovery-refresh-ko-arrow" viewBox="0 0 10 12" refX="9" refY="6" markerWidth="9" markerHeight="10" orient="auto" markerUnits="userSpaceOnUse"><path d="M 1,1 L 9,6 L 1,11" fill="none" stroke="#20354B" stroke-width="1.2"/></marker>
+    <marker id="discovery-refresh-ko-blue" viewBox="0 0 11 10" refX="10" refY="5" markerWidth="10" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M 0,0 L 11,5 L 0,10 Z" fill="#356B96"/></marker>
+  </defs>
+  <rect width="1140" height="306" fill="#FFFFFF"/>
+  <g fill="#20354B" font-family="Arial, Malgun Gothic, sans-serif">
+    <path d="M 324 153 H 350 V 69 H 378" fill="none" stroke="#20354B" stroke-width="1.15" marker-end="url(#discovery-refresh-ko-arrow)"/>
+    <path d="M 324 153 H 350 V 230 H 378" fill="none" stroke="#20354B" stroke-width="1.15" marker-end="url(#discovery-refresh-ko-arrow)"/>
+    <path d="M 725 230 H 773" fill="none" stroke="#356B96" stroke-width="1.7" marker-end="url(#discovery-refresh-ko-blue)"/>
+    <rect x="28" y="104" width="296" height="98" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <rect x="378" y="27" width="347" height="83" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <rect x="378" y="177" width="347" height="106" fill="#EFF5FA" stroke="#20354B" stroke-width="1.15"/>
+    <rect x="773" y="177" width="340" height="106" fill="#EFF5FA" stroke="#20354B" stroke-width="1.15"/>
+    <text x="176" y="132" text-anchor="middle" font-size="16" font-weight="bold">Reader handle 조회</text>
+    <text x="176" y="162" text-anchor="middle" font-size="14" font-family="Consolas, Menlo, monospace">matched_subscriptions(writer)</text>
+    <text x="176" y="182" text-anchor="middle" font-size="15">현재 매칭 목록의 스냅샷</text>
+    <text x="552" y="53" text-anchor="middle" font-size="16" font-weight="bold">Reader가 매칭 상태를 유지</text>
+    <text x="552" y="82" text-anchor="middle" font-size="13" font-family="Consolas, Menlo, monospace">matched_subscription_data(writer, handle)</text>
+    <text x="552" y="208" text-anchor="middle" font-size="16" font-weight="bold">조회 전에 Reader 종료</text>
+    <text x="552" y="235" text-anchor="middle" font-size="15">저장한 handle이 오래됐을 수 있음</text>
+    <text x="552" y="260" text-anchor="middle" font-size="15">목록을 다시 조회</text>
+    <text x="943" y="201" text-anchor="middle" font-size="16" font-weight="bold">유일한 매칭 Reader가 종료</text>
+    <text x="943" y="229" text-anchor="middle" font-size="15" font-family="Consolas, Menlo, monospace">current_count() == 0</text>
+    <text x="943" y="253" text-anchor="middle" font-size="13" font-family="Consolas, Menlo, monospace">matched_subscriptions(writer).empty()</text>
+  </g>
+</svg>

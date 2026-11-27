@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1140" height="228" viewBox="0 0 1140 228" role="img" aria-label="Both Writers are matched. After the stronger Writer writes key 7, its update is selected for that instance. The weaker Writer can still write key 8." data-dds-diagram="true">
+  <title id="exclusive-owners-en-title">Exclusive ownership is selected for each key</title>
+  <desc>Both Writers are matched. After the stronger Writer writes key 7, its update is selected for that instance. The weaker Writer can still write key 8.</desc>
+  <defs>
+    <marker id="exclusive-owners-en-arrow" viewBox="0 0 10 12" refX="9" refY="6" markerWidth="9" markerHeight="10" orient="auto" markerUnits="userSpaceOnUse"><path d="M 1,1 L 9,6 L 1,11" fill="none" stroke="#20354B" stroke-width="1.2"/></marker>
+    <marker id="exclusive-owners-en-blue" viewBox="0 0 11 10" refX="10" refY="5" markerWidth="10" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M 0,0 L 11,5 L 0,10 Z" fill="#356B96"/></marker>
+    <marker id="exclusive-owners-en-uml" viewBox="0 0 15 15" refX="14" refY="7.5" markerWidth="15" markerHeight="15" orient="auto" markerUnits="userSpaceOnUse"><path d="M 1,1 L 14,7.5 L 1,14 Z" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/></marker>
+  </defs>
+  <rect width="1140" height="228" fill="#FFFFFF"/>
+  <g fill="#20354B" font-family="Arial, Malgun Gothic, sans-serif">
+    <rect x="25" y="30" width="130" height="46" fill="#EFF5FA" stroke="#20354B" stroke-width="1.15"/>
+    <text x="90" y="58" text-anchor="middle" font-size="16" font-weight="bold">Key</text>
+    <rect x="25" y="76" width="130" height="46" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <text x="90" y="104" text-anchor="middle" font-size="15" font-family="Consolas, Menlo, monospace">7</text>
+    <rect x="25" y="122" width="130" height="46" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <text x="90" y="150" text-anchor="middle" font-size="15" font-family="Consolas, Menlo, monospace">8</text>
+    <rect x="155" y="30" width="325" height="46" fill="#EFF5FA" stroke="#20354B" stroke-width="1.15"/>
+    <text x="317.5" y="58" text-anchor="middle" font-size="16" font-weight="bold">Writer with strength 20</text>
+    <rect x="155" y="76" width="325" height="46" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <text x="317.5" y="104" text-anchor="middle" font-size="15">Writes first</text>
+    <rect x="155" y="122" width="325" height="46" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <text x="317.5" y="150" text-anchor="middle" font-size="15">No write for this key</text>
+    <rect x="480" y="30" width="325" height="46" fill="#EFF5FA" stroke="#20354B" stroke-width="1.15"/>
+    <text x="642.5" y="58" text-anchor="middle" font-size="16" font-weight="bold">Writer with strength 10</text>
+    <rect x="480" y="76" width="325" height="46" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <text x="642.5" y="104" text-anchor="middle" font-size="15">Writes the same key</text>
+    <rect x="480" y="122" width="325" height="46" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <text x="642.5" y="150" text-anchor="middle" font-size="15">Writes a different key</text>
+    <rect x="805" y="30" width="310" height="46" fill="#EFF5FA" stroke="#20354B" stroke-width="1.15"/>
+    <text x="960" y="58" text-anchor="middle" font-size="16" font-weight="bold">Reader returns</text>
+    <rect x="805" y="76" width="310" height="46" fill="#EFF5FA" stroke="#20354B" stroke-width="1.15"/>
+    <text x="960" y="104" text-anchor="middle" font-size="15">Strength 20 sample</text>
+    <rect x="805" y="122" width="310" height="46" fill="#EFF5FA" stroke="#20354B" stroke-width="1.15"/>
+    <text x="960" y="150" text-anchor="middle" font-size="15">Strength 10 sample</text>
+    <text x="570" y="204" text-anchor="middle" font-size="15">The Writer and Reader endpoints use EXCLUSIVE ownership for this keyed Topic.</text>
+  </g>
+</svg>

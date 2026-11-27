@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1140" height="294" viewBox="0 0 1140 294" role="img" aria-label="Explicit QoS becomes the source. Without it, a topic uses TopicQos defaults and an endpoint uses its Publisher or Subscriber defaults." data-dds-diagram="true">
+  <title id="qos-defaults-en-title">Choose the QoS for a new entity</title>
+  <desc>Explicit QoS becomes the source. Without it, a topic uses TopicQos defaults and an endpoint uses its Publisher or Subscriber defaults.</desc>
+  <defs>
+    <marker id="qos-defaults-en-arrow" viewBox="0 0 10 12" refX="9" refY="6" markerWidth="9" markerHeight="10" orient="auto" markerUnits="userSpaceOnUse"><path d="M 1,1 L 9,6 L 1,11" fill="none" stroke="#20354B" stroke-width="1.2"/></marker>
+    <marker id="qos-defaults-en-blue" viewBox="0 0 11 10" refX="10" refY="5" markerWidth="10" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M 0,0 L 11,5 L 0,10 Z" fill="#356B96"/></marker>
+  </defs>
+  <rect width="1140" height="294" fill="#FFFFFF"/>
+  <g fill="#20354B" font-family="Arial, Malgun Gothic, sans-serif">
+    <path d="M 212 125 H 239" fill="none" stroke="#20354B" stroke-width="1.15" marker-end="url(#qos-defaults-en-arrow)"/>
+    <path d="M 445 125 H 471 V 69 H 500" fill="none" stroke="#356B96" stroke-width="1.7" marker-end="url(#qos-defaults-en-blue)"/>
+    <path d="M 445 125 H 471 V 175 H 500" fill="none" stroke="#20354B" stroke-width="1.15" marker-end="url(#qos-defaults-en-arrow)"/>
+    <path d="M 692 175 H 720 V 142 H 758" fill="none" stroke="#20354B" stroke-width="1.15" marker-end="url(#qos-defaults-en-arrow)"/>
+    <path d="M 692 175 H 720 V 216 H 758" fill="none" stroke="#20354B" stroke-width="1.15" marker-end="url(#qos-defaults-en-arrow)"/>
+    <rect x="23" y="96" width="189" height="58" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <rect x="500" y="37" width="259" height="62" fill="#EFF5FA" stroke="#20354B" stroke-width="1.15"/>
+    <rect x="500" y="146" width="192" height="58" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <rect x="758" y="115" width="358" height="53" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <rect x="758" y="189" width="358" height="53" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <path d="M 239 125 L 342 80 L 445 125 L 342 170 Z" fill="white" stroke="#20354B" stroke-width="1.15"/>
+    <text x="117" y="130" text-anchor="middle" font-size="16" font-weight="bold">Create an Entity</text>
+    <text x="342" y="130" text-anchor="middle" font-size="15">QoS supplied?</text>
+    <text x="471" y="59" text-anchor="middle" font-size="14">Yes</text>
+    <text x="475" y="192" text-anchor="middle" font-size="14">No</text>
+    <text x="629" y="73" text-anchor="middle" font-size="16" font-weight="bold">Use the supplied QoS</text>
+    <text x="596" y="180" text-anchor="middle" font-size="16" font-weight="bold">Use defaults</text>
+    <text x="937" y="136" text-anchor="middle" font-size="14" font-family="Consolas, Menlo, monospace">DataWriter / DataReader</text>
+    <text x="937" y="156" text-anchor="middle" font-size="16">Publisher or Subscriber defaults</text>
+    <text x="937" y="210" text-anchor="middle" font-size="14" font-family="Consolas, Menlo, monospace">Topic&lt;T&gt;</text>
+    <text x="937" y="230" text-anchor="middle" font-size="16">Default-constructed TopicQos</text>
+    <text x="569" y="270" text-anchor="middle" font-size="15">To use the participant's Topic defaults, pass participant.default_topic_qos() explicitly.</text>
+  </g>
+</svg>

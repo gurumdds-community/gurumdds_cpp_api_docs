@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<title>GurumDDS C++ API Reference</title>
+<link href="gurum-networks-logo.png" rel="icon" type="image/png"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="#cb4b16" name="theme-color"/>
+<link href="poxy/poxy.css" referrerpolicy="no-referrer" rel="stylesheet"/>
+<link href="ReferenceBranding.css" referrerpolicy="no-referrer" rel="stylesheet"/>
+<script src="poxy/poxy.js"></script>
+<script>initialize_theme("light");</script>
+<meta content="GurumDDS C++" name="twitter:title"/>
+<meta content="GurumDDS C++" property="og:title"/>
+<meta content="GurumDDS C++" itemprop="name"/>
+<meta content="API Reference" name="description"/>
+<meta content="API Reference" name="twitter:description"/>
+<meta content="API Reference" property="og:description"/>
+<meta content="API Reference" itemprop="description"/>
+<meta content="telephone=no" name="format-detection"/>
+<meta content="Poxy v0.27.2" name="generator"/>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<script defer="True" src="ReferenceUi.js"></script><link href="../en/annotated.html" hreflang="en" rel="alternate"/><link href="../ko/annotated.html" hreflang="ko" rel="alternate"/><link href="../language.css" rel="stylesheet"/><script defer="defer" src="../language.js"></script></head>
+<body>
+<header><nav id="navigation">
+<div class="m-container">
+<div class="m-row doc-language-header">
+<a class="m-col-t-8 m-col-m-none m-left-m" href="index.html" id="m-navbar-brand"><img alt="" src="gurum-networks-logo.png"/>GurumDDS C++ <span class="m-thin">API Reference</span></a>
+<div class="m-col-t-4 m-hide-m m-text-right m-nopadr">
+<a class="m-doc-search-icon" href="#search" onclick="return showSearch()" title="Search"><svg style="height: 0.9rem;" viewbox="0 0 16 16">
+<path d="m6 0c-3.31 0-6 2.69-6 6 0 3.31 2.69 6 6 6 1.49 0 2.85-0.541 3.89-1.44-0.0164 0.338 0.147 0.759 0.5 1.15l3.22 3.79c0.552 0.614 1.45 0.665 2 0.115 0.55-0.55 0.499-1.45-0.115-2l-3.79-3.22c-0.392-0.353-0.812-0.515-1.15-0.5 0.895-1.05 1.44-2.41 1.44-3.89 0-3.31-2.69-6-6-6zm0 1.56a4.44 4.44 0 0 1 4.44 4.44 4.44 4.44 0 0 1-4.44 4.44 4.44 4.44 0 0 1-4.44-4.44 4.44 4.44 0 0 1 4.44-4.44z" id="m-doc-search-icon-path"></path>
+</svg></a>
+<a href="#navigation" id="m-navbar-show" title="Show navigation"></a>
+<a href="#" id="m-navbar-hide" title="Hide navigation"></a>
+</div>
+<div class="m-col-t-12 m-show-m m-col-m-none m-right-m" id="m-navbar-collapse">
+<div class="m-row">
+<ol class="m-col-t-6 m-col-m-none">
+<li><a href="modules.html">Modules</a></li>
+<li><a href="annotated.html" id="m-navbar-current">Classes</a></li>
+<li><a href="namespaces.html">Namespaces</a></li>
+</ol>
+<ol class="m-col-t-6 m-col-m-none" start="4">
+<li><a href="examples.html">Examples</a></li>
+<li><a class="poxy-icon theme" href="javascript:void(null);" id="poxy-theme-switch" onclick="toggle_theme(); return false;" role="button" title="Toggle dark and light themes"><svg id="poxy-theme-switch-img" version="1.1" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><circle cx="185.6708" cy="183.8122" fill="currentColor" r="65.625"></circle><path d="M185.6708,87.5622a13.1256,13.1256,0,0,0,13.125-13.125V52.5622a13.125,13.125,0,1,0-26.25,0v21.875A13.1257,13.1257,0,0,0,185.6708,87.5622Z" fill="currentColor"></path><path d="M99.051,115.7519a13.1236,13.1236,0,1,0,18.56-18.56L102.1442,81.726a13.1236,13.1236,0,0,0-18.5595,18.56Z" fill="currentColor"></path><path d="M89.4208,183.8122a13.1257,13.1257,0,0,0-13.125-13.125H54.4208a13.125,13.125,0,0,0,0,26.25h21.875A13.1256,13.1256,0,0,0,89.4208,183.8122Z" fill="currentColor"></path><path d="M99.051,251.8725,83.5847,267.3431a13.1236,13.1236,0,1,0,18.56,18.56l15.4663-15.4706a13.1236,13.1236,0,1,0-18.5595-18.56Z" fill="currentColor"></path><path d="M185.6708,280.0622a13.1258,13.1258,0,0,0-13.125,13.125v21.875a13.125,13.125,0,0,0,26.25,0v-21.875A13.1257,13.1257,0,0,0,185.6708,280.0622Z" fill="currentColor"></path><path d="M272.2907,251.8725a13.1236,13.1236,0,1,0-18.56,18.56l15.4663,15.4706a13.1236,13.1236,0,1,0,18.56-18.56Z" fill="currentColor"></path><path d="M330.0458,183.8122a13.1257,13.1257,0,0,0-13.125-13.125h-21.875a13.125,13.125,0,0,0,0,26.25h21.875A13.1256,13.1256,0,0,0,330.0458,183.8122Z" fill="currentColor"></path><path d="M263.0109,119.5971a13.0824,13.0824,0,0,0,9.28-3.8452l15.4663-15.4663a13.1236,13.1236,0,1,0-18.56-18.56L253.7312,97.1923a13.125,13.125,0,0,0,9.28,22.4048Z" fill="currentColor"></path><path d="M456.9379,401.6714a63.97,63.97,0,0,1-14.9963,7.2055c-19.6448,6.5283-41.8787,2.9566-58.1439-9.8523a68.9311,68.9311,0,0,1-10.835-10.8339c-12.8088-16.2663-16.3806-38.5-9.8523-58.1471a63.8444,63.8444,0,0,1,7.2077-14.9931,8.8036,8.8036,0,0,0-10.1172-13.3034,87.5188,87.5188,0,1,0,110.0372,110.04A8.8,8.8,0,0,0,456.9379,401.6714Z" fill="currentColor"></path></svg></a></li>
+<li class="m-show-m"><a class="m-doc-search-icon" href="#search" onclick="return showSearch()" title="Search"><svg style="height: 0.9rem;" viewbox="0 0 16 16">
+<use href="#m-doc-search-icon-path"></use>
+</svg></a></li>
+</ol>
+</div>
+</div>
+<label class="doc-language"><select aria-label="Documentation language" data-current="0"><option lang="en" selected="selected" value="../en/annotated.html">English</option><option lang="en" value="../ko/annotated.html">Korean</option></select></label></div>
+</div>
+</nav></header>
+<main><article>
+<div class="m-container m-container-inflatable">
+<div class="m-row">
+<div class="m-col-l-10 m-push-l-1">
+<h1>Classes</h1>
+<ul class="m-doc">
+<li class="m-doc-collapsible">
+<a href="#" onclick="return toggle(this)">namespace</a> <a class="m-doc" href="namespacedds.html">dds</a> <span class="m-doc">Root namespace of the GurumDDS C++ API.</span>
+<ul class="m-doc">
+<li class="m-doc-collapsible">
+<a href="#" onclick="return toggle(this)">namespace</a> <a class="m-doc" href="namespacedds_1_1core.html">core</a> <span class="m-doc">Common entity handles, time types, exceptions, statuses, and QoS policies.</span>
+<ul class="m-doc">
+<li class="m-doc-collapsible">
+<a href="#" onclick="return toggle(this)">namespace</a> <a class="m-doc" href="namespacedds_1_1core_1_1cond.html">cond</a> <span class="m-doc">Conditions and WaitSets for coordinating DDS events.</span>
+<ul class="m-doc">
+<li>class <a class="m-doc" href="classdds_1_1core_1_1cond_1_1_t_condition.html">TCondition</a> <span class="m-doc">Supplies the common interface for <a class="m-doc" href="group__dds__core.html#ga7bc1f763ff0ef0a2f796e947ffacd2d2">WaitSet</a> conditions.</span></li>
+<li>class <a class="m-doc" href="classdds_1_1core_1_1cond_1_1_t_guard_condition.html">TGuardCondition</a> <span class="m-doc">Signals a <a class="m-doc" href="group__dds__core.html#ga7bc1f763ff0ef0a2f796e947ffacd2d2">WaitSet</a> from application code.</span></li>
+<li>class <a class="m-doc" href="classdds_1_1core_1_1cond_1_1_t_status_condition.html">TStatusCondition</a> <span class="m-doc">Signals changes to selected entity statuses.</span></li>
+<li>class <a class="m-doc" href="classdds_1_1core_1_1cond_1_1_t_wait_set.html">TWaitSet</a> <span class="m-doc">Waits for attached conditions to become active.</span></li>
+</ul>
+</li>
+<li class="m-doc-collapsible">
+<a href="#" onclick="return toggle(this)">namespace</a> <a class="m-doc" href="namespacedds_1_1core_1_1policy.html">policy</a> <span class="m-doc">QoS policies used by DDS entities.</span>
+<ul class="m-doc">
+<li>struct <a class="m-doc" href="structdds_1_1core_1_1policy_1_1_destination_order_kind__def.html">DestinationOrderKind_def</a> <span class="m-doc"></span></li>
+<li>struct <a class="m-doc" href="structdds_1_1core_1_1policy_1_1_durability_kind__def.html">DurabilityKind_def</a> <span class="m-doc"></span></li>
+<li>struct <a class="m-doc" href="structdds_1_1core_1_1policy_1_1_history_kind__def.html">HistoryKind_def</a> <span class="m-doc"></span></li>
+<li>struct <a class="m-doc" href="structdds_1_1core_1_1policy_1_1_liveliness_kind__def.html">LivelinessKind_def</a> <span class="m-doc"></span></li>
+<li>struct <a class="m-doc" href="structdds_1_1core_1_1policy_1_1_ownership_kind__def.html">OwnershipKind_def</a> <span class="m-doc"></span></li>
+<li>class <a class="m-doc" href="classdds_1_1core_1_1policy_1_1policy__id.html">policy_id</a> <span class="m-doc"></span></li>
+<li>class <a class="m-doc" href="classdds_1_1core_1_1policy_1_1policy__name.html">policy_name</a> <span class="m-doc"></span></li>
+<li>struct <a class="m-doc" href="structdds_1_1core_1_1policy_1_1_presentation_access_scope_kind__def.html">PresentationAccessScopeKind_def</a> <span class="m-doc"></span></li>
+<li>struct <a class="m-doc" href="structdds_1_1core_1_1policy_1_1_reliability_kind__def.html">ReliabilityKind_def</a> <span class="m-doc"></span></li>
+<li>class <a class="m-doc" href="classdds_1_1core_1_1policy_1_1_t_data_representation.html">TDataRepresentation</a> <span class="m-doc"></span></li>
+<li>class <a class="m-doc" href="classdds_1_1core_1_1policy_1_1_t_deadline.html">TDeadline</a> </li>
+<li>class <a class="m-doc" href="classdds_1_1core_1_1policy_1_1_t_destination_order.html">TDestinationOrder</a> <span class="m-doc">Selects whether DDS orders samples by reception or source timestamp.</span></li>
+<li>class <a class="m-doc" href="classdds_1_1core_1_1policy_1_1_t_durability.html">TDurability</a> <span class="m-doc">Controls whether samples written before a reader matches can reach that reader.</span></li>
+<li>class <a class="m-doc" href="classdds_1_1core_1_1policy_1_1_t_durability_service.html">TDurabilityService</a> <span class="m-doc"></span></li>
+<li>class <a class="m-doc" href="classdds_1_1core_1_1policy_1_1_t_entity_factory.html">TEntityFactory</a> </li>
+<li>class <a class="m-doc" href="classdds_1_1core_1_1policy_1_1_t_group_data.html">TGroupData</a> </li>
+<li>class <a class="m-doc" href="classdds_1_1core_1_1policy_1_1_t_history.html">THistory</a> <span class="m-doc">Controls retention of samples for each instance.</span></li>
+<li>class <a class="m-doc" href="classdds_1_1core_1_1policy_1_1_t_latency_budget.html">TLatencyBudget</a> <span class="m-doc">Provides a latency budget for the middleware's delivery decisions.</span></li>
+<li>class <a class="m-doc" href="classdds_1_1core_1_1policy_1_1_t_lifespan.html">TLifespan</a> </li>
+<li>class <a class="m-doc" href="classdds_1_1core_1_1policy_1_1_t_liveliness.html">TLiveliness</a> <span class="m-doc">Controls how writers assert activity and how readers detect its loss.</span></li>
+<li>class <a class="m-doc" href="classdds_1_1core_1_1policy_1_1_t_ownership.html">TOwnership</a> <span class="m-doc">Selects how multiple writers can update the same instance.</span></li>
+<li>class <a class="m-doc" href="classdds_1_1core_1_1policy_1_1_t_ownership_strength.html">TOwnershipStrength</a> <span class="m-doc">Assigns the writer's priority for exclusive ownership.</span></li>
+<li>class <a class="m-doc" href="classdds_1_1core_1_1policy_1_1_t_partition.html">TPartition</a> <span class="m-doc">Controls logical publisher and subscriber matching within a domain.</span></li>
+<li>class <a class="m-doc" href="classdds_1_1core_1_1policy_1_1_t_presentation.html">TPresentation</a> <span class="m-doc">Configures presentation scope and requests coherent or ordered access.</span></li>
+<li>class <a class="m-doc" href="classdds_1_1core_1_1policy_1_1_t_qos_policy_count.html">TQosPolicyCount</a> <span class="m-doc"></span></li>
+<li>class <a class="m-doc" href="classdds_1_1core_1_1policy_1_1_t_reader_data_lifecycle.html">TReaderDataLifecycle</a> <span class="m-doc">Sets when a reader purges disposed and no-writer instance samples.</span></li>
+<li>class <a class="m-doc" href="classdds_1_1core_1_1policy_1_1_t_reliability.html">TReliability</a> <span class="m-doc">Controls the delivery reliability a writer offers or a reader requests.</span></li>
+<li>class <a class="m-doc" href="classdds_1_1core_1_1policy_1_1_t_resource_limits.html">TResourceLimits</a> <span class="m-doc">Bounds the samples and instances that an entity can maintain.</span></li>
+<li>class <a class="m-doc" href="classdds_1_1core_1_1policy_1_1_t_time_based_filter.html">TTimeBasedFilter</a> <span class="m-doc">Sets the minimum separation between samples selected for a reader.</span></li>
+<li>class <a class="m-doc" href="classdds_1_1core_1_1policy_1_1_t_topic_data.html">TTopicData</a> </li>
+<li>class <a class="m-doc" href="classdds_1_1core_1_1policy_1_1_t_transport_priority.html">TTransportPriority</a> </li>
+<li>class <a class="m-doc" href="classdds_1_1core_1_1policy_1_1_t_type_consistency_enforcement.html">TTypeConsistencyEnforcement</a> <span class="m-doc"></span></li>
+<li>class <a class="m-doc" href="classdds_1_1core_1_1policy_1_1_t_user_data.html">TUserData</a> </li>
+<li>class <a class="m-doc" href="classdds_1_1core_1_1policy_1_1_t_writer_data_lifecycle.html">TWriterDataLifecycle</a> <span class="m-doc">Controls whether unregistering an instance automatically disposes it.</span></li>
+<li>struct <a class="m-doc" href="structdds_1_1core_1_1policy_1_1_type_consistency_enforcement_kind__def.html">TypeConsistencyEnforcementKind_def</a> <span class="m-doc"></span></li>
+</ul>
+</li>
+<li class="m-doc-collapsible">
+<a href="#" onclick="return toggle(this)">namespace</a> <a class="m-doc" href="namespacedds_1_1core_1_1status.html">status</a> <span class="m-doc">DDS status values and status masks.</span>
+<ul class="m-doc">
+<li>class <a class="m-doc" href="classdds_1_1core_1_1status_1_1_data_available_status.html">DataAvailableStatus</a> <span class="m-doc"></span></li>
+<li>class <a class="m-doc" href="classdds_1_1core_1_1status_1_1_data_on_readers_status.html">DataOnReadersStatus</a> <span class="m-doc"></span></li>
+<li>class <a class="m-doc" href="classdds_1_1core_1_1status_1_1_sample_rejected_state.html">SampleRejectedState</a> <span class="m-doc"></span></li>
+<li>class <a class="m-doc" href="classdds_1_1core_1_1status_1_1_status_mask.html">StatusMask</a> <span class="m-doc"></span></li>
+<li>class <a class="m-doc" href="classdds_1_1core_1_1status_1_1_t_inconsistent_topic_status.html">TInconsistentTopicStatus</a> <span class="m-doc">Reports encounters with a conflicting definition of the same named topic.</span></li>
+<li>class <a class="m-doc" href="classdds_1_1core_1_1status_1_1_t_liveliness_changed_status.html">TLivelinessChangedStatus</a> <span class="m-doc">Tracks matched writers changing between alive and not alive.</span></li>
+<li>class <a class="m-doc" href="classdds_1_1core_1_1status_1_1_t_liveliness_lost_status.html">TLivelinessLostStatus</a> <span class="m-doc">Counts losses of writer liveliness.</span></li>
+<li>class <a class="m-doc" href="classdds_1_1core_1_1status_1_1_t_offered_deadline_missed_status.html">TOfferedDeadlineMissedStatus</a> <span class="m-doc">Counts missed write deadlines and identifies the latest instance.</span></li>
+<li>class <a class="m-doc" href="classdds_1_1core_1_1status_1_1_t_offered_incompatible_qos_status.html">TOfferedIncompatibleQosStatus</a> <span class="m-doc">Reports QoS incompatibilities seen by a writer.</span></li>
+<li>class <a class="m-doc" href="classdds_1_1core_1_1status_1_1_t_publication_matched_status.html">TPublicationMatchedStatus</a> <span class="m-doc">Tracks subscriptions matched to a writer.</span></li>
+<li>class <a class="m-doc" href="classdds_1_1core_1_1status_1_1_t_requested_deadline_missed_status.html">TRequestedDeadlineMissedStatus</a> <span class="m-doc">Counts missed receive deadlines and identifies the latest instance.</span></li>
+<li>class <a class="m-doc" href="classdds_1_1core_1_1status_1_1_t_requested_incompatible_qos_status.html">TRequestedIncompatibleQosStatus</a> <span class="m-doc">Reports QoS incompatibilities seen by a reader.</span></li>
+<li>class <a class="m-doc" href="classdds_1_1core_1_1status_1_1_t_sample_lost_status.html">TSampleLostStatus</a> <span class="m-doc">Counts samples lost before the reader could deliver them.</span></li>
+<li>class <a class="m-doc" href="classdds_1_1core_1_1status_1_1_t_sample_rejected_status.html">TSampleRejectedStatus</a> <span class="m-doc">Counts samples the reader rejected and identifies the latest reason.</span></li>
+<li>class <a class="m-doc" href="classdds_1_1core_1_1status_1_1_t_subscription_matched_status.html">TSubscriptionMatchedStatus</a> <span class="m-doc">Tracks publications matched to a reader.</span></li>
+</ul>
+</li>
+<li>class <a class="m-doc" href="classdds_1_1core_1_1_already_closed_error.html">AlreadyClosedError</a> <span class="m-doc">Reports an operation on an entity already deleted by DDS.</span></li>
+<li>class <a class="m-doc" href="classdds_1_1core_1_1_duration.html">Duration</a> <span class="m-doc">Represents an interval in seconds and nanoseconds.</span></li>
+<li>class <a class="m-doc" href="classdds_1_1core_1_1_error.html">Error</a> <span class="m-doc">Reports a generic DDS operation failure.</span></li>
+<li>class <a class="m-doc" href="classdds_1_1core_1_1_exception.html">Exception</a> <span class="m-doc">Base interface for DDS exceptions.</span></li>
+<li>class <a class="m-doc" href="classdds_1_1core_1_1_illegal_operation_error.html">IllegalOperationError</a> <span class="m-doc">Reports an operation that the current context disallows.</span></li>
+<li>class <a class="m-doc" href="classdds_1_1core_1_1_immutable_policy_error.html">ImmutablePolicyError</a> <span class="m-doc">Reports an attempt to change an immutable QoS policy.</span></li>
+<li>class <a class="m-doc" href="classdds_1_1core_1_1_inconsistent_policy_error.html">InconsistentPolicyError</a> <span class="m-doc">Reports a conflicting combination of QoS policies.</span></li>
+<li>class <a class="m-doc" href="classdds_1_1core_1_1_invalid_argument_error.html">InvalidArgumentError</a> <span class="m-doc">Reports an invalid argument passed to a DDS operation.</span></li>
+<li>class <a class="m-doc" href="classdds_1_1core_1_1_invalid_data_error.html">InvalidDataError</a> <span class="m-doc">Reports a data value that the requested operation cannot use.</span></li>
+<li>class <a class="m-doc" href="classdds_1_1core_1_1_invalid_downcast_error.html">InvalidDowncastError</a> <span class="m-doc">Reports a failed conversion to a more specific DDS type.</span></li>
+<li>struct <a class="m-doc" href="structdds_1_1core_1_1is__base__of.html">is_base_of</a> <span class="m-doc"></span></li>
+<li>struct <a class="m-doc" href="structdds_1_1core_1_1is__same.html">is_same</a> <span class="m-doc"></span></li>
+<li>class <a class="m-doc" href="classdds_1_1core_1_1_not_enabled_error.html">NotEnabledError</a> <span class="m-doc">Reports an operation requiring an enabled entity.</span></li>
+<li>class <a class="m-doc" href="classdds_1_1core_1_1null__type.html">null_type</a> <span class="m-doc"></span></li>
+<li>class <a class="m-doc" href="classdds_1_1core_1_1_null_reference_error.html">NullReferenceError</a> <span class="m-doc">Reports use of an empty DDS reference.</span></li>
+<li>class <a class="m-doc" href="classdds_1_1core_1_1optional.html">optional</a> </li>
+<li>class <a class="m-doc" href="classdds_1_1core_1_1_out_of_resources_error.html">OutOfResourcesError</a> <span class="m-doc">Reports that DDS cannot allocate resources for an operation.</span></li>
+<li>class <a class="m-doc" href="classdds_1_1core_1_1_precondition_not_met_error.html">PreconditionNotMetError</a> <span class="m-doc">Reports an unmet DDS operation precondition.</span></li>
+<li>class <a class="m-doc" href="classdds_1_1core_1_1_reference.html">Reference</a> <span class="m-doc">Defines shared-handle operations for DDS reference types.</span></li>
+<li>class <a class="m-doc" href="classdds_1_1core_1_1safe__enum.html">safe_enum</a> <span class="m-doc"></span></li>
+<li>struct <a class="m-doc" href="structdds_1_1core_1_1smart__ptr__traits.html">smart_ptr_traits</a> <span class="m-doc"></span></li>
+<li>class <a class="m-doc" href="classdds_1_1core_1_1_t_entity.html">TEntity</a> <span class="m-doc">Provides common operations on a DDS entity handle.</span></li>
+<li>class <a class="m-doc" href="classdds_1_1core_1_1_t_entity_qos.html">TEntityQos</a> <span class="m-doc">Holds the policies for one category of DDS entity.</span></li>
+<li>class <a class="m-doc" href="classdds_1_1core_1_1_time.html">Time</a> <span class="m-doc">Represents a timestamp as seconds and nanoseconds.</span></li>
+<li>class <a class="m-doc" href="classdds_1_1core_1_1_timeout_error.html">TimeoutError</a> <span class="m-doc">Reports that a time-limited DDS operation did not finish.</span></li>
+<li>class <a class="m-doc" href="classdds_1_1core_1_1_t_instance_handle.html">TInstanceHandle</a> <span class="m-doc">Identifies a DDS entity or data instance.</span></li>
+<li>class <a class="m-doc" href="classdds_1_1core_1_1_t_sample_info_ex.html">TSampleInfoEx</a> </li>
+<li>struct <a class="m-doc" href="structdds_1_1core_1_1_type_support.html">TypeSupport</a> <span class="m-doc">Adapter for registering a generated or application-supplied topic type.</span></li>
+<li>class <a class="m-doc" href="classdds_1_1core_1_1_unsupported_error.html">UnsupportedError</a> <span class="m-doc">Reports an operation without support in the current binding.</span></li>
+<li>class <a class="m-doc" href="classdds_1_1core_1_1_value.html">Value</a> </li>
+<li>class <a class="m-doc" href="classdds_1_1core_1_1_weak_reference.html">WeakReference</a> </li>
+</ul>
+</li>
+<li class="m-doc-collapsible">
+<a href="#" onclick="return toggle(this)">namespace</a> <a class="m-doc" href="namespacedds_1_1domain.html">domain</a> <span class="m-doc"><a class="m-doc" href="group__dds__domain.html#gab1bd86ffa9ac0869166a446dd0120f3d">DomainParticipant</a> and participant discovery.</span>
+<ul class="m-doc">
+<li>class <a class="m-doc" href="classdds_1_1domain_1_1_domain_participant_listener.html">DomainParticipantListener</a> <span class="m-doc">Combines topic, publication, and subscription callbacks at participant scope.</span></li>
+<li>class <a class="m-doc" href="classdds_1_1domain_1_1_no_op_domain_participant_listener.html">NoOpDomainParticipantListener</a> <span class="m-doc"></span></li>
+<li>class <a class="m-doc" href="classdds_1_1domain_1_1_t_domain_participant.html">DomainParticipant</a> <span class="m-doc">Joins a DDS domain and owns the entities created within it.</span></li>
+</ul>
+</li>
+<li class="m-doc-collapsible">
+<a href="#" onclick="return toggle(this)">namespace</a> <a class="m-doc" href="namespacedds_1_1pub.html">pub</a> <span class="m-doc">Publishers, DataWriters, and publication listeners.</span>
+<ul class="m-doc">
+<li>class <a class="m-doc" href="classdds_1_1pub_1_1_any_data_writer.html">AnyDataWriter</a> </li>
+<li>class <a class="m-doc" href="classdds_1_1pub_1_1_any_data_writer_listener.html">AnyDataWriterListener</a> <span class="m-doc"></span></li>
+<li>class <a class="m-doc" href="classdds_1_1pub_1_1_data_writer.html">DataWriter&lt;T&gt;</a> <span class="m-doc">Publishes samples and manages instances for a typed topic.</span></li>
+<li>class <a class="m-doc" href="classdds_1_1pub_1_1_data_writer_listener.html">DataWriterListener</a> <span class="m-doc">Receives status notifications from a typed writer.</span></li>
+<li>class <a class="m-doc" href="classdds_1_1pub_1_1_no_op_any_data_writer_listener.html">NoOpAnyDataWriterListener</a> <span class="m-doc"></span></li>
+<li>class <a class="m-doc" href="classdds_1_1pub_1_1_no_op_data_writer_listener.html">NoOpDataWriterListener</a> <span class="m-doc">Provides default no-op writer callbacks for selective overriding.</span></li>
+<li>class <a class="m-doc" href="classdds_1_1pub_1_1_no_op_publisher_listener.html">NoOpPublisherListener</a> <span class="m-doc">Provides empty implementations of <a class="m-doc" href="group__dds__publication.html#gada2751fd8ce0e148138e6950f7ef7d37">Publisher</a> callbacks.</span></li>
+<li>class <a class="m-doc" href="classdds_1_1pub_1_1_publisher_listener.html">PublisherListener</a> <span class="m-doc">Receives type-erased writer status notifications for a <a class="m-doc" href="group__dds__publication.html#gada2751fd8ce0e148138e6950f7ef7d37">Publisher</a>.</span></li>
+<li>class <a class="m-doc" href="classdds_1_1pub_1_1_t_coherent_set.html">TCoherentSet</a> <span class="m-doc">Manages a publisher scope for a set of coherent changes.</span></li>
+<li>class <a class="m-doc" href="classdds_1_1pub_1_1_t_publisher.html">Publisher</a> <span class="m-doc">Owns writers and configures publication defaults.</span></li>
+<li>class <a class="m-doc" href="classdds_1_1pub_1_1_t_suspended_publication.html">TSuspendedPublication</a> <span class="m-doc">Manages a publisher scope for suspended publication.</span></li>
+</ul>
+</li>
+<li class="m-doc-collapsible">
+<a href="#" onclick="return toggle(this)">namespace</a> <a class="m-doc" href="namespacedds_1_1sub.html">sub</a> <span class="m-doc">Subscribers, DataReaders, and received samples.</span>
+<ul class="m-doc">
+<li class="m-doc-collapsible">
+<a href="#" onclick="return toggle(this)">namespace</a> <a class="m-doc" href="namespacedds_1_1sub_1_1cond.html">cond</a> <span class="m-doc">Conditions associated with a <a class="m-doc" href="classdds_1_1sub_1_1_data_reader.html">DataReader&lt;T&gt;</a>.</span>
+<ul class="m-doc">
+<li>class <a class="m-doc" href="classdds_1_1sub_1_1cond_1_1_t_query_condition.html">TQueryCondition</a> </li>
+<li>class <a class="m-doc" href="classdds_1_1sub_1_1cond_1_1_t_read_condition.html">TReadCondition</a> <span class="m-doc">Describes a condition associated with a reader and sample-state masks.</span></li>
+</ul>
+</li>
+<li class="m-doc-collapsible">
+<a href="#" onclick="return toggle(this)">namespace</a> <a class="m-doc" href="namespacedds_1_1sub_1_1status.html">status</a> <span class="m-doc"><a class="m-doc" href="classdds_1_1sub_1_1_sample.html">Sample</a> states, view states, and instance states for reading data.</span>
+<ul class="m-doc">
+<li>class <a class="m-doc" href="classdds_1_1sub_1_1status_1_1_data_state.html">DataState</a> <span class="m-doc">Combines sample, view, and instance state masks.</span></li>
+<li>class <a class="m-doc" href="classdds_1_1sub_1_1status_1_1_instance_state.html">InstanceState</a> <span class="m-doc">Selects samples from alive, disposed, or no-writers instances.</span></li>
+<li>class <a class="m-doc" href="classdds_1_1sub_1_1status_1_1_sample_state.html">SampleState</a> <span class="m-doc">Selects samples according to whether the reader has already read them.</span></li>
+<li>class <a class="m-doc" href="classdds_1_1sub_1_1status_1_1_view_state.html">ViewState</a> <span class="m-doc">Selects samples according to whether their instance is new to the reader.</span></li>
+</ul>
+</li>
+<li>class <a class="m-doc" href="classdds_1_1sub_1_1_any_data_reader.html">AnyDataReader</a> <span class="m-doc">Holds a reader without exposing its topic type.</span></li>
+<li>class <a class="m-doc" href="classdds_1_1sub_1_1_any_data_reader_listener.html">AnyDataReaderListener</a> <span class="m-doc"></span></li>
+<li class="m-doc-collapsible">
+<a href="#" onclick="return toggle(this)">class</a> <a class="m-doc" href="classdds_1_1sub_1_1_data_reader.html">DataReader&lt;T&gt;</a> <span class="m-doc">Receives typed samples for a topic.</span>
+<ul class="m-doc">
+<li>class <a class="m-doc" href="classdds_1_1sub_1_1_data_reader_1_1_manipulator_selector.html">ManipulatorSelector</a> </li>
+<li>class <a class="m-doc" href="classdds_1_1sub_1_1_data_reader_1_1_selector.html">Selector</a> <span class="m-doc">Selects samples by state, instance, and count.</span></li>
+</ul>
+</li>
+<li>class <a class="m-doc" href="classdds_1_1sub_1_1_data_reader_listener.html">DataReaderListener</a> <span class="m-doc">Receives data availability and status notifications from a typed reader.</span></li>
+<li>class <a class="m-doc" href="classdds_1_1sub_1_1_loaned_samples.html">LoanedSamples</a> <span class="m-doc">Holds received samples and manages their middleware loan.</span></li>
+<li>class <a class="m-doc" href="classdds_1_1sub_1_1_no_op_any_data_reader_listener.html">NoOpAnyDataReaderListener</a> <span class="m-doc"></span></li>
+<li>class <a class="m-doc" href="classdds_1_1sub_1_1_no_op_data_reader_listener.html">NoOpDataReaderListener</a> <span class="m-doc">Provides default no-op reader callbacks for selective overriding.</span></li>
+<li>class <a class="m-doc" href="classdds_1_1sub_1_1_no_op_subscriber_listener.html">NoOpSubscriberListener</a> <span class="m-doc"></span></li>
+<li>class <a class="m-doc" href="classdds_1_1sub_1_1_query.html">Query</a> <span class="m-doc">Stores a reader, query expression, and expression parameters.</span></li>
+<li>class <a class="m-doc" href="classdds_1_1sub_1_1_sample.html">Sample</a> </li>
+<li>class <a class="m-doc" href="classdds_1_1sub_1_1_shared_samples.html">SharedSamples</a> </li>
+<li>class <a class="m-doc" href="classdds_1_1sub_1_1_subscriber_listener.html">SubscriberListener</a> <span class="m-doc">Receives subscriber-level and type-erased reader status notifications.</span></li>
+<li>class <a class="m-doc" href="classdds_1_1sub_1_1_t_coherent_access.html">TCoherentAccess</a> <span class="m-doc">Exposes the subscriber coherent-access scope.</span></li>
+<li>class <a class="m-doc" href="classdds_1_1sub_1_1_t_generation_count.html">TGenerationCount</a> <span class="m-doc">Counts the disposed and no-writers generations reported for a received instance.</span></li>
+<li>class <a class="m-doc" href="classdds_1_1sub_1_1_t_rank.html">TRank</a> </li>
+<li>class <a class="m-doc" href="classdds_1_1sub_1_1_t_sample_info.html">TSampleInfo</a> <span class="m-doc">Describes a received sample and its instance state.</span></li>
+<li>class <a class="m-doc" href="classdds_1_1sub_1_1_t_subscriber.html">Subscriber</a> <span class="m-doc">Owns readers and configures subscription defaults.</span></li>
+</ul>
+</li>
+<li class="m-doc-collapsible">
+<a href="#" onclick="return toggle(this)">namespace</a> <a class="m-doc" href="namespacedds_1_1topic.html">topic</a> <span class="m-doc">Typed topics, topic descriptions, and filters.</span>
+<ul class="m-doc">
+<li>class <a class="m-doc" href="classdds_1_1topic_1_1_any_topic.html">AnyTopic</a> <span class="m-doc">Holds a topic without exposing its data type.</span></li>
+<li>class <a class="m-doc" href="classdds_1_1topic_1_1_any_topic_description.html">AnyTopicDescription</a> <span class="m-doc"></span></li>
+<li>class <a class="m-doc" href="classdds_1_1topic_1_1_any_topic_listener.html">AnyTopicListener</a> <span class="m-doc">Receives inconsistent-topic notifications without a compile-time topic type.</span></li>
+<li>class <a class="m-doc" href="classdds_1_1topic_1_1_content_filtered_topic.html">ContentFilteredTopic&lt;T&gt;</a> <span class="m-doc">Selects samples from an existing topic by evaluating a filter expression.</span></li>
+<li>struct <a class="m-doc" href="structdds_1_1topic_1_1is__topic__type.html">is_topic_type</a> <span class="m-doc"></span></li>
+<li>class <a class="m-doc" href="classdds_1_1topic_1_1_multi_topic.html">MultiTopic</a> <span class="m-doc"></span></li>
+<li>class <a class="m-doc" href="classdds_1_1topic_1_1_no_op_any_topic_listener.html">NoOpAnyTopicListener</a> <span class="m-doc">Provides a no-op inconsistent-topic callback for subclassing.</span></li>
+<li>class <a class="m-doc" href="classdds_1_1topic_1_1_no_op_topic_listener.html">NoOpTopicListener</a> <span class="m-doc">Provides a no-op typed topic callback for subclassing.</span></li>
+<li>class <a class="m-doc" href="classdds_1_1topic_1_1_t_builtin_topic_key.html">TBuiltinTopicKey</a> <span class="m-doc"></span></li>
+<li>class <a class="m-doc" href="classdds_1_1topic_1_1_t_filter.html">TFilter</a> <span class="m-doc">Stores an expression and parameter values for content filtering.</span></li>
+<li>class <a class="m-doc" href="classdds_1_1topic_1_1_topic.html">Topic&lt;T&gt;</a> <span class="m-doc">Associates a topic name with a DDS data type in a domain.</span></li>
+<li>struct <a class="m-doc" href="structdds_1_1topic_1_1topic__type__name.html">topic_type_name</a> <span class="m-doc"></span></li>
+<li>struct <a class="m-doc" href="structdds_1_1topic_1_1topic__type__support.html">topic_type_support</a> <span class="m-doc"></span></li>
+<li>class <a class="m-doc" href="classdds_1_1topic_1_1_topic_description.html">TopicDescription</a> <span class="m-doc">Describes the name, data type, and domain of a typed topic.</span></li>
+<li>class <a class="m-doc" href="classdds_1_1topic_1_1_topic_instance.html">TopicInstance</a> <span class="m-doc">Pairs a typed sample with its instance handle.</span></li>
+<li>class <a class="m-doc" href="classdds_1_1topic_1_1_topic_listener.html">TopicListener</a> <span class="m-doc">Receives inconsistent-topic notifications for a typed topic.</span></li>
+<li>class <a class="m-doc" href="classdds_1_1topic_1_1_t_participant_builtin_topic_data.html">TParticipantBuiltinTopicData</a> <span class="m-doc">Describes a participant reported by DDS discovery.</span></li>
+<li>class <a class="m-doc" href="classdds_1_1topic_1_1_t_publication_builtin_topic_data.html">TPublicationBuiltinTopicData</a> <span class="m-doc">Describes a discovered DataWriter.</span></li>
+<li>class <a class="m-doc" href="classdds_1_1topic_1_1_t_subscription_builtin_topic_data.html">TSubscriptionBuiltinTopicData</a> <span class="m-doc">Describes a discovered DataReader.</span></li>
+<li>class <a class="m-doc" href="classdds_1_1topic_1_1_t_topic_builtin_topic_data.html">TTopicBuiltinTopicData</a> <span class="m-doc">Describes a topic reported by DDS discovery.</span></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<script>
+        function toggle(e) {
+            e.parentElement.className = e.parentElement.className == 'm-doc-collapsible' ?
+                'm-doc-expansible' : 'm-doc-collapsible';
+            return false;
+        }
+        /* Collapse all nodes marked as such. Doing it via JS instead of
+           directly in markup so disabling it doesn't harm usability. The list
+           is somehow regenerated on every iteration and shrinks as I change
+           the classes. It's not documented anywhere and I'm not sure if this
+           is the same across browsers, so I am going backwards in that list to
+           be sure. */
+        var collapsed = document.getElementsByClassName("collapsed");
+        for(var i = collapsed.length - 1; i >= 0; --i)
+            collapsed[i].className = 'm-doc-expansible';
+        </script>
+</div>
+</div>
+</div>
+</article></main>
+<div class="m-doc-search" id="search">
+<a href="#!" onclick="return hideSearch()"></a>
+<div class="m-container">
+<div class="m-row">
+<div class="m-col-m-8 m-push-m-2">
+<div class="m-doc-search-header m-text m-small">
+<div><span class="m-label m-default">Tab</span> / <span class="m-label m-default">T</span> to search, <span class="m-label m-default">Esc</span> to close</div>
+<div id="search-symbolcount">…</div>
+</div>
+<div class="m-doc-search-content">
+<form>
+<input autocomplete="off" autofocus="autofocus" disabled="disabled" id="search-input" name="q" placeholder="Loading …" spellcheck="false" type="search"/>
+</form>
+<noscript class="m-text m-danger m-text-center">Unlike everything else in the docs, the search functionality <em>requires</em> JavaScript.</noscript>
+<div class="m-text m-dim m-text-center" id="search-help">
+<p class="m-noindent">Search for symbols, directories, files, pages or
+            modules. You can omit any prefix from the symbol or file path; adding a
+            <code>:</code> or <code>/</code> suffix lists all members of given symbol or
+            directory.</p>
+<p class="m-noindent">Use <span class="m-label m-dim">↓</span>
+            / <span class="m-label m-dim">↑</span> to navigate through the list,
+            <span class="m-label m-dim">Enter</span> to go.
+            <span class="m-label m-dim">Tab</span> autocompletes common prefix, you can
+            copy a link to the result using <span class="m-label m-dim">⌘</span>
+<span class="m-label m-dim">L</span> while <span class="m-label m-dim">⌘</span>
+<span class="m-label m-dim">M</span> produces a Markdown link.</p>
+</div>
+<div class="m-text m-warning m-text-center" id="search-notfound">Sorry, nothing was found.</div>
+<ul id="search-results"></ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src="search-v2.js"></script><script>install_mcss_search_shim();</script>
+<script async="async" src="searchdata-v2.js"></script>
+<footer><nav>
+<div class="m-container">
+<div class="m-row">
+<div class="m-col-l-10 m-push-l-1">
+<a download="" href="GurumDDS_C++.tagfile.xml" target="_blank" type="text/xml">Doxygen tagfile</a>
+<br/><br/>
+Site generated using <a class="poxy-external" href="https://github.com/marzer/poxy/" target="_blank">Poxy</a>
+</div>
+</div>
+</div>
+</nav></footer>
+</body></html>

@@ -1,0 +1,11 @@
+<map id="dds::topic::TopicDescription&lt; T, DELEGATE &gt;" name="dds::topic::TopicDescription&lt; T, DELEGATE &gt;">
+<area shape="rect" id="Node000001" target="_top" title="타입된 Topic의 이름, 데이터 타입 및 domain을 설명합니다." alt="" coords="83,187,255,229"/>
+<area shape="rect" id="Node000004" href="$classdds_1_1topic_1_1_content_filtered_topic.html" target="_top" title="필터 식을 평가하여 기존 Topic에서 sample을 선택합니다." alt="" coords="5,277,170,320"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="143,239,108,279,104,275,138,242"/>
+<area shape="rect" id="Node000005" href="$classdds_1_1topic_1_1_topic.html" target="_top" title="domain에서 Topic 이름을 DDS 데이터 타입과 연결합니다." alt="" coords="194,277,309,320"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="199,238,236,278,230,277,197,243"/>
+<area shape="rect" id="Node000002" href="$classdds_1_1core_1_1_t_entity.html" target="_top" title=" " alt="" coords="101,96,237,139"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="170,151,172,188,166,186,168,156"/>
+<area shape="rect" id="Node000003" href="$classdds_1_1core_1_1_reference.html" target="_top" title="DDS 참조 타입에 대한 공유&#45;handle 연산을 정의합니다." alt="" coords="103,5,235,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="170,61,172,97,166,95,168,66"/>
+</map>

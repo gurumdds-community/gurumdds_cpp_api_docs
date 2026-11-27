@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1140" height="274" viewBox="0 0 1140 274" role="img" aria-label="After matching one Reader, the first status snapshot has count changes of one. Another read before a new event shows zero changes. After disconnect, the current count returns to zero and the cumulative count remains one." data-dds-diagram="true">
+  <title id="match-counts-en-title">Current matches, cumulative matches and changes</title>
+  <desc>After matching one Reader, the first status snapshot has count changes of one. Another read before a new event shows zero changes. After disconnect, the current count returns to zero and the cumulative count remains one.</desc>
+  <defs>
+    <marker id="match-counts-en-arrow" viewBox="0 0 10 12" refX="9" refY="6" markerWidth="9" markerHeight="10" orient="auto" markerUnits="userSpaceOnUse"><path d="M 1,1 L 9,6 L 1,11" fill="none" stroke="#20354B" stroke-width="1.2"/></marker>
+    <marker id="match-counts-en-blue" viewBox="0 0 11 10" refX="10" refY="5" markerWidth="10" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M 0,0 L 11,5 L 0,10 Z" fill="#356B96"/></marker>
+    <marker id="match-counts-en-uml" viewBox="0 0 15 15" refX="14" refY="7.5" markerWidth="15" markerHeight="15" orient="auto" markerUnits="userSpaceOnUse"><path d="M 1,1 L 14,7.5 L 1,14 Z" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/></marker>
+  </defs>
+  <rect width="1140" height="274" fill="#FFFFFF"/>
+  <g fill="#20354B" font-family="Arial, Malgun Gothic, sans-serif">
+    <rect x="25" y="30" width="295" height="46" fill="#EFF5FA" stroke="#20354B" stroke-width="1.15"/>
+    <text x="172.5" y="58" text-anchor="middle" font-size="16" font-weight="bold">Snapshot</text>
+    <rect x="25" y="76" width="295" height="46" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <text x="172.5" y="104" text-anchor="middle" font-size="15">First match</text>
+    <rect x="25" y="122" width="295" height="46" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <text x="172.5" y="150" text-anchor="middle" font-size="15">Read again</text>
+    <rect x="25" y="168" width="295" height="46" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <text x="172.5" y="196" text-anchor="middle" font-size="15">Reader exits</text>
+    <rect x="320" y="30" width="225" height="46" fill="#EFF5FA" stroke="#20354B" stroke-width="1.15"/>
+    <text x="432.5" y="58" text-anchor="middle" font-size="16" font-weight="bold">current_count()</text>
+    <rect x="320" y="76" width="225" height="46" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <text x="432.5" y="104" text-anchor="middle" font-size="15" font-family="Consolas, Menlo, monospace">1</text>
+    <rect x="320" y="122" width="225" height="46" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <text x="432.5" y="150" text-anchor="middle" font-size="15" font-family="Consolas, Menlo, monospace">1</text>
+    <rect x="320" y="168" width="225" height="46" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <text x="432.5" y="196" text-anchor="middle" font-size="15" font-family="Consolas, Menlo, monospace">0</text>
+    <rect x="545" y="30" width="225" height="46" fill="#EFF5FA" stroke="#20354B" stroke-width="1.15"/>
+    <text x="657.5" y="58" text-anchor="middle" font-size="16" font-weight="bold">total_count()</text>
+    <rect x="545" y="76" width="225" height="46" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <text x="657.5" y="104" text-anchor="middle" font-size="15" font-family="Consolas, Menlo, monospace">1</text>
+    <rect x="545" y="122" width="225" height="46" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <text x="657.5" y="150" text-anchor="middle" font-size="15" font-family="Consolas, Menlo, monospace">1</text>
+    <rect x="545" y="168" width="225" height="46" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <text x="657.5" y="196" text-anchor="middle" font-size="15" font-family="Consolas, Menlo, monospace">1</text>
+    <rect x="770" y="30" width="345" height="46" fill="#EFF5FA" stroke="#20354B" stroke-width="1.15"/>
+    <text x="942.5" y="58" text-anchor="middle" font-size="16" font-weight="bold">Change counts</text>
+    <rect x="770" y="76" width="345" height="46" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <text x="942.5" y="104" text-anchor="middle" font-size="15" font-family="Consolas, Menlo, monospace">1 / 1</text>
+    <rect x="770" y="122" width="345" height="46" fill="#EFF5FA" stroke="#20354B" stroke-width="1.15"/>
+    <text x="942.5" y="150" text-anchor="middle" font-size="15" font-family="Consolas, Menlo, monospace">0 / 0</text>
+    <rect x="770" y="168" width="345" height="46" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <text x="942.5" y="196" text-anchor="middle" font-size="15">New snapshot</text>
+    <text x="570" y="250" text-anchor="middle" font-size="15">Reading publication_matched_status() resets the Writer's change counts.</text>
+  </g>
+</svg>

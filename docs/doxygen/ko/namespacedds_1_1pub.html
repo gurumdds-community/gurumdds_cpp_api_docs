@@ -1,0 +1,425 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/xhtml;charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=11" http-equiv="X-UA-Compatible"/>
+<meta content="Doxygen 1.18.0" name="generator"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>GurumDDS C++ API Reference: dds::pub 네임스페이스</title>
+<link href="gurum-networks-logo.png" rel="icon" type="image/x-icon"/>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script src="dynsections.js" type="text/javascript"></script>
+<script src="codefolding.js" type="text/javascript"></script>
+<script src="clipboard.js" type="text/javascript"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script src="navtreedata.js" type="text/javascript"></script>
+<script src="navtree.js" type="text/javascript"></script>
+<script src="cookie.js" type="text/javascript"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script src="search/searchdata.js" type="text/javascript"></script>
+<script src="search/search.js" type="text/javascript"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+<link href="ReferenceBranding.css" rel="stylesheet" type="text/css"/>
+<script defer="True" src="ReferenceUi.js"></script><link href="../en/namespacedds_1_1pub.html" hreflang="en" rel="alternate"/><link href="../ko/namespacedds_1_1pub.html" hreflang="ko" rel="alternate"/><link href="../language.css" rel="stylesheet"/><script defer="defer" src="../language.js"></script></head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellpadding="0" cellspacing="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">GurumDDS C++ API Reference<span id="projectnumber"> 1.3.2</span>
+   </div>
+  </td>
+ <td class="doc-language-cell"><label class="doc-language"><select aria-label="문서 언어" data-current="1"><option lang="en" value="../en/namespacedds_1_1pub.html">English</option><option lang="en" selected="selected" value="../ko/namespacedds_1_1pub.html">Korean</option></select></label></td></tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script id="doxygen-config" type="application/json">
+{
+  "relPath": "",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script src="menudata.js" type="text/javascript"></script>
+<script src="menu.js" type="text/javascript"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> 주 메뉴 표시 전환</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div class="MSearchBoxInactive" id="MSearchBox">
+        <span class="left">
+          <span class="search-icon" id="MSearchSelect"><span class="search-icon-dropdown"></span></span>
+          <input accesskey="S" id="MSearchField" placeholder="검색" type="text" value=""/>
+          </span><span class="right">
+            <a href="javascript:searchBox.CloseResultsWindow()" id="MSearchClose"><div class="close-icon" id="MSearchCloseImg"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div class="ui-resizable side-nav-resizable" id="side-nav">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div class="sync" id="nav-sync"></div>
+    </div>
+  </div>
+  <div class="ui-resizable-handle" id="splitbar">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('namespacedds_1_1pub.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">로딩중...</div>
+<div class="SRStatus" id="Searching">검색중...</div>
+<div class="SRStatus" id="NoMatches">일치하는것 없음</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">dds::pub 네임스페이스</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><a class="el" href="group__dds__publication.html#gada2751fd8ce0e148138e6950f7ef7d37" title="DataWriter를 소유하고 기본값을 설정하는 데 사용되는 Publisher handle">Publisher</a>, <a class="el" href="classdds_1_1pub_1_1_data_writer.html" title="데이터 타입이 지정된 Topic에 sample을 쓰고 instance를 관리합니다.">DataWriter&lt;T&gt;</a>, 발행 listener  
+<a href="#details">더 자세히 ...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-namespaces"><a id="namespaces" name="namespaces"></a>
+네임스페이스</h2></td></tr>
+<tr class="memitem:qos" id="r_qos"><td class="memItemLeft">네임스페이스  </td><td class="memItemRight"><a class="el" href="namespacedds_1_1pub_1_1qos.html">qos</a></td></tr>
+<tr class="memdesc:namespacedds_1_1pub_1_1qos"><td class="mdescLeft"> </td><td class="mdescRight">Publisher와 DataWriter의 QoS <br/></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-nested-classes"><a id="nested-classes" name="nested-classes"></a>
+클래스</h2></td></tr>
+<tr class="memitem:AnyDataWriter" id="r_AnyDataWriter"><td class="memItemLeft">클래스  </td><td class="memItemRight"><a class="el" href="classdds_1_1pub_1_1_any_data_writer.html">AnyDataWriter</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft"> </td><td class="mdescRight">특정 데이터 타입에 한정하지 않고 DDS <code><a class="el" href="classdds_1_1pub_1_1_data_writer.html" title="데이터 타입이 지정된 Topic에 sample을 쓰고 instance를 관리합니다.">DataWriter&lt;T&gt;</a></code>를 보관합니다.  <a href="classdds_1_1pub_1_1_any_data_writer.html#details">더 자세히 ...</a><br/></td></tr>
+<tr class="memitem:AnyDataWriterListener" id="r_AnyDataWriterListener"><td class="memItemLeft">클래스  </td><td class="memItemRight"><a class="el" href="classdds_1_1pub_1_1_any_data_writer_listener.html">AnyDataWriterListener</a></td></tr>
+<tr class="memitem:DataWriter" id="r_DataWriter"><td class="memItemLeft">클래스  </td><td class="memItemRight"><a class="el" href="classdds_1_1pub_1_1_data_writer.html">DataWriter&lt;T&gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft"> </td><td class="mdescRight">데이터 타입이 지정된 Topic에 sample을 쓰고 instance를 관리합니다.  <a href="classdds_1_1pub_1_1_data_writer.html#details">더 자세히 ...</a><br/></td></tr>
+<tr class="memitem:DataWriterListener" id="r_DataWriterListener"><td class="memItemLeft">클래스  </td><td class="memItemRight"><a class="el" href="classdds_1_1pub_1_1_data_writer_listener.html">DataWriterListener</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft"> </td><td class="mdescRight">데이터 타입이 지정된 DataWriter의 상태 알림을 받습니다  <a href="classdds_1_1pub_1_1_data_writer_listener.html#details">더 자세히 ...</a><br/></td></tr>
+<tr class="memitem:NoOpAnyDataWriterListener" id="r_NoOpAnyDataWriterListener"><td class="memItemLeft">클래스  </td><td class="memItemRight"><a class="el" href="classdds_1_1pub_1_1_no_op_any_data_writer_listener.html">NoOpAnyDataWriterListener</a></td></tr>
+<tr class="memitem:NoOpDataWriterListener" id="r_NoOpDataWriterListener"><td class="memItemLeft">클래스  </td><td class="memItemRight"><a class="el" href="classdds_1_1pub_1_1_no_op_data_writer_listener.html">NoOpDataWriterListener</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft"> </td><td class="mdescRight">필요한 callback만 재정의할 수 있도록 <a class="el" href="classdds_1_1pub_1_1_data_writer.html" title="데이터 타입이 지정된 Topic에 sample을 쓰고 instance를 관리합니다.">DataWriter&lt;T&gt;</a> callback의 기본 빈 구현을 제공합니다.  <a href="classdds_1_1pub_1_1_no_op_data_writer_listener.html#details">더 자세히 ...</a><br/></td></tr>
+<tr class="memitem:NoOpPublisherListener" id="r_NoOpPublisherListener"><td class="memItemLeft">클래스  </td><td class="memItemRight"><a class="el" href="classdds_1_1pub_1_1_no_op_publisher_listener.html">NoOpPublisherListener</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft"> </td><td class="mdescRight"><a class="el" href="group__dds__publication.html#gada2751fd8ce0e148138e6950f7ef7d37" title="DataWriter를 소유하고 기본값을 설정하는 데 사용되는 Publisher handle">Publisher</a> 콜백의 빈 구현을 제공합니다  <a href="classdds_1_1pub_1_1_no_op_publisher_listener.html#details">더 자세히 ...</a><br/></td></tr>
+<tr class="memitem:PublisherListener" id="r_PublisherListener"><td class="memItemLeft">클래스  </td><td class="memItemRight"><a class="el" href="classdds_1_1pub_1_1_publisher_listener.html">PublisherListener</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft"> </td><td class="mdescRight">Publisher에 속한 AnyDataWriter의 상태 알림을 받습니다.  <a href="classdds_1_1pub_1_1_publisher_listener.html#details">더 자세히 ...</a><br/></td></tr>
+<tr class="memitem:TCoherentSet" id="r_TCoherentSet"><td class="memItemLeft">클래스  </td><td class="memItemRight"><a class="el" href="classdds_1_1pub_1_1_t_coherent_set.html">TCoherentSet</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft"> </td><td class="mdescRight">일관된 변경 사항의 세트에 대한 <a class="el" href="group__dds__publication.html#gada2751fd8ce0e148138e6950f7ef7d37" title="DataWriter를 소유하고 기본값을 설정하는 데 사용되는 Publisher handle">Publisher</a> 범위를 관리합니다.  <a href="classdds_1_1pub_1_1_t_coherent_set.html#details">더 자세히 ...</a><br/></td></tr>
+<tr class="memitem:TPublisher" id="r_TPublisher"><td class="memItemLeft">클래스  </td><td class="memItemRight"><a class="el" href="classdds_1_1pub_1_1_t_publisher.html">Publisher</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft"> </td><td class="mdescRight">DataWriter를 소유하고 게시 기본값을 구성합니다.  <a href="classdds_1_1pub_1_1_t_publisher.html#details">더 자세히 ...</a><br/></td></tr>
+<tr class="memitem:TSuspendedPublication" id="r_TSuspendedPublication"><td class="memItemLeft">클래스  </td><td class="memItemRight"><a class="el" href="classdds_1_1pub_1_1_t_suspended_publication.html">TSuspendedPublication</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft"> </td><td class="mdescRight">일시 중단된 게시에 대한 <a class="el" href="group__dds__publication.html#gada2751fd8ce0e148138e6950f7ef7d37" title="DataWriter를 소유하고 기본값을 설정하는 데 사용되는 Publisher handle">Publisher</a> 범위 관리  <a href="classdds_1_1pub_1_1_t_suspended_publication.html#details">더 자세히 ...</a><br/></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-typedef-members"><a id="typedef-members" name="typedef-members"></a>
+타입정의</h2></td></tr>
+<tr class="memitem:ga8f70ae058951aac5c115428519ae51e5" id="r_ga8f70ae058951aac5c115428519ae51e5"><td class="memItemLeft">typedef dds::pub::detail::CoherentSet </td><td class="memItemRight"><a class="el" href="group__dds__publication.html#ga8f70ae058951aac5c115428519ae51e5">CoherentSet</a></td></tr>
+<tr class="memdesc:ga8f70ae058951aac5c115428519ae51e5"><td class="mdescLeft"> </td><td class="mdescRight">일관된 게시 변경 사항을 괄호로 묶는 범위  <br/></td></tr>
+<tr class="memitem:gada2751fd8ce0e148138e6950f7ef7d37" id="r_gada2751fd8ce0e148138e6950f7ef7d37"><td class="memItemLeft">typedef dds::pub::detail::Publisher </td><td class="memItemRight"><a class="el" href="group__dds__publication.html#gada2751fd8ce0e148138e6950f7ef7d37">Publisher</a></td></tr>
+<tr class="memdesc:gada2751fd8ce0e148138e6950f7ef7d37"><td class="mdescLeft"> </td><td class="mdescRight">DataWriter를 소유하고 기본값을 설정하는 데 사용되는 <a class="el" href="group__dds__publication.html#gada2751fd8ce0e148138e6950f7ef7d37" title="DataWriter를 소유하고 기본값을 설정하는 데 사용되는 Publisher handle">Publisher</a> handle  <br/></td></tr>
+<tr class="memitem:ga0263143af767b3492479665b9a2fd613" id="r_ga0263143af767b3492479665b9a2fd613"><td class="memItemLeft">typedef dds::pub::detail::SuspendedPublication </td><td class="memItemRight"><a class="el" href="group__dds__publication.html#ga0263143af767b3492479665b9a2fd613">SuspendedPublication</a></td></tr>
+<tr class="memdesc:ga0263143af767b3492479665b9a2fd613"><td class="mdescLeft"> </td><td class="mdescRight">Publisher를 통해 게시를 일시 중지하고 다시 시작하는 범위  <br/></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-func-members"><a id="func-members" name="func-members"></a>
+함수</h2></td></tr>
+<tr class="memitem:a2231ee44d4f5a4e019bd6c90c1d145eb" id="r_a2231ee44d4f5a4e019bd6c90c1d145eb"><td class="memTemplParams" colspan="2"><a id="a2231ee44d4f5a4e019bd6c90c1d145eb" name="a2231ee44d4f5a4e019bd6c90c1d145eb"></a>
+template&lt;typename T&gt; </td></tr>
+<tr class="memitem:a2231ee44d4f5a4e019bd6c90c1d145eb template"><td class="memItemLeft"><a class="el" href="classdds_1_1pub_1_1_data_writer.html">DataWriter&lt;T&gt;</a>&lt; T &gt; </td><td class="memItemRight"><b>get</b> (const <a class="el" href="classdds_1_1pub_1_1_any_data_writer.html">AnyDataWriter</a> &amp;adw)</td></tr>
+<tr class="memdesc:a2231ee44d4f5a4e019bd6c90c1d145eb"><td class="mdescLeft"> </td><td class="mdescRight"><code><a class="el" href="classdds_1_1pub_1_1_any_data_writer.html" title="특정 데이터 타입에 한정하지 않고 DDS DataWriter를 보관합니다.">AnyDataWriter</a></code>에서 데이터 타입을 지정한 <code><a class="el" href="classdds_1_1pub_1_1_data_writer.html" title="데이터 타입이 지정된 Topic에 sample을 쓰고 instance를 관리합니다.">DataWriter&lt;T&gt;</a></code>를 추출합니다. <br/></td></tr>
+<tr class="memitem:aee1323e2f432791145523b64a615b9ef" id="r_aee1323e2f432791145523b64a615b9ef"><td class="memItemLeft">void </td><td class="memItemRight"><a class="el" href="#aee1323e2f432791145523b64a615b9ef">ignore</a> (const <a class="el" href="group__dds__domain.html#gab1bd86ffa9ac0869166a446dd0120f3d">dds::domain::DomainParticipant</a> &amp;dp, const <a class="el" href="group__dds__core.html#ga8ee18acd2002fb15f2650f5c7cb055d0">dds::core::InstanceHandle</a> &amp;handle)</td></tr>
+<tr class="memdesc:aee1323e2f432791145523b64a615b9ef"><td class="mdescLeft"> </td><td class="mdescRight">간행물을 무시하라.  <br/></td></tr>
+<tr class="memitem:a00c5e8b3a5704f232c49a1b4802398b6" id="r_a00c5e8b3a5704f232c49a1b4802398b6"><td class="memTemplParams" colspan="2">template&lt;typename FwdIterator&gt; </td></tr>
+<tr class="memitem:a00c5e8b3a5704f232c49a1b4802398b6 template"><td class="memItemLeft">void </td><td class="memItemRight"><a class="el" href="#a00c5e8b3a5704f232c49a1b4802398b6">ignore</a> (const <a class="el" href="group__dds__domain.html#gab1bd86ffa9ac0869166a446dd0120f3d">dds::domain::DomainParticipant</a> &amp;dp, FwdIterator begin, FwdIterator end)</td></tr>
+<tr class="memdesc:a00c5e8b3a5704f232c49a1b4802398b6"><td class="mdescLeft"> </td><td class="mdescRight">지정한 원격 publication을 무시합니다  <br/></td></tr>
+<tr class="memitem:a651d2f67ae7d8e3451e18f029bcb6d97" id="r_a651d2f67ae7d8e3451e18f029bcb6d97"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
+<tr class="memitem:a651d2f67ae7d8e3451e18f029bcb6d97 template"><td class="memItemLeft">const ::dds::core::InstanceHandleSeq </td><td class="memItemRight"><a class="el" href="#a651d2f67ae7d8e3451e18f029bcb6d97">matched_subscriptions</a> (const <a class="el" href="classdds_1_1pub_1_1_data_writer.html">dds::pub::DataWriter&lt;T&gt;</a>&lt; T &gt; &amp;dw)</td></tr>
+<tr class="memdesc:a651d2f67ae7d8e3451e18f029bcb6d97"><td class="mdescLeft"> </td><td class="mdescRight">같은 Topic에서 QoS가 호환되고 <span class="tt">ignore_subscription</span>으로 무시하지 않은 DataReader의 handle을 반환합니다.  <br/></td></tr>
+<tr class="memitem:a56d33d565e4ec2a59a3841e6c9a44115" id="r_a56d33d565e4ec2a59a3841e6c9a44115"><td class="memTemplParams" colspan="2">template&lt;typename T, typename FwdIterator&gt; </td></tr>
+<tr class="memitem:a56d33d565e4ec2a59a3841e6c9a44115 template"><td class="memItemLeft">dds::core::InstanceHandleSeq </td><td class="memItemRight"><a class="el" href="#a56d33d565e4ec2a59a3841e6c9a44115">matched_subscriptions</a> (const <a class="el" href="classdds_1_1pub_1_1_data_writer.html">dds::pub::DataWriter&lt;T&gt;</a>&lt; T &gt; &amp;dw, FwdIterator begin, FwdIterator end)</td></tr>
+<tr class="memdesc:a56d33d565e4ec2a59a3841e6c9a44115"><td class="mdescLeft"> </td><td class="mdescRight">같은 Topic에서 QoS가 호환되고 <span class="tt">ignore_subscription</span>으로 무시하지 않은 DataReader의 handle을 반환합니다.  <br/></td></tr>
+<tr class="memitem:a2a077f46734fa260830ef8f8e4f13a21" id="r_a2a077f46734fa260830ef8f8e4f13a21"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
+<tr class="memitem:a2a077f46734fa260830ef8f8e4f13a21 template"><td class="memItemLeft">const <a class="el" href="namespacedds_1_1topic.html#a50066084d9983a1ba8e61e709e887bee">dds::topic::SubscriptionBuiltinTopicData</a> </td><td class="memItemRight"><a class="el" href="#a2a077f46734fa260830ef8f8e4f13a21">matched_subscription_data</a> (const <a class="el" href="classdds_1_1pub_1_1_data_writer.html">dds::pub::DataWriter&lt;T&gt;</a>&lt; T &gt; &amp;dw, const <a class="el" href="group__dds__core.html#ga8ee18acd2002fb15f2650f5c7cb055d0">::dds::core::InstanceHandle</a> &amp;h)</td></tr>
+<tr class="memdesc:a2a077f46734fa260830ef8f8e4f13a21"><td class="mdescLeft"> </td><td class="mdescRight">DataWriter와 연결된 subscription의 discovery 데이터를 반환합니다.  <br/></td></tr>
+<tr class="memitem:a22139474567e1b0d8c8887c8574a772e" id="r_a22139474567e1b0d8c8887c8574a772e"><td class="memTemplParams" colspan="2">template&lt;typename WRITER, typename FwdIterator&gt; </td></tr>
+<tr class="memitem:a22139474567e1b0d8c8887c8574a772e template"><td class="memItemLeft">uint32_t </td><td class="memItemRight"><a class="el" href="#a22139474567e1b0d8c8887c8574a772e">find</a> (const <a class="el" href="group__dds__publication.html#gada2751fd8ce0e148138e6950f7ef7d37">dds::pub::Publisher</a> &amp;pub, const std::string &amp;topic_name, FwdIterator begin, uint32_t max_size)</td></tr>
+<tr class="memdesc:a22139474567e1b0d8c8887c8574a772e"><td class="mdescLeft"> </td><td class="mdescRight">Publisher에 속하고 topic_name과 일치하는 Topic에 연결된 기존 DataWriter를 조회합니다.  <br/></td></tr>
+<tr class="memitem:a540b744b8599c8fd87c24fdd34676c47" id="r_a540b744b8599c8fd87c24fdd34676c47"><td class="memTemplParams" colspan="2">template&lt;typename WRITER, typename BinIterator&gt; </td></tr>
+<tr class="memitem:a540b744b8599c8fd87c24fdd34676c47 template"><td class="memItemLeft">uint32_t </td><td class="memItemRight"><a class="el" href="#a540b744b8599c8fd87c24fdd34676c47">find</a> (const <a class="el" href="group__dds__publication.html#gada2751fd8ce0e148138e6950f7ef7d37">dds::pub::Publisher</a> &amp;pub, const std::string &amp;topic_name, BinIterator begin)</td></tr>
+<tr class="memdesc:a540b744b8599c8fd87c24fdd34676c47"><td class="mdescLeft"> </td><td class="mdescRight">Publisher에 속하고 topic_name과 일치하는 Topic에 연결된 기존 DataWriter를 조회합니다.  <br/></td></tr>
+</table>
+<a id="details" name="details"></a><h2 class="groupheader" id="header-details">상세한 설명</h2>
+<div class="textblock"><p><a class="el" href="group__dds__publication.html#gada2751fd8ce0e148138e6950f7ef7d37" title="DataWriter를 소유하고 기본값을 설정하는 데 사용되는 Publisher handle">Publisher</a>, <a class="el" href="classdds_1_1pub_1_1_data_writer.html" title="데이터 타입이 지정된 Topic에 sample을 쓰고 instance를 관리합니다.">DataWriter&lt;T&gt;</a>, 발행 listener </p>
+<dl class="section see"><dt>참고</dt><dd><a class="el" href="group__dds__publication.html" title="Publication">Publication</a> </dd></dl>
+</div><a id="doc-func-members" name="doc-func-members"></a><h2 class="groupheader" id="header-doc-func-members">함수 문서화</h2>
+<a id="a540b744b8599c8fd87c24fdd34676c47" name="a540b744b8599c8fd87c24fdd34676c47"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a540b744b8599c8fd87c24fdd34676c47">◆ </a></span>find() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename WRITER, typename BinIterator&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t dds::pub::find </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__dds__publication.html#gada2751fd8ce0e148138e6950f7ef7d37">dds::pub::Publisher</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>pub</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>topic_name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">BinIterator</td>          <td class="paramname"><span class="paramname"><em>begin</em></span> )</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Publisher에 속하고 topic_name과 일치하는 Topic에 연결된 기존 DataWriter를 조회합니다. </p>
+<p>해당하는 DataWriter가 없으면 빈 컨테이너를 반환합니다. 내장 Publisher에서 호출하면 built-in Topic의 내장 <a class="el" href="classdds_1_1pub_1_1_data_writer.html" title="데이터 타입이 지정된 Topic에 sample을 쓰고 instance를 관리합니다.">DataWriter&lt;T&gt;</a> Entity에 접근할 수 있습니다.</p>
+<dl class="section return"><dt>반환값</dt><dd>찾은 요소의 총 수. 최대 max_size는 제공된 반복자로 복사됩니다. </dd></dl>
+
+</div>
+</div>
+<a id="a22139474567e1b0d8c8887c8574a772e" name="a22139474567e1b0d8c8887c8574a772e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22139474567e1b0d8c8887c8574a772e">◆ </a></span>find() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename WRITER, typename FwdIterator&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t dds::pub::find </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__dds__publication.html#gada2751fd8ce0e148138e6950f7ef7d37">dds::pub::Publisher</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>pub</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>topic_name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FwdIterator</td>          <td class="paramname"><span class="paramname"><em>begin</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>max_size</em></span> )</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Publisher에 속하고 topic_name과 일치하는 Topic에 연결된 기존 DataWriter를 조회합니다. </p>
+<p>해당하는 DataWriter가 없으면 빈 컨테이너를 반환합니다. 내장 Publisher에서 호출하면 built-in Topic의 내장 <a class="el" href="classdds_1_1pub_1_1_data_writer.html" title="데이터 타입이 지정된 Topic에 sample을 쓰고 instance를 관리합니다.">DataWriter&lt;T&gt;</a> Entity에 접근할 수 있습니다.</p>
+<dl class="section return"><dt>반환값</dt><dd>찾은 요소의 총 수. 최대 max_size는 제공된 반복자로 복사됩니다. </dd></dl>
+
+</div>
+</div>
+<a id="aee1323e2f432791145523b64a615b9ef" name="aee1323e2f432791145523b64a615b9ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee1323e2f432791145523b64a615b9ef">◆ </a></span>ignore() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void dds::pub::ignore </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__dds__domain.html#gab1bd86ffa9ac0869166a446dd0120f3d">dds::domain::DomainParticipant</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>dp</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="group__dds__core.html#ga8ee18acd2002fb15f2650f5c7cb055d0">dds::core::InstanceHandle</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>handle</em></span> )</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>간행물을 무시하라. </p>
+<dl class="params"><dt>매개변수</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dp</td><td>원격 Entity를 무시할 <code>DomainParticipant</code></td></tr>
+    <tr><td class="paramname">handle</td><td>무시할 원격 Entity의 <code>InstanceHandle</code> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a00c5e8b3a5704f232c49a1b4802398b6" name="a00c5e8b3a5704f232c49a1b4802398b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00c5e8b3a5704f232c49a1b4802398b6">◆ </a></span>ignore() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename FwdIterator&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void dds::pub::ignore </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__dds__domain.html#gab1bd86ffa9ac0869166a446dd0120f3d">dds::domain::DomainParticipant</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>dp</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FwdIterator</td>          <td class="paramname"><span class="paramname"><em>begin</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FwdIterator</td>          <td class="paramname"><span class="paramname"><em>end</em></span> )</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>지정한 원격 publication을 무시합니다 </p>
+<p>반 열린 범위 <span class="tt">[begin, end)</span>의 각 handle에 무시 작업을 적용합니다.</p>
+<dl class="params"><dt>매개변수</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[입력]</td><td class="paramname">dp</td><td>publication이 무시된 DomainParticipant </td></tr>
+    <tr><td class="paramdir">[입력]</td><td class="paramname">begin</td><td>첫번째 게시 handle로 반복 </td></tr>
+    <tr><td class="paramdir">[입력]</td><td class="paramname">end</td><td>마지막 게시 handle을 지나는 반복자 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a2a077f46734fa260830ef8f8e4f13a21" name="a2a077f46734fa260830ef8f8e4f13a21"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a077f46734fa260830ef8f8e4f13a21">◆ </a></span>matched_subscription_data()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="namespacedds_1_1topic.html#a50066084d9983a1ba8e61e709e887bee">dds::topic::SubscriptionBuiltinTopicData</a> dds::pub::matched_subscription_data </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdds_1_1pub_1_1_data_writer.html">dds::pub::DataWriter&lt;T&gt;</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>dw</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="group__dds__core.html#ga8ee18acd2002fb15f2650f5c7cb055d0">::dds::core::InstanceHandle</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>h</em></span> )</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>DataWriter와 연결된 subscription의 discovery 데이터를 반환합니다. </p>
+<p><span class="tt"><a class="el" href="#a651d2f67ae7d8e3451e18f029bcb6d97" title="같은 Topic에서 QoS가 호환되고 ignore_subscription으로 무시하지 않은 DataReader의 handle을 반환합니다.">matched_subscriptions()</a></span>로 얻은 handle을 전달하세요. handle이 현재 연결된 subscription을 식별하지 못하면 <span class="tt">BadParameterError</span>를 던집니다.</p>
+<p>인프라가 subscription_data를 채우기 위하여 필요한 정보를 보유하지 않는 경우에도 작업은 실패할 수 있다. 이 경우에 작업은 UnsupportedError를 던질 것이다. </p>
+
+</div>
+</div>
+<a id="a651d2f67ae7d8e3451e18f029bcb6d97" name="a651d2f67ae7d8e3451e18f029bcb6d97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a651d2f67ae7d8e3451e18f029bcb6d97">◆ </a></span>matched_subscriptions() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const ::dds::core::InstanceHandleSeq dds::pub::matched_subscriptions </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdds_1_1pub_1_1_data_writer.html">dds::pub::DataWriter&lt;T&gt;</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>dw</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>같은 Topic에서 QoS가 호환되고 <span class="tt">ignore_subscription</span>으로 무시하지 않은 DataReader의 handle을 반환합니다. </p>
+<p>로컬 handle은 <span class="tt">DCPSSubscriptions</span> built-in Topic의 <span class="tt">SampleInfo::instance_handle</span>과 같습니다. 미들웨어가 연결 정보를 로컬에 보관하지 않으면 실패할 수 있습니다. </p>
+
+</div>
+</div>
+<a id="a56d33d565e4ec2a59a3841e6c9a44115" name="a56d33d565e4ec2a59a3841e6c9a44115"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56d33d565e4ec2a59a3841e6c9a44115">◆ </a></span>matched_subscriptions() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T, typename FwdIterator&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">dds::core::InstanceHandleSeq dds::pub::matched_subscriptions </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdds_1_1pub_1_1_data_writer.html">dds::pub::DataWriter&lt;T&gt;</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>dw</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FwdIterator</td>          <td class="paramname"><span class="paramname"><em>begin</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FwdIterator</td>          <td class="paramname"><span class="paramname"><em>end</em></span> )</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>같은 Topic에서 QoS가 호환되고 <span class="tt">ignore_subscription</span>으로 무시하지 않은 DataReader의 handle을 반환합니다. </p>
+<p>로컬 handle은 <span class="tt">DCPSSubscriptions</span> built-in Topic의 <span class="tt">SampleInfo::instance_handle</span>과 같습니다. 미들웨어가 연결 정보를 로컬에 보관하지 않으면 실패할 수 있습니다. </p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div class="page-nav-panel" id="page-nav">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div class="navpath" id="nav-path"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="namespacedds.html">dds</a></li><li class="navelem"><a href="namespacedds_1_1pub.html">pub</a></li>
+    <li class="footer">다음에 의해 생성됨 :  <a href="https://www.doxygen.org/index.html"><img alt="doxygen" class="footer" height="31" src="doxygen.svg" width="104"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

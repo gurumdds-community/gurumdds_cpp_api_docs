@@ -1,0 +1,7 @@
+<map id="dds::sub::TSubscriber&lt; DELEGATE &gt;" name="dds::sub::TSubscriber&lt; DELEGATE &gt;">
+<area shape="rect" id="Node000001" target="_top" title="DataReader를 소유하고 구독 기본값을 구성합니다." alt="" coords="5,187,144,229"/>
+<area shape="rect" id="Node000002" href="$classdds_1_1core_1_1_t_entity.html" target="_top" title="DDS Entity handle에 대한 일반적인 작업을 제공합니다." alt="" coords="17,96,132,139"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="76,152,77,188,72,186,73,156"/>
+<area shape="rect" id="Node000003" href="$classdds_1_1core_1_1_reference.html" target="_top" title="DDS 참조 타입에 대한 공유&#45;handle 연산을 정의합니다." alt="" coords="8,5,141,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="75,60,77,97,72,96,74,66"/>
+</map>

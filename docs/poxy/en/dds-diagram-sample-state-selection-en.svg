@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1140" height="228" viewBox="0 0 1140 228" role="img" aria-label="The Reader reads key 7 without removing it and then receives key 8. A read-state mask and an unread-state mask return different keys." data-dds-diagram="true">
+  <title id="sample-state-selection-en-title">Select read and unread records independently</title>
+  <desc>The Reader reads key 7 without removing it and then receives key 8. A read-state mask and an unread-state mask return different keys.</desc>
+  <defs>
+    <marker id="sample-state-selection-en-arrow" viewBox="0 0 10 12" refX="9" refY="6" markerWidth="9" markerHeight="10" orient="auto" markerUnits="userSpaceOnUse"><path d="M 1,1 L 9,6 L 1,11" fill="none" stroke="#20354B" stroke-width="1.2"/></marker>
+    <marker id="sample-state-selection-en-blue" viewBox="0 0 11 10" refX="10" refY="5" markerWidth="10" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M 0,0 L 11,5 L 0,10 Z" fill="#356B96"/></marker>
+    <marker id="sample-state-selection-en-uml" viewBox="0 0 15 15" refX="14" refY="7.5" markerWidth="15" markerHeight="15" orient="auto" markerUnits="userSpaceOnUse"><path d="M 1,1 L 14,7.5 L 1,14 Z" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/></marker>
+  </defs>
+  <rect width="1140" height="228" fill="#FFFFFF"/>
+  <g fill="#20354B" font-family="Arial, Malgun Gothic, sans-serif">
+    <rect x="25" y="30" width="220" height="46" fill="#EFF5FA" stroke="#20354B" stroke-width="1.15"/>
+    <text x="135" y="58" text-anchor="middle" font-size="16" font-weight="bold">Reader history</text>
+    <rect x="25" y="76" width="220" height="46" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <text x="135" y="104" text-anchor="middle" font-size="15" font-family="Consolas, Menlo, monospace">key 7</text>
+    <rect x="25" y="122" width="220" height="46" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <text x="135" y="150" text-anchor="middle" font-size="15" font-family="Consolas, Menlo, monospace">key 8</text>
+    <rect x="245" y="30" width="225" height="46" fill="#EFF5FA" stroke="#20354B" stroke-width="1.15"/>
+    <text x="357.5" y="58" text-anchor="middle" font-size="16" font-weight="bold">SampleState</text>
+    <rect x="245" y="76" width="225" height="46" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <text x="357.5" y="104" text-anchor="middle" font-size="15">Read</text>
+    <rect x="245" y="122" width="225" height="46" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <text x="357.5" y="150" text-anchor="middle" font-size="15">Unread</text>
+    <rect x="470" y="30" width="420" height="46" fill="#EFF5FA" stroke="#20354B" stroke-width="1.15"/>
+    <text x="680" y="58" text-anchor="middle" font-size="16" font-weight="bold">Selection</text>
+    <rect x="470" y="76" width="420" height="46" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <text x="680" y="104" text-anchor="middle" font-size="15" font-family="Consolas, Menlo, monospace">read() + alive()</text>
+    <rect x="470" y="122" width="420" height="46" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <text x="680" y="150" text-anchor="middle" font-size="15" font-family="Consolas, Menlo, monospace">not_read() + alive()</text>
+    <rect x="890" y="30" width="225" height="46" fill="#EFF5FA" stroke="#20354B" stroke-width="1.15"/>
+    <text x="1002.5" y="58" text-anchor="middle" font-size="16" font-weight="bold">Returned key</text>
+    <rect x="890" y="76" width="225" height="46" fill="#EFF5FA" stroke="#20354B" stroke-width="1.15"/>
+    <text x="1002.5" y="104" text-anchor="middle" font-size="15" font-family="Consolas, Menlo, monospace">7</text>
+    <rect x="890" y="122" width="225" height="46" fill="#EFF5FA" stroke="#20354B" stroke-width="1.15"/>
+    <text x="1002.5" y="150" text-anchor="middle" font-size="15" font-family="Consolas, Menlo, monospace">8</text>
+    <text x="570" y="204" text-anchor="middle" font-size="15">The example combines SampleState and InstanceState. ViewState::any() leaves the view unrestricted.</text>
+  </g>
+</svg>

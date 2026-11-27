@@ -1,0 +1,718 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/xhtml;charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=11" http-equiv="X-UA-Compatible"/>
+<meta content="Doxygen 1.18.0" name="generator"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>GurumDDS C++ API Reference: QoS와 sample 전달</title>
+<link href="gurum-networks-logo.png" rel="icon" type="image/x-icon"/>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script src="dynsections.js" type="text/javascript"></script>
+<script src="codefolding.js" type="text/javascript"></script>
+<script src="clipboard.js" type="text/javascript"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script src="navtreedata.js" type="text/javascript"></script>
+<script src="navtree.js" type="text/javascript"></script>
+<script src="cookie.js" type="text/javascript"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script src="search/searchdata.js" type="text/javascript"></script>
+<script src="search/search.js" type="text/javascript"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+<link href="ReferenceBranding.css" rel="stylesheet" type="text/css"/>
+<script defer="True" src="ReferenceUi.js"></script><link href="../en/group__dds__howto__qos.html" hreflang="en" rel="alternate"/><link href="../ko/group__dds__howto__qos.html" hreflang="ko" rel="alternate"/><link href="../language.css" rel="stylesheet"/><script defer="defer" src="../language.js"></script></head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellpadding="0" cellspacing="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">GurumDDS C++ API Reference<span id="projectnumber"> 1.3.2</span>
+   </div>
+  </td>
+ <td class="doc-language-cell"><label class="doc-language"><select aria-label="문서 언어" data-current="1"><option lang="en" value="../en/group__dds__howto__qos.html">English</option><option lang="en" selected="selected" value="../ko/group__dds__howto__qos.html">Korean</option></select></label></td></tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script id="doxygen-config" type="application/json">
+{
+  "relPath": "",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script src="menudata.js" type="text/javascript"></script>
+<script src="menu.js" type="text/javascript"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> 주 메뉴 표시 전환</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div class="MSearchBoxInactive" id="MSearchBox">
+        <span class="left">
+          <span class="search-icon" id="MSearchSelect"><span class="search-icon-dropdown"></span></span>
+          <input accesskey="S" id="MSearchField" placeholder="검색" type="text" value=""/>
+          </span><span class="right">
+            <a href="javascript:searchBox.CloseResultsWindow()" id="MSearchClose"><div class="close-icon" id="MSearchCloseImg"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div class="ui-resizable side-nav-resizable" id="side-nav">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div class="sync" id="nav-sync"></div>
+    </div>
+  </div>
+  <div class="ui-resizable-handle" id="splitbar">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('group__dds__howto__qos.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">로딩중...</div>
+<div class="SRStatus" id="Searching">검색중...</div>
+<div class="SRStatus" id="NoMatches">일치하는것 없음</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">QoS와 sample 전달 <div class="ingroups"><a class="el" href="group__dds__howto.html">Programming Tutorials</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p>Entity를 만들기 전에 QoS를 정하세요. Publisher와 Subscriber의 기본값에서 시작해 해당 통신에 필요한 정책을 수정합니다. 호환되지 않는 정책 때문에 매칭이 실패할 수 있으므로 전달을 시험하기 전에 매칭을 확인하세요.</p>
+<p>Publisher와 Subscriber 튜토리얼에서는 endpoint가 기본 QoS를 가져오는 방법을 다뤘습니다. 여기서는 각 기본값에 Reliability를 설정한 뒤 그 QoS를 전달해 두 endpoint를 만듭니다.</p>
+<h1 class="doxsection"><a class="anchor" id="dds_tutorial_qos_reliable"></a>
+Reliability로 endpoint 설정하기</h1>
+<p>Publisher와 Subscriber의 기본 QoS를 가져옵니다. 두 endpoint를 만들기 전에 <span class="tt">Reliability</span>와 <span class="tt">History</span>를 설정하세요. DataWriter는 reliable 전달을 제공하고 DataReader는 이를 요청합니다.</p>
+<p>예제의 <span class="tt">KeepLast(4)</span>는 endpoint의 리소스 한도 내에서 instance마다 sample을 최대 네 개 보관합니다. reliable 전달로 sample을 쓸 때 공간을 기다려야 하면 DataWriter의 대기 한도인 200 ms가 적용됩니다.</p>
+<div class="fragment"><div class="line"><span class="keyword">using </span><a class="code hl_typedef" href="group__dds__qos.html#gac131ef99ba345cff7ae780d5d30ff130">dds::core::policy::History</a>;</div>
+<div class="line"><span class="keyword">using </span><a class="code hl_typedef" href="group__dds__qos.html#gae1ee89c57fc5fa311721b4511e559783">dds::core::policy::Reliability</a>;</div>
+<div class="line"><span class="keyword">const</span> <span class="keyword">auto</span> reliable = Reliability::Reliable(<a class="code hl_function" href="classdds_1_1core_1_1_duration.html#ac4d51447780d8cedf9ee0ebb78863c98">dds::core::Duration::from_millisecs</a>(200));</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">auto</span> writer_qos = publisher.default_writer_qos();</div>
+<div class="line">writer_qos &lt;&lt; reliable &lt;&lt; History::KeepLast(4);</div>
+<div class="line"><span class="keyword">auto</span> reader_qos = subscriber.default_datareader_qos();</div>
+<div class="line">reader_qos &lt;&lt; reliable &lt;&lt; History::KeepLast(4);</div>
+<div class="line"> </div>
+<div class="line"><a class="code hl_class" href="classdds_1_1pub_1_1_data_writer.html">dds::pub::DataWriter&lt;T&gt;</a> writer(publisher, topic, writer_qos);</div>
+<div class="line"><a class="code hl_class" href="classdds_1_1sub_1_1_data_reader.html">dds::sub::DataReader&lt;T&gt;</a> reader(subscriber, topic, reader_qos);</div>
+</div><!-- fragment --><div class="image">
+<object data="dds-diagram-reliable-write-wait-ko.svg" style="pointer-events: none;" type="image/svg+xml"></object>
+<div class="caption">
+Reliable write에서 공간이 생길 때까지 대기</div></div>
+ <h1 class="doxsection"><a class="anchor" id="dds_tutorial_qos_read"></a>
+QoS에서 개별 정책 읽기</h1>
+<p><span class="tt">operator&gt;&gt;</span>로 <span class="tt">History</span>를 꺼내 depth를 확인하세요.</p>
+<div class="fragment"><div class="line"><a class="code hl_typedef" href="group__dds__qos.html#gac131ef99ba345cff7ae780d5d30ff130">History</a> history;</div>
+<div class="line">writer.qos() &gt;&gt; history;</div>
+<div class="line">require(history.depth() == 3, <span class="stringliteral">"Could not extract writer history policy"</span>);</div>
+</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="dds_tutorial_qos_incompatible"></a>
+Reliability 불일치 확인하기</h1>
+<p>Reliable 전달을 요청하는 DataReader는 Best Effort 전달을 제공하는 DataWriter와 매칭할 수 없습니다. 양쪽 endpoint에서 비호환 QoS 카운터와 매칭 수를 확인하세요.</p>
+<div class="fragment"><div class="line"><span class="keyword">auto</span> writer_qos = publisher.default_writer_qos();</div>
+<div class="line">writer_qos &lt;&lt; Reliability::BestEffort();</div>
+<div class="line"><span class="keyword">auto</span> reader_qos = subscriber.default_datareader_qos();</div>
+<div class="line">reader_qos &lt;&lt; Reliability::Reliable(Duration::from_millisecs(200));</div>
+<div class="line"><a class="code hl_class" href="classdds_1_1pub_1_1_data_writer.html">dds::pub::DataWriter&lt;T&gt;</a> writer(publisher, topic, writer_qos);</div>
+<div class="line"><a class="code hl_class" href="classdds_1_1sub_1_1_data_reader.html">dds::sub::DataReader&lt;T&gt;</a> reader(subscriber, topic, reader_qos);</div>
+<div class="line"> </div>
+<div class="line">howto::wait_until([&amp;writer, &amp;reader]() -&gt; <span class="keywordtype">bool</span> {</div>
+<div class="line">    <span class="keywordflow">return</span> writer.offered_incompatible_qos_staus().total_count() &gt; 0</div>
+<div class="line">        and reader.requested_incompatible_qos_status().total_count() &gt; 0;</div>
+<div class="line">}, <span class="stringliteral">"Both endpoints did not report incompatible QoS"</span>);</div>
+<div class="line">howto::require(writer.publication_matched_status().current_count() == 0, <span class="stringliteral">"Incompatible writer matched"</span>);</div>
+</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="dds_tutorial_qos_policy_counts"></a>
+매칭을 막은 QoS 정책 확인</h1>
+<p><span class="tt">RequestedIncompatibleQosStatus</span>를 한 번 조회합니다. 이 예제의 마지막 불일치 정책 ID는 <span class="tt">Reliability</span>의 ID입니다. <span class="tt">policies()</span>에서 발생 횟수가 0보다 큰 항목을 출력하고 해당 ID에 정책 이름을 표시합니다.</p>
+<div class="fragment"><div class="line"><span class="keyword">const</span> <span class="keyword">auto</span> status = reader.requested_incompatible_qos_status();</div>
+<div class="line"><span class="keyword">const</span> <span class="keyword">auto</span> reliability_id = <a class="code hl_class" href="classdds_1_1core_1_1policy_1_1policy__id.html">dds::core::policy::policy_id&lt;Reliability&gt;::value</a>;</div>
+<div class="line"><span class="keyword">const</span> <span class="keywordtype">char</span>* name = <span class="stringliteral">"Reliability"</span>;</div>
+<div class="line">howto::require(status.last_policy_id() == reliability_id, <span class="stringliteral">"Expected a Reliability mismatch"</span>);</div>
+<div class="line">std::cout &lt;&lt; <span class="stringliteral">"Latest incompatible policy: "</span> &lt;&lt; name &lt;&lt; <span class="charliteral">'\n'</span>;</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">bool</span> counted_reliability = <span class="keyword">false</span>;</div>
+<div class="line"><span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; policy : status.policies())</div>
+<div class="line">{</div>
+<div class="line">    <span class="keywordflow">if</span> (policy.count() == 0)</div>
+<div class="line">        <span class="keywordflow">continue</span>;</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">if</span> (policy.policy_id() == reliability_id)</div>
+<div class="line">    {</div>
+<div class="line">        std::cout &lt;&lt; name &lt;&lt; <span class="stringliteral">": "</span> &lt;&lt; policy.count() &lt;&lt; <span class="charliteral">'\n'</span>;</div>
+<div class="line">        counted_reliability = <span class="keyword">true</span>;</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">else</span></div>
+<div class="line">    {</div>
+<div class="line">        std::cout &lt;&lt; <span class="stringliteral">"Policy "</span> &lt;&lt; policy.policy_id() &lt;&lt; <span class="stringliteral">": "</span> &lt;&lt; policy.count() &lt;&lt; <span class="charliteral">'\n'</span>;</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+<div class="line">howto::require(counted_reliability, <span class="stringliteral">"Reliability did not appear in the policy counts"</span>);</div>
+</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="dds_tutorial_qos_late_joiner"></a>
+DataReader 참가 전에 발행된 sample 받기</h1>
+<p>양쪽 endpoint에 transient-local Durability와 reliable 전달을 설정하세요. DataWriter를 유지하면 history에 sample이 남습니다. 쓰기 이후에 만든 DataReader는 discovery 뒤에 그 sample을 받습니다.</p>
+<div class="image">
+<object data="dds-diagram-late-reader-ko.svg" style="pointer-events: none;" type="image/svg+xml"></object>
+<div class="caption">
+늦게 참가한 Reader가 보관된 샘플을 수신</div></div>
+ <div class="fragment"><div class="line"><span class="keyword">const</span> <span class="keyword">auto</span> reliable = Reliability::Reliable(Duration::from_millisecs(200));</div>
+<div class="line"><span class="keyword">auto</span> writer_qos = publisher.default_writer_qos();</div>
+<div class="line">writer_qos &lt;&lt; Durability::TransientLocal() &lt;&lt; reliable &lt;&lt; History::KeepLast(4);</div>
+<div class="line"><a class="code hl_class" href="classdds_1_1pub_1_1_data_writer.html">dds::pub::DataWriter&lt;T&gt;</a> writer(publisher, topic, writer_qos);</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">char</span> text[] = <span class="stringliteral">"before the reader"</span>;</div>
+<div class="line">Hello::Msg sample{};</div>
+<div class="line">sample.userId = 7;</div>
+<div class="line">sample.message = text;</div>
+<div class="line">writer.write(sample);</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">auto</span> reader_qos = subscriber.default_datareader_qos();</div>
+<div class="line">reader_qos &lt;&lt; Durability::TransientLocal() &lt;&lt; reliable &lt;&lt; History::KeepLast(4);</div>
+<div class="line"><a class="code hl_class" href="classdds_1_1sub_1_1_data_reader.html">dds::sub::DataReader&lt;T&gt;</a> reader(subscriber, topic, reader_qos);</div>
+<div class="line">howto::wait_for_readers(writer, 1);</div>
+<div class="line">howto::wait_until([&amp;reader, &amp;sample]() -&gt; <span class="keywordtype">bool</span> {</div>
+<div class="line">    <span class="keyword">const</span> <span class="keyword">auto</span> samples = reader.take();</div>
+<div class="line">    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; received : samples)</div>
+<div class="line">        <span class="keywordflow">if</span> (received.info().valid() and received.data().userId == sample.userId)</div>
+<div class="line">            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line">}, <span class="stringliteral">"The late-joining reader did not receive the retained sample"</span>);</div>
+</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="dds_tutorial_qos_keep_last"></a>
+key별 최근 sample 두 개 유지</h1>
+<p>Reader를 생성하기 전에 <span class="tt">History::KeepLast(2)</span>를 설정합니다. 한 key로 값 세 개를 보내고 <span class="tt">read()</span>로 마지막 두 개가 남았는지 확인합니다. Writer는 별도로 sample 세 개를 보관합니다.</p>
+<div class="image">
+<object data="dds-diagram-history-depth-ko.svg" style="pointer-events: none;" type="image/svg+xml"></object>
+<div class="caption">
+KeepLast(2)가 key별 최신 값 두 개를 보관</div></div>
+ <div class="fragment"><div class="line"><span class="keyword">const</span> <span class="keyword">auto</span> reliable = Reliability::Reliable(Duration::from_millisecs(200));</div>
+<div class="line"><span class="keyword">auto</span> writer_qos = publisher.default_writer_qos();</div>
+<div class="line">writer_qos &lt;&lt; reliable &lt;&lt; History::KeepLast(3);</div>
+<div class="line"><span class="keyword">auto</span> reader_qos = subscriber.default_datareader_qos();</div>
+<div class="line">reader_qos &lt;&lt; reliable &lt;&lt; History::KeepLast(2);</div>
+<div class="line"><a class="code hl_class" href="classdds_1_1pub_1_1_data_writer.html">dds::pub::DataWriter&lt;T&gt;</a> writer(publisher, topic, writer_qos);</div>
+<div class="line"><a class="code hl_class" href="classdds_1_1sub_1_1_data_reader.html">dds::sub::DataReader&lt;T&gt;</a> reader(subscriber, topic, reader_qos);</div>
+<div class="line">howto::wait_for_readers(writer, 1);</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">char</span> first[] = <span class="stringliteral">"first"</span>;</div>
+<div class="line"><span class="keywordtype">char</span> second[] = <span class="stringliteral">"second"</span>;</div>
+<div class="line"><span class="keywordtype">char</span> third[] = <span class="stringliteral">"third"</span>;</div>
+<div class="line">Hello::Msg sample{};</div>
+<div class="line">sample.userId = 7;</div>
+<div class="line"><span class="keywordflow">for</span> (<span class="keyword">auto</span>* message : {first, second, third})</div>
+<div class="line">{</div>
+<div class="line">    sample.message = message;</div>
+<div class="line">    writer.write(sample);</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line">howto::wait_until([&amp;reader, &amp;second, &amp;third]() -&gt; <span class="keywordtype">bool</span> {</div>
+<div class="line">    <span class="keyword">const</span> <span class="keyword">auto</span> samples = reader.read();</div>
+<div class="line">    <span class="keywordtype">bool</span> received_second = <span class="keyword">false</span>;</div>
+<div class="line">    <span class="keywordtype">bool</span> received_third = <span class="keyword">false</span>;</div>
+<div class="line">    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; received : samples)</div>
+<div class="line">    {</div>
+<div class="line">        <span class="keywordflow">if</span> (not received.info().valid())</div>
+<div class="line">            <span class="keywordflow">continue</span>;</div>
+<div class="line"> </div>
+<div class="line">        received_second = received_second or std::strcmp(received.data().message, second) == 0;</div>
+<div class="line">        received_third = received_third or std::strcmp(received.data().message, third) == 0;</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">if</span> (received_third)</div>
+<div class="line">        howto::require(samples.length() == 2 and received_second, <span class="stringliteral">"The reader did not retain the last two samples"</span>);</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">return</span> received_third;</div>
+<div class="line">}, <span class="stringliteral">"The last sample did not arrive"</span>);</div>
+</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="dds_tutorial_qos_history_limits"></a>
+두 key에 걸쳐 history 제한</h1>
+<p>Reader에 <span class="tt">History::KeepLast(2)</span>와 <span class="tt">ResourceLimits(4, 2, 2)</span>를 설정합니다. 인자는 전체 샘플 수, instance 수, instance별 샘플 수를 제한합니다.</p>
+<p>두 key에 각각 값을 세 개씩 씁니다. Reader는 각 key의 마지막 두 값이 남았는지 확인합니다.</p>
+<div class="image">
+<object data="dds-diagram-history-resource-limits-ko.svg" style="pointer-events: none;" type="image/svg+xml"></object>
+<div class="caption">
+두 key에 적용한 ResourceLimits</div></div>
+ <div class="fragment"><div class="line"><span class="keyword">auto</span> reader_qos = subscriber.default_datareader_qos();</div>
+<div class="line">reader_qos &lt;&lt; reliable &lt;&lt; History::KeepLast(2) &lt;&lt; <a class="code hl_typedef" href="group__dds__qos.html#gabeeea78bb9eaac8652578f9addc33372">ResourceLimits</a>(4, 2, 2);</div>
+<div class="line"><a class="code hl_class" href="classdds_1_1sub_1_1_data_reader.html">dds::sub::DataReader&lt;T&gt;</a> reader(subscriber, topic, reader_qos);</div>
+<div class="line">howto::wait_for_readers(writer, 1);</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">char</span> first[] = <span class="stringliteral">"first"</span>;</div>
+<div class="line"><span class="keywordtype">char</span> second[] = <span class="stringliteral">"second"</span>;</div>
+<div class="line"><span class="keywordtype">char</span> third[] = <span class="stringliteral">"third"</span>;</div>
+<div class="line"><span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> key : { 7, 8 })</div>
+<div class="line">{</div>
+<div class="line">    Hello::Msg sample{};</div>
+<div class="line">    sample.userId = key;</div>
+<div class="line">    <span class="keywordflow">for</span> (<span class="keyword">auto</span>* value : { first, second, third })</div>
+<div class="line">    {</div>
+<div class="line">        sample.message = value;</div>
+<div class="line">        writer.write(sample);</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line">howto::wait_until([&amp;reader, &amp;second, &amp;third]() -&gt; <span class="keywordtype">bool</span> {</div>
+<div class="line">    <span class="keyword">const</span> <span class="keyword">auto</span> batch = reader.read();</div>
+<div class="line">    <span class="keywordflow">if</span> (batch.length() != 4)</div>
+<div class="line">        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"> </div>
+<div class="line">    std::array&lt;bool, 2&gt; has_second{};</div>
+<div class="line">    std::array&lt;bool, 2&gt; has_third{};</div>
+<div class="line">    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; sample : batch)</div>
+<div class="line">    {</div>
+<div class="line">        howto::require(sample.info().valid(), <span class="stringliteral">"Expected a valid sample"</span>);</div>
+<div class="line">        <span class="keyword">const</span> <span class="keyword">auto</span>&amp; data = sample.data();</div>
+<div class="line">        howto::require(data.userId == 7 or data.userId == 8, <span class="stringliteral">"Unexpected key"</span>);</div>
+<div class="line">        <span class="keyword">const</span> <span class="keyword">auto</span> index = data.userId - 7;</div>
+<div class="line">        has_second[index] = has_second[index] or std::strcmp(data.message, second) == 0;</div>
+<div class="line">        has_third[index] = has_third[index] or std::strcmp(data.message, third) == 0;</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">return</span> has_second[0] and has_second[1] and has_third[0] and has_third[1];</div>
+<div class="line">}, <span class="stringliteral">"Expected the last two samples for each key"</span>);</div>
+</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="dds_tutorial_qos_exclusive_writers"></a>
+Exclusive Ownership으로 key별 Writer 선택</h1>
+<p>두 Writer와 Reader에 <span class="tt">EXCLUSIVE</span> ownership을 설정합니다. 두 Writer의 <span class="tt">OwnershipStrength</span> 값은 다르게 설정합니다.</p>
+<p>strength가 높은 Writer가 key 7을 먼저 씁니다. 낮은 Writer가 이어서 key 7과 별도 key 8을 씁니다. Reader는 key 7은 높은 Writer에서, key 8은 낮은 Writer에서 받았는지 확인합니다.</p>
+<div class="image">
+<object data="dds-diagram-exclusive-owners-ko.svg" style="pointer-events: none;" type="image/svg+xml"></object>
+<div class="caption">
+key별 Exclusive Ownership 선택</div></div>
+ <div class="fragment"><div class="line"><span class="keyword">auto</span> weaker_qos = publisher.default_writer_qos();</div>
+<div class="line">weaker_qos &lt;&lt; reliable &lt;&lt; Ownership::Exclusive() &lt;&lt; <a class="code hl_typedef" href="group__dds__qos.html#gac074ac347c0a510da871ae3949551efa">OwnershipStrength</a>(10);</div>
+<div class="line"><span class="keyword">auto</span> stronger_qos = weaker_qos;</div>
+<div class="line">stronger_qos &lt;&lt; <a class="code hl_typedef" href="group__dds__qos.html#gac074ac347c0a510da871ae3949551efa">OwnershipStrength</a>(20);</div>
+<div class="line"><span class="keyword">auto</span> reader_qos = subscriber.default_datareader_qos();</div>
+<div class="line">reader_qos &lt;&lt; reliable &lt;&lt; Ownership::Exclusive();</div>
+<div class="line"><a class="code hl_class" href="classdds_1_1pub_1_1_data_writer.html">dds::pub::DataWriter&lt;T&gt;</a> weaker(publisher, topic, weaker_qos);</div>
+<div class="line"><a class="code hl_class" href="classdds_1_1pub_1_1_data_writer.html">dds::pub::DataWriter&lt;T&gt;</a> stronger(publisher, topic, stronger_qos);</div>
+<div class="line"><a class="code hl_class" href="classdds_1_1sub_1_1_data_reader.html">dds::sub::DataReader&lt;T&gt;</a> reader(subscriber, topic, reader_qos);</div>
+</div><!-- fragment --><div class="fragment"><div class="line"><span class="keywordtype">char</span> strong_value[] = <span class="stringliteral">"stronger writer"</span>;</div>
+<div class="line"><span class="keywordtype">char</span> weak_value[] = <span class="stringliteral">"weaker writer"</span>;</div>
+<div class="line">Hello::Msg data{};</div>
+<div class="line">data.userId = 7;</div>
+<div class="line">data.message = strong_value;</div>
+<div class="line">stronger.write(data);</div>
+<div class="line">howto::wait_until([&amp;reader, &amp;strong_value]() -&gt; <span class="keywordtype">bool</span> {</div>
+<div class="line">    <span class="keyword">const</span> <span class="keyword">auto</span> batch = reader.take();</div>
+<div class="line">    <span class="keywordflow">return</span> batch.length() == 1 and batch.begin()-&gt;info().valid()</div>
+<div class="line">        and batch.begin()-&gt;data().userId == 7 and std::strcmp(batch.begin()-&gt;data().message, strong_value) == 0;</div>
+<div class="line">}, <span class="stringliteral">"The stronger writer's key 7 sample did not arrive"</span>);</div>
+<div class="line"> </div>
+<div class="line">data.message = weak_value;</div>
+<div class="line">weaker.write(data);</div>
+<div class="line">data.userId = 8;</div>
+<div class="line">weaker.write(data);</div>
+<div class="line">howto::wait_until([&amp;reader, &amp;weak_value]() -&gt; <span class="keywordtype">bool</span> {</div>
+<div class="line">    <span class="keyword">const</span> <span class="keyword">auto</span> batch = reader.take();</div>
+<div class="line">    <span class="keywordtype">bool</span> has_key_8 = <span class="keyword">false</span>;</div>
+<div class="line">    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; sample : batch)</div>
+<div class="line">    {</div>
+<div class="line">        howto::require(sample.info().valid(), <span class="stringliteral">"Expected a valid sample"</span>);</div>
+<div class="line">        howto::require(sample.data().userId == 8, <span class="stringliteral">"The weaker writer updated the owned key"</span>);</div>
+<div class="line">        has_key_8 = has_key_8 or std::strcmp(sample.data().message, weak_value) == 0;</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">return</span> has_key_8;</div>
+<div class="line">}, <span class="stringliteral">"The weaker writer's independent key 8 sample did not arrive"</span>);</div>
+</div><!-- fragment --><dl class="section see"><dt>참고</dt><dd><a class="el" href="group__dds__qos.html" title="Quality of Service">Quality of Service</a></dd></dl>
+<h1 class="doxsection"><a class="anchor" id="dds_tutorial_src_delivery"></a>
+QoS에 따른 전달 동작</h1>
+<p>Reliability 정책 불일치를 확인하고 transient-local Durability로 보관된 데이터를 받습니다. DDS 확인 응답도 기다립니다.</p>
+<p>아래 명령으로 프로그램을 빌드하세요. 실행에 성공하면 <span class="tt">QoS delivery examples passed</span>를 출력합니다.</p>
+<div class="fragment"><div class="line">cmake --build . --target example_cpp_howto_delivery</div>
+</div><!-- fragment --><details class="dds-reference-details"><summary>완성 코드</summary><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;cstring&gt;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">#include "demo.hpp"</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">namespace</span></div>
+<div class="line">{</div>
+<div class="line"><span class="keyword">using </span><a class="code hl_class" href="classdds_1_1core_1_1_duration.html">dds::core::Duration</a>;</div>
+<div class="line"><span class="keyword">using </span><a class="code hl_typedef" href="group__dds__qos.html#gaa70a30964093541160b34558877d3438">dds::core::policy::Durability</a>;</div>
+<div class="line"><span class="keyword">using </span><a class="code hl_typedef" href="group__dds__qos.html#gac131ef99ba345cff7ae780d5d30ff130">dds::core::policy::History</a>;</div>
+<div class="line"><span class="keyword">using </span><a class="code hl_typedef" href="group__dds__qos.html#gae1ee89c57fc5fa311721b4511e559783">dds::core::policy::Reliability</a>;</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> report_incompatible_reliability()</div>
+<div class="line">{</div>
+<div class="line">    <a class="code hl_typedef" href="group__dds__domain.html#gab1bd86ffa9ac0869166a446dd0120f3d">dds::domain::DomainParticipant</a> participant(96);</div>
+<div class="line">    <a class="code hl_class" href="classdds_1_1topic_1_1_topic.html">dds::topic::Topic&lt;T&gt;</a> topic(participant, <span class="stringliteral">"HowToIncompatible"</span>);</div>
+<div class="line">    <a class="code hl_typedef" href="group__dds__publication.html#gada2751fd8ce0e148138e6950f7ef7d37">dds::pub::Publisher</a> publisher(participant);</div>
+<div class="line">    <a class="code hl_typedef" href="group__dds__subscription.html#ga9a6d78b2a23f864211da5bd2edf28750">dds::sub::Subscriber</a> subscriber(participant);</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// [incompatible_reliability]</span></div>
+<div class="line">    <span class="keyword">auto</span> writer_qos = publisher.default_writer_qos();</div>
+<div class="line">    writer_qos &lt;&lt; Reliability::BestEffort();</div>
+<div class="line">    <span class="keyword">auto</span> reader_qos = subscriber.default_datareader_qos();</div>
+<div class="line">    reader_qos &lt;&lt; Reliability::Reliable(Duration::from_millisecs(200));</div>
+<div class="line">    <a class="code hl_class" href="classdds_1_1pub_1_1_data_writer.html">dds::pub::DataWriter&lt;T&gt;</a> writer(publisher, topic, writer_qos);</div>
+<div class="line">    <a class="code hl_class" href="classdds_1_1sub_1_1_data_reader.html">dds::sub::DataReader&lt;T&gt;</a> reader(subscriber, topic, reader_qos);</div>
+<div class="line"> </div>
+<div class="line">    howto::wait_until([&amp;writer, &amp;reader]() -&gt; <span class="keywordtype">bool</span> {</div>
+<div class="line">        <span class="keywordflow">return</span> writer.offered_incompatible_qos_staus().total_count() &gt; 0</div>
+<div class="line">            and reader.requested_incompatible_qos_status().total_count() &gt; 0;</div>
+<div class="line">    }, <span class="stringliteral">"Both endpoints did not report incompatible QoS"</span>);</div>
+<div class="line">    howto::require(writer.publication_matched_status().current_count() == 0, <span class="stringliteral">"Incompatible writer matched"</span>);</div>
+<div class="line">    <span class="comment">// [incompatible_reliability]</span></div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// [incompatible_qos_counts]</span></div>
+<div class="line">    <span class="keyword">const</span> <span class="keyword">auto</span> status = reader.requested_incompatible_qos_status();</div>
+<div class="line">    <span class="keyword">const</span> <span class="keyword">auto</span> reliability_id = <a class="code hl_class" href="classdds_1_1core_1_1policy_1_1policy__id.html">dds::core::policy::policy_id&lt;Reliability&gt;::value</a>;</div>
+<div class="line">    <span class="keyword">const</span> <span class="keywordtype">char</span>* name = <span class="stringliteral">"Reliability"</span>;</div>
+<div class="line">    howto::require(status.last_policy_id() == reliability_id, <span class="stringliteral">"Expected a Reliability mismatch"</span>);</div>
+<div class="line">    std::cout &lt;&lt; <span class="stringliteral">"Latest incompatible policy: "</span> &lt;&lt; name &lt;&lt; <span class="charliteral">'\n'</span>;</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordtype">bool</span> counted_reliability = <span class="keyword">false</span>;</div>
+<div class="line">    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; policy : status.policies())</div>
+<div class="line">    {</div>
+<div class="line">        <span class="keywordflow">if</span> (policy.count() == 0)</div>
+<div class="line">            <span class="keywordflow">continue</span>;</div>
+<div class="line"> </div>
+<div class="line">        <span class="keywordflow">if</span> (policy.policy_id() == reliability_id)</div>
+<div class="line">        {</div>
+<div class="line">            std::cout &lt;&lt; name &lt;&lt; <span class="stringliteral">": "</span> &lt;&lt; policy.count() &lt;&lt; <span class="charliteral">'\n'</span>;</div>
+<div class="line">            counted_reliability = <span class="keyword">true</span>;</div>
+<div class="line">        }</div>
+<div class="line">        <span class="keywordflow">else</span></div>
+<div class="line">        {</div>
+<div class="line">            std::cout &lt;&lt; <span class="stringliteral">"Policy "</span> &lt;&lt; policy.policy_id() &lt;&lt; <span class="stringliteral">": "</span> &lt;&lt; policy.count() &lt;&lt; <span class="charliteral">'\n'</span>;</div>
+<div class="line">        }</div>
+<div class="line">    }</div>
+<div class="line">    howto::require(counted_reliability, <span class="stringliteral">"Reliability did not appear in the policy counts"</span>);</div>
+<div class="line">    <span class="comment">// [incompatible_qos_counts]</span></div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> receive_sample_written_before_subscription()</div>
+<div class="line">{</div>
+<div class="line">    <a class="code hl_typedef" href="group__dds__domain.html#gab1bd86ffa9ac0869166a446dd0120f3d">dds::domain::DomainParticipant</a> participant(97);</div>
+<div class="line">    <a class="code hl_class" href="classdds_1_1topic_1_1_topic.html">dds::topic::Topic&lt;T&gt;</a> topic(participant, <span class="stringliteral">"HowToDurability"</span>);</div>
+<div class="line">    <a class="code hl_typedef" href="group__dds__publication.html#gada2751fd8ce0e148138e6950f7ef7d37">dds::pub::Publisher</a> publisher(participant);</div>
+<div class="line">    <a class="code hl_typedef" href="group__dds__subscription.html#ga9a6d78b2a23f864211da5bd2edf28750">dds::sub::Subscriber</a> subscriber(participant);</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// [transient_local]</span></div>
+<div class="line">    <span class="keyword">const</span> <span class="keyword">auto</span> reliable = Reliability::Reliable(Duration::from_millisecs(200));</div>
+<div class="line">    <span class="keyword">auto</span> writer_qos = publisher.default_writer_qos();</div>
+<div class="line">    writer_qos &lt;&lt; Durability::TransientLocal() &lt;&lt; reliable &lt;&lt; History::KeepLast(4);</div>
+<div class="line">    <a class="code hl_class" href="classdds_1_1pub_1_1_data_writer.html">dds::pub::DataWriter&lt;T&gt;</a> writer(publisher, topic, writer_qos);</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordtype">char</span> text[] = <span class="stringliteral">"before the reader"</span>;</div>
+<div class="line">    Hello::Msg sample{};</div>
+<div class="line">    sample.userId = 7;</div>
+<div class="line">    sample.message = text;</div>
+<div class="line">    writer.write(sample);</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">auto</span> reader_qos = subscriber.default_datareader_qos();</div>
+<div class="line">    reader_qos &lt;&lt; Durability::TransientLocal() &lt;&lt; reliable &lt;&lt; History::KeepLast(4);</div>
+<div class="line">    <a class="code hl_class" href="classdds_1_1sub_1_1_data_reader.html">dds::sub::DataReader&lt;T&gt;</a> reader(subscriber, topic, reader_qos);</div>
+<div class="line">    howto::wait_for_readers(writer, 1);</div>
+<div class="line">    howto::wait_until([&amp;reader, &amp;sample]() -&gt; <span class="keywordtype">bool</span> {</div>
+<div class="line">        <span class="keyword">const</span> <span class="keyword">auto</span> samples = reader.take();</div>
+<div class="line">        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; received : samples)</div>
+<div class="line">            <span class="keywordflow">if</span> (received.info().valid() and received.data().userId == sample.userId)</div>
+<div class="line">                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"> </div>
+<div class="line">        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line">    }, <span class="stringliteral">"The late-joining reader did not receive the retained sample"</span>);</div>
+<div class="line">    <span class="comment">// [transient_local]</span></div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// [wait_for_acknowledgments]</span></div>
+<div class="line">    writer.wait_for_acknowledgments(Duration::from_millisecs(500));</div>
+<div class="line">    <span class="comment">// [wait_for_acknowledgments]</span></div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> retain_recent_samples_per_key()</div>
+<div class="line">{</div>
+<div class="line">    <a class="code hl_typedef" href="group__dds__domain.html#gab1bd86ffa9ac0869166a446dd0120f3d">dds::domain::DomainParticipant</a> participant(98);</div>
+<div class="line">    <a class="code hl_class" href="classdds_1_1topic_1_1_topic.html">dds::topic::Topic&lt;T&gt;</a> topic(participant, <span class="stringliteral">"HowToHistory"</span>);</div>
+<div class="line">    <a class="code hl_typedef" href="group__dds__publication.html#gada2751fd8ce0e148138e6950f7ef7d37">dds::pub::Publisher</a> publisher(participant);</div>
+<div class="line">    <a class="code hl_typedef" href="group__dds__subscription.html#ga9a6d78b2a23f864211da5bd2edf28750">dds::sub::Subscriber</a> subscriber(participant);</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// [keep_last_per_key]</span></div>
+<div class="line">    <span class="keyword">const</span> <span class="keyword">auto</span> reliable = Reliability::Reliable(Duration::from_millisecs(200));</div>
+<div class="line">    <span class="keyword">auto</span> writer_qos = publisher.default_writer_qos();</div>
+<div class="line">    writer_qos &lt;&lt; reliable &lt;&lt; History::KeepLast(3);</div>
+<div class="line">    <span class="keyword">auto</span> reader_qos = subscriber.default_datareader_qos();</div>
+<div class="line">    reader_qos &lt;&lt; reliable &lt;&lt; History::KeepLast(2);</div>
+<div class="line">    <a class="code hl_class" href="classdds_1_1pub_1_1_data_writer.html">dds::pub::DataWriter&lt;T&gt;</a> writer(publisher, topic, writer_qos);</div>
+<div class="line">    <a class="code hl_class" href="classdds_1_1sub_1_1_data_reader.html">dds::sub::DataReader&lt;T&gt;</a> reader(subscriber, topic, reader_qos);</div>
+<div class="line">    howto::wait_for_readers(writer, 1);</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordtype">char</span> first[] = <span class="stringliteral">"first"</span>;</div>
+<div class="line">    <span class="keywordtype">char</span> second[] = <span class="stringliteral">"second"</span>;</div>
+<div class="line">    <span class="keywordtype">char</span> third[] = <span class="stringliteral">"third"</span>;</div>
+<div class="line">    Hello::Msg sample{};</div>
+<div class="line">    sample.userId = 7;</div>
+<div class="line">    <span class="keywordflow">for</span> (<span class="keyword">auto</span>* message : {first, second, third})</div>
+<div class="line">    {</div>
+<div class="line">        sample.message = message;</div>
+<div class="line">        writer.write(sample);</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    howto::wait_until([&amp;reader, &amp;second, &amp;third]() -&gt; <span class="keywordtype">bool</span> {</div>
+<div class="line">        <span class="keyword">const</span> <span class="keyword">auto</span> samples = reader.read();</div>
+<div class="line">        <span class="keywordtype">bool</span> received_second = <span class="keyword">false</span>;</div>
+<div class="line">        <span class="keywordtype">bool</span> received_third = <span class="keyword">false</span>;</div>
+<div class="line">        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; received : samples)</div>
+<div class="line">        {</div>
+<div class="line">            <span class="keywordflow">if</span> (not received.info().valid())</div>
+<div class="line">                <span class="keywordflow">continue</span>;</div>
+<div class="line"> </div>
+<div class="line">            received_second = received_second or std::strcmp(received.data().message, second) == 0;</div>
+<div class="line">            received_third = received_third or std::strcmp(received.data().message, third) == 0;</div>
+<div class="line">        }</div>
+<div class="line">        <span class="keywordflow">if</span> (received_third)</div>
+<div class="line">            howto::require(samples.length() == 2 and received_second, <span class="stringliteral">"The reader did not retain the last two samples"</span>);</div>
+<div class="line"> </div>
+<div class="line">        <span class="keywordflow">return</span> received_third;</div>
+<div class="line">    }, <span class="stringliteral">"The last sample did not arrive"</span>);</div>
+<div class="line">    <span class="comment">// [keep_last_per_key]</span></div>
+<div class="line">}</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">int</span> main()</div>
+<div class="line">{</div>
+<div class="line">    <span class="keywordflow">return</span> howto::run([]() -&gt; <span class="keywordtype">void</span> {</div>
+<div class="line">        report_incompatible_reliability();</div>
+<div class="line">        receive_sample_written_before_subscription();</div>
+<div class="line">        retain_recent_samples_per_key();</div>
+<div class="line">    }, <span class="stringliteral">"QoS delivery examples passed"</span>);</div>
+<div class="line">}</div>
+<div class="ttc" id="aclassdds_1_1core_1_1_duration_html"><div class="ttname"><a href="classdds_1_1core_1_1_duration.html">dds::core::Duration</a></div><div class="ttdoc">초와 나노초로 간격을 나타냅니다.</div><div class="ttdef"><b>정의</b> Duration.hpp:41</div></div>
+<div class="ttc" id="aclassdds_1_1core_1_1policy_1_1policy__id_html"><div class="ttname"><a href="classdds_1_1core_1_1policy_1_1policy__id.html">dds::core::policy::policy_id</a></div><div class="ttdef"><b>정의</b> CorePolicy.hpp:56</div></div>
+<div class="ttc" id="aclassdds_1_1pub_1_1_data_writer_html"><div class="ttname"><a href="classdds_1_1pub_1_1_data_writer.html">dds::pub::DataWriter&lt;T&gt;</a></div><div class="ttdoc">데이터 타입이 지정된 Topic에 sample을 쓰고 instance를 관리합니다.</div><div class="ttdef"><b>정의</b> DataWriter.hpp:73</div></div>
+<div class="ttc" id="aclassdds_1_1sub_1_1_data_reader_html"><div class="ttname"><a href="classdds_1_1sub_1_1_data_reader.html">dds::sub::DataReader&lt;T&gt;</a></div><div class="ttdoc">Topic에서 지정된 타입의 sample을 수신합니다.</div><div class="ttdef"><b>정의</b> TDataReader.hpp:76</div></div>
+<div class="ttc" id="aclassdds_1_1topic_1_1_topic_html"><div class="ttname"><a href="classdds_1_1topic_1_1_topic.html">dds::topic::Topic&lt;T&gt;</a></div><div class="ttdoc">domain에서 Topic 이름을 DDS 데이터 타입과 연결합니다.</div><div class="ttdef"><b>정의</b> TTopic.hpp:54</div></div>
+<div class="ttc" id="agroup__dds__domain_html_gab1bd86ffa9ac0869166a446dd0120f3d"><div class="ttname"><a href="group__dds__domain.html#gab1bd86ffa9ac0869166a446dd0120f3d">dds::domain::DomainParticipant</a></div><div class="ttdeci">::dds::domain::detail::DomainParticipant DomainParticipant</div><div class="ttdoc">DDS domain에 가입하고 관리하는 데 사용되는 DomainParticipant handle</div><div class="ttdef"><b>정의</b> DomainParticipant.hpp:30</div></div>
+<div class="ttc" id="agroup__dds__publication_html_gada2751fd8ce0e148138e6950f7ef7d37"><div class="ttname"><a href="group__dds__publication.html#gada2751fd8ce0e148138e6950f7ef7d37">dds::pub::Publisher</a></div><div class="ttdeci">dds::pub::detail::Publisher Publisher</div><div class="ttdoc">DataWriter를 소유하고 기본값을 설정하는 데 사용되는 Publisher handle</div><div class="ttdef"><b>정의</b> Publisher.hpp:31</div></div>
+<div class="ttc" id="agroup__dds__qos_html_gaa70a30964093541160b34558877d3438"><div class="ttname"><a href="group__dds__qos.html#gaa70a30964093541160b34558877d3438">dds::core::policy::Durability</a></div><div class="ttdeci">dds::core::policy::detail::Durability Durability</div><div class="ttdoc">DataReader가 일치하기 전에 작성된 sample이 해당 DataReader에 도달할 수 있는지 여부를 제어합니다.</div><div class="ttdef"><b>정의</b> CorePolicy.hpp:91</div></div>
+<div class="ttc" id="agroup__dds__qos_html_gac131ef99ba345cff7ae780d5d30ff130"><div class="ttname"><a href="group__dds__qos.html#gac131ef99ba345cff7ae780d5d30ff130">dds::core::policy::History</a></div><div class="ttdeci">dds::core::policy::detail::History History</div><div class="ttdoc">각 instance에 대한 sample 보유 제어</div><div class="ttdef"><b>정의</b> CorePolicy.hpp:115</div></div>
+<div class="ttc" id="agroup__dds__qos_html_gae1ee89c57fc5fa311721b4511e559783"><div class="ttname"><a href="group__dds__qos.html#gae1ee89c57fc5fa311721b4511e559783">dds::core::policy::Reliability</a></div><div class="ttdeci">dds::core::policy::detail::Reliability Reliability</div><div class="ttdoc">DataWriter가 제공하거나 DataReader가 요청하는 전달 Reliability를 제어합니다.</div><div class="ttdef"><b>정의</b> CorePolicy.hpp:204</div></div>
+<div class="ttc" id="agroup__dds__subscription_html_ga9a6d78b2a23f864211da5bd2edf28750"><div class="ttname"><a href="group__dds__subscription.html#ga9a6d78b2a23f864211da5bd2edf28750">dds::sub::Subscriber</a></div><div class="ttdeci">dds::sub::detail::Subscriber Subscriber</div><div class="ttdoc">DataReader를 소유하고 기본값을 설정하는 데 사용되는 Subscriber handle</div><div class="ttdef"><b>정의</b> Subscriber.hpp:31</div></div>
+</div></details><!-- fragment --><h1 class="doxsection"><a class="anchor" id="dds_tutorial_src_delivery_limits"></a>
+보관 한도, Publisher acknowledgment, Ownership</h1>
+<p>key별 보관 범위, Publisher의 acknowledgment 대기, 두 key의 Exclusive Ownership을 확인합니다.</p>
+<p>아래 명령으로 프로그램을 빌드하세요. 실행에 성공하면 <span class="tt">Delivery limits and ownership examples passed</span>를 출력합니다.</p>
+<div class="fragment"><div class="line">cmake --build . --target example_cpp_howto_delivery_limits</div>
+</div><!-- fragment --><details class="dds-reference-details"><summary>완성 코드</summary><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;array&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;cstring&gt;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">#include "demo.hpp"</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">namespace</span></div>
+<div class="line">{</div>
+<div class="line"><span class="keyword">using </span><a class="code hl_class" href="classdds_1_1core_1_1_duration.html">dds::core::Duration</a>;</div>
+<div class="line"><span class="keyword">using </span><a class="code hl_typedef" href="group__dds__qos.html#gac131ef99ba345cff7ae780d5d30ff130">dds::core::policy::History</a>;</div>
+<div class="line"><span class="keyword">using </span><a class="code hl_typedef" href="group__dds__qos.html#ga2b55aa93f052e74de626f42665c5785f">dds::core::policy::Ownership</a>;</div>
+<div class="line"><span class="keyword">using </span><a class="code hl_typedef" href="group__dds__qos.html#gac074ac347c0a510da871ae3949551efa">dds::core::policy::OwnershipStrength</a>;</div>
+<div class="line"><span class="keyword">using </span><a class="code hl_typedef" href="group__dds__qos.html#gae1ee89c57fc5fa311721b4511e559783">dds::core::policy::Reliability</a>;</div>
+<div class="line"><span class="keyword">using </span><a class="code hl_typedef" href="group__dds__qos.html#gabeeea78bb9eaac8652578f9addc33372">dds::core::policy::ResourceLimits</a>;</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">const</span> <span class="keyword">auto</span> reliable = Reliability::Reliable(Duration::from_millisecs(200));</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> keep_two_samples_for_each_key()</div>
+<div class="line">{</div>
+<div class="line">    <a class="code hl_typedef" href="group__dds__domain.html#gab1bd86ffa9ac0869166a446dd0120f3d">dds::domain::DomainParticipant</a> participant(102);</div>
+<div class="line">    <a class="code hl_class" href="classdds_1_1topic_1_1_topic.html">dds::topic::Topic&lt;T&gt;</a> topic(participant, <span class="stringliteral">"HowToHistoryLimits"</span>);</div>
+<div class="line">    <a class="code hl_typedef" href="group__dds__publication.html#gada2751fd8ce0e148138e6950f7ef7d37">dds::pub::Publisher</a> publisher(participant);</div>
+<div class="line">    <a class="code hl_typedef" href="group__dds__subscription.html#ga9a6d78b2a23f864211da5bd2edf28750">dds::sub::Subscriber</a> subscriber(participant);</div>
+<div class="line">    <span class="keyword">auto</span> writer_qos = publisher.default_writer_qos();</div>
+<div class="line">    writer_qos &lt;&lt; reliable &lt;&lt; History::KeepLast(3);</div>
+<div class="line">    <a class="code hl_class" href="classdds_1_1pub_1_1_data_writer.html">dds::pub::DataWriter&lt;T&gt;</a> writer(publisher, topic, writer_qos);</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// [history_resource_limits]</span></div>
+<div class="line">    <span class="keyword">auto</span> reader_qos = subscriber.default_datareader_qos();</div>
+<div class="line">    reader_qos &lt;&lt; reliable &lt;&lt; History::KeepLast(2) &lt;&lt; ResourceLimits(4, 2, 2);</div>
+<div class="line">    <a class="code hl_class" href="classdds_1_1sub_1_1_data_reader.html">dds::sub::DataReader&lt;T&gt;</a> reader(subscriber, topic, reader_qos);</div>
+<div class="line">    howto::wait_for_readers(writer, 1);</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordtype">char</span> first[] = <span class="stringliteral">"first"</span>;</div>
+<div class="line">    <span class="keywordtype">char</span> second[] = <span class="stringliteral">"second"</span>;</div>
+<div class="line">    <span class="keywordtype">char</span> third[] = <span class="stringliteral">"third"</span>;</div>
+<div class="line">    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> key : { 7, 8 })</div>
+<div class="line">    {</div>
+<div class="line">        Hello::Msg sample{};</div>
+<div class="line">        sample.userId = key;</div>
+<div class="line">        <span class="keywordflow">for</span> (<span class="keyword">auto</span>* value : { first, second, third })</div>
+<div class="line">        {</div>
+<div class="line">            sample.message = value;</div>
+<div class="line">            writer.write(sample);</div>
+<div class="line">        }</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    howto::wait_until([&amp;reader, &amp;second, &amp;third]() -&gt; <span class="keywordtype">bool</span> {</div>
+<div class="line">        <span class="keyword">const</span> <span class="keyword">auto</span> batch = reader.read();</div>
+<div class="line">        <span class="keywordflow">if</span> (batch.length() != 4)</div>
+<div class="line">            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"> </div>
+<div class="line">        std::array&lt;bool, 2&gt; has_second{};</div>
+<div class="line">        std::array&lt;bool, 2&gt; has_third{};</div>
+<div class="line">        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; sample : batch)</div>
+<div class="line">        {</div>
+<div class="line">            howto::require(sample.info().valid(), <span class="stringliteral">"Expected a valid sample"</span>);</div>
+<div class="line">            <span class="keyword">const</span> <span class="keyword">auto</span>&amp; data = sample.data();</div>
+<div class="line">            howto::require(data.userId == 7 or data.userId == 8, <span class="stringliteral">"Unexpected key"</span>);</div>
+<div class="line">            <span class="keyword">const</span> <span class="keyword">auto</span> index = data.userId - 7;</div>
+<div class="line">            has_second[index] = has_second[index] or std::strcmp(data.message, second) == 0;</div>
+<div class="line">            has_third[index] = has_third[index] or std::strcmp(data.message, third) == 0;</div>
+<div class="line">        }</div>
+<div class="line">        <span class="keywordflow">return</span> has_second[0] and has_second[1] and has_third[0] and has_third[1];</div>
+<div class="line">    }, <span class="stringliteral">"Expected the last two samples for each key"</span>);</div>
+<div class="line">    <span class="comment">// [history_resource_limits]</span></div>
+<div class="line"> </div>
+<div class="line">    std::cout &lt;&lt; <span class="stringliteral">"History limits: two keys, two samples each\n"</span>;</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> wait_for_two_writers()</div>
+<div class="line">{</div>
+<div class="line">    <a class="code hl_typedef" href="group__dds__domain.html#gab1bd86ffa9ac0869166a446dd0120f3d">dds::domain::DomainParticipant</a> participant(103);</div>
+<div class="line">    <a class="code hl_class" href="classdds_1_1topic_1_1_topic.html">dds::topic::Topic&lt;T&gt;</a> first_topic(participant, <span class="stringliteral">"HowToPublisherAckFirst"</span>);</div>
+<div class="line">    <a class="code hl_class" href="classdds_1_1topic_1_1_topic.html">dds::topic::Topic&lt;T&gt;</a> second_topic(participant, <span class="stringliteral">"HowToPublisherAckSecond"</span>);</div>
+<div class="line">    <a class="code hl_typedef" href="group__dds__publication.html#gada2751fd8ce0e148138e6950f7ef7d37">dds::pub::Publisher</a> publisher(participant);</div>
+<div class="line">    <a class="code hl_typedef" href="group__dds__subscription.html#ga9a6d78b2a23f864211da5bd2edf28750">dds::sub::Subscriber</a> subscriber(participant);</div>
+<div class="line">    <span class="keyword">auto</span> writer_qos = publisher.default_writer_qos();</div>
+<div class="line">    writer_qos &lt;&lt; reliable;</div>
+<div class="line">    <span class="keyword">auto</span> reader_qos = subscriber.default_datareader_qos();</div>
+<div class="line">    reader_qos &lt;&lt; reliable;</div>
+<div class="line">    <a class="code hl_class" href="classdds_1_1pub_1_1_data_writer.html">dds::pub::DataWriter&lt;T&gt;</a> first_writer(publisher, first_topic, writer_qos);</div>
+<div class="line">    <a class="code hl_class" href="classdds_1_1pub_1_1_data_writer.html">dds::pub::DataWriter&lt;T&gt;</a> second_writer(publisher, second_topic, writer_qos);</div>
+<div class="line">    <a class="code hl_class" href="classdds_1_1sub_1_1_data_reader.html">dds::sub::DataReader&lt;T&gt;</a> first_reader(subscriber, first_topic, reader_qos);</div>
+<div class="line">    <a class="code hl_class" href="classdds_1_1sub_1_1_data_reader.html">dds::sub::DataReader&lt;T&gt;</a> second_reader(subscriber, second_topic, reader_qos);</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// [publisher_wait_two_writers]</span></div>
+<div class="line">    howto::wait_for_readers(first_writer, 1);</div>
+<div class="line">    howto::wait_for_readers(second_writer, 1);</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordtype">char</span> message[] = <span class="stringliteral">"publisher acknowledgment"</span>;</div>
+<div class="line">    Hello::Msg data{};</div>
+<div class="line">    data.userId = 7;</div>
+<div class="line">    data.message = message;</div>
+<div class="line">    first_writer.write(data);</div>
+<div class="line">    second_writer.write(data);</div>
+<div class="line"> </div>
+<div class="line">    publisher.wait_for_acknowledgments(Duration::from_millisecs(1000));</div>
+<div class="line">    <span class="comment">// [publisher_wait_two_writers]</span></div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">for</span> (<span class="keyword">auto</span>* reader : { &amp;first_reader, &amp;second_reader })</div>
+<div class="line">    {</div>
+<div class="line">        howto::wait_until([reader]() -&gt; <span class="keywordtype">bool</span> {</div>
+<div class="line">            <span class="keyword">const</span> <span class="keyword">auto</span> batch = reader-&gt;take();</div>
+<div class="line">            <span class="keywordflow">return</span> batch.length() == 1 and batch.begin()-&gt;info().valid() and batch.begin()-&gt;data().userId == 7;</div>
+<div class="line">        }, <span class="stringliteral">"A reader did not receive its sample"</span>);</div>
+<div class="line">    }</div>
+<div class="line">    std::cout &lt;&lt; <span class="stringliteral">"Publisher acknowledgment: both reliable readers received a sample\n"</span>;</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> choose_an_exclusive_writer()</div>
+<div class="line">{</div>
+<div class="line">    <a class="code hl_typedef" href="group__dds__domain.html#gab1bd86ffa9ac0869166a446dd0120f3d">dds::domain::DomainParticipant</a> participant(104);</div>
+<div class="line">    <a class="code hl_class" href="classdds_1_1topic_1_1_topic.html">dds::topic::Topic&lt;T&gt;</a> topic(participant, <span class="stringliteral">"HowToExclusiveOwnership"</span>);</div>
+<div class="line">    <a class="code hl_typedef" href="group__dds__publication.html#gada2751fd8ce0e148138e6950f7ef7d37">dds::pub::Publisher</a> publisher(participant);</div>
+<div class="line">    <a class="code hl_typedef" href="group__dds__subscription.html#ga9a6d78b2a23f864211da5bd2edf28750">dds::sub::Subscriber</a> subscriber(participant);</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// [exclusive_writer_qos]</span></div>
+<div class="line">    <span class="keyword">auto</span> weaker_qos = publisher.default_writer_qos();</div>
+<div class="line">    weaker_qos &lt;&lt; reliable &lt;&lt; Ownership::Exclusive() &lt;&lt; <a class="code hl_typedef" href="group__dds__qos.html#gac074ac347c0a510da871ae3949551efa">OwnershipStrength</a>(10);</div>
+<div class="line">    <span class="keyword">auto</span> stronger_qos = weaker_qos;</div>
+<div class="line">    stronger_qos &lt;&lt; <a class="code hl_typedef" href="group__dds__qos.html#gac074ac347c0a510da871ae3949551efa">OwnershipStrength</a>(20);</div>
+<div class="line">    <span class="keyword">auto</span> reader_qos = subscriber.default_datareader_qos();</div>
+<div class="line">    reader_qos &lt;&lt; reliable &lt;&lt; Ownership::Exclusive();</div>
+<div class="line">    <a class="code hl_class" href="classdds_1_1pub_1_1_data_writer.html">dds::pub::DataWriter&lt;T&gt;</a> weaker(publisher, topic, weaker_qos);</div>
+<div class="line">    <a class="code hl_class" href="classdds_1_1pub_1_1_data_writer.html">dds::pub::DataWriter&lt;T&gt;</a> stronger(publisher, topic, stronger_qos);</div>
+<div class="line">    <a class="code hl_class" href="classdds_1_1sub_1_1_data_reader.html">dds::sub::DataReader&lt;T&gt;</a> reader(subscriber, topic, reader_qos);</div>
+<div class="line">    <span class="comment">// [exclusive_writer_qos]</span></div>
+<div class="line"> </div>
+<div class="line">    howto::wait_for_readers(weaker, 1);</div>
+<div class="line">    howto::wait_for_readers(stronger, 1);</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// [exclusive_writer_keys]</span></div>
+<div class="line">    <span class="keywordtype">char</span> strong_value[] = <span class="stringliteral">"stronger writer"</span>;</div>
+<div class="line">    <span class="keywordtype">char</span> weak_value[] = <span class="stringliteral">"weaker writer"</span>;</div>
+<div class="line">    Hello::Msg data{};</div>
+<div class="line">    data.userId = 7;</div>
+<div class="line">    data.message = strong_value;</div>
+<div class="line">    stronger.write(data);</div>
+<div class="line">    howto::wait_until([&amp;reader, &amp;strong_value]() -&gt; <span class="keywordtype">bool</span> {</div>
+<div class="line">        <span class="keyword">const</span> <span class="keyword">auto</span> batch = reader.take();</div>
+<div class="line">        <span class="keywordflow">return</span> batch.length() == 1 and batch.begin()-&gt;info().valid()</div>
+<div class="line">            and batch.begin()-&gt;data().userId == 7 and std::strcmp(batch.begin()-&gt;data().message, strong_value) == 0;</div>
+<div class="line">    }, <span class="stringliteral">"The stronger writer's key 7 sample did not arrive"</span>);</div>
+<div class="line"> </div>
+<div class="line">    data.message = weak_value;</div>
+<div class="line">    weaker.write(data);</div>
+<div class="line">    data.userId = 8;</div>
+<div class="line">    weaker.write(data);</div>
+<div class="line">    howto::wait_until([&amp;reader, &amp;weak_value]() -&gt; <span class="keywordtype">bool</span> {</div>
+<div class="line">        <span class="keyword">const</span> <span class="keyword">auto</span> batch = reader.take();</div>
+<div class="line">        <span class="keywordtype">bool</span> has_key_8 = <span class="keyword">false</span>;</div>
+<div class="line">        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; sample : batch)</div>
+<div class="line">        {</div>
+<div class="line">            howto::require(sample.info().valid(), <span class="stringliteral">"Expected a valid sample"</span>);</div>
+<div class="line">            howto::require(sample.data().userId == 8, <span class="stringliteral">"The weaker writer updated the owned key"</span>);</div>
+<div class="line">            has_key_8 = has_key_8 or std::strcmp(sample.data().message, weak_value) == 0;</div>
+<div class="line">        }</div>
+<div class="line">        <span class="keywordflow">return</span> has_key_8;</div>
+<div class="line">    }, <span class="stringliteral">"The weaker writer's independent key 8 sample did not arrive"</span>);</div>
+<div class="line">    <span class="comment">// [exclusive_writer_keys]</span></div>
+<div class="line"> </div>
+<div class="line">    std::cout &lt;&lt; <span class="stringliteral">"Exclusive ownership: the stronger writer kept key 7 and the weaker writer supplied key 8\n"</span>;</div>
+<div class="line">}</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">int</span> main()</div>
+<div class="line">{</div>
+<div class="line">    <span class="keywordflow">return</span> howto::run([]() -&gt; <span class="keywordtype">void</span> {</div>
+<div class="line">        keep_two_samples_for_each_key();</div>
+<div class="line">        wait_for_two_writers();</div>
+<div class="line">        choose_an_exclusive_writer();</div>
+<div class="line">    }, <span class="stringliteral">"Delivery limits and ownership examples passed"</span>);</div>
+<div class="line">}</div>
+<div class="ttc" id="agroup__dds__qos_html_ga2b55aa93f052e74de626f42665c5785f"><div class="ttname"><a href="group__dds__qos.html#ga2b55aa93f052e74de626f42665c5785f">dds::core::policy::Ownership</a></div><div class="ttdeci">dds::core::policy::detail::Ownership Ownership</div><div class="ttdoc">여러 쓰기자가 동일한 instance를 업데이트할 수 있는 방법을 선택합니다.</div><div class="ttdef"><b>정의</b> CorePolicy.hpp:147</div></div>
+<div class="ttc" id="agroup__dds__qos_html_gabeeea78bb9eaac8652578f9addc33372"><div class="ttname"><a href="group__dds__qos.html#gabeeea78bb9eaac8652578f9addc33372">dds::core::policy::ResourceLimits</a></div><div class="ttdeci">dds::core::policy::detail::ResourceLimits ResourceLimits</div><div class="ttdoc">Entity가 유지할 수 있는 sample과 instance를 제한합니다.</div><div class="ttdef"><b>정의</b> CorePolicy.hpp:212</div></div>
+<div class="ttc" id="agroup__dds__qos_html_gac074ac347c0a510da871ae3949551efa"><div class="ttname"><a href="group__dds__qos.html#gac074ac347c0a510da871ae3949551efa">dds::core::policy::OwnershipStrength</a></div><div class="ttdeci">dds::core::policy::detail::OwnershipStrength OwnershipStrength</div><div class="ttdoc">독점 소유권을 위한 DataWriter의 우선순위를 지정합니다</div><div class="ttdef"><b>정의</b> CorePolicy.hpp:156</div></div>
+</div></details><!-- fragment --> </div></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="page-nav-panel" id="page-nav">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div class="navpath" id="nav-path"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">다음에 의해 생성됨 :  <a href="https://www.doxygen.org/index.html"><img alt="doxygen" class="footer" height="31" src="doxygen.svg" width="104"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

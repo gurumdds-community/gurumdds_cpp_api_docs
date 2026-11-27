@@ -1,0 +1,11 @@
+<map id="dds::core::TEntity&lt; DELEGATE &gt;" name="dds::core::TEntity&lt; DELEGATE &gt;">
+<area shape="rect" id="Node000001" target="_top" title="Provides common operations on a DDS entity handle." alt="" coords="242,96,357,139"/>
+<area shape="rect" id="Node000003" href="$classdds_1_1domain_1_1_t_domain_participant.html" target="_top" title="Joins a DDS domain and owns the entities created within it." alt="" coords="5,187,210,229"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="245,144,152,189,150,184,240,146"/>
+<area shape="rect" id="Node000004" href="$classdds_1_1pub_1_1_t_publisher.html" target="_top" title="Owns writers and configures publication defaults." alt="" coords="234,187,365,229"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="302,152,302,188,297,185,298,156"/>
+<area shape="rect" id="Node000005" href="$classdds_1_1sub_1_1_t_subscriber.html" target="_top" title="Owns readers and configures subscription defaults." alt="" coords="389,187,528,229"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="350,143,425,187,420,187,348,149"/>
+<area shape="rect" id="Node000002" href="$classdds_1_1core_1_1_reference.html" target="_top" title="Defines shared&#45;handle operations for DDS reference types." alt="" coords="233,5,366,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="301,61,302,97,297,95,298,65"/>
+</map>

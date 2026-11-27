@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1140" height="306" viewBox="0 0 1140 306" role="img" aria-label="생성된 Tutorial::Reading을 복사하면 문자열과 sequence 포인터를 공유하고 고정 배열은 값으로 복사합니다. 애플리케이션 소유 컨테이너는 loan을 반환한 뒤에도 값을 보관합니다." data-dds-diagram="true">
+  <title id="idl-field-copy-ko-title">loan으로 받은 IDL 값의 필드 복사와 소유권</title>
+  <desc>생성된 Tutorial::Reading을 복사하면 문자열과 sequence 포인터를 공유하고 고정 배열은 값으로 복사합니다. 애플리케이션 소유 컨테이너는 loan을 반환한 뒤에도 값을 보관합니다.</desc>
+  <defs>
+    <marker id="idl-field-copy-ko-arrow" viewBox="0 0 10 12" refX="9" refY="6" markerWidth="9" markerHeight="10" orient="auto" markerUnits="userSpaceOnUse"><path d="M 1,1 L 9,6 L 1,11" fill="none" stroke="#20354B" stroke-width="1.2"/></marker>
+    <marker id="idl-field-copy-ko-blue" viewBox="0 0 11 10" refX="10" refY="5" markerWidth="10" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M 0,0 L 11,5 L 0,10 Z" fill="#356B96"/></marker>
+  </defs>
+  <rect width="1140" height="306" fill="#FFFFFF"/>
+  <g fill="#20354B" font-family="Arial, Malgun Gothic, sans-serif">
+    <text x="158" y="36" text-anchor="middle" font-size="16" font-weight="bold">loan으로 받은 Tutorial::Reading</text>
+    <text x="562" y="36" text-anchor="middle" font-size="16" font-weight="bold">구조체 복사</text>
+    <text x="969" y="36" text-anchor="middle" font-size="16" font-weight="bold">애플리케이션 소유 복사본</text>
+    <path d="M 285 95 H 456" fill="none" stroke="#20354B" stroke-width="1.15" stroke-dasharray="5 4" marker-end="url(#idl-field-copy-ko-arrow)"/>
+    <path d="M 670 95 H 826" fill="none" stroke="#356B96" stroke-width="1.7" marker-end="url(#idl-field-copy-ko-blue)"/>
+    <rect x="32" y="73" width="253" height="46" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <rect x="456" y="73" width="214" height="46" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <rect x="826" y="73" width="283" height="46" fill="#EFF5FA" stroke="#20354B" stroke-width="1.15"/>
+    <text x="158" y="102" text-anchor="middle" font-size="16" font-family="Consolas, Menlo, monospace">label</text>
+    <text x="562" y="102" text-anchor="middle" font-size="16" font-family="Consolas, Menlo, monospace">label</text>
+    <text x="969" y="102" text-anchor="middle" font-size="15" font-family="Consolas, Menlo, monospace">std::string</text>
+    <text x="371" y="88" text-anchor="middle" font-size="14">같은 포인터</text>
+    <text x="748" y="88" text-anchor="middle" font-size="14">값 복사</text>
+    <path d="M 285 164 H 456" fill="none" stroke="#20354B" stroke-width="1.15" marker-end="url(#idl-field-copy-ko-arrow)"/>
+    <path d="M 670 164 H 826" fill="none" stroke="#356B96" stroke-width="1.7" marker-end="url(#idl-field-copy-ko-blue)"/>
+    <rect x="32" y="142" width="253" height="46" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <rect x="456" y="142" width="214" height="46" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <rect x="826" y="142" width="283" height="46" fill="#EFF5FA" stroke="#20354B" stroke-width="1.15"/>
+    <text x="158" y="171" text-anchor="middle" font-size="16" font-family="Consolas, Menlo, monospace">bounds[2]</text>
+    <text x="562" y="171" text-anchor="middle" font-size="16" font-family="Consolas, Menlo, monospace">bounds[2]</text>
+    <text x="969" y="171" text-anchor="middle" font-size="15" font-family="Consolas, Menlo, monospace">std::array&lt;dds_Long, 2&gt;</text>
+    <text x="371" y="157" text-anchor="middle" font-size="14">배열 값 복사</text>
+    <text x="748" y="157" text-anchor="middle" font-size="14">값 복사</text>
+    <path d="M 285 233 H 456" fill="none" stroke="#20354B" stroke-width="1.15" stroke-dasharray="5 4" marker-end="url(#idl-field-copy-ko-arrow)"/>
+    <path d="M 670 233 H 826" fill="none" stroke="#356B96" stroke-width="1.7" marker-end="url(#idl-field-copy-ko-blue)"/>
+    <rect x="32" y="211" width="253" height="46" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <rect x="456" y="211" width="214" height="46" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <rect x="826" y="211" width="283" height="46" fill="#EFF5FA" stroke="#20354B" stroke-width="1.15"/>
+    <text x="158" y="240" text-anchor="middle" font-size="16" font-family="Consolas, Menlo, monospace">values</text>
+    <text x="562" y="240" text-anchor="middle" font-size="16" font-family="Consolas, Menlo, monospace">values</text>
+    <text x="969" y="240" text-anchor="middle" font-size="15" font-family="Consolas, Menlo, monospace">std::vector&lt;dds_Long&gt;</text>
+    <text x="371" y="226" text-anchor="middle" font-size="14">같은 포인터</text>
+    <text x="748" y="226" text-anchor="middle" font-size="14">값 복사</text>
+    <text x="570" y="287" text-anchor="middle" font-size="15">loan을 유지하는 동안 애플리케이션에서 계속 사용할 필드를 복사합니다.</text>
+  </g>
+</svg>

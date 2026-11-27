@@ -1,0 +1,478 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/xhtml;charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=11" http-equiv="X-UA-Compatible"/>
+<meta content="Doxygen 1.18.0" name="generator"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>GurumDDS C++ API Reference: dds::sub::AnyDataReaderListener 클래스</title>
+<link href="gurum-networks-logo.png" rel="icon" type="image/x-icon"/>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script src="dynsections.js" type="text/javascript"></script>
+<script src="codefolding.js" type="text/javascript"></script>
+<script src="clipboard.js" type="text/javascript"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script src="navtreedata.js" type="text/javascript"></script>
+<script src="navtree.js" type="text/javascript"></script>
+<script src="cookie.js" type="text/javascript"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script src="search/searchdata.js" type="text/javascript"></script>
+<script src="search/search.js" type="text/javascript"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+<link href="ReferenceBranding.css" rel="stylesheet" type="text/css"/>
+<script defer="True" src="ReferenceUi.js"></script><link href="../en/classdds_1_1sub_1_1_any_data_reader_listener.html" hreflang="en" rel="alternate"/><link href="../ko/classdds_1_1sub_1_1_any_data_reader_listener.html" hreflang="ko" rel="alternate"/><link href="../language.css" rel="stylesheet"/><script defer="defer" src="../language.js"></script></head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellpadding="0" cellspacing="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">GurumDDS C++ API Reference<span id="projectnumber"> 1.3.2</span>
+   </div>
+  </td>
+ <td class="doc-language-cell"><label class="doc-language"><select aria-label="문서 언어" data-current="1"><option lang="en" value="../en/classdds_1_1sub_1_1_any_data_reader_listener.html">English</option><option lang="en" selected="selected" value="../ko/classdds_1_1sub_1_1_any_data_reader_listener.html">Korean</option></select></label></td></tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script id="doxygen-config" type="application/json">
+{
+  "relPath": "",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script src="menudata.js" type="text/javascript"></script>
+<script src="menu.js" type="text/javascript"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> 주 메뉴 표시 전환</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div class="MSearchBoxInactive" id="MSearchBox">
+        <span class="left">
+          <span class="search-icon" id="MSearchSelect"><span class="search-icon-dropdown"></span></span>
+          <input accesskey="S" id="MSearchField" placeholder="검색" type="text" value=""/>
+          </span><span class="right">
+            <a href="javascript:searchBox.CloseResultsWindow()" id="MSearchClose"><div class="close-icon" id="MSearchCloseImg"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div class="ui-resizable side-nav-resizable" id="side-nav">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div class="sync" id="nav-sync"></div>
+    </div>
+  </div>
+  <div class="ui-resizable-handle" id="splitbar">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('classdds_1_1sub_1_1_any_data_reader_listener.html','','classdds_1_1sub_1_1_any_data_reader_listener-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">로딩중...</div>
+<div class="SRStatus" id="Searching">검색중...</div>
+<div class="SRStatus" id="NoMatches">일치하는것 없음</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">dds::sub::AnyDataReaderListener 클래스<span class="mlabels"><span class="mlabel abstract">abstract</span></span></div></div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-pub-types"><a id="pub-types" name="pub-types"></a>
+공개 타입</h2></td></tr>
+<tr class="memitem:a7ac17f26644714f38c539fdb6fced556" id="r_a7ac17f26644714f38c539fdb6fced556"><td class="memItemLeft"><a id="a7ac17f26644714f38c539fdb6fced556" name="a7ac17f26644714f38c539fdb6fced556"></a>
+타입 별칭 <a class="el" href="structdds_1_1core_1_1smart__ptr__traits.html">::dds::core::smart_ptr_traits</a>&lt; <a class="el" href="classdds_1_1sub_1_1_any_data_reader_listener.html">AnyDataReaderListener</a> &gt;::ref_type </td><td class="memItemRight"><b>ref_type</b></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-pub-methods"><a id="pub-methods" name="pub-methods"></a>
+공개 멤버 함수</h2></td></tr>
+<tr class="memitem:a251f1d6b76883acaea0e62e6a364bfe3" id="r_a251f1d6b76883acaea0e62e6a364bfe3"><td class="memItemLeft">virtual </td><td class="memItemRight"><a class="el" href="#a251f1d6b76883acaea0e62e6a364bfe3">~AnyDataReaderListener</a> ()</td></tr>
+<tr class="memdesc:a251f1d6b76883acaea0e62e6a364bfe3"><td class="mdescLeft"> </td><td class="mdescRight">listener 개체를 파괴합니다  <br/></td></tr>
+<tr class="memitem:a0b4a6aecd462f66424ea14c41db28d90" id="r_a0b4a6aecd462f66424ea14c41db28d90"><td class="memItemLeft">virtual void </td><td class="memItemRight"><a class="el" href="#a0b4a6aecd462f66424ea14c41db28d90">on_requested_deadline_missed</a> (<a class="el" href="classdds_1_1sub_1_1_any_data_reader.html">AnyDataReader</a> &amp;the_reader, const dds::core::status::RequestedDeadlineMissedStatus &amp;status)=0</td></tr>
+<tr class="memdesc:a0b4a6aecd462f66424ea14c41db28d90"><td class="mdescLeft"> </td><td class="mdescRight">DataReader가 instance에 대한 요청된 업데이트 간격을 놓치면 호출됨  <br/></td></tr>
+<tr class="memitem:a6420c986262a7c03a927bacd186f3b68" id="r_a6420c986262a7c03a927bacd186f3b68"><td class="memItemLeft">virtual void </td><td class="memItemRight"><a class="el" href="#a6420c986262a7c03a927bacd186f3b68">on_requested_incompatible_qos</a> (<a class="el" href="classdds_1_1sub_1_1_any_data_reader.html">AnyDataReader</a> &amp;the_reader, const dds::core::status::RequestedIncompatibleQosStatus &amp;status)=0</td></tr>
+<tr class="memdesc:a6420c986262a7c03a927bacd186f3b68"><td class="mdescLeft"> </td><td class="mdescRight">발견된 DataWriter가 호환되지 않는 QoS를 제공할 때 호출  <br/></td></tr>
+<tr class="memitem:ad70501e73d92e0261ad8fb9a626374e8" id="r_ad70501e73d92e0261ad8fb9a626374e8"><td class="memItemLeft">virtual void </td><td class="memItemRight"><a class="el" href="#ad70501e73d92e0261ad8fb9a626374e8">on_sample_rejected</a> (<a class="el" href="classdds_1_1sub_1_1_any_data_reader.html">AnyDataReader</a> &amp;the_reader, const dds::core::status::SampleRejectedStatus &amp;status)=0</td></tr>
+<tr class="memdesc:ad70501e73d92e0261ad8fb9a626374e8"><td class="mdescLeft"> </td><td class="mdescRight">DataReader가 받은 sample을 거부할 때 호출됨  <br/></td></tr>
+<tr class="memitem:a460590d737ac2cf7b1705e75b447bee9" id="r_a460590d737ac2cf7b1705e75b447bee9"><td class="memItemLeft">virtual void </td><td class="memItemRight"><a class="el" href="#a460590d737ac2cf7b1705e75b447bee9">on_liveliness_changed</a> (<a class="el" href="classdds_1_1sub_1_1_any_data_reader.html">AnyDataReader</a> &amp;the_reader, const dds::core::status::LivelinessChangedStatus &amp;status)=0</td></tr>
+<tr class="memdesc:a460590d737ac2cf7b1705e75b447bee9"><td class="mdescLeft"> </td><td class="mdescRight">일치하는 DataWriter가 Liveliness 상태를 바꿀 때 호출됨  <br/></td></tr>
+<tr class="memitem:aa3b505b19d45572597c23fc38044a1fb" id="r_aa3b505b19d45572597c23fc38044a1fb"><td class="memItemLeft">virtual void </td><td class="memItemRight"><a class="el" href="#aa3b505b19d45572597c23fc38044a1fb">on_data_available</a> (<a class="el" href="classdds_1_1sub_1_1_any_data_reader.html">AnyDataReader</a> &amp;the_reader)=0</td></tr>
+<tr class="memdesc:aa3b505b19d45572597c23fc38044a1fb"><td class="mdescLeft"> </td><td class="mdescRight">DataReader가 데이터를 사용할 수 있음을 보고할 때 호출됨  <br/></td></tr>
+<tr class="memitem:a0c960ca2975bc3de2b5c68694e54a0f0" id="r_a0c960ca2975bc3de2b5c68694e54a0f0"><td class="memItemLeft">virtual void </td><td class="memItemRight"><a class="el" href="#a0c960ca2975bc3de2b5c68694e54a0f0">on_subscription_matched</a> (<a class="el" href="classdds_1_1sub_1_1_any_data_reader.html">AnyDataReader</a> &amp;the_reader, const dds::core::status::SubscriptionMatchedStatus &amp;status)=0</td></tr>
+<tr class="memdesc:a0c960ca2975bc3de2b5c68694e54a0f0"><td class="mdescLeft"> </td><td class="mdescRight">DataReader와 일치하는 publication의 세트가 변경될 때 호출됨  <br/></td></tr>
+<tr class="memitem:a5c35243572e49ac1f2a0fec45ba9142b" id="r_a5c35243572e49ac1f2a0fec45ba9142b"><td class="memItemLeft">virtual void </td><td class="memItemRight"><a class="el" href="#a5c35243572e49ac1f2a0fec45ba9142b">on_sample_lost</a> (<a class="el" href="classdds_1_1sub_1_1_any_data_reader.html">AnyDataReader</a> &amp;the_reader, const dds::core::status::SampleLostStatus &amp;status)=0</td></tr>
+<tr class="memdesc:a5c35243572e49ac1f2a0fec45ba9142b"><td class="mdescLeft"> </td><td class="mdescRight">DataReader가 sample 손실을 보고할 때 호출됨  <br/></td></tr>
+</table>
+<a id="doc-constructors" name="doc-constructors"></a><h2 class="groupheader" id="header-doc-constructors">생성자와 소멸자</h2>
+<a id="a251f1d6b76883acaea0e62e6a364bfe3" name="a251f1d6b76883acaea0e62e6a364bfe3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a251f1d6b76883acaea0e62e6a364bfe3">◆ </a></span>~AnyDataReaderListener()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual dds::sub::AnyDataReaderListener::~AnyDataReaderListener </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>listener 개체를 파괴합니다 </p>
+<p>listener가 엔터티에 등록되어 있는 동안 listener를 살아있게 유지합니다. </p>
+
+</div>
+</div>
+<a id="doc-func-members" name="doc-func-members"></a><h2 class="groupheader" id="header-doc-func-members">멤버 함수</h2>
+<a id="aa3b505b19d45572597c23fc38044a1fb" name="aa3b505b19d45572597c23fc38044a1fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3b505b19d45572597c23fc38044a1fb">◆ </a></span>on_data_available()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void dds::sub::AnyDataReaderListener::on_data_available </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdds_1_1sub_1_1_any_data_reader.html">AnyDataReader</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>the_reader</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>DataReader가 데이터를 사용할 수 있음을 보고할 때 호출됨 </p>
+<p>Subscriber가 <code>on_data_on_readers()</code> 를 사용할 수 있게 하면 해당 callback이 알림을 받습니다. 이는 <code>notify_datareaders()</code> 를 호출하여 sample이 아직 기록에 남아 있는 DataReader들에게 데이터 사용 가능한 활성화된 callback을 예약할 수 있습니다.</p>
+<dl class="params"><dt>매개변수</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[입출력]</td><td class="paramname">the_reader</td><td>이벤트를 보고하는 <a class="el" href="classdds_1_1sub_1_1_data_reader.html" title="Topic에서 지정된 타입의 sample을 수신합니다.">DataReader&lt;T&gt;</a></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>참고</dt><dd><a class="el" href="classdds_1_1sub_1_1_subscriber_listener.html#aae00b846fbc662df45e99e45e90da70c" title="Subscriber 아래의 하나 이상의 DataReader가 데이터를 사용할 수 있을 때 호출">dds::sub::SubscriberListener::on_data_on_readers()</a> </dd>
+<dd>
+<a class="el" href="classdds_1_1sub_1_1_t_subscriber.html#ac39582614d0a2edd40e8f1b044858a35" title="이 Subscriber의 DataReader들을 위한 데이터 사용 가능한 callback 요청">dds::sub::TSubscriber::notify_datareaders()</a> </dd></dl>
+
+<p><a class="el" href="classdds_1_1sub_1_1_no_op_any_data_reader_listener.html#aa56e78f6e30a78b109af7a599607e9c6">dds::sub::NoOpAnyDataReaderListener</a>에서 구현되었습니다.</p>
+
+</div>
+</div>
+<a id="a460590d737ac2cf7b1705e75b447bee9" name="a460590d737ac2cf7b1705e75b447bee9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a460590d737ac2cf7b1705e75b447bee9">◆ </a></span>on_liveliness_changed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void dds::sub::AnyDataReaderListener::on_liveliness_changed </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdds_1_1sub_1_1_any_data_reader.html">AnyDataReader</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>the_reader</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const dds::core::status::LivelinessChangedStatus &amp;</td>          <td class="paramname"><span class="paramname"><em>status</em></span> )</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>일치하는 DataWriter가 Liveliness 상태를 바꿀 때 호출됨 </p>
+<p>Entity와 상태 참조는 callback 중에 사용할 수 있도록 제공됩니다.</p>
+<dl class="params"><dt>매개변수</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[입출력]</td><td class="paramname">the_reader</td><td>이벤트를 보고하는 <a class="el" href="classdds_1_1sub_1_1_data_reader.html" title="Topic에서 지정된 타입의 sample을 수신합니다.">DataReader&lt;T&gt;</a> </td></tr>
+    <tr><td class="paramdir">[입력]</td><td class="paramname">status</td><td>이벤트의 상태 스냅샷 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><a class="el" href="classdds_1_1sub_1_1_no_op_any_data_reader_listener.html#afb9e55269ad30d47b924949699f55a8f">dds::sub::NoOpAnyDataReaderListener</a>에서 구현되었습니다.</p>
+
+</div>
+</div>
+<a id="a0b4a6aecd462f66424ea14c41db28d90" name="a0b4a6aecd462f66424ea14c41db28d90"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b4a6aecd462f66424ea14c41db28d90">◆ </a></span>on_requested_deadline_missed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void dds::sub::AnyDataReaderListener::on_requested_deadline_missed </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdds_1_1sub_1_1_any_data_reader.html">AnyDataReader</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>the_reader</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const dds::core::status::RequestedDeadlineMissedStatus &amp;</td>          <td class="paramname"><span class="paramname"><em>status</em></span> )</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>DataReader가 instance에 대한 요청된 업데이트 간격을 놓치면 호출됨 </p>
+<p>Entity와 상태 참조는 callback 중에 사용할 수 있도록 제공됩니다.</p>
+<dl class="params"><dt>매개변수</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[입출력]</td><td class="paramname">the_reader</td><td>이벤트를 보고하는 <a class="el" href="classdds_1_1sub_1_1_data_reader.html" title="Topic에서 지정된 타입의 sample을 수신합니다.">DataReader&lt;T&gt;</a> </td></tr>
+    <tr><td class="paramdir">[입력]</td><td class="paramname">status</td><td>이벤트의 상태 스냅샷 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><a class="el" href="classdds_1_1sub_1_1_no_op_any_data_reader_listener.html#aae81e7f12e2fba15f2db5e68a2cb7f93">dds::sub::NoOpAnyDataReaderListener</a>에서 구현되었습니다.</p>
+
+</div>
+</div>
+<a id="a6420c986262a7c03a927bacd186f3b68" name="a6420c986262a7c03a927bacd186f3b68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6420c986262a7c03a927bacd186f3b68">◆ </a></span>on_requested_incompatible_qos()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void dds::sub::AnyDataReaderListener::on_requested_incompatible_qos </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdds_1_1sub_1_1_any_data_reader.html">AnyDataReader</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>the_reader</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const dds::core::status::RequestedIncompatibleQosStatus &amp;</td>          <td class="paramname"><span class="paramname"><em>status</em></span> )</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>발견된 DataWriter가 호환되지 않는 QoS를 제공할 때 호출 </p>
+<p>Entity와 상태 참조는 callback 중에 사용할 수 있도록 제공됩니다.</p>
+<dl class="params"><dt>매개변수</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[입출력]</td><td class="paramname">the_reader</td><td>이벤트를 보고하는 <a class="el" href="classdds_1_1sub_1_1_data_reader.html" title="Topic에서 지정된 타입의 sample을 수신합니다.">DataReader&lt;T&gt;</a> </td></tr>
+    <tr><td class="paramdir">[입력]</td><td class="paramname">status</td><td>이벤트의 상태 스냅샷 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><a class="el" href="classdds_1_1sub_1_1_no_op_any_data_reader_listener.html#aea076eca1ebf3f2f09024f3fc6c942ed">dds::sub::NoOpAnyDataReaderListener</a>에서 구현되었습니다.</p>
+
+</div>
+</div>
+<a id="a5c35243572e49ac1f2a0fec45ba9142b" name="a5c35243572e49ac1f2a0fec45ba9142b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c35243572e49ac1f2a0fec45ba9142b">◆ </a></span>on_sample_lost()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void dds::sub::AnyDataReaderListener::on_sample_lost </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdds_1_1sub_1_1_any_data_reader.html">AnyDataReader</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>the_reader</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const dds::core::status::SampleLostStatus &amp;</td>          <td class="paramname"><span class="paramname"><em>status</em></span> )</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>DataReader가 sample 손실을 보고할 때 호출됨 </p>
+<p>Entity와 상태 참조는 callback 중에 사용할 수 있도록 제공됩니다.</p>
+<dl class="params"><dt>매개변수</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[입출력]</td><td class="paramname">the_reader</td><td>이벤트를 보고하는 <a class="el" href="classdds_1_1sub_1_1_data_reader.html" title="Topic에서 지정된 타입의 sample을 수신합니다.">DataReader&lt;T&gt;</a> </td></tr>
+    <tr><td class="paramdir">[입력]</td><td class="paramname">status</td><td>이벤트의 상태 스냅샷 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><a class="el" href="classdds_1_1sub_1_1_no_op_any_data_reader_listener.html#af32f77eee0a022f80dd9d5b8116716a2">dds::sub::NoOpAnyDataReaderListener</a>에서 구현되었습니다.</p>
+
+</div>
+</div>
+<a id="ad70501e73d92e0261ad8fb9a626374e8" name="ad70501e73d92e0261ad8fb9a626374e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad70501e73d92e0261ad8fb9a626374e8">◆ </a></span>on_sample_rejected()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void dds::sub::AnyDataReaderListener::on_sample_rejected </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdds_1_1sub_1_1_any_data_reader.html">AnyDataReader</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>the_reader</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const dds::core::status::SampleRejectedStatus &amp;</td>          <td class="paramname"><span class="paramname"><em>status</em></span> )</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>DataReader가 받은 sample을 거부할 때 호출됨 </p>
+<p>Entity와 상태 참조는 callback 중에 사용할 수 있도록 제공됩니다.</p>
+<dl class="params"><dt>매개변수</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[입출력]</td><td class="paramname">the_reader</td><td>이벤트를 보고하는 <a class="el" href="classdds_1_1sub_1_1_data_reader.html" title="Topic에서 지정된 타입의 sample을 수신합니다.">DataReader&lt;T&gt;</a> </td></tr>
+    <tr><td class="paramdir">[입력]</td><td class="paramname">status</td><td>이벤트의 상태 스냅샷 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><a class="el" href="classdds_1_1sub_1_1_no_op_any_data_reader_listener.html#ad5fd03865d22d1ea7f61c8f3020d06d0">dds::sub::NoOpAnyDataReaderListener</a>에서 구현되었습니다.</p>
+
+</div>
+</div>
+<a id="a0c960ca2975bc3de2b5c68694e54a0f0" name="a0c960ca2975bc3de2b5c68694e54a0f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c960ca2975bc3de2b5c68694e54a0f0">◆ </a></span>on_subscription_matched()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void dds::sub::AnyDataReaderListener::on_subscription_matched </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdds_1_1sub_1_1_any_data_reader.html">AnyDataReader</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>the_reader</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const dds::core::status::SubscriptionMatchedStatus &amp;</td>          <td class="paramname"><span class="paramname"><em>status</em></span> )</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>DataReader와 일치하는 publication의 세트가 변경될 때 호출됨 </p>
+<p>Entity와 상태 참조는 callback 중에 사용할 수 있도록 제공됩니다.</p>
+<dl class="params"><dt>매개변수</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[입출력]</td><td class="paramname">the_reader</td><td>이벤트를 보고하는 <a class="el" href="classdds_1_1sub_1_1_data_reader.html" title="Topic에서 지정된 타입의 sample을 수신합니다.">DataReader&lt;T&gt;</a> </td></tr>
+    <tr><td class="paramdir">[입력]</td><td class="paramname">status</td><td>이벤트의 상태 스냅샷 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><a class="el" href="classdds_1_1sub_1_1_no_op_any_data_reader_listener.html#a60ba75f41ed582015a99eba5f7bc6d7f">dds::sub::NoOpAnyDataReaderListener</a>에서 구현되었습니다.</p>
+
+</div>
+</div>
+<hr/>이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.:<ul>
+<li>include/gurumdds/cpp/sub/<b>AnyDataReaderListener.hpp</b></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div class="page-nav-panel" id="page-nav">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div class="navpath" id="nav-path"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="namespacedds.html">dds</a></li><li class="navelem"><a href="namespacedds_1_1sub.html">sub</a></li><li class="navelem"><a href="classdds_1_1sub_1_1_any_data_reader_listener.html">AnyDataReaderListener</a></li>
+    <li class="footer">다음에 의해 생성됨 :  <a href="https://www.doxygen.org/index.html"><img alt="doxygen" class="footer" height="31" src="doxygen.svg" width="104"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

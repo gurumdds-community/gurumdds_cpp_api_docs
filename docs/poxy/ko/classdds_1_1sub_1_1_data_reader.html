@@ -1,0 +1,1346 @@
+<!DOCTYPE html>
+<html lang="ko"><head>
+<meta charset="utf-8"/>
+<title>dds::sub::DataReader&lt;T&gt; | GurumDDS C++ API Reference</title>
+<link href="gurum-networks-logo.png" rel="icon" type="image/png"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="#cb4b16" name="theme-color"/>
+<link href="poxy/poxy.css" referrerpolicy="no-referrer" rel="stylesheet"/>
+<link href="ReferenceBranding.css" referrerpolicy="no-referrer" rel="stylesheet"/>
+<script src="poxy/poxy.js"></script>
+<script>initialize_theme("light");</script>
+<meta content="GurumDDS C++" name="twitter:title"/>
+<meta content="GurumDDS C++" property="og:title"/>
+<meta content="GurumDDS C++" itemprop="name"/>
+<meta content="API Reference" name="description"/>
+<meta content="API Reference" name="twitter:description"/>
+<meta content="API Reference" property="og:description"/>
+<meta content="API Reference" itemprop="description"/>
+<meta content="telephone=no" name="format-detection"/>
+<meta content="Poxy v0.27.2" name="generator"/>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<script defer="True" src="ReferenceUi.js"></script><link href="../en/classdds_1_1sub_1_1_data_reader.html" hreflang="en" rel="alternate"/><link href="../ko/classdds_1_1sub_1_1_data_reader.html" hreflang="ko" rel="alternate"/><link href="../language.css" rel="stylesheet"/><script defer="defer" src="../language.js"></script></head>
+<body class="poxy-has-toc">
+<header><nav id="navigation">
+<div class="m-container">
+<div class="m-row doc-language-header">
+<a class="m-col-t-8 m-col-m-none m-left-m" href="index.html" id="m-navbar-brand"><img alt="" src="gurum-networks-logo.png"/>GurumDDS C++ <span class="m-thin">API Reference</span></a>
+<div class="m-col-t-4 m-hide-m m-text-right m-nopadr">
+<a class="m-doc-search-icon" href="#search" onclick="return showSearch()" title="검색"><svg style="height: 0.9rem;" viewbox="0 0 16 16">
+<path d="m6 0c-3.31 0-6 2.69-6 6 0 3.31 2.69 6 6 6 1.49 0 2.85-0.541 3.89-1.44-0.0164 0.338 0.147 0.759 0.5 1.15l3.22 3.79c0.552 0.614 1.45 0.665 2 0.115 0.55-0.55 0.499-1.45-0.115-2l-3.79-3.22c-0.392-0.353-0.812-0.515-1.15-0.5 0.895-1.05 1.44-2.41 1.44-3.89 0-3.31-2.69-6-6-6zm0 1.56a4.44 4.44 0 0 1 4.44 4.44 4.44 4.44 0 0 1-4.44 4.44 4.44 4.44 0 0 1-4.44-4.44 4.44 4.44 0 0 1 4.44-4.44z" id="m-doc-search-icon-path"></path>
+</svg></a>
+<a href="#navigation" id="m-navbar-show" title="탐색 메뉴 열기"></a>
+<a href="#" id="m-navbar-hide" title="탐색 메뉴 닫기"></a>
+</div>
+<div class="m-col-t-12 m-show-m m-col-m-none m-right-m" id="m-navbar-collapse">
+<div class="m-row">
+<ol class="m-col-t-6 m-col-m-none">
+<li><a href="modules.html">모듈</a></li>
+<li><a href="annotated.html">클래스</a></li>
+<li><a href="namespaces.html">네임스페이스</a></li>
+</ol>
+<ol class="m-col-t-6 m-col-m-none" start="4">
+<li><a href="examples.html">예제</a></li>
+<li><a class="poxy-icon theme" href="javascript:void(null);" id="poxy-theme-switch" onclick="toggle_theme(); return false;" role="button" title="밝은 테마와 어두운 테마 전환"><svg id="poxy-theme-switch-img" version="1.1" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><circle cx="185.6708" cy="183.8122" fill="currentColor" r="65.625"></circle><path d="M185.6708,87.5622a13.1256,13.1256,0,0,0,13.125-13.125V52.5622a13.125,13.125,0,1,0-26.25,0v21.875A13.1257,13.1257,0,0,0,185.6708,87.5622Z" fill="currentColor"></path><path d="M99.051,115.7519a13.1236,13.1236,0,1,0,18.56-18.56L102.1442,81.726a13.1236,13.1236,0,0,0-18.5595,18.56Z" fill="currentColor"></path><path d="M89.4208,183.8122a13.1257,13.1257,0,0,0-13.125-13.125H54.4208a13.125,13.125,0,0,0,0,26.25h21.875A13.1256,13.1256,0,0,0,89.4208,183.8122Z" fill="currentColor"></path><path d="M99.051,251.8725,83.5847,267.3431a13.1236,13.1236,0,1,0,18.56,18.56l15.4663-15.4706a13.1236,13.1236,0,1,0-18.5595-18.56Z" fill="currentColor"></path><path d="M185.6708,280.0622a13.1258,13.1258,0,0,0-13.125,13.125v21.875a13.125,13.125,0,0,0,26.25,0v-21.875A13.1257,13.1257,0,0,0,185.6708,280.0622Z" fill="currentColor"></path><path d="M272.2907,251.8725a13.1236,13.1236,0,1,0-18.56,18.56l15.4663,15.4706a13.1236,13.1236,0,1,0,18.56-18.56Z" fill="currentColor"></path><path d="M330.0458,183.8122a13.1257,13.1257,0,0,0-13.125-13.125h-21.875a13.125,13.125,0,0,0,0,26.25h21.875A13.1256,13.1256,0,0,0,330.0458,183.8122Z" fill="currentColor"></path><path d="M263.0109,119.5971a13.0824,13.0824,0,0,0,9.28-3.8452l15.4663-15.4663a13.1236,13.1236,0,1,0-18.56-18.56L253.7312,97.1923a13.125,13.125,0,0,0,9.28,22.4048Z" fill="currentColor"></path><path d="M456.9379,401.6714a63.97,63.97,0,0,1-14.9963,7.2055c-19.6448,6.5283-41.8787,2.9566-58.1439-9.8523a68.9311,68.9311,0,0,1-10.835-10.8339c-12.8088-16.2663-16.3806-38.5-9.8523-58.1471a63.8444,63.8444,0,0,1,7.2077-14.9931,8.8036,8.8036,0,0,0-10.1172-13.3034,87.5188,87.5188,0,1,0,110.0372,110.04A8.8,8.8,0,0,0,456.9379,401.6714Z" fill="currentColor"></path></svg></a></li>
+<li class="m-show-m"><a class="m-doc-search-icon" href="#search" onclick="return showSearch()" title="검색"><svg style="height: 0.9rem;" viewbox="0 0 16 16">
+<use href="#m-doc-search-icon-path"></use>
+</svg></a></li>
+</ol>
+</div>
+</div>
+<label class="doc-language"><select aria-label="문서 언어" data-current="1"><option lang="en" value="../en/classdds_1_1sub_1_1_data_reader.html">English</option><option lang="en" selected="selected" value="../ko/classdds_1_1sub_1_1_data_reader.html">Korean</option></select></label></div>
+</div>
+</nav></header>
+<main><article>
+<div class="m-container m-container-inflatable">
+<div class="m-row">
+<div class="m-col-l-10 m-push-l-1">
+<nav aria-label="관련 문서" class="dds-page-links"><a href="group__dds__subscription.html">Subscription</a><a href="namespacedds_1_1sub.html">dds::sub</a><a href="group__dds__tutorial__reader.html">튜토리얼</a></nav><h1>
+<span class="m-breadcrumb"><a href="namespacedds.html">dds</a>::<wbr/></span><span class="m-breadcrumb"><a href="namespacedds_1_1sub.html">sub</a>::<wbr/></span> DataReader&lt;T&gt; <span class="m-thin">클래스</span>
+</h1><p class="dds-class-include"><code>#include &lt;gurumdds/cpp/sub/DataReader.hpp&gt;</code></p>
+<p>Topic에서 지정된 타입의 sample을 수신합니다.</p>
+<p>DataReader는 sample, 뷰, instance state 마스크를 적용해 로컬 history에서 sample을 선택합니다. <code>read()</code>는 반환한 sample을 history에 남겨 두고 읽음 상태로 표시합니다. <code>take()</code>는 반환한 sample을 history에서 제거합니다. payload가 없는 instance state 알림에도 메타데이터가 있습니다. <code>sample.data()</code>를 사용하기 전에 <code>sample.info().valid()</code>를 확인하세요. payload가 유효하지 않으면 sample의 메타데이터로 instance state를 확인하거나 handle을 얻을 수 있습니다.</p><p>일상적인 액세스를 위해 DataReader의 기본 필터를 사용합니다. <code>select()</code>와 함께 <a class="m-doc" href="classdds_1_1sub_1_1_data_reader_1_1_selector.html">Selector</a> 를 생성하여 특정 선택에 대한 instance, 상태 마스크 및 레코드 제한을 설정합니다.</p><aside class="m-note m-default"><h4>수신 연산 선택</h4></aside><table class="m-table"><thead><tr><th>목적</th><th>호출</th><th>필터 또는 상한</th></tr></thead><tbody><tr><td>레코드를 남기기</td><td><code>read()</code></td><td><a class="m-doc" href="classdds_1_1sub_1_1_data_reader.html">DataReader&lt;T&gt;</a> 기본 상태 필터를 사용합니다.</td></tr><tr><td>레코드 제거</td><td><code>take()</code></td><td><a class="m-doc" href="classdds_1_1sub_1_1_data_reader.html">DataReader&lt;T&gt;</a> 기본 상태 필터를 사용합니다.</td></tr><tr><td>한 번의 수신 범위 제한</td><td><code>select().max_samples(n).take()</code></td><td>Selector에 상태, instance, 개수를 설정합니다.</td></tr><tr><td>쓰기 가능한 저장 공간에 복사</td><td><code>read(out, n)</code> 또는 <code>take(out, n)</code></td><td>쓰기 가능한 위치를 <code>n</code>개 준비하고 양수 상한을 지정합니다.</td></tr></tbody></table><aside class="m-note m-default"><h4>참고 항목</h4><p><a class="m-doc" href="classdds_1_1sub_1_1_loaned_samples.html">dds::<wbr/>sub::<wbr/>LoanedSamples</a></p><p><a class="m-doc" href="group__dds__subscription.html#gac759142c11b5f0cb2b2a8f6c41405966">dds::<wbr/>sub::<wbr/>qos::<wbr/>DataReaderQos</a></p><p><a class="m-doc" href="namespacedds_1_1core_1_1status.html#abb43166d32256fc63bd26ce34140090d">dds::<wbr/>core::<wbr/>status::<wbr/>SubscriptionMatchedStatus</a></p><p><a class="m-doc" href="classdds_1_1sub_1_1_data_reader_listener.html">dds::<wbr/>sub::<wbr/>DataReaderListener</a></p><p><a class="m-doc" href="group__dds__qos.html#qos_policy_summary">QoS 정책 요약</a></p><p><a class="m-doc" href="group__dds__tutorial__reader.html">DataReader</a></p><p><a class="m-doc" href="dds_example_new_helloworld_listener.html">DataReader listener</a></p></aside>
+<figure class="dds-inheritance"><div class="dds-inheritance-graph"><svg height="40pt" viewbox="0.00 0.00 385.00 40.00" width="385pt" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g class="graph" id="graph0" transform="scale(1 1) rotate(0) translate(4 36)">
+<title>dds::sub::DataReader&lt; T, DELEGATE &gt;</title>
+<!-- Node1 -->
+<g class="node" id="Node000001">
+<title>Node1</title>
+<g id="a_Node000001"><a target="_top" xlink:title="Topic에서 지정된 타입의 sample을 수신합니다.">
+<polygon fill="#999999" points="377.25,-32 273.25,-32 273.25,0 377.25,0 377.25,-32" stroke="none"></polygon>
+<text font-family="Helvetica,sans-Serif" font-size="10.00" text-anchor="start" x="277.25" xml:space="preserve" y="-18.5">dds::sub::DataReader</text>
+<text font-family="Helvetica,sans-Serif" font-size="10.00" text-anchor="start" x="284.75" xml:space="preserve" y="-6.5">&lt; T, DELEGATE &gt;</text>
+<polygon fill="none" points="273.25,0 273.25,-32 377.25,-32 377.25,0 273.25,0" stroke="#666666"></polygon>
+</a>
+</g>
+</g>
+<!-- Node2 -->
+<g class="node" id="Node000002">
+<title>Node2</title>
+<g id="a_Node000002"><a target="_top" xlink:href="classdds_1_1core_1_1_t_entity.html" xlink:title=" ">
+<polygon fill="white" points="237.25,-32 135.5,-32 135.5,0 237.25,0 237.25,-32" stroke="none"></polygon>
+<text font-family="Helvetica,sans-Serif" font-size="10.00" text-anchor="start" x="139.5" xml:space="preserve" y="-18.5">dds::core::TEntity</text>
+<text font-family="Helvetica,sans-Serif" font-size="10.00" text-anchor="start" x="139.5" xml:space="preserve" y="-6.5">&lt; DELEGATE&lt; T &gt; &gt;</text>
+<polygon fill="none" points="135.5,0 135.5,-32 237.25,-32 237.25,0 135.5,0" stroke="#666666"></polygon>
+</a>
+</g>
+</g>
+<!-- Node2&#45;&gt;Node1 -->
+<g class="edge" id="edge1_Node000001_Node000002">
+<title>Node2-&gt;Node1</title>
+<g id="a_edge1_Node000001_Node000002"><a xlink:title=" ">
+<path d="M248.68,-16C256.92,-16 265.3,-16 273.34,-16" fill="none" stroke="#63b8ff"></path>
+<polygon fill="none" points="248.69,-12.5 238.69,-16 248.69,-19.5 248.69,-12.5" stroke="#63b8ff"></polygon>
+</a>
+</g>
+</g>
+<!-- Node3 -->
+<g class="node" id="Node000003">
+<title>Node3</title>
+<g id="a_Node000003"><a target="_top" xlink:href="classdds_1_1core_1_1_reference.html" xlink:title="DDS 참조 타입에 대한 공유-handle 연산을 정의합니다.">
+<polygon fill="white" points="99.5,-32 0,-32 0,0 99.5,0 99.5,-32" stroke="none"></polygon>
+<text font-family="Helvetica,sans-Serif" font-size="10.00" text-anchor="start" x="4" xml:space="preserve" y="-18.5">dds::core::Reference</text>
+<text font-family="Helvetica,sans-Serif" font-size="10.00" text-anchor="start" x="14.5" xml:space="preserve" y="-6.5">&lt; DELEGATE &gt;</text>
+<polygon fill="none" points="0,0 0,-32 99.5,-32 99.5,0 0,0" stroke="#666666"></polygon>
+</a>
+</g>
+</g>
+<!-- Node3&#45;&gt;Node2 -->
+<g class="edge" id="edge2_Node000002_Node000003">
+<title>Node3-&gt;Node2</title>
+<g id="a_edge2_Node000002_Node000003"><a xlink:title=" ">
+<path d="M110.71,-16C119.14,-16 127.73,-16 135.94,-16" fill="none" stroke="#63b8ff"></path>
+<polygon fill="none" points="110.87,-12.5 100.87,-16 110.87,-19.5 110.87,-12.5" stroke="#63b8ff"></polygon>
+</a>
+</g>
+</g>
+</g>
+</svg></div><figcaption>상속 다이어그램</figcaption></figure><details class="dds-reference-details" data-dds-signatures=""><summary>전체 템플릿 선언</summary><div class="m-doc-template">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename T</span>, <span class="m-doc-template-param">template&lt;typename Q&gt; class DELEGATE</span></span>&gt;</div><table class="m-table m-fullwidth m-flat">
+<thead>
+<tr><th colspan="2">템플릿 매개변수</th></tr>
+</thead>
+<tbody>
+<tr>
+<td style="width: 1%">T</td>
+<td>Topic 데이터 타입</td>
+</tr>
+<tr>
+<td>DELEGATE</td>
+<td><a class="m-doc" href="classdds_1_1sub_1_1_data_reader.html">DataReader&lt;T&gt;</a> 구현 템플릿</td>
+</tr>
+</tbody>
+</table></details><nav class="m-block m-default poxy-toc" id="poxy-toc">
+<h3>목차</h3>
+<ul>
+<li>
+              Reference
+              <ul>
+<li><a href="#base-classes">기반 클래스</a></li>
+<li><a href="#pub-types">공개 타입</a></li>
+<li><a href="#typeless-methods">생성자, 소멸자, 변환 연산자</a></li>
+<li><a href="#pub-methods">공개 함수</a></li>
+<li><a href="#pro-attribs">보호된 변수</a></li>
+<li><a href="#pub-methods-0">Sample 수신과 선택</a><a aria-label="Sample 수신과 선택" class="dds-detail-jump" href="#details-pub-methods-0"> →</a></li><li><a href="#pub-methods-1">Instance와 key</a><a aria-label="Instance와 key" class="dds-detail-jump" href="#details-pub-methods-1"> →</a></li><li><a href="#pub-methods-2">관련 Entity</a><a aria-label="관련 Entity" class="dds-detail-jump" href="#details-pub-methods-2"> →</a></li><li><a href="#pub-methods-3">DataReader QoS와 Listener</a><a aria-label="DataReader QoS와 Listener" class="dds-detail-jump" href="#details-pub-methods-3"> →</a></li><li><a href="#pub-methods-4">이전 데이터</a><a aria-label="이전 데이터" class="dds-detail-jump" href="#details-pub-methods-4"> →</a></li><li><a href="#pub-methods-5">DataReader 상태와 매칭</a><a aria-label="DataReader 상태와 매칭" class="dds-detail-jump" href="#details-pub-methods-5"> →</a></li>
+</ul>
+</li>
+</ul>
+</nav><section id="base-classes">
+<h2><a href="#base-classes">기반 클래스</a></h2>
+<dl class="m-doc">
+<dt>
+<div class="m-doc-template">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename DELEGATE</span></span>&gt;</div>
+              클래스 <a class="m-doc" href="classdds_1_1core_1_1_t_entity.html">dds::core::TEntity&lt;DELEGATE&lt;T&gt;&gt;</a>
+</dt>
+<dd>DDS <a class="m-doc" href="group__dds__core.html#ga9c487d701cb3e2131d9da3ddd608a9b4">Entity</a> handle에 대한 일반적인 작업을 제공합니다.</dd>
+</dl>
+</section>
+<section id="pub-types">
+<h2><a href="#pub-types">공개 타입</a></h2>
+<dl class="m-doc">
+<dt>
+              클래스 <a class="m-doc" href="classdds_1_1sub_1_1_data_reader_1_1_selector.html">Selector</a>
+</dt>
+<dd>상태, instance, 개수를 기준으로 sample을 선택합니다.</dd>
+<dt>
+              클래스 <a class="m-doc" href="classdds_1_1sub_1_1_data_reader_1_1_manipulator_selector.html">ManipulatorSelector</a>
+</dt>
+<dd></dd>
+<dt>
+              using <a class="m-doc" href="classdds_1_1core_1_1_t_entity.html#ae0ab06ef335ee07eac162d007155c326">BASE_T</a> = <a class="m-doc" href="classdds_1_1core_1_1_reference.html">dds::<wbr/>core::<wbr/>Reference</a>&lt;DELEGATE&gt;
+            </dt>
+<dd></dd>
+<dt>
+              using <a class="m-doc" href="classdds_1_1core_1_1_t_entity.html#ae38d068d6ed16649727e129829568de6">DELEGATE_REF_T</a> = <a class="m-doc" href="structdds_1_1core_1_1smart__ptr__traits.html">::<wbr/>dds::<wbr/>core::<wbr/>smart_ptr_traits</a>&lt;DELEGATE&gt;::ref_type
+            </dt>
+<dd></dd>
+<dt>
+              using <a class="m-doc" href="classdds_1_1core_1_1_t_entity.html#a0f7165a2d03c3f8fa9055d66e4f4205b">DELEGATE_T</a> = DELEGATE
+            </dt>
+<dd></dd>
+<dt>
+              using <a class="m-doc" href="classdds_1_1core_1_1_t_entity.html#ab4572e93bd3b4b0fb8f07463df7e10d3">DELEGATE_WEAK_REF_T</a> = <a class="m-doc" href="structdds_1_1core_1_1smart__ptr__traits.html">::<wbr/>dds::<wbr/>core::<wbr/>smart_ptr_traits</a>&lt;DELEGATE&gt;::weak_ref_type
+            </dt>
+<dd></dd>
+<dt id="a5aa616b2927fd8d4ad234c26ceed13e4">
+              using <a class="m-doc-self" href="#a5aa616b2927fd8d4ad234c26ceed13e4">DataType</a> = T
+            </dt>
+<dd></dd>
+<dt id="a35c75e4847d5bc95ab72d7c64f2451da">
+              using <a class="m-doc-self" href="#a35c75e4847d5bc95ab72d7c64f2451da">Listener</a> = <a class="m-doc" href="classdds_1_1sub_1_1_data_reader_listener.html">::<wbr/>dds::<wbr/>sub::<wbr/>DataReaderListener</a>&lt;T&gt;
+            </dt>
+<dd></dd>
+</dl>
+</section>
+<section id="typeless-methods">
+<h2><a href="#typeless-methods">생성자, 소멸자, 변환 연산자</a></h2>
+<dl class="m-doc">
+<dt>
+<span class="m-doc-wrap-bumper"><a class="m-doc" href="#adfb0369ca408857cac5a09dd871b1250">DataReader</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="group__dds__subscription.html#ga9a6d78b2a23f864211da5bd2edf28750">dds::<wbr/>sub::<wbr/>Subscriber</a>&amp; sub,
+              const <a class="m-doc" href="classdds_1_1topic_1_1_topic.html">::dds::topic::Topic&lt;T&gt;</a>&lt;T&gt;&amp; topic)</span>
+</dt>
+<dd>Subscriber의 기본 <a class="m-doc" href="classdds_1_1sub_1_1_data_reader.html">DataReader&lt;T&gt;</a> QoS로 <code>DataReader</code>를 생성합니다.</dd>
+<dt>
+<span class="m-doc-wrap-bumper"><a class="m-doc" href="#aa13332a58982c39fe67ecdaa66857bbd">DataReader</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="group__dds__subscription.html#ga9a6d78b2a23f864211da5bd2edf28750">dds::<wbr/>sub::<wbr/>Subscriber</a>&amp; sub,
+              const <a class="m-doc" href="classdds_1_1topic_1_1_topic.html">::dds::topic::Topic&lt;T&gt;</a>&lt;T&gt;&amp; topic,
+              const <a class="m-doc" href="group__dds__subscription.html#gac759142c11b5f0cb2b2a8f6c41405966">dds::<wbr/>sub::<wbr/>qos::<wbr/>DataReaderQos</a>&amp; qos,
+              <a class="m-doc" href="classdds_1_1sub_1_1_data_reader_listener.html">dds::<wbr/>sub::<wbr/>DataReaderListener</a>&lt;T&gt;* listener = NULL,
+              const <a class="m-doc" href="classdds_1_1core_1_1status_1_1_status_mask.html">dds::<wbr/>core::<wbr/>status::<wbr/>StatusMask</a>&amp; mask = <a class="m-doc" href="classdds_1_1core_1_1status_1_1_status_mask.html#a2d5d96c01cceb09a14ff466f43be8173">::<wbr/>dds::<wbr/>core::<wbr/>status::<wbr/>StatusMask::<wbr/>all</a>())</span>
+</dt>
+<dd>지정된 QoS로 <code>DataReader</code>를 생성합니다.</dd>
+<dt>
+<span class="m-doc-wrap-bumper"><a class="m-doc" href="#af32584d93a8dabce1309769d3ca0447c">DataReader</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="group__dds__subscription.html#ga9a6d78b2a23f864211da5bd2edf28750">dds::<wbr/>sub::<wbr/>Subscriber</a>&amp; sub,
+              const <a class="m-doc" href="classdds_1_1topic_1_1_content_filtered_topic.html">::dds::topic::ContentFilteredTopic&lt;T&gt;</a>&lt;T&gt;&amp; topic)</span>
+</dt>
+<dd><code>ContentFilteredTopic</code>의 <code>DataReader</code>를 Subscriber의 기본 <a class="m-doc" href="classdds_1_1sub_1_1_data_reader.html">DataReader&lt;T&gt;</a> QoS로 생성합니다.</dd>
+<dt>
+<span class="m-doc-wrap-bumper"><a class="m-doc" href="#a37a0c7fe63ff2e00d8c07c8452402102">DataReader</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="group__dds__subscription.html#ga9a6d78b2a23f864211da5bd2edf28750">dds::<wbr/>sub::<wbr/>Subscriber</a>&amp; sub,
+              const <a class="m-doc" href="classdds_1_1topic_1_1_content_filtered_topic.html">::dds::topic::ContentFilteredTopic&lt;T&gt;</a>&lt;T&gt;&amp; topic,
+              const <a class="m-doc" href="group__dds__subscription.html#gac759142c11b5f0cb2b2a8f6c41405966">dds::<wbr/>sub::<wbr/>qos::<wbr/>DataReaderQos</a>&amp; qos,
+              <a class="m-doc" href="classdds_1_1sub_1_1_data_reader_listener.html">dds::<wbr/>sub::<wbr/>DataReaderListener</a>&lt;T&gt;* listener = NULL,
+              const <a class="m-doc" href="classdds_1_1core_1_1status_1_1_status_mask.html">dds::<wbr/>core::<wbr/>status::<wbr/>StatusMask</a>&amp; mask = <a class="m-doc" href="classdds_1_1core_1_1status_1_1_status_mask.html#a2d5d96c01cceb09a14ff466f43be8173">::<wbr/>dds::<wbr/>core::<wbr/>status::<wbr/>StatusMask::<wbr/>all</a>())</span>
+</dt>
+<dd><code>ContentFilteredTopic</code>의 <code>DataReader</code>를 지정된 QoS로 생성합니다.</dd>
+<dt>
+<span class="m-doc-wrap-bumper"><a class="m-doc" href="classdds_1_1core_1_1_reference.html#a80cff5eadf8554d3b5772b352c518fe8">operator DELEGATE_REF_T</a>(</span><span class="m-doc-wrap">) const</span>
+</dt>
+<dd>저장된 구현 객체 포인터에 접근합니다</dd>
+<dt>
+<span class="m-doc-wrap-bumper"><a class="m-doc" href="classdds_1_1core_1_1_reference.html#a6e30d68985ca187b16562617d4a7b9f9">operator DELEGATE_REF_T&amp;</a>(</span><span class="m-doc-wrap">)</span>
+</dt>
+<dd>저장된 구현 객체 포인터에 접근합니다</dd>
+<dt>
+<span class="m-doc-wrap-bumper"><a class="m-doc" href="classdds_1_1core_1_1_reference.html#a373c3aa4c921f21eabdf3a020ac8ef0c">operator const DELEGATE_REF_T&amp;</a>(</span><span class="m-doc-wrap">) const</span>
+</dt>
+<dd>저장된 구현 객체 포인터에 접근합니다</dd>
+<dt>
+<span class="m-doc-wrap-bumper"><a class="m-doc" href="#aef027249fc2c68406668b1dea512a195">~DataReader</a>(</span><span class="m-doc-wrap">)</span>
+</dt>
+<dd>이 <a class="m-doc" href="classdds_1_1sub_1_1_data_reader.html">DataReader&lt;T&gt;</a> handle을 해제합니다.</dd>
+</dl>
+</section>
+<section id="pub-methods">
+<h2><a href="#pub-methods">공개 함수</a></h2>
+<dl class="m-doc">
+<dt>
+<span class="m-doc-wrap-bumper">void <a class="m-doc" href="classdds_1_1core_1_1_t_entity.html#af8f8ea2b0053002aaba7be9f3ab3184b">close</a>(</span><span class="m-doc-wrap">)</span>
+</dt>
+<dd><a class="m-doc" href="group__dds__core.html#ga9c487d701cb3e2131d9da3ddd608a9b4">Entity</a> 구현 객체에 대한 명시적 close 연산을 노출합니다.</dd>
+<dt>
+<span class="m-doc-wrap-bumper">auto <a class="m-doc" href="classdds_1_1core_1_1_reference.html#a0a024fbfa03682004825f278ad114d7c">delegate</a>(</span><span class="m-doc-wrap">) const →  const <a class="m-doc" href="classdds_1_1core_1_1_t_entity.html#ae38d068d6ed16649727e129829568de6">DELEGATE_<wbr/>REF_<wbr/>T</a>&amp;</span>
+</dt>
+<dd></dd>
+<dt>
+<span class="m-doc-wrap-bumper">auto <a class="m-doc" href="classdds_1_1core_1_1_reference.html#a0da9a614a6f6158cd7f0a7ba491cf127">delegate</a>(</span><span class="m-doc-wrap">) →  <a class="m-doc" href="classdds_1_1core_1_1_t_entity.html#ae38d068d6ed16649727e129829568de6">DELEGATE_<wbr/>REF_<wbr/>T</a>&amp;</span>
+</dt>
+<dd></dd>
+<dt>
+<span class="m-doc-wrap-bumper">void <a class="m-doc" href="classdds_1_1core_1_1_t_entity.html#ae5bece31716bf36a99e579294ac2da00">enable</a>(</span><span class="m-doc-wrap">)</span>
+</dt>
+<dd>C 레이어가 이 Entity를 사용할 수 있도록 요청</dd>
+<dt>
+<span class="m-doc-wrap-bumper">auto <a class="m-doc" href="classdds_1_1core_1_1_t_entity.html#ae071a4ffa15ea47acc2cca09d76e03af">instance_handle</a>(</span><span class="m-doc-wrap">) const →  const <a class="m-doc" href="group__dds__core.html#ga8ee18acd2002fb15f2650f5c7cb055d0">dds::<wbr/>core::<wbr/>InstanceHandle</a></span>
+</dt>
+<dd>이 Entity의 instance handle을 가져옵니다</dd>
+<dt>
+<span class="m-doc-wrap-bumper">auto <a class="m-doc" href="classdds_1_1core_1_1_reference.html#aba3a3901a14d7999e39e0bdd7efc1023">is_nil</a>(</span><span class="m-doc-wrap">) const →  bool</span>
+</dt>
+<dd></dd>
+<dt>
+<div class="m-doc-template">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename R</span></span>&gt;</div>
+<span class="m-doc-wrap-bumper">auto <a class="m-doc" href="classdds_1_1core_1_1_reference.html#ac0f06ae1197b8ccec9d35cbe20302797">operator!=</a>(</span><span class="m-doc-wrap">const R&amp; ref) const →  bool</span>
+</dt>
+<dd></dd>
+<dt>
+<span class="m-doc-wrap-bumper">auto <a class="m-doc" href="classdds_1_1core_1_1_reference.html#abb281aa6cfee0f470c311d420525e8b9">operator!=</a>(</span><span class="m-doc-wrap">const null_type nil) const →  bool</span>
+</dt>
+<dd>이 handle에 구현 객체가 있는지 확인합니다</dd>
+<dt>
+<span class="m-doc-wrap-bumper">auto <a class="m-doc" href="classdds_1_1core_1_1_reference.html#a5719abf42970dad5751f69531de91fb3">operator-&gt;</a>(</span><span class="m-doc-wrap">) →  DELEGATE*</span>
+</dt>
+<dd></dd>
+<dt>
+<span class="m-doc-wrap-bumper">auto <a class="m-doc" href="classdds_1_1core_1_1_reference.html#a35437fb6e2e4e139ff2394c73d8dbb3a">operator-&gt;</a>(</span><span class="m-doc-wrap">) const →  const DELEGATE*</span>
+</dt>
+<dd></dd>
+<dt>
+<div class="m-doc-template">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename R</span></span>&gt;</div>
+<span class="m-doc-wrap-bumper">auto <a class="m-doc" href="classdds_1_1core_1_1_reference.html#a4a3c2a0f5c12439fef21afa0cd189735">operator==</a>(</span><span class="m-doc-wrap">const R&amp; ref) const →  bool</span>
+</dt>
+<dd></dd>
+<dt>
+<span class="m-doc-wrap-bumper">auto <a class="m-doc" href="classdds_1_1core_1_1_reference.html#a253245a76f79b7415030ae5f00313651">operator==</a>(</span><span class="m-doc-wrap">const null_type) const →  bool</span>
+</dt>
+<dd></dd>
+<dt>
+<span class="m-doc-wrap-bumper">void <a class="m-doc" href="classdds_1_1core_1_1_t_entity.html#ac317023c350c2a1938e15755d2070a56">retain</a>(</span><span class="m-doc-wrap">)</span>
+</dt>
+<dd>네이티브 Entity를 구현 객체에 의해 보존된 것으로 표시합니다</dd>
+<dt>
+<span class="m-doc-wrap-bumper">auto <a class="m-doc" href="classdds_1_1core_1_1_t_entity.html#a19ada6b4919fd7f45a79ade070dc14bb">status_changes</a>(</span><span class="m-doc-wrap">) →  const <a class="m-doc" href="classdds_1_1core_1_1status_1_1_status_mask.html">dds::<wbr/>core::<wbr/>status::<wbr/>StatusMask</a></span>
+</dt>
+<dd>Entity의 상태변경 쿼리를 노출합니다</dd>
+</dl>
+</section>
+<section id="pro-attribs">
+<h2><a href="#pro-attribs">보호된 변수</a></h2>
+<dl class="m-doc">
+<dt>
+<a class="m-doc" href="classdds_1_1core_1_1_t_entity.html#ae38d068d6ed16649727e129829568de6">DELEGATE_<wbr/>REF_<wbr/>T</a> <a class="m-doc" href="classdds_1_1core_1_1_reference.html#ab3a71f25696efba22cf3744cf5826839">impl_</a>
+</dt>
+<dd></dd>
+</dl>
+</section>
+<section id="pub-methods-0">
+<h2><a href="#pub-methods-0">Sample 수신과 선택</a></h2>
+<dl class="m-doc">
+<dt>
+<span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#a5d0ac7ed32117e5fa49bf63ecf407a3d">default_filter_state</a>(</span><span class="m-doc-wrap">) →  const <a class="m-doc" href="classdds_1_1sub_1_1status_1_1_data_state.html">dds::<wbr/>sub::<wbr/>status::<wbr/>DataState</a>&amp;</span>
+</dt>
+<dd>DataReader의 기본 상태 필터를 가져옵니다</dd>
+<dt>
+<span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#abaf440038763a6fe85b184be0c2d07d1">default_filter_state</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdds_1_1sub_1_1status_1_1_data_state.html">dds::<wbr/>sub::<wbr/>status::<wbr/>DataState</a>&amp; state) →  <a class="m-doc" href="#adfb0369ca408857cac5a09dd871b1250">DataReader</a>&amp;</span>
+</dt>
+<dd>직접 읽기 및 받기 호출에 대한 기본 상태 필터를 설정합니다</dd>
+<dt>
+<span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#aacb1541f2f1a171b2ca70950cb0e54a4">operator&gt;&gt;</a>(</span><span class="m-doc-wrap"><a class="m-doc" href="classdds_1_1sub_1_1_loaned_samples.html">dds::<wbr/>sub::<wbr/>LoanedSamples</a>&lt;T&gt;&amp; ls) →  <a class="m-doc" href="#adfb0369ca408857cac5a09dd871b1250">DataReader</a>&amp;</span>
+</dt>
+<dd>레코드를 loaned collection에 담습니다.</dd>
+<dt>
+<span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#a3c8c07160aee3a06a137276bfe25f9be">operator&gt;&gt;</a>(</span><span class="m-doc-wrap"><a class="m-doc" href="classdds_1_1sub_1_1_data_reader_1_1_manipulator_selector.html">ManipulatorSelector</a>&amp;manipulator)(ManipulatorSelector &amp;) →  <a class="m-doc" href="classdds_1_1sub_1_1_data_reader_1_1_manipulator_selector.html">ManipulatorSelector</a></span>
+</dt>
+<dd>스트리밍으로 sample 선택 조건을 적용합니다</dd>
+<dt>
+<div class="m-doc-template">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename Functor</span></span>&gt;</div>
+<span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#a494134aadef0d9fed2c838b7e579519e">operator&gt;&gt;</a>(</span><span class="m-doc-wrap">Functor f) →  <a class="m-doc" href="classdds_1_1sub_1_1_data_reader_1_1_manipulator_selector.html">ManipulatorSelector</a></span>
+</dt>
+<dd>스트리밍으로 sample 선택 조건을 적용합니다</dd>
+<dt>
+<span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#a9f2bc3c9b1817f4601a8ffff0698cca2">read</a>(</span><span class="m-doc-wrap">) →  <a class="m-doc" href="classdds_1_1sub_1_1_loaned_samples.html">LoanedSamples</a>&lt;T&gt;</span>
+</dt>
+<dd>기본 상태 필터와 일치하는 sample을 읽습니다</dd>
+<dt>
+<div class="m-doc-template">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename SamplesFWIterator</span></span>&gt;</div>
+<span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#a080e40bce146ef790ba07c218e1e6cbf">read</a>(</span><span class="m-doc-wrap">SamplesFWIterator sfit,
+              <a class="m-doc poxy-injected poxy-external poxy-cppreference" href="https://en.cppreference.com/w/cpp/types/integer" target="_blank">uint32_t</a> max_samples) →  <a class="m-doc poxy-injected poxy-external poxy-cppreference" href="https://en.cppreference.com/w/cpp/types/integer" target="_blank">uint32_t</a></span>
+</dt>
+<dd>일치하는 sample을 읽어 기존 저장 공간에 씁니다.</dd>
+<dt>
+<div class="m-doc-template">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename SamplesBIIterator</span></span>&gt;</div>
+<span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#a6e76898dbb75038c66671517c2f8fbd5">read</a>(</span><span class="m-doc-wrap">SamplesBIIterator sbit) →  <a class="m-doc poxy-injected poxy-external poxy-cppreference" href="https://en.cppreference.com/w/cpp/types/integer" target="_blank">uint32_t</a></span>
+</dt>
+<dd></dd>
+<dt>
+<span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#a9cb9dd07e18da910737a64d4fe06037c">read_w_sampleinfoex</a>(</span><span class="m-doc-wrap">) →  <a class="m-doc" href="classdds_1_1sub_1_1_loaned_samples.html">LoanedSamples</a>&lt;T, ::dds::core::detail::SampleInfoEx&gt;</span>
+</dt>
+<dd>확장 메타데이터와 함께 sample을 읽습니다.</dd>
+<dt>
+<span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#a4c9879cf567d4d627f02cd90247794ac">select</a>(</span><span class="m-doc-wrap">) →  <a class="m-doc" href="classdds_1_1sub_1_1_data_reader_1_1_selector.html">Selector</a></span>
+</dt>
+<dd>이 DataReader에서 새 선택을 시작합니다</dd>
+<dt>
+<span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#a01ee9d4461154984f4f87ba8af5d438c">take</a>(</span><span class="m-doc-wrap">) →  <a class="m-doc" href="classdds_1_1sub_1_1_loaned_samples.html">LoanedSamples</a>&lt;T&gt;</span>
+</dt>
+<dd>기본 상태 필터와 일치하는 sample을 가져옵니다.</dd>
+<dt>
+<div class="m-doc-template">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename SamplesFWIterator</span></span>&gt;</div>
+<span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#a019a220bf9e02db0beebc071dec95462">take</a>(</span><span class="m-doc-wrap">SamplesFWIterator sfit,
+              <a class="m-doc poxy-injected poxy-external poxy-cppreference" href="https://en.cppreference.com/w/cpp/types/integer" target="_blank">uint32_t</a> max_samples) →  <a class="m-doc poxy-injected poxy-external poxy-cppreference" href="https://en.cppreference.com/w/cpp/types/integer" target="_blank">uint32_t</a></span>
+</dt>
+<dd>일치하는 sample을 가져와 기존 저장 공간에 씁니다.</dd>
+<dt>
+<div class="m-doc-template">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename SamplesBIIterator</span></span>&gt;</div>
+<span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#a2145ed877ab68fc59a98a134d22162c2">take</a>(</span><span class="m-doc-wrap">SamplesBIIterator sbit) →  <a class="m-doc poxy-injected poxy-external poxy-cppreference" href="https://en.cppreference.com/w/cpp/types/integer" target="_blank">uint32_t</a></span>
+</dt>
+<dd>일치하는 sample을 가져와 확장 가능한 컨테이너에 추가합니다.</dd>
+<dt>
+<span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#a2aec1fdf8dd542ee195571e747cc8188">take_w_sampleinfoex</a>(</span><span class="m-doc-wrap">) →  <a class="m-doc" href="classdds_1_1sub_1_1_loaned_samples.html">LoanedSamples</a>&lt;T, ::dds::core::detail::SampleInfoEx&gt;</span>
+</dt>
+<dd>확장 메타데이터와 함께 sample을 가져옵니다.</dd>
+</dl>
+</section><section id="pub-methods-1">
+<h2><a href="#pub-methods-1">Instance와 key</a></h2>
+<dl class="m-doc">
+<dt>
+<span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#a83f22f9a5c72361bc5bbf875df05a238">key_value</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="group__dds__core.html#ga8ee18acd2002fb15f2650f5c7cb055d0">dds::<wbr/>core::<wbr/>InstanceHandle</a>&amp; h) →  <a class="m-doc" href="classdds_1_1topic_1_1_topic_instance.html">dds::<wbr/>topic::<wbr/>TopicInstance</a>&lt;T&gt;</span>
+</dt>
+<dd>이 DataReader에 알려진 instance의 키를 가져옵니다</dd>
+<dt>
+<span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#a1286cd3eade422053654d6f2f303ce19">key_value</a>(</span><span class="m-doc-wrap">T&amp; sample,
+              const <a class="m-doc" href="group__dds__core.html#ga8ee18acd2002fb15f2650f5c7cb055d0">dds::<wbr/>core::<wbr/>InstanceHandle</a>&amp; h) →  T&amp;</span>
+</dt>
+<dd>instance의 키를 기존 sample에 복사합니다</dd>
+<dt>
+<span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#a2953a4fd380101d8e658280422f5ad3e">lookup_instance</a>(</span><span class="m-doc-wrap">const T&amp; key) const →  const <a class="m-doc" href="group__dds__core.html#ga8ee18acd2002fb15f2650f5c7cb055d0">dds::<wbr/>core::<wbr/>InstanceHandle</a></span>
+</dt>
+<dd>키로 로컬 <a class="m-doc" href="classdds_1_1sub_1_1_data_reader.html">DataReader&lt;T&gt;</a> instance를 찾습니다</dd>
+</dl>
+</section><section id="pub-methods-2">
+<h2><a href="#pub-methods-2">관련 Entity</a></h2>
+<dl class="m-doc">
+<dt>
+<span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#a9a196cab1840ef272376c7809a4c564c">subscriber</a>(</span><span class="m-doc-wrap">) const →  const <a class="m-doc" href="group__dds__subscription.html#ga9a6d78b2a23f864211da5bd2edf28750">dds::<wbr/>sub::<wbr/>Subscriber</a>&amp;</span>
+</dt>
+<dd></dd>
+<dt>
+<span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#a3c76de78f051edaeb7e4b359df1de0cf">topic_description</a>(</span><span class="m-doc-wrap">) const →  <a class="m-doc" href="classdds_1_1topic_1_1_topic_description.html">dds::<wbr/>topic::<wbr/>TopicDescription</a>&lt;<a class="m-doc" href="#a5aa616b2927fd8d4ad234c26ceed13e4">DataType</a>&gt;</span>
+</dt>
+<dd></dd>
+</dl>
+</section><section id="pub-methods-3">
+<h2><a href="#pub-methods-3">DataReader QoS와 Listener</a></h2>
+<dl class="m-doc">
+<dt>
+<span class="m-doc-wrap-bumper">void <a class="m-doc" href="#a234cae0964ab8517f60b4a27d62de2fa">listener</a>(</span><span class="m-doc-wrap"><a class="m-doc" href="#a35c75e4847d5bc95ab72d7c64f2451da">Listener</a>* the_listener,
+              const <a class="m-doc" href="classdds_1_1core_1_1status_1_1_status_mask.html">dds::<wbr/>core::<wbr/>status::<wbr/>StatusMask</a>&amp; event_mask)</span>
+</dt>
+<dd>선택한 <a class="m-doc" href="classdds_1_1sub_1_1_data_reader.html">DataReader&lt;T&gt;</a> 상태에 대한 listener를 등록합니다</dd>
+<dt>
+<span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#a63c6f049aa2740d6c7afc113d50d4a61">listener</a>(</span><span class="m-doc-wrap">) const →  <a class="m-doc" href="#a35c75e4847d5bc95ab72d7c64f2451da">Listener</a>*</span>
+</dt>
+<dd></dd>
+<dt>
+<span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#a1837aa620c24c27fcf1057b9283ba3ca">operator&lt;&lt;</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="group__dds__subscription.html#gac759142c11b5f0cb2b2a8f6c41405966">dds::<wbr/>sub::<wbr/>qos::<wbr/>DataReaderQos</a>&amp; the_qos) →  <a class="m-doc" href="#adfb0369ca408857cac5a09dd871b1250">DataReader</a>&amp;</span>
+</dt>
+<dd>이 DataReader에 QoS 정책을 적용합니다.</dd>
+<dt>
+<span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#a6b98500ed8a84501458be2c5362b0dc1">operator&gt;&gt;</a>(</span><span class="m-doc-wrap"><a class="m-doc" href="group__dds__subscription.html#gac759142c11b5f0cb2b2a8f6c41405966">dds::<wbr/>sub::<wbr/>qos::<wbr/>DataReaderQos</a>&amp; the_qos) →  <a class="m-doc" href="#adfb0369ca408857cac5a09dd871b1250">DataReader</a>&amp;</span>
+</dt>
+<dd>DataReader의 현재 QoS 정책을 대상으로 복사합니다.</dd>
+<dt>
+<span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#a1e384cbd8318cf3bcc7fada6b335b282">qos</a>(</span><span class="m-doc-wrap">) const →  const <a class="m-doc" href="group__dds__subscription.html#gac759142c11b5f0cb2b2a8f6c41405966">dds::<wbr/>sub::<wbr/>qos::<wbr/>DataReaderQos</a>&amp;</span>
+</dt>
+<dd></dd>
+<dt>
+<span class="m-doc-wrap-bumper">void <a class="m-doc" href="#a5f3ffab35c4b91b64a8d7ff567026db2">qos</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="group__dds__subscription.html#gac759142c11b5f0cb2b2a8f6c41405966">dds::<wbr/>sub::<wbr/>qos::<wbr/>DataReaderQos</a>&amp; the_qos)</span>
+</dt>
+<dd></dd>
+</dl>
+</section><section id="pub-methods-4">
+<h2><a href="#pub-methods-4">이전 데이터</a></h2>
+<dl class="m-doc">
+<dt>
+<span class="m-doc-wrap-bumper">void <a class="m-doc" href="#ac4c9b3b717ccdad03d70b1644d0f1a12">wait_for_historical_data</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdds_1_1core_1_1_duration.html">dds::<wbr/>core::<wbr/>Duration</a>&amp; timeout)</span>
+</dt>
+<dd>C 라이브러리로 history 데이터 대기 요청을 전달합니다.</dd>
+</dl>
+</section><section id="pub-methods-5">
+<h2><a href="#pub-methods-5">DataReader 상태와 매칭</a></h2>
+<dl class="m-doc">
+<dt>
+<span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#a14b0503cc46371971a1fcf39d85b2053">liveliness_changed_status</a>(</span><span class="m-doc-wrap">) const →  const <a class="m-doc" href="namespacedds_1_1core_1_1status.html#a5314c4075763105161d295a7933db13d">dds::<wbr/>core::<wbr/>status::<wbr/>LivelinessChangedStatus</a></span>
+</dt>
+<dd>일치하는 DataWriter Liveliness의 변화에 대한 <a class="m-doc" href="classdds_1_1sub_1_1_data_reader.html">DataReader&lt;T&gt;</a> 상태를 가져옵니다</dd>
+<dt>
+<span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#ae778fd9f4672182abd26f64ad010d4ea">requested_deadline_missed_status</a>(</span><span class="m-doc-wrap">) →  const <a class="m-doc" href="namespacedds_1_1core_1_1status.html#afe3225b6689c6d6c32f99642822c2b0d">dds::<wbr/>core::<wbr/>status::<wbr/>RequestedDeadlineMissedStatus</a></span>
+</dt>
+<dd>요청된 업데이트 간격을 놓친 instance의 <a class="m-doc" href="classdds_1_1sub_1_1_data_reader.html">DataReader&lt;T&gt;</a> 상태를 가져옵니다.</dd>
+<dt>
+<span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#a8852e493189251094bc58f6b220712c6">requested_incompatible_qos_status</a>(</span><span class="m-doc-wrap">) const →  const <a class="m-doc" href="namespacedds_1_1core_1_1status.html#a5eff3bdd977e5b923e3610f347a64449">dds::<wbr/>core::<wbr/>status::<wbr/>RequestedIncompatibleQosStatus</a></span>
+</dt>
+<dd>호환되지 않는 QoS 정책에 대한 <a class="m-doc" href="classdds_1_1sub_1_1_data_reader.html">DataReader&lt;T&gt;</a> 상태를 가져옵니다.</dd>
+<dt>
+<span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#ad1a8eab152f095bf973d3a177e3bac20">sample_lost_status</a>(</span><span class="m-doc-wrap">) const →  const <a class="m-doc" href="namespacedds_1_1core_1_1status.html#a04af02f4c95b6f099b2eee842879808b">dds::<wbr/>core::<wbr/>status::<wbr/>SampleLostStatus</a></span>
+</dt>
+<dd>전달되기 전에 손실된 sample에 대한 <a class="m-doc" href="classdds_1_1sub_1_1_data_reader.html">DataReader&lt;T&gt;</a> 상태를 가져옵니다</dd>
+<dt>
+<span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#a9fc4ee24fcb1f13d6f98c0201d9a4136">sample_rejected_status</a>(</span><span class="m-doc-wrap">) const →  const <a class="m-doc" href="namespacedds_1_1core_1_1status.html#a545c7d7cb2c055ebffb2f1770f76da01">dds::<wbr/>core::<wbr/>status::<wbr/>SampleRejectedStatus</a></span>
+</dt>
+<dd>sample 거부에 대한 <a class="m-doc" href="classdds_1_1sub_1_1_data_reader.html">DataReader&lt;T&gt;</a> 상태 및 최근 원인 가져옵니다.</dd>
+<dt>
+<span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#a08c009efb49a3ad883d17b9ede60ed6c">subscription_matched_status</a>(</span><span class="m-doc-wrap">) const →  const <a class="m-doc" href="namespacedds_1_1core_1_1status.html#abb43166d32256fc63bd26ce34140090d">dds::<wbr/>core::<wbr/>status::<wbr/>SubscriptionMatchedStatus</a></span>
+</dt>
+<dd>현재 및 누적된 Publication 매칭에 대한 <a class="m-doc" href="classdds_1_1sub_1_1_data_reader.html">DataReader&lt;T&gt;</a> 상태를 가져옵니다.</dd>
+</dl>
+</section>
+<section>
+<h2>멤버 함수</h2><h3 class="dds-method-group" id="details-pub-methods-0">Sample 수신과 선택</h3><section class="m-doc-details" id="a5d0ac7ed32117e5fa49bf63ecf407a3d"><div>
+<h3>
+<div class="m-doc-template dds-full-signature">
+<span class="m-doc-template-parent">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename T</span>, <span class="m-doc-template-param">template&lt;typename Q&gt; class DELEGATE</span></span>&gt;</span>
+</div>
+<span class="m-doc-wrap-bumper">const <a class="m-doc" href="classdds_1_1sub_1_1status_1_1_data_state.html">dds::<wbr/>sub::<wbr/>status::<wbr/>DataState</a>&amp; <span class="m-doc-details-prefix">dds::sub::DataReader::</span></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a5d0ac7ed32117e5fa49bf63ecf407a3d">default_filter_state</a>(</span><span class="m-doc-wrap">)</span></span>
+</h3>
+<p>DataReader의 기본 상태 필터를 가져옵니다</p>
+<table class="m-table m-fullwidth m-flat">
+<tfoot>
+<tr>
+<th style="width: 1%">반환값</th>
+<td>DataReader에 저장된 필터를 참조</td>
+</tr>
+</tfoot>
+</table>
+<p>초기 필터는 모든 sample, 뷰 및 instance state를 수락합니다.</p>
+</div></section><section class="m-doc-details" id="abaf440038763a6fe85b184be0c2d07d1"><div>
+<h3>
+<div class="m-doc-template dds-full-signature">
+<span class="m-doc-template-parent">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename T</span>, <span class="m-doc-template-param">template&lt;typename Q&gt; class DELEGATE</span></span>&gt;</span>
+</div>
+<span class="m-doc-wrap-bumper"><a class="m-doc" href="#adfb0369ca408857cac5a09dd871b1250">DataReader</a>&amp; <span class="m-doc-details-prefix">dds::sub::DataReader::</span></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#abaf440038763a6fe85b184be0c2d07d1">default_filter_state</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdds_1_1sub_1_1status_1_1_data_state.html">dds::<wbr/>sub::<wbr/>status::<wbr/>DataState</a>&amp; state)</span></span>
+</h3>
+<p>직접 읽기 및 받기 호출에 대한 기본 상태 필터를 설정합니다</p>
+<table class="m-table m-fullwidth m-flat">
+<thead>
+<tr><th colspan="2">매개변수</th></tr>
+</thead>
+<tbody>
+<tr>
+<td style="width: 1%">state <span class="m-label m-flat m-info">입력</span></td>
+<td>적용할 sample, 뷰 및 instance state 마스크</td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+<th>반환값</th>
+<td>이 <a class="m-doc" href="classdds_1_1sub_1_1_data_reader.html">DataReader&lt;T&gt;</a></td>
+</tr>
+</tfoot>
+</table>
+<p>이후의 직접적인 read and take 호출은 반복자와 확장된 메타데이터 오버로드를 포함하여 이러한 마스크를 사용합니다. <code>select()</code>가 반환하는 선택자에 상태를 별도로 설정합니다.</p>
+</div></section><section class="m-doc-details" id="aacb1541f2f1a171b2ca70950cb0e54a4"><div>
+<h3>
+<div class="m-doc-template dds-full-signature">
+<span class="m-doc-template-parent">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename T</span>, <span class="m-doc-template-param">template&lt;typename Q&gt; class DELEGATE</span></span>&gt;</span>
+</div>
+<span class="m-doc-wrap-bumper"><a class="m-doc" href="#adfb0369ca408857cac5a09dd871b1250">DataReader</a>&amp; <span class="m-doc-details-prefix">dds::sub::DataReader::</span></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#aacb1541f2f1a171b2ca70950cb0e54a4">operator&gt;&gt;</a>(</span><span class="m-doc-wrap"><a class="m-doc" href="classdds_1_1sub_1_1_loaned_samples.html">dds::<wbr/>sub::<wbr/>LoanedSamples</a>&lt;T&gt;&amp; ls)</span></span>
+</h3>
+<p>레코드를 loaned collection에 담습니다.</p>
+<table class="m-table m-fullwidth m-flat">
+<thead>
+<tr><th colspan="2">매개변수</th></tr>
+</thead>
+<tbody>
+<tr>
+<td style="width: 1%">ls <span class="m-label m-flat m-warning">출력</span></td>
+<td>이전 내용이 바뀐 집합</td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+<th>반환값</th>
+<td>이 <a class="m-doc" href="classdds_1_1sub_1_1_data_reader.html">DataReader&lt;T&gt;</a></td>
+</tr>
+</tfoot>
+</table>
+<p><a class="m-doc" href="classdds_1_1sub_1_1_data_reader.html">DataReader&lt;T&gt;</a> 오버로드는 테이크 모드에서 선택기를 시작합니다.</p>
+</div></section><section class="m-doc-details" id="a3c8c07160aee3a06a137276bfe25f9be"><div>
+<h3>
+<div class="m-doc-template dds-full-signature">
+<span class="m-doc-template-parent">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename T</span>, <span class="m-doc-template-param">template&lt;typename Q&gt; class DELEGATE</span></span>&gt;</span>
+</div>
+<span class="m-doc-wrap-bumper"><a class="m-doc" href="classdds_1_1sub_1_1_data_reader_1_1_manipulator_selector.html">ManipulatorSelector</a> <span class="m-doc-details-prefix">dds::sub::DataReader::</span></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a3c8c07160aee3a06a137276bfe25f9be">operator&gt;&gt;</a>(</span><span class="m-doc-wrap"><a class="m-doc" href="classdds_1_1sub_1_1_data_reader_1_1_manipulator_selector.html">ManipulatorSelector</a>&amp;manipulator)(ManipulatorSelector &amp;)</span></span>
+</h3>
+<p>스트리밍으로 sample 선택 조건을 적용합니다</p>
+<table class="m-table m-fullwidth m-flat">
+<tfoot>
+<tr>
+<th style="width: 1%">반환값</th>
+<td>추가로 구성하거나 sample을 추출하는 데 사용할 수 있는 선택기</td>
+</tr>
+</tfoot>
+</table>
+<p>DataReader를 받는 오버로드는 스트리밍 조작 함수를 적용하기 전에 Selector를 생성합니다.</p>
+</div></section><section class="m-doc-details" id="a494134aadef0d9fed2c838b7e579519e"><div>
+<h3>
+<div class="m-doc-template dds-full-signature">
+<span class="m-doc-template-parent">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename T</span>, <span class="m-doc-template-param">template&lt;typename Q&gt; class DELEGATE</span></span>&gt;</span>
+<br/>
+                template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename Functor</span></span>&gt;
+              </div>
+<span class="m-doc-wrap-bumper"><a class="m-doc" href="classdds_1_1sub_1_1_data_reader_1_1_manipulator_selector.html">ManipulatorSelector</a> <span class="m-doc-details-prefix">dds::sub::DataReader::</span></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a494134aadef0d9fed2c838b7e579519e">operator&gt;&gt;</a>(</span><span class="m-doc-wrap">Functor f)</span></span>
+</h3>
+<p>스트리밍으로 sample 선택 조건을 적용합니다</p>
+<table class="m-table m-fullwidth m-flat">
+<thead>
+<tr><th colspan="2">매개변수</th></tr>
+</thead>
+<tbody>
+<tr>
+<td style="width: 1%">f <span class="m-label m-flat m-info">입력</span></td>
+<td>Selector를 설정하는 스트리밍 조작 함수</td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+<th>반환값</th>
+<td>추가로 구성하거나 sample을 추출하는 데 사용할 수 있는 선택기</td>
+</tr>
+</tfoot>
+</table>
+<p>DataReader를 받는 오버로드는 스트리밍 조작 함수를 적용하기 전에 Selector를 생성합니다.</p>
+</div></section><section class="m-doc-details" id="a9f2bc3c9b1817f4601a8ffff0698cca2"><div>
+<h3>
+<div class="m-doc-template dds-full-signature">
+<span class="m-doc-template-parent">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename T</span>, <span class="m-doc-template-param">template&lt;typename Q&gt; class DELEGATE</span></span>&gt;</span>
+</div>
+<span class="m-doc-wrap-bumper"><a class="m-doc" href="classdds_1_1sub_1_1_loaned_samples.html">LoanedSamples</a>&lt;T&gt; <span class="m-doc-details-prefix">dds::sub::DataReader::</span></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a9f2bc3c9b1817f4601a8ffff0698cca2">read</a>(</span><span class="m-doc-wrap">)</span></span>
+</h3>
+<p>기본 상태 필터와 일치하는 sample을 읽습니다</p>
+<table class="m-table m-fullwidth m-flat">
+<tfoot>
+<tr>
+<th style="width: 1%">반환값</th>
+<td>일치하는 데이터가 없거나, 네이티브 시퀀스 할당에 실패하거나, 네이티브 작업에서 오류가 반환되는 경우 일치하는 레코드 또는 비어 있는 컬렉션</td>
+</tr>
+</tfoot>
+</table>
+<p>DataReader는 sample을 보존하고 읽음 상태로 표시합니다. 이후 호출에서 읽지 않은 sample만 선택하면 그 레코드들은 제외됩니다. 반복자나 원소 참조를 사용하는 동안 컬렉션을 유지하고, payload에 접근하기 전에 <code>SampleInfo::valid()</code>를 확인하세요.</p><aside class="m-note m-default"><h4>참고 항목</h4><p><a class="m-doc" href="#a01ee9d4461154984f4f87ba8af5d438c">take()</a></p></aside>
+</div></section><section class="m-doc-details" id="a080e40bce146ef790ba07c218e1e6cbf"><div>
+<h3>
+<div class="m-doc-template dds-full-signature">
+<span class="m-doc-template-parent">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename T</span>, <span class="m-doc-template-param">template&lt;typename Q&gt; class DELEGATE</span></span>&gt;</span>
+<br/>
+                template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename SamplesFWIterator</span></span>&gt;
+              </div>
+<span class="m-doc-wrap-bumper"><a class="m-doc poxy-injected poxy-external poxy-cppreference" href="https://en.cppreference.com/w/cpp/types/integer" target="_blank">uint32_t</a> <span class="m-doc-details-prefix">dds::sub::DataReader::</span></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a080e40bce146ef790ba07c218e1e6cbf">read</a>(</span><span class="m-doc-wrap">SamplesFWIterator sfit,
+              <a class="m-doc poxy-injected poxy-external poxy-cppreference" href="https://en.cppreference.com/w/cpp/types/integer" target="_blank">uint32_t</a> max_samples)</span></span>
+</h3>
+<p>일치하는 sample을 읽어 기존 저장 공간에 씁니다.</p>
+<table class="m-table m-fullwidth m-flat">
+<thead>
+<tr><th colspan="2">매개변수</th></tr>
+</thead>
+<tbody>
+<tr>
+<td style="width: 1%">sfit <span class="m-label m-flat m-warning">출력</span></td>
+<td>반환된 레코드의 첫번째 쓰기 가능한 위치</td>
+</tr>
+<tr>
+<td>max_samples <span class="m-label m-flat m-info">입력</span></td>
+<td>최대 레코드 수, 또는 제한 없음의 경우 0</td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+<th>반환값</th>
+<td>복사된 레코드 수, 또는 네이티브 작업으로 레코드가 생성되지 않을 경우에는 0</td>
+</tr>
+</tfoot>
+</table>
+<p>DataReader의 기본 상태 필터를 적용해 반환할 레코드와 메타데이터를 복사합니다. DataReader는 반환한 레코드를 보존하고 읽음 상태로 표시합니다. 용량이 고정된 저장 공간에는 부호 있는 32비트 정수 범위의 양수를 한도로 지정하고, 한도만큼 쓸 수 있는 위치를 제공하세요. 한도가 0이면 네이티브 API의 무제한 값을 전달합니다.</p>
+</div></section><section class="m-doc-details" id="a6e76898dbb75038c66671517c2f8fbd5"><div>
+<h3>
+<div class="m-doc-template dds-full-signature">
+<span class="m-doc-template-parent">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename T</span>, <span class="m-doc-template-param">template&lt;typename Q&gt; class DELEGATE</span></span>&gt;</span>
+<br/>
+                template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename SamplesBIIterator</span></span>&gt;
+              </div>
+<span class="m-doc-wrap-bumper"><a class="m-doc poxy-injected poxy-external poxy-cppreference" href="https://en.cppreference.com/w/cpp/types/integer" target="_blank">uint32_t</a> <span class="m-doc-details-prefix">dds::sub::DataReader::</span></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a6e76898dbb75038c66671517c2f8fbd5">read</a>(</span><span class="m-doc-wrap">SamplesBIIterator sbit)</span></span>
+</h3>
+<table class="m-table m-fullwidth m-flat">
+<thead>
+<tr><th colspan="2">매개변수</th></tr>
+</thead>
+<tbody>
+<tr>
+<td style="width: 1%">sbit</td>
+<td>sample을 뒤로 삽입하는 반복자.</td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+<th>반환값</th>
+<td>읽은 sample의 수.</td>
+</tr>
+</tfoot>
+</table>
+<p>기본 상태 필터를 사용해 <a class="m-doc" href="classdds_1_1sub_1_1_data_reader.html">DataReader&lt;T&gt;</a> 캐시에서 읽을 수 있는 모든 sample을 읽습니다. 뒤에 추가하는 반복자를 사용해 애플리케이션이 제공한 컨테이너로 sample을 복사합니다. 이 반복자를 사용하므로, 컨테이너를 확장하기 위해 메모리를 할당할 수 있습니다.</p>
+</div></section><section class="m-doc-details" id="a9cb9dd07e18da910737a64d4fe06037c"><div>
+<h3>
+<div class="m-doc-template dds-full-signature">
+<span class="m-doc-template-parent">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename T</span>, <span class="m-doc-template-param">template&lt;typename Q&gt; class DELEGATE</span></span>&gt;</span>
+</div>
+<span class="m-doc-wrap-bumper"><a class="m-doc" href="classdds_1_1sub_1_1_loaned_samples.html">LoanedSamples</a>&lt;T, ::dds::core::detail::SampleInfoEx&gt; <span class="m-doc-details-prefix">dds::sub::DataReader::</span></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a9cb9dd07e18da910737a64d4fe06037c">read_w_sampleinfoex</a>(</span><span class="m-doc-wrap">)</span></span>
+</h3>
+<p>확장 메타데이터와 함께 sample을 읽습니다.</p>
+<table class="m-table m-fullwidth m-flat">
+<tfoot>
+<tr>
+<th style="width: 1%">반환값</th>
+<td>확장 메타데이터가 있는 sample 또는 기본 작업에서 데이터가 없거나 오류가 반환되는 경우 비어있는 컬렉션</td>
+</tr>
+</tfoot>
+</table>
+<p>기본 상태 필터를 사용하고 일치하는 sample을 DataReader에 유지합니다.</p>
+</div></section><section class="m-doc-details" id="a4c9879cf567d4d627f02cd90247794ac"><div>
+<h3>
+<div class="m-doc-template dds-full-signature">
+<span class="m-doc-template-parent">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename T</span>, <span class="m-doc-template-param">template&lt;typename Q&gt; class DELEGATE</span></span>&gt;</span>
+</div>
+<span class="m-doc-wrap-bumper"><a class="m-doc" href="classdds_1_1sub_1_1_data_reader_1_1_selector.html">Selector</a> <span class="m-doc-details-prefix">dds::sub::DataReader::</span></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a4c9879cf567d4d627f02cd90247794ac">select</a>(</span><span class="m-doc-wrap">)</span></span>
+</h3>
+<p>이 DataReader에서 새 선택을 시작합니다</p>
+<table class="m-table m-fullwidth m-flat">
+<tfoot>
+<tr>
+<th style="width: 1%">반환값</th>
+<td>이 DataReader와 연결된 선택자</td>
+</tr>
+</tfoot>
+</table>
+<p>호출할 때마다 독립적인 instance, 상태, 개수 필터를 가진 선택자를 생성합니다. 예를 들어 <a class="m-doc" href="classdds_1_1sub_1_1_data_reader.html">DataReader&lt;T&gt;</a>
+<code>dr</code>와 그 DataReader에서 얻은 instance handle이 있다면 해당 instance의 읽지 않은 레코드를 최대 여덟 개까지 가져올 수 있습니다. sample state 필터는 view state와 instance state를 제한하지 않습니다.</p><pre class="m-code"><span class="k">const</span> <span class="nn">dds::sub::status</span><span class="o">::</span><span class="nc">DataState</span> <span class="nf">state</span><span class="p">(</span><span class="nn">dds::sub::status</span><span class="o">::</span><span class="nc">SampleState</span><span class="o">::</span><span class="nf">not_read</span><span class="p">());</span>
+<span class="k">auto</span> <span class="n">samples</span> <span class="o">=</span> <span class="n">dr</span><span class="p">.</span><span class="nf">select</span><span class="p">().</span><span class="nf">instance</span><span class="p">(</span><span class="n">handle</span><span class="p">).</span><span class="nf">state</span><span class="p">(</span><span class="n">state</span><span class="p">).</span><span class="nf">max_samples</span><span class="p">(</span><span class="mi">8</span><span class="p">).</span><span class="nf">take</span><span class="p">();</span></pre><aside class="m-note m-default"><h4>참고 항목</h4><p><a class="m-doc" href="classdds_1_1sub_1_1_data_reader_1_1_selector.html">Selector</a></p><p><a class="m-doc" href="group__dds__subscription.html#receiving_guide">sample 수신과 선택</a></p></aside>
+</div></section><section class="m-doc-details" id="a01ee9d4461154984f4f87ba8af5d438c"><div>
+<h3>
+<div class="m-doc-template dds-full-signature">
+<span class="m-doc-template-parent">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename T</span>, <span class="m-doc-template-param">template&lt;typename Q&gt; class DELEGATE</span></span>&gt;</span>
+</div>
+<span class="m-doc-wrap-bumper"><a class="m-doc" href="classdds_1_1sub_1_1_loaned_samples.html">LoanedSamples</a>&lt;T&gt; <span class="m-doc-details-prefix">dds::sub::DataReader::</span></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a01ee9d4461154984f4f87ba8af5d438c">take</a>(</span><span class="m-doc-wrap">)</span></span>
+</h3>
+<p>기본 상태 필터와 일치하는 sample을 가져옵니다.</p>
+<table class="m-table m-fullwidth m-flat">
+<tfoot>
+<tr>
+<th style="width: 1%">반환값</th>
+<td>일치하는 데이터가 없거나, 네이티브 시퀀스 할당에 실패하거나, 네이티브 작업에서 오류가 반환되는 경우 일치하는 레코드 또는 비어 있는 컬렉션</td>
+</tr>
+</tfoot>
+</table>
+<p>가져온 sample은 DataReader의 history에서 제거되므로 이후 읽기 또는 가져오기 연산으로 같은 레코드를 다시 얻을 수 없습니다. 반복자나 원소 참조를 사용하는 동안 컬렉션을 유지하세요. 데이터 레코드와 instance state 알림을 구분하려면 <code>SampleInfo::valid()</code>를 확인하세요.</p><aside class="m-note m-default"><h4>참고 항목</h4><p><a class="m-doc" href="#a9f2bc3c9b1817f4601a8ffff0698cca2">read()</a></p><p><a class="m-doc" href="classdds_1_1sub_1_1_loaned_samples.html">dds::<wbr/>sub::<wbr/>LoanedSamples</a></p></aside>
+</div></section><section class="m-doc-details" id="a019a220bf9e02db0beebc071dec95462"><div>
+<h3>
+<div class="m-doc-template dds-full-signature">
+<span class="m-doc-template-parent">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename T</span>, <span class="m-doc-template-param">template&lt;typename Q&gt; class DELEGATE</span></span>&gt;</span>
+<br/>
+                template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename SamplesFWIterator</span></span>&gt;
+              </div>
+<span class="m-doc-wrap-bumper"><a class="m-doc poxy-injected poxy-external poxy-cppreference" href="https://en.cppreference.com/w/cpp/types/integer" target="_blank">uint32_t</a> <span class="m-doc-details-prefix">dds::sub::DataReader::</span></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a019a220bf9e02db0beebc071dec95462">take</a>(</span><span class="m-doc-wrap">SamplesFWIterator sfit,
+              <a class="m-doc poxy-injected poxy-external poxy-cppreference" href="https://en.cppreference.com/w/cpp/types/integer" target="_blank">uint32_t</a> max_samples)</span></span>
+</h3>
+<p>일치하는 sample을 가져와 기존 저장 공간에 씁니다.</p>
+<table class="m-table m-fullwidth m-flat">
+<thead>
+<tr><th colspan="2">매개변수</th></tr>
+</thead>
+<tbody>
+<tr>
+<td style="width: 1%">sfit <span class="m-label m-flat m-warning">출력</span></td>
+<td>반환된 레코드의 첫번째 쓰기 가능한 위치</td>
+</tr>
+<tr>
+<td>max_samples <span class="m-label m-flat m-info">입력</span></td>
+<td>최대 레코드 수, 또는 제한 없음의 경우 0</td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+<th>반환값</th>
+<td>복사된 레코드 수, 또는 네이티브 작업으로 레코드가 생성되지 않을 경우에는 0</td>
+</tr>
+</tfoot>
+</table>
+<p>DataReader의 기본 상태 필터를 적용해 반환할 레코드와 메타데이터를 복사합니다. DataReader는 복사를 시작하기 전에 반환할 레코드를 history에서 제거합니다. 대상에 쓰는 도중 예외가 발생하면 일부 레코드만 기록될 수 있습니다. 제거한 레코드는 history에 복구되지 않습니다. 용량이 고정된 저장 공간에는 부호 있는 32비트 정수 범위의 양수를 한도로 지정하고, 한도만큼 쓸 수 있는 위치를 제공하세요. 한도가 0이면 네이티브 API의 무제한 값을 전달합니다.</p>
+</div></section><section class="m-doc-details" id="a2145ed877ab68fc59a98a134d22162c2"><div>
+<h3>
+<div class="m-doc-template dds-full-signature">
+<span class="m-doc-template-parent">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename T</span>, <span class="m-doc-template-param">template&lt;typename Q&gt; class DELEGATE</span></span>&gt;</span>
+<br/>
+                template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename SamplesBIIterator</span></span>&gt;
+              </div>
+<span class="m-doc-wrap-bumper"><a class="m-doc poxy-injected poxy-external poxy-cppreference" href="https://en.cppreference.com/w/cpp/types/integer" target="_blank">uint32_t</a> <span class="m-doc-details-prefix">dds::sub::DataReader::</span></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a2145ed877ab68fc59a98a134d22162c2">take</a>(</span><span class="m-doc-wrap">SamplesBIIterator sbit)</span></span>
+</h3>
+<p>일치하는 sample을 가져와 확장 가능한 컨테이너에 추가합니다.</p>
+<table class="m-table m-fullwidth m-flat">
+<thead>
+<tr><th colspan="2">매개변수</th></tr>
+</thead>
+<tbody>
+<tr>
+<td style="width: 1%">sbit <span class="m-label m-flat m-warning">출력</span></td>
+<td>대상에 대한 백삽입 반복자</td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+<th>반환값</th>
+<td>추가된 레코드 수</td>
+</tr>
+</tfoot>
+</table>
+<p>DataReader의 기본 상태 필터를 적용합니다. DataReader는 반환할 레코드를 대상 컨테이너에 추가하기 전에 history에서 제거합니다. 메모리 할당 실패 등으로 삽입 도중 예외가 발생하면 일부 레코드만 컨테이너에 들어갈 수 있습니다. 제거한 레코드는 history에 복구되지 않습니다.</p>
+</div></section><section class="m-doc-details" id="a2aec1fdf8dd542ee195571e747cc8188"><div>
+<h3>
+<div class="m-doc-template dds-full-signature">
+<span class="m-doc-template-parent">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename T</span>, <span class="m-doc-template-param">template&lt;typename Q&gt; class DELEGATE</span></span>&gt;</span>
+</div>
+<span class="m-doc-wrap-bumper"><a class="m-doc" href="classdds_1_1sub_1_1_loaned_samples.html">LoanedSamples</a>&lt;T, ::dds::core::detail::SampleInfoEx&gt; <span class="m-doc-details-prefix">dds::sub::DataReader::</span></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a2aec1fdf8dd542ee195571e747cc8188">take_w_sampleinfoex</a>(</span><span class="m-doc-wrap">)</span></span>
+</h3>
+<p>확장 메타데이터와 함께 sample을 가져옵니다.</p>
+<table class="m-table m-fullwidth m-flat">
+<tfoot>
+<tr>
+<th style="width: 1%">반환값</th>
+<td>확장 메타데이터가 있는 sample 또는 기본 작업에서 데이터가 없거나 오류가 반환되는 경우 비어있는 컬렉션</td>
+</tr>
+</tfoot>
+</table>
+<p>기본 상태 필터를 사용하고 일치하는 sample을 DataReader에서 제거합니다.</p>
+</div></section><h3 class="dds-method-group" id="details-pub-methods-1">Instance와 key</h3><section class="m-doc-details" id="a83f22f9a5c72361bc5bbf875df05a238"><div>
+<h3>
+<div class="m-doc-template dds-full-signature">
+<span class="m-doc-template-parent">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename T</span>, <span class="m-doc-template-param">template&lt;typename Q&gt; class DELEGATE</span></span>&gt;</span>
+</div>
+<span class="m-doc-wrap-bumper"><a class="m-doc" href="classdds_1_1topic_1_1_topic_instance.html">dds::<wbr/>topic::<wbr/>TopicInstance</a>&lt;T&gt; <span class="m-doc-details-prefix">dds::sub::DataReader::</span></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a83f22f9a5c72361bc5bbf875df05a238">key_value</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="group__dds__core.html#ga8ee18acd2002fb15f2650f5c7cb055d0">dds::<wbr/>core::<wbr/>InstanceHandle</a>&amp; h)</span></span>
+</h3>
+<p>이 DataReader에 알려진 instance의 키를 가져옵니다</p>
+<table class="m-table m-fullwidth m-flat">
+<thead>
+<tr><th colspan="2">매개변수</th></tr>
+</thead>
+<tbody>
+<tr>
+<td style="width: 1%">h <span class="m-label m-flat m-info">입력</span></td>
+<td>키가 요청된 instance의 handle</td>
+</tr>
+</tbody>
+<thead>
+<tr>
+<th>반환값</th>
+<td>instance handle과 instance 키를 포함하는 sample</td>
+</tr>
+</thead>
+<thead>
+<tr><th colspan="2">예외</th></tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="m-doc" href="classdds_1_1core_1_1_error.html">dds::<wbr/>core::<wbr/>Error</a></td>
+<td>C 라이브러리에서 키를 가져올 수 없습니다.</td>
+</tr>
+<tr>
+<td><a class="m-doc" href="classdds_1_1core_1_1_illegal_operation_error.html">dds::<wbr/>core::<wbr/>IllegalOperationError</a></td>
+<td>이 DataReader의 Topic은 키가 없습니다</td>
+</tr>
+</tbody>
+</table>
+<p>keyed instance에 대한 알림에서 이 DataReader로부터 얻은 handle을 사용합니다. 예를 들어 <code>SampleInfo::instance_handle()</code> 에서 얻은 handle을 사용합니다. 반환된 sample의 키 필드만이 instance를 식별합니다.</p>
+</div></section><section class="m-doc-details" id="a1286cd3eade422053654d6f2f303ce19"><div>
+<h3>
+<div class="m-doc-template dds-full-signature">
+<span class="m-doc-template-parent">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename T</span>, <span class="m-doc-template-param">template&lt;typename Q&gt; class DELEGATE</span></span>&gt;</span>
+</div>
+<span class="m-doc-wrap-bumper">T&amp; <span class="m-doc-details-prefix">dds::sub::DataReader::</span></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a1286cd3eade422053654d6f2f303ce19">key_value</a>(</span><span class="m-doc-wrap">T&amp; sample,
+              const <a class="m-doc" href="group__dds__core.html#ga8ee18acd2002fb15f2650f5c7cb055d0">dds::<wbr/>core::<wbr/>InstanceHandle</a>&amp; h)</span></span>
+</h3>
+<p>instance의 키를 기존 sample에 복사합니다</p>
+<table class="m-table m-fullwidth m-flat">
+<thead>
+<tr><th colspan="2">매개변수</th></tr>
+</thead>
+<tbody>
+<tr>
+<td style="width: 1%">sample <span class="m-label m-flat m-danger">입출력</span></td>
+<td>키 필드의 대상</td>
+</tr>
+<tr>
+<td>h <span class="m-label m-flat m-info">입력</span></td>
+<td>키가 요청된 instance의 handle</td>
+</tr>
+</tbody>
+<thead>
+<tr>
+<th>반환값</th>
+<td><code>sample</code>에 대한 참조</td>
+</tr>
+</thead>
+<thead>
+<tr><th colspan="2">예외</th></tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="m-doc" href="classdds_1_1core_1_1_error.html">dds::<wbr/>core::<wbr/>Error</a></td>
+<td>C 라이브러리에서 키를 가져올 수 없습니다.</td>
+</tr>
+<tr>
+<td><a class="m-doc" href="classdds_1_1core_1_1_illegal_operation_error.html">dds::<wbr/>core::<wbr/>IllegalOperationError</a></td>
+<td>이 DataReader의 Topic은 키가 없습니다</td>
+</tr>
+</tbody>
+</table>
+<p>이 DataReader에서 가져온 handle을 사용합니다. 이 조회의 결과로서 키 필드만 읽습니다.</p>
+</div></section><section class="m-doc-details" id="a2953a4fd380101d8e658280422f5ad3e"><div>
+<h3>
+<div class="m-doc-template dds-full-signature">
+<span class="m-doc-template-parent">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename T</span>, <span class="m-doc-template-param">template&lt;typename Q&gt; class DELEGATE</span></span>&gt;</span>
+</div>
+<span class="m-doc-wrap-bumper">const <a class="m-doc" href="group__dds__core.html#ga8ee18acd2002fb15f2650f5c7cb055d0">dds::<wbr/>core::<wbr/>InstanceHandle</a> <span class="m-doc-details-prefix">dds::sub::DataReader::</span></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a2953a4fd380101d8e658280422f5ad3e">lookup_instance</a>(</span><span class="m-doc-wrap">const T&amp; key) const</span></span>
+</h3>
+<p>키로 로컬 <a class="m-doc" href="classdds_1_1sub_1_1_data_reader.html">DataReader&lt;T&gt;</a> instance를 찾습니다</p>
+<table class="m-table m-fullwidth m-flat">
+<thead>
+<tr><th colspan="2">매개변수</th></tr>
+</thead>
+<tbody>
+<tr>
+<td style="width: 1%">key <span class="m-label m-flat m-info">입력</span></td>
+<td>instance 키 필드를 포함하는 sample</td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+<th>반환값</th>
+<td>일치하는 instance를 위한 handle, 또는 DDS가 키를 해결할 수 없을 때 nil handle</td>
+</tr>
+</tfoot>
+</table>
+<p>루킹은 키 필드를 사용하고 DataReader의 instance 등록을 변경하지 않고 남깁니다. 여기서 얻어진 handle은 이 DataReader에서 <code>select().instance()</code>에 전달될 수 있습니다.</p>
+</div></section><h3 class="dds-method-group" id="details-pub-methods-2">관련 Entity</h3><section class="m-doc-details" id="a9a196cab1840ef272376c7809a4c564c"><div>
+<h3>
+<div class="m-doc-template dds-full-signature">
+<span class="m-doc-template-parent">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename T</span>, <span class="m-doc-template-param">template&lt;typename Q&gt; class DELEGATE</span></span>&gt;</span>
+</div>
+<span class="m-doc-wrap-bumper">const <a class="m-doc" href="group__dds__subscription.html#ga9a6d78b2a23f864211da5bd2edf28750">dds::<wbr/>sub::<wbr/>Subscriber</a>&amp; <span class="m-doc-details-prefix">dds::sub::DataReader::</span></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a9a196cab1840ef272376c7809a4c564c">subscriber</a>(</span><span class="m-doc-wrap">) const</span></span>
+</h3>
+<p>이 DataReader를 소유하는 Subscriber를 가져옵니다.</p>
+</div></section><section class="m-doc-details" id="a3c76de78f051edaeb7e4b359df1de0cf"><div>
+<h3>
+<div class="m-doc-template dds-full-signature">
+<span class="m-doc-template-parent">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename T</span>, <span class="m-doc-template-param">template&lt;typename Q&gt; class DELEGATE</span></span>&gt;</span>
+</div>
+<span class="m-doc-wrap-bumper"><a class="m-doc" href="classdds_1_1topic_1_1_topic_description.html">dds::<wbr/>topic::<wbr/>TopicDescription</a>&lt;<a class="m-doc" href="#a5aa616b2927fd8d4ad234c26ceed13e4">DataType</a>&gt; <span class="m-doc-details-prefix">dds::sub::DataReader::</span></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a3c76de78f051edaeb7e4b359df1de0cf">topic_description</a>(</span><span class="m-doc-wrap">) const</span></span>
+</h3>
+<p>이 DataReader에 연결된 <code>TopicDescription</code>을 반환합니다.</p>
+</div></section><h3 class="dds-method-group" id="details-pub-methods-3">DataReader QoS와 Listener</h3><section class="m-doc-details" id="a234cae0964ab8517f60b4a27d62de2fa"><div>
+<h3>
+<div class="m-doc-template dds-full-signature">
+<span class="m-doc-template-parent">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename T</span>, <span class="m-doc-template-param">template&lt;typename Q&gt; class DELEGATE</span></span>&gt;</span>
+</div>
+<span class="m-doc-wrap-bumper">void <span class="m-doc-details-prefix">dds::sub::DataReader::</span></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a234cae0964ab8517f60b4a27d62de2fa">listener</a>(</span><span class="m-doc-wrap"><a class="m-doc" href="#a35c75e4847d5bc95ab72d7c64f2451da">Listener</a>* the_listener,
+              const <a class="m-doc" href="classdds_1_1core_1_1status_1_1_status_mask.html">dds::<wbr/>core::<wbr/>status::<wbr/>StatusMask</a>&amp; event_mask)</span></span>
+</h3>
+<p>선택한 <a class="m-doc" href="classdds_1_1sub_1_1_data_reader.html">DataReader&lt;T&gt;</a> 상태에 대한 listener를 등록합니다</p>
+<table class="m-table m-fullwidth m-flat">
+<thead>
+<tr><th colspan="2">매개변수</th></tr>
+</thead>
+<tbody>
+<tr>
+<td style="width: 1%">the_listener <span class="m-label m-flat m-info">입력</span></td>
+<td>listener가 등록하거나 <code>nullptr</code>가 지우는 방법</td>
+</tr>
+<tr>
+<td>event_mask <span class="m-label m-flat m-info">입력</span></td>
+<td>이 listener를 통해서 처리할 상태</td>
+</tr>
+</tbody>
+<thead>
+<tr><th colspan="2">예외</th></tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="m-doc" href="classdds_1_1core_1_1_exception.html">dds::<wbr/>core::<wbr/>Exception</a></td>
+<td>C 라이브러리가 listener 구성을 거부했습니다</td>
+</tr>
+</tbody>
+</table>
+<p>DataReader는 어플리케이션 소유의 listener에 대한 포인터를 저장합니다. 등록된 동안 listener를 살아있게 유지하십시오. <code>nullptr</code> 를 통과하여 등록을 지웁니다. 상태 마스크는 이 DataReader가 받을 수 있는 callback을 결정합니다.</p><aside class="m-note m-default"><h4>스레딩 callback과 다른 스레드 사이에 공유되는 애플리케이션 상태를 보호합니다. listener를 사용하는 모든 callback이 끝날 때까지 listener를 살아있게 유지합니다.</h4></aside><aside class="m-note m-default"><h4>참고 항목</h4><p><a class="m-doc" href="group__dds__core.html#api_usage_notes">오류와 스레드</a></p></aside>
+</div></section><section class="m-doc-details" id="a63c6f049aa2740d6c7afc113d50d4a61"><div>
+<h3>
+<div class="m-doc-template dds-full-signature">
+<span class="m-doc-template-parent">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename T</span>, <span class="m-doc-template-param">template&lt;typename Q&gt; class DELEGATE</span></span>&gt;</span>
+</div>
+<span class="m-doc-wrap-bumper"><a class="m-doc" href="#a35c75e4847d5bc95ab72d7c64f2451da">Listener</a>* <span class="m-doc-details-prefix">dds::sub::DataReader::</span></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a63c6f049aa2740d6c7afc113d50d4a61">listener</a>(</span><span class="m-doc-wrap">) const</span></span>
+</h3>
+<p>이 DataReader와 연결된 수신기를 가져옵니다.</p>
+</div></section><section class="m-doc-details" id="a1837aa620c24c27fcf1057b9283ba3ca"><div>
+<h3>
+<div class="m-doc-template dds-full-signature">
+<span class="m-doc-template-parent">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename T</span>, <span class="m-doc-template-param">template&lt;typename Q&gt; class DELEGATE</span></span>&gt;</span>
+</div>
+<span class="m-doc-wrap-bumper"><a class="m-doc" href="#adfb0369ca408857cac5a09dd871b1250">DataReader</a>&amp; <span class="m-doc-details-prefix">dds::sub::DataReader::</span></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a1837aa620c24c27fcf1057b9283ba3ca">operator&lt;&lt;</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="group__dds__subscription.html#gac759142c11b5f0cb2b2a8f6c41405966">dds::<wbr/>sub::<wbr/>qos::<wbr/>DataReaderQos</a>&amp; the_qos)</span></span>
+</h3>
+<p>이 DataReader에 QoS 정책을 적용합니다.</p>
+<table class="m-table m-fullwidth m-flat">
+<thead>
+<tr><th colspan="2">매개변수</th></tr>
+</thead>
+<tbody>
+<tr>
+<td style="width: 1%">the_qos <span class="m-label m-flat m-info">입력</span></td>
+<td>적용할 QoS 정책</td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+<th>반환값</th>
+<td>이 <a class="m-doc" href="classdds_1_1sub_1_1_data_reader.html">DataReader&lt;T&gt;</a></td>
+</tr>
+</tfoot>
+</table>
+</div></section><section class="m-doc-details" id="adfb0369ca408857cac5a09dd871b1250"><div>
+<h3>
+<div class="m-doc-template dds-full-signature">
+<span class="m-doc-template-parent">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename T</span>, <span class="m-doc-template-param">template&lt;typename Q&gt; class DELEGATE</span></span>&gt;</span>
+</div>
+<span class="m-doc-wrap-bumper"> <span class="m-doc-details-prefix">dds::sub::DataReader::</span></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#adfb0369ca408857cac5a09dd871b1250">DataReader</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="group__dds__subscription.html#ga9a6d78b2a23f864211da5bd2edf28750">dds::<wbr/>sub::<wbr/>Subscriber</a>&amp; sub,
+              const <a class="m-doc" href="classdds_1_1topic_1_1_topic.html">::dds::topic::Topic&lt;T&gt;</a>&lt;T&gt;&amp; topic)</span></span>
+</h3>
+<p>Subscriber의 기본 <a class="m-doc" href="classdds_1_1sub_1_1_data_reader.html">DataReader&lt;T&gt;</a> QoS로 <code>DataReader</code>를 생성합니다.</p>
+<table class="m-table m-fullwidth m-flat">
+<thead>
+<tr><th colspan="2">매개변수</th></tr>
+</thead>
+<tbody>
+<tr>
+<td style="width: 1%">sub</td>
+<td>이 <code>DataReader</code>를 소유하는 <a class="m-doc" href="group__dds__subscription.html#ga9a6d78b2a23f864211da5bd2edf28750">Subscriber</a></td>
+</tr>
+<tr>
+<td>topic</td>
+<td>이 <code>DataReader</code>에 연결된 Topic</td>
+</tr>
+</tbody>
+</table>
+</div></section><section class="m-doc-details" id="a6b98500ed8a84501458be2c5362b0dc1"><div>
+<h3>
+<div class="m-doc-template dds-full-signature">
+<span class="m-doc-template-parent">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename T</span>, <span class="m-doc-template-param">template&lt;typename Q&gt; class DELEGATE</span></span>&gt;</span>
+</div>
+<span class="m-doc-wrap-bumper"><a class="m-doc" href="#adfb0369ca408857cac5a09dd871b1250">DataReader</a>&amp; <span class="m-doc-details-prefix">dds::sub::DataReader::</span></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a6b98500ed8a84501458be2c5362b0dc1">operator&gt;&gt;</a>(</span><span class="m-doc-wrap"><a class="m-doc" href="group__dds__subscription.html#gac759142c11b5f0cb2b2a8f6c41405966">dds::<wbr/>sub::<wbr/>qos::<wbr/>DataReaderQos</a>&amp; the_qos)</span></span>
+</h3>
+<p>DataReader의 현재 QoS 정책을 대상으로 복사합니다.</p>
+<table class="m-table m-fullwidth m-flat">
+<thead>
+<tr><th colspan="2">매개변수</th></tr>
+</thead>
+<tbody>
+<tr>
+<td style="width: 1%">the_qos <span class="m-label m-flat m-warning">출력</span></td>
+<td>QoS 정책의 대상</td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+<th>반환값</th>
+<td>이 <a class="m-doc" href="classdds_1_1sub_1_1_data_reader.html">DataReader&lt;T&gt;</a></td>
+</tr>
+</tfoot>
+</table>
+</div></section><section class="m-doc-details" id="a1e384cbd8318cf3bcc7fada6b335b282"><div>
+<h3>
+<div class="m-doc-template dds-full-signature">
+<span class="m-doc-template-parent">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename T</span>, <span class="m-doc-template-param">template&lt;typename Q&gt; class DELEGATE</span></span>&gt;</span>
+</div>
+<span class="m-doc-wrap-bumper">const <a class="m-doc" href="group__dds__subscription.html#gac759142c11b5f0cb2b2a8f6c41405966">dds::<wbr/>sub::<wbr/>qos::<wbr/>DataReaderQos</a>&amp; <span class="m-doc-details-prefix">dds::sub::DataReader::</span></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a1e384cbd8318cf3bcc7fada6b335b282">qos</a>(</span><span class="m-doc-wrap">) const</span></span>
+</h3>
+<p>이 DataReader와 연결된 QoS를 가져옵니다.</p>
+</div></section><section class="m-doc-details" id="a5f3ffab35c4b91b64a8d7ff567026db2"><div>
+<h3>
+<div class="m-doc-template dds-full-signature">
+<span class="m-doc-template-parent">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename T</span>, <span class="m-doc-template-param">template&lt;typename Q&gt; class DELEGATE</span></span>&gt;</span>
+</div>
+<span class="m-doc-wrap-bumper">void <span class="m-doc-details-prefix">dds::sub::DataReader::</span></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a5f3ffab35c4b91b64a8d7ff567026db2">qos</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="group__dds__subscription.html#gac759142c11b5f0cb2b2a8f6c41405966">dds::<wbr/>sub::<wbr/>qos::<wbr/>DataReaderQos</a>&amp; the_qos)</span></span>
+</h3>
+<table class="m-table m-fullwidth m-flat">
+<thead>
+<tr><th colspan="2">매개변수</th></tr>
+</thead>
+<tbody>
+<tr>
+<td style="width: 1%">the_qos</td>
+<td>새로운 QoS.</td>
+</tr>
+</tbody>
+</table>
+<p>이 DataReader와 연결된 QoS를 설정합니다.</p>
+</div></section><h3 class="dds-method-group" id="details-pub-methods-4">이전 데이터</h3><section class="m-doc-details" id="ac4c9b3b717ccdad03d70b1644d0f1a12"><div>
+<h3>
+<div class="m-doc-template dds-full-signature">
+<span class="m-doc-template-parent">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename T</span>, <span class="m-doc-template-param">template&lt;typename Q&gt; class DELEGATE</span></span>&gt;</span>
+</div>
+<span class="m-doc-wrap-bumper">void <span class="m-doc-details-prefix">dds::sub::DataReader::</span></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#ac4c9b3b717ccdad03d70b1644d0f1a12">wait_for_historical_data</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdds_1_1core_1_1_duration.html">dds::<wbr/>core::<wbr/>Duration</a>&amp; timeout)</span></span>
+</h3>
+<p>C 라이브러리로 history 데이터 대기 요청을 전달합니다.</p>
+<table class="m-table m-fullwidth m-flat">
+<thead>
+<tr><th colspan="2">매개변수</th></tr>
+</thead>
+<tbody>
+<tr>
+<td style="width: 1%">timeout <span class="m-label m-flat m-info">입력</span></td>
+<td>네이티브 호출에 전달된 최대 대기 시간</td>
+</tr>
+</tbody>
+</table>
+<p>기본 구현 객체는 초와 나노초 필드를 네이티브 호출에 그대로 전달하고 반환 코드를 사용하지 않습니다. 이 래퍼의 반환만으로는 이전 데이터가 도착했는지, 대기 시간이 끝났는지, 네이티브 연산이 실패했는지 알 수 없습니다.</p>
+</div></section><h3 class="dds-method-group" id="details-pub-methods-5">DataReader 상태와 매칭</h3><section class="m-doc-details" id="a14b0503cc46371971a1fcf39d85b2053"><div>
+<h3>
+<div class="m-doc-template dds-full-signature">
+<span class="m-doc-template-parent">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename T</span>, <span class="m-doc-template-param">template&lt;typename Q&gt; class DELEGATE</span></span>&gt;</span>
+</div>
+<span class="m-doc-wrap-bumper">const <a class="m-doc" href="namespacedds_1_1core_1_1status.html#a5314c4075763105161d295a7933db13d">dds::<wbr/>core::<wbr/>status::<wbr/>LivelinessChangedStatus</a> <span class="m-doc-details-prefix">dds::sub::DataReader::</span></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a14b0503cc46371971a1fcf39d85b2053">liveliness_changed_status</a>(</span><span class="m-doc-wrap">) const</span></span>
+</h3>
+<p>일치하는 DataWriter Liveliness의 변화에 대한 <a class="m-doc" href="classdds_1_1sub_1_1_data_reader.html">DataReader&lt;T&gt;</a> 상태를 가져옵니다</p>
+<table class="m-table m-fullwidth m-flat">
+<tfoot>
+<tr>
+<th style="width: 1%">반환값</th>
+<td>재설정 전에 찍은 상태 스냅샷</td>
+</tr>
+</tfoot>
+</table>
+<p>DDS는 스냅샷을 캡처한 다음 이 상태의 변경 카운터를 재설정하고 변경된 플래그를 지웁니다. 다른 관찰자가 변경 사항이 없음을 보고, 연결된 StatusCondition가 다른 활성화된 상태가 대기 중이지 않으면 트리거를 중단할 수 있습니다.</p>
+</div></section><section class="m-doc-details" id="ae778fd9f4672182abd26f64ad010d4ea"><div>
+<h3>
+<div class="m-doc-template dds-full-signature">
+<span class="m-doc-template-parent">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename T</span>, <span class="m-doc-template-param">template&lt;typename Q&gt; class DELEGATE</span></span>&gt;</span>
+</div>
+<span class="m-doc-wrap-bumper">const <a class="m-doc" href="namespacedds_1_1core_1_1status.html#afe3225b6689c6d6c32f99642822c2b0d">dds::<wbr/>core::<wbr/>status::<wbr/>RequestedDeadlineMissedStatus</a> <span class="m-doc-details-prefix">dds::sub::DataReader::</span></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#ae778fd9f4672182abd26f64ad010d4ea">requested_deadline_missed_status</a>(</span><span class="m-doc-wrap">)</span></span>
+</h3>
+<p>요청된 업데이트 간격을 놓친 instance의 <a class="m-doc" href="classdds_1_1sub_1_1_data_reader.html">DataReader&lt;T&gt;</a> 상태를 가져옵니다.</p>
+<table class="m-table m-fullwidth m-flat">
+<tfoot>
+<tr>
+<th style="width: 1%">반환값</th>
+<td>재설정 전에 찍은 상태 스냅샷</td>
+</tr>
+</tfoot>
+</table>
+<p>DDS는 스냅샷을 캡처한 다음 이 상태의 변경 카운터를 재설정하고 변경된 플래그를 지웁니다. 다른 관찰자가 변경 사항이 없음을 보고, 연결된 StatusCondition가 다른 활성화된 상태가 대기 중이지 않으면 트리거를 중단할 수 있습니다.</p>
+</div></section><section class="m-doc-details" id="a8852e493189251094bc58f6b220712c6"><div>
+<h3>
+<div class="m-doc-template dds-full-signature">
+<span class="m-doc-template-parent">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename T</span>, <span class="m-doc-template-param">template&lt;typename Q&gt; class DELEGATE</span></span>&gt;</span>
+</div>
+<span class="m-doc-wrap-bumper">const <a class="m-doc" href="namespacedds_1_1core_1_1status.html#a5eff3bdd977e5b923e3610f347a64449">dds::<wbr/>core::<wbr/>status::<wbr/>RequestedIncompatibleQosStatus</a> <span class="m-doc-details-prefix">dds::sub::DataReader::</span></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a8852e493189251094bc58f6b220712c6">requested_incompatible_qos_status</a>(</span><span class="m-doc-wrap">) const</span></span>
+</h3>
+<p>호환되지 않는 QoS 정책에 대한 <a class="m-doc" href="classdds_1_1sub_1_1_data_reader.html">DataReader&lt;T&gt;</a> 상태를 가져옵니다.</p>
+<table class="m-table m-fullwidth m-flat">
+<tfoot>
+<tr>
+<th style="width: 1%">반환값</th>
+<td>재설정 전에 찍은 상태 스냅샷</td>
+</tr>
+</tfoot>
+</table>
+<p>DDS는 스냅샷을 캡처한 다음 이 상태의 변경 카운터를 재설정하고 변경된 플래그를 지웁니다. 다른 관찰자가 변경 사항이 없음을 보고, 연결된 StatusCondition가 다른 활성화된 상태가 대기 중이지 않으면 트리거를 중단할 수 있습니다.</p>
+</div></section><section class="m-doc-details" id="ad1a8eab152f095bf973d3a177e3bac20"><div>
+<h3>
+<div class="m-doc-template dds-full-signature">
+<span class="m-doc-template-parent">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename T</span>, <span class="m-doc-template-param">template&lt;typename Q&gt; class DELEGATE</span></span>&gt;</span>
+</div>
+<span class="m-doc-wrap-bumper">const <a class="m-doc" href="namespacedds_1_1core_1_1status.html#a04af02f4c95b6f099b2eee842879808b">dds::<wbr/>core::<wbr/>status::<wbr/>SampleLostStatus</a> <span class="m-doc-details-prefix">dds::sub::DataReader::</span></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#ad1a8eab152f095bf973d3a177e3bac20">sample_lost_status</a>(</span><span class="m-doc-wrap">) const</span></span>
+</h3>
+<p>전달되기 전에 손실된 sample에 대한 <a class="m-doc" href="classdds_1_1sub_1_1_data_reader.html">DataReader&lt;T&gt;</a> 상태를 가져옵니다</p>
+<table class="m-table m-fullwidth m-flat">
+<tfoot>
+<tr>
+<th style="width: 1%">반환값</th>
+<td>재설정 전에 찍은 상태 스냅샷</td>
+</tr>
+</tfoot>
+</table>
+<p>DDS는 스냅샷을 캡처한 다음 이 상태의 변경 카운터를 재설정하고 변경된 플래그를 지웁니다. 다른 관찰자가 변경 사항이 없음을 보고, 연결된 StatusCondition가 다른 활성화된 상태가 대기 중이지 않으면 트리거를 중단할 수 있습니다.</p>
+</div></section><section class="m-doc-details" id="a9fc4ee24fcb1f13d6f98c0201d9a4136"><div>
+<h3>
+<div class="m-doc-template dds-full-signature">
+<span class="m-doc-template-parent">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename T</span>, <span class="m-doc-template-param">template&lt;typename Q&gt; class DELEGATE</span></span>&gt;</span>
+</div>
+<span class="m-doc-wrap-bumper">const <a class="m-doc" href="namespacedds_1_1core_1_1status.html#a545c7d7cb2c055ebffb2f1770f76da01">dds::<wbr/>core::<wbr/>status::<wbr/>SampleRejectedStatus</a> <span class="m-doc-details-prefix">dds::sub::DataReader::</span></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a9fc4ee24fcb1f13d6f98c0201d9a4136">sample_rejected_status</a>(</span><span class="m-doc-wrap">) const</span></span>
+</h3>
+<p>sample 거부에 대한 <a class="m-doc" href="classdds_1_1sub_1_1_data_reader.html">DataReader&lt;T&gt;</a> 상태 및 최근 원인 가져옵니다.</p>
+<table class="m-table m-fullwidth m-flat">
+<tfoot>
+<tr>
+<th style="width: 1%">반환값</th>
+<td>재설정 전에 찍은 상태 스냅샷</td>
+</tr>
+</tfoot>
+</table>
+<p>DDS는 스냅샷을 캡처한 다음 이 상태의 변경 카운터를 재설정하고 변경된 플래그를 지웁니다. 다른 관찰자가 변경 사항이 없음을 보고, 연결된 StatusCondition가 다른 활성화된 상태가 대기 중이지 않으면 트리거를 중단할 수 있습니다.</p>
+</div></section><section class="m-doc-details" id="a08c009efb49a3ad883d17b9ede60ed6c"><div>
+<h3>
+<div class="m-doc-template dds-full-signature">
+<span class="m-doc-template-parent">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename T</span>, <span class="m-doc-template-param">template&lt;typename Q&gt; class DELEGATE</span></span>&gt;</span>
+</div>
+<span class="m-doc-wrap-bumper">const <a class="m-doc" href="namespacedds_1_1core_1_1status.html#abb43166d32256fc63bd26ce34140090d">dds::<wbr/>core::<wbr/>status::<wbr/>SubscriptionMatchedStatus</a> <span class="m-doc-details-prefix">dds::sub::DataReader::</span></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a08c009efb49a3ad883d17b9ede60ed6c">subscription_matched_status</a>(</span><span class="m-doc-wrap">) const</span></span>
+</h3>
+<p>현재 및 누적된 Publication 매칭에 대한 <a class="m-doc" href="classdds_1_1sub_1_1_data_reader.html">DataReader&lt;T&gt;</a> 상태를 가져옵니다.</p>
+<table class="m-table m-fullwidth m-flat">
+<tfoot>
+<tr>
+<th style="width: 1%">반환값</th>
+<td>재설정 전에 찍은 상태 스냅샷</td>
+</tr>
+</tfoot>
+</table>
+<p>DDS는 스냅샷을 캡처한 다음 이 상태의 변경 카운터를 재설정하고 변경된 플래그를 지웁니다. 다른 관찰자가 변경 사항이 없음을 보고, 연결된 StatusCondition가 다른 활성화된 상태가 대기 중이지 않으면 트리거를 중단할 수 있습니다.</p>
+</div></section>
+<section class="m-doc-details" id="aa13332a58982c39fe67ecdaa66857bbd"><div>
+<h3>
+<div class="m-doc-template dds-full-signature">
+<span class="m-doc-template-parent">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename T</span>, <span class="m-doc-template-param">template&lt;typename Q&gt; class DELEGATE</span></span>&gt;</span>
+</div>
+<span class="m-doc-wrap-bumper"> <span class="m-doc-details-prefix">dds::sub::DataReader::</span></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#aa13332a58982c39fe67ecdaa66857bbd">DataReader</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="group__dds__subscription.html#ga9a6d78b2a23f864211da5bd2edf28750">dds::<wbr/>sub::<wbr/>Subscriber</a>&amp; sub,
+              const <a class="m-doc" href="classdds_1_1topic_1_1_topic.html">::dds::topic::Topic&lt;T&gt;</a>&lt;T&gt;&amp; topic,
+              const <a class="m-doc" href="group__dds__subscription.html#gac759142c11b5f0cb2b2a8f6c41405966">dds::<wbr/>sub::<wbr/>qos::<wbr/>DataReaderQos</a>&amp; qos,
+              <a class="m-doc" href="classdds_1_1sub_1_1_data_reader_listener.html">dds::<wbr/>sub::<wbr/>DataReaderListener</a>&lt;T&gt;* listener = NULL,
+              const <a class="m-doc" href="classdds_1_1core_1_1status_1_1_status_mask.html">dds::<wbr/>core::<wbr/>status::<wbr/>StatusMask</a>&amp; mask = <a class="m-doc" href="classdds_1_1core_1_1status_1_1_status_mask.html#a2d5d96c01cceb09a14ff466f43be8173">::<wbr/>dds::<wbr/>core::<wbr/>status::<wbr/>StatusMask::<wbr/>all</a>())</span></span>
+</h3>
+<p>지정된 QoS로 <code>DataReader</code>를 생성합니다.</p>
+<table class="m-table m-fullwidth m-flat">
+<thead>
+<tr><th colspan="2">매개변수</th></tr>
+</thead>
+<tbody>
+<tr>
+<td style="width: 1%">sub</td>
+<td>이 <code>DataReader</code>를 소유하는 <a class="m-doc" href="group__dds__subscription.html#ga9a6d78b2a23f864211da5bd2edf28750">Subscriber</a></td>
+</tr>
+<tr>
+<td>topic</td>
+<td>이 <code>DataReader</code>에 연결된 Topic</td>
+</tr>
+<tr>
+<td>qos</td>
+<td>이 <code>DataReader</code>의 QoS 설정</td>
+</tr>
+<tr>
+<td>listener</td>
+<td>듣는 사람이요</td>
+</tr>
+<tr>
+<td>mask</td>
+<td><code>DataReader</code> listener에 연결된 이벤트 마스크</td>
+</tr>
+</tbody>
+</table>
+</div></section>
+<section class="m-doc-details" id="af32584d93a8dabce1309769d3ca0447c"><div>
+<h3>
+<div class="m-doc-template dds-full-signature">
+<span class="m-doc-template-parent">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename T</span>, <span class="m-doc-template-param">template&lt;typename Q&gt; class DELEGATE</span></span>&gt;</span>
+</div>
+<span class="m-doc-wrap-bumper"> <span class="m-doc-details-prefix">dds::sub::DataReader::</span></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#af32584d93a8dabce1309769d3ca0447c">DataReader</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="group__dds__subscription.html#ga9a6d78b2a23f864211da5bd2edf28750">dds::<wbr/>sub::<wbr/>Subscriber</a>&amp; sub,
+              const <a class="m-doc" href="classdds_1_1topic_1_1_content_filtered_topic.html">::dds::topic::ContentFilteredTopic&lt;T&gt;</a>&lt;T&gt;&amp; topic)</span></span>
+</h3>
+<p><code>ContentFilteredTopic</code>의 <code>DataReader</code>를 Subscriber의 기본 <a class="m-doc" href="classdds_1_1sub_1_1_data_reader.html">DataReader&lt;T&gt;</a> QoS로 생성합니다.</p>
+<table class="m-table m-fullwidth m-flat">
+<thead>
+<tr><th colspan="2">매개변수</th></tr>
+</thead>
+<tbody>
+<tr>
+<td style="width: 1%">sub</td>
+<td>이 <code>DataReader</code>를 소유하는 <a class="m-doc" href="group__dds__subscription.html#ga9a6d78b2a23f864211da5bd2edf28750">Subscriber</a></td>
+</tr>
+<tr>
+<td>topic</td>
+<td>ContentFilteredTopic.</td>
+</tr>
+</tbody>
+</table>
+<p>DataReader는 콘텐츠 필터와 일치하는 sample만 받습니다.</p>
+</div></section>
+<section class="m-doc-details" id="a37a0c7fe63ff2e00d8c07c8452402102"><div>
+<h3>
+<div class="m-doc-template dds-full-signature">
+<span class="m-doc-template-parent">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename T</span>, <span class="m-doc-template-param">template&lt;typename Q&gt; class DELEGATE</span></span>&gt;</span>
+</div>
+<span class="m-doc-wrap-bumper"> <span class="m-doc-details-prefix">dds::sub::DataReader::</span></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a37a0c7fe63ff2e00d8c07c8452402102">DataReader</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="group__dds__subscription.html#ga9a6d78b2a23f864211da5bd2edf28750">dds::<wbr/>sub::<wbr/>Subscriber</a>&amp; sub,
+              const <a class="m-doc" href="classdds_1_1topic_1_1_content_filtered_topic.html">::dds::topic::ContentFilteredTopic&lt;T&gt;</a>&lt;T&gt;&amp; topic,
+              const <a class="m-doc" href="group__dds__subscription.html#gac759142c11b5f0cb2b2a8f6c41405966">dds::<wbr/>sub::<wbr/>qos::<wbr/>DataReaderQos</a>&amp; qos,
+              <a class="m-doc" href="classdds_1_1sub_1_1_data_reader_listener.html">dds::<wbr/>sub::<wbr/>DataReaderListener</a>&lt;T&gt;* listener = NULL,
+              const <a class="m-doc" href="classdds_1_1core_1_1status_1_1_status_mask.html">dds::<wbr/>core::<wbr/>status::<wbr/>StatusMask</a>&amp; mask = <a class="m-doc" href="classdds_1_1core_1_1status_1_1_status_mask.html#a2d5d96c01cceb09a14ff466f43be8173">::<wbr/>dds::<wbr/>core::<wbr/>status::<wbr/>StatusMask::<wbr/>all</a>())</span></span>
+</h3>
+<p><code>ContentFilteredTopic</code>의 <code>DataReader</code>를 지정된 QoS로 생성합니다.</p>
+<table class="m-table m-fullwidth m-flat">
+<thead>
+<tr><th colspan="2">매개변수</th></tr>
+</thead>
+<tbody>
+<tr>
+<td style="width: 1%">sub</td>
+<td>이 <code>DataReader</code>를 소유하는 <a class="m-doc" href="group__dds__subscription.html#ga9a6d78b2a23f864211da5bd2edf28750">Subscriber</a></td>
+</tr>
+<tr>
+<td>topic</td>
+<td>ContentFilteredTopic.</td>
+</tr>
+<tr>
+<td>qos</td>
+<td>이 <code>DataReader</code>의 QoS 설정</td>
+</tr>
+<tr>
+<td>listener</td>
+<td>듣는 사람이요</td>
+</tr>
+<tr>
+<td>mask</td>
+<td><code>DataReader</code> listener에 연결된 이벤트 마스크</td>
+</tr>
+</tbody>
+</table>
+<p>DataReader는 콘텐츠 필터와 일치하는 sample만 받습니다.</p>
+</div></section>
+<section class="m-doc-details" id="aef027249fc2c68406668b1dea512a195"><div>
+<h3>
+<div class="m-doc-template dds-full-signature">
+<span class="m-doc-template-parent">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename T</span>, <span class="m-doc-template-param">template&lt;typename Q&gt; class DELEGATE</span></span>&gt;</span>
+</div>
+<span class="m-doc-wrap-bumper"> <span class="m-doc-details-prefix">dds::sub::DataReader::</span></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#aef027249fc2c68406668b1dea512a195">~DataReader</a>(</span><span class="m-doc-wrap">)</span></span>
+</h3>
+<p>이 <a class="m-doc" href="classdds_1_1sub_1_1_data_reader.html">DataReader&lt;T&gt;</a> handle을 해제합니다.</p>
+<p>래퍼는 이 handle과 Subscriber의 레지스트리 참조만 남아 있으면 레지스트리 항목을 제거합니다.</p>
+</div></section>
+</section>
+</div>
+</div>
+</div>
+</article></main>
+<div class="m-doc-search" id="search">
+<a href="#!" onclick="return hideSearch()"></a>
+<div class="m-container">
+<div class="m-row">
+<div class="m-col-m-8 m-push-m-2">
+<div class="m-doc-search-header m-text m-small">
+<div>Tab 또는 T로 검색하고 Esc로 닫습니다.</div>
+<div id="search-symbolcount">…</div>
+</div>
+<div class="m-doc-search-content">
+<form>
+<input autocomplete="off" autofocus="autofocus" disabled="disabled" id="search-input" name="q" placeholder="불러오는 중…" spellcheck="false" type="search"/>
+</form>
+<noscript class="m-text m-danger m-text-center">검색을 사용하려면 JavaScript가 필요합니다.</noscript>
+<div class="m-text m-dim m-text-center" id="search-help">심볼, 디렉터리, 파일, 페이지 또는 모듈을 검색합니다. 심볼이나 파일 경로의 앞부분을 생략할 수 있습니다. 끝에 : 또는 /를 붙이면 하위 항목을 표시합니다. ↑와 ↓로 결과를 이동하고 Enter로 엽니다. Tab으로 공통 접두사를 자동 완성합니다. ⌘ L로 링크를 복사하고 ⌘ M으로 Markdown 링크를 복사합니다.</div>
+<div class="m-text m-warning m-text-center" id="search-notfound">검색 결과가 없습니다.</div>
+<ul id="search-results"></ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src="search-v2.js"></script><script>install_mcss_search_shim();</script>
+<script async="async" src="searchdata-v2.js"></script>
+<footer><nav>
+<div class="m-container">
+<div class="m-row">
+<div class="m-col-l-10 m-push-l-1">
+<a download="" href="GurumDDS_C++.tagfile.xml" target="_blank" type="text/xml">Doxygen 태그 파일</a>
+<br/><br/>
+사이트 생성 도구 <a class="poxy-external" href="https://github.com/marzer/poxy/" target="_blank">Poxy</a>
+</div>
+</div>
+</div>
+</nav></footer>
+</body></html>

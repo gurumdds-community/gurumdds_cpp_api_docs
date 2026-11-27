@@ -1,0 +1,398 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/xhtml;charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=11" http-equiv="X-UA-Compatible"/>
+<meta content="Doxygen 1.18.0" name="generator"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>GurumDDS C++ API Reference: DomainParticipant</title>
+<link href="gurum-networks-logo.png" rel="icon" type="image/x-icon"/>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script src="dynsections.js" type="text/javascript"></script>
+<script src="codefolding.js" type="text/javascript"></script>
+<script src="clipboard.js" type="text/javascript"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script src="navtreedata.js" type="text/javascript"></script>
+<script src="navtree.js" type="text/javascript"></script>
+<script src="cookie.js" type="text/javascript"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script src="search/searchdata.js" type="text/javascript"></script>
+<script src="search/search.js" type="text/javascript"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+<link href="ReferenceBranding.css" rel="stylesheet" type="text/css"/>
+<script defer="True" src="ReferenceUi.js"></script><link href="../en/group__dds__tutorial__participant.html" hreflang="en" rel="alternate"/><link href="../ko/group__dds__tutorial__participant.html" hreflang="ko" rel="alternate"/><link href="../language.css" rel="stylesheet"/><script defer="defer" src="../language.js"></script></head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellpadding="0" cellspacing="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">GurumDDS C++ API Reference<span id="projectnumber"> 1.3.2</span>
+   </div>
+  </td>
+ <td class="doc-language-cell"><label class="doc-language"><select aria-label="문서 언어" data-current="1"><option lang="en" value="../en/group__dds__tutorial__participant.html">English</option><option lang="en" selected="selected" value="../ko/group__dds__tutorial__participant.html">Korean</option></select></label></td></tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script id="doxygen-config" type="application/json">
+{
+  "relPath": "",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script src="menudata.js" type="text/javascript"></script>
+<script src="menu.js" type="text/javascript"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> 주 메뉴 표시 전환</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div class="MSearchBoxInactive" id="MSearchBox">
+        <span class="left">
+          <span class="search-icon" id="MSearchSelect"><span class="search-icon-dropdown"></span></span>
+          <input accesskey="S" id="MSearchField" placeholder="검색" type="text" value=""/>
+          </span><span class="right">
+            <a href="javascript:searchBox.CloseResultsWindow()" id="MSearchClose"><div class="close-icon" id="MSearchCloseImg"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div class="ui-resizable side-nav-resizable" id="side-nav">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div class="sync" id="nav-sync"></div>
+    </div>
+  </div>
+  <div class="ui-resizable-handle" id="splitbar">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('group__dds__tutorial__participant.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">로딩중...</div>
+<div class="SRStatus" id="Searching">검색중...</div>
+<div class="SRStatus" id="NoMatches">일치하는것 없음</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">DomainParticipant <div class="ingroups"><a class="el" href="group__dds__howto.html">Programming Tutorials</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p>DomainParticipant는 DDS domain에 참여하며 Topic, Publisher, Subscriber의 생성에 필요합니다. 이 객체들보다 먼저 만드세요. 서로 발견해야 하는 애플리케이션에는 같은 domain ID를 사용하세요.</p>
+<p>C++ API를 사용하려면 <span class="tt">&lt;gurumdds/dds.hpp&gt;</span>를 포함하세요. 예제의 첫 줄에서 domain ID를 정하고 다음 줄에서 <span class="tt">participant</span>라는 handle을 만듭니다. 완성 프로그램에서는 <span class="tt">require()</span>로 결과를 확인합니다.</p>
+<h1 class="doxsection"><a class="anchor" id="dds_tutorial_participant_create"></a>
+domain에 DomainParticipant 생성</h1>
+<p>생성자에 domain ID를 전달하고 <span class="tt">domain_id()</span>로 확인합니다. 다른 domain에 속한 DomainParticipant는 같은 Topic 이름을 독립적으로 사용할 수 있습니다. 소속 Entity를 사용하는 동안 DomainParticipant의 수명을 유지하세요.</p>
+<div class="fragment"><div class="line"><span class="keyword">const</span> <a class="code hl_typedef" href="namespacedds_1_1domain.html#a492326d51518fe7033886c54a25d4bf0">dds::domain::DomainId</a> domain = 92;</div>
+<div class="line"><a class="code hl_typedef" href="group__dds__domain.html#gab1bd86ffa9ac0869166a446dd0120f3d">dds::domain::DomainParticipant</a> participant(domain);</div>
+<div class="line">require(participant.domain_id() == domain, <span class="stringliteral">"Participant domain differs"</span>);</div>
+</div><!-- fragment --><p>Domain ID는 discovery가 이루어지는 범위를 정합니다. Endpoint가 매칭되려면 Topic과 QoS도 호환되어야 합니다. DataWriter와 DataReader를 만든 후 확인할 사항은 <a class="el" href="group__dds__tutorial__discovery.html" title="Matching과 Discovery">Matching과 Discovery</a> 에서 다룹니다.</p>
+<h1 class="doxsection"><a class="anchor" id="participant_qos_sources"></a>
+QoS 설정 범위 선택</h1>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">범위  </th><th class="markdownTableHeadNone">설정과 확인  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">이후 생성할 DomainParticipant  </td><td class="markdownTableBodyNone">생성 전에 <span class="tt">DomainParticipant::default_participant_qos()</span>로 설정합니다. 기본값과 새 DomainParticipant의 <span class="tt">qos()</span>를 읽어 확인합니다.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">기존 DomainParticipant  </td><td class="markdownTableBodyNone">변경 가능한 정책을 <span class="tt">participant.qos(value)</span>로 설정하고 다시 읽습니다.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">이후 생성할 Publisher와 Subscriber  </td><td class="markdownTableBodyNone">DomainParticipant의 자식 기본값을 설정하고 새 객체의 <span class="tt">qos()</span>를 읽습니다.  </td></tr>
+</table>
+<h1 class="doxsection"><a class="anchor" id="dds_tutorial_participant_user_data"></a>
+DomainParticipant의 UserData 설정</h1>
+<p>생성한 DomainParticipant의 QoS를 가져와 <span class="tt">UserData</span>를 바꾼 뒤 적용하세요. QoS를 다시 읽어 바이트 배열을 확인합니다.</p>
+<div class="fragment"><div class="line"><span class="keyword">using </span><a class="code hl_typedef" href="group__dds__qos.html#ga3082013b21e53c2cb3c462fcd1151d77">dds::core::policy::UserData</a>;</div>
+<div class="line"><span class="keyword">const</span> <a class="code hl_typedef" href="namespacedds_1_1core.html#af64219b65f7ff337e91052779680aef9">dds::core::ByteSeq</a> data{1, 2, 3};</div>
+<div class="line"><span class="keyword">auto</span> participant_qos = participant.qos();</div>
+<div class="line">participant_qos &lt;&lt; <a class="code hl_typedef" href="group__dds__qos.html#ga3082013b21e53c2cb3c462fcd1151d77">UserData</a>(data);</div>
+<div class="line">participant.qos(participant_qos);</div>
+<div class="line">require(participant.qos().policy&lt;UserData&gt;().value() == data, <span class="stringliteral">"Participant UserData differs"</span>);</div>
+</div><!-- fragment --><p>다음 단계에서 설정하는 기본 QoS는 이후 생성할 Publisher와 Subscriber에 적용됩니다. 앞 단계의 <span class="tt">UserData</span>는 이미 만든 DomainParticipant 자체에 설정했습니다.</p>
+<h1 class="doxsection"><a class="anchor" id="dds_tutorial_participant_defaults"></a>
+새 Publisher와 Subscriber의 기본 QoS 설정</h1>
+<p>Publisher와 Subscriber를 생성하기 전에 DomainParticipant의 기본 QoS를 설정하세요. QoS를 생략한 생성자는 이 기본값을 사용합니다. 이미 생성한 Entity는 자체 QoS를 변경하세요.</p>
+<div class="fragment"><div class="line"><span class="keyword">const</span> <a class="code hl_typedef" href="namespacedds_1_1core.html#af41924828eff7595b676d2196b993482">dds::core::StringSeq</a> partition_names{<span class="stringliteral">"defaults"</span>};</div>
+<div class="line"><span class="keyword">auto</span> default_publisher_qos = participant.default_publisher_qos();</div>
+<div class="line">default_publisher_qos &lt;&lt; <a class="code hl_typedef" href="group__dds__qos.html#ga9676f77e95c6e5d1c732604d9e7ead38">Partition</a>(partition_names);</div>
+<div class="line">participant.default_publisher_qos(default_publisher_qos);</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">auto</span> default_subscriber_qos = participant.default_subscriber_qos();</div>
+<div class="line">default_subscriber_qos &lt;&lt; <a class="code hl_typedef" href="group__dds__qos.html#ga9676f77e95c6e5d1c732604d9e7ead38">Partition</a>(partition_names);</div>
+<div class="line">participant.default_subscriber_qos(default_subscriber_qos);</div>
+<div class="line"> </div>
+<div class="line"><a class="code hl_typedef" href="group__dds__publication.html#gada2751fd8ce0e148138e6950f7ef7d37">dds::pub::Publisher</a> default_publisher(participant);</div>
+<div class="line"><a class="code hl_typedef" href="group__dds__subscription.html#ga9a6d78b2a23f864211da5bd2edf28750">dds::sub::Subscriber</a> default_subscriber(participant);</div>
+<div class="line">require(default_publisher.qos().policy&lt;Partition&gt;().name() == partition_names, <span class="stringliteral">"Publisher Partition differs"</span>);</div>
+<div class="line">require(default_subscriber.qos().policy&lt;Partition&gt;().name() == partition_names, <span class="stringliteral">"Subscriber Partition differs"</span>);</div>
+</div><!-- fragment --><p>완성 프로그램에서는 <span class="tt">participant</span>로 <span class="tt">publisher</span>를 만들고, 그 Publisher와 Topic으로 <span class="tt">writer</span>를 만듭니다. 이렇게 해서 DomainParticipant의 직접 자식과 간접 자식을 각각 확인합니다.</p>
+<h1 class="doxsection"><a class="anchor" id="dds_tutorial_participant_contains"></a>
+Entity가 DomainParticipant에 속하는지 확인</h1>
+<p>Entity의 <span class="tt">instance_handle()</span>을 <span class="tt">contains_entity()</span>에 전달하세요. Publisher처럼 직접 생성한 Entity와 Publisher가 생성한 DataWriter를 모두 확인할 수 있습니다.</p>
+<div class="fragment"><div class="line">require(participant.contains_entity(publisher.instance_handle()), <span class="stringliteral">"Publisher is not contained"</span>);</div>
+<div class="line">require(participant.contains_entity(writer.instance_handle()), <span class="stringliteral">"Writer is not contained"</span>);</div>
+<div class="line"><a class="code hl_typedef" href="group__dds__domain.html#gab1bd86ffa9ac0869166a446dd0120f3d">dds::domain::DomainParticipant</a> other_participant(107);</div>
+<div class="line">require(not other_participant.contains_entity(writer.instance_handle()), <span class="stringliteral">"Another participant owns the writer"</span>);</div>
+</div><!-- fragment --><p>같은 DomainParticipant에서 DDS timestamp를 얻습니다. DataWriter 튜토리얼에서는 이 timestamp를 sample에 넣어 보내는 방법을 설명합니다.</p>
+<h1 class="doxsection"><a class="anchor" id="dds_tutorial_participant_time"></a>
+DomainParticipant에서 timestamp 가져오기</h1>
+<p><span class="tt">current_time()</span>으로 얻은 타임스탬프를 쓰기 연산에 전달할 수 있습니다. 로컬 timeout은 단조 시계로 측정하세요.</p>
+<div class="fragment"><div class="line"><span class="keyword">const</span> <span class="keyword">auto</span> now = participant.current_time();</div>
+<div class="line">require(now.sec() &gt;= 0, <span class="stringliteral">"Participant time is invalid"</span>);</div>
+</div><!-- fragment --><div class="image">
+<object data="dds-diagram-source-timestamp-ko.svg" style="pointer-events: none;" type="image/svg+xml"></object>
+<div class="caption">
+소스 timestamp가 샘플과 함께 전달되는 경로</div></div>
+ <h1 class="doxsection"><a class="anchor" id="dds_tutorial_src_entities"></a>
+Entity와 QoS</h1>
+<p>Entity를 생성하고 Partition과 endpoint 기본값을 설정한 뒤 DDS 예외를 처리합니다.</p>
+<p>아래 명령으로 프로그램을 빌드하세요. 실행에 성공하면 <span class="tt">Entity and QoS examples passed</span>를 출력합니다.</p>
+<div class="fragment"><div class="line">cmake --build . --target example_cpp_howto_entities</div>
+</div><!-- fragment --><details class="dds-reference-details"><summary>완성 코드</summary><div class="fragment"><div class="line"><span class="preprocessor">#include "demo.hpp"</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">namespace</span></div>
+<div class="line">{</div>
+<div class="line"><span class="keywordtype">void</span> use_entities()</div>
+<div class="line">{</div>
+<div class="line">    <span class="keyword">using </span>howto::require;</div>
+<div class="line">    <span class="keyword">using </span><a class="code hl_typedef" href="group__dds__qos.html#gac131ef99ba345cff7ae780d5d30ff130">dds::core::policy::History</a>;</div>
+<div class="line">    <span class="keyword">using </span><a class="code hl_typedef" href="group__dds__qos.html#ga9676f77e95c6e5d1c732604d9e7ead38">dds::core::policy::Partition</a>;</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// [open_participant]</span></div>
+<div class="line">    <span class="keyword">const</span> <a class="code hl_typedef" href="namespacedds_1_1domain.html#a492326d51518fe7033886c54a25d4bf0">dds::domain::DomainId</a> domain = 92;</div>
+<div class="line">    <a class="code hl_typedef" href="group__dds__domain.html#gab1bd86ffa9ac0869166a446dd0120f3d">dds::domain::DomainParticipant</a> participant(domain);</div>
+<div class="line">    require(participant.domain_id() == domain, <span class="stringliteral">"Participant domain differs"</span>);</div>
+<div class="line">    <span class="comment">// [open_participant]</span></div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// [participant_user_data]</span></div>
+<div class="line">    <span class="keyword">using </span><a class="code hl_typedef" href="group__dds__qos.html#ga3082013b21e53c2cb3c462fcd1151d77">dds::core::policy::UserData</a>;</div>
+<div class="line">    <span class="keyword">const</span> <a class="code hl_typedef" href="namespacedds_1_1core.html#af64219b65f7ff337e91052779680aef9">dds::core::ByteSeq</a> data{1, 2, 3};</div>
+<div class="line">    <span class="keyword">auto</span> participant_qos = participant.qos();</div>
+<div class="line">    participant_qos &lt;&lt; UserData(data);</div>
+<div class="line">    participant.qos(participant_qos);</div>
+<div class="line">    require(participant.qos().policy&lt;UserData&gt;().value() == data, <span class="stringliteral">"Participant UserData differs"</span>);</div>
+<div class="line">    <span class="comment">// [participant_user_data]</span></div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// [participant_child_defaults]</span></div>
+<div class="line">    <span class="keyword">const</span> <a class="code hl_typedef" href="namespacedds_1_1core.html#af41924828eff7595b676d2196b993482">dds::core::StringSeq</a> partition_names{<span class="stringliteral">"defaults"</span>};</div>
+<div class="line">    <span class="keyword">auto</span> default_publisher_qos = participant.default_publisher_qos();</div>
+<div class="line">    default_publisher_qos &lt;&lt; <a class="code hl_typedef" href="group__dds__qos.html#ga9676f77e95c6e5d1c732604d9e7ead38">Partition</a>(partition_names);</div>
+<div class="line">    participant.default_publisher_qos(default_publisher_qos);</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">auto</span> default_subscriber_qos = participant.default_subscriber_qos();</div>
+<div class="line">    default_subscriber_qos &lt;&lt; <a class="code hl_typedef" href="group__dds__qos.html#ga9676f77e95c6e5d1c732604d9e7ead38">Partition</a>(partition_names);</div>
+<div class="line">    participant.default_subscriber_qos(default_subscriber_qos);</div>
+<div class="line"> </div>
+<div class="line">    <a class="code hl_typedef" href="group__dds__publication.html#gada2751fd8ce0e148138e6950f7ef7d37">dds::pub::Publisher</a> default_publisher(participant);</div>
+<div class="line">    <a class="code hl_typedef" href="group__dds__subscription.html#ga9a6d78b2a23f864211da5bd2edf28750">dds::sub::Subscriber</a> default_subscriber(participant);</div>
+<div class="line">    require(default_publisher.qos().policy&lt;Partition&gt;().name() == partition_names, <span class="stringliteral">"Publisher Partition differs"</span>);</div>
+<div class="line">    require(default_subscriber.qos().policy&lt;Partition&gt;().name() == partition_names, <span class="stringliteral">"Subscriber Partition differs"</span>);</div>
+<div class="line">    <span class="comment">// [participant_child_defaults]</span></div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// [participant_time]</span></div>
+<div class="line">    <span class="keyword">const</span> <span class="keyword">auto</span> now = participant.current_time();</div>
+<div class="line">    require(now.sec() &gt;= 0, <span class="stringliteral">"Participant time is invalid"</span>);</div>
+<div class="line">    <span class="comment">// [participant_time]</span></div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// [create_topic]</span></div>
+<div class="line">    <a class="code hl_class" href="classdds_1_1topic_1_1_topic.html">dds::topic::Topic&lt;T&gt;</a> topic(participant, <span class="stringliteral">"HowToEntities"</span>);</div>
+<div class="line">    <span class="keyword">const</span> <span class="keyword">auto</span> registered_type = <a class="code hl_struct" href="structdds_1_1topic_1_1topic__type__name.html">dds::topic::topic_type_name&lt;Hello::Msg&gt;::value</a>();</div>
+<div class="line">    require(topic.name() == <span class="stringliteral">"HowToEntities"</span> and topic.type_name() == registered_type, <span class="stringliteral">"Topic description differs"</span>);</div>
+<div class="line">    <span class="comment">// [create_topic]</span></div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// [publisher_partition]</span></div>
+<div class="line">    <span class="keyword">auto</span> publisher_qos = participant.default_publisher_qos();</div>
+<div class="line">    publisher_qos &lt;&lt; <a class="code hl_typedef" href="group__dds__qos.html#ga9676f77e95c6e5d1c732604d9e7ead38">Partition</a>(<span class="stringliteral">"howto"</span>);</div>
+<div class="line">    <a class="code hl_typedef" href="group__dds__publication.html#gada2751fd8ce0e148138e6950f7ef7d37">dds::pub::Publisher</a> publisher(participant, publisher_qos);</div>
+<div class="line">    <span class="comment">// [publisher_partition]</span></div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// [publisher_participant]</span></div>
+<div class="line">    <span class="keyword">const</span> <span class="keyword">auto</span> owner = publisher.participant();</div>
+<div class="line">    require(owner == participant, <span class="stringliteral">"Publisher belongs to another participant"</span>);</div>
+<div class="line">    <span class="comment">// [publisher_participant]</span></div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// [subscriber_partition]</span></div>
+<div class="line">    <span class="keyword">auto</span> subscriber_qos = participant.default_subscriber_qos();</div>
+<div class="line">    subscriber_qos &lt;&lt; <a class="code hl_typedef" href="group__dds__qos.html#ga9676f77e95c6e5d1c732604d9e7ead38">Partition</a>(<span class="stringliteral">"howto"</span>);</div>
+<div class="line">    <a class="code hl_typedef" href="group__dds__subscription.html#ga9a6d78b2a23f864211da5bd2edf28750">dds::sub::Subscriber</a> subscriber(participant, subscriber_qos);</div>
+<div class="line">    <span class="comment">// [subscriber_partition]</span></div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// [publisher_defaults]</span></div>
+<div class="line">    <span class="keyword">auto</span> writer_defaults = publisher.default_writer_qos();</div>
+<div class="line">    writer_defaults &lt;&lt; History::KeepLast(3);</div>
+<div class="line">    publisher.default_writer_qos(writer_defaults);</div>
+<div class="line">    <a class="code hl_class" href="classdds_1_1pub_1_1_data_writer.html">dds::pub::DataWriter&lt;T&gt;</a> writer(publisher, topic);</div>
+<div class="line">    require(writer.qos().policy&lt;History&gt;().depth() == 3, <span class="stringliteral">"Writer did not inherit history depth"</span>);</div>
+<div class="line">    <span class="comment">// [publisher_defaults]</span></div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// [participant_contains]</span></div>
+<div class="line">    require(participant.contains_entity(publisher.instance_handle()), <span class="stringliteral">"Publisher is not contained"</span>);</div>
+<div class="line">    require(participant.contains_entity(writer.instance_handle()), <span class="stringliteral">"Writer is not contained"</span>);</div>
+<div class="line">    <a class="code hl_typedef" href="group__dds__domain.html#gab1bd86ffa9ac0869166a446dd0120f3d">dds::domain::DomainParticipant</a> other_participant(107);</div>
+<div class="line">    require(not other_participant.contains_entity(writer.instance_handle()), <span class="stringliteral">"Another participant owns the writer"</span>);</div>
+<div class="line">    <span class="comment">// [participant_contains]</span></div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// [entity_nil]</span></div>
+<div class="line">    <a class="code hl_class" href="classdds_1_1pub_1_1_data_writer.html">dds::pub::DataWriter&lt;T&gt;</a> optional_writer(<a class="code hl_variable" href="namespacedds_1_1core.html#a22c3217bb51dfe3db2887417da74d917">dds::core::null</a>);</div>
+<div class="line">    require(optional_writer.is_nil(), <span class="stringliteral">"Empty writer handle is not nil"</span>);</div>
+<div class="line">    optional_writer = writer;</div>
+<div class="line">    require(not optional_writer.is_nil(), <span class="stringliteral">"Assigned writer handle is nil"</span>);</div>
+<div class="line">    <span class="comment">// [entity_nil]</span></div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// [subscriber_reader_qos]</span></div>
+<div class="line">    <span class="keyword">auto</span> reader_qos = subscriber.default_datareader_qos();</div>
+<div class="line">    <span class="keyword">auto</span> reader_history = reader_qos.policy&lt;<a class="code hl_typedef" href="group__dds__qos.html#gac131ef99ba345cff7ae780d5d30ff130">History</a>&gt;();</div>
+<div class="line">    reader_history.kind(dds::core::policy::HistoryKind::KEEP_LAST).depth(2);</div>
+<div class="line">    reader_qos.policy(reader_history);</div>
+<div class="line">    <a class="code hl_class" href="classdds_1_1sub_1_1_data_reader.html">dds::sub::DataReader&lt;T&gt;</a> reader(subscriber, topic, reader_qos);</div>
+<div class="line">    require(reader.qos().policy&lt;History&gt;().depth() == 2, <span class="stringliteral">"Reader did not use the requested history depth"</span>);</div>
+<div class="line">    <span class="comment">// [subscriber_reader_qos]</span></div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// [subscriber_check_settings]</span></div>
+<div class="line">    <span class="keyword">const</span> <span class="keyword">auto</span> subscriber_domain = subscriber.participant().domain_id();</div>
+<div class="line">    <span class="keyword">const</span> <span class="keyword">auto</span> subscriber_partitions = subscriber.qos().policy&lt;<a class="code hl_typedef" href="group__dds__qos.html#ga9676f77e95c6e5d1c732604d9e7ead38">Partition</a>&gt;().name();</div>
+<div class="line">    require(subscriber_domain == domain, <span class="stringliteral">"Subscriber domain differs"</span>);</div>
+<div class="line">    require(subscriber_partitions == <a class="code hl_typedef" href="namespacedds_1_1core.html#af41924828eff7595b676d2196b993482">dds::core::StringSeq</a>{<span class="stringliteral">"howto"</span>}, <span class="stringliteral">"Subscriber Partition differs"</span>);</div>
+<div class="line">    <span class="comment">// [subscriber_check_settings]</span></div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// [share_entity_handle]</span></div>
+<div class="line">    {</div>
+<div class="line">        <span class="keyword">const</span> <span class="keyword">auto</span> writer_alias = writer;</div>
+<div class="line">        require(writer_alias == writer, <span class="stringliteral">"Copied handle refers to a different writer"</span>);</div>
+<div class="line">    }</div>
+<div class="line">    require(not writer.is_nil(), <span class="stringliteral">"Releasing a copy affected the original"</span>);</div>
+<div class="line">    <span class="comment">// [share_entity_handle]</span></div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// [read_qos]</span></div>
+<div class="line">    <a class="code hl_typedef" href="group__dds__qos.html#gac131ef99ba345cff7ae780d5d30ff130">History</a> history;</div>
+<div class="line">    writer.qos() &gt;&gt; history;</div>
+<div class="line">    require(history.depth() == 3, <span class="stringliteral">"Could not extract writer history policy"</span>);</div>
+<div class="line">    <span class="comment">// [read_qos]</span></div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// [partition_delivery]</span></div>
+<div class="line">    <span class="keyword">auto</span> other_qos = participant.default_subscriber_qos();</div>
+<div class="line">    other_qos &lt;&lt; <a class="code hl_typedef" href="group__dds__qos.html#ga9676f77e95c6e5d1c732604d9e7ead38">Partition</a>(<span class="stringliteral">"other"</span>);</div>
+<div class="line">    <a class="code hl_typedef" href="group__dds__subscription.html#ga9a6d78b2a23f864211da5bd2edf28750">dds::sub::Subscriber</a> other_subscriber(participant, other_qos);</div>
+<div class="line">    <a class="code hl_class" href="classdds_1_1sub_1_1_data_reader.html">dds::sub::DataReader&lt;T&gt;</a> other_reader(other_subscriber, topic, reader_qos);</div>
+<div class="line"> </div>
+<div class="line">    howto::wait_for_readers(writer, 1);</div>
+<div class="line">    <span class="keywordtype">char</span> message[] = <span class="stringliteral">"partition example"</span>;</div>
+<div class="line">    Hello::Msg sample{};</div>
+<div class="line">    sample.userId = 7;</div>
+<div class="line">    sample.message = message;</div>
+<div class="line">    writer.write(sample);</div>
+<div class="line"> </div>
+<div class="line">    howto::wait_until([&amp;reader, &amp;sample]() -&gt; <span class="keywordtype">bool</span> {</div>
+<div class="line">        <span class="keyword">const</span> <span class="keyword">auto</span> batch = reader.take();</div>
+<div class="line">        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; received : batch)</div>
+<div class="line">            <span class="keywordflow">if</span> (received.info().valid() and received.data().userId == sample.userId)</div>
+<div class="line">                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"> </div>
+<div class="line">        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line">    }, <span class="stringliteral">"The reader in the matching partition did not receive the sample"</span>);</div>
+<div class="line"> </div>
+<div class="line">    require(writer.publication_matched_status().current_count() == 1, <span class="stringliteral">"Expected exactly one matched reader"</span>);</div>
+<div class="line">    require(other_reader.subscription_matched_status().current_count() == 0, <span class="stringliteral">"The reader in the other partition matched"</span>);</div>
+<div class="line">    require(other_reader.take().length() == 0, <span class="stringliteral">"The reader in the other partition received data"</span>);</div>
+<div class="line">    <span class="comment">// [partition_delivery]</span></div>
+<div class="line">    std::cout &lt;&lt; <span class="stringliteral">"Partition: one matched reader received the sample\n"</span>;</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> catch_dds_exception()</div>
+<div class="line">{</div>
+<div class="line">    <span class="comment">// [catch_dds_exception]</span></div>
+<div class="line">    <span class="keywordflow">try</span></div>
+<div class="line">    {</div>
+<div class="line">        <span class="keyword">const</span> <span class="keyword">auto</span> elapsed = <a class="code hl_function" href="classdds_1_1core_1_1_duration.html#ac4d51447780d8cedf9ee0ebb78863c98">dds::core::Duration::from_millisecs</a>(20);</div>
+<div class="line">        <span class="keyword">const</span> <span class="keyword">auto</span> budget = <a class="code hl_function" href="classdds_1_1core_1_1_duration.html#ac4d51447780d8cedf9ee0ebb78863c98">dds::core::Duration::from_millisecs</a>(10);</div>
+<div class="line">        <span class="keyword">const</span> <span class="keyword">auto</span> remaining = budget - elapsed;</div>
+<div class="line">        (void)remaining;</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">catch</span> (<span class="keyword">const</span> <a class="code hl_class" href="classdds_1_1core_1_1_invalid_data_error.html">dds::core::InvalidDataError</a>&amp;)</div>
+<div class="line">    {</div>
+<div class="line">        std::cout &lt;&lt; <span class="stringliteral">"Caught a negative duration\n"</span>;</div>
+<div class="line">        <span class="keywordflow">return</span>;</div>
+<div class="line">    }</div>
+<div class="line">    <span class="comment">// [catch_dds_exception]</span></div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">"Expected InvalidDataError"</span>);</div>
+<div class="line">}</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">int</span> main()</div>
+<div class="line">{</div>
+<div class="line">    <span class="keywordflow">return</span> howto::run([]() -&gt; <span class="keywordtype">void</span> {</div>
+<div class="line">        use_entities();</div>
+<div class="line">        catch_dds_exception();</div>
+<div class="line">    }, <span class="stringliteral">"Entity and QoS examples passed"</span>);</div>
+<div class="line">}</div>
+<div class="ttc" id="aclassdds_1_1core_1_1_duration_html_ac4d51447780d8cedf9ee0ebb78863c98"><div class="ttname"><a href="classdds_1_1core_1_1_duration.html#ac4d51447780d8cedf9ee0ebb78863c98">dds::core::Duration::from_millisecs</a></div><div class="ttdeci">static const Duration from_millisecs(int64_t milliseconds)</div><div class="ttdoc">밀리초 단위 값으로 기간을 생성합니다.</div></div>
+<div class="ttc" id="aclassdds_1_1core_1_1_invalid_data_error_html"><div class="ttname"><a href="classdds_1_1core_1_1_invalid_data_error.html">dds::core::InvalidDataError</a></div><div class="ttdoc">요청된 작업에서 사용할 수 없는 데이터 값을 보고합니다.</div><div class="ttdef"><b>정의</b> Exception.hpp:464</div></div>
+<div class="ttc" id="aclassdds_1_1pub_1_1_data_writer_html"><div class="ttname"><a href="classdds_1_1pub_1_1_data_writer.html">dds::pub::DataWriter&lt;T&gt;</a></div><div class="ttdoc">데이터 타입이 지정된 Topic에 sample을 쓰고 instance를 관리합니다.</div><div class="ttdef"><b>정의</b> DataWriter.hpp:73</div></div>
+<div class="ttc" id="aclassdds_1_1sub_1_1_data_reader_html"><div class="ttname"><a href="classdds_1_1sub_1_1_data_reader.html">dds::sub::DataReader&lt;T&gt;</a></div><div class="ttdoc">Topic에서 지정된 타입의 sample을 수신합니다.</div><div class="ttdef"><b>정의</b> TDataReader.hpp:76</div></div>
+<div class="ttc" id="aclassdds_1_1topic_1_1_topic_html"><div class="ttname"><a href="classdds_1_1topic_1_1_topic.html">dds::topic::Topic&lt;T&gt;</a></div><div class="ttdoc">domain에서 Topic 이름을 DDS 데이터 타입과 연결합니다.</div><div class="ttdef"><b>정의</b> TTopic.hpp:54</div></div>
+<div class="ttc" id="agroup__dds__domain_html_gab1bd86ffa9ac0869166a446dd0120f3d"><div class="ttname"><a href="group__dds__domain.html#gab1bd86ffa9ac0869166a446dd0120f3d">dds::domain::DomainParticipant</a></div><div class="ttdeci">::dds::domain::detail::DomainParticipant DomainParticipant</div><div class="ttdoc">DDS domain에 가입하고 관리하는 데 사용되는 DomainParticipant handle</div><div class="ttdef"><b>정의</b> DomainParticipant.hpp:30</div></div>
+<div class="ttc" id="agroup__dds__publication_html_gada2751fd8ce0e148138e6950f7ef7d37"><div class="ttname"><a href="group__dds__publication.html#gada2751fd8ce0e148138e6950f7ef7d37">dds::pub::Publisher</a></div><div class="ttdeci">dds::pub::detail::Publisher Publisher</div><div class="ttdoc">DataWriter를 소유하고 기본값을 설정하는 데 사용되는 Publisher handle</div><div class="ttdef"><b>정의</b> Publisher.hpp:31</div></div>
+<div class="ttc" id="agroup__dds__qos_html_ga3082013b21e53c2cb3c462fcd1151d77"><div class="ttname"><a href="group__dds__qos.html#ga3082013b21e53c2cb3c462fcd1151d77">dds::core::policy::UserData</a></div><div class="ttdeci">dds::core::policy::detail::UserData UserData</div><div class="ttdoc">검색을 위한 애플리케이션 정의 데이터 수행</div><div class="ttdef"><b>정의</b> CorePolicy.hpp:244</div></div>
+<div class="ttc" id="agroup__dds__qos_html_ga9676f77e95c6e5d1c732604d9e7ead38"><div class="ttname"><a href="group__dds__qos.html#ga9676f77e95c6e5d1c732604d9e7ead38">dds::core::policy::Partition</a></div><div class="ttdeci">dds::core::policy::detail::Partition Partition</div><div class="ttdoc">domain 내에서 논리적 Publisher 및 Subscriber 일치 제어</div><div class="ttdef"><b>정의</b> CorePolicy.hpp:165</div></div>
+<div class="ttc" id="agroup__dds__qos_html_gac131ef99ba345cff7ae780d5d30ff130"><div class="ttname"><a href="group__dds__qos.html#gac131ef99ba345cff7ae780d5d30ff130">dds::core::policy::History</a></div><div class="ttdeci">dds::core::policy::detail::History History</div><div class="ttdoc">각 instance에 대한 sample 보유 제어</div><div class="ttdef"><b>정의</b> CorePolicy.hpp:115</div></div>
+<div class="ttc" id="agroup__dds__subscription_html_ga9a6d78b2a23f864211da5bd2edf28750"><div class="ttname"><a href="group__dds__subscription.html#ga9a6d78b2a23f864211da5bd2edf28750">dds::sub::Subscriber</a></div><div class="ttdeci">dds::sub::detail::Subscriber Subscriber</div><div class="ttdoc">DataReader를 소유하고 기본값을 설정하는 데 사용되는 Subscriber handle</div><div class="ttdef"><b>정의</b> Subscriber.hpp:31</div></div>
+<div class="ttc" id="anamespacedds_1_1core_html_a22c3217bb51dfe3db2887417da74d917"><div class="ttname"><a href="namespacedds_1_1core.html#a22c3217bb51dfe3db2887417da74d917">dds::core::null</a></div><div class="ttdeci">const null_type null</div><div class="ttdoc">빈 DDS 참조를 나타내는 값</div></div>
+<div class="ttc" id="anamespacedds_1_1core_html_af41924828eff7595b676d2196b993482"><div class="ttname"><a href="namespacedds_1_1core.html#af41924828eff7595b676d2196b993482">dds::core::StringSeq</a></div><div class="ttdeci">std::vector&lt; std::string &gt; StringSeq</div><div class="ttdoc">문자열 시퀀스</div><div class="ttdef"><b>정의</b> types.hpp:35</div></div>
+<div class="ttc" id="anamespacedds_1_1core_html_af64219b65f7ff337e91052779680aef9"><div class="ttname"><a href="namespacedds_1_1core.html#af64219b65f7ff337e91052779680aef9">dds::core::ByteSeq</a></div><div class="ttdeci">std::vector&lt; uint8_t &gt; ByteSeq</div><div class="ttdoc">부호 없는 8비트 바이트 시퀀스</div><div class="ttdef"><b>정의</b> types.hpp:33</div></div>
+<div class="ttc" id="anamespacedds_1_1domain_html_a492326d51518fe7033886c54a25d4bf0"><div class="ttname"><a href="namespacedds_1_1domain.html#a492326d51518fe7033886c54a25d4bf0">dds::domain::DomainId</a></div><div class="ttdeci">int32_t DomainId</div><div class="ttdoc">DDS domain을 식별하는 숫자</div><div class="ttdef"><b>정의</b> ddsdomain.hpp:10</div></div>
+<div class="ttc" id="astructdds_1_1topic_1_1topic__type__name_html"><div class="ttname"><a href="structdds_1_1topic_1_1topic__type__name.html">dds::topic::topic_type_name</a></div><div class="ttdef"><b>정의</b> TopicTraits.hpp:46</div></div>
+</div></details><!-- fragment --> </div></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="page-nav-panel" id="page-nav">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div class="navpath" id="nav-path"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">다음에 의해 생성됨 :  <a href="https://www.doxygen.org/index.html"><img alt="doxygen" class="footer" height="31" src="doxygen.svg" width="104"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

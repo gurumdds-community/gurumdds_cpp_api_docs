@@ -1,0 +1,290 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/xhtml;charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=11" http-equiv="X-UA-Compatible"/>
+<meta content="Doxygen 1.18.0" name="generator"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>GurumDDS C++ API Reference: dds::pub::TSuspendedPublication&lt; DELEGATE &gt; 클래스 템플릿</title>
+<link href="gurum-networks-logo.png" rel="icon" type="image/x-icon"/>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script src="dynsections.js" type="text/javascript"></script>
+<script src="codefolding.js" type="text/javascript"></script>
+<script src="clipboard.js" type="text/javascript"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script src="navtreedata.js" type="text/javascript"></script>
+<script src="navtree.js" type="text/javascript"></script>
+<script src="cookie.js" type="text/javascript"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script src="search/searchdata.js" type="text/javascript"></script>
+<script src="search/search.js" type="text/javascript"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+<link href="ReferenceBranding.css" rel="stylesheet" type="text/css"/>
+<script defer="True" src="ReferenceUi.js"></script><link href="../en/classdds_1_1pub_1_1_t_suspended_publication.html" hreflang="en" rel="alternate"/><link href="../ko/classdds_1_1pub_1_1_t_suspended_publication.html" hreflang="ko" rel="alternate"/><link href="../language.css" rel="stylesheet"/><script defer="defer" src="../language.js"></script></head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellpadding="0" cellspacing="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">GurumDDS C++ API Reference<span id="projectnumber"> 1.3.2</span>
+   </div>
+  </td>
+ <td class="doc-language-cell"><label class="doc-language"><select aria-label="문서 언어" data-current="1"><option lang="en" value="../en/classdds_1_1pub_1_1_t_suspended_publication.html">English</option><option lang="en" selected="selected" value="../ko/classdds_1_1pub_1_1_t_suspended_publication.html">Korean</option></select></label></td></tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script id="doxygen-config" type="application/json">
+{
+  "relPath": "",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script src="menudata.js" type="text/javascript"></script>
+<script src="menu.js" type="text/javascript"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> 주 메뉴 표시 전환</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div class="MSearchBoxInactive" id="MSearchBox">
+        <span class="left">
+          <span class="search-icon" id="MSearchSelect"><span class="search-icon-dropdown"></span></span>
+          <input accesskey="S" id="MSearchField" placeholder="검색" type="text" value=""/>
+          </span><span class="right">
+            <a href="javascript:searchBox.CloseResultsWindow()" id="MSearchClose"><div class="close-icon" id="MSearchCloseImg"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div class="ui-resizable side-nav-resizable" id="side-nav">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div class="sync" id="nav-sync"></div>
+    </div>
+  </div>
+  <div class="ui-resizable-handle" id="splitbar">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('classdds_1_1pub_1_1_t_suspended_publication.html','','classdds_1_1pub_1_1_t_suspended_publication-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">로딩중...</div>
+<div class="SRStatus" id="Searching">검색중...</div>
+<div class="SRStatus" id="NoMatches">일치하는것 없음</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">dds::pub::TSuspendedPublication&lt; DELEGATE &gt; 클래스 템플릿<div class="ingroups"><a class="el" href="group__dds__api__modules.html">API 모듈</a> » <a class="el" href="group__dds__publication.html">Publication</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p class="dds-class-include"><code>#include &lt;gurumdds/cpp/pub/TSuspendedPublication.hpp&gt;</code></p>
+
+<p>일시 중단된 게시에 대한 <a class="el" href="group__dds__publication.html#gada2751fd8ce0e148138e6950f7ef7d37" title="DataWriter를 소유하고 기본값을 설정하는 데 사용되는 Publisher handle">Publisher</a> 범위 관리  
+ <a href="#details">더 자세히 ...</a></p>
+<a id="details" name="details"></a><h2 class="groupheader" id="header-details">상세한 설명</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename DELEGATE&gt;<br/>
+class dds::pub::TSuspendedPublication&lt; DELEGATE &gt;</div><p>일시 중단된 게시에 대한 <a class="el" href="group__dds__publication.html#gada2751fd8ce0e148138e6950f7ef7d37" title="DataWriter를 소유하고 기본값을 설정하는 데 사용되는 Publisher handle">Publisher</a> 범위 관리 </p>
+<p>같은 Publisher에 속한 DataWriter들의 갱신 작업을 이 범위로 묶으세요. 객체를 생성하면 C 라이브러리에 발행 일시 중단을 요청합니다. <a class="el" href="#a1c2b265901053fda30ef398ff8eaa092" title="Publisher에 대한 일시 중지를 종료합니다.">resume()</a>을 성공적으로 호출하면 일시 중단이 끝납니다. 범위 객체를 소멸시킬 때도 발행 재개를 시도합니다. 시점과 버퍼링 동작은 네이티브 Publisher가 결정합니다. </p>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-pub-methods"><a id="pub-methods" name="pub-methods"></a>
+공개 멤버 함수</h2></td></tr>
+<tr class="memitem:a312967e2b983df4e112a8a1628adbef4" id="r_a312967e2b983df4e112a8a1628adbef4"><td class="memItemLeft"> </td><td class="memItemRight"><a class="el" href="#a312967e2b983df4e112a8a1628adbef4">TSuspendedPublication</a> (const <a class="el" href="group__dds__publication.html#gada2751fd8ce0e148138e6950f7ef7d37">dds::pub::Publisher</a> &amp;pub)</td></tr>
+<tr class="memdesc:a312967e2b983df4e112a8a1628adbef4"><td class="mdescLeft"> </td><td class="mdescRight">Publisher의 데이터 발행을 일시 중지합니다.  <br/></td></tr>
+<tr class="memitem:a1c2b265901053fda30ef398ff8eaa092" id="r_a1c2b265901053fda30ef398ff8eaa092"><td class="memItemLeft">void </td><td class="memItemRight"><a class="el" href="#a1c2b265901053fda30ef398ff8eaa092">resume</a> ()</td></tr>
+<tr class="memdesc:a1c2b265901053fda30ef398ff8eaa092"><td class="mdescLeft"> </td><td class="mdescRight">Publisher에 대한 일시 중지를 종료합니다.  <br/></td></tr>
+<tr class="memitem:a2980b468f4c1d92bd51a97261cd3d4b9" id="r_a2980b468f4c1d92bd51a97261cd3d4b9"><td class="memItemLeft"> </td><td class="memItemRight"><a class="el" href="#a2980b468f4c1d92bd51a97261cd3d4b9">~TSuspendedPublication</a> ()</td></tr>
+<tr class="memdesc:a2980b468f4c1d92bd51a97261cd3d4b9"><td class="mdescLeft"> </td><td class="mdescRight">이 객체가 소멸할 때 같은 Publisher의 데이터 발행을 재개하려고 시도합니다.  <br/></td></tr>
+<tr class="inherit_header pub_methods_classdds_1_1core_1_1_value"><td class="dyn-inherit" colspan="2"><span class="dynarrow"><span class="arrowhead closed"></span></span><a class="el" href="classdds_1_1core_1_1_value.html">dds::core::Value&lt; DELEGATE &gt;</a>(으)로부터 상속된 공개 멤버 함수</td></tr>
+<tr class="memitem:a92bfa2b84ebde8e9cd81cb91e32ef9ec inherit pub_methods_classdds_1_1core_1_1_value" id="r_a92bfa2b84ebde8e9cd81cb91e32ef9ec"><td class="memItemLeft">
+ </td><td class="memItemRight"><b>~Value</b> ()</td></tr>
+<tr class="memdesc:a92bfa2b84ebde8e9cd81cb91e32ef9ec inherit pub_methods_classdds_1_1core_1_1_value"><td class="mdescLeft"> </td><td class="mdescRight">저장된 구현 객체 값을 파괴합니다 <br/></td></tr>
+<tr class="memitem:af9917371a74b095f63e8c95ca6ced25a inherit pub_methods_classdds_1_1core_1_1_value" id="r_af9917371a74b095f63e8c95ca6ced25a"><td class="memItemLeft">Value &amp; </td><td class="memItemRight"><a class="el" href="classdds_1_1core_1_1_value.html#af9917371a74b095f63e8c95ca6ced25a">operator=</a> (const Value &amp;other)</td></tr>
+<tr class="memdesc:af9917371a74b095f63e8c95ca6ced25a inherit pub_methods_classdds_1_1core_1_1_value"><td class="mdescLeft"> </td><td class="mdescRight">저장된 구현 객체 값을 복사합니다  <br/></td></tr>
+<tr class="memitem:a34fd669d0051ad90b89d98a323d2d96a inherit pub_methods_classdds_1_1core_1_1_value" id="r_a34fd669d0051ad90b89d98a323d2d96a"><td class="memItemLeft">bool </td><td class="memItemRight"><a class="el" href="classdds_1_1core_1_1_value.html#a34fd669d0051ad90b89d98a323d2d96a">operator==</a> (const Value &amp;other) const</td></tr>
+<tr class="memdesc:a34fd669d0051ad90b89d98a323d2d96a inherit pub_methods_classdds_1_1core_1_1_value"><td class="mdescLeft"> </td><td class="mdescRight">저장된 구현 객체 값을 비교합니다  <br/></td></tr>
+<tr class="memitem:a9b22715713bc0bfc10af93eeaeda80f4 inherit pub_methods_classdds_1_1core_1_1_value" id="r_a9b22715713bc0bfc10af93eeaeda80f4"><td class="memItemLeft">bool </td><td class="memItemRight"><a class="el" href="classdds_1_1core_1_1_value.html#a9b22715713bc0bfc10af93eeaeda80f4">operator!=</a> (const Value &amp;other) const</td></tr>
+<tr class="memdesc:a9b22715713bc0bfc10af93eeaeda80f4 inherit pub_methods_classdds_1_1core_1_1_value"><td class="mdescLeft"> </td><td class="mdescRight">저장된 구현 객체 값을 비교합니다  <br/></td></tr>
+<tr class="memitem:afe089b7e91e4ab927d069c460dac9f51 inherit pub_methods_classdds_1_1core_1_1_value" id="r_afe089b7e91e4ab927d069c460dac9f51"><td class="memItemLeft">
+const DELEGATE * </td><td class="memItemRight"><b>operator-&gt;</b> () const</td></tr>
+<tr class="memdesc:afe089b7e91e4ab927d069c460dac9f51 inherit pub_methods_classdds_1_1core_1_1_value"><td class="mdescLeft"> </td><td class="mdescRight">구현 객체를 반환합니다. <br/></td></tr>
+<tr class="memitem:a91c321ca94d6c95e70994d284099d17e inherit pub_methods_classdds_1_1core_1_1_value" id="r_a91c321ca94d6c95e70994d284099d17e"><td class="memItemLeft">
+const DELEGATE &amp; </td><td class="memItemRight"><b>delegate</b> () const</td></tr>
+<tr class="memdesc:a91c321ca94d6c95e70994d284099d17e inherit pub_methods_classdds_1_1core_1_1_value"><td class="mdescLeft"> </td><td class="mdescRight">구현 객체를 반환합니다. <br/></td></tr>
+<tr class="memitem:afebca1e70d9a8a69997a30534118b761 inherit pub_methods_classdds_1_1core_1_1_value" id="r_afebca1e70d9a8a69997a30534118b761"><td class="memItemLeft">
+ </td><td class="memItemRight"><b>operator DELEGATE &amp;</b> ()</td></tr>
+<tr class="memdesc:afebca1e70d9a8a69997a30534118b761 inherit pub_methods_classdds_1_1core_1_1_value"><td class="mdescLeft"> </td><td class="mdescRight">캐스트 연산자 <br/></td></tr>
+<tr class="memitem:a3b691bb7dfa340e55660b78ac9951b22 inherit pub_methods_classdds_1_1core_1_1_value" id="r_a3b691bb7dfa340e55660b78ac9951b22"><td class="memItemLeft">
+ </td><td class="memItemRight"><b>operator const DELEGATE &amp;</b> () const</td></tr>
+<tr class="memdesc:a3b691bb7dfa340e55660b78ac9951b22 inherit pub_methods_classdds_1_1core_1_1_value"><td class="mdescLeft"> </td><td class="mdescRight">캐스트 연산자 <br/></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-inherited"><a id="inherited" name="inherited"></a>
+추가로 상속된 멤버들</h2></td></tr>
+<tr class="inherit_header pro_attribs_classdds_1_1core_1_1_value"><td class="dyn-inherit" colspan="2"><span class="dynarrow"><span class="arrowhead closed"></span></span><a class="el" href="classdds_1_1core_1_1_value.html">dds::core::Value&lt; DELEGATE &gt;</a>(으)로부터 상속된 보호된 속성</td></tr>
+<tr class="memitem:a524bb581d6961d26653838488712edf4 inherit pro_attribs_classdds_1_1core_1_1_value" id="r_a524bb581d6961d26653838488712edf4"><td class="memItemLeft">
+DELEGATE </td><td class="memItemRight"><b>d_</b></td></tr>
+</table>
+<a id="doc-constructors" name="doc-constructors"></a><h2 class="groupheader" id="header-doc-constructors">생성자와 소멸자</h2>
+<a id="a312967e2b983df4e112a8a1628adbef4" name="a312967e2b983df4e112a8a1628adbef4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a312967e2b983df4e112a8a1628adbef4">◆ </a></span>TSuspendedPublication()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename DELEGATE&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdds_1_1pub_1_1_t_suspended_publication.html">dds::pub::TSuspendedPublication</a>&lt; DELEGATE &gt;::TSuspendedPublication </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__dds__publication.html#gada2751fd8ce0e148138e6950f7ef7d37">dds::pub::Publisher</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>pub</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel explicit">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Publisher의 데이터 발행을 일시 중지합니다. </p>
+<p><span class="tt"><a class="el" href="#a1c2b265901053fda30ef398ff8eaa092" title="Publisher에 대한 일시 중지를 종료합니다.">resume()</a></span> 를 호출하여 범위를 명시적으로 종료하거나, 파괴 시 개체가 게시를 재개하게 합니다.</p>
+<dl class="params"><dt>매개변수</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[입력]</td><td class="paramname">pub</td><td>업데이트가 그룹화된 <a class="el" href="group__dds__publication.html#gada2751fd8ce0e148138e6950f7ef7d37" title="DataWriter를 소유하고 기본값을 설정하는 데 사용되는 Publisher handle">Publisher</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a2980b468f4c1d92bd51a97261cd3d4b9" name="a2980b468f4c1d92bd51a97261cd3d4b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2980b468f4c1d92bd51a97261cd3d4b9">◆ </a></span>~TSuspendedPublication()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename DELEGATE&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdds_1_1pub_1_1_t_suspended_publication.html">dds::pub::TSuspendedPublication</a>&lt; DELEGATE &gt;::~<a class="el" href="#a312967e2b983df4e112a8a1628adbef4">TSuspendedPublication</a> </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>이 객체가 소멸할 때 같은 Publisher의 데이터 발행을 재개하려고 시도합니다. </p>
+<p>애플리케이션이 스코프를 종료하기 전에 기본 라이브러리에서 보고한 오류를 처리해야 하는 경우 <a class="el" href="#a1c2b265901053fda30ef398ff8eaa092" title="Publisher에 대한 일시 중지를 종료합니다.">resume()</a> 를 명시적으로 사용합니다. </p>
+
+</div>
+</div>
+<a id="doc-func-members" name="doc-func-members"></a><h2 class="groupheader" id="header-doc-func-members">멤버 함수</h2>
+<a id="a1c2b265901053fda30ef398ff8eaa092" name="a1c2b265901053fda30ef398ff8eaa092"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c2b265901053fda30ef398ff8eaa092">◆ </a></span>resume()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename DELEGATE&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classdds_1_1pub_1_1_t_suspended_publication.html">dds::pub::TSuspendedPublication</a>&lt; DELEGATE &gt;::resume </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Publisher에 대한 일시 중지를 종료합니다. </p>
+<p>기본 델리게이트는 첫번째 성공적인 재개를 기록한다. 이 개체에 대한 추가 호출은 C 라이브러리를 호출하지 않고 반환된다.</p>
+<dl class="exception"><dt>예외</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="classdds_1_1core_1_1_precondition_not_met_error.html" title="DDS 작동 전제조건이 충족되지 않음을 보고합니다.">dds::core::PreconditionNotMetError</a></td><td>네이티브 Publisher가 활성 일시 중지가 없음을 보고합니다. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>이 클래스에 대한 문서화 페이지는 다음의 파일들로부터 생성되었습니다.:<ul>
+<li>include/gurumdds/cpp/core/<b>TypeDefs.hpp</b></li>
+<li>include/gurumdds/cpp/pub/<b>TSuspendedPublication.hpp</b></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div class="page-nav-panel" id="page-nav">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div class="navpath" id="nav-path"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="namespacedds.html">dds</a></li><li class="navelem"><a href="namespacedds_1_1pub.html">pub</a></li><li class="navelem"><a href="classdds_1_1pub_1_1_t_suspended_publication.html">TSuspendedPublication</a></li>
+    <li class="footer">다음에 의해 생성됨 :  <a href="https://www.doxygen.org/index.html"><img alt="doxygen" class="footer" height="31" src="doxygen.svg" width="104"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1140" height="228" viewBox="0 0 1140 228" role="img" aria-label="Reader는 dispose된 instance와 Writer가 없는 instance의 샘플을 정리할 때 서로 다른 설정 시간을 적용합니다." data-dds-diagram="true">
+  <title id="reader-purge-delay-ko-title">Instance 상태와 Reader purge delay</title>
+  <desc>Reader는 dispose된 instance와 Writer가 없는 instance의 샘플을 정리할 때 서로 다른 설정 시간을 적용합니다.</desc>
+  <defs>
+    <marker id="reader-purge-delay-ko-arrow" viewBox="0 0 10 12" refX="9" refY="6" markerWidth="9" markerHeight="10" orient="auto" markerUnits="userSpaceOnUse"><path d="M 1,1 L 9,6 L 1,11" fill="none" stroke="#20354B" stroke-width="1.2"/></marker>
+    <marker id="reader-purge-delay-ko-blue" viewBox="0 0 11 10" refX="10" refY="5" markerWidth="10" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M 0,0 L 11,5 L 0,10 Z" fill="#356B96"/></marker>
+    <marker id="reader-purge-delay-ko-uml" viewBox="0 0 15 15" refX="14" refY="7.5" markerWidth="15" markerHeight="15" orient="auto" markerUnits="userSpaceOnUse"><path d="M 1,1 L 14,7.5 L 1,14 Z" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/></marker>
+  </defs>
+  <rect width="1140" height="228" fill="#FFFFFF"/>
+  <g fill="#20354B" font-family="Arial, Malgun Gothic, sans-serif">
+    <rect x="25" y="30" width="300" height="46" fill="#EFF5FA" stroke="#20354B" stroke-width="1.15"/>
+    <text x="175" y="58" text-anchor="middle" font-size="16" font-weight="bold">Instance 상태</text>
+    <rect x="25" y="76" width="300" height="46" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <text x="175" y="104" text-anchor="middle" font-size="15" font-family="Consolas, Menlo, monospace">NOT_ALIVE_DISPOSED</text>
+    <rect x="25" y="122" width="300" height="46" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <text x="175" y="150" text-anchor="middle" font-size="15" font-family="Consolas, Menlo, monospace">NOT_ALIVE_NO_WRITERS</text>
+    <rect x="325" y="30" width="465" height="46" fill="#EFF5FA" stroke="#20354B" stroke-width="1.15"/>
+    <text x="557.5" y="58" text-anchor="middle" font-size="16" font-weight="bold">Reader에 적용되는 대기 시간</text>
+    <rect x="325" y="76" width="465" height="46" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <text x="557.5" y="104" text-anchor="middle" font-size="15" font-family="Consolas, Menlo, monospace">autopurge_disposed_samples_delay()</text>
+    <rect x="325" y="122" width="465" height="46" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <text x="557.5" y="150" text-anchor="middle" font-size="15" font-family="Consolas, Menlo, monospace">autopurge_nowriter_samples_delay()</text>
+    <rect x="790" y="30" width="325" height="46" fill="#EFF5FA" stroke="#20354B" stroke-width="1.15"/>
+    <text x="952.5" y="58" text-anchor="middle" font-size="16" font-weight="bold">대기 시간 경과</text>
+    <rect x="790" y="76" width="325" height="46" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <text x="952.5" y="104" text-anchor="middle" font-size="15">대상 샘플 정리 가능</text>
+    <rect x="790" y="122" width="325" height="46" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <text x="952.5" y="150" text-anchor="middle" font-size="15">대상 샘플 정리 가능</text>
+    <text x="570" y="204" text-anchor="middle" font-size="15">Reader를 생성하기 전에 대기 시간을 설정합니다. 샘플에는 history와 ResourceLimits도 적용됩니다.</text>
+  </g>
+</svg>

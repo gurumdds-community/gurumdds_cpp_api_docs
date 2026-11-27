@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="ko"><head>
+<meta charset="utf-8"/>
+<title>dds::pub::AnyDataWriter 클래스 | GurumDDS C++ API Reference</title>
+<link href="gurum-networks-logo.png" rel="icon" type="image/png"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="#cb4b16" name="theme-color"/>
+<link href="poxy/poxy.css" referrerpolicy="no-referrer" rel="stylesheet"/>
+<link href="ReferenceBranding.css" referrerpolicy="no-referrer" rel="stylesheet"/>
+<script src="poxy/poxy.js"></script>
+<script>initialize_theme("light");</script>
+<meta content="GurumDDS C++" name="twitter:title"/>
+<meta content="GurumDDS C++" property="og:title"/>
+<meta content="GurumDDS C++" itemprop="name"/>
+<meta content="API Reference" name="description"/>
+<meta content="API Reference" name="twitter:description"/>
+<meta content="API Reference" property="og:description"/>
+<meta content="API Reference" itemprop="description"/>
+<meta content="telephone=no" name="format-detection"/>
+<meta content="Poxy v0.27.2" name="generator"/>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<script defer="True" src="ReferenceUi.js"></script><link href="../en/classdds_1_1pub_1_1_any_data_writer.html" hreflang="en" rel="alternate"/><link href="../ko/classdds_1_1pub_1_1_any_data_writer.html" hreflang="ko" rel="alternate"/><link href="../language.css" rel="stylesheet"/><script defer="defer" src="../language.js"></script></head>
+<body class="poxy-has-toc">
+<header><nav id="navigation">
+<div class="m-container">
+<div class="m-row doc-language-header">
+<a class="m-col-t-8 m-col-m-none m-left-m" href="index.html" id="m-navbar-brand"><img alt="" src="gurum-networks-logo.png"/>GurumDDS C++ <span class="m-thin">API Reference</span></a>
+<div class="m-col-t-4 m-hide-m m-text-right m-nopadr">
+<a class="m-doc-search-icon" href="#search" onclick="return showSearch()" title="검색"><svg style="height: 0.9rem;" viewbox="0 0 16 16">
+<path d="m6 0c-3.31 0-6 2.69-6 6 0 3.31 2.69 6 6 6 1.49 0 2.85-0.541 3.89-1.44-0.0164 0.338 0.147 0.759 0.5 1.15l3.22 3.79c0.552 0.614 1.45 0.665 2 0.115 0.55-0.55 0.499-1.45-0.115-2l-3.79-3.22c-0.392-0.353-0.812-0.515-1.15-0.5 0.895-1.05 1.44-2.41 1.44-3.89 0-3.31-2.69-6-6-6zm0 1.56a4.44 4.44 0 0 1 4.44 4.44 4.44 4.44 0 0 1-4.44 4.44 4.44 4.44 0 0 1-4.44-4.44 4.44 4.44 0 0 1 4.44-4.44z" id="m-doc-search-icon-path"></path>
+</svg></a>
+<a href="#navigation" id="m-navbar-show" title="탐색 메뉴 열기"></a>
+<a href="#" id="m-navbar-hide" title="탐색 메뉴 닫기"></a>
+</div>
+<div class="m-col-t-12 m-show-m m-col-m-none m-right-m" id="m-navbar-collapse">
+<div class="m-row">
+<ol class="m-col-t-6 m-col-m-none">
+<li><a href="modules.html">모듈</a></li>
+<li><a href="annotated.html">클래스</a></li>
+<li><a href="namespaces.html">네임스페이스</a></li>
+</ol>
+<ol class="m-col-t-6 m-col-m-none" start="4">
+<li><a href="examples.html">예제</a></li>
+<li><a class="poxy-icon theme" href="javascript:void(null);" id="poxy-theme-switch" onclick="toggle_theme(); return false;" role="button" title="밝은 테마와 어두운 테마 전환"><svg id="poxy-theme-switch-img" version="1.1" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><circle cx="185.6708" cy="183.8122" fill="currentColor" r="65.625"></circle><path d="M185.6708,87.5622a13.1256,13.1256,0,0,0,13.125-13.125V52.5622a13.125,13.125,0,1,0-26.25,0v21.875A13.1257,13.1257,0,0,0,185.6708,87.5622Z" fill="currentColor"></path><path d="M99.051,115.7519a13.1236,13.1236,0,1,0,18.56-18.56L102.1442,81.726a13.1236,13.1236,0,0,0-18.5595,18.56Z" fill="currentColor"></path><path d="M89.4208,183.8122a13.1257,13.1257,0,0,0-13.125-13.125H54.4208a13.125,13.125,0,0,0,0,26.25h21.875A13.1256,13.1256,0,0,0,89.4208,183.8122Z" fill="currentColor"></path><path d="M99.051,251.8725,83.5847,267.3431a13.1236,13.1236,0,1,0,18.56,18.56l15.4663-15.4706a13.1236,13.1236,0,1,0-18.5595-18.56Z" fill="currentColor"></path><path d="M185.6708,280.0622a13.1258,13.1258,0,0,0-13.125,13.125v21.875a13.125,13.125,0,0,0,26.25,0v-21.875A13.1257,13.1257,0,0,0,185.6708,280.0622Z" fill="currentColor"></path><path d="M272.2907,251.8725a13.1236,13.1236,0,1,0-18.56,18.56l15.4663,15.4706a13.1236,13.1236,0,1,0,18.56-18.56Z" fill="currentColor"></path><path d="M330.0458,183.8122a13.1257,13.1257,0,0,0-13.125-13.125h-21.875a13.125,13.125,0,0,0,0,26.25h21.875A13.1256,13.1256,0,0,0,330.0458,183.8122Z" fill="currentColor"></path><path d="M263.0109,119.5971a13.0824,13.0824,0,0,0,9.28-3.8452l15.4663-15.4663a13.1236,13.1236,0,1,0-18.56-18.56L253.7312,97.1923a13.125,13.125,0,0,0,9.28,22.4048Z" fill="currentColor"></path><path d="M456.9379,401.6714a63.97,63.97,0,0,1-14.9963,7.2055c-19.6448,6.5283-41.8787,2.9566-58.1439-9.8523a68.9311,68.9311,0,0,1-10.835-10.8339c-12.8088-16.2663-16.3806-38.5-9.8523-58.1471a63.8444,63.8444,0,0,1,7.2077-14.9931,8.8036,8.8036,0,0,0-10.1172-13.3034,87.5188,87.5188,0,1,0,110.0372,110.04A8.8,8.8,0,0,0,456.9379,401.6714Z" fill="currentColor"></path></svg></a></li>
+<li class="m-show-m"><a class="m-doc-search-icon" href="#search" onclick="return showSearch()" title="검색"><svg style="height: 0.9rem;" viewbox="0 0 16 16">
+<use href="#m-doc-search-icon-path"></use>
+</svg></a></li>
+</ol>
+</div>
+</div>
+<label class="doc-language"><select aria-label="문서 언어" data-current="1"><option lang="en" value="../en/classdds_1_1pub_1_1_any_data_writer.html">English</option><option lang="en" selected="selected" value="../ko/classdds_1_1pub_1_1_any_data_writer.html">Korean</option></select></label></div>
+</div>
+</nav></header>
+<main><article>
+<div class="m-container m-container-inflatable">
+<div class="m-row">
+<div class="m-col-l-10 m-push-l-1">
+<h1>
+<span class="m-breadcrumb"><a href="namespacedds.html">dds</a>::<wbr/></span><span class="m-breadcrumb"><a href="namespacedds_1_1pub.html">pub</a>::<wbr/></span>AnyDataWriter <span class="m-thin">클래스</span>
+</h1><p class="dds-class-include"><code>#include &lt;gurumdds/cpp/pub/AnyDataWriter.hpp&gt;</code></p>
+<nav class="m-block m-default poxy-toc" id="poxy-toc">
+<h3>목차</h3>
+<ul>
+<li>
+              Reference
+              <ul>
+<li><a href="#typeless-methods">생성자, 소멸자, 변환 연산자</a></li>
+<li><a href="#pub-methods">공개 함수</a></li>
+</ul>
+</li>
+</ul>
+</nav>
+<p>특정 데이터 타입에 한정하지 않고 DDS <code>DataWriter</code>를 보관합니다.</p>
+<section id="typeless-methods">
+<h2><a href="#typeless-methods">생성자, 소멸자, 변환 연산자</a></h2>
+<dl class="m-doc">
+<dt>
+<div class="m-doc-template">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename T</span></span>&gt;</div>
+<span class="m-doc-wrap-bumper"><a class="m-doc" href="#ae2f11a8ee233306831e7645738194050">AnyDataWriter</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdds_1_1pub_1_1_data_writer.html">dds::pub::DataWriter&lt;T&gt;</a>&lt;T&gt;&amp; dw)</span>
+</dt>
+<dd>데이터 타입이 지정된 DataWriter를 타입 지정 없이 다룰 수 있게 합니다</dd>
+</dl>
+</section>
+<section id="pub-methods">
+<h2><a href="#pub-methods">공개 함수</a></h2>
+<dl class="m-doc">
+<dt>
+<span class="m-doc-wrap-bumper">void <a class="m-doc" href="#a04a0deb523682a69b19c6f8f23a7821f">close</a>(</span><span class="m-doc-wrap">)</span>
+</dt>
+<dd>데이터 타입을 지정하지 않고 사용할 수 있는 <a class="m-doc" href="classdds_1_1pub_1_1_data_writer.html">DataWriter&lt;T&gt;</a> handle을 명시적으로 닫는 연산을 제공합니다</dd>
+<dt>
+<div class="m-doc-template">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename T</span></span>&gt;</div>
+<span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#a7207763d7ef86e696d3c6ab1cf7cb531">get</a>(</span><span class="m-doc-wrap">) →  <a class="m-doc" href="classdds_1_1pub_1_1_data_writer.html">dds::pub::DataWriter&lt;T&gt;</a>&lt;T&gt;</span>
+</dt>
+<dd></dd>
+<dt>
+<span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#a5e58cb2bdc2c3a3249b46d16e7283c4d">operator-&gt;</a>(</span><span class="m-doc-wrap">) const →  const detail::DWHolderBase*</span>
+</dt>
+<dd></dd>
+<dt>
+<span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#a5dfa408dc76560846313062ea96e4073">operator-&gt;</a>(</span><span class="m-doc-wrap">) →  detail::DWHolderBase*</span>
+</dt>
+<dd></dd>
+<dt>
+<div class="m-doc-template">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename T</span></span>&gt;</div>
+<span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#ab97e117af59705b90c78298ec1d6a1a8">operator=</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdds_1_1pub_1_1_data_writer.html">dds::pub::DataWriter&lt;T&gt;</a>&lt;T&gt;&amp; rhs) →  <a class="m-doc" href="#ae2f11a8ee233306831e7645738194050">AnyDataWriter</a>&amp;</span>
+</dt>
+<dd>이 handle을 다른 DataWriter로 대체합니다</dd>
+<dt>
+<div class="m-doc-template">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename T</span></span>&gt;</div>
+<span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#a99ab59eeb43af5d150b596435238c3e6">operator=</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="#ae2f11a8ee233306831e7645738194050">AnyDataWriter</a>&amp; rhs) →  <a class="m-doc" href="#ae2f11a8ee233306831e7645738194050">AnyDataWriter</a>&amp;</span>
+</dt>
+<dd>이 handle을 다른 DataWriter로 대체합니다</dd>
+<dt>
+<span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#abd6df69879f4fde5fa033398a79a07a4">operator=</a>(</span><span class="m-doc-wrap"><a class="m-doc" href="#ae2f11a8ee233306831e7645738194050">AnyDataWriter</a> rhs) →  <a class="m-doc" href="#ae2f11a8ee233306831e7645738194050">AnyDataWriter</a>&amp;</span>
+</dt>
+<dd>이 handle을 다른 DataWriter로 대체합니다</dd>
+<dt>
+<span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#aea7427bb0bb1ab538a1401573b2af077">publisher</a>(</span><span class="m-doc-wrap">) const →  const <a class="m-doc" href="group__dds__publication.html#gada2751fd8ce0e148138e6950f7ef7d37">dds::<wbr/>pub::<wbr/>Publisher</a>&amp;</span>
+</dt>
+<dd>DataWriter에 연결된 Publisher를 가져옵니다</dd>
+<dt>
+<span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#aba274ccf8605c215d9661224a4844de3">qos</a>(</span><span class="m-doc-wrap">) const →  const <a class="m-doc" href="group__dds__publication.html#ga35ad9728577d4bdccfe8677bba0bcf5d">dds::<wbr/>pub::<wbr/>qos::<wbr/>DataWriterQos</a>&amp;</span>
+</dt>
+<dd>기본 DataWriter에 의해 저장된 QoS를 가져옵니다</dd>
+<dt>
+<span class="m-doc-wrap-bumper">void <a class="m-doc" href="#a51dba3d28342ee5e6be2ab88c038a5b8">qos</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="group__dds__publication.html#ga35ad9728577d4bdccfe8677bba0bcf5d">::<wbr/>dds::<wbr/>pub::<wbr/>qos::<wbr/>DataWriterQos</a>&amp; q)</span>
+</dt>
+<dd>기본 DataWriter에 새로운 QoS 설정 적용</dd>
+<dt>
+<span class="m-doc-wrap-bumper">void <a class="m-doc" href="#a689399da80464cbd64756ea7d5579e37">retain</a>(</span><span class="m-doc-wrap">bool b)</span>
+</dt>
+<dd>데이터 타입을 지정하지 않고 DataWriter의 수명을 유지하는 연산을 제공합니다</dd>
+<dt>
+<span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#a4e2d5fbba0acddad5e6c4045cafdccea">swap</a>(</span><span class="m-doc-wrap"><a class="m-doc" href="#ae2f11a8ee233306831e7645738194050">AnyDataWriter</a>&amp; rhs) →  <a class="m-doc" href="#ae2f11a8ee233306831e7645738194050">AnyDataWriter</a>&amp;</span>
+</dt>
+<dd>저장된 handle을 교환합니다</dd>
+<dt>
+<span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#a78c413efa2a15a829a8b94f50968e67b">topic_name</a>(</span><span class="m-doc-wrap">) const →  const <a class="m-doc-external poxy-cppreference poxy-external" href="http://en.cppreference.com/w/cpp/string/basic_string.html" target="_blank">std::<wbr/>string</a>&amp;</span>
+</dt>
+<dd>Topic 이름을 가져옵니다</dd>
+<dt>
+<span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#a85005eee16fed7e8b023448f3938ffee">type_name</a>(</span><span class="m-doc-wrap">) const →  const <a class="m-doc-external poxy-cppreference poxy-external" href="http://en.cppreference.com/w/cpp/string/basic_string.html" target="_blank">std::<wbr/>string</a>&amp;</span>
+</dt>
+<dd>등록된 Topic 타입 이름을 가져옵니다</dd>
+<dt>
+<span class="m-doc-wrap-bumper">void <a class="m-doc" href="#a74782ba359b8e109895085ff1658411b">wait_for_acknowledgments</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdds_1_1core_1_1_duration.html">dds::<wbr/>core::<wbr/>Duration</a>&amp; timeout)</span>
+</dt>
+<dd>기본 DataWriter의 신뢰할 수있는 인정을 기다립니다</dd>
+</dl>
+</section>
+<section>
+<h2>멤버 함수</h2>
+<section class="m-doc-details" id="ae2f11a8ee233306831e7645738194050"><div>
+<h3>
+<div class="m-doc-template">
+                template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename T</span></span>&gt;
+              </div>
+<span class="m-doc-wrap-bumper"> <span class="m-doc-details-prefix">dds::<wbr/>pub::<wbr/>AnyDataWriter::<wbr/></span></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#ae2f11a8ee233306831e7645738194050">AnyDataWriter</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdds_1_1pub_1_1_data_writer.html">dds::pub::DataWriter&lt;T&gt;</a>&lt;T&gt;&amp; dw)</span></span>
+</h3>
+<p>데이터 타입이 지정된 DataWriter를 타입 지정 없이 다룰 수 있게 합니다</p>
+<table class="m-table m-fullwidth m-flat">
+<thead>
+<tr><th colspan="2">매개변수</th></tr>
+</thead>
+<tbody>
+<tr>
+<td style="width: 1%">dw <span class="m-label m-flat m-info">입력</span></td>
+<td>구현 객체를 공유하는 타입 지정 <a class="m-doc" href="classdds_1_1pub_1_1_data_writer.html">DataWriter&lt;T&gt;</a></td>
+</tr>
+</tbody>
+</table>
+</div></section>
+<section class="m-doc-details" id="a04a0deb523682a69b19c6f8f23a7821f"><div>
+<h3>
+<span class="m-doc-wrap-bumper">void <span class="m-doc-details-prefix">dds::<wbr/>pub::<wbr/>AnyDataWriter::<wbr/></span></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a04a0deb523682a69b19c6f8f23a7821f">close</a>(</span><span class="m-doc-wrap">)</span></span>
+</h3>
+<p>데이터 타입을 지정하지 않고 사용할 수 있는 <a class="m-doc" href="classdds_1_1pub_1_1_data_writer.html">DataWriter&lt;T&gt;</a> handle을 명시적으로 닫는 연산을 제공합니다</p>
+<p>GurumDDS 홀더는 현재 기본 Entity를 열어 두고 있습니다.</p>
+</div></section>
+<section class="m-doc-details" id="a7207763d7ef86e696d3c6ab1cf7cb531"><div>
+<h3>
+<div class="m-doc-template">
+                template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename T</span></span>&gt;
+              </div>
+<span class="m-doc-wrap-bumper"><a class="m-doc" href="classdds_1_1pub_1_1_data_writer.html">dds::pub::DataWriter&lt;T&gt;</a>&lt;T&gt; <span class="m-doc-details-prefix">dds::<wbr/>pub::<wbr/>AnyDataWriter::<wbr/></span></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a7207763d7ef86e696d3c6ab1cf7cb531">get</a>(</span><span class="m-doc-wrap">)</span></span>
+</h3>
+<p>이 객체에서 데이터 타입을 지정한 <code>DataWriter</code>를 추출합니다.</p>
+</div></section>
+<section class="m-doc-details" id="a5e58cb2bdc2c3a3249b46d16e7283c4d"><div>
+<h3>
+<span class="m-doc-wrap-bumper">const detail::DWHolderBase* <span class="m-doc-details-prefix">dds::<wbr/>pub::<wbr/>AnyDataWriter::<wbr/></span></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a5e58cb2bdc2c3a3249b46d16e7283c4d">operator-&gt;</a>(</span><span class="m-doc-wrap">) const</span></span>
+</h3>
+<p>메서드에 대한 직접적인 액세스. 이것은 독점적 확장을 사용할 때만 사용되어야 한다는 것을 주의하십시오.</p>
+</div></section>
+<section class="m-doc-details" id="a5dfa408dc76560846313062ea96e4073"><div>
+<h3>
+<span class="m-doc-wrap-bumper">detail::DWHolderBase* <span class="m-doc-details-prefix">dds::<wbr/>pub::<wbr/>AnyDataWriter::<wbr/></span></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a5dfa408dc76560846313062ea96e4073">operator-&gt;</a>(</span><span class="m-doc-wrap">)</span></span>
+</h3>
+<p>메서드에 대한 직접적인 액세스. 이것은 독점적 확장을 사용할 때만 사용되어야 한다는 것을 주의하십시오.</p>
+</div></section>
+<section class="m-doc-details" id="ab97e117af59705b90c78298ec1d6a1a8"><div>
+<h3>
+<div class="m-doc-template">
+                template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename T</span></span>&gt;
+              </div>
+<span class="m-doc-wrap-bumper"><a class="m-doc" href="#ae2f11a8ee233306831e7645738194050">AnyDataWriter</a>&amp; <span class="m-doc-details-prefix">dds::<wbr/>pub::<wbr/>AnyDataWriter::<wbr/></span></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#ab97e117af59705b90c78298ec1d6a1a8">operator=</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdds_1_1pub_1_1_data_writer.html">dds::pub::DataWriter&lt;T&gt;</a>&lt;T&gt;&amp; rhs)</span></span>
+</h3>
+<p>이 handle을 다른 DataWriter로 대체합니다</p>
+<table class="m-table m-fullwidth m-flat">
+<thead>
+<tr><th colspan="2">매개변수</th></tr>
+</thead>
+<tbody>
+<tr>
+<td style="width: 1%">rhs <span class="m-label m-flat m-info">입력</span></td>
+<td>소스 handle</td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+<th>반환값</th>
+<td>이 handle</td>
+</tr>
+</tfoot>
+</table>
+<p>대상은 할당 후 소스의 기본 DDS Entity를 공유합니다.</p>
+</div></section>
+<section class="m-doc-details" id="a99ab59eeb43af5d150b596435238c3e6"><div>
+<h3>
+<div class="m-doc-template">
+                template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename T</span></span>&gt;
+              </div>
+<span class="m-doc-wrap-bumper"><a class="m-doc" href="#ae2f11a8ee233306831e7645738194050">AnyDataWriter</a>&amp; <span class="m-doc-details-prefix">dds::<wbr/>pub::<wbr/>AnyDataWriter::<wbr/></span></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a99ab59eeb43af5d150b596435238c3e6">operator=</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="#ae2f11a8ee233306831e7645738194050">AnyDataWriter</a>&amp; rhs)</span></span>
+</h3>
+<p>이 handle을 다른 DataWriter로 대체합니다</p>
+<table class="m-table m-fullwidth m-flat">
+<thead>
+<tr><th colspan="2">매개변수</th></tr>
+</thead>
+<tbody>
+<tr>
+<td style="width: 1%">rhs <span class="m-label m-flat m-info">입력</span></td>
+<td>소스 handle</td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+<th>반환값</th>
+<td>이 handle</td>
+</tr>
+</tfoot>
+</table>
+<p>대상은 할당 후 소스의 기본 DDS Entity를 공유합니다.</p>
+</div></section>
+<section class="m-doc-details" id="abd6df69879f4fde5fa033398a79a07a4"><div>
+<h3>
+<span class="m-doc-wrap-bumper"><a class="m-doc" href="#ae2f11a8ee233306831e7645738194050">AnyDataWriter</a>&amp; <span class="m-doc-details-prefix">dds::<wbr/>pub::<wbr/>AnyDataWriter::<wbr/></span></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#abd6df69879f4fde5fa033398a79a07a4">operator=</a>(</span><span class="m-doc-wrap"><a class="m-doc" href="#ae2f11a8ee233306831e7645738194050">AnyDataWriter</a> rhs)</span></span>
+</h3>
+<p>이 handle을 다른 DataWriter로 대체합니다</p>
+<table class="m-table m-fullwidth m-flat">
+<thead>
+<tr><th colspan="2">매개변수</th></tr>
+</thead>
+<tbody>
+<tr>
+<td style="width: 1%">rhs <span class="m-label m-flat m-info">입력</span></td>
+<td>소스 handle</td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+<th>반환값</th>
+<td>이 handle</td>
+</tr>
+</tfoot>
+</table>
+<p>대상은 할당 후 소스의 기본 DDS Entity를 공유합니다.</p>
+</div></section>
+<section class="m-doc-details" id="aea7427bb0bb1ab538a1401573b2af077"><div>
+<h3>
+<span class="m-doc-wrap-bumper">const <a class="m-doc" href="group__dds__publication.html#gada2751fd8ce0e148138e6950f7ef7d37">dds::<wbr/>pub::<wbr/>Publisher</a>&amp; <span class="m-doc-details-prefix">dds::<wbr/>pub::<wbr/>AnyDataWriter::<wbr/></span></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#aea7427bb0bb1ab538a1401573b2af077">publisher</a>(</span><span class="m-doc-wrap">) const</span></span>
+</h3>
+<p>DataWriter에 연결된 Publisher를 가져옵니다</p>
+<table class="m-table m-fullwidth m-flat">
+<tfoot>
+<tr>
+<th style="width: 1%">반환값</th>
+<td>저장된 <a class="m-doc" href="group__dds__publication.html#gada2751fd8ce0e148138e6950f7ef7d37">Publisher</a> handle에 대한 참조</td>
+</tr>
+</tfoot>
+</table>
+</div></section>
+<section class="m-doc-details" id="aba274ccf8605c215d9661224a4844de3"><div>
+<h3>
+<span class="m-doc-wrap-bumper">const <a class="m-doc" href="group__dds__publication.html#ga35ad9728577d4bdccfe8677bba0bcf5d">dds::<wbr/>pub::<wbr/>qos::<wbr/>DataWriterQos</a>&amp; <span class="m-doc-details-prefix">dds::<wbr/>pub::<wbr/>AnyDataWriter::<wbr/></span></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#aba274ccf8605c215d9661224a4844de3">qos</a>(</span><span class="m-doc-wrap">) const</span></span>
+</h3>
+<p>기본 DataWriter에 의해 저장된 QoS를 가져옵니다</p>
+<table class="m-table m-fullwidth m-flat">
+<tfoot>
+<tr>
+<th style="width: 1%">반환값</th>
+<td>현재 QoS 값에 대한 Const 참조</td>
+</tr>
+</tfoot>
+</table>
+</div></section>
+<section class="m-doc-details" id="a51dba3d28342ee5e6be2ab88c038a5b8"><div>
+<h3>
+<span class="m-doc-wrap-bumper">void <span class="m-doc-details-prefix">dds::<wbr/>pub::<wbr/>AnyDataWriter::<wbr/></span></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a51dba3d28342ee5e6be2ab88c038a5b8">qos</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="group__dds__publication.html#ga35ad9728577d4bdccfe8677bba0bcf5d">::<wbr/>dds::<wbr/>pub::<wbr/>qos::<wbr/>DataWriterQos</a>&amp; q)</span></span>
+</h3>
+<p>기본 DataWriter에 새로운 QoS 설정 적용</p>
+<table class="m-table m-fullwidth m-flat">
+<thead>
+<tr><th colspan="2">매개변수</th></tr>
+</thead>
+<tbody>
+<tr>
+<td style="width: 1%">q <span class="m-label m-flat m-info">입력</span></td>
+<td>적용할 QoS 정책</td>
+</tr>
+</tbody>
+</table>
+</div></section>
+<section class="m-doc-details" id="a689399da80464cbd64756ea7d5579e37"><div>
+<h3>
+<span class="m-doc-wrap-bumper">void <span class="m-doc-details-prefix">dds::<wbr/>pub::<wbr/>AnyDataWriter::<wbr/></span></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a689399da80464cbd64756ea7d5579e37">retain</a>(</span><span class="m-doc-wrap">bool b)</span></span>
+</h3>
+<p>데이터 타입을 지정하지 않고 DataWriter의 수명을 유지하는 연산을 제공합니다</p>
+<table class="m-table m-fullwidth m-flat">
+<thead>
+<tr><th colspan="2">매개변수</th></tr>
+</thead>
+<tbody>
+<tr>
+<td style="width: 1%">b <span class="m-label m-flat m-info">입력</span></td>
+<td>요청된 보존 플래그</td>
+</tr>
+</tbody>
+</table>
+<p>현재 GurumDDS 소유자는 이 플래그를 무시한다.</p>
+</div></section>
+<section class="m-doc-details" id="a4e2d5fbba0acddad5e6c4045cafdccea"><div>
+<h3>
+<span class="m-doc-wrap-bumper"><a class="m-doc" href="#ae2f11a8ee233306831e7645738194050">AnyDataWriter</a>&amp; <span class="m-doc-details-prefix">dds::<wbr/>pub::<wbr/>AnyDataWriter::<wbr/></span></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a4e2d5fbba0acddad5e6c4045cafdccea">swap</a>(</span><span class="m-doc-wrap"><a class="m-doc" href="#ae2f11a8ee233306831e7645738194050">AnyDataWriter</a>&amp; rhs)</span></span>
+</h3>
+<p>저장된 handle을 교환합니다</p>
+<table class="m-table m-fullwidth m-flat">
+<thead>
+<tr><th colspan="2">매개변수</th></tr>
+</thead>
+<tbody>
+<tr>
+<td style="width: 1%">rhs <span class="m-label m-flat m-danger">입출력</span></td>
+<td>홀더를 교환할 다른 <a class="m-doc" href="classdds_1_1pub_1_1_any_data_writer.html">AnyDataWriter</a></td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+<th>반환값</th>
+<td>이 handle</td>
+</tr>
+</tfoot>
+</table>
+</div></section>
+<section class="m-doc-details" id="a78c413efa2a15a829a8b94f50968e67b"><div>
+<h3>
+<span class="m-doc-wrap-bumper">const <a class="m-doc-external poxy-cppreference poxy-external" href="http://en.cppreference.com/w/cpp/string/basic_string.html" target="_blank">std::<wbr/>string</a>&amp; <span class="m-doc-details-prefix">dds::<wbr/>pub::<wbr/>AnyDataWriter::<wbr/></span></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a78c413efa2a15a829a8b94f50968e67b">topic_name</a>(</span><span class="m-doc-wrap">) const</span></span>
+</h3>
+<p>Topic 이름을 가져옵니다</p>
+<table class="m-table m-fullwidth m-flat">
+<tfoot>
+<tr>
+<th style="width: 1%">반환값</th>
+<td>기본 DataWriter에 의해 저장된 이름을 참조하는 Const</td>
+</tr>
+</tfoot>
+</table>
+</div></section>
+<section class="m-doc-details" id="a85005eee16fed7e8b023448f3938ffee"><div>
+<h3>
+<span class="m-doc-wrap-bumper">const <a class="m-doc-external poxy-cppreference poxy-external" href="http://en.cppreference.com/w/cpp/string/basic_string.html" target="_blank">std::<wbr/>string</a>&amp; <span class="m-doc-details-prefix">dds::<wbr/>pub::<wbr/>AnyDataWriter::<wbr/></span></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a85005eee16fed7e8b023448f3938ffee">type_name</a>(</span><span class="m-doc-wrap">) const</span></span>
+</h3>
+<p>등록된 Topic 타입 이름을 가져옵니다</p>
+<table class="m-table m-fullwidth m-flat">
+<tfoot>
+<tr>
+<th style="width: 1%">반환값</th>
+<td>기본 DataWriter에 의해 저장된 이름을 참조하는 Const</td>
+</tr>
+</tfoot>
+</table>
+</div></section>
+<section class="m-doc-details" id="a74782ba359b8e109895085ff1658411b"><div>
+<h3>
+<span class="m-doc-wrap-bumper">void <span class="m-doc-details-prefix">dds::<wbr/>pub::<wbr/>AnyDataWriter::<wbr/></span></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a74782ba359b8e109895085ff1658411b">wait_for_acknowledgments</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classdds_1_1core_1_1_duration.html">dds::<wbr/>core::<wbr/>Duration</a>&amp; timeout)</span></span>
+</h3>
+<p>기본 DataWriter의 신뢰할 수있는 인정을 기다립니다</p>
+<table class="m-table m-fullwidth m-flat">
+<thead>
+<tr><th colspan="2">매개변수</th></tr>
+</thead>
+<tbody>
+<tr>
+<td style="width: 1%">timeout <span class="m-label m-flat m-info">입력</span></td>
+<td>최대 대기 시간</td>
+</tr>
+</tbody>
+<thead>
+<tr><th colspan="2">예외</th></tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="m-doc" href="classdds_1_1core_1_1_timeout_error.html">dds::<wbr/>core::<wbr/>TimeoutError</a></td>
+<td>필요한 확인이 도착하기 전에 대기 시간이 끝났습니다.</td>
+</tr>
+</tbody>
+</table>
+</div></section>
+</section>
+</div>
+</div>
+</div>
+</article></main>
+<div class="m-doc-search" id="search">
+<a href="#!" onclick="return hideSearch()"></a>
+<div class="m-container">
+<div class="m-row">
+<div class="m-col-m-8 m-push-m-2">
+<div class="m-doc-search-header m-text m-small">
+<div>Tab 또는 T로 검색하고 Esc로 닫습니다.</div>
+<div id="search-symbolcount">…</div>
+</div>
+<div class="m-doc-search-content">
+<form>
+<input autocomplete="off" autofocus="autofocus" disabled="disabled" id="search-input" name="q" placeholder="불러오는 중…" spellcheck="false" type="search"/>
+</form>
+<noscript class="m-text m-danger m-text-center">검색을 사용하려면 JavaScript가 필요합니다.</noscript>
+<div class="m-text m-dim m-text-center" id="search-help">심볼, 디렉터리, 파일, 페이지 또는 모듈을 검색합니다. 심볼이나 파일 경로의 앞부분을 생략할 수 있습니다. 끝에 : 또는 /를 붙이면 하위 항목을 표시합니다. ↑와 ↓로 결과를 이동하고 Enter로 엽니다. Tab으로 공통 접두사를 자동 완성합니다. ⌘ L로 링크를 복사하고 ⌘ M으로 Markdown 링크를 복사합니다.</div>
+<div class="m-text m-warning m-text-center" id="search-notfound">검색 결과가 없습니다.</div>
+<ul id="search-results"></ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src="search-v2.js"></script><script>install_mcss_search_shim();</script>
+<script async="async" src="searchdata-v2.js"></script>
+<footer><nav>
+<div class="m-container">
+<div class="m-row">
+<div class="m-col-l-10 m-push-l-1">
+<a download="" href="GurumDDS_C++.tagfile.xml" target="_blank" type="text/xml">Doxygen 태그 파일</a>
+<br/><br/>
+사이트 생성 도구 <a class="poxy-external" href="https://github.com/marzer/poxy/" target="_blank">Poxy</a>
+</div>
+</div>
+</div>
+</nav></footer>
+</body></html>

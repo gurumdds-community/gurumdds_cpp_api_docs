@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1140" height="326" viewBox="0 0 1140 326" role="img" aria-label="A Publisher owns the Writer, and a Subscriber owns the Reader. Both endpoints use a Topic in the same domain. Core supplies QoS, status and time types." data-dds-diagram="true">
+  <title id="modules-flow-en-title">How DDS modules work together</title>
+  <desc>A Publisher owns the Writer, and a Subscriber owns the Reader. Both endpoints use a Topic in the same domain. Core supplies QoS, status and time types.</desc>
+  <defs>
+    <marker id="modules-flow-en-arrow" viewBox="0 0 10 12" refX="9" refY="6" markerWidth="9" markerHeight="10" orient="auto" markerUnits="userSpaceOnUse"><path d="M 1,1 L 9,6 L 1,11" fill="none" stroke="#20354B" stroke-width="1.2"/></marker>
+    <marker id="modules-flow-en-blue" viewBox="0 0 11 10" refX="10" refY="5" markerWidth="10" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M 0,0 L 11,5 L 0,10 Z" fill="#356B96"/></marker>
+    <marker id="modules-flow-en-uml" viewBox="0 0 15 15" refX="14" refY="7.5" markerWidth="15" markerHeight="15" orient="auto" markerUnits="userSpaceOnUse"><path d="M 1,1 L 14,7.5 L 1,14 Z" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/></marker>
+  </defs>
+  <rect width="1140" height="326" fill="#FFFFFF"/>
+  <g fill="#20354B" font-family="Arial, Malgun Gothic, sans-serif">
+    <path d="M 227 89 H 278" fill="none" stroke="#20354B" stroke-width="1.15" marker-end="url(#modules-flow-en-arrow)"/>
+    <path d="M 478 89 H 544" fill="none" stroke="#20354B" stroke-width="1.15" marker-end="url(#modules-flow-en-arrow)"/>
+    <path d="M 227 196 H 278" fill="none" stroke="#20354B" stroke-width="1.15" marker-end="url(#modules-flow-en-arrow)"/>
+    <path d="M 478 196 H 544" fill="none" stroke="#20354B" stroke-width="1.15" marker-end="url(#modules-flow-en-arrow)"/>
+    <path d="M 744 89 H 816 V 135 H 864" fill="none" stroke="#20354B" stroke-width="1.15" stroke-dasharray="5 4" marker-end="url(#modules-flow-en-arrow)"/>
+    <path d="M 744 196 H 816 V 151 H 864" fill="none" stroke="#20354B" stroke-width="1.15" stroke-dasharray="5 4" marker-end="url(#modules-flow-en-arrow)"/>
+    <path d="M 644 121 V 164" fill="none" stroke="#356B96" stroke-width="1.7" marker-end="url(#modules-flow-en-blue)"/>
+    <rect x="27" y="57" width="200" height="64" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <text x="127" y="83" text-anchor="middle" font-size="16" textLength="155" lengthAdjust="spacingAndGlyphs" font-weight="bold">DomainParticipant</text>
+    <text x="127" y="105" text-anchor="middle" font-size="15">Publishing side</text>
+    <rect x="27" y="164" width="200" height="64" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <text x="127" y="190" text-anchor="middle" font-size="16" textLength="155" lengthAdjust="spacingAndGlyphs" font-weight="bold">DomainParticipant</text>
+    <text x="127" y="212" text-anchor="middle" font-size="15">Subscribing side</text>
+    <rect x="278" y="57" width="200" height="64" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <text x="378" y="83" text-anchor="middle" font-size="16" font-weight="bold">Publisher</text>
+    <text x="378" y="105" text-anchor="middle" font-size="15">Publication</text>
+    <rect x="278" y="164" width="200" height="64" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <text x="378" y="190" text-anchor="middle" font-size="16" font-weight="bold">Subscriber</text>
+    <text x="378" y="212" text-anchor="middle" font-size="15">Subscription</text>
+    <rect x="544" y="57" width="200" height="64" fill="#EFF5FA" stroke="#20354B" stroke-width="1.15"/>
+    <text x="644" y="83" text-anchor="middle" font-size="16" font-weight="bold">DataWriter&lt;T&gt;</text>
+    <text x="644" y="105" text-anchor="middle" font-size="15">Writes samples</text>
+    <rect x="544" y="164" width="200" height="64" fill="#EFF5FA" stroke="#20354B" stroke-width="1.15"/>
+    <text x="644" y="190" text-anchor="middle" font-size="16" font-weight="bold">DataReader&lt;T&gt;</text>
+    <text x="644" y="212" text-anchor="middle" font-size="15" textLength="178" lengthAdjust="spacingAndGlyphs">Reads or takes samples</text>
+    <rect x="864" y="108" width="246" height="71" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <text x="987" y="137.5" text-anchor="middle" font-size="16" font-weight="bold">Topic&lt;T&gt;</text>
+    <text x="987" y="159.5" text-anchor="middle" font-size="15" textLength="188" lengthAdjust="spacingAndGlyphs">Matching name and type</text>
+    <text x="671" y="148" text-anchor="start" font-size="14">Samples</text>
+    <text x="570" y="271" text-anchor="middle" font-size="15">Domain groups Participants. Core supplies QoS, status, and time types across the modules.</text>
+    <text x="570" y="299" text-anchor="middle" font-size="15">Solid arrows show entity relationships or sample flow. Dashed arrows point to the Topic.</text>
+  </g>
+</svg>

@@ -1,0 +1,918 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/xhtml;charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=11" http-equiv="X-UA-Compatible"/>
+<meta content="Doxygen 1.18.0" name="generator"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>GurumDDS C++ API Reference: dds::sub 네임스페이스</title>
+<link href="gurum-networks-logo.png" rel="icon" type="image/x-icon"/>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script src="dynsections.js" type="text/javascript"></script>
+<script src="codefolding.js" type="text/javascript"></script>
+<script src="clipboard.js" type="text/javascript"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script src="navtreedata.js" type="text/javascript"></script>
+<script src="navtree.js" type="text/javascript"></script>
+<script src="cookie.js" type="text/javascript"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script src="search/searchdata.js" type="text/javascript"></script>
+<script src="search/search.js" type="text/javascript"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+<link href="ReferenceBranding.css" rel="stylesheet" type="text/css"/>
+<script defer="True" src="ReferenceUi.js"></script><link href="../en/namespacedds_1_1sub.html" hreflang="en" rel="alternate"/><link href="../ko/namespacedds_1_1sub.html" hreflang="ko" rel="alternate"/><link href="../language.css" rel="stylesheet"/><script defer="defer" src="../language.js"></script></head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellpadding="0" cellspacing="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">GurumDDS C++ API Reference<span id="projectnumber"> 1.3.2</span>
+   </div>
+  </td>
+ <td class="doc-language-cell"><label class="doc-language"><select aria-label="문서 언어" data-current="1"><option lang="en" value="../en/namespacedds_1_1sub.html">English</option><option lang="en" selected="selected" value="../ko/namespacedds_1_1sub.html">Korean</option></select></label></td></tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script id="doxygen-config" type="application/json">
+{
+  "relPath": "",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script src="menudata.js" type="text/javascript"></script>
+<script src="menu.js" type="text/javascript"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> 주 메뉴 표시 전환</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div class="MSearchBoxInactive" id="MSearchBox">
+        <span class="left">
+          <span class="search-icon" id="MSearchSelect"><span class="search-icon-dropdown"></span></span>
+          <input accesskey="S" id="MSearchField" placeholder="검색" type="text" value=""/>
+          </span><span class="right">
+            <a href="javascript:searchBox.CloseResultsWindow()" id="MSearchClose"><div class="close-icon" id="MSearchCloseImg"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div class="ui-resizable side-nav-resizable" id="side-nav">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div class="sync" id="nav-sync"></div>
+    </div>
+  </div>
+  <div class="ui-resizable-handle" id="splitbar">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('namespacedds_1_1sub.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">로딩중...</div>
+<div class="SRStatus" id="Searching">검색중...</div>
+<div class="SRStatus" id="NoMatches">일치하는것 없음</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">dds::sub 네임스페이스</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><a class="el" href="group__dds__subscription.html#ga9a6d78b2a23f864211da5bd2edf28750" title="DataReader를 소유하고 기본값을 설정하는 데 사용되는 Subscriber handle">Subscriber</a>, <a class="el" href="classdds_1_1sub_1_1_data_reader.html" title="Topic에서 지정된 타입의 sample을 수신합니다.">DataReader&lt;T&gt;</a>, 수신 sample  
+<a href="#details">더 자세히 ...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-namespaces"><a id="namespaces" name="namespaces"></a>
+네임스페이스</h2></td></tr>
+<tr class="memitem:cond" id="r_cond"><td class="memItemLeft">네임스페이스  </td><td class="memItemRight"><a class="el" href="namespacedds_1_1sub_1_1cond.html">cond</a></td></tr>
+<tr class="memdesc:namespacedds_1_1sub_1_1cond"><td class="mdescLeft"> </td><td class="mdescRight">DataReader에 연결하는 condition <br/></td></tr>
+<tr class="memitem:qos" id="r_qos"><td class="memItemLeft">네임스페이스  </td><td class="memItemRight"><a class="el" href="namespacedds_1_1sub_1_1qos.html">qos</a></td></tr>
+<tr class="memdesc:namespacedds_1_1sub_1_1qos"><td class="mdescLeft"> </td><td class="mdescRight">Subscriber와 DataReader의 QoS <br/></td></tr>
+<tr class="memitem:status" id="r_status"><td class="memItemLeft">네임스페이스  </td><td class="memItemRight"><a class="el" href="namespacedds_1_1sub_1_1status.html">status</a></td></tr>
+<tr class="memdesc:namespacedds_1_1sub_1_1status"><td class="mdescLeft"> </td><td class="mdescRight">데이터를 읽을 때 쓰는 sample state, view state, instance state <br/></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-nested-classes"><a id="nested-classes" name="nested-classes"></a>
+클래스</h2></td></tr>
+<tr class="memitem:AnyDataReader" id="r_AnyDataReader"><td class="memItemLeft">클래스  </td><td class="memItemRight"><a class="el" href="classdds_1_1sub_1_1_any_data_reader.html">AnyDataReader</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft"> </td><td class="mdescRight">Topic 타입을 드러내지 않고 Reader를 보관합니다  <a href="classdds_1_1sub_1_1_any_data_reader.html#details">더 자세히 ...</a><br/></td></tr>
+<tr class="memitem:AnyDataReaderListener" id="r_AnyDataReaderListener"><td class="memItemLeft">클래스  </td><td class="memItemRight"><a class="el" href="classdds_1_1sub_1_1_any_data_reader_listener.html">AnyDataReaderListener</a></td></tr>
+<tr class="memitem:DataReader" id="r_DataReader"><td class="memItemLeft">클래스  </td><td class="memItemRight"><a class="el" href="classdds_1_1sub_1_1_data_reader.html">DataReader&lt;T&gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft"> </td><td class="mdescRight">Topic에서 지정된 타입의 sample을 수신합니다.  <a href="classdds_1_1sub_1_1_data_reader.html#details">더 자세히 ...</a><br/></td></tr>
+<tr class="memitem:DataReaderListener" id="r_DataReaderListener"><td class="memItemLeft">클래스  </td><td class="memItemRight"><a class="el" href="classdds_1_1sub_1_1_data_reader_listener.html">DataReaderListener</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft"> </td><td class="mdescRight">입력 DataReader로부터 데이터 가용성 및 상태 알림 수신  <a href="classdds_1_1sub_1_1_data_reader_listener.html#details">더 자세히 ...</a><br/></td></tr>
+<tr class="memitem:LoanedSamples" id="r_LoanedSamples"><td class="memItemLeft">클래스  </td><td class="memItemRight"><a class="el" href="classdds_1_1sub_1_1_loaned_samples.html">LoanedSamples</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft"> </td><td class="mdescRight">수신된 sample을 보관하고 미들웨어 loan을 관리합니다.  <a href="classdds_1_1sub_1_1_loaned_samples.html#details">더 자세히 ...</a><br/></td></tr>
+<tr class="memitem:NoOpAnyDataReaderListener" id="r_NoOpAnyDataReaderListener"><td class="memItemLeft">클래스  </td><td class="memItemRight"><a class="el" href="classdds_1_1sub_1_1_no_op_any_data_reader_listener.html">NoOpAnyDataReaderListener</a></td></tr>
+<tr class="memitem:NoOpDataReaderListener" id="r_NoOpDataReaderListener"><td class="memItemLeft">클래스  </td><td class="memItemRight"><a class="el" href="classdds_1_1sub_1_1_no_op_data_reader_listener.html">NoOpDataReaderListener</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft"> </td><td class="mdescRight">필요한 callback만 재정의할 수 있도록 <a class="el" href="classdds_1_1sub_1_1_data_reader.html" title="Topic에서 지정된 타입의 sample을 수신합니다.">DataReader&lt;T&gt;</a> callback의 기본 빈 구현을 제공합니다.  <a href="classdds_1_1sub_1_1_no_op_data_reader_listener.html#details">더 자세히 ...</a><br/></td></tr>
+<tr class="memitem:NoOpSubscriberListener" id="r_NoOpSubscriberListener"><td class="memItemLeft">클래스  </td><td class="memItemRight"><a class="el" href="classdds_1_1sub_1_1_no_op_subscriber_listener.html">NoOpSubscriberListener</a></td></tr>
+<tr class="memitem:Query" id="r_Query"><td class="memItemLeft">클래스  </td><td class="memItemRight"><a class="el" href="classdds_1_1sub_1_1_query.html">Query</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft"> </td><td class="mdescRight"><a class="el" href="classdds_1_1sub_1_1_data_reader.html" title="Topic에서 지정된 타입의 sample을 수신합니다.">DataReader&lt;T&gt;</a>, 쿼리 표현식 및 표현식 매개변수를 저장합니다.  <a href="classdds_1_1sub_1_1_query.html#details">더 자세히 ...</a><br/></td></tr>
+<tr class="memitem:Sample" id="r_Sample"><td class="memItemLeft">클래스  </td><td class="memItemRight"><a class="el" href="classdds_1_1sub_1_1_sample.html">Sample</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft"> </td><td class="mdescRight">이 클래스는 DDS sample과 관련된 데이터와 메타데이터를 캡슐화합니다.  <a href="classdds_1_1sub_1_1_sample.html#details">더 자세히 ...</a><br/></td></tr>
+<tr class="memitem:SharedSamples" id="r_SharedSamples"><td class="memItemLeft">클래스  </td><td class="memItemRight"><a class="el" href="classdds_1_1sub_1_1_shared_samples.html">SharedSamples</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft"> </td><td class="mdescRight"><code><a class="el" href="classdds_1_1sub_1_1_shared_samples.html" title="SharedSamples 클래스는 컨테이너에서 안전하게 사용하고 공유할 수 있게 만든 LoanedSamples 형태입니다.">SharedSamples</a></code> 클래스는 컨테이너에서 안전하게 사용하고 공유할 수 있게 만든 <code><a class="el" href="classdds_1_1sub_1_1_loaned_samples.html" title="수신된 sample을 보관하고 미들웨어 loan을 관리합니다.">LoanedSamples</a></code> 형태입니다.  <a href="classdds_1_1sub_1_1_shared_samples.html#details">더 자세히 ...</a><br/></td></tr>
+<tr class="memitem:SubscriberListener" id="r_SubscriberListener"><td class="memItemLeft">클래스  </td><td class="memItemRight"><a class="el" href="classdds_1_1sub_1_1_subscriber_listener.html">SubscriberListener</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft"> </td><td class="mdescRight">Subscriber와 AnyDataReader의 상태 알림을 받습니다.  <a href="classdds_1_1sub_1_1_subscriber_listener.html#details">더 자세히 ...</a><br/></td></tr>
+<tr class="memitem:TCoherentAccess" id="r_TCoherentAccess"><td class="memItemLeft">클래스  </td><td class="memItemRight"><a class="el" href="classdds_1_1sub_1_1_t_coherent_access.html">TCoherentAccess</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft"> </td><td class="mdescRight"><a class="el" href="group__dds__subscription.html#ga9a6d78b2a23f864211da5bd2edf28750" title="DataReader를 소유하고 기본값을 설정하는 데 사용되는 Subscriber handle">Subscriber</a> 일관성 액세스 범위를 노출합니다.  <a href="classdds_1_1sub_1_1_t_coherent_access.html#details">더 자세히 ...</a><br/></td></tr>
+<tr class="memitem:TGenerationCount" id="r_TGenerationCount"><td class="memItemLeft">클래스  </td><td class="memItemRight"><a class="el" href="classdds_1_1sub_1_1_t_generation_count.html">TGenerationCount</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft"> </td><td class="mdescRight">수신한 instance에 대해 보고된 폐기 세대 수와 DataWriter가 없어서 끝난 세대 수를 저장합니다  <a href="classdds_1_1sub_1_1_t_generation_count.html#details">더 자세히 ...</a><br/></td></tr>
+<tr class="memitem:TRank" id="r_TRank"><td class="memItemLeft">클래스  </td><td class="memItemRight"><a class="el" href="classdds_1_1sub_1_1_t_rank.html">TRank</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft"> </td><td class="mdescRight">이 클래스는 sample에 대한 Rank의 개념을 포함합니다.  <a href="classdds_1_1sub_1_1_t_rank.html#details">더 자세히 ...</a><br/></td></tr>
+<tr class="memitem:TSampleInfo" id="r_TSampleInfo"><td class="memItemLeft">클래스  </td><td class="memItemRight"><a class="el" href="classdds_1_1sub_1_1_t_sample_info.html">TSampleInfo</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft"> </td><td class="mdescRight">받은 sample과 그 instance state를 설명합니다.  <a href="classdds_1_1sub_1_1_t_sample_info.html#details">더 자세히 ...</a><br/></td></tr>
+<tr class="memitem:TSubscriber" id="r_TSubscriber"><td class="memItemLeft">클래스  </td><td class="memItemRight"><a class="el" href="classdds_1_1sub_1_1_t_subscriber.html">Subscriber</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft"> </td><td class="mdescRight">DataReader를 소유하고 구독 기본값을 구성합니다.  <a href="classdds_1_1sub_1_1_t_subscriber.html#details">더 자세히 ...</a><br/></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-typedef-members"><a id="typedef-members" name="typedef-members"></a>
+타입정의</h2></td></tr>
+<tr class="memitem:ga1a326dc6ca679ff7cbe0ad659b4aebff" id="r_ga1a326dc6ca679ff7cbe0ad659b4aebff"><td class="memItemLeft">typedef dds::sub::detail::CoherentAccess </td><td class="memItemRight"><a class="el" href="group__dds__subscription.html#ga1a326dc6ca679ff7cbe0ad659b4aebff">CoherentAccess</a></td></tr>
+<tr class="memdesc:ga1a326dc6ca679ff7cbe0ad659b4aebff"><td class="mdescLeft"> </td><td class="mdescRight">coherent-access scope 타입을 노출합니다  <br/></td></tr>
+<tr class="memitem:ga8f7732a7386d2be5fd9d9a1766755ab3" id="r_ga8f7732a7386d2be5fd9d9a1766755ab3"><td class="memItemLeft">typedef detail::GenerationCount </td><td class="memItemRight"><a class="el" href="group__dds__subscription.html#ga8f7732a7386d2be5fd9d9a1766755ab3">GenerationCount</a></td></tr>
+<tr class="memdesc:ga8f7732a7386d2be5fd9d9a1766755ab3"><td class="mdescLeft"> </td><td class="mdescRight">instance의 폐기 세대 수와 DataWriter가 없어서 끝난 세대 수를 저장합니다  <br/></td></tr>
+<tr class="memitem:abcfc1416133033122f41595090f07711" id="r_abcfc1416133033122f41595090f07711"><td class="memTemplParams" colspan="2"><a id="abcfc1416133033122f41595090f07711" name="abcfc1416133033122f41595090f07711"></a>
+template&lt;typename T, template&lt; typename Q, typename W &gt; class DELEGATE = detail::LoanedSamples&gt; </td></tr>
+<tr class="memitem:abcfc1416133033122f41595090f07711 template"><td class="memItemLeft">using </td><td class="memItemRight"><b>LoanedSamplesWInfoEx</b> = <a class="el" href="classdds_1_1sub_1_1_loaned_samples.html">LoanedSamples</a>&lt;T, ::dds::core::detail::SampleInfoEx, DELEGATE&gt;</td></tr>
+<tr class="memitem:ga047504f38cd18b1385a400cd858ef2df" id="r_ga047504f38cd18b1385a400cd858ef2df"><td class="memItemLeft">typedef detail::Rank </td><td class="memItemRight"><a class="el" href="group__dds__subscription.html#ga047504f38cd18b1385a400cd858ef2df">Rank</a></td></tr>
+<tr class="memdesc:ga047504f38cd18b1385a400cd858ef2df"><td class="mdescLeft"> </td><td class="mdescRight">같은 instance의 sample에 대한 sample의 상대적 위치를 설명하는 순위  <br/></td></tr>
+<tr class="memitem:ga8ce43296febeef280d08d5b58541ee65" id="r_ga8ce43296febeef280d08d5b58541ee65"><td class="memItemLeft">typedef detail::SampleInfo </td><td class="memItemRight"><a class="el" href="group__dds__subscription.html#ga8ce43296febeef280d08d5b58541ee65">SampleInfo</a></td></tr>
+<tr class="memdesc:ga8ce43296febeef280d08d5b58541ee65"><td class="mdescLeft"> </td><td class="mdescRight">payload 유효성, instance state 및 sample 출처를 나타내는 메타데이터  <br/></td></tr>
+<tr class="memitem:ga9a6d78b2a23f864211da5bd2edf28750" id="r_ga9a6d78b2a23f864211da5bd2edf28750"><td class="memItemLeft">typedef dds::sub::detail::Subscriber </td><td class="memItemRight"><a class="el" href="group__dds__subscription.html#ga9a6d78b2a23f864211da5bd2edf28750">Subscriber</a></td></tr>
+<tr class="memdesc:ga9a6d78b2a23f864211da5bd2edf28750"><td class="mdescLeft"> </td><td class="mdescRight">DataReader를 소유하고 기본값을 설정하는 데 사용되는 <a class="el" href="group__dds__subscription.html#ga9a6d78b2a23f864211da5bd2edf28750" title="DataReader를 소유하고 기본값을 설정하는 데 사용되는 Subscriber handle">Subscriber</a> handle  <br/></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-func-members"><a id="func-members" name="func-members"></a>
+함수</h2></td></tr>
+<tr class="memitem:aff0805b74d79331461b7e12d19660f84" id="r_aff0805b74d79331461b7e12d19660f84"><td class="memTemplParams" colspan="2">template&lt;typename SELECTOR&gt; </td></tr>
+<tr class="memitem:aff0805b74d79331461b7e12d19660f84 template"><td class="memItemLeft">SELECTOR &amp; </td><td class="memItemRight"><a class="el" href="#aff0805b74d79331461b7e12d19660f84">read</a> (SELECTOR &amp;selector)</td></tr>
+<tr class="memdesc:aff0805b74d79331461b7e12d19660f84"><td class="mdescLeft"> </td><td class="mdescRight">스트리밍 식에서 읽기 모드를 선택합니다  <br/></td></tr>
+<tr class="memitem:a803bb64aa7bf98fc57e1168dc7865164" id="r_a803bb64aa7bf98fc57e1168dc7865164"><td class="memTemplParams" colspan="2">template&lt;typename SELECTOR&gt; </td></tr>
+<tr class="memitem:a803bb64aa7bf98fc57e1168dc7865164 template"><td class="memItemLeft">SELECTOR &amp; </td><td class="memItemRight"><a class="el" href="#a803bb64aa7bf98fc57e1168dc7865164">take</a> (SELECTOR &amp;selector)</td></tr>
+<tr class="memdesc:a803bb64aa7bf98fc57e1168dc7865164"><td class="mdescLeft"> </td><td class="mdescRight">스트리밍 식에서 테이크 모드를 선택합니다  <br/></td></tr>
+<tr class="memitem:ac16381f51fb0535a1e29eef285249a2d" id="r_ac16381f51fb0535a1e29eef285249a2d"><td class="memItemLeft">dds::sub::functors::MaxSamplesManipulatorFunctor </td><td class="memItemRight"><a class="el" href="#ac16381f51fb0535a1e29eef285249a2d">max_samples</a> (uint32_t n)</td></tr>
+<tr class="memdesc:ac16381f51fb0535a1e29eef285249a2d"><td class="mdescLeft"> </td><td class="mdescRight">최대 sample 수를 설정하는 스트리밍 조작 함수를 만듭니다  <br/></td></tr>
+<tr class="memitem:adda957dedf2a7b74c01048e79d1491f8" id="r_adda957dedf2a7b74c01048e79d1491f8"><td class="memItemLeft">dds::sub::functors::StateFilterManipulatorFunctor </td><td class="memItemRight"><a class="el" href="#adda957dedf2a7b74c01048e79d1491f8">state</a> (const <a class="el" href="classdds_1_1sub_1_1status_1_1_data_state.html">dds::sub::status::DataState</a> &amp;s)</td></tr>
+<tr class="memdesc:adda957dedf2a7b74c01048e79d1491f8"><td class="mdescLeft"> </td><td class="mdescRight">상태 필터를 설정하는 스트리밍 조작 함수를 만듭니다  <br/></td></tr>
+<tr class="memitem:acb4c61c72e0d47aea594a30ae4d11293" id="r_acb4c61c72e0d47aea594a30ae4d11293"><td class="memItemLeft">dds::sub::functors::InstanceManipulatorFunctor </td><td class="memItemRight"><a class="el" href="#acb4c61c72e0d47aea594a30ae4d11293">instance</a> (const <a class="el" href="group__dds__core.html#ga8ee18acd2002fb15f2650f5c7cb055d0">dds::core::InstanceHandle</a> &amp;h)</td></tr>
+<tr class="memdesc:acb4c61c72e0d47aea594a30ae4d11293"><td class="mdescLeft"> </td><td class="mdescRight">특정 instance를 선택하는 스트리밍 조작 함수를 만듭니다  <br/></td></tr>
+<tr class="memitem:a9b67094740bb444f70ddc332a76b1635" id="r_a9b67094740bb444f70ddc332a76b1635"><td class="memItemLeft">dds::sub::functors::NextInstanceManipulatorFunctor </td><td class="memItemRight"><a class="el" href="#a9b67094740bb444f70ddc332a76b1635">next_instance</a> (const <a class="el" href="group__dds__core.html#ga8ee18acd2002fb15f2650f5c7cb055d0">dds::core::InstanceHandle</a> &amp;h)</td></tr>
+<tr class="memdesc:a9b67094740bb444f70ddc332a76b1635"><td class="mdescLeft"> </td><td class="mdescRight">다음 instance를 선택하는 스트리밍 조작 함수를 만듭니다  <br/></td></tr>
+<tr class="memitem:a23a3ef8f425ebdeb5a52541fa7e16f91" id="r_a23a3ef8f425ebdeb5a52541fa7e16f91"><td class="memItemLeft">void </td><td class="memItemRight"><a class="el" href="#a23a3ef8f425ebdeb5a52541fa7e16f91">ignore</a> (const <a class="el" href="group__dds__domain.html#gab1bd86ffa9ac0869166a446dd0120f3d">dds::domain::DomainParticipant</a> &amp;dp, const <a class="el" href="group__dds__core.html#ga8ee18acd2002fb15f2650f5c7cb055d0">dds::core::InstanceHandle</a> &amp;handle)</td></tr>
+<tr class="memdesc:a23a3ef8f425ebdeb5a52541fa7e16f91"><td class="mdescLeft"> </td><td class="mdescRight">구독을 무시합니다.  <br/></td></tr>
+<tr class="memitem:a97fc517c3537d7e9c028d3c742657fcb" id="r_a97fc517c3537d7e9c028d3c742657fcb"><td class="memTemplParams" colspan="2">template&lt;typename FwdIterator&gt; </td></tr>
+<tr class="memitem:a97fc517c3537d7e9c028d3c742657fcb template"><td class="memItemLeft">void </td><td class="memItemRight"><a class="el" href="#a97fc517c3537d7e9c028d3c742657fcb">ignore</a> (const <a class="el" href="group__dds__domain.html#gab1bd86ffa9ac0869166a446dd0120f3d">dds::domain::DomainParticipant</a> &amp;dp, FwdIterator begin, FwdIterator end)</td></tr>
+<tr class="memdesc:a97fc517c3537d7e9c028d3c742657fcb"><td class="mdescLeft"> </td><td class="mdescRight">범위 무시 작업을 적용합니다  <br/></td></tr>
+<tr class="memitem:a52e9439a5b77509a3f751f7cad5cbc3a" id="r_a52e9439a5b77509a3f751f7cad5cbc3a"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
+<tr class="memitem:a52e9439a5b77509a3f751f7cad5cbc3a template"><td class="memItemLeft">const dds::core::InstanceHandleSeq </td><td class="memItemRight"><a class="el" href="#a52e9439a5b77509a3f751f7cad5cbc3a">matched_publications</a> (const <a class="el" href="classdds_1_1sub_1_1_data_reader.html">dds::sub::DataReader&lt;T&gt;</a>&lt; T &gt; &amp;dr)</td></tr>
+<tr class="memdesc:a52e9439a5b77509a3f751f7cad5cbc3a"><td class="mdescLeft"> </td><td class="mdescRight">같은 Topic에서 QoS가 호환되고 <span class="tt"><a class="el" href="namespacedds_1_1domain.html#a96040476be3d1132a5e2380764b524dd" title="지정한 DomainParticipant에서 주어진 InstanceHandle로 식별하는 Entity를 무시하도록 설정합니다.">dds::domain::ignore</a></span>로 무시하지 않은 DataWriter의 handle을 반환합니다.  <br/></td></tr>
+<tr class="memitem:a846d12de3dd1b60fa20cd50fe63de37e" id="r_a846d12de3dd1b60fa20cd50fe63de37e"><td class="memTemplParams" colspan="2">template&lt;typename T, typename FwdIterator&gt; </td></tr>
+<tr class="memitem:a846d12de3dd1b60fa20cd50fe63de37e template"><td class="memItemLeft">dds::core::InstanceHandleSeq &amp; </td><td class="memItemRight"><a class="el" href="#a846d12de3dd1b60fa20cd50fe63de37e">matched_publications</a> (const <a class="el" href="classdds_1_1sub_1_1_data_reader.html">dds::sub::DataReader&lt;T&gt;</a>&lt; T &gt; &amp;dw, FwdIterator begin, FwdIterator end)</td></tr>
+<tr class="memdesc:a846d12de3dd1b60fa20cd50fe63de37e"><td class="mdescLeft"> </td><td class="mdescRight">같은 Topic에서 QoS가 호환되고 <span class="tt"><a class="el" href="namespacedds_1_1domain.html#a96040476be3d1132a5e2380764b524dd" title="지정한 DomainParticipant에서 주어진 InstanceHandle로 식별하는 Entity를 무시하도록 설정합니다.">dds::domain::ignore</a></span>로 무시하지 않은 DataWriter의 handle을 반환합니다.  <br/></td></tr>
+<tr class="memitem:ab5aaa02eef524397a424a45aa879ffdd" id="r_ab5aaa02eef524397a424a45aa879ffdd"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
+<tr class="memitem:ab5aaa02eef524397a424a45aa879ffdd template"><td class="memItemLeft">const <a class="el" href="namespacedds_1_1topic.html#afad93a6915ba0281cbc88128f1c4c610">dds::topic::PublicationBuiltinTopicData</a> </td><td class="memItemRight"><a class="el" href="#ab5aaa02eef524397a424a45aa879ffdd">matched_publications_data</a> (const <a class="el" href="classdds_1_1sub_1_1_data_reader.html">dds::sub::DataReader&lt;T&gt;</a>&lt; T &gt; &amp;dr, const <a class="el" href="group__dds__core.html#ga8ee18acd2002fb15f2650f5c7cb055d0">dds::core::InstanceHandle</a> &amp;h)</td></tr>
+<tr class="memdesc:ab5aaa02eef524397a424a45aa879ffdd"><td class="mdescLeft"> </td><td class="mdescRight">DataReader와 연결된 publication의 discovery 데이터를 반환합니다.  <br/></td></tr>
+<tr class="memitem:a931b33491a5e3285d82bf5d7e8e9c20b" id="r_a931b33491a5e3285d82bf5d7e8e9c20b"><td class="memItemLeft">const <a class="el" href="group__dds__subscription.html#ga9a6d78b2a23f864211da5bd2edf28750">dds::sub::Subscriber</a> </td><td class="memItemRight"><a class="el" href="#a931b33491a5e3285d82bf5d7e8e9c20b">builtin_subscriber</a> (const <a class="el" href="group__dds__domain.html#gab1bd86ffa9ac0869166a446dd0120f3d">dds::domain::DomainParticipant</a> &amp;dp)</td></tr>
+<tr class="memdesc:a931b33491a5e3285d82bf5d7e8e9c20b"><td class="mdescLeft"> </td><td class="mdescRight">주어진 DomainParticipant에 대한 내장된 Subscriber를 검색합니다.  <br/></td></tr>
+<tr class="memitem:ae417a646f34109cbb000fc1c22611e28" id="r_ae417a646f34109cbb000fc1c22611e28"><td class="memTemplParams" colspan="2">template&lt;typename READER, typename FwdIterator&gt; </td></tr>
+<tr class="memitem:ae417a646f34109cbb000fc1c22611e28 template"><td class="memItemLeft">uint32_t </td><td class="memItemRight"><a class="el" href="#ae417a646f34109cbb000fc1c22611e28">find</a> (const <a class="el" href="group__dds__subscription.html#ga9a6d78b2a23f864211da5bd2edf28750">dds::sub::Subscriber</a> &amp;sub, const std::string &amp;topic_name, FwdIterator begin, uint32_t max_size)</td></tr>
+<tr class="memdesc:ae417a646f34109cbb000fc1c22611e28"><td class="mdescLeft"> </td><td class="mdescRight">Subscriber에 속하고 topic_name과 일치하는 Topic에 연결된 기존 DataReader를 조회합니다.  <br/></td></tr>
+<tr class="memitem:a697179af03fb6e0a2a24c1985b0ab9f8" id="r_a697179af03fb6e0a2a24c1985b0ab9f8"><td class="memTemplParams" colspan="2">template&lt;typename READER, typename BinIterator&gt; </td></tr>
+<tr class="memitem:a697179af03fb6e0a2a24c1985b0ab9f8 template"><td class="memItemLeft">uint32_t </td><td class="memItemRight"><a class="el" href="#a697179af03fb6e0a2a24c1985b0ab9f8">find</a> (const <a class="el" href="group__dds__subscription.html#ga9a6d78b2a23f864211da5bd2edf28750">dds::sub::Subscriber</a> &amp;sub, const std::string &amp;topic_name, BinIterator begin)</td></tr>
+<tr class="memdesc:a697179af03fb6e0a2a24c1985b0ab9f8"><td class="mdescLeft"> </td><td class="mdescRight">Subscriber에 속하고 topic_name과 일치하는 Topic에 연결된 기존 DataReader를 조회합니다.  <br/></td></tr>
+<tr class="memitem:a3bedc8f504663500c2685d4fc71ab792" id="r_a3bedc8f504663500c2685d4fc71ab792"><td class="memTemplParams" colspan="2">template&lt;typename READER, typename T, typename FwdIterator&gt; </td></tr>
+<tr class="memitem:a3bedc8f504663500c2685d4fc71ab792 template"><td class="memItemLeft">uint32_t </td><td class="memItemRight"><a class="el" href="#a3bedc8f504663500c2685d4fc71ab792">find</a> (const <a class="el" href="group__dds__subscription.html#ga9a6d78b2a23f864211da5bd2edf28750">dds::sub::Subscriber</a> &amp;sub, const <a class="el" href="classdds_1_1topic_1_1_topic_description.html">dds::topic::TopicDescription</a>&lt; T &gt; &amp;topic_description, FwdIterator begin, uint32_t max_size)</td></tr>
+<tr class="memdesc:a3bedc8f504663500c2685d4fc71ab792"><td class="mdescLeft"> </td><td class="mdescRight">Subscriber에 속하고 topic_name과 일치하는 Topic에 연결된 기존 DataReader를 조회합니다.  <br/></td></tr>
+<tr class="memitem:a94c1a11dbd841e21f201053e6e4228a5" id="r_a94c1a11dbd841e21f201053e6e4228a5"><td class="memTemplParams" colspan="2">template&lt;typename READER, typename T, typename BinIterator&gt; </td></tr>
+<tr class="memitem:a94c1a11dbd841e21f201053e6e4228a5 template"><td class="memItemLeft">uint32_t </td><td class="memItemRight"><a class="el" href="#a94c1a11dbd841e21f201053e6e4228a5">find</a> (const <a class="el" href="group__dds__subscription.html#ga9a6d78b2a23f864211da5bd2edf28750">dds::sub::Subscriber</a> &amp;sub, const <a class="el" href="classdds_1_1topic_1_1_topic_description.html">dds::topic::TopicDescription</a>&lt; T &gt; &amp;topic_description, BinIterator begin)</td></tr>
+<tr class="memdesc:a94c1a11dbd841e21f201053e6e4228a5"><td class="mdescLeft"> </td><td class="mdescRight">Subscriber에 속하고 topic_name과 일치하는 Topic에 연결된 기존 DataReader를 조회합니다.  <br/></td></tr>
+<tr class="memitem:a01ee49d195544beb6e137e663581e0b0" id="r_a01ee49d195544beb6e137e663581e0b0"><td class="memTemplParams" colspan="2"><a id="a01ee49d195544beb6e137e663581e0b0" name="a01ee49d195544beb6e137e663581e0b0"></a>
+template&lt;typename READER, typename FwdIterator&gt; </td></tr>
+<tr class="memitem:a01ee49d195544beb6e137e663581e0b0 template"><td class="memItemLeft">uint32_t </td><td class="memItemRight"><b>find</b> (const <a class="el" href="group__dds__subscription.html#ga9a6d78b2a23f864211da5bd2edf28750">dds::sub::Subscriber</a> &amp;sub, const <a class="el" href="classdds_1_1sub_1_1status_1_1_data_state.html">dds::sub::status::DataState</a> &amp;rs, FwdIterator begin, uint32_t max_size)</td></tr>
+<tr class="memdesc:a01ee49d195544beb6e137e663581e0b0"><td class="mdescLeft"> </td><td class="mdescRight">이 함수는 특정 상태에 있는 Subscriber에게 속하는 이전에 생성된 DataReader를 검색합니다. <br/></td></tr>
+<tr class="memitem:ae124a5b51be0dc5a466d3b59864dbabe" id="r_ae124a5b51be0dc5a466d3b59864dbabe"><td class="memTemplParams" colspan="2"><a id="ae124a5b51be0dc5a466d3b59864dbabe" name="ae124a5b51be0dc5a466d3b59864dbabe"></a>
+template&lt;typename READER, typename BinIterator&gt; </td></tr>
+<tr class="memitem:ae124a5b51be0dc5a466d3b59864dbabe template"><td class="memItemLeft">uint32_t </td><td class="memItemRight"><b>find</b> (const <a class="el" href="group__dds__subscription.html#ga9a6d78b2a23f864211da5bd2edf28750">dds::sub::Subscriber</a> &amp;sub, const <a class="el" href="classdds_1_1sub_1_1status_1_1_data_state.html">dds::sub::status::DataState</a> &amp;rs, BinIterator begin)</td></tr>
+<tr class="memdesc:ae124a5b51be0dc5a466d3b59864dbabe"><td class="mdescLeft"> </td><td class="mdescRight">이 함수는 특정 상태에 있는 Subscriber에게 속하는 이전에 생성된 DataReader를 검색합니다. <br/></td></tr>
+<tr class="memitem:a9c5c3d55fd9edd11aa59e262a5e0a2d3" id="r_a9c5c3d55fd9edd11aa59e262a5e0a2d3"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
+<tr class="memitem:a9c5c3d55fd9edd11aa59e262a5e0a2d3 template"><td class="memItemLeft">T::iterator </td><td class="memItemRight"><a class="el" href="#a9c5c3d55fd9edd11aa59e262a5e0a2d3">begin</a> (T &amp;t)</td></tr>
+<tr class="memdesc:a9c5c3d55fd9edd11aa59e262a5e0a2d3"><td class="mdescLeft"> </td><td class="mdescRight">첫번째 sample 반복자를 가져옵니다  <br/></td></tr>
+<tr class="memitem:a16b8566b8d863b4d3279960b72b58d09" id="r_a16b8566b8d863b4d3279960b72b58d09"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
+<tr class="memitem:a16b8566b8d863b4d3279960b72b58d09 template"><td class="memItemLeft">T::iterator </td><td class="memItemRight"><a class="el" href="#a16b8566b8d863b4d3279960b72b58d09">end</a> (T &amp;t)</td></tr>
+<tr class="memdesc:a16b8566b8d863b4d3279960b72b58d09"><td class="mdescLeft"> </td><td class="mdescRight">끝 반복자를 가져옵니다  <br/></td></tr>
+<tr class="memitem:a235c8adf93bde23669bf772c9cb56346" id="r_a235c8adf93bde23669bf772c9cb56346"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
+<tr class="memitem:a235c8adf93bde23669bf772c9cb56346 template"><td class="memItemLeft">T::const_iterator </td><td class="memItemRight"><a class="el" href="#a235c8adf93bde23669bf772c9cb56346">cbegin</a> (const T &amp;t)</td></tr>
+<tr class="memdesc:a235c8adf93bde23669bf772c9cb56346"><td class="mdescLeft"> </td><td class="mdescRight">첫번째 sample 반복자를 가져옵니다  <br/></td></tr>
+<tr class="memitem:af82c3e8335e6dd11b4d87920389fffeb" id="r_af82c3e8335e6dd11b4d87920389fffeb"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
+<tr class="memitem:af82c3e8335e6dd11b4d87920389fffeb template"><td class="memItemLeft">T::const_iterator </td><td class="memItemRight"><a class="el" href="#af82c3e8335e6dd11b4d87920389fffeb">cend</a> (const T &amp;t)</td></tr>
+<tr class="memdesc:af82c3e8335e6dd11b4d87920389fffeb"><td class="mdescLeft"> </td><td class="mdescRight">끝 반복자를 가져옵니다  <br/></td></tr>
+<tr class="memitem:a2b1eba80422c7d0d997cbe140d977ad3" id="r_a2b1eba80422c7d0d997cbe140d977ad3"><td class="memTemplParams" colspan="2">template&lt;typename T, typename TInfo, template&lt; typename Q, typename W &gt; class D&gt; </td></tr>
+<tr class="memitem:a2b1eba80422c7d0d997cbe140d977ad3 template"><td class="memItemLeft"><a class="el" href="classdds_1_1sub_1_1_loaned_samples.html">LoanedSamples</a>&lt; T, D&lt; T, TInfo &gt; &gt; </td><td class="memItemRight"><a class="el" href="#a2b1eba80422c7d0d997cbe140d977ad3">move</a> (<a class="el" href="classdds_1_1sub_1_1_loaned_samples.html">LoanedSamples</a>&lt; T, D&lt; T, TInfo &gt; &gt; &amp;a)</td></tr>
+<tr class="memdesc:a2b1eba80422c7d0d997cbe140d977ad3"><td class="mdescLeft"> </td><td class="mdescRight">loan handle 사이에서 저장된 구현 객체를 이전합니다.  <br/></td></tr>
+</table>
+<a id="details" name="details"></a><h2 class="groupheader" id="header-details">상세한 설명</h2>
+<div class="textblock"><p><a class="el" href="group__dds__subscription.html#ga9a6d78b2a23f864211da5bd2edf28750" title="DataReader를 소유하고 기본값을 설정하는 데 사용되는 Subscriber handle">Subscriber</a>, <a class="el" href="classdds_1_1sub_1_1_data_reader.html" title="Topic에서 지정된 타입의 sample을 수신합니다.">DataReader&lt;T&gt;</a>, 수신 sample </p>
+<dl class="section see"><dt>참고</dt><dd><a class="el" href="group__dds__subscription.html" title="Subscription">Subscription</a> </dd></dl>
+</div><a id="doc-func-members" name="doc-func-members"></a><h2 class="groupheader" id="header-doc-func-members">함수 문서화</h2>
+<a id="a9c5c3d55fd9edd11aa59e262a5e0a2d3" name="a9c5c3d55fd9edd11aa59e262a5e0a2d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c5c3d55fd9edd11aa59e262a5e0a2d3">◆ </a></span>begin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">T::iterator dds::sub::begin </td>
+          <td>(</td>
+          <td class="paramtype">T &amp;</td>          <td class="paramname"><span class="paramname"><em>t</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>첫번째 sample 반복자를 가져옵니다 </p>
+<p>컬렉션 소유자를 반복자를 사용하는 동안 살아있게 유지합니다.</p>
+<dl class="params"><dt>매개변수</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[입력]</td><td class="paramname">t</td><td>반복할 sample 모음</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>반환값</dt><dd>첫번째 sample로 반복자, 비어 있으면 마지막 반복자 </dd></dl>
+
+</div>
+</div>
+<a id="a931b33491a5e3285d82bf5d7e8e9c20b" name="a931b33491a5e3285d82bf5d7e8e9c20b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a931b33491a5e3285d82bf5d7e8e9c20b">◆ </a></span>builtin_subscriber()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="group__dds__subscription.html#ga9a6d78b2a23f864211da5bd2edf28750">dds::sub::Subscriber</a> dds::sub::builtin_subscriber </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__dds__domain.html#gab1bd86ffa9ac0869166a446dd0120f3d">dds::domain::DomainParticipant</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>dp</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>주어진 DomainParticipant에 대한 내장된 Subscriber를 검색합니다. </p>
+<dl class="params"><dt>매개변수</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dp</td><td>DomainParticipant. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a235c8adf93bde23669bf772c9cb56346" name="a235c8adf93bde23669bf772c9cb56346"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a235c8adf93bde23669bf772c9cb56346">◆ </a></span>cbegin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">T::const_iterator dds::sub::cbegin </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;</td>          <td class="paramname"><span class="paramname"><em>t</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>첫번째 sample 반복자를 가져옵니다 </p>
+<p>컬렉션 소유자를 반복자를 사용하는 동안 살아있게 유지합니다.</p>
+<dl class="params"><dt>매개변수</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[입력]</td><td class="paramname">t</td><td>반복할 sample 모음</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>반환값</dt><dd>첫번째 sample로 반복자, 비어 있으면 마지막 반복자 </dd></dl>
+
+</div>
+</div>
+<a id="af82c3e8335e6dd11b4d87920389fffeb" name="af82c3e8335e6dd11b4d87920389fffeb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af82c3e8335e6dd11b4d87920389fffeb">◆ </a></span>cend()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">T::const_iterator dds::sub::cend </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;</td>          <td class="paramname"><span class="paramname"><em>t</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>끝 반복자를 가져옵니다 </p>
+<p>컬렉션 소유자를 반복자를 사용하는 동안 살아있게 유지합니다.</p>
+<dl class="params"><dt>매개변수</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[입력]</td><td class="paramname">t</td><td>반복할 sample 모음</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>반환값</dt><dd>마지막 레코드를 지나서 반복 </dd></dl>
+
+</div>
+</div>
+<a id="a16b8566b8d863b4d3279960b72b58d09" name="a16b8566b8d863b4d3279960b72b58d09"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16b8566b8d863b4d3279960b72b58d09">◆ </a></span>end()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">T::iterator dds::sub::end </td>
+          <td>(</td>
+          <td class="paramtype">T &amp;</td>          <td class="paramname"><span class="paramname"><em>t</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>끝 반복자를 가져옵니다 </p>
+<p>컬렉션 소유자를 반복자를 사용하는 동안 살아있게 유지합니다.</p>
+<dl class="params"><dt>매개변수</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[입력]</td><td class="paramname">t</td><td>반복할 sample 모음</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>반환값</dt><dd>마지막 레코드를 지나서 반복 </dd></dl>
+
+</div>
+</div>
+<a id="a94c1a11dbd841e21f201053e6e4228a5" name="a94c1a11dbd841e21f201053e6e4228a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94c1a11dbd841e21f201053e6e4228a5">◆ </a></span>find() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename READER, typename T, typename BinIterator&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t dds::sub::find </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__dds__subscription.html#ga9a6d78b2a23f864211da5bd2edf28750">dds::sub::Subscriber</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>sub</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdds_1_1topic_1_1_topic_description.html">dds::topic::TopicDescription</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>topic_description</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">BinIterator</td>          <td class="paramname"><span class="paramname"><em>begin</em></span> )</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Subscriber에 속하고 topic_name과 일치하는 Topic에 연결된 기존 DataReader를 조회합니다. </p>
+<p>해당하는 DataReader가 없으면 빈 컨테이너를 반환합니다. 내장 Subscriber에서 호출하면 built-in Topic의 내장 <a class="el" href="classdds_1_1sub_1_1_data_reader.html" title="Topic에서 지정된 타입의 sample을 수신합니다.">DataReader&lt;T&gt;</a> Entity에 접근할 수 있습니다. </p>
+
+</div>
+</div>
+<a id="a3bedc8f504663500c2685d4fc71ab792" name="a3bedc8f504663500c2685d4fc71ab792"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3bedc8f504663500c2685d4fc71ab792">◆ </a></span>find() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename READER, typename T, typename FwdIterator&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t dds::sub::find </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__dds__subscription.html#ga9a6d78b2a23f864211da5bd2edf28750">dds::sub::Subscriber</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>sub</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdds_1_1topic_1_1_topic_description.html">dds::topic::TopicDescription</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>topic_description</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FwdIterator</td>          <td class="paramname"><span class="paramname"><em>begin</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>max_size</em></span> )</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Subscriber에 속하고 topic_name과 일치하는 Topic에 연결된 기존 DataReader를 조회합니다. </p>
+<p>해당하는 DataReader가 없으면 빈 컨테이너를 반환합니다. 내장 Subscriber에서 호출하면 built-in Topic의 내장 <a class="el" href="classdds_1_1sub_1_1_data_reader.html" title="Topic에서 지정된 타입의 sample을 수신합니다.">DataReader&lt;T&gt;</a> Entity에 접근할 수 있습니다. </p>
+
+</div>
+</div>
+<a id="a697179af03fb6e0a2a24c1985b0ab9f8" name="a697179af03fb6e0a2a24c1985b0ab9f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a697179af03fb6e0a2a24c1985b0ab9f8">◆ </a></span>find() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename READER, typename BinIterator&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t dds::sub::find </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__dds__subscription.html#ga9a6d78b2a23f864211da5bd2edf28750">dds::sub::Subscriber</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>sub</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>topic_name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">BinIterator</td>          <td class="paramname"><span class="paramname"><em>begin</em></span> )</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Subscriber에 속하고 topic_name과 일치하는 Topic에 연결된 기존 DataReader를 조회합니다. </p>
+<p>해당하는 DataReader가 없으면 빈 컨테이너를 반환합니다. 내장 Subscriber에서 호출하면 built-in Topic의 내장 <a class="el" href="classdds_1_1sub_1_1_data_reader.html" title="Topic에서 지정된 타입의 sample을 수신합니다.">DataReader&lt;T&gt;</a> Entity에 접근할 수 있습니다.</p>
+<dl class="section return"><dt>반환값</dt><dd>찾아서 복사한 요소의 총 수입니다. </dd></dl>
+
+</div>
+</div>
+<a id="ae417a646f34109cbb000fc1c22611e28" name="ae417a646f34109cbb000fc1c22611e28"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae417a646f34109cbb000fc1c22611e28">◆ </a></span>find() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename READER, typename FwdIterator&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t dds::sub::find </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__dds__subscription.html#ga9a6d78b2a23f864211da5bd2edf28750">dds::sub::Subscriber</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>sub</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>topic_name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FwdIterator</td>          <td class="paramname"><span class="paramname"><em>begin</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>max_size</em></span> )</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Subscriber에 속하고 topic_name과 일치하는 Topic에 연결된 기존 DataReader를 조회합니다. </p>
+<p>해당하는 DataReader가 없으면 빈 컨테이너를 반환합니다. 내장 Subscriber에서 호출하면 built-in Topic의 내장 <a class="el" href="classdds_1_1sub_1_1_data_reader.html" title="Topic에서 지정된 타입의 sample을 수신합니다.">DataReader&lt;T&gt;</a> Entity에 접근할 수 있습니다.</p>
+<dl class="section return"><dt>반환값</dt><dd>찾은 요소의 총 수. 최대 max_size는 제공된 반복자로 복사됩니다. </dd></dl>
+
+</div>
+</div>
+<a id="a23a3ef8f425ebdeb5a52541fa7e16f91" name="a23a3ef8f425ebdeb5a52541fa7e16f91"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23a3ef8f425ebdeb5a52541fa7e16f91">◆ </a></span>ignore() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void dds::sub::ignore </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__dds__domain.html#gab1bd86ffa9ac0869166a446dd0120f3d">dds::domain::DomainParticipant</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>dp</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="group__dds__core.html#ga8ee18acd2002fb15f2650f5c7cb055d0">dds::core::InstanceHandle</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>handle</em></span> )</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>구독을 무시합니다. </p>
+<dl class="params"><dt>매개변수</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dp</td><td>원격 Entity를 무시할 <code>DomainParticipant</code></td></tr>
+    <tr><td class="paramname">handle</td><td>무시할 원격 Entity의 <code>InstanceHandle</code> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a97fc517c3537d7e9c028d3c742657fcb" name="a97fc517c3537d7e9c028d3c742657fcb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97fc517c3537d7e9c028d3c742657fcb">◆ </a></span>ignore() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename FwdIterator&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void dds::sub::ignore </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__dds__domain.html#gab1bd86ffa9ac0869166a446dd0120f3d">dds::domain::DomainParticipant</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>dp</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FwdIterator</td>          <td class="paramname"><span class="paramname"><em>begin</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FwdIterator</td>          <td class="paramname"><span class="paramname"><em>end</em></span> )</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>범위 무시 작업을 적용합니다 </p>
+<p>범위를 받는 현재 구현은 각 handle에 대해 C API의 publication 무시 연산을 호출합니다. subscription을 무시하려면 handle 하나를 받는 오버로드를 사용하세요.</p>
+<dl class="params"><dt>매개변수</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[입력]</td><td class="paramname">dp</td><td>publication이 무시된 DomainParticipant </td></tr>
+    <tr><td class="paramdir">[입력]</td><td class="paramname">begin</td><td>첫번째 handle로 반복 </td></tr>
+    <tr><td class="paramdir">[입력]</td><td class="paramname">end</td><td>마지막 handle을 지나서 반복 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="acb4c61c72e0d47aea594a30ae4d11293" name="acb4c61c72e0d47aea594a30ae4d11293"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb4c61c72e0d47aea594a30ae4d11293">◆ </a></span>instance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">dds::sub::functors::InstanceManipulatorFunctor dds::sub::instance </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__dds__core.html#ga8ee18acd2002fb15f2650f5c7cb055d0">dds::core::InstanceHandle</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>h</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>특정 instance를 선택하는 스트리밍 조작 함수를 만듭니다 </p>
+<dl class="params"><dt>매개변수</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[입력]</td><td class="paramname">h</td><td>선택할 instance의 handle</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>반환값</dt><dd>이 설정을 DataReader의 Selector에 적용하는 스트리밍 조작 함수 </dd></dl>
+
+</div>
+</div>
+<a id="a52e9439a5b77509a3f751f7cad5cbc3a" name="a52e9439a5b77509a3f751f7cad5cbc3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52e9439a5b77509a3f751f7cad5cbc3a">◆ </a></span>matched_publications() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const dds::core::InstanceHandleSeq dds::sub::matched_publications </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdds_1_1sub_1_1_data_reader.html">dds::sub::DataReader&lt;T&gt;</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>dr</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>같은 Topic에서 QoS가 호환되고 <span class="tt"><a class="el" href="namespacedds_1_1domain.html#a96040476be3d1132a5e2380764b524dd" title="지정한 DomainParticipant에서 주어진 InstanceHandle로 식별하는 Entity를 무시하도록 설정합니다.">dds::domain::ignore</a></span>로 무시하지 않은 DataWriter의 handle을 반환합니다. </p>
+<p>로컬 handle은 <span class="tt">DCPSPublications</span> built-in Topic의 <span class="tt">SampleInfo::instance_handle</span>과 같습니다. 미들웨어가 연결 정보를 로컬에 보관하지 않으면 실패할 수 있습니다. </p>
+
+</div>
+</div>
+<a id="a846d12de3dd1b60fa20cd50fe63de37e" name="a846d12de3dd1b60fa20cd50fe63de37e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a846d12de3dd1b60fa20cd50fe63de37e">◆ </a></span>matched_publications() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T, typename FwdIterator&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">dds::core::InstanceHandleSeq &amp; dds::sub::matched_publications </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdds_1_1sub_1_1_data_reader.html">dds::sub::DataReader&lt;T&gt;</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>dw</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FwdIterator</td>          <td class="paramname"><span class="paramname"><em>begin</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FwdIterator</td>          <td class="paramname"><span class="paramname"><em>end</em></span> )</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>같은 Topic에서 QoS가 호환되고 <span class="tt"><a class="el" href="namespacedds_1_1domain.html#a96040476be3d1132a5e2380764b524dd" title="지정한 DomainParticipant에서 주어진 InstanceHandle로 식별하는 Entity를 무시하도록 설정합니다.">dds::domain::ignore</a></span>로 무시하지 않은 DataWriter의 handle을 반환합니다. </p>
+<p>로컬 handle은 <span class="tt">DCPSPublications</span> built-in Topic의 <span class="tt">SampleInfo::instance_handle</span>과 같습니다. 미들웨어가 연결 정보를 로컬에 보관하지 않으면 실패할 수 있습니다. </p>
+
+</div>
+</div>
+<a id="ab5aaa02eef524397a424a45aa879ffdd" name="ab5aaa02eef524397a424a45aa879ffdd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5aaa02eef524397a424a45aa879ffdd">◆ </a></span>matched_publications_data()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="namespacedds_1_1topic.html#afad93a6915ba0281cbc88128f1c4c610">dds::topic::PublicationBuiltinTopicData</a> dds::sub::matched_publications_data </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdds_1_1sub_1_1_data_reader.html">dds::sub::DataReader&lt;T&gt;</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>dr</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="group__dds__core.html#ga8ee18acd2002fb15f2650f5c7cb055d0">dds::core::InstanceHandle</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>h</em></span> )</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>DataReader와 연결된 publication의 discovery 데이터를 반환합니다. </p>
+<p><span class="tt"><a class="el" href="#a52e9439a5b77509a3f751f7cad5cbc3a" title="같은 Topic에서 QoS가 호환되고 dds::domain::ignore로 무시하지 않은 DataWriter의 handle을 반환합니다.">matched_publications()</a></span>로 얻은 handle을 전달하세요. handle이 현재 연결된 publication을 식별하지 못하면 <span class="tt">BadParameterError</span>를 던집니다.</p>
+<p>인프라가 subscription_data를 채우기 위하여 필요한 정보를 보유하지 않는 경우에도 작업은 실패할 수 있다. 이 경우에 작업은 UnsupportedError를 던질 것이다. </p>
+
+</div>
+</div>
+<a id="ac16381f51fb0535a1e29eef285249a2d" name="ac16381f51fb0535a1e29eef285249a2d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac16381f51fb0535a1e29eef285249a2d">◆ </a></span>max_samples()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">dds::sub::functors::MaxSamplesManipulatorFunctor dds::sub::max_samples </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>n</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>최대 sample 수를 설정하는 스트리밍 조작 함수를 만듭니다 </p>
+<dl class="params"><dt>매개변수</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[입력]</td><td class="paramname">n</td><td>최대 레코드 수, 또는 명시적 제한이 없으면 0</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>반환값</dt><dd>이 설정을 DataReader의 Selector에 적용하는 스트리밍 조작 함수 </dd></dl>
+
+</div>
+</div>
+<a id="a2b1eba80422c7d0d997cbe140d977ad3" name="a2b1eba80422c7d0d997cbe140d977ad3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b1eba80422c7d0d997cbe140d977ad3">◆ </a></span>move()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T, typename TInfo, template&lt; typename Q, typename W &gt; class D&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdds_1_1sub_1_1_loaned_samples.html">LoanedSamples</a>&lt; T, D&lt; T, TInfo &gt; &gt; dds::sub::move </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdds_1_1sub_1_1_loaned_samples.html">LoanedSamples</a>&lt; T, D&lt; T, TInfo &gt; &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>a</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>loan handle 사이에서 저장된 구현 객체를 이전합니다. </p>
+<dl class="params"><dt>매개변수</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[입출력]</td><td class="paramname">a</td><td>구현 객체가 비워진 loan handle</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>반환값</dt><dd>전송된 구현 객체의 handle </dd></dl>
+
+</div>
+</div>
+<a id="a9b67094740bb444f70ddc332a76b1635" name="a9b67094740bb444f70ddc332a76b1635"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b67094740bb444f70ddc332a76b1635">◆ </a></span>next_instance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">dds::sub::functors::NextInstanceManipulatorFunctor dds::sub::next_instance </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__dds__core.html#ga8ee18acd2002fb15f2650f5c7cb055d0">dds::core::InstanceHandle</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>h</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>다음 instance를 선택하는 스트리밍 조작 함수를 만듭니다 </p>
+<dl class="params"><dt>매개변수</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[입력]</td><td class="paramname">h</td><td>선택할 instance 앞에 있는 handle</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>반환값</dt><dd>이 설정을 DataReader의 Selector에 적용하는 스트리밍 조작 함수 </dd></dl>
+
+</div>
+</div>
+<a id="aff0805b74d79331461b7e12d19660f84" name="aff0805b74d79331461b7e12d19660f84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff0805b74d79331461b7e12d19660f84">◆ </a></span>read()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename SELECTOR&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">SELECTOR &amp; dds::sub::read </td>
+          <td>(</td>
+          <td class="paramtype">SELECTOR &amp;</td>          <td class="paramname"><span class="paramname"><em>selector</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>스트리밍 식에서 읽기 모드를 선택합니다 </p>
+<p>sample은 후속 추출을 통해 액세스됩니다.</p>
+<dl class="params"><dt>매개변수</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[입력]</td><td class="paramname">selector</td><td>모드가 변경된 선택자</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>반환값</dt><dd>공급된 선택기 </dd></dl>
+
+</div>
+</div>
+<a id="adda957dedf2a7b74c01048e79d1491f8" name="adda957dedf2a7b74c01048e79d1491f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adda957dedf2a7b74c01048e79d1491f8">◆ </a></span>state()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">dds::sub::functors::StateFilterManipulatorFunctor dds::sub::state </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdds_1_1sub_1_1status_1_1_data_state.html">dds::sub::status::DataState</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>s</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>상태 필터를 설정하는 스트리밍 조작 함수를 만듭니다 </p>
+<dl class="params"><dt>매개변수</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[입력]</td><td class="paramname">s</td><td>sample, 뷰 및 instance state 마스크</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>반환값</dt><dd>이 설정을 DataReader의 Selector에 적용하는 스트리밍 조작 함수 </dd></dl>
+
+</div>
+</div>
+<a id="a803bb64aa7bf98fc57e1168dc7865164" name="a803bb64aa7bf98fc57e1168dc7865164"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a803bb64aa7bf98fc57e1168dc7865164">◆ </a></span>take()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename SELECTOR&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">SELECTOR &amp; dds::sub::take </td>
+          <td>(</td>
+          <td class="paramtype">SELECTOR &amp;</td>          <td class="paramname"><span class="paramname"><em>selector</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>스트리밍 식에서 테이크 모드를 선택합니다 </p>
+<p>sample은 후속 추출을 통해 액세스됩니다.</p>
+<dl class="params"><dt>매개변수</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[입력]</td><td class="paramname">selector</td><td>모드가 변경된 선택자</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>반환값</dt><dd>공급된 선택기 </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div class="page-nav-panel" id="page-nav">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div class="navpath" id="nav-path"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="namespacedds.html">dds</a></li><li class="navelem"><a href="namespacedds_1_1sub.html">sub</a></li>
+    <li class="footer">다음에 의해 생성됨 :  <a href="https://www.doxygen.org/index.html"><img alt="doxygen" class="footer" height="31" src="doxygen.svg" width="104"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="ko"><head>
+<meta charset="utf-8"/>
+<title>Programming Tutorials » DataWriter 모듈 | GurumDDS C++ API Reference</title>
+<link href="gurum-networks-logo.png" rel="icon" type="image/png"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="#cb4b16" name="theme-color"/>
+<link href="poxy/poxy.css" referrerpolicy="no-referrer" rel="stylesheet"/>
+<link href="ReferenceBranding.css" referrerpolicy="no-referrer" rel="stylesheet"/>
+<script src="poxy/poxy.js"></script>
+<script>initialize_theme("light");</script>
+<meta content="GurumDDS C++" name="twitter:title"/>
+<meta content="GurumDDS C++" property="og:title"/>
+<meta content="GurumDDS C++" itemprop="name"/>
+<meta content="API Reference" name="description"/>
+<meta content="API Reference" name="twitter:description"/>
+<meta content="API Reference" property="og:description"/>
+<meta content="API Reference" itemprop="description"/>
+<meta content="telephone=no" name="format-detection"/>
+<meta content="Poxy v0.27.2" name="generator"/>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<script defer="True" src="ReferenceUi.js"></script><link href="../en/group__dds__tutorial__writer.html" hreflang="en" rel="alternate"/><link href="../ko/group__dds__tutorial__writer.html" hreflang="ko" rel="alternate"/><link href="../language.css" rel="stylesheet"/><script defer="defer" src="../language.js"></script></head>
+<body class="poxy-has-toc">
+<header><nav id="navigation">
+<div class="m-container">
+<div class="m-row doc-language-header">
+<a class="m-col-t-8 m-col-m-none m-left-m" href="index.html" id="m-navbar-brand"><img alt="" src="gurum-networks-logo.png"/>GurumDDS C++ <span class="m-thin">API Reference</span></a>
+<div class="m-col-t-4 m-hide-m m-text-right m-nopadr">
+<a class="m-doc-search-icon" href="#search" onclick="return showSearch()" title="검색"><svg style="height: 0.9rem;" viewbox="0 0 16 16">
+<path d="m6 0c-3.31 0-6 2.69-6 6 0 3.31 2.69 6 6 6 1.49 0 2.85-0.541 3.89-1.44-0.0164 0.338 0.147 0.759 0.5 1.15l3.22 3.79c0.552 0.614 1.45 0.665 2 0.115 0.55-0.55 0.499-1.45-0.115-2l-3.79-3.22c-0.392-0.353-0.812-0.515-1.15-0.5 0.895-1.05 1.44-2.41 1.44-3.89 0-3.31-2.69-6-6-6zm0 1.56a4.44 4.44 0 0 1 4.44 4.44 4.44 4.44 0 0 1-4.44 4.44 4.44 4.44 0 0 1-4.44-4.44 4.44 4.44 0 0 1 4.44-4.44z" id="m-doc-search-icon-path"></path>
+</svg></a>
+<a href="#navigation" id="m-navbar-show" title="탐색 메뉴 열기"></a>
+<a href="#" id="m-navbar-hide" title="탐색 메뉴 닫기"></a>
+</div>
+<div class="m-col-t-12 m-show-m m-col-m-none m-right-m" id="m-navbar-collapse">
+<div class="m-row">
+<ol class="m-col-t-6 m-col-m-none">
+<li><a href="modules.html">모듈</a></li>
+<li><a href="annotated.html">클래스</a></li>
+<li><a href="namespaces.html">네임스페이스</a></li>
+</ol>
+<ol class="m-col-t-6 m-col-m-none" start="4">
+<li><a href="examples.html">예제</a></li>
+<li><a class="poxy-icon theme" href="javascript:void(null);" id="poxy-theme-switch" onclick="toggle_theme(); return false;" role="button" title="밝은 테마와 어두운 테마 전환"><svg id="poxy-theme-switch-img" version="1.1" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><circle cx="185.6708" cy="183.8122" fill="currentColor" r="65.625"></circle><path d="M185.6708,87.5622a13.1256,13.1256,0,0,0,13.125-13.125V52.5622a13.125,13.125,0,1,0-26.25,0v21.875A13.1257,13.1257,0,0,0,185.6708,87.5622Z" fill="currentColor"></path><path d="M99.051,115.7519a13.1236,13.1236,0,1,0,18.56-18.56L102.1442,81.726a13.1236,13.1236,0,0,0-18.5595,18.56Z" fill="currentColor"></path><path d="M89.4208,183.8122a13.1257,13.1257,0,0,0-13.125-13.125H54.4208a13.125,13.125,0,0,0,0,26.25h21.875A13.1256,13.1256,0,0,0,89.4208,183.8122Z" fill="currentColor"></path><path d="M99.051,251.8725,83.5847,267.3431a13.1236,13.1236,0,1,0,18.56,18.56l15.4663-15.4706a13.1236,13.1236,0,1,0-18.5595-18.56Z" fill="currentColor"></path><path d="M185.6708,280.0622a13.1258,13.1258,0,0,0-13.125,13.125v21.875a13.125,13.125,0,0,0,26.25,0v-21.875A13.1257,13.1257,0,0,0,185.6708,280.0622Z" fill="currentColor"></path><path d="M272.2907,251.8725a13.1236,13.1236,0,1,0-18.56,18.56l15.4663,15.4706a13.1236,13.1236,0,1,0,18.56-18.56Z" fill="currentColor"></path><path d="M330.0458,183.8122a13.1257,13.1257,0,0,0-13.125-13.125h-21.875a13.125,13.125,0,0,0,0,26.25h21.875A13.1256,13.1256,0,0,0,330.0458,183.8122Z" fill="currentColor"></path><path d="M263.0109,119.5971a13.0824,13.0824,0,0,0,9.28-3.8452l15.4663-15.4663a13.1236,13.1236,0,1,0-18.56-18.56L253.7312,97.1923a13.125,13.125,0,0,0,9.28,22.4048Z" fill="currentColor"></path><path d="M456.9379,401.6714a63.97,63.97,0,0,1-14.9963,7.2055c-19.6448,6.5283-41.8787,2.9566-58.1439-9.8523a68.9311,68.9311,0,0,1-10.835-10.8339c-12.8088-16.2663-16.3806-38.5-9.8523-58.1471a63.8444,63.8444,0,0,1,7.2077-14.9931,8.8036,8.8036,0,0,0-10.1172-13.3034,87.5188,87.5188,0,1,0,110.0372,110.04A8.8,8.8,0,0,0,456.9379,401.6714Z" fill="currentColor"></path></svg></a></li>
+<li class="m-show-m"><a class="m-doc-search-icon" href="#search" onclick="return showSearch()" title="검색"><svg style="height: 0.9rem;" viewbox="0 0 16 16">
+<use href="#m-doc-search-icon-path"></use>
+</svg></a></li>
+</ol>
+</div>
+</div>
+<label class="doc-language"><select aria-label="문서 언어" data-current="1"><option lang="en" value="../en/group__dds__tutorial__writer.html">English</option><option lang="en" selected="selected" value="../ko/group__dds__tutorial__writer.html">Korean</option></select></label></div>
+</div>
+</nav></header>
+<main><article>
+<div class="m-container m-container-inflatable">
+<div class="m-row">
+<div class="m-col-l-10 m-push-l-1">
+<h1>
+<span class="m-breadcrumb"><a href="group__dds__howto.html">Programming Tutorials</a> »</span>
+          DataWriter <span class="m-thin">모듈</span></h1>
+<nav class="m-block m-default poxy-toc" id="poxy-toc">
+<h3>목차</h3>
+<ul>
+<li><a href="#dds_tutorial_writer_create">DataWriter 생성</a></li>
+<li><a href="#dds_tutorial_writer_register">keyed instance 등록하기</a></li>
+<li><a href="#dds_tutorial_writer_timestamp">source timestamp를 지정해 쓰기</a></li>
+<li><a href="#dds_tutorial_writer_lifecycle">instance 폐기 및 등록 해제하기</a></li>
+<li><a href="#dds_tutorial_writer_batch">sample 범위 쓰기</a></li>
+<li><a href="#dds_tutorial_writer_acknowledgments">DDS acknowledgment 기다리기</a></li>
+<li><a href="#dds_tutorial_publisher_wait_two_writers">Writer 두 개의 DDS acknowledgment 대기</a></li>
+<li><a href="#dds_tutorial_src_keyed_samples">Keyed sample 연산</a></li>
+</ul>
+</nav>
+<p>DataWriter는 한 Topic 타입의 sample을 발행합니다. 같은 DomainParticipant에 속한 Publisher와 Topic으로 만드세요. 실시간으로 주고받는 예제에서는 호환되는 DataReader가 매칭된 뒤 첫 sample을 보냅니다.</p><p><a class="m-doc" href="group__dds__tutorial__publisher.html">Publisher</a> 의 <code>publisher</code>와 <a class="m-doc" href="group__dds__tutorial__topic.html">Topic과 keyed type</a> 의 <code>Topic&lt;Hello::Msg&gt;</code> 타입인 <code>topic</code>을 사용합니다. 템플릿 인자 <code>Hello::Msg</code>는 DataWriter가 <code>write()</code>에서 받는 C++ 타입입니다.</p><section id="dds_tutorial_writer_create"><h2><a href="#dds_tutorial_writer_create">DataWriter 생성</a></h2><pre class="m-code"><span class="nn">dds::pub</span><span class="o">::</span><span class="nc">DataWriter</span><span class="o">&lt;</span><span class="n">Hello</span><span class="o">::</span><span class="n">Msg</span><span class="o">&gt;</span> <span class="nf">writer</span><span class="p">(</span><span class="n">publisher</span><span class="p">,</span> <span class="n">topic</span><span class="p">);</span></pre><p><code>write()</code>를 호출하기 전에 key와 payload를 채우세요. Key로 instance를 식별하고 이후 연산에 handle이 필요하면 등록하세요. 첫 쓰기 전에 제한 시간 동안 매칭을 기다리는 방법은 <a class="m-doc" href="group__dds__howto__match.html">Matching을 확인한 뒤 발행하기</a> 에 있습니다.</p><p>Keyed 예제는 아래 코드에 앞서 <code>message</code>라는 <code>Hello::Msg</code>에 <code>userId</code> 7과 전송할 문자열을 채웁니다. <code>writer.write(message)</code>로 쓰면 DataWriter가 key로 instance를 찾습니다. 이후 쓰기나 수명 주기 연산에 handle을 보관해야 할 때 key를 등록합니다.</p></section><section id="dds_tutorial_writer_register"><h2><a href="#dds_tutorial_writer_register">keyed instance 등록하기</a></h2><p>key를 등록해 DataWriter의 instance handle을 가져옵니다. 이후 같은 key를 다룰 때 이 handle을 재사용할 수 있습니다. key로 <code>lookup_instance()</code>를 호출하거나 handle로 <code>key_value()</code>를 호출할 수 있습니다.</p><figure class="m-figure"><svg aria-label="같은 key를 Writer에서 등록하거나 조회합니다. 데이터를 받은 뒤 Reader에서 같은 key의 instance를 별도로 조회합니다." class="poxy-injected-svg" data-dds-diagram="true" height="236" id="poxy-injected-svg-0" role="img" version="1.1" viewbox="0 0 1140 236" width="1140" xmlns="http://www.w3.org/2000/svg"><title id="poxy-injected-svg-0-key-handle-scope-ko-title">Writer와 Reader에서 key 조회</title><desc>같은 key를 Writer에서 등록하거나 조회합니다. 데이터를 받은 뒤 Reader에서 같은 key의 instance를 별도로 조회합니다.</desc><defs><marker id="poxy-injected-svg-0-key-handle-scope-ko-arrow" markerheight="10" markerunits="userSpaceOnUse" markerwidth="9" orient="auto" refx="9" refy="6" viewbox="0 0 10 12"><path d="M 1,1 L 9,6 L 1,11" fill="none" stroke="#20354B" stroke-width="1.2"></path></marker><marker id="poxy-injected-svg-0-key-handle-scope-ko-blue" markerheight="9" markerunits="userSpaceOnUse" markerwidth="10" orient="auto" refx="10" refy="5" viewbox="0 0 11 10"><path d="M 0,0 L 11,5 L 0,10 Z" fill="#356B96"></path></marker><marker id="poxy-injected-svg-0-key-handle-scope-ko-uml" markerheight="15" markerunits="userSpaceOnUse" markerwidth="15" orient="auto" refx="14" refy="7.5" viewbox="0 0 15 15"><path d="M 1,1 L 14,7.5 L 1,14 Z" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"></path></marker></defs><rect fill="#FFFFFF" height="236" width="1140"></rect><g fill="#20354B" font-family="Arial, Malgun Gothic, sans-serif"><path d="M 244 107 H 269 V 74 H 294" fill="none" marker-end="url(#poxy-injected-svg-0-key-handle-scope-ko-arrow)" stroke="#20354B" stroke-width="1.15"></path><path d="M 269 107 V 143 H 294" fill="none" marker-end="url(#poxy-injected-svg-0-key-handle-scope-ko-arrow)" stroke="#20354B" stroke-width="1.15"></path><path d="M 651 74 H 703" fill="none" marker-end="url(#poxy-injected-svg-0-key-handle-scope-ko-arrow)" stroke="#20354B" stroke-width="1.15"></path><path d="M 651 143 H 703" fill="none" marker-end="url(#poxy-injected-svg-0-key-handle-scope-ko-arrow)" stroke="#20354B" stroke-width="1.15"></path><rect fill="#FFFFFF" height="63" stroke="#20354B" stroke-width="1.15" width="220" x="24" y="76"></rect><text font-size="16" font-weight="bold" text-anchor="middle" x="134" y="101.5">key 7</text><text font-size="15" text-anchor="middle" x="134" y="123.5">key가 있는 샘플</text><rect fill="#FFFFFF" height="57" stroke="#20354B" stroke-width="1.15" width="357" x="294" y="45"></rect><text font-size="16" font-weight="bold" text-anchor="middle" x="472.5" y="67.5">DataWriter</text><text font-family="Consolas, Menlo, monospace" font-size="15" lengthadjust="spacingAndGlyphs" text-anchor="middle" textlength="327" x="472.5" y="89.5">register_instance() / lookup_instance()</text><rect fill="#FFFFFF" height="57" stroke="#20354B" stroke-width="1.15" width="357" x="294" y="115"></rect><text font-size="16" font-weight="bold" text-anchor="middle" x="472.5" y="137.5">DataReader</text><text font-family="Consolas, Menlo, monospace" font-size="15" text-anchor="middle" x="472.5" y="159.5">lookup_instance()</text><rect fill="#EFF5FA" height="57" stroke="#20354B" stroke-width="1.15" width="412" x="703" y="45"></rect><text font-size="16" font-weight="bold" text-anchor="middle" x="909" y="67.5">Writer가 얻은 handle</text><text font-family="Consolas, Menlo, monospace" font-size="15" text-anchor="middle" x="909" y="89.5">write() / dispose_instance()</text><rect fill="#EFF5FA" height="57" stroke="#20354B" stroke-width="1.15" width="412" x="703" y="115"></rect><text font-size="16" font-weight="bold" text-anchor="middle" x="909" y="137.5">Reader가 얻은 handle</text><text font-family="Consolas, Menlo, monospace" font-size="15" text-anchor="middle" x="909" y="159.5">select().instance() / key_value()</text><text font-size="15" text-anchor="middle" x="570" y="209">handle을 반환한 Endpoint의 API에 전달합니다. 조회 후 nil인지 확인합니다.</text></g></svg><figcaption>Writer와 Reader에서 key 조회</figcaption></figure><pre class="m-code"><span class="k">const</span> <span class="k">auto</span> <span class="n">writer_handle</span> <span class="o">=</span> <span class="n">writer</span><span class="p">.</span><span class="nf">register_instance</span><span class="p">(</span><span class="n">message</span><span class="p">);</span>
+<span class="nf">require</span><span class="p">(</span><span class="k">not</span> <span class="n">writer_handle</span><span class="p">.</span><span class="nf">is_nil</span><span class="p">(),</span> <span class="s">"Instance registration failed"</span><span class="p">);</span>
+<span class="nf">require</span><span class="p">(</span><span class="n">writer</span><span class="p">.</span><span class="nf">lookup_instance</span><span class="p">(</span><span class="n">message</span><span class="p">)</span> <span class="o">==</span> <span class="n">writer_handle</span><span class="p">,</span> <span class="s">"Writer key lookup failed"</span><span class="p">);</span>
+
+<span class="n">Hello</span><span class="o">::</span><span class="n">Msg</span> <span class="n">key</span><span class="p">{};</span>
+<span class="n">writer</span><span class="p">.</span><span class="nf">key_value</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">writer_handle</span><span class="p">);</span>
+<span class="nf">require</span><span class="p">(</span><span class="n">key</span><span class="p">.</span><span class="n">userId</span> <span class="o">==</span> <span class="n">message</span><span class="p">.</span><span class="n">userId</span><span class="p">,</span> <span class="s">"Writer did not return the expected key"</span><span class="p">);</span></pre><p>등록 단계에서 <code>writer_handle</code>을 얻었습니다. 다음 쓰기에는 이 handle과 <code>participant.current_time()</code>을 사용합니다. 수신 쪽에서는 이 timestamp를 <code>SampleInfo</code>에서 읽은 값과 비교할 수 있습니다.</p></section><section id="dds_tutorial_writer_timestamp"><h2><a href="#dds_tutorial_writer_timestamp">source timestamp를 지정해 쓰기</a></h2><p><code>write()</code>에 instance handle과 source timestamp를 전달합니다. 수신 애플리케이션은 sample 메타데이터에서 timestamp를 확인할 수 있습니다.</p><pre class="m-code"><span class="k">const</span> <span class="k">auto</span> <span class="n">sent_at</span> <span class="o">=</span> <span class="n">participant</span><span class="p">.</span><span class="nf">current_time</span><span class="p">();</span>
+<span class="n">writer</span><span class="p">.</span><span class="nf">write</span><span class="p">(</span><span class="n">message</span><span class="p">,</span> <span class="n">writer_handle</span><span class="p">,</span> <span class="n">sent_at</span><span class="p">);</span></pre></section><section id="dds_tutorial_writer_lifecycle"><h2><a href="#dds_tutorial_writer_lifecycle">instance 폐기 및 등록 해제하기</a></h2><p><code>dispose_instance()</code>를 호출해 instance를 폐기 상태로 표시합니다. <code>unregister_instance()</code>를 호출해 DataWriter의 등록을 해제합니다. 예제는 DataWriter에서 해당 key의 등록이 더 이상 조회되지 않는지 확인합니다.</p><pre class="m-code"><span class="n">writer</span><span class="p">.</span><span class="nf">dispose_instance</span><span class="p">(</span><span class="n">writer_handle</span><span class="p">);</span></pre><p>Reader 쪽 코드는 <a class="m-doc" href="group__dds__tutorial__reader.html#dds_tutorial_reader_dispose">Dispose된 instance 감지</a> 에서 확인하세요. 전체 예제는 reader가 dispose를 감지한 뒤 key 등록을 해제합니다.</p><pre class="m-code"><span class="n">writer</span><span class="p">.</span><span class="nf">unregister_instance</span><span class="p">(</span><span class="n">writer_handle</span><span class="p">);</span>
+<span class="nf">require</span><span class="p">(</span><span class="n">writer</span><span class="p">.</span><span class="nf">lookup_instance</span><span class="p">(</span><span class="n">message</span><span class="p">).</span><span class="nf">is_nil</span><span class="p">(),</span> <span class="s">"Writer still has a registration for the key"</span><span class="p">);</span></pre></section><section id="dds_tutorial_writer_batch"><h2><a href="#dds_tutorial_writer_batch">sample 범위 쓰기</a></h2><p><code>write()</code>에 시작과 끝 반복자를 전달해 범위의 sample을 발행하세요. 예제는 서로 다른 key 두 개를 보내고 DataReader에서 둘 다 확인합니다.</p><pre class="m-code"><span class="nn">std</span><span class="o">::</span><span class="nc">array</span><span class="o">&lt;</span><span class="n">Hello</span><span class="o">::</span><span class="n">Msg</span><span class="p">,</span> <span class="mi">2</span><span class="o">&gt;</span> <span class="n">batch</span><span class="p">{};</span>
+<span class="n">batch</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">userId</span> <span class="o">=</span> <span class="mi">8</span><span class="p">;</span>
+<span class="n">batch</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="n">userId</span> <span class="o">=</span> <span class="mi">9</span><span class="p">;</span>
+<span class="k">for</span> <span class="p">(</span><span class="k">auto</span><span class="o">&amp;</span> <span class="n">record</span> <span class="o">:</span> <span class="n">batch</span><span class="p">)</span>
+    <span class="n">record</span><span class="p">.</span><span class="n">message</span> <span class="o">=</span> <span class="n">label</span><span class="p">;</span>
+
+<span class="n">writer</span><span class="p">.</span><span class="nf">write</span><span class="p">(</span><span class="n">batch</span><span class="p">.</span><span class="nf">begin</span><span class="p">(),</span> <span class="n">batch</span><span class="p">.</span><span class="nf">end</span><span class="p">());</span></pre><p><code>writer.qos()</code>로 Reliability 또는 History를 읽어 요청값과 비교하세요. Publisher 기본값으로 생성했다면 이후 변경되기 전에 기본값을 기록하세요.</p></section><section id="dds_tutorial_writer_acknowledgments"><h2><a href="#dds_tutorial_writer_acknowledgments">DDS acknowledgment 기다리기</a></h2><p>Reliable 전달에서는 <code>wait_for_acknowledgments()</code>에 유한한 timeout을 지정하세요. DDS 확인 응답은 수신 미들웨어의 수신을 뜻합니다. 애플리케이션의 처리 완료는 별도 신호로 확인하세요.</p><figure class="m-figure"><svg aria-label="reliable DataReader는 DDS를 통해 수신을 확인합니다. 수신 애플리케이션은 별도 read 또는 take 호출로 데이터를 얻으며, 자체 신호로 처리 여부를 알릴 수 있습니다." class="poxy-injected-svg" data-dds-diagram="true" height="286" id="poxy-injected-svg-1" role="img" version="1.1" viewbox="0 0 1140 286" width="1140" xmlns="http://www.w3.org/2000/svg"><title id="poxy-injected-svg-1-acknowledgment-scope-ko-title">DDS acknowledgment와 애플리케이션 처리</title><desc>reliable DataReader는 DDS를 통해 수신을 확인합니다. 수신 애플리케이션은 별도 read 또는 take 호출로 데이터를 얻으며, 자체 신호로 처리 여부를 알릴 수 있습니다.</desc><defs><marker id="poxy-injected-svg-1-acknowledgment-scope-ko-arrow" markerheight="10" markerunits="userSpaceOnUse" markerwidth="9" orient="auto" refx="9" refy="6" viewbox="0 0 10 12"><path d="M 1,1 L 9,6 L 1,11" fill="none" stroke="#20354B" stroke-width="1.2"></path></marker><marker id="poxy-injected-svg-1-acknowledgment-scope-ko-blue" markerheight="9" markerunits="userSpaceOnUse" markerwidth="10" orient="auto" refx="10" refy="5" viewbox="0 0 11 10"><path d="M 0,0 L 11,5 L 0,10 Z" fill="#356B96"></path></marker></defs><rect fill="#FFFFFF" height="286" width="1140"></rect><g fill="#20354B" font-family="Arial, Malgun Gothic, sans-serif"><path d="M 603 29 V 242" fill="none" stroke="#20354B" stroke-dasharray="5 4" stroke-width="1.15"></path><text font-size="16" font-weight="bold" text-anchor="middle" x="307" y="41">DDS 전달</text><text font-size="16" font-weight="bold" text-anchor="middle" x="863" y="41">애플리케이션 처리</text><path d="M 144 91 V 235" fill="none" stroke="#20354B" stroke-dasharray="5 4" stroke-width="1.15"></path><path d="M 458 91 V 235" fill="none" stroke="#20354B" stroke-dasharray="5 4" stroke-width="1.15"></path><path d="M 741 91 V 235" fill="none" stroke="#20354B" stroke-dasharray="5 4" stroke-width="1.15"></path><path d="M 978 91 V 235" fill="none" stroke="#20354B" stroke-dasharray="5 4" stroke-width="1.15"></path><rect fill="#FFFFFF" height="33" stroke="#20354B" stroke-width="1.15" width="204" x="42" y="58"></rect><rect fill="#EFF5FA" height="33" stroke="#20354B" stroke-width="1.15" width="206" x="355" y="58"></rect><rect fill="#FFFFFF" height="33" stroke="#20354B" stroke-width="1.15" width="148" x="667" y="58"></rect><rect fill="#FFFFFF" height="33" stroke="#20354B" stroke-width="1.15" width="194" x="881" y="58"></rect><text font-family="Consolas, Menlo, monospace" font-size="15" text-anchor="middle" x="144" y="80">DataWriter&lt;T&gt;</text><text font-size="15" font-weight="bold" text-anchor="middle" x="458" y="80">Reliable Reader</text><text font-family="Consolas, Menlo, monospace" font-size="15" text-anchor="middle" x="741" y="80">DataReader&lt;T&gt;</text><text font-size="15" font-weight="bold" text-anchor="middle" x="978" y="80">애플리케이션</text><path d="M 144 130 H 458" fill="none" marker-end="url(#poxy-injected-svg-1-acknowledgment-scope-ko-arrow)" stroke="#20354B" stroke-width="1.15"></path><text font-family="Consolas, Menlo, monospace" font-size="14" text-anchor="middle" x="301" y="119">write()</text><path d="M 458 175 H 144" fill="none" marker-end="url(#poxy-injected-svg-1-acknowledgment-scope-ko-blue)" stroke="#356B96" stroke-width="1.7"></path><text font-size="14" text-anchor="middle" x="301" y="164">DDS 수신 확인</text><text font-family="Consolas, Menlo, monospace" font-size="14" text-anchor="middle" x="300" y="210">wait_for_acknowledgments(timeout)</text><path d="M 978 130 H 741" fill="none" marker-end="url(#poxy-injected-svg-1-acknowledgment-scope-ko-arrow)" stroke="#20354B" stroke-width="1.15"></path><text font-family="Consolas, Menlo, monospace" font-size="14" text-anchor="middle" x="860" y="119">read() / take()</text><path d="M 741 175 H 978" fill="none" marker-end="url(#poxy-injected-svg-1-acknowledgment-scope-ko-arrow)" stroke="#20354B" stroke-dasharray="5 4" stroke-width="1.15"></path><text font-size="14" text-anchor="middle" x="860" y="164">샘플 배치</text><text font-size="14" paint-order="stroke" stroke="#FFFFFF" stroke-linejoin="round" stroke-width="5" text-anchor="middle" x="863" y="220">처리 여부는 별도 신호로 확인</text><text font-size="15" text-anchor="middle" x="570" y="264">양쪽의 시간축은 독립적입니다. 이 예제는 매칭된 reliable Reader를 가정합니다.</text></g></svg><figcaption>DDS acknowledgment와 애플리케이션 처리</figcaption></figure><pre class="m-code"><span class="n">writer</span><span class="p">.</span><span class="nf">wait_for_acknowledgments</span><span class="p">(</span><span class="n">Duration</span><span class="o">::</span><span class="nf">from_millisecs</span><span class="p">(</span><span class="mi">500</span><span class="p">));</span></pre></section><section id="dds_tutorial_publisher_wait_two_writers"><h2><a href="#dds_tutorial_publisher_wait_two_writers">Writer 두 개의 DDS acknowledgment 대기</a></h2><p>Publisher 하나에 reliable Writer 두 개를 만들고, 각각 reliable Reader와 매칭합니다. Topic마다 샘플 하나를 쓴 뒤 Publisher에서 유한한 시간 동안 한 번 대기합니다.</p><p>Publisher는 Writer들의 대기에 하나의 타임아웃을 적용합니다. 전체 예제는 각 Reader에서 샘플 하나를 별도로 가져옵니다.</p><pre class="m-code"><span class="n">howto</span><span class="o">::</span><span class="nf">wait_for_readers</span><span class="p">(</span><span class="n">first_writer</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+<span class="n">howto</span><span class="o">::</span><span class="nf">wait_for_readers</span><span class="p">(</span><span class="n">second_writer</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+
+<span class="k">char</span> <span class="n">message</span><span class="p">[]</span> <span class="o">=</span> <span class="s">"publisher acknowledgment"</span><span class="p">;</span>
+<span class="n">Hello</span><span class="o">::</span><span class="n">Msg</span> <span class="n">data</span><span class="p">{};</span>
+<span class="n">data</span><span class="p">.</span><span class="n">userId</span> <span class="o">=</span> <span class="mi">7</span><span class="p">;</span>
+<span class="n">data</span><span class="p">.</span><span class="n">message</span> <span class="o">=</span> <span class="n">message</span><span class="p">;</span>
+<span class="n">first_writer</span><span class="p">.</span><span class="nf">write</span><span class="p">(</span><span class="n">data</span><span class="p">);</span>
+<span class="n">second_writer</span><span class="p">.</span><span class="nf">write</span><span class="p">(</span><span class="n">data</span><span class="p">);</span>
+
+<span class="n">publisher</span><span class="p">.</span><span class="nf">wait_for_acknowledgments</span><span class="p">(</span><span class="n">Duration</span><span class="o">::</span><span class="nf">from_millisecs</span><span class="p">(</span><span class="mi">1000</span><span class="p">));</span></pre><aside class="m-note m-default"><h4>참고 항목</h4><p><a class="m-doc" href="group__dds__howto__qos.html#dds_tutorial_src_delivery">QoS에 따른 전달 동작</a></p></aside></section><section id="dds_tutorial_src_keyed_samples"><h2><a href="#dds_tutorial_src_keyed_samples">Keyed sample 연산</a></h2><p>key를 등록하고 timestamp를 지정해 sample을 발행합니다. instance로 sample을 선택하고 DataWriter 등록을 해제한 뒤 여러 sample의 전달을 확인합니다.</p><p>아래 명령으로 프로그램을 빌드하세요. 실행에 성공하면 <code>Keyed sample examples passed</code>를 출력합니다.</p><pre class="m-code">cmake --build . --target example_cpp_howto_keyed_samples</pre><details class="dds-reference-details"><summary>완성 코드</summary><pre class="m-code"><span class="cp">#include</span> <span class="cpf">&lt;array&gt;</span>
+
+<span class="cp">#include</span> <span class="cpf">"demo.hpp"</span>
+
+<span class="k">namespace</span>
+<span class="p">{</span>
+<span class="k">void</span> <span class="nf">use_keyed_samples</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="k">using</span> <span class="n">howto</span><span class="o">::</span><span class="n">require</span><span class="p">;</span>
+    <span class="k">using</span> <span class="nn">dds::core::policy</span><span class="o">::</span><span class="nc">Reliability</span><span class="p">;</span>
+    <span class="k">using</span> <span class="nn">dds::core::policy</span><span class="o">::</span><span class="nc">ReaderDataLifecycle</span><span class="p">;</span>
+    <span class="k">using</span> <span class="nn">dds::core::policy</span><span class="o">::</span><span class="nc">WriterDataLifecycle</span><span class="p">;</span>
+    <span class="k">using</span> <span class="nn">dds::sub::status</span><span class="o">::</span><span class="nc">DataState</span><span class="p">;</span>
+    <span class="k">using</span> <span class="nn">dds::sub::status</span><span class="o">::</span><span class="nc">InstanceState</span><span class="p">;</span>
+
+    <span class="nn">dds::domain</span><span class="o">::</span><span class="nc">DomainParticipant</span> <span class="nf">participant</span><span class="p">(</span><span class="mi">93</span><span class="p">);</span>
+    <span class="nn">dds::topic</span><span class="o">::</span><span class="nc">Topic</span><span class="o">&lt;</span><span class="n">Hello</span><span class="o">::</span><span class="n">Msg</span><span class="o">&gt;</span> <span class="nf">topic</span><span class="p">(</span><span class="n">participant</span><span class="p">,</span> <span class="s">"HowToKeyed"</span><span class="p">);</span>
+    <span class="nn">dds::pub</span><span class="o">::</span><span class="nc">Publisher</span> <span class="nf">publisher</span><span class="p">(</span><span class="n">participant</span><span class="p">);</span>
+    <span class="nn">dds::sub</span><span class="o">::</span><span class="nc">Subscriber</span> <span class="nf">subscriber</span><span class="p">(</span><span class="n">participant</span><span class="p">);</span>
+    <span class="k">const</span> <span class="k">auto</span> <span class="n">reliable</span> <span class="o">=</span> <span class="n">Reliability</span><span class="o">::</span><span class="nf">Reliable</span><span class="p">(</span><span class="nn">dds::core</span><span class="o">::</span><span class="nc">Duration</span><span class="o">::</span><span class="nf">from_millisecs</span><span class="p">(</span><span class="mi">200</span><span class="p">));</span>
+    <span class="k">auto</span> <span class="n">writer_qos</span> <span class="o">=</span> <span class="n">publisher</span><span class="p">.</span><span class="nf">default_writer_qos</span><span class="p">();</span>
+    <span class="n">writer_qos</span> <span class="o">&lt;&lt;</span> <span class="n">reliable</span> <span class="o">&lt;&lt;</span> <span class="nf">WriterDataLifecycle</span><span class="p">(</span><span class="k">false</span><span class="p">);</span>
+    <span class="k">auto</span> <span class="n">reader_qos</span> <span class="o">=</span> <span class="n">subscriber</span><span class="p">.</span><span class="nf">default_datareader_qos</span><span class="p">();</span>
+    <span class="n">reader_qos</span> <span class="o">&lt;&lt;</span> <span class="n">reliable</span><span class="p">;</span>
+    <span class="k">auto</span> <span class="n">lifecycle</span> <span class="o">=</span> <span class="n">reader_qos</span><span class="p">.</span><span class="n">policy</span><span class="o">&lt;</span><span class="n">ReaderDataLifecycle</span><span class="o">&gt;</span><span class="p">();</span>
+    <span class="n">lifecycle</span><span class="p">.</span><span class="nf">autopurge_disposed_samples_delay</span><span class="p">(</span><span class="nn">dds::core</span><span class="o">::</span><span class="nc">Duration</span><span class="o">::</span><span class="nf">from_millisecs</span><span class="p">(</span><span class="mi">10000</span><span class="p">));</span>
+    <span class="n">reader_qos</span> <span class="o">&lt;&lt;</span> <span class="n">lifecycle</span><span class="p">;</span>
+    <span class="nn">dds::pub</span><span class="o">::</span><span class="nc">DataWriter</span><span class="o">&lt;</span><span class="n">Hello</span><span class="o">::</span><span class="n">Msg</span><span class="o">&gt;</span> <span class="nf">writer</span><span class="p">(</span><span class="n">publisher</span><span class="p">,</span> <span class="n">topic</span><span class="p">,</span> <span class="n">writer_qos</span><span class="p">);</span>
+    <span class="nn">dds::sub</span><span class="o">::</span><span class="nc">DataReader</span><span class="o">&lt;</span><span class="n">Hello</span><span class="o">::</span><span class="n">Msg</span><span class="o">&gt;</span> <span class="nf">reader</span><span class="p">(</span><span class="n">subscriber</span><span class="p">,</span> <span class="n">topic</span><span class="p">,</span> <span class="n">reader_qos</span><span class="p">);</span>
+    <span class="n">howto</span><span class="o">::</span><span class="nf">wait_for_readers</span><span class="p">(</span><span class="n">writer</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+
+    <span class="k">char</span> <span class="n">label</span><span class="p">[]</span> <span class="o">=</span> <span class="s">"keyed message"</span><span class="p">;</span>
+    <span class="n">Hello</span><span class="o">::</span><span class="n">Msg</span> <span class="n">message</span><span class="p">{};</span>
+    <span class="n">message</span><span class="p">.</span><span class="n">userId</span> <span class="o">=</span> <span class="mi">7</span><span class="p">;</span>
+    <span class="n">message</span><span class="p">.</span><span class="n">message</span> <span class="o">=</span> <span class="n">label</span><span class="p">;</span>
+
+    <span class="c1">// [register_key]</span>
+    <span class="k">const</span> <span class="k">auto</span> <span class="n">writer_handle</span> <span class="o">=</span> <span class="n">writer</span><span class="p">.</span><span class="nf">register_instance</span><span class="p">(</span><span class="n">message</span><span class="p">);</span>
+    <span class="nf">require</span><span class="p">(</span><span class="k">not</span> <span class="n">writer_handle</span><span class="p">.</span><span class="nf">is_nil</span><span class="p">(),</span> <span class="s">"Instance registration failed"</span><span class="p">);</span>
+    <span class="nf">require</span><span class="p">(</span><span class="n">writer</span><span class="p">.</span><span class="nf">lookup_instance</span><span class="p">(</span><span class="n">message</span><span class="p">)</span> <span class="o">==</span> <span class="n">writer_handle</span><span class="p">,</span> <span class="s">"Writer key lookup failed"</span><span class="p">);</span>
+
+    <span class="n">Hello</span><span class="o">::</span><span class="n">Msg</span> <span class="n">key</span><span class="p">{};</span>
+    <span class="n">writer</span><span class="p">.</span><span class="nf">key_value</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">writer_handle</span><span class="p">);</span>
+    <span class="nf">require</span><span class="p">(</span><span class="n">key</span><span class="p">.</span><span class="n">userId</span> <span class="o">==</span> <span class="n">message</span><span class="p">.</span><span class="n">userId</span><span class="p">,</span> <span class="s">"Writer did not return the expected key"</span><span class="p">);</span>
+    <span class="c1">// [register_key]</span>
+
+    <span class="c1">// [write_timestamp]</span>
+    <span class="k">const</span> <span class="k">auto</span> <span class="n">sent_at</span> <span class="o">=</span> <span class="n">participant</span><span class="p">.</span><span class="nf">current_time</span><span class="p">();</span>
+    <span class="n">writer</span><span class="p">.</span><span class="nf">write</span><span class="p">(</span><span class="n">message</span><span class="p">,</span> <span class="n">writer_handle</span><span class="p">,</span> <span class="n">sent_at</span><span class="p">);</span>
+    <span class="c1">// [write_timestamp]</span>
+
+    <span class="c1">// [receive_metadata]</span>
+    <span class="n">howto</span><span class="o">::</span><span class="nf">wait_until</span><span class="p">([</span><span class="o">&amp;</span><span class="n">reader</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">sent_at</span><span class="p">]()</span> <span class="o">-&gt;</span> <span class="k">bool</span> <span class="p">{</span>
+        <span class="k">const</span> <span class="k">auto</span> <span class="n">samples</span> <span class="o">=</span> <span class="n">reader</span><span class="p">.</span><span class="nf">select</span><span class="p">().</span><span class="nf">state</span><span class="p">(</span><span class="n">DataState</span><span class="o">::</span><span class="nf">new_data</span><span class="p">()).</span><span class="nf">read</span><span class="p">();</span>
+        <span class="k">for</span> <span class="p">(</span><span class="k">const</span> <span class="k">auto</span><span class="o">&amp;</span> <span class="n">sample</span> <span class="o">:</span> <span class="n">samples</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="k">not</span> <span class="n">sample</span><span class="p">.</span><span class="nf">info</span><span class="p">().</span><span class="nf">valid</span><span class="p">())</span>
+                <span class="k">continue</span><span class="p">;</span>
+
+            <span class="k">const</span> <span class="k">auto</span> <span class="n">timestamp</span> <span class="o">=</span> <span class="n">sample</span><span class="p">.</span><span class="nf">info</span><span class="p">().</span><span class="nf">timestamp</span><span class="p">();</span>
+            <span class="nf">require</span><span class="p">(</span><span class="n">timestamp</span><span class="p">.</span><span class="nf">sec</span><span class="p">()</span> <span class="o">==</span> <span class="n">sent_at</span><span class="p">.</span><span class="nf">sec</span><span class="p">()</span> <span class="k">and</span> <span class="n">timestamp</span><span class="p">.</span><span class="nf">nanosec</span><span class="p">()</span> <span class="o">==</span> <span class="n">sent_at</span><span class="p">.</span><span class="nf">nanosec</span><span class="p">(),</span> <span class="s">"Timestamp differs"</span><span class="p">);</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">sample</span><span class="p">.</span><span class="nf">data</span><span class="p">().</span><span class="n">userId</span> <span class="o">==</span> <span class="mi">7</span><span class="p">)</span>
+                <span class="k">return</span> <span class="k">true</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="k">return</span> <span class="k">false</span><span class="p">;</span>
+    <span class="p">},</span> <span class="s">"Timestamped sample did not arrive"</span><span class="p">);</span>
+    <span class="c1">// [receive_metadata]</span>
+
+    <span class="c1">// [select_instance]</span>
+    <span class="k">const</span> <span class="k">auto</span> <span class="n">reader_handle</span> <span class="o">=</span> <span class="n">reader</span><span class="p">.</span><span class="nf">lookup_instance</span><span class="p">(</span><span class="n">message</span><span class="p">);</span>
+    <span class="nf">require</span><span class="p">(</span><span class="k">not</span> <span class="n">reader_handle</span><span class="p">.</span><span class="nf">is_nil</span><span class="p">(),</span> <span class="s">"Reader has no handle for this key"</span><span class="p">);</span>
+    <span class="p">{</span>
+        <span class="k">const</span> <span class="k">auto</span> <span class="n">selected</span> <span class="o">=</span> <span class="n">reader</span><span class="p">.</span><span class="nf">select</span><span class="p">().</span><span class="nf">instance</span><span class="p">(</span><span class="n">reader_handle</span><span class="p">).</span><span class="nf">max_samples</span><span class="p">(</span><span class="mi">1</span><span class="p">).</span><span class="nf">read</span><span class="p">();</span>
+        <span class="nf">require</span><span class="p">(</span><span class="n">selected</span><span class="p">.</span><span class="nf">length</span><span class="p">()</span> <span class="o">==</span> <span class="mi">1</span><span class="p">,</span> <span class="s">"Expected one record for the selected instance"</span><span class="p">);</span>
+        <span class="k">const</span> <span class="k">auto</span><span class="o">&amp;</span> <span class="n">sample</span> <span class="o">=</span> <span class="o">*</span><span class="n">selected</span><span class="p">.</span><span class="nf">begin</span><span class="p">();</span>
+        <span class="nf">require</span><span class="p">(</span><span class="n">sample</span><span class="p">.</span><span class="nf">info</span><span class="p">().</span><span class="nf">valid</span><span class="p">()</span> <span class="k">and</span> <span class="n">sample</span><span class="p">.</span><span class="nf">data</span><span class="p">().</span><span class="n">userId</span> <span class="o">==</span> <span class="n">message</span><span class="p">.</span><span class="n">userId</span><span class="p">,</span> <span class="s">"Selected a different instance"</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="c1">// [select_instance]</span>
+
+    <span class="c1">// [dispose_key]</span>
+    <span class="n">writer</span><span class="p">.</span><span class="nf">dispose_instance</span><span class="p">(</span><span class="n">writer_handle</span><span class="p">);</span>
+    <span class="c1">// [dispose_key]</span>
+
+    <span class="c1">// [receive_dispose]</span>
+    <span class="n">howto</span><span class="o">::</span><span class="nf">wait_until</span><span class="p">([</span><span class="o">&amp;</span><span class="n">reader</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">reader_handle</span><span class="p">]()</span> <span class="o">-&gt;</span> <span class="k">bool</span> <span class="p">{</span>
+        <span class="k">const</span> <span class="k">auto</span> <span class="n">samples</span> <span class="o">=</span> <span class="n">reader</span><span class="p">.</span><span class="nf">take</span><span class="p">();</span>
+        <span class="k">for</span> <span class="p">(</span><span class="k">const</span> <span class="k">auto</span><span class="o">&amp;</span> <span class="n">sample</span> <span class="o">:</span> <span class="n">samples</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">const</span> <span class="k">auto</span><span class="o">&amp;</span> <span class="n">info</span> <span class="o">=</span> <span class="n">sample</span><span class="p">.</span><span class="nf">info</span><span class="p">();</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">info</span><span class="p">.</span><span class="nf">instance_handle</span><span class="p">()</span> <span class="o">==</span> <span class="n">reader_handle</span>
+                <span class="k">and</span> <span class="k">not</span> <span class="n">info</span><span class="p">.</span><span class="nf">valid</span><span class="p">()</span>
+                <span class="k">and</span> <span class="n">info</span><span class="p">.</span><span class="nf">state</span><span class="p">().</span><span class="nf">instance_state</span><span class="p">()</span> <span class="o">==</span> <span class="n">InstanceState</span><span class="o">::</span><span class="nf">not_alive_disposed</span><span class="p">())</span>
+                <span class="k">return</span> <span class="k">true</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="k">return</span> <span class="k">false</span><span class="p">;</span>
+    <span class="p">},</span> <span class="s">"The reader did not observe the dispose notification"</span><span class="p">);</span>
+    <span class="c1">// [receive_dispose]</span>
+
+    <span class="c1">// [unregister_key]</span>
+    <span class="n">writer</span><span class="p">.</span><span class="nf">unregister_instance</span><span class="p">(</span><span class="n">writer_handle</span><span class="p">);</span>
+    <span class="nf">require</span><span class="p">(</span><span class="n">writer</span><span class="p">.</span><span class="nf">lookup_instance</span><span class="p">(</span><span class="n">message</span><span class="p">).</span><span class="nf">is_nil</span><span class="p">(),</span> <span class="s">"Writer still has a registration for the key"</span><span class="p">);</span>
+    <span class="c1">// [unregister_key]</span>
+
+    <span class="c1">// [write_batch]</span>
+    <span class="nn">std</span><span class="o">::</span><span class="nc">array</span><span class="o">&lt;</span><span class="n">Hello</span><span class="o">::</span><span class="n">Msg</span><span class="p">,</span> <span class="mi">2</span><span class="o">&gt;</span> <span class="n">batch</span><span class="p">{};</span>
+    <span class="n">batch</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">userId</span> <span class="o">=</span> <span class="mi">8</span><span class="p">;</span>
+    <span class="n">batch</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="n">userId</span> <span class="o">=</span> <span class="mi">9</span><span class="p">;</span>
+    <span class="k">for</span> <span class="p">(</span><span class="k">auto</span><span class="o">&amp;</span> <span class="n">record</span> <span class="o">:</span> <span class="n">batch</span><span class="p">)</span>
+        <span class="n">record</span><span class="p">.</span><span class="n">message</span> <span class="o">=</span> <span class="n">label</span><span class="p">;</span>
+
+    <span class="n">writer</span><span class="p">.</span><span class="nf">write</span><span class="p">(</span><span class="n">batch</span><span class="p">.</span><span class="nf">begin</span><span class="p">(),</span> <span class="n">batch</span><span class="p">.</span><span class="nf">end</span><span class="p">());</span>
+    <span class="c1">// [write_batch]</span>
+
+    <span class="k">bool</span> <span class="n">received_first</span> <span class="o">=</span> <span class="k">false</span><span class="p">;</span>
+    <span class="k">bool</span> <span class="n">received_second</span> <span class="o">=</span> <span class="k">false</span><span class="p">;</span>
+    <span class="n">howto</span><span class="o">::</span><span class="nf">wait_until</span><span class="p">([</span><span class="o">&amp;</span><span class="n">reader</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">received_first</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">received_second</span><span class="p">]()</span> <span class="o">-&gt;</span> <span class="k">bool</span> <span class="p">{</span>
+        <span class="k">const</span> <span class="k">auto</span> <span class="n">samples</span> <span class="o">=</span> <span class="n">reader</span><span class="p">.</span><span class="nf">take</span><span class="p">();</span>
+        <span class="k">for</span> <span class="p">(</span><span class="k">const</span> <span class="k">auto</span><span class="o">&amp;</span> <span class="n">sample</span> <span class="o">:</span> <span class="n">samples</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="k">not</span> <span class="n">sample</span><span class="p">.</span><span class="nf">info</span><span class="p">().</span><span class="nf">valid</span><span class="p">())</span>
+                <span class="k">continue</span><span class="p">;</span>
+
+            <span class="n">received_first</span> <span class="o">=</span> <span class="n">received_first</span> <span class="k">or</span> <span class="n">sample</span><span class="p">.</span><span class="nf">data</span><span class="p">().</span><span class="n">userId</span> <span class="o">==</span> <span class="mi">8</span><span class="p">;</span>
+            <span class="n">received_second</span> <span class="o">=</span> <span class="n">received_second</span> <span class="k">or</span> <span class="n">sample</span><span class="p">.</span><span class="nf">data</span><span class="p">().</span><span class="n">userId</span> <span class="o">==</span> <span class="mi">9</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="k">return</span> <span class="n">received_first</span> <span class="k">and</span> <span class="n">received_second</span><span class="p">;</span>
+    <span class="p">},</span> <span class="s">"One or more batch samples were missing"</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="k">void</span> <span class="nf">take_by_sample_and_instance_state</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="k">using</span> <span class="nn">dds::core</span><span class="o">::</span><span class="nc">Duration</span><span class="p">;</span>
+    <span class="k">using</span> <span class="nn">dds::core::policy</span><span class="o">::</span><span class="nc">History</span><span class="p">;</span>
+    <span class="k">using</span> <span class="nn">dds::core::policy</span><span class="o">::</span><span class="nc">Reliability</span><span class="p">;</span>
+    <span class="k">using</span> <span class="nn">dds::sub::status</span><span class="o">::</span><span class="nc">DataState</span><span class="p">;</span>
+    <span class="k">using</span> <span class="nn">dds::sub::status</span><span class="o">::</span><span class="nc">InstanceState</span><span class="p">;</span>
+    <span class="k">using</span> <span class="nn">dds::sub::status</span><span class="o">::</span><span class="nc">SampleState</span><span class="p">;</span>
+    <span class="k">using</span> <span class="nn">dds::sub::status</span><span class="o">::</span><span class="nc">ViewState</span><span class="p">;</span>
+
+    <span class="nn">dds::domain</span><span class="o">::</span><span class="nc">DomainParticipant</span> <span class="nf">participant</span><span class="p">(</span><span class="mi">101</span><span class="p">);</span>
+    <span class="nn">dds::topic</span><span class="o">::</span><span class="nc">Topic</span><span class="o">&lt;</span><span class="n">Hello</span><span class="o">::</span><span class="n">Msg</span><span class="o">&gt;</span> <span class="nf">topic</span><span class="p">(</span><span class="n">participant</span><span class="p">,</span> <span class="s">"HowToDataState"</span><span class="p">);</span>
+    <span class="nn">dds::pub</span><span class="o">::</span><span class="nc">Publisher</span> <span class="nf">publisher</span><span class="p">(</span><span class="n">participant</span><span class="p">);</span>
+    <span class="nn">dds::sub</span><span class="o">::</span><span class="nc">Subscriber</span> <span class="nf">subscriber</span><span class="p">(</span><span class="n">participant</span><span class="p">);</span>
+    <span class="k">const</span> <span class="k">auto</span> <span class="n">reliable</span> <span class="o">=</span> <span class="n">Reliability</span><span class="o">::</span><span class="nf">Reliable</span><span class="p">(</span><span class="n">Duration</span><span class="o">::</span><span class="nf">from_millisecs</span><span class="p">(</span><span class="mi">200</span><span class="p">));</span>
+    <span class="k">auto</span> <span class="n">writer_qos</span> <span class="o">=</span> <span class="n">publisher</span><span class="p">.</span><span class="nf">default_writer_qos</span><span class="p">();</span>
+    <span class="n">writer_qos</span> <span class="o">&lt;&lt;</span> <span class="n">reliable</span> <span class="o">&lt;&lt;</span> <span class="n">History</span><span class="o">::</span><span class="nf">KeepLast</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span>
+    <span class="k">auto</span> <span class="n">reader_qos</span> <span class="o">=</span> <span class="n">subscriber</span><span class="p">.</span><span class="nf">default_datareader_qos</span><span class="p">();</span>
+    <span class="n">reader_qos</span> <span class="o">&lt;&lt;</span> <span class="n">reliable</span> <span class="o">&lt;&lt;</span> <span class="n">History</span><span class="o">::</span><span class="nf">KeepLast</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span>
+    <span class="nn">dds::pub</span><span class="o">::</span><span class="nc">DataWriter</span><span class="o">&lt;</span><span class="n">Hello</span><span class="o">::</span><span class="n">Msg</span><span class="o">&gt;</span> <span class="nf">writer</span><span class="p">(</span><span class="n">publisher</span><span class="p">,</span> <span class="n">topic</span><span class="p">,</span> <span class="n">writer_qos</span><span class="p">);</span>
+    <span class="nn">dds::sub</span><span class="o">::</span><span class="nc">DataReader</span><span class="o">&lt;</span><span class="n">Hello</span><span class="o">::</span><span class="n">Msg</span><span class="o">&gt;</span> <span class="nf">reader</span><span class="p">(</span><span class="n">subscriber</span><span class="p">,</span> <span class="n">topic</span><span class="p">,</span> <span class="n">reader_qos</span><span class="p">);</span>
+    <span class="n">howto</span><span class="o">::</span><span class="nf">wait_for_readers</span><span class="p">(</span><span class="n">writer</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+
+    <span class="k">char</span> <span class="n">message</span><span class="p">[]</span> <span class="o">=</span> <span class="s">"sample state example"</span><span class="p">;</span>
+    <span class="n">Hello</span><span class="o">::</span><span class="n">Msg</span> <span class="n">sample</span><span class="p">{};</span>
+    <span class="n">sample</span><span class="p">.</span><span class="n">userId</span> <span class="o">=</span> <span class="mi">7</span><span class="p">;</span>
+    <span class="n">sample</span><span class="p">.</span><span class="n">message</span> <span class="o">=</span> <span class="n">message</span><span class="p">;</span>
+
+    <span class="c1">// [data_state_masks]</span>
+    <span class="k">const</span> <span class="n">DataState</span> <span class="nf">unread_alive</span><span class="p">(</span><span class="n">SampleState</span><span class="o">::</span><span class="nf">not_read</span><span class="p">(),</span> <span class="n">ViewState</span><span class="o">::</span><span class="nf">any</span><span class="p">(),</span> <span class="n">InstanceState</span><span class="o">::</span><span class="nf">alive</span><span class="p">());</span>
+    <span class="k">const</span> <span class="n">DataState</span> <span class="nf">read_alive</span><span class="p">(</span><span class="n">SampleState</span><span class="o">::</span><span class="nf">read</span><span class="p">(),</span> <span class="n">ViewState</span><span class="o">::</span><span class="nf">any</span><span class="p">(),</span> <span class="n">InstanceState</span><span class="o">::</span><span class="nf">alive</span><span class="p">());</span>
+
+    <span class="n">writer</span><span class="p">.</span><span class="nf">write</span><span class="p">(</span><span class="n">sample</span><span class="p">);</span>
+    <span class="n">howto</span><span class="o">::</span><span class="nf">wait_until</span><span class="p">([</span><span class="o">&amp;</span><span class="n">reader</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">unread_alive</span><span class="p">]()</span> <span class="o">-&gt;</span> <span class="k">bool</span> <span class="p">{</span>
+        <span class="k">const</span> <span class="k">auto</span> <span class="n">batch</span> <span class="o">=</span> <span class="n">reader</span><span class="p">.</span><span class="nf">select</span><span class="p">().</span><span class="nf">state</span><span class="p">(</span><span class="n">unread_alive</span><span class="p">).</span><span class="nf">read</span><span class="p">();</span>
+        <span class="k">return</span> <span class="n">batch</span><span class="p">.</span><span class="nf">length</span><span class="p">()</span> <span class="o">==</span> <span class="mi">1</span> <span class="k">and</span> <span class="n">batch</span><span class="p">.</span><span class="nf">begin</span><span class="p">()</span><span class="o">-&gt;</span><span class="nf">info</span><span class="p">().</span><span class="nf">valid</span><span class="p">()</span> <span class="k">and</span> <span class="n">batch</span><span class="p">.</span><span class="nf">begin</span><span class="p">()</span><span class="o">-&gt;</span><span class="nf">data</span><span class="p">().</span><span class="n">userId</span> <span class="o">==</span> <span class="mi">7</span><span class="p">;</span>
+    <span class="p">},</span> <span class="s">"Key 7 did not arrive as unread data"</span><span class="p">);</span>
+
+    <span class="n">sample</span><span class="p">.</span><span class="n">userId</span> <span class="o">=</span> <span class="mi">8</span><span class="p">;</span>
+    <span class="n">writer</span><span class="p">.</span><span class="nf">write</span><span class="p">(</span><span class="n">sample</span><span class="p">);</span>
+
+    <span class="p">{</span>
+        <span class="k">const</span> <span class="k">auto</span> <span class="n">read</span> <span class="o">=</span> <span class="n">reader</span><span class="p">.</span><span class="nf">select</span><span class="p">().</span><span class="nf">state</span><span class="p">(</span><span class="n">read_alive</span><span class="p">).</span><span class="nf">take</span><span class="p">();</span>
+        <span class="n">howto</span><span class="o">::</span><span class="nf">require</span><span class="p">(</span><span class="n">read</span><span class="p">.</span><span class="nf">length</span><span class="p">()</span> <span class="o">==</span> <span class="mi">1</span> <span class="k">and</span> <span class="n">read</span><span class="p">.</span><span class="nf">begin</span><span class="p">()</span><span class="o">-&gt;</span><span class="nf">info</span><span class="p">().</span><span class="nf">valid</span><span class="p">()</span> <span class="k">and</span> <span class="n">read</span><span class="p">.</span><span class="nf">begin</span><span class="p">()</span><span class="o">-&gt;</span><span class="nf">data</span><span class="p">().</span><span class="n">userId</span> <span class="o">==</span> <span class="mi">7</span><span class="p">,</span>
+            <span class="s">"Expected only the previously read key"</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="n">howto</span><span class="o">::</span><span class="nf">wait_until</span><span class="p">([</span><span class="o">&amp;</span><span class="n">reader</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">unread_alive</span><span class="p">]()</span> <span class="o">-&gt;</span> <span class="k">bool</span> <span class="p">{</span>
+        <span class="k">const</span> <span class="k">auto</span> <span class="n">batch</span> <span class="o">=</span> <span class="n">reader</span><span class="p">.</span><span class="nf">select</span><span class="p">().</span><span class="nf">state</span><span class="p">(</span><span class="n">unread_alive</span><span class="p">).</span><span class="nf">take</span><span class="p">();</span>
+        <span class="k">return</span> <span class="n">batch</span><span class="p">.</span><span class="nf">length</span><span class="p">()</span> <span class="o">==</span> <span class="mi">1</span> <span class="k">and</span> <span class="n">batch</span><span class="p">.</span><span class="nf">begin</span><span class="p">()</span><span class="o">-&gt;</span><span class="nf">info</span><span class="p">().</span><span class="nf">valid</span><span class="p">()</span> <span class="k">and</span> <span class="n">batch</span><span class="p">.</span><span class="nf">begin</span><span class="p">()</span><span class="o">-&gt;</span><span class="nf">data</span><span class="p">().</span><span class="n">userId</span> <span class="o">==</span> <span class="mi">8</span><span class="p">;</span>
+    <span class="p">},</span> <span class="s">"Expected only the unread key"</span><span class="p">);</span>
+    <span class="c1">// [data_state_masks]</span>
+    <span class="nn">std</span><span class="o">::</span><span class="nc">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"DataState: key 7 was read and key 8 was unread</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">void</span> <span class="nf">inspect_sample_ranks</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="k">using</span> <span class="nn">dds::core</span><span class="o">::</span><span class="nc">Duration</span><span class="p">;</span>
+    <span class="k">using</span> <span class="nn">dds::core::policy</span><span class="o">::</span><span class="nc">History</span><span class="p">;</span>
+    <span class="k">using</span> <span class="nn">dds::core::policy</span><span class="o">::</span><span class="nc">ReaderDataLifecycle</span><span class="p">;</span>
+    <span class="k">using</span> <span class="nn">dds::core::policy</span><span class="o">::</span><span class="nc">Reliability</span><span class="p">;</span>
+
+    <span class="nn">dds::domain</span><span class="o">::</span><span class="nc">DomainParticipant</span> <span class="nf">participant</span><span class="p">(</span><span class="mi">99</span><span class="p">);</span>
+    <span class="nn">dds::topic</span><span class="o">::</span><span class="nc">Topic</span><span class="o">&lt;</span><span class="n">Hello</span><span class="o">::</span><span class="n">Msg</span><span class="o">&gt;</span> <span class="nf">topic</span><span class="p">(</span><span class="n">participant</span><span class="p">,</span> <span class="s">"HowToRanks"</span><span class="p">);</span>
+    <span class="nn">dds::pub</span><span class="o">::</span><span class="nc">Publisher</span> <span class="nf">publisher</span><span class="p">(</span><span class="n">participant</span><span class="p">);</span>
+    <span class="nn">dds::sub</span><span class="o">::</span><span class="nc">Subscriber</span> <span class="nf">subscriber</span><span class="p">(</span><span class="n">participant</span><span class="p">);</span>
+    <span class="k">const</span> <span class="k">auto</span> <span class="n">reliable</span> <span class="o">=</span> <span class="n">Reliability</span><span class="o">::</span><span class="nf">Reliable</span><span class="p">(</span><span class="n">Duration</span><span class="o">::</span><span class="nf">from_millisecs</span><span class="p">(</span><span class="mi">200</span><span class="p">));</span>
+    <span class="k">auto</span> <span class="n">writer_qos</span> <span class="o">=</span> <span class="n">publisher</span><span class="p">.</span><span class="nf">default_writer_qos</span><span class="p">();</span>
+    <span class="n">writer_qos</span> <span class="o">&lt;&lt;</span> <span class="n">reliable</span> <span class="o">&lt;&lt;</span> <span class="n">History</span><span class="o">::</span><span class="nf">KeepLast</span><span class="p">(</span><span class="mi">8</span><span class="p">);</span>
+    <span class="k">auto</span> <span class="n">reader_qos</span> <span class="o">=</span> <span class="n">subscriber</span><span class="p">.</span><span class="nf">default_datareader_qos</span><span class="p">();</span>
+    <span class="k">auto</span> <span class="n">lifecycle</span> <span class="o">=</span> <span class="n">reader_qos</span><span class="p">.</span><span class="n">policy</span><span class="o">&lt;</span><span class="n">ReaderDataLifecycle</span><span class="o">&gt;</span><span class="p">();</span>
+    <span class="n">lifecycle</span><span class="p">.</span><span class="nf">autopurge_disposed_samples_delay</span><span class="p">(</span><span class="n">Duration</span><span class="o">::</span><span class="nf">from_millisecs</span><span class="p">(</span><span class="mi">10000</span><span class="p">));</span>
+    <span class="n">reader_qos</span> <span class="o">&lt;&lt;</span> <span class="n">reliable</span> <span class="o">&lt;&lt;</span> <span class="n">History</span><span class="o">::</span><span class="nf">KeepLast</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="n">lifecycle</span><span class="p">;</span>
+    <span class="nn">dds::pub</span><span class="o">::</span><span class="nc">DataWriter</span><span class="o">&lt;</span><span class="n">Hello</span><span class="o">::</span><span class="n">Msg</span><span class="o">&gt;</span> <span class="nf">writer</span><span class="p">(</span><span class="n">publisher</span><span class="p">,</span> <span class="n">topic</span><span class="p">,</span> <span class="n">writer_qos</span><span class="p">);</span>
+    <span class="nn">dds::sub</span><span class="o">::</span><span class="nc">DataReader</span><span class="o">&lt;</span><span class="n">Hello</span><span class="o">::</span><span class="n">Msg</span><span class="o">&gt;</span> <span class="nf">reader</span><span class="p">(</span><span class="n">subscriber</span><span class="p">,</span> <span class="n">topic</span><span class="p">,</span> <span class="n">reader_qos</span><span class="p">);</span>
+    <span class="n">howto</span><span class="o">::</span><span class="nf">wait_for_readers</span><span class="p">(</span><span class="n">writer</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+
+    <span class="c1">// [rank_generations]</span>
+    <span class="k">char</span> <span class="n">first</span><span class="p">[]</span> <span class="o">=</span> <span class="s">"before dispose"</span><span class="p">;</span>
+    <span class="k">char</span> <span class="n">second</span><span class="p">[]</span> <span class="o">=</span> <span class="s">"after dispose"</span><span class="p">;</span>
+    <span class="n">Hello</span><span class="o">::</span><span class="n">Msg</span> <span class="n">value</span><span class="p">{};</span>
+    <span class="n">value</span><span class="p">.</span><span class="n">userId</span> <span class="o">=</span> <span class="mi">42</span><span class="p">;</span>
+    <span class="n">value</span><span class="p">.</span><span class="n">message</span> <span class="o">=</span> <span class="n">first</span><span class="p">;</span>
+    <span class="k">const</span> <span class="k">auto</span> <span class="n">handle</span> <span class="o">=</span> <span class="n">writer</span><span class="p">.</span><span class="nf">register_instance</span><span class="p">(</span><span class="n">value</span><span class="p">);</span>
+    <span class="n">writer</span><span class="p">.</span><span class="nf">write</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">handle</span><span class="p">);</span>
+    <span class="n">howto</span><span class="o">::</span><span class="nf">wait_until</span><span class="p">([</span><span class="o">&amp;</span><span class="n">reader</span><span class="p">]()</span> <span class="o">-&gt;</span> <span class="k">bool</span> <span class="p">{</span>
+        <span class="k">const</span> <span class="k">auto</span> <span class="n">samples</span> <span class="o">=</span> <span class="n">reader</span><span class="p">.</span><span class="nf">read</span><span class="p">();</span>
+        <span class="k">return</span> <span class="n">samples</span><span class="p">.</span><span class="nf">length</span><span class="p">()</span> <span class="o">==</span> <span class="mi">1</span> <span class="k">and</span> <span class="n">samples</span><span class="p">.</span><span class="nf">begin</span><span class="p">()</span><span class="o">-&gt;</span><span class="nf">info</span><span class="p">().</span><span class="nf">valid</span><span class="p">();</span>
+    <span class="p">},</span> <span class="s">"The first generation did not arrive"</span><span class="p">);</span>
+
+    <span class="n">writer</span><span class="p">.</span><span class="nf">dispose_instance</span><span class="p">(</span><span class="n">handle</span><span class="p">);</span>
+    <span class="n">value</span><span class="p">.</span><span class="n">message</span> <span class="o">=</span> <span class="n">second</span><span class="p">;</span>
+    <span class="n">writer</span><span class="p">.</span><span class="nf">write</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">handle</span><span class="p">);</span>
+    <span class="c1">// [rank_generations]</span>
+
+    <span class="c1">// [print_sample_ranks]</span>
+    <span class="n">howto</span><span class="o">::</span><span class="nf">wait_until</span><span class="p">([</span><span class="o">&amp;</span><span class="n">reader</span><span class="p">]()</span> <span class="o">-&gt;</span> <span class="k">bool</span> <span class="p">{</span>
+        <span class="k">const</span> <span class="k">auto</span> <span class="n">batch</span> <span class="o">=</span> <span class="n">reader</span><span class="p">.</span><span class="nf">read</span><span class="p">();</span>
+        <span class="k">unsigned</span> <span class="k">int</span> <span class="n">valid_count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="k">for</span> <span class="p">(</span><span class="k">const</span> <span class="k">auto</span><span class="o">&amp;</span> <span class="n">sample</span> <span class="o">:</span> <span class="n">batch</span><span class="p">)</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">sample</span><span class="p">.</span><span class="nf">info</span><span class="p">().</span><span class="nf">valid</span><span class="p">())</span>
+                <span class="o">++</span><span class="n">valid_count</span><span class="p">;</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">valid_count</span> <span class="o">!=</span> <span class="mi">2</span><span class="p">)</span>
+            <span class="k">return</span> <span class="k">false</span><span class="p">;</span>
+
+        <span class="nn">std</span><span class="o">::</span><span class="nc">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"payload | sample | generation | absolute generation</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
+        <span class="k">for</span> <span class="p">(</span><span class="k">const</span> <span class="k">auto</span><span class="o">&amp;</span> <span class="n">sample</span> <span class="o">:</span> <span class="n">batch</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="k">not</span> <span class="n">sample</span><span class="p">.</span><span class="nf">info</span><span class="p">().</span><span class="nf">valid</span><span class="p">())</span>
+                <span class="k">continue</span><span class="p">;</span>
+
+            <span class="k">const</span> <span class="k">auto</span> <span class="n">rank</span> <span class="o">=</span> <span class="n">sample</span><span class="p">.</span><span class="nf">info</span><span class="p">().</span><span class="nf">rank</span><span class="p">();</span>
+            <span class="nn">std</span><span class="o">::</span><span class="nc">cout</span> <span class="o">&lt;&lt;</span> <span class="n">sample</span><span class="p">.</span><span class="nf">data</span><span class="p">().</span><span class="n">message</span> <span class="o">&lt;&lt;</span> <span class="s">" | "</span> <span class="o">&lt;&lt;</span> <span class="n">rank</span><span class="p">.</span><span class="nf">sample</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="s">" | "</span>
+                <span class="o">&lt;&lt;</span> <span class="n">rank</span><span class="p">.</span><span class="nf">generation</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="s">" | "</span> <span class="o">&lt;&lt;</span> <span class="n">rank</span><span class="p">.</span><span class="nf">absolute_generation</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="k">true</span><span class="p">;</span>
+    <span class="p">},</span> <span class="s">"Expected two generations in the same read batch"</span><span class="p">);</span>
+    <span class="c1">// [print_sample_ranks]</span>
+<span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="k">return</span> <span class="n">howto</span><span class="o">::</span><span class="nf">run</span><span class="p">([]()</span> <span class="o">-&gt;</span> <span class="k">void</span> <span class="p">{</span>
+        <span class="nf">use_keyed_samples</span><span class="p">();</span>
+        <span class="nf">take_by_sample_and_instance_state</span><span class="p">();</span>
+        <span class="nf">inspect_sample_ranks</span><span class="p">();</span>
+    <span class="p">},</span> <span class="s">"Keyed sample examples passed"</span><span class="p">);</span>
+<span class="p">}</span></pre></details></section>
+</div>
+</div>
+</div>
+</article></main>
+<div class="m-doc-search" id="search">
+<a href="#!" onclick="return hideSearch()"></a>
+<div class="m-container">
+<div class="m-row">
+<div class="m-col-m-8 m-push-m-2">
+<div class="m-doc-search-header m-text m-small">
+<div>Tab 또는 T로 검색하고 Esc로 닫습니다.</div>
+<div id="search-symbolcount">…</div>
+</div>
+<div class="m-doc-search-content">
+<form>
+<input autocomplete="off" autofocus="autofocus" disabled="disabled" id="search-input" name="q" placeholder="불러오는 중…" spellcheck="false" type="search"/>
+</form>
+<noscript class="m-text m-danger m-text-center">검색을 사용하려면 JavaScript가 필요합니다.</noscript>
+<div class="m-text m-dim m-text-center" id="search-help">심볼, 디렉터리, 파일, 페이지 또는 모듈을 검색합니다. 심볼이나 파일 경로의 앞부분을 생략할 수 있습니다. 끝에 : 또는 /를 붙이면 하위 항목을 표시합니다. ↑와 ↓로 결과를 이동하고 Enter로 엽니다. Tab으로 공통 접두사를 자동 완성합니다. ⌘ L로 링크를 복사하고 ⌘ M으로 Markdown 링크를 복사합니다.</div>
+<div class="m-text m-warning m-text-center" id="search-notfound">검색 결과가 없습니다.</div>
+<ul id="search-results"></ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src="search-v2.js"></script><script>install_mcss_search_shim();</script>
+<script async="async" src="searchdata-v2.js"></script>
+<footer><nav>
+<div class="m-container">
+<div class="m-row">
+<div class="m-col-l-10 m-push-l-1">
+<a download="" href="GurumDDS_C++.tagfile.xml" target="_blank" type="text/xml">Doxygen 태그 파일</a>
+<br/><br/>
+사이트 생성 도구 <a class="poxy-external" href="https://github.com/marzer/poxy/" target="_blank">Poxy</a>
+</div>
+</div>
+</div>
+</nav></footer>
+</body></html>

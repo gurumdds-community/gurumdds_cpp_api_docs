@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1140" height="310" viewBox="0 0 1140 310" role="img" aria-label="The live Writer retains the sample with TRANSIENT_LOCAL durability. A Reader using TRANSIENT_LOCAL and RELIABLE joins after the write, matches, and receives the retained sample." data-dds-diagram="true">
+  <title id="late-reader-en-title">A late-joining Reader receives a retained sample</title>
+  <desc>The live Writer retains the sample with TRANSIENT_LOCAL durability. A Reader using TRANSIENT_LOCAL and RELIABLE joins after the write, matches, and receives the retained sample.</desc>
+  <defs>
+    <marker id="late-reader-en-arrow" viewBox="0 0 10 12" refX="9" refY="6" markerWidth="9" markerHeight="10" orient="auto" markerUnits="userSpaceOnUse"><path d="M 1,1 L 9,6 L 1,11" fill="none" stroke="#20354B" stroke-width="1.2"/></marker>
+    <marker id="late-reader-en-blue" viewBox="0 0 11 10" refX="10" refY="5" markerWidth="10" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M 0,0 L 11,5 L 0,10 Z" fill="#356B96"/></marker>
+  </defs>
+  <rect width="1140" height="310" fill="#FFFFFF"/>
+  <g fill="#20354B" font-family="Arial, Malgun Gothic, sans-serif">
+    <path d="M 184 100 H 1111" fill="none" stroke="#20354B" stroke-width="1.15" marker-end="url(#late-reader-en-arrow)"/>
+    <path d="M 520 203 H 1111" fill="none" stroke="#20354B" stroke-width="1.15" marker-end="url(#late-reader-en-arrow)"/>
+    <path d="M 693 100 V 203" fill="none" stroke="#20354B" stroke-width="1.15" stroke-dasharray="5 4"/>
+    <path d="M 903 100 V 203" fill="none" stroke="#356B96" stroke-width="1.7" marker-end="url(#late-reader-en-blue)"/>
+    <path d="M 184 261 H 1111" fill="none" stroke="#20354B" stroke-width="1.15" marker-end="url(#late-reader-en-arrow)"/>
+    <circle cx="293" cy="100" r="4" fill="#20354B"/>
+    <circle cx="693" cy="100" r="4" fill="#20354B"/>
+    <circle cx="903" cy="100" r="4" fill="#356B96"/>
+    <circle cx="520" cy="203" r="4" fill="#20354B"/>
+    <circle cx="693" cy="203" r="4" fill="#20354B"/>
+    <circle cx="903" cy="203" r="4" fill="#356B96"/>
+    <text x="24" y="105" text-anchor="start" font-size="16" font-weight="bold">DataWriter</text>
+    <text x="24" y="208" text-anchor="start" font-size="16" font-weight="bold">DataReader</text>
+    <text x="294" y="75" text-anchor="middle" font-size="16" font-family="Consolas, Menlo, monospace">write(sample)</text>
+    <text x="851" y="75" text-anchor="middle" font-size="16">Writer stays alive and retains the sample</text>
+    <text x="520" y="229" text-anchor="middle" font-size="16">Reader created</text>
+    <text x="693" y="156" text-anchor="middle" font-size="15" paint-order="stroke" stroke="#FFFFFF" stroke-width="5" stroke-linejoin="round">Endpoints match</text>
+    <text x="921" y="150" text-anchor="start" font-size="15" paint-order="stroke" stroke="#FFFFFF" stroke-width="5" stroke-linejoin="round">Deliver retained sample</text>
+    <text x="924" y="228" text-anchor="start" font-size="15" font-family="Consolas, Menlo, monospace">reader.take()</text>
+    <text x="24" y="266" text-anchor="start" font-size="15" fill="#677B8D">Time</text>
+    <text x="569" y="290" text-anchor="middle" font-size="15">Both endpoints use TRANSIENT_LOCAL and RELIABLE in this example.</text>
+  </g>
+</svg>

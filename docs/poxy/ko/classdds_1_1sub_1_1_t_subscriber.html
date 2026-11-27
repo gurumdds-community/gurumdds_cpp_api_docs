@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="ko"><head>
+<meta charset="utf-8"/>
+<title>dds::sub::Subscriber | GurumDDS C++ API Reference</title>
+<link href="gurum-networks-logo.png" rel="icon" type="image/png"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="#cb4b16" name="theme-color"/>
+<link href="poxy/poxy.css" referrerpolicy="no-referrer" rel="stylesheet"/>
+<link href="ReferenceBranding.css" referrerpolicy="no-referrer" rel="stylesheet"/>
+<script src="poxy/poxy.js"></script>
+<script>initialize_theme("light");</script>
+<meta content="GurumDDS C++" name="twitter:title"/>
+<meta content="GurumDDS C++" property="og:title"/>
+<meta content="GurumDDS C++" itemprop="name"/>
+<meta content="API Reference" name="description"/>
+<meta content="API Reference" name="twitter:description"/>
+<meta content="API Reference" property="og:description"/>
+<meta content="API Reference" itemprop="description"/>
+<meta content="telephone=no" name="format-detection"/>
+<meta content="Poxy v0.27.2" name="generator"/>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<script defer="True" src="ReferenceUi.js"></script><link href="../en/classdds_1_1sub_1_1_t_subscriber.html" hreflang="en" rel="alternate"/><link href="../ko/classdds_1_1sub_1_1_t_subscriber.html" hreflang="ko" rel="alternate"/><link href="../language.css" rel="stylesheet"/><script defer="defer" src="../language.js"></script></head>
+<body class="poxy-has-toc">
+<header><nav id="navigation">
+<div class="m-container">
+<div class="m-row doc-language-header">
+<a class="m-col-t-8 m-col-m-none m-left-m" href="index.html" id="m-navbar-brand"><img alt="" src="gurum-networks-logo.png"/>GurumDDS C++ <span class="m-thin">API Reference</span></a>
+<div class="m-col-t-4 m-hide-m m-text-right m-nopadr">
+<a class="m-doc-search-icon" href="#search" onclick="return showSearch()" title="검색"><svg style="height: 0.9rem;" viewbox="0 0 16 16">
+<path d="m6 0c-3.31 0-6 2.69-6 6 0 3.31 2.69 6 6 6 1.49 0 2.85-0.541 3.89-1.44-0.0164 0.338 0.147 0.759 0.5 1.15l3.22 3.79c0.552 0.614 1.45 0.665 2 0.115 0.55-0.55 0.499-1.45-0.115-2l-3.79-3.22c-0.392-0.353-0.812-0.515-1.15-0.5 0.895-1.05 1.44-2.41 1.44-3.89 0-3.31-2.69-6-6-6zm0 1.56a4.44 4.44 0 0 1 4.44 4.44 4.44 4.44 0 0 1-4.44 4.44 4.44 4.44 0 0 1-4.44-4.44 4.44 4.44 0 0 1 4.44-4.44z" id="m-doc-search-icon-path"></path>
+</svg></a>
+<a href="#navigation" id="m-navbar-show" title="탐색 메뉴 열기"></a>
+<a href="#" id="m-navbar-hide" title="탐색 메뉴 닫기"></a>
+</div>
+<div class="m-col-t-12 m-show-m m-col-m-none m-right-m" id="m-navbar-collapse">
+<div class="m-row">
+<ol class="m-col-t-6 m-col-m-none">
+<li><a href="modules.html">모듈</a></li>
+<li><a href="annotated.html">클래스</a></li>
+<li><a href="namespaces.html">네임스페이스</a></li>
+</ol>
+<ol class="m-col-t-6 m-col-m-none" start="4">
+<li><a href="examples.html">예제</a></li>
+<li><a class="poxy-icon theme" href="javascript:void(null);" id="poxy-theme-switch" onclick="toggle_theme(); return false;" role="button" title="밝은 테마와 어두운 테마 전환"><svg id="poxy-theme-switch-img" version="1.1" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><circle cx="185.6708" cy="183.8122" fill="currentColor" r="65.625"></circle><path d="M185.6708,87.5622a13.1256,13.1256,0,0,0,13.125-13.125V52.5622a13.125,13.125,0,1,0-26.25,0v21.875A13.1257,13.1257,0,0,0,185.6708,87.5622Z" fill="currentColor"></path><path d="M99.051,115.7519a13.1236,13.1236,0,1,0,18.56-18.56L102.1442,81.726a13.1236,13.1236,0,0,0-18.5595,18.56Z" fill="currentColor"></path><path d="M89.4208,183.8122a13.1257,13.1257,0,0,0-13.125-13.125H54.4208a13.125,13.125,0,0,0,0,26.25h21.875A13.1256,13.1256,0,0,0,89.4208,183.8122Z" fill="currentColor"></path><path d="M99.051,251.8725,83.5847,267.3431a13.1236,13.1236,0,1,0,18.56,18.56l15.4663-15.4706a13.1236,13.1236,0,1,0-18.5595-18.56Z" fill="currentColor"></path><path d="M185.6708,280.0622a13.1258,13.1258,0,0,0-13.125,13.125v21.875a13.125,13.125,0,0,0,26.25,0v-21.875A13.1257,13.1257,0,0,0,185.6708,280.0622Z" fill="currentColor"></path><path d="M272.2907,251.8725a13.1236,13.1236,0,1,0-18.56,18.56l15.4663,15.4706a13.1236,13.1236,0,1,0,18.56-18.56Z" fill="currentColor"></path><path d="M330.0458,183.8122a13.1257,13.1257,0,0,0-13.125-13.125h-21.875a13.125,13.125,0,0,0,0,26.25h21.875A13.1256,13.1256,0,0,0,330.0458,183.8122Z" fill="currentColor"></path><path d="M263.0109,119.5971a13.0824,13.0824,0,0,0,9.28-3.8452l15.4663-15.4663a13.1236,13.1236,0,1,0-18.56-18.56L253.7312,97.1923a13.125,13.125,0,0,0,9.28,22.4048Z" fill="currentColor"></path><path d="M456.9379,401.6714a63.97,63.97,0,0,1-14.9963,7.2055c-19.6448,6.5283-41.8787,2.9566-58.1439-9.8523a68.9311,68.9311,0,0,1-10.835-10.8339c-12.8088-16.2663-16.3806-38.5-9.8523-58.1471a63.8444,63.8444,0,0,1,7.2077-14.9931,8.8036,8.8036,0,0,0-10.1172-13.3034,87.5188,87.5188,0,1,0,110.0372,110.04A8.8,8.8,0,0,0,456.9379,401.6714Z" fill="currentColor"></path></svg></a></li>
+<li class="m-show-m"><a class="m-doc-search-icon" href="#search" onclick="return showSearch()" title="검색"><svg style="height: 0.9rem;" viewbox="0 0 16 16">
+<use href="#m-doc-search-icon-path"></use>
+</svg></a></li>
+</ol>
+</div>
+</div>
+<label class="doc-language"><select aria-label="문서 언어" data-current="1"><option lang="en" value="../en/classdds_1_1sub_1_1_t_subscriber.html">English</option><option lang="en" selected="selected" value="../ko/classdds_1_1sub_1_1_t_subscriber.html">Korean</option></select></label></div>
+</div>
+</nav></header>
+<main><article>
+<div class="m-container m-container-inflatable">
+<div class="m-row">
+<div class="m-col-l-10 m-push-l-1">
+<nav aria-label="관련 문서" class="dds-page-links"><a href="group__dds__subscription.html">Subscription</a><a href="namespacedds_1_1sub.html">dds::sub</a><a href="group__dds__tutorial__subscriber.html">튜토리얼</a></nav><h1>
+<span class="m-breadcrumb"><a href="namespacedds.html">dds</a>::<wbr/></span><span class="m-breadcrumb"><a href="namespacedds_1_1sub.html">sub</a>::<wbr/></span> Subscriber <span class="m-thin">클래스</span>
+</h1><p class="dds-class-include"><code>#include &lt;gurumdds/cpp/sub/Subscriber.hpp&gt;</code></p>
+<p>DataReader를 소유하고 구독 기본값을 구성합니다.</p>
+<p>연결된 DomainParticipant의 domain에 있는 Topic에 대해 이 Subscriber를 통해 DataReader를 생성합니다.</p><aside class="m-note m-default"><h4>참고 항목</h4><p><a class="m-doc" href="group__dds__subscription.html#gaf7f2f1fd9a8d66d37b7da82b130245cb">dds::<wbr/>sub::<wbr/>qos::<wbr/>SubscriberQos</a></p><p><a class="m-doc" href="classdds_1_1sub_1_1_subscriber_listener.html">dds::<wbr/>sub::<wbr/>SubscriberListener</a></p><p><a class="m-doc" href="group__dds__tutorial__subscriber.html">Subscriber</a></p><p><a class="m-doc" href="dds_example_new_helloworld_listener.html">DataReader listener</a></p></aside>
+<figure class="dds-inheritance"><div class="dds-inheritance-graph"><svg height="40pt" viewbox="0.00 0.00 370.00 40.00" width="370pt" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g class="graph" id="graph0" transform="scale(1 1) rotate(0) translate(4 36)">
+<title>dds::sub::TSubscriber&lt; DELEGATE &gt;</title>
+<!-- Node1 -->
+<g class="node" id="Node000001">
+<title>Node1</title>
+<g id="a_Node000001"><a target="_top" xlink:title="DataReader를 소유하고 구독 기본값을 구성합니다.">
+<polygon fill="#999999" points="361.5,-32 257.5,-32 257.5,0 361.5,0 361.5,-32" stroke="none"></polygon>
+<text font-family="Helvetica,sans-Serif" font-size="10.00" text-anchor="start" x="261.5" xml:space="preserve" y="-18.5">dds::sub::TSubscriber</text>
+<text font-family="Helvetica,sans-Serif" font-size="10.00" text-anchor="start" x="274.25" xml:space="preserve" y="-6.5">&lt; DELEGATE &gt;</text>
+<polygon fill="none" points="257.5,0 257.5,-32 361.5,-32 361.5,0 257.5,0" stroke="#666666"></polygon>
+</a>
+</g>
+</g>
+<!-- Node2 -->
+<g class="node" id="Node000002">
+<title>Node2</title>
+<g id="a_Node000002"><a target="_top" xlink:href="classdds_1_1core_1_1_t_entity.html" xlink:title="DDS Entity handle에 대한 일반적인 작업을 제공합니다.">
+<polygon fill="white" points="221.5,-32 135.5,-32 135.5,0 221.5,0 221.5,-32" stroke="none"></polygon>
+<text font-family="Helvetica,sans-Serif" font-size="10.00" text-anchor="start" x="139.5" xml:space="preserve" y="-18.5">dds::core::TEntity</text>
+<text font-family="Helvetica,sans-Serif" font-size="10.00" text-anchor="start" x="143.25" xml:space="preserve" y="-6.5">&lt; DELEGATE &gt;</text>
+<polygon fill="none" points="135.5,0 135.5,-32 221.5,-32 221.5,0 135.5,0" stroke="#666666"></polygon>
+</a>
+</g>
+</g>
+<!-- Node2&#45;&gt;Node1 -->
+<g class="edge" id="edge1_Node000001_Node000002">
+<title>Node2-&gt;Node1</title>
+<g id="a_edge1_Node000001_Node000002"><a xlink:title=" ">
+<path d="M232.84,-16C241.1,-16 249.62,-16 257.82,-16" fill="none" stroke="#63b8ff"></path>
+<polygon fill="none" points="232.9,-12.5 222.9,-16 232.9,-19.5 232.9,-12.5" stroke="#63b8ff"></polygon>
+</a>
+</g>
+</g>
+<!-- Node3 -->
+<g class="node" id="Node000003">
+<title>Node3</title>
+<g id="a_Node000003"><a target="_top" xlink:href="classdds_1_1core_1_1_reference.html" xlink:title="DDS 참조 타입에 대한 공유-handle 연산을 정의합니다.">
+<polygon fill="white" points="99.5,-32 0,-32 0,0 99.5,0 99.5,-32" stroke="none"></polygon>
+<text font-family="Helvetica,sans-Serif" font-size="10.00" text-anchor="start" x="4" xml:space="preserve" y="-18.5">dds::core::Reference</text>
+<text font-family="Helvetica,sans-Serif" font-size="10.00" text-anchor="start" x="14.5" xml:space="preserve" y="-6.5">&lt; DELEGATE &gt;</text>
+<polygon fill="none" points="0,0 0,-32 99.5,-32 99.5,0 0,0" stroke="#666666"></polygon>
+</a>
+</g>
+</g>
+<!-- Node3&#45;&gt;Node2 -->
+<g class="edge" id="edge2_Node000002_Node000003">
+<title>Node3-&gt;Node2</title>
+<g id="a_edge2_Node000002_Node000003"><a xlink:title=" ">
+<path d="M110.81,-16C119.26,-16 127.79,-16 135.8,-16" fill="none" stroke="#63b8ff"></path>
+<polygon fill="none" points="110.91,-12.5 100.91,-16 110.91,-19.5 110.91,-12.5" stroke="#63b8ff"></polygon>
+</a>
+</g>
+</g>
+</g>
+</svg></div><figcaption>상속 다이어그램</figcaption></figure><details class="dds-reference-details" data-dds-signatures=""><summary>전체 템플릿 선언</summary><div class="m-doc-template">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename DELEGATE</span></span>&gt;</div><table class="m-table m-fullwidth m-flat">
+<thead>
+<tr><th colspan="2">템플릿 매개변수</th></tr>
+</thead>
+<tbody>
+<tr>
+<td style="width: 1%">DELEGATE</td>
+<td><a class="m-doc" href="group__dds__subscription.html#ga9a6d78b2a23f864211da5bd2edf28750">Subscriber</a> 구현 타입</td>
+</tr>
+</tbody>
+</table></details><nav class="m-block m-default poxy-toc" id="poxy-toc">
+<h3>목차</h3>
+<ul>
+<li>
+              Reference
+              <ul>
+<li><a href="#base-classes">기반 클래스</a></li>
+<li><a href="#pub-types">공개 타입</a></li>
+<li><a href="#typeless-methods">생성자, 소멸자, 변환 연산자</a></li>
+<li><a href="#pub-methods">공개 함수</a></li>
+<li><a href="#pro-attribs">보호된 변수</a></li>
+</ul>
+</li>
+</ul>
+</nav><section id="base-classes">
+<h2><a href="#base-classes">기반 클래스</a></h2>
+<dl class="m-doc">
+<dt>
+<div class="m-doc-template">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename DELEGATE</span></span>&gt;</div>
+              클래스 <a class="m-doc" href="classdds_1_1core_1_1_t_entity.html">dds::core::TEntity&lt;DELEGATE&gt;</a>
+</dt>
+<dd>DDS <a class="m-doc" href="group__dds__core.html#ga9c487d701cb3e2131d9da3ddd608a9b4">Entity</a> handle에 대한 일반적인 작업을 제공합니다.</dd>
+</dl>
+</section>
+<section id="pub-types">
+<h2><a href="#pub-types">공개 타입</a></h2>
+<dl class="m-doc">
+<dt>
+              using <a class="m-doc" href="classdds_1_1core_1_1_t_entity.html#ae0ab06ef335ee07eac162d007155c326">BASE_T</a> = <a class="m-doc" href="classdds_1_1core_1_1_reference.html">dds::<wbr/>core::<wbr/>Reference</a>&lt;DELEGATE&gt;
+            </dt>
+<dd></dd>
+<dt>
+              using <a class="m-doc" href="classdds_1_1core_1_1_t_entity.html#ae38d068d6ed16649727e129829568de6">DELEGATE_REF_T</a> = <a class="m-doc" href="structdds_1_1core_1_1smart__ptr__traits.html">::<wbr/>dds::<wbr/>core::<wbr/>smart_ptr_traits</a>&lt;DELEGATE&gt;::ref_type
+            </dt>
+<dd></dd>
+<dt>
+              using <a class="m-doc" href="classdds_1_1core_1_1_t_entity.html#a0f7165a2d03c3f8fa9055d66e4f4205b">DELEGATE_T</a> = DELEGATE
+            </dt>
+<dd></dd>
+<dt>
+              using <a class="m-doc" href="classdds_1_1core_1_1_t_entity.html#ab4572e93bd3b4b0fb8f07463df7e10d3">DELEGATE_WEAK_REF_T</a> = <a class="m-doc" href="structdds_1_1core_1_1smart__ptr__traits.html">::<wbr/>dds::<wbr/>core::<wbr/>smart_ptr_traits</a>&lt;DELEGATE&gt;::weak_ref_type
+            </dt>
+<dd></dd>
+<dt id="a321b8b14709b1104efc2c72e11b406cf">
+              using <a class="m-doc-self" href="#a321b8b14709b1104efc2c72e11b406cf">Listener</a> = <a class="m-doc" href="classdds_1_1sub_1_1_subscriber_listener.html">dds::<wbr/>sub::<wbr/>SubscriberListener</a>
+</dt>
+<dd></dd>
+</dl>
+</section>
+<section id="typeless-methods">
+<h2><a href="#typeless-methods">생성자, 소멸자, 변환 연산자</a></h2>
+<dl class="m-doc">
+<dt>
+<span class="m-doc-wrap-bumper"><a class="m-doc" href="#a86131beb0b953fc4974345cf9a88a7e4">TSubscriber</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="group__dds__domain.html#gab1bd86ffa9ac0869166a446dd0120f3d">::<wbr/>dds::<wbr/>domain::<wbr/>DomainParticipant</a>&amp; dp)</span>
+</dt>
+<dd></dd>
+<dt>
+<span class="m-doc-wrap-bumper"><a class="m-doc" href="#ae9edff34dbf5ce2bd9b4f6be768bcf60">TSubscriber</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="group__dds__domain.html#gab1bd86ffa9ac0869166a446dd0120f3d">::<wbr/>dds::<wbr/>domain::<wbr/>DomainParticipant</a>&amp; dp,
+              const <a class="m-doc" href="group__dds__subscription.html#gaf7f2f1fd9a8d66d37b7da82b130245cb">dds::<wbr/>sub::<wbr/>qos::<wbr/>SubscriberQos</a>&amp; qos,
+              <a class="m-doc" href="classdds_1_1sub_1_1_subscriber_listener.html">dds::<wbr/>sub::<wbr/>SubscriberListener</a>* listener = NULL,
+              const <a class="m-doc" href="classdds_1_1core_1_1status_1_1_status_mask.html">dds::<wbr/>core::<wbr/>status::<wbr/>StatusMask</a>&amp; mask = <a class="m-doc" href="classdds_1_1core_1_1status_1_1_status_mask.html#a2d5d96c01cceb09a14ff466f43be8173">dds::<wbr/>core::<wbr/>status::<wbr/>StatusMask::<wbr/>all</a>())</span>
+</dt>
+<dd></dd>
+<dt>
+<span class="m-doc-wrap-bumper"><a class="m-doc" href="classdds_1_1core_1_1_reference.html#a80cff5eadf8554d3b5772b352c518fe8">operator DELEGATE_REF_T</a>(</span><span class="m-doc-wrap">) const</span>
+</dt>
+<dd>저장된 구현 객체 포인터에 접근합니다</dd>
+<dt>
+<span class="m-doc-wrap-bumper"><a class="m-doc" href="classdds_1_1core_1_1_reference.html#a6e30d68985ca187b16562617d4a7b9f9">operator DELEGATE_REF_T&amp;</a>(</span><span class="m-doc-wrap">)</span>
+</dt>
+<dd>저장된 구현 객체 포인터에 접근합니다</dd>
+<dt>
+<span class="m-doc-wrap-bumper"><a class="m-doc" href="classdds_1_1core_1_1_reference.html#a373c3aa4c921f21eabdf3a020ac8ef0c">operator const DELEGATE_REF_T&amp;</a>(</span><span class="m-doc-wrap">) const</span>
+</dt>
+<dd>저장된 구현 객체 포인터에 접근합니다</dd>
+<dt id="a51c2622a94c9d0bfb523bf3aa3662657">
+<span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a51c2622a94c9d0bfb523bf3aa3662657">~TSubscriber</a>(</span><span class="m-doc-wrap">)</span>
+</dt>
+<dd>이 handle을 Subscriber에게 공개합니다</dd>
+</dl>
+</section>
+<section id="pub-methods">
+<h2><a href="#pub-methods">공개 함수</a></h2>
+<dl class="m-doc">
+<dt>
+<span class="m-doc-wrap-bumper">void <a class="m-doc" href="classdds_1_1core_1_1_t_entity.html#af8f8ea2b0053002aaba7be9f3ab3184b">close</a>(</span><span class="m-doc-wrap">)</span>
+</dt>
+<dd><a class="m-doc" href="group__dds__core.html#ga9c487d701cb3e2131d9da3ddd608a9b4">Entity</a> 구현 객체에 대한 명시적 close 연산을 노출합니다.</dd>
+<dt>
+<span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#a60ca8ddc0f3b7439b9183dd6b7121219">default_datareader_qos</a>(</span><span class="m-doc-wrap">) const →  <a class="m-doc" href="group__dds__subscription.html#gac759142c11b5f0cb2b2a8f6c41405966">dds::<wbr/>sub::<wbr/>qos::<wbr/>DataReaderQos</a></span>
+</dt>
+<dd></dd>
+<dt>
+<span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#a7359905478bf4d8173b3506d89cc0a3a">default_datareader_qos</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="group__dds__subscription.html#gac759142c11b5f0cb2b2a8f6c41405966">dds::<wbr/>sub::<wbr/>qos::<wbr/>DataReaderQos</a>&amp; qos) →  <a class="m-doc" href="#a86131beb0b953fc4974345cf9a88a7e4">TSubscriber</a>&amp;</span>
+</dt>
+<dd>명시적 정책 없이 생성된 DataReader에 대해 기본 QoS를 설정합니다.</dd>
+<dt>
+<span class="m-doc-wrap-bumper">auto <a class="m-doc" href="classdds_1_1core_1_1_reference.html#a0a024fbfa03682004825f278ad114d7c">delegate</a>(</span><span class="m-doc-wrap">) const →  const <a class="m-doc" href="classdds_1_1core_1_1_t_entity.html#ae38d068d6ed16649727e129829568de6">DELEGATE_<wbr/>REF_<wbr/>T</a>&amp;</span>
+</dt>
+<dd></dd>
+<dt>
+<span class="m-doc-wrap-bumper">auto <a class="m-doc" href="classdds_1_1core_1_1_reference.html#a0da9a614a6f6158cd7f0a7ba491cf127">delegate</a>(</span><span class="m-doc-wrap">) →  <a class="m-doc" href="classdds_1_1core_1_1_t_entity.html#ae38d068d6ed16649727e129829568de6">DELEGATE_<wbr/>REF_<wbr/>T</a>&amp;</span>
+</dt>
+<dd></dd>
+<dt>
+<span class="m-doc-wrap-bumper">void <a class="m-doc" href="classdds_1_1core_1_1_t_entity.html#ae5bece31716bf36a99e579294ac2da00">enable</a>(</span><span class="m-doc-wrap">)</span>
+</dt>
+<dd>C 레이어가 이 Entity를 사용할 수 있도록 요청</dd>
+<dt>
+<span class="m-doc-wrap-bumper">auto <a class="m-doc" href="classdds_1_1core_1_1_t_entity.html#ae071a4ffa15ea47acc2cca09d76e03af">instance_handle</a>(</span><span class="m-doc-wrap">) const →  const <a class="m-doc" href="group__dds__core.html#ga8ee18acd2002fb15f2650f5c7cb055d0">dds::<wbr/>core::<wbr/>InstanceHandle</a></span>
+</dt>
+<dd>이 Entity의 instance handle을 가져옵니다</dd>
+<dt>
+<span class="m-doc-wrap-bumper">auto <a class="m-doc" href="classdds_1_1core_1_1_reference.html#aba3a3901a14d7999e39e0bdd7efc1023">is_nil</a>(</span><span class="m-doc-wrap">) const →  bool</span>
+</dt>
+<dd></dd>
+<dt>
+<span class="m-doc-wrap-bumper">void <a class="m-doc" href="#a71b8ec04607cb5c9214a877aff891ca8">listener</a>(</span><span class="m-doc-wrap"><a class="m-doc" href="#a321b8b14709b1104efc2c72e11b406cf">Listener</a>*,
+              const <a class="m-doc" href="classdds_1_1core_1_1status_1_1_status_mask.html">dds::<wbr/>core::<wbr/>status::<wbr/>StatusMask</a>&amp; event_mask)</span>
+</dt>
+<dd><a class="m-doc" href="group__dds__subscription.html#ga9a6d78b2a23f864211da5bd2edf28750">Subscriber</a> listener와 상태 마스크를 설정합니다.</dd>
+<dt>
+<span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#aaec61647aa047efb4c52423173ee361f">listener</a>(</span><span class="m-doc-wrap">) const →  <a class="m-doc" href="#a321b8b14709b1104efc2c72e11b406cf">Listener</a>*</span>
+</dt>
+<dd></dd>
+<dt>
+<span class="m-doc-wrap-bumper">void <a class="m-doc" href="#ac39582614d0a2edd40e8f1b044858a35">notify_datareaders</a>(</span><span class="m-doc-wrap">)</span>
+</dt>
+<dd>이 Subscriber의 DataReader들을 위한 데이터 사용 가능한 callback 요청</dd>
+<dt>
+<div class="m-doc-template">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename R</span></span>&gt;</div>
+<span class="m-doc-wrap-bumper">auto <a class="m-doc" href="classdds_1_1core_1_1_reference.html#ac0f06ae1197b8ccec9d35cbe20302797">operator!=</a>(</span><span class="m-doc-wrap">const R&amp; ref) const →  bool</span>
+</dt>
+<dd></dd>
+<dt>
+<span class="m-doc-wrap-bumper">auto <a class="m-doc" href="classdds_1_1core_1_1_reference.html#abb281aa6cfee0f470c311d420525e8b9">operator!=</a>(</span><span class="m-doc-wrap">const null_type nil) const →  bool</span>
+</dt>
+<dd>이 handle에 구현 객체가 있는지 확인합니다</dd>
+<dt>
+<span class="m-doc-wrap-bumper">auto <a class="m-doc" href="classdds_1_1core_1_1_reference.html#a5719abf42970dad5751f69531de91fb3">operator-&gt;</a>(</span><span class="m-doc-wrap">) →  DELEGATE*</span>
+</dt>
+<dd></dd>
+<dt>
+<span class="m-doc-wrap-bumper">auto <a class="m-doc" href="classdds_1_1core_1_1_reference.html#a35437fb6e2e4e139ff2394c73d8dbb3a">operator-&gt;</a>(</span><span class="m-doc-wrap">) const →  const DELEGATE*</span>
+</dt>
+<dd></dd>
+<dt>
+<div class="m-doc-template">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename R</span></span>&gt;</div>
+<span class="m-doc-wrap-bumper">auto <a class="m-doc" href="classdds_1_1core_1_1_reference.html#a4a3c2a0f5c12439fef21afa0cd189735">operator==</a>(</span><span class="m-doc-wrap">const R&amp; ref) const →  bool</span>
+</dt>
+<dd></dd>
+<dt>
+<span class="m-doc-wrap-bumper">auto <a class="m-doc" href="classdds_1_1core_1_1_reference.html#a253245a76f79b7415030ae5f00313651">operator==</a>(</span><span class="m-doc-wrap">const null_type) const →  bool</span>
+</dt>
+<dd></dd>
+<dt>
+<span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#a44d15fc84c0b623be4df057726b9daf5">participant</a>(</span><span class="m-doc-wrap">) const →  const <a class="m-doc" href="group__dds__domain.html#gab1bd86ffa9ac0869166a446dd0120f3d">dds::<wbr/>domain::<wbr/>DomainParticipant</a>&amp;</span>
+</dt>
+<dd>이 Subscriber를 소유한 DomainParticipant를 가져옵니다</dd>
+<dt>
+<span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#aee7b2878b44e877926b094860829d27d">qos</a>(</span><span class="m-doc-wrap">) const →  const <a class="m-doc" href="group__dds__subscription.html#gaf7f2f1fd9a8d66d37b7da82b130245cb">dds::<wbr/>sub::<wbr/>qos::<wbr/>SubscriberQos</a>&amp;</span>
+</dt>
+<dd></dd>
+<dt>
+<span class="m-doc-wrap-bumper">void <a class="m-doc" href="#a2ca1f99b826d8e741c086a25b9c00ca7">qos</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="group__dds__subscription.html#gaf7f2f1fd9a8d66d37b7da82b130245cb">dds::<wbr/>sub::<wbr/>qos::<wbr/>SubscriberQos</a>&amp; the_qos)</span>
+</dt>
+<dd>이 Subscriber의 QoS를 갱신합니다.</dd>
+<dt>
+<span class="m-doc-wrap-bumper">void <a class="m-doc" href="classdds_1_1core_1_1_t_entity.html#ac317023c350c2a1938e15755d2070a56">retain</a>(</span><span class="m-doc-wrap">)</span>
+</dt>
+<dd>네이티브 Entity를 구현 객체에 의해 보존된 것으로 표시합니다</dd>
+<dt>
+<span class="m-doc-wrap-bumper">auto <a class="m-doc" href="classdds_1_1core_1_1_t_entity.html#a19ada6b4919fd7f45a79ade070dc14bb">status_changes</a>(</span><span class="m-doc-wrap">) →  const <a class="m-doc" href="classdds_1_1core_1_1status_1_1_status_mask.html">dds::<wbr/>core::<wbr/>status::<wbr/>StatusMask</a></span>
+</dt>
+<dd>Entity의 상태변경 쿼리를 노출합니다</dd>
+</dl>
+</section>
+<section id="pro-attribs">
+<h2><a href="#pro-attribs">보호된 변수</a></h2>
+<dl class="m-doc">
+<dt>
+<a class="m-doc" href="classdds_1_1core_1_1_t_entity.html#ae38d068d6ed16649727e129829568de6">DELEGATE_<wbr/>REF_<wbr/>T</a> <a class="m-doc" href="classdds_1_1core_1_1_reference.html#ab3a71f25696efba22cf3744cf5826839">impl_</a>
+</dt>
+<dd></dd>
+</dl>
+</section>
+<section>
+<h2>멤버 함수</h2>
+<section class="m-doc-details" id="a86131beb0b953fc4974345cf9a88a7e4"><div>
+<h3>
+<div class="m-doc-template dds-full-signature">
+<span class="m-doc-template-parent">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename DELEGATE</span></span>&gt;</span>
+</div>
+<span class="m-doc-wrap-bumper"> <span class="m-doc-details-prefix">dds::sub::TSubscriber::</span></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a86131beb0b953fc4974345cf9a88a7e4">TSubscriber</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="group__dds__domain.html#gab1bd86ffa9ac0869166a446dd0120f3d">::<wbr/>dds::<wbr/>domain::<wbr/>DomainParticipant</a>&amp; dp)</span></span>
+</h3>
+<table class="m-table m-fullwidth m-flat">
+<thead>
+<tr><th colspan="2">매개변수</th></tr>
+</thead>
+<tbody>
+<tr>
+<td style="width: 1%">dp</td>
+<td>이 Subscriber를 소유할 DomainParticipant입니다.</td>
+</tr>
+</tbody>
+</table>
+<p>주어진 DomainParticipant에 연결된 <code>Subscriber</code>를 만듭니다. <a class="m-doc" href="group__dds__subscription.html#ga9a6d78b2a23f864211da5bd2edf28750">Subscriber</a> QoS는 DomainParticipant가 제공한 기본값으로 설정됩니다.</p>
+</div></section>
+<section class="m-doc-details" id="ae9edff34dbf5ce2bd9b4f6be768bcf60"><div>
+<h3>
+<div class="m-doc-template dds-full-signature">
+<span class="m-doc-template-parent">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename DELEGATE</span></span>&gt;</span>
+</div>
+<span class="m-doc-wrap-bumper"> <span class="m-doc-details-prefix">dds::sub::TSubscriber::</span></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#ae9edff34dbf5ce2bd9b4f6be768bcf60">TSubscriber</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="group__dds__domain.html#gab1bd86ffa9ac0869166a446dd0120f3d">::<wbr/>dds::<wbr/>domain::<wbr/>DomainParticipant</a>&amp; dp,
+              const <a class="m-doc" href="group__dds__subscription.html#gaf7f2f1fd9a8d66d37b7da82b130245cb">dds::<wbr/>sub::<wbr/>qos::<wbr/>SubscriberQos</a>&amp; qos,
+              <a class="m-doc" href="classdds_1_1sub_1_1_subscriber_listener.html">dds::<wbr/>sub::<wbr/>SubscriberListener</a>* listener = NULL,
+              const <a class="m-doc" href="classdds_1_1core_1_1status_1_1_status_mask.html">dds::<wbr/>core::<wbr/>status::<wbr/>StatusMask</a>&amp; mask = <a class="m-doc" href="classdds_1_1core_1_1status_1_1_status_mask.html#a2d5d96c01cceb09a14ff466f43be8173">dds::<wbr/>core::<wbr/>status::<wbr/>StatusMask::<wbr/>all</a>())</span></span>
+</h3>
+<table class="m-table m-fullwidth m-flat">
+<thead>
+<tr><th colspan="2">매개변수</th></tr>
+</thead>
+<tbody>
+<tr>
+<td style="width: 1%">dp</td>
+<td>이 Subscriber를 소유할 DomainParticipant입니다.</td>
+</tr>
+<tr>
+<td>qos</td>
+<td><a class="m-doc" href="group__dds__subscription.html#ga9a6d78b2a23f864211da5bd2edf28750">Subscriber</a> qos</td>
+</tr>
+<tr>
+<td>listener</td>
+<td><a class="m-doc" href="group__dds__subscription.html#ga9a6d78b2a23f864211da5bd2edf28750">Subscriber</a> listener.</td>
+</tr>
+<tr>
+<td>mask</td>
+<td>listener 이벤트 마스크.</td>
+</tr>
+</tbody>
+</table>
+<p>지정한 DomainParticipant에 연결된 <code>Subscriber</code>를 생성합니다.</p>
+</div></section>
+<section class="m-doc-details" id="a60ca8ddc0f3b7439b9183dd6b7121219"><div>
+<h3>
+<div class="m-doc-template dds-full-signature">
+<span class="m-doc-template-parent">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename DELEGATE</span></span>&gt;</span>
+</div>
+<span class="m-doc-wrap-bumper"><a class="m-doc" href="group__dds__subscription.html#gac759142c11b5f0cb2b2a8f6c41405966">dds::<wbr/>sub::<wbr/>qos::<wbr/>DataReaderQos</a> <span class="m-doc-details-prefix">dds::sub::TSubscriber::</span></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a60ca8ddc0f3b7439b9183dd6b7121219">default_datareader_qos</a>(</span><span class="m-doc-wrap">) const</span></span>
+</h3>
+<p><code>DataReader</code>의 기본 QoS를 반환합니다.</p>
+</div></section>
+<section class="m-doc-details" id="a7359905478bf4d8173b3506d89cc0a3a"><div>
+<h3>
+<div class="m-doc-template dds-full-signature">
+<span class="m-doc-template-parent">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename DELEGATE</span></span>&gt;</span>
+</div>
+<span class="m-doc-wrap-bumper"><a class="m-doc" href="#a86131beb0b953fc4974345cf9a88a7e4">TSubscriber</a>&amp; <span class="m-doc-details-prefix">dds::sub::TSubscriber::</span></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a7359905478bf4d8173b3506d89cc0a3a">default_datareader_qos</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="group__dds__subscription.html#gac759142c11b5f0cb2b2a8f6c41405966">dds::<wbr/>sub::<wbr/>qos::<wbr/>DataReaderQos</a>&amp; qos)</span></span>
+</h3>
+<p>명시적 정책 없이 생성된 DataReader에 대해 기본 QoS를 설정합니다.</p>
+<table class="m-table m-fullwidth m-flat">
+<thead>
+<tr><th colspan="2">매개변수</th></tr>
+</thead>
+<tbody>
+<tr>
+<td style="width: 1%">qos <span class="m-label m-flat m-info">입력</span></td>
+<td>이후에 생성된 DataReader에 적용할 기본 정책</td>
+</tr>
+</tbody>
+<thead>
+<tr>
+<th>반환값</th>
+<td>이 <a class="m-doc" href="group__dds__subscription.html#ga9a6d78b2a23f864211da5bd2edf28750">Subscriber</a></td>
+</tr>
+</thead>
+<thead>
+<tr><th colspan="2">예외</th></tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="m-doc" href="classdds_1_1core_1_1_inconsistent_policy_error.html">dds::<wbr/>core::<wbr/>InconsistentPolicyError</a></td>
+<td>C 라이브러리에서 정책 충돌을 감지했습니다</td>
+</tr>
+</tbody>
+</table>
+<p>새로운 기본값은 이후 <a class="m-doc" href="classdds_1_1sub_1_1_data_reader.html">DataReader&lt;T&gt;</a> 생성에 적용됩니다. 기존 DataReader는 자신의 QoS를 유지합니다.</p>
+</div></section>
+<section class="m-doc-details" id="a71b8ec04607cb5c9214a877aff891ca8"><div>
+<h3>
+<div class="m-doc-template dds-full-signature">
+<span class="m-doc-template-parent">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename DELEGATE</span></span>&gt;</span>
+</div>
+<span class="m-doc-wrap-bumper">void <span class="m-doc-details-prefix">dds::sub::TSubscriber::</span></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a71b8ec04607cb5c9214a877aff891ca8">listener</a>(</span><span class="m-doc-wrap"><a class="m-doc" href="#a321b8b14709b1104efc2c72e11b406cf">Listener</a>*,
+              const <a class="m-doc" href="classdds_1_1core_1_1status_1_1_status_mask.html">dds::<wbr/>core::<wbr/>status::<wbr/>StatusMask</a>&amp; event_mask)</span></span>
+</h3>
+<p><a class="m-doc" href="group__dds__subscription.html#ga9a6d78b2a23f864211da5bd2edf28750">Subscriber</a> listener와 상태 마스크를 설정합니다.</p>
+<table class="m-table m-fullwidth m-flat">
+<thead>
+<tr><th colspan="2">매개변수</th></tr>
+</thead>
+<tbody>
+<tr>
+<td style="width: 1%">event_mask <span class="m-label m-flat m-info">입력</span></td>
+<td>listener에 전달되는 상태</td>
+</tr>
+</tbody>
+</table>
+<p>등록된 동안 생존하는 애플리케이션 소유의 listener를 전달하거나 <code>nullptr</code>를 전달하여 해당 listener를 지웁니다.</p>
+</div></section>
+<section class="m-doc-details" id="aaec61647aa047efb4c52423173ee361f"><div>
+<h3>
+<div class="m-doc-template dds-full-signature">
+<span class="m-doc-template-parent">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename DELEGATE</span></span>&gt;</span>
+</div>
+<span class="m-doc-wrap-bumper"><a class="m-doc" href="#a321b8b14709b1104efc2c72e11b406cf">Listener</a>* <span class="m-doc-details-prefix">dds::sub::TSubscriber::</span></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#aaec61647aa047efb4c52423173ee361f">listener</a>(</span><span class="m-doc-wrap">) const</span></span>
+</h3>
+<p><code>Subscriber</code>의 listener를 반환합니다.</p>
+</div></section>
+<section class="m-doc-details" id="ac39582614d0a2edd40e8f1b044858a35"><div>
+<h3>
+<div class="m-doc-template dds-full-signature">
+<span class="m-doc-template-parent">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename DELEGATE</span></span>&gt;</span>
+</div>
+<span class="m-doc-wrap-bumper">void <span class="m-doc-details-prefix">dds::sub::TSubscriber::</span></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#ac39582614d0a2edd40e8f1b044858a35">notify_datareaders</a>(</span><span class="m-doc-wrap">)</span></span>
+</h3>
+<p>이 Subscriber의 DataReader들을 위한 데이터 사용 가능한 callback 요청</p>
+<table class="m-table m-fullwidth m-flat">
+<thead>
+<tr><th colspan="2">예외</th></tr>
+</thead>
+<tbody>
+<tr>
+<td style="width: 1%"><a class="m-doc" href="classdds_1_1core_1_1_exception.html">dds::<wbr/>core::<wbr/>Exception</a></td>
+<td>C 라이브러리가 오류를 반환했습니다.</td>
+</tr>
+</tbody>
+</table>
+<p>기본 구현 객체는 요청을 네이티브 Subscriber에 전달합니다. 네이티브 Subscriber는 history에 레코드가 있고 데이터 도착 callback이 등록된 각 DataReader에 대해 <code>on_data_available()</code> 호출을 예약합니다. Subscriber의 <code>on_data_on_readers()</code> callback에서 이 연산을 호출하면 처리를 개별 DataReader의 callback으로 넘길 수 있습니다.</p>
+</div></section>
+<section class="m-doc-details" id="a44d15fc84c0b623be4df057726b9daf5"><div>
+<h3>
+<div class="m-doc-template dds-full-signature">
+<span class="m-doc-template-parent">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename DELEGATE</span></span>&gt;</span>
+</div>
+<span class="m-doc-wrap-bumper">const <a class="m-doc" href="group__dds__domain.html#gab1bd86ffa9ac0869166a446dd0120f3d">dds::<wbr/>domain::<wbr/>DomainParticipant</a>&amp; <span class="m-doc-details-prefix">dds::sub::TSubscriber::</span></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a44d15fc84c0b623be4df057726b9daf5">participant</a>(</span><span class="m-doc-wrap">) const</span></span>
+</h3>
+<p>이 Subscriber를 소유한 DomainParticipant를 가져옵니다</p>
+<table class="m-table m-fullwidth m-flat">
+<tfoot>
+<tr>
+<th style="width: 1%">반환값</th>
+<td>소유자 DomainParticipant handle에 대한 참조</td>
+</tr>
+</tfoot>
+</table>
+</div></section>
+<section class="m-doc-details" id="aee7b2878b44e877926b094860829d27d"><div>
+<h3>
+<div class="m-doc-template dds-full-signature">
+<span class="m-doc-template-parent">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename DELEGATE</span></span>&gt;</span>
+</div>
+<span class="m-doc-wrap-bumper">const <a class="m-doc" href="group__dds__subscription.html#gaf7f2f1fd9a8d66d37b7da82b130245cb">dds::<wbr/>sub::<wbr/>qos::<wbr/>SubscriberQos</a>&amp; <span class="m-doc-details-prefix">dds::sub::TSubscriber::</span></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#aee7b2878b44e877926b094860829d27d">qos</a>(</span><span class="m-doc-wrap">) const</span></span>
+</h3>
+<p><code>Subscriber</code>의 QoS를 반환합니다.</p>
+</div></section>
+<section class="m-doc-details" id="a2ca1f99b826d8e741c086a25b9c00ca7"><div>
+<h3>
+<div class="m-doc-template dds-full-signature">
+<span class="m-doc-template-parent">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename DELEGATE</span></span>&gt;</span>
+</div>
+<span class="m-doc-wrap-bumper">void <span class="m-doc-details-prefix">dds::sub::TSubscriber::</span></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a2ca1f99b826d8e741c086a25b9c00ca7">qos</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="group__dds__subscription.html#gaf7f2f1fd9a8d66d37b7da82b130245cb">dds::<wbr/>sub::<wbr/>qos::<wbr/>SubscriberQos</a>&amp; the_qos)</span></span>
+</h3>
+<p>이 Subscriber의 QoS를 갱신합니다.</p>
+<table class="m-table m-fullwidth m-flat">
+<thead>
+<tr><th colspan="2">매개변수</th></tr>
+</thead>
+<tbody>
+<tr>
+<td style="width: 1%">the_qos <span class="m-label m-flat m-info">입력</span></td>
+<td>적용할 정책</td>
+</tr>
+</tbody>
+</table>
+</div></section>
+</section>
+</div>
+</div>
+</div>
+</article></main>
+<div class="m-doc-search" id="search">
+<a href="#!" onclick="return hideSearch()"></a>
+<div class="m-container">
+<div class="m-row">
+<div class="m-col-m-8 m-push-m-2">
+<div class="m-doc-search-header m-text m-small">
+<div>Tab 또는 T로 검색하고 Esc로 닫습니다.</div>
+<div id="search-symbolcount">…</div>
+</div>
+<div class="m-doc-search-content">
+<form>
+<input autocomplete="off" autofocus="autofocus" disabled="disabled" id="search-input" name="q" placeholder="불러오는 중…" spellcheck="false" type="search"/>
+</form>
+<noscript class="m-text m-danger m-text-center">검색을 사용하려면 JavaScript가 필요합니다.</noscript>
+<div class="m-text m-dim m-text-center" id="search-help">심볼, 디렉터리, 파일, 페이지 또는 모듈을 검색합니다. 심볼이나 파일 경로의 앞부분을 생략할 수 있습니다. 끝에 : 또는 /를 붙이면 하위 항목을 표시합니다. ↑와 ↓로 결과를 이동하고 Enter로 엽니다. Tab으로 공통 접두사를 자동 완성합니다. ⌘ L로 링크를 복사하고 ⌘ M으로 Markdown 링크를 복사합니다.</div>
+<div class="m-text m-warning m-text-center" id="search-notfound">검색 결과가 없습니다.</div>
+<ul id="search-results"></ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src="search-v2.js"></script><script>install_mcss_search_shim();</script>
+<script async="async" src="searchdata-v2.js"></script>
+<footer><nav>
+<div class="m-container">
+<div class="m-row">
+<div class="m-col-l-10 m-push-l-1">
+<a download="" href="GurumDDS_C++.tagfile.xml" target="_blank" type="text/xml">Doxygen 태그 파일</a>
+<br/><br/>
+사이트 생성 도구 <a class="poxy-external" href="https://github.com/marzer/poxy/" target="_blank">Poxy</a>
+</div>
+</div>
+</div>
+</nav></footer>
+</body></html>

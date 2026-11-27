@@ -1,0 +1,521 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/xhtml;charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=11" http-equiv="X-UA-Compatible"/>
+<meta content="Doxygen 1.18.0" name="generator"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>GurumDDS C++ API Reference: dds::core::TEntityQos&lt; DELEGATE &gt; 클래스 템플릿</title>
+<link href="gurum-networks-logo.png" rel="icon" type="image/x-icon"/>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script src="dynsections.js" type="text/javascript"></script>
+<script src="codefolding.js" type="text/javascript"></script>
+<script src="clipboard.js" type="text/javascript"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script src="navtreedata.js" type="text/javascript"></script>
+<script src="navtree.js" type="text/javascript"></script>
+<script src="cookie.js" type="text/javascript"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script src="search/searchdata.js" type="text/javascript"></script>
+<script src="search/search.js" type="text/javascript"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+<link href="ReferenceBranding.css" rel="stylesheet" type="text/css"/>
+<script defer="True" src="ReferenceUi.js"></script><link href="../en/classdds_1_1core_1_1_t_entity_qos.html" hreflang="en" rel="alternate"/><link href="../ko/classdds_1_1core_1_1_t_entity_qos.html" hreflang="ko" rel="alternate"/><link href="../language.css" rel="stylesheet"/><script defer="defer" src="../language.js"></script></head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellpadding="0" cellspacing="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">GurumDDS C++ API Reference<span id="projectnumber"> 1.3.2</span>
+   </div>
+  </td>
+ <td class="doc-language-cell"><label class="doc-language"><select aria-label="문서 언어" data-current="1"><option lang="en" value="../en/classdds_1_1core_1_1_t_entity_qos.html">English</option><option lang="en" selected="selected" value="../ko/classdds_1_1core_1_1_t_entity_qos.html">Korean</option></select></label></td></tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script id="doxygen-config" type="application/json">
+{
+  "relPath": "",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script src="menudata.js" type="text/javascript"></script>
+<script src="menu.js" type="text/javascript"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> 주 메뉴 표시 전환</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div class="MSearchBoxInactive" id="MSearchBox">
+        <span class="left">
+          <span class="search-icon" id="MSearchSelect"><span class="search-icon-dropdown"></span></span>
+          <input accesskey="S" id="MSearchField" placeholder="검색" type="text" value=""/>
+          </span><span class="right">
+            <a href="javascript:searchBox.CloseResultsWindow()" id="MSearchClose"><div class="close-icon" id="MSearchCloseImg"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div class="ui-resizable side-nav-resizable" id="side-nav">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div class="sync" id="nav-sync"></div>
+    </div>
+  </div>
+  <div class="ui-resizable-handle" id="splitbar">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('classdds_1_1core_1_1_t_entity_qos.html','','classdds_1_1core_1_1_t_entity_qos-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">로딩중...</div>
+<div class="SRStatus" id="Searching">검색중...</div>
+<div class="SRStatus" id="NoMatches">일치하는것 없음</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">dds::core::TEntityQos&lt; DELEGATE &gt; 클래스 템플릿<div class="ingroups"><a class="el" href="group__dds__api__modules.html">API 모듈</a> » <a class="el" href="group__dds__core.html">Core</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p class="dds-class-include"><code>#include &lt;gurumdds/cpp/core/TEntityQos.hpp&gt;</code></p>
+
+<p>DDS 엔터티의 한 카테고리에 대한 정책을 보유합니다.  
+ <a href="#details">더 자세히 ...</a></p>
+<a id="details" name="details"></a><h2 class="groupheader" id="header-details">상세한 설명</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename DELEGATE&gt;<br/>
+class dds::core::TEntityQos&lt; DELEGATE &gt;</div><p>DDS 엔터티의 한 카테고리에 대한 정책을 보유합니다. </p>
+<p>각 QoS 타입은 해당 종류의 Entity에 사용할 수 있는 정책을 지원합니다. 기본 생성자는 <a class="el" href="group__dds__core.html#ga9c487d701cb3e2131d9da3ddd608a9b4" title="DDS 엔터티가 공유하는 작업을 처리">Entity</a> 타입의 네이티브 기본값을 가져옵니다. 특정 팩터리에서 새 Entity에 적용할 기본값을 사용하려면 개별 정책을 바꾸기 전에 그 팩터리에서 기본값을 조회하세요.</p>
+<p><code><a class="el" href="namespacedds_1_1core_1_1policy.html" title="DDS Entity의 QoS 정책">policy(value)</a></code> 또는 삽입 연산자로 정책을 설정하세요. 다음 예제는 최근 sample 네 개를 보존하는 DataReader QoS를 준비합니다. 이를 DataReader 생성자에 전달하거나, DataReader의 정책 변경 규칙에 따라 <code>qos()</code> 설정 함수로 적용하세요.</p>
+<div class="fragment"><div class="line"><a class="code hl_typedef" href="group__dds__subscription.html#gac759142c11b5f0cb2b2a8f6c41405966">dds::sub::qos::DataReaderQos</a> qos;</div>
+<div class="line">qos &lt;&lt; dds::core::policy::History::KeepLast(4);</div>
+<div class="ttc" id="agroup__dds__subscription_html_gac759142c11b5f0cb2b2a8f6c41405966"><div class="ttname"><a href="group__dds__subscription.html#gac759142c11b5f0cb2b2a8f6c41405966">dds::sub::qos::DataReaderQos</a></div><div class="ttdeci">dds::sub::qos::detail::DataReaderQos DataReaderQos</div><div class="ttdoc">QoS DataReader를 구성하는 데 사용되는 정책 세트</div><div class="ttdef"><b>정의</b> DataReaderQos.hpp:12</div></div>
+</div><!-- fragment --> </div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-pub-methods"><a id="pub-methods" name="pub-methods"></a>
+공개 멤버 함수</h2></td></tr>
+<tr class="memitem:aaa14a481df7f6204cc43b11044979111" id="r_aaa14a481df7f6204cc43b11044979111"><td class="memItemLeft"> </td><td class="memItemRight"><a class="el" href="#aaa14a481df7f6204cc43b11044979111">TEntityQos</a> (const DELEGATE dcps_qos)</td></tr>
+<tr class="memdesc:aaa14a481df7f6204cc43b11044979111"><td class="mdescLeft"> </td><td class="mdescRight">네이티브에서 C++ 정책 값을 초기화합니다.  <br/></td></tr>
+<tr class="memitem:a9f4cbcccba8ec7509bbc0cca50482171" id="r_a9f4cbcccba8ec7509bbc0cca50482171"><td class="memItemLeft"><a id="a9f4cbcccba8ec7509bbc0cca50482171" name="a9f4cbcccba8ec7509bbc0cca50482171"></a>
+ </td><td class="memItemRight"><b>TEntityQos</b> ()</td></tr>
+<tr class="memdesc:a9f4cbcccba8ec7509bbc0cca50482171"><td class="mdescLeft"> </td><td class="mdescRight">이 <a class="el" href="group__dds__core.html#ga9c487d701cb3e2131d9da3ddd608a9b4" title="DDS 엔터티가 공유하는 작업을 처리">Entity</a> 타입에 대한 DDS 기본값으로 정책을 초기화합니다. <br/></td></tr>
+<tr class="memitem:a43a78cc84413354c85e0c0becc0a29b7" id="r_a43a78cc84413354c85e0c0becc0a29b7"><td class="memItemLeft"> </td><td class="memItemRight"><a class="el" href="#a43a78cc84413354c85e0c0becc0a29b7">TEntityQos</a> (const TEntityQos &amp;other)</td></tr>
+<tr class="memdesc:a43a78cc84413354c85e0c0becc0a29b7"><td class="mdescLeft"> </td><td class="mdescRight">동일한 엔터티 타입에 대한 정책을 복사합니다.  <br/></td></tr>
+<tr class="memitem:a5d9e06c3a5daa0ecc536d49863a89d9c" id="r_a5d9e06c3a5daa0ecc536d49863a89d9c"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
+<tr class="memitem:a5d9e06c3a5daa0ecc536d49863a89d9c template"><td class="memItemLeft"> </td><td class="memItemRight"><a class="el" href="#a5d9e06c3a5daa0ecc536d49863a89d9c">TEntityQos</a> (const TEntityQos&lt; T &gt; &amp;qos)</td></tr>
+<tr class="memdesc:a5d9e06c3a5daa0ecc536d49863a89d9c"><td class="mdescLeft"> </td><td class="mdescRight">다른 <a class="el" href="group__dds__core.html#ga9c487d701cb3e2131d9da3ddd608a9b4" title="DDS 엔터티가 공유하는 작업을 처리">Entity</a> 타입에서 이 QoS를 초기화합니다  <br/></td></tr>
+<tr class="memitem:ae3571f05869cc5621aeeedf33c1902fc" id="r_ae3571f05869cc5621aeeedf33c1902fc"><td class="memItemLeft"><a id="ae3571f05869cc5621aeeedf33c1902fc" name="ae3571f05869cc5621aeeedf33c1902fc"></a>
+ </td><td class="memItemRight"><b>~TEntityQos</b> ()</td></tr>
+<tr class="memdesc:ae3571f05869cc5621aeeedf33c1902fc"><td class="mdescLeft"> </td><td class="mdescRight">QoS 값과 정책 저장소를 파괴합니다. <br/></td></tr>
+<tr class="memitem:ade8c13275dc7a09391da66176f245aa3" id="r_ade8c13275dc7a09391da66176f245aa3"><td class="memTemplParams" colspan="2">template&lt;typename POLICY&gt; </td></tr>
+<tr class="memitem:ade8c13275dc7a09391da66176f245aa3 template"><td class="memItemLeft"><a class="el" href="#aaa14a481df7f6204cc43b11044979111">TEntityQos</a> &amp; </td><td class="memItemRight"><a class="el" href="#ade8c13275dc7a09391da66176f245aa3">policy</a> (const POLICY &amp;p)</td></tr>
+<tr class="memdesc:ade8c13275dc7a09391da66176f245aa3"><td class="mdescLeft"> </td><td class="mdescRight">QoS 값에서 하나의 정책을 대치합니다.  <br/></td></tr>
+<tr class="memitem:a6c86103fd4ade42f063363f7f122129b" id="r_a6c86103fd4ade42f063363f7f122129b"><td class="memTemplParams" colspan="2">template&lt;typename POLICY&gt; </td></tr>
+<tr class="memitem:a6c86103fd4ade42f063363f7f122129b template"><td class="memItemLeft">const POLICY &amp; </td><td class="memItemRight"><a class="el" href="#a6c86103fd4ade42f063363f7f122129b">policy</a> () const</td></tr>
+<tr class="memdesc:a6c86103fd4ade42f063363f7f122129b"><td class="mdescLeft"> </td><td class="mdescRight">이 QoS 타입에 대한 저장된 정책에 액세스합니다.  <br/></td></tr>
+<tr class="memitem:a44b7716666cbe19b989e78e3e2d8eb3c" id="r_a44b7716666cbe19b989e78e3e2d8eb3c"><td class="memTemplParams" colspan="2">template&lt;typename POLICY&gt; </td></tr>
+<tr class="memitem:a44b7716666cbe19b989e78e3e2d8eb3c template"><td class="memItemLeft">POLICY &amp; </td><td class="memItemRight"><a class="el" href="#a44b7716666cbe19b989e78e3e2d8eb3c">policy</a> ()</td></tr>
+<tr class="memdesc:a44b7716666cbe19b989e78e3e2d8eb3c"><td class="mdescLeft"> </td><td class="mdescRight">이 QoS 타입에 대한 저장된 정책에 액세스합니다.  <br/></td></tr>
+<tr class="memitem:a5acd854c8265d3930a018bdba81865b7" id="r_a5acd854c8265d3930a018bdba81865b7"><td class="memTemplParams" colspan="2">template&lt;typename POLICY&gt; </td></tr>
+<tr class="memitem:a5acd854c8265d3930a018bdba81865b7 template"><td class="memItemLeft"><a class="el" href="#aaa14a481df7f6204cc43b11044979111">TEntityQos</a> &amp; </td><td class="memItemRight"><a class="el" href="#a5acd854c8265d3930a018bdba81865b7">operator&lt;&lt;</a> (const POLICY &amp;p)</td></tr>
+<tr class="memdesc:a5acd854c8265d3930a018bdba81865b7"><td class="mdescLeft"> </td><td class="mdescRight">이 QoS 값에 정책을 적용합니다.  <br/></td></tr>
+<tr class="memitem:a7ad4cc07ff31cd89f9beac2b74feda72" id="r_a7ad4cc07ff31cd89f9beac2b74feda72"><td class="memTemplParams" colspan="2">template&lt;typename POLICY&gt; </td></tr>
+<tr class="memitem:a7ad4cc07ff31cd89f9beac2b74feda72 template"><td class="memItemLeft">const <a class="el" href="#aaa14a481df7f6204cc43b11044979111">TEntityQos</a> &amp; </td><td class="memItemRight"><a class="el" href="#a7ad4cc07ff31cd89f9beac2b74feda72">operator&gt;&gt;</a> (POLICY &amp;p) const</td></tr>
+<tr class="memdesc:a7ad4cc07ff31cd89f9beac2b74feda72"><td class="mdescLeft"> </td><td class="mdescRight">이 QoS 값에서 요청된 정책을 복사합니다  <br/></td></tr>
+<tr class="memitem:aab3f5eeceb249bdea4d3a8dd1f599a66" id="r_aab3f5eeceb249bdea4d3a8dd1f599a66"><td class="memItemLeft"><a class="el" href="#aaa14a481df7f6204cc43b11044979111">TEntityQos</a>&lt; DELEGATE &gt; &amp; </td><td class="memItemRight"><a class="el" href="#aab3f5eeceb249bdea4d3a8dd1f599a66">operator=</a> (const <a class="el" href="#aaa14a481df7f6204cc43b11044979111">TEntityQos</a>&lt; DELEGATE &gt; &amp;other)</td></tr>
+<tr class="memdesc:aab3f5eeceb249bdea4d3a8dd1f599a66"><td class="mdescLeft"> </td><td class="mdescRight">동일한 엔터티 타입의 QoS 값에서 정책을 할당합니다.  <br/></td></tr>
+<tr class="memitem:a2f5ca4360615186688f096898563b12d" id="r_a2f5ca4360615186688f096898563b12d"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
+<tr class="memitem:a2f5ca4360615186688f096898563b12d template"><td class="memItemLeft"><a class="el" href="#aaa14a481df7f6204cc43b11044979111">TEntityQos</a>&lt; DELEGATE &gt; &amp; </td><td class="memItemRight"><a class="el" href="#a2f5ca4360615186688f096898563b12d">operator=</a> (const <a class="el" href="#aaa14a481df7f6204cc43b11044979111">TEntityQos</a>&lt; T &gt; &amp;other)</td></tr>
+<tr class="memdesc:a2f5ca4360615186688f096898563b12d"><td class="mdescLeft"> </td><td class="mdescRight">다른 QoS 값에서 정책을 할당합니다.  <br/></td></tr>
+<tr class="inherit_header pub_methods_classdds_1_1core_1_1_value"><td class="dyn-inherit" colspan="2"><span class="dynarrow"><span class="arrowhead closed"></span></span><a class="el" href="classdds_1_1core_1_1_value.html">dds::core::Value&lt; DELEGATE &gt;</a>(으)로부터 상속된 공개 멤버 함수</td></tr>
+<tr class="memitem:a92bfa2b84ebde8e9cd81cb91e32ef9ec inherit pub_methods_classdds_1_1core_1_1_value" id="r_a92bfa2b84ebde8e9cd81cb91e32ef9ec"><td class="memItemLeft">
+ </td><td class="memItemRight"><b>~Value</b> ()</td></tr>
+<tr class="memdesc:a92bfa2b84ebde8e9cd81cb91e32ef9ec inherit pub_methods_classdds_1_1core_1_1_value"><td class="mdescLeft"> </td><td class="mdescRight">저장된 구현 객체 값을 파괴합니다 <br/></td></tr>
+<tr class="memitem:af9917371a74b095f63e8c95ca6ced25a inherit pub_methods_classdds_1_1core_1_1_value" id="r_af9917371a74b095f63e8c95ca6ced25a"><td class="memItemLeft">Value &amp; </td><td class="memItemRight"><a class="el" href="classdds_1_1core_1_1_value.html#af9917371a74b095f63e8c95ca6ced25a">operator=</a> (const Value &amp;other)</td></tr>
+<tr class="memdesc:af9917371a74b095f63e8c95ca6ced25a inherit pub_methods_classdds_1_1core_1_1_value"><td class="mdescLeft"> </td><td class="mdescRight">저장된 구현 객체 값을 복사합니다  <br/></td></tr>
+<tr class="memitem:a34fd669d0051ad90b89d98a323d2d96a inherit pub_methods_classdds_1_1core_1_1_value" id="r_a34fd669d0051ad90b89d98a323d2d96a"><td class="memItemLeft">bool </td><td class="memItemRight"><a class="el" href="classdds_1_1core_1_1_value.html#a34fd669d0051ad90b89d98a323d2d96a">operator==</a> (const Value &amp;other) const</td></tr>
+<tr class="memdesc:a34fd669d0051ad90b89d98a323d2d96a inherit pub_methods_classdds_1_1core_1_1_value"><td class="mdescLeft"> </td><td class="mdescRight">저장된 구현 객체 값을 비교합니다  <br/></td></tr>
+<tr class="memitem:a9b22715713bc0bfc10af93eeaeda80f4 inherit pub_methods_classdds_1_1core_1_1_value" id="r_a9b22715713bc0bfc10af93eeaeda80f4"><td class="memItemLeft">bool </td><td class="memItemRight"><a class="el" href="classdds_1_1core_1_1_value.html#a9b22715713bc0bfc10af93eeaeda80f4">operator!=</a> (const Value &amp;other) const</td></tr>
+<tr class="memdesc:a9b22715713bc0bfc10af93eeaeda80f4 inherit pub_methods_classdds_1_1core_1_1_value"><td class="mdescLeft"> </td><td class="mdescRight">저장된 구현 객체 값을 비교합니다  <br/></td></tr>
+<tr class="memitem:afe089b7e91e4ab927d069c460dac9f51 inherit pub_methods_classdds_1_1core_1_1_value" id="r_afe089b7e91e4ab927d069c460dac9f51"><td class="memItemLeft">
+const DELEGATE * </td><td class="memItemRight"><b>operator-&gt;</b> () const</td></tr>
+<tr class="memdesc:afe089b7e91e4ab927d069c460dac9f51 inherit pub_methods_classdds_1_1core_1_1_value"><td class="mdescLeft"> </td><td class="mdescRight">구현 객체를 반환합니다. <br/></td></tr>
+<tr class="memitem:a91c321ca94d6c95e70994d284099d17e inherit pub_methods_classdds_1_1core_1_1_value" id="r_a91c321ca94d6c95e70994d284099d17e"><td class="memItemLeft">
+const DELEGATE &amp; </td><td class="memItemRight"><b>delegate</b> () const</td></tr>
+<tr class="memdesc:a91c321ca94d6c95e70994d284099d17e inherit pub_methods_classdds_1_1core_1_1_value"><td class="mdescLeft"> </td><td class="mdescRight">구현 객체를 반환합니다. <br/></td></tr>
+<tr class="memitem:afebca1e70d9a8a69997a30534118b761 inherit pub_methods_classdds_1_1core_1_1_value" id="r_afebca1e70d9a8a69997a30534118b761"><td class="memItemLeft">
+ </td><td class="memItemRight"><b>operator DELEGATE &amp;</b> ()</td></tr>
+<tr class="memdesc:afebca1e70d9a8a69997a30534118b761 inherit pub_methods_classdds_1_1core_1_1_value"><td class="mdescLeft"> </td><td class="mdescRight">캐스트 연산자 <br/></td></tr>
+<tr class="memitem:a3b691bb7dfa340e55660b78ac9951b22 inherit pub_methods_classdds_1_1core_1_1_value" id="r_a3b691bb7dfa340e55660b78ac9951b22"><td class="memItemLeft">
+ </td><td class="memItemRight"><b>operator const DELEGATE &amp;</b> () const</td></tr>
+<tr class="memdesc:a3b691bb7dfa340e55660b78ac9951b22 inherit pub_methods_classdds_1_1core_1_1_value"><td class="mdescLeft"> </td><td class="mdescRight">캐스트 연산자 <br/></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-inherited"><a id="inherited" name="inherited"></a>
+추가로 상속된 멤버들</h2></td></tr>
+<tr class="inherit_header pro_attribs_classdds_1_1core_1_1_value"><td class="dyn-inherit" colspan="2"><span class="dynarrow"><span class="arrowhead closed"></span></span><a class="el" href="classdds_1_1core_1_1_value.html">dds::core::Value&lt; DELEGATE &gt;</a>(으)로부터 상속된 보호된 속성</td></tr>
+<tr class="memitem:a524bb581d6961d26653838488712edf4 inherit pro_attribs_classdds_1_1core_1_1_value" id="r_a524bb581d6961d26653838488712edf4"><td class="memItemLeft">
+DELEGATE </td><td class="memItemRight"><b>d_</b></td></tr>
+</table>
+<a id="doc-constructors" name="doc-constructors"></a><h2 class="groupheader" id="header-doc-constructors">생성자와 소멸자</h2>
+<a id="aaa14a481df7f6204cc43b11044979111" name="aaa14a481df7f6204cc43b11044979111"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa14a481df7f6204cc43b11044979111">◆ </a></span>TEntityQos() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename DELEGATE&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdds_1_1core_1_1_t_entity_qos.html">dds::core::TEntityQos</a>&lt; DELEGATE &gt;::TEntityQos </td>
+          <td>(</td>
+          <td class="paramtype">const DELEGATE</td>          <td class="paramname"><span class="paramname"><em>dcps_qos</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>네이티브에서 C++ 정책 값을 초기화합니다. </p>
+<p>DDS QoS</p>
+<dl class="params"><dt>매개변수</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[입력]</td><td class="paramname">dcps_qos</td><td>이 <a class="el" href="group__dds__core.html#ga9c487d701cb3e2131d9da3ddd608a9b4" title="DDS 엔터티가 공유하는 작업을 처리">Entity</a> 타입에 대한 소스 QoS 구조 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a43a78cc84413354c85e0c0becc0a29b7" name="a43a78cc84413354c85e0c0becc0a29b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43a78cc84413354c85e0c0becc0a29b7">◆ </a></span>TEntityQos() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename DELEGATE&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdds_1_1core_1_1_t_entity_qos.html">dds::core::TEntityQos</a>&lt; DELEGATE &gt;::TEntityQos </td>
+          <td>(</td>
+          <td class="paramtype">const TEntityQos&lt; DELEGATE &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>동일한 엔터티 타입에 대한 정책을 복사합니다. </p>
+<dl class="params"><dt>매개변수</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[입력]</td><td class="paramname">other</td><td>복사할 QoS 값 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a5d9e06c3a5daa0ecc536d49863a89d9c" name="a5d9e06c3a5daa0ecc536d49863a89d9c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d9e06c3a5daa0ecc536d49863a89d9c">◆ </a></span>TEntityQos() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename DELEGATE&gt; </div>
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdds_1_1core_1_1_t_entity_qos.html">dds::core::TEntityQos</a>&lt; DELEGATE &gt;::TEntityQos </td>
+          <td>(</td>
+          <td class="paramtype">const TEntityQos&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>qos</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>다른 <a class="el" href="group__dds__core.html#ga9c487d701cb3e2131d9da3ddd608a9b4" title="DDS 엔터티가 공유하는 작업을 처리">Entity</a> 타입에서 이 QoS를 초기화합니다 </p>
+<p>제공된 Topic에서 DataWriter로 및 Topic에서 DataReader로의 변환은 기본 endpoint 기본값으로 시작하고 매핑된 Topic 정책을 복사합니다. TimeBasedFilter와 같은 DataReader 특정 설정은 Topic에서 변환하는 동안 기본값을 유지합니다.</p>
+<dl class="params"><dt>매개변수</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[입력]</td><td class="paramname">qos</td><td>소스 <a class="el" href="group__dds__core.html#ga9c487d701cb3e2131d9da3ddd608a9b4" title="DDS 엔터티가 공유하는 작업을 처리">Entity</a> 타입의 QoS 값 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="doc-func-members" name="doc-func-members"></a><h2 class="groupheader" id="header-doc-func-members">멤버 함수</h2>
+<a id="a5acd854c8265d3930a018bdba81865b7" name="a5acd854c8265d3930a018bdba81865b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5acd854c8265d3930a018bdba81865b7">◆ </a></span>operator&lt;&lt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename DELEGATE&gt; </div>
+<div class="memtemplate">
+template&lt;typename POLICY&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#aaa14a481df7f6204cc43b11044979111">TEntityQos</a> &amp; <a class="el" href="classdds_1_1core_1_1_t_entity_qos.html">dds::core::TEntityQos</a>&lt; DELEGATE &gt;::operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">const POLICY &amp;</td>          <td class="paramname"><span class="paramname"><em>p</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>이 QoS 값에 정책을 적용합니다. </p>
+<p>이것은 QoS 값을 수정합니다. Entity에 별도로 적용하십시오.</p>
+<dl class="params"><dt>매개변수</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[입력]</td><td class="paramname">p</td><td>이 <a class="el" href="group__dds__core.html#ga9c487d701cb3e2131d9da3ddd608a9b4" title="DDS 엔터티가 공유하는 작업을 처리">Entity</a> 타입에서 지원하는 정책</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>반환값</dt><dd>이 QoS 값 </dd></dl>
+
+</div>
+</div>
+<a id="aab3f5eeceb249bdea4d3a8dd1f599a66" name="aab3f5eeceb249bdea4d3a8dd1f599a66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab3f5eeceb249bdea4d3a8dd1f599a66">◆ </a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename DELEGATE&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#aaa14a481df7f6204cc43b11044979111">TEntityQos</a>&lt; DELEGATE &gt; &amp; <a class="el" href="classdds_1_1core_1_1_t_entity_qos.html">dds::core::TEntityQos</a>&lt; DELEGATE &gt;::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#aaa14a481df7f6204cc43b11044979111">TEntityQos</a>&lt; DELEGATE &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>동일한 엔터티 타입의 QoS 값에서 정책을 할당합니다. </p>
+<dl class="params"><dt>매개변수</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[입력]</td><td class="paramname">other</td><td>소스 QoS 값</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>반환값</dt><dd>이 QoS 값 </dd></dl>
+
+</div>
+</div>
+<a id="a2f5ca4360615186688f096898563b12d" name="a2f5ca4360615186688f096898563b12d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f5ca4360615186688f096898563b12d">◆ </a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename DELEGATE&gt; </div>
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#aaa14a481df7f6204cc43b11044979111">TEntityQos</a>&lt; DELEGATE &gt; &amp; <a class="el" href="classdds_1_1core_1_1_t_entity_qos.html">dds::core::TEntityQos</a>&lt; DELEGATE &gt;::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#aaa14a481df7f6204cc43b11044979111">TEntityQos</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>다른 QoS 값에서 정책을 할당합니다. </p>
+<p>크로스Entity 할당은 해당 전문화에 의해 매핑된 정책을 변경합니다.</p>
+<dl class="params"><dt>매개변수</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[입력]</td><td class="paramname">other</td><td>소스 QoS 값</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>반환값</dt><dd>이 QoS 값 </dd></dl>
+
+</div>
+</div>
+<a id="a7ad4cc07ff31cd89f9beac2b74feda72" name="a7ad4cc07ff31cd89f9beac2b74feda72"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ad4cc07ff31cd89f9beac2b74feda72">◆ </a></span>operator&gt;&gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename DELEGATE&gt; </div>
+<div class="memtemplate">
+template&lt;typename POLICY&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="#aaa14a481df7f6204cc43b11044979111">TEntityQos</a> &amp; <a class="el" href="classdds_1_1core_1_1_t_entity_qos.html">dds::core::TEntityQos</a>&lt; DELEGATE &gt;::operator&gt;&gt; </td>
+          <td>(</td>
+          <td class="paramtype">POLICY &amp;</td>          <td class="paramname"><span class="paramname"><em>p</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>이 QoS 값에서 요청된 정책을 복사합니다 </p>
+<dl class="params"><dt>매개변수</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[출력]</td><td class="paramname">p</td><td>지원되는 정책의 대상</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>반환값</dt><dd>이 QoS 값 </dd></dl>
+
+</div>
+</div>
+<a id="a44b7716666cbe19b989e78e3e2d8eb3c" name="a44b7716666cbe19b989e78e3e2d8eb3c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44b7716666cbe19b989e78e3e2d8eb3c">◆ </a></span>policy() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename DELEGATE&gt; </div>
+<div class="memtemplate">
+template&lt;typename POLICY&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">POLICY &amp; <a class="el" href="classdds_1_1core_1_1_t_entity_qos.html">dds::core::TEntityQos</a>&lt; DELEGATE &gt;::policy </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>이 QoS 타입에 대한 저장된 정책에 액세스합니다. </p>
+<p>이 참조는 C++ 정책을 노출시킨다. 참조를 통해 편집하면 기본 QoS 구조가 바뀌지 않게 된다. QoS를 Entity에 적용하기 전에 수정된 정책을 <code><a class="el" href="namespacedds_1_1core_1_1policy.html" title="DDS Entity의 QoS 정책">policy(value)</a></code> 에게 전달한다.</p>
+<dl class="tparams"><dt>템플릿 파라메터</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">POLICY</td><td>이 QoS 값이 지원하는 정책 타입</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>반환값</dt><dd>해당 정책에 대한 변경 가능한 참조 </dd></dl>
+
+</div>
+</div>
+<a id="a6c86103fd4ade42f063363f7f122129b" name="a6c86103fd4ade42f063363f7f122129b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c86103fd4ade42f063363f7f122129b">◆ </a></span>policy() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename DELEGATE&gt; </div>
+<div class="memtemplate">
+template&lt;typename POLICY&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const POLICY &amp; <a class="el" href="classdds_1_1core_1_1_t_entity_qos.html">dds::core::TEntityQos</a>&lt; DELEGATE &gt;::policy </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>이 QoS 타입에 대한 저장된 정책에 액세스합니다. </p>
+<dl class="tparams"><dt>템플릿 파라메터</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">POLICY</td><td>이 QoS 값이 지원하는 정책 타입</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>반환값</dt><dd>해당 정책에 대한 Const 참조 </dd></dl>
+
+</div>
+</div>
+<a id="ade8c13275dc7a09391da66176f245aa3" name="ade8c13275dc7a09391da66176f245aa3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade8c13275dc7a09391da66176f245aa3">◆ </a></span>policy() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename DELEGATE&gt; </div>
+<div class="memtemplate">
+template&lt;typename POLICY&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#aaa14a481df7f6204cc43b11044979111">TEntityQos</a> &amp; <a class="el" href="classdds_1_1core_1_1_t_entity_qos.html">dds::core::TEntityQos</a>&lt; DELEGATE &gt;::policy </td>
+          <td>(</td>
+          <td class="paramtype">const POLICY &amp;</td>          <td class="paramname"><span class="paramname"><em>p</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>QoS 값에서 하나의 정책을 대치합니다. </p>
+<p>이 특수화는 <a class="el" href="group__dds__core.html#ga9c487d701cb3e2131d9da3ddd608a9b4" title="DDS 엔터티가 공유하는 작업을 처리">Entity</a> 생성자와 설정 함수가 사용하는 네이티브 정책 구조체와 <code><a class="el" href="#a44b7716666cbe19b989e78e3e2d8eb3c" title="이 QoS 타입에 대한 저장된 정책에 액세스합니다.">policy&lt;POLICY&gt;()</a></code> 가 제공하는 C++ 정책을 함께 갱신합니다. 갱신한 QoS 값을 Entity에 전달할 수 있습니다.</p>
+<dl class="tparams"><dt>템플릿 파라메터</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">POLICY</td><td>저장할 정책 타입 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>매개변수</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[입력]</td><td class="paramname">p</td><td>복사할 정책 값</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>반환값</dt><dd>이 QoS 값 </dd></dl>
+
+</div>
+</div>
+<hr/>이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.:<ul>
+<li>include/gurumdds/cpp/core/<b>TEntityQos.hpp</b></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div class="page-nav-panel" id="page-nav">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div class="navpath" id="nav-path"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="namespacedds.html">dds</a></li><li class="navelem"><a href="namespacedds_1_1core.html">core</a></li><li class="navelem"><a href="classdds_1_1core_1_1_t_entity_qos.html">TEntityQos</a></li>
+    <li class="footer">다음에 의해 생성됨 :  <a href="https://www.doxygen.org/index.html"><img alt="doxygen" class="footer" height="31" src="doxygen.svg" width="104"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

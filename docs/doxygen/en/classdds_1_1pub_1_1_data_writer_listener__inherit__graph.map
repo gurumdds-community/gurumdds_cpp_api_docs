@@ -1,0 +1,5 @@
+<map id="dds::pub::DataWriterListener&lt; T &gt;" name="dds::pub::DataWriterListener&lt; T &gt;">
+<area shape="rect" id="Node000001" target="_top" title="Receives status notifications from a typed writer." alt="" coords="5,5,213,32"/>
+<area shape="rect" id="Node000002" href="$classdds_1_1pub_1_1_no_op_data_writer_listener.html" target="_top" title="Provides default no&#45;op writer callbacks for selective overriding." alt="" coords="27,80,192,123"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="111,45,112,81,107,79,107,49"/>
+</map>

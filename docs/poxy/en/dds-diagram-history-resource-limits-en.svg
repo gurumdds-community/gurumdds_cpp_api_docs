@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1140" height="228" viewBox="0 0 1140 228" role="img" aria-label="The Reader combines KeepLast(2) with a limit of four samples across two instances and two samples per instance. After receiving three values per key, the Reader retains second and third for both keys." data-dds-diagram="true">
+  <title id="history-resource-limits-en-title">ResourceLimits across two keys</title>
+  <desc>The Reader combines KeepLast(2) with a limit of four samples across two instances and two samples per instance. After receiving three values per key, the Reader retains second and third for both keys.</desc>
+  <defs>
+    <marker id="history-resource-limits-en-arrow" viewBox="0 0 10 12" refX="9" refY="6" markerWidth="9" markerHeight="10" orient="auto" markerUnits="userSpaceOnUse"><path d="M 1,1 L 9,6 L 1,11" fill="none" stroke="#20354B" stroke-width="1.2"/></marker>
+    <marker id="history-resource-limits-en-blue" viewBox="0 0 11 10" refX="10" refY="5" markerWidth="10" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M 0,0 L 11,5 L 0,10 Z" fill="#356B96"/></marker>
+    <marker id="history-resource-limits-en-uml" viewBox="0 0 15 15" refX="14" refY="7.5" markerWidth="15" markerHeight="15" orient="auto" markerUnits="userSpaceOnUse"><path d="M 1,1 L 14,7.5 L 1,14 Z" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/></marker>
+  </defs>
+  <rect width="1140" height="228" fill="#FFFFFF"/>
+  <g fill="#20354B" font-family="Arial, Malgun Gothic, sans-serif">
+    <rect x="25" y="30" width="230" height="46" fill="#EFF5FA" stroke="#20354B" stroke-width="1.15"/>
+    <text x="140" y="58" text-anchor="middle" font-size="16" font-weight="bold">Instance</text>
+    <rect x="25" y="76" width="230" height="46" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <text x="140" y="104" text-anchor="middle" font-size="15" font-family="Consolas, Menlo, monospace">key 7</text>
+    <rect x="25" y="122" width="230" height="46" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <text x="140" y="150" text-anchor="middle" font-size="15" font-family="Consolas, Menlo, monospace">key 8</text>
+    <rect x="255" y="30" width="425" height="46" fill="#EFF5FA" stroke="#20354B" stroke-width="1.15"/>
+    <text x="467.5" y="58" text-anchor="middle" font-size="16" font-weight="bold">Arrivals</text>
+    <rect x="255" y="76" width="425" height="46" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <text x="467.5" y="104" text-anchor="middle" font-size="15" font-family="Consolas, Menlo, monospace">first, second, third</text>
+    <rect x="255" y="122" width="425" height="46" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <text x="467.5" y="150" text-anchor="middle" font-size="15" font-family="Consolas, Menlo, monospace">first, second, third</text>
+    <rect x="680" y="30" width="435" height="46" fill="#EFF5FA" stroke="#20354B" stroke-width="1.15"/>
+    <text x="897.5" y="58" text-anchor="middle" font-size="16" font-weight="bold">Retained by the Reader</text>
+    <rect x="680" y="76" width="435" height="46" fill="#EFF5FA" stroke="#20354B" stroke-width="1.15"/>
+    <text x="897.5" y="104" text-anchor="middle" font-size="15" font-family="Consolas, Menlo, monospace">second, third</text>
+    <rect x="680" y="122" width="435" height="46" fill="#EFF5FA" stroke="#20354B" stroke-width="1.15"/>
+    <text x="897.5" y="150" text-anchor="middle" font-size="15" font-family="Consolas, Menlo, monospace">second, third</text>
+    <text x="570" y="204" text-anchor="middle" font-size="15">ResourceLimits(4, 2, 2) sets total samples, instances, and samples per instance, in that order.</text>
+  </g>
+</svg>

@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1140" height="228" viewBox="0 0 1140 228" role="img" aria-label="Reader가 key 7을 제거하지 않고 읽은 뒤 key 8을 받습니다. 읽음과 읽지 않음 mask를 사용해 서로 다른 key를 선택합니다." data-dds-diagram="true">
+  <title id="sample-state-selection-ko-title">읽은 레코드와 읽지 않은 레코드 선택</title>
+  <desc>Reader가 key 7을 제거하지 않고 읽은 뒤 key 8을 받습니다. 읽음과 읽지 않음 mask를 사용해 서로 다른 key를 선택합니다.</desc>
+  <defs>
+    <marker id="sample-state-selection-ko-arrow" viewBox="0 0 10 12" refX="9" refY="6" markerWidth="9" markerHeight="10" orient="auto" markerUnits="userSpaceOnUse"><path d="M 1,1 L 9,6 L 1,11" fill="none" stroke="#20354B" stroke-width="1.2"/></marker>
+    <marker id="sample-state-selection-ko-blue" viewBox="0 0 11 10" refX="10" refY="5" markerWidth="10" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M 0,0 L 11,5 L 0,10 Z" fill="#356B96"/></marker>
+    <marker id="sample-state-selection-ko-uml" viewBox="0 0 15 15" refX="14" refY="7.5" markerWidth="15" markerHeight="15" orient="auto" markerUnits="userSpaceOnUse"><path d="M 1,1 L 14,7.5 L 1,14 Z" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/></marker>
+  </defs>
+  <rect width="1140" height="228" fill="#FFFFFF"/>
+  <g fill="#20354B" font-family="Arial, Malgun Gothic, sans-serif">
+    <rect x="25" y="30" width="220" height="46" fill="#EFF5FA" stroke="#20354B" stroke-width="1.15"/>
+    <text x="135" y="58" text-anchor="middle" font-size="16" font-weight="bold">Reader history</text>
+    <rect x="25" y="76" width="220" height="46" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <text x="135" y="104" text-anchor="middle" font-size="15" font-family="Consolas, Menlo, monospace">key 7</text>
+    <rect x="25" y="122" width="220" height="46" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <text x="135" y="150" text-anchor="middle" font-size="15" font-family="Consolas, Menlo, monospace">key 8</text>
+    <rect x="245" y="30" width="225" height="46" fill="#EFF5FA" stroke="#20354B" stroke-width="1.15"/>
+    <text x="357.5" y="58" text-anchor="middle" font-size="16" font-weight="bold">SampleState</text>
+    <rect x="245" y="76" width="225" height="46" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <text x="357.5" y="104" text-anchor="middle" font-size="15">읽음</text>
+    <rect x="245" y="122" width="225" height="46" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <text x="357.5" y="150" text-anchor="middle" font-size="15">읽지 않음</text>
+    <rect x="470" y="30" width="420" height="46" fill="#EFF5FA" stroke="#20354B" stroke-width="1.15"/>
+    <text x="680" y="58" text-anchor="middle" font-size="16" font-weight="bold">선택</text>
+    <rect x="470" y="76" width="420" height="46" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <text x="680" y="104" text-anchor="middle" font-size="15" font-family="Consolas, Menlo, monospace">read() + alive()</text>
+    <rect x="470" y="122" width="420" height="46" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <text x="680" y="150" text-anchor="middle" font-size="15" font-family="Consolas, Menlo, monospace">not_read() + alive()</text>
+    <rect x="890" y="30" width="225" height="46" fill="#EFF5FA" stroke="#20354B" stroke-width="1.15"/>
+    <text x="1002.5" y="58" text-anchor="middle" font-size="16" font-weight="bold">반환된 key</text>
+    <rect x="890" y="76" width="225" height="46" fill="#EFF5FA" stroke="#20354B" stroke-width="1.15"/>
+    <text x="1002.5" y="104" text-anchor="middle" font-size="15" font-family="Consolas, Menlo, monospace">7</text>
+    <rect x="890" y="122" width="225" height="46" fill="#EFF5FA" stroke="#20354B" stroke-width="1.15"/>
+    <text x="1002.5" y="150" text-anchor="middle" font-size="15" font-family="Consolas, Menlo, monospace">8</text>
+    <text x="570" y="204" text-anchor="middle" font-size="15">이 예제는 SampleState와 InstanceState를 결합합니다. ViewState::any()는 view를 제한하지 않습니다.</text>
+  </g>
+</svg>

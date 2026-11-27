@@ -1,0 +1,7 @@
+<map id="dds::sub::DataReader&lt; T, DELEGATE &gt;" name="dds::sub::DataReader&lt; T, DELEGATE &gt;">
+<area shape="rect" id="Node000001" target="_top" title="Topic에서 지정된 타입의 sample을 수신합니다." alt="" coords="5,187,144,229"/>
+<area shape="rect" id="Node000002" href="$classdds_1_1core_1_1_t_entity.html" target="_top" title=" " alt="" coords="7,96,142,139"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="76,152,77,188,72,186,73,156"/>
+<area shape="rect" id="Node000003" href="$classdds_1_1core_1_1_reference.html" target="_top" title="DDS 참조 타입에 대한 공유&#45;handle 연산을 정의합니다." alt="" coords="8,5,141,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="75,60,77,97,72,96,74,66"/>
+</map>

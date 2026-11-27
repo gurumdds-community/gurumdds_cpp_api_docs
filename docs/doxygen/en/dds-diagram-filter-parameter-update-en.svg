@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1140" height="228" viewBox="0 0 1140 228" role="img" aria-label="The example changes the lower key threshold from 5 to 15 and sends fresh samples after each setting. The message parameter remains unchanged." data-dds-diagram="true">
+  <title id="filter-parameter-update-en-title">Filter parameter updates apply to later samples</title>
+  <desc>The example changes the lower key threshold from 5 to 15 and sends fresh samples after each setting. The message parameter remains unchanged.</desc>
+  <defs>
+    <marker id="filter-parameter-update-en-arrow" viewBox="0 0 10 12" refX="9" refY="6" markerWidth="9" markerHeight="10" orient="auto" markerUnits="userSpaceOnUse"><path d="M 1,1 L 9,6 L 1,11" fill="none" stroke="#20354B" stroke-width="1.2"/></marker>
+    <marker id="filter-parameter-update-en-blue" viewBox="0 0 11 10" refX="10" refY="5" markerWidth="10" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M 0,0 L 11,5 L 0,10 Z" fill="#356B96"/></marker>
+    <marker id="filter-parameter-update-en-uml" viewBox="0 0 15 15" refX="14" refY="7.5" markerWidth="15" markerHeight="15" orient="auto" markerUnits="userSpaceOnUse"><path d="M 1,1 L 14,7.5 L 1,14 Z" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/></marker>
+  </defs>
+  <rect width="1140" height="228" fill="#FFFFFF"/>
+  <g fill="#20354B" font-family="Arial, Malgun Gothic, sans-serif">
+    <rect x="25" y="30" width="320" height="46" fill="#EFF5FA" stroke="#20354B" stroke-width="1.15"/>
+    <text x="185" y="58" text-anchor="middle" font-size="16" font-weight="bold">Filter parameter</text>
+    <rect x="25" y="76" width="320" height="46" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <text x="185" y="104" text-anchor="middle" font-size="15" font-family="Consolas, Menlo, monospace">%0 = 5</text>
+    <rect x="25" y="122" width="320" height="46" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <text x="185" y="150" text-anchor="middle" font-size="15" font-family="Consolas, Menlo, monospace">%0 = 15</text>
+    <rect x="345" y="30" width="385" height="46" fill="#EFF5FA" stroke="#20354B" stroke-width="1.15"/>
+    <text x="537.5" y="58" text-anchor="middle" font-size="16" font-weight="bold">Keys sent</text>
+    <rect x="345" y="76" width="385" height="46" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <text x="537.5" y="104" text-anchor="middle" font-size="15" font-family="Consolas, Menlo, monospace">3, 7</text>
+    <rect x="345" y="122" width="385" height="46" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <text x="537.5" y="150" text-anchor="middle" font-size="15" font-family="Consolas, Menlo, monospace">8, 20</text>
+    <rect x="730" y="30" width="385" height="46" fill="#EFF5FA" stroke="#20354B" stroke-width="1.15"/>
+    <text x="922.5" y="58" text-anchor="middle" font-size="16" font-weight="bold">Key accepted</text>
+    <rect x="730" y="76" width="385" height="46" fill="#EFF5FA" stroke="#20354B" stroke-width="1.15"/>
+    <text x="922.5" y="104" text-anchor="middle" font-size="15" font-family="Consolas, Menlo, monospace">7</text>
+    <rect x="730" y="122" width="385" height="46" fill="#EFF5FA" stroke="#20354B" stroke-width="1.15"/>
+    <text x="922.5" y="150" text-anchor="middle" font-size="15" font-family="Consolas, Menlo, monospace">20</text>
+    <text x="570" y="204" text-anchor="middle" font-size="15">Both batches use message = &quot;filter example&quot;. The expression remains userId &gt; %0 AND message = %1.</text>
+  </g>
+</svg>

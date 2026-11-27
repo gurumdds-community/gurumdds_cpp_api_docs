@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1140" height="312" viewBox="0 0 1140 312" role="img" aria-label="Deadline은 갱신 간격의 상한을 확인합니다. TimeBasedFilter는 Reader가 보관하는 샘플 사이의 최소 간격을 설정합니다. Reader는 Deadline이 최소 간격 이상인지 검사합니다." data-dds-diagram="true">
+  <title id="deadline-separation-ko-title">Deadline과 TimeBasedFilter가 측정하는 간격</title>
+  <desc>Deadline은 갱신 간격의 상한을 확인합니다. TimeBasedFilter는 Reader가 보관하는 샘플 사이의 최소 간격을 설정합니다. Reader는 Deadline이 최소 간격 이상인지 검사합니다.</desc>
+  <defs>
+    <marker id="deadline-separation-ko-arrow" viewBox="0 0 10 12" refX="9" refY="6" markerWidth="9" markerHeight="10" orient="auto" markerUnits="userSpaceOnUse"><path d="M 1,1 L 9,6 L 1,11" fill="none" stroke="#20354B" stroke-width="1.2"/></marker>
+    <marker id="deadline-separation-ko-blue" viewBox="0 0 11 10" refX="10" refY="5" markerWidth="10" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M 0,0 L 11,5 L 0,10 Z" fill="#356B96"/></marker>
+    <marker id="deadline-separation-ko-uml" viewBox="0 0 15 15" refX="14" refY="7.5" markerWidth="15" markerHeight="15" orient="auto" markerUnits="userSpaceOnUse"><path d="M 1,1 L 14,7.5 L 1,14 Z" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/></marker>
+  </defs>
+  <rect width="1140" height="312" fill="#FFFFFF"/>
+  <g fill="#20354B" font-family="Arial, Malgun Gothic, sans-serif">
+    <path d="M 243 94 H 1093" fill="none" stroke="#20354B" stroke-width="1.15" marker-end="url(#deadline-separation-ko-arrow)"/>
+    <path d="M 243 209 H 1093" fill="none" stroke="#20354B" stroke-width="1.15" marker-end="url(#deadline-separation-ko-arrow)"/>
+    <path d="M 330 50 H 812" fill="none" stroke="#356B96" stroke-width="1.7" marker-end="url(#deadline-separation-ko-blue)"/>
+    <path d="M 330 164 H 695" fill="none" stroke="#356B96" stroke-width="1.7" marker-end="url(#deadline-separation-ko-blue)"/>
+    <circle cx="330" cy="94" r="4" fill="#20354B"/>
+    <circle cx="812" cy="94" r="4" fill="#20354B"/>
+    <circle cx="330" cy="209" r="4" fill="#20354B"/>
+    <circle cx="492" cy="209" r="4" fill="#20354B"/>
+    <circle cx="695" cy="209" r="4" fill="#20354B"/>
+    <path d="M 812 63 V 94" fill="none" stroke="#20354B" stroke-width="1.15" stroke-dasharray="5 4"/>
+    <path d="M 695 177 V 209" fill="none" stroke="#20354B" stroke-width="1.15" stroke-dasharray="5 4"/>
+    <text x="29" y="90" text-anchor="start" font-size="16" font-weight="bold">Deadline</text>
+    <text x="29" y="204" text-anchor="start" font-size="16" font-weight="bold">TimeBasedFilter</text>
+    <text x="570" y="40" text-anchor="middle" font-size="15">최대 갱신 간격</text>
+    <text x="511" y="154" text-anchor="middle" font-size="15">최소 수신 간격</text>
+    <text x="331" y="120" text-anchor="middle" font-size="16">마지막 갱신</text>
+    <text x="817" y="120" text-anchor="middle" font-size="16">갱신이 없으면 Deadline 놓침</text>
+    <text x="330" y="235" text-anchor="middle" font-size="16">샘플 보관</text>
+    <text x="492" y="235" text-anchor="middle" font-size="14">너무 이른 샘플 제외</text>
+    <text x="714" y="235" text-anchor="middle" font-size="14">다음 샘플 보관 가능</text>
+    <text x="570" y="286" text-anchor="middle" font-size="15">Reader의 deadline.period는 time_based_filter.minimum_separation 이상이어야 합니다.</text>
+  </g>
+</svg>

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1140" height="219" viewBox="0 0 1140 219" role="img" aria-label="두 콜백이 활성화되면 DDS는 Subscriber 콜백을 먼저 호출합니다. notify_datareaders는 데이터가 있는 Reader의 콜백을 예약합니다." data-dds-diagram="true">
+  <title id="subscriber-dispatch-ko-title">Subscriber와 Reader의 데이터 알림</title>
+  <desc>두 콜백이 활성화되면 DDS는 Subscriber 콜백을 먼저 호출합니다. notify_datareaders는 데이터가 있는 Reader의 콜백을 예약합니다.</desc>
+  <defs>
+    <marker id="subscriber-dispatch-ko-arrow" viewBox="0 0 10 12" refX="9" refY="6" markerWidth="9" markerHeight="10" orient="auto" markerUnits="userSpaceOnUse"><path d="M 1,1 L 9,6 L 1,11" fill="none" stroke="#20354B" stroke-width="1.2"/></marker>
+    <marker id="subscriber-dispatch-ko-blue" viewBox="0 0 11 10" refX="10" refY="5" markerWidth="10" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M 0,0 L 11,5 L 0,10 Z" fill="#356B96"/></marker>
+    <marker id="subscriber-dispatch-ko-uml" viewBox="0 0 15 15" refX="14" refY="7.5" markerWidth="15" markerHeight="15" orient="auto" markerUnits="userSpaceOnUse"><path d="M 1,1 L 14,7.5 L 1,14 Z" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/></marker>
+  </defs>
+  <rect width="1140" height="219" fill="#FFFFFF"/>
+  <g fill="#20354B" font-family="Arial, Malgun Gothic, sans-serif">
+    <rect x="24" y="64" width="233.25" height="84" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <text x="140.625" y="100" text-anchor="middle" font-size="16" font-weight="bold">데이터 도착</text>
+    <text x="140.625" y="122" text-anchor="middle" font-size="15">Reader history</text>
+    <path d="M 257.25 106 H 310.25" fill="none" stroke="#20354B" stroke-width="1.15" marker-end="url(#subscriber-dispatch-ko-arrow)"/>
+    <rect x="310.25" y="64" width="233.25" height="84" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <text x="426.875" y="100" text-anchor="middle" font-size="16" font-weight="bold">Subscriber</text>
+    <text x="426.875" y="122" text-anchor="middle" font-size="15" font-family="Consolas, Menlo, monospace">on_data_on_readers()</text>
+    <path d="M 543.5 106 H 596.5" fill="none" stroke="#20354B" stroke-width="1.15" marker-end="url(#subscriber-dispatch-ko-arrow)"/>
+    <rect x="596.5" y="64" width="233.25" height="84" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <text x="713.125" y="100" text-anchor="middle" font-size="16" font-weight="bold">애플리케이션 스레드</text>
+    <text x="713.125" y="122" text-anchor="middle" font-size="15" font-family="Consolas, Menlo, monospace">notify_datareaders()</text>
+    <path d="M 829.75 106 H 882.75" fill="none" stroke="#356B96" stroke-width="1.7" marker-end="url(#subscriber-dispatch-ko-blue)"/>
+    <rect x="882.75" y="64" width="233.25" height="84" fill="#EFF5FA" stroke="#20354B" stroke-width="1.15"/>
+    <text x="999.375" y="100" text-anchor="middle" font-size="16" font-weight="bold">DataReader</text>
+    <text x="999.375" y="122" text-anchor="middle" font-size="15" font-family="Consolas, Menlo, monospace">on_data_available()</text>
+    <text x="570" y="188" text-anchor="middle" font-size="15">등록한 동안 두 Listener를 유지합니다. 이 예제의 콜백은 애플리케이션에서 확인할 flag를 설정합니다.</text>
+  </g>
+</svg>

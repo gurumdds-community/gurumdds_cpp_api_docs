@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1140" height="219" viewBox="0 0 1140 219" role="img" aria-label="C QoS를 기본값으로 초기화하고 이름으로 XML profile을 읽습니다. 결과를 C++ QoS 클래스로 읽는 동안 C 저장소를 유지합니다." data-dds-diagram="true">
+  <title id="xml-qos-load-ko-title">XML QoS profile 읽기와 확인</title>
+  <desc>C QoS를 기본값으로 초기화하고 이름으로 XML profile을 읽습니다. 결과를 C++ QoS 클래스로 읽는 동안 C 저장소를 유지합니다.</desc>
+  <defs>
+    <marker id="xml-qos-load-ko-arrow" viewBox="0 0 10 12" refX="9" refY="6" markerWidth="9" markerHeight="10" orient="auto" markerUnits="userSpaceOnUse"><path d="M 1,1 L 9,6 L 1,11" fill="none" stroke="#20354B" stroke-width="1.2"/></marker>
+    <marker id="xml-qos-load-ko-blue" viewBox="0 0 11 10" refX="10" refY="5" markerWidth="10" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M 0,0 L 11,5 L 0,10 Z" fill="#356B96"/></marker>
+    <marker id="xml-qos-load-ko-uml" viewBox="0 0 15 15" refX="14" refY="7.5" markerWidth="15" markerHeight="15" orient="auto" markerUnits="userSpaceOnUse"><path d="M 1,1 L 14,7.5 L 1,14 Z" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/></marker>
+  </defs>
+  <rect width="1140" height="219" fill="#FFFFFF"/>
+  <g fill="#20354B" font-family="Arial, Malgun Gothic, sans-serif">
+    <rect x="24" y="64" width="233.25" height="84" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <text x="140.625" y="100" text-anchor="middle" font-size="16" font-weight="bold">C QoS 기본값</text>
+    <text x="140.625" y="122" text-anchor="middle" font-size="15" font-family="Consolas, Menlo, monospace">dds_*Qos_copy()</text>
+    <path d="M 257.25 106 H 310.25" fill="none" stroke="#20354B" stroke-width="1.15" marker-end="url(#xml-qos-load-ko-arrow)"/>
+    <rect x="310.25" y="64" width="233.25" height="84" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <text x="426.875" y="100" text-anchor="middle" font-size="16" font-weight="bold">XML profile</text>
+    <text x="426.875" y="122" text-anchor="middle" font-size="15" font-family="Consolas, Menlo, monospace" textLength="211" lengthAdjust="spacingAndGlyphs">dds_xml_QosProfile_get_*_qos()</text>
+    <path d="M 543.5 106 H 596.5" fill="none" stroke="#356B96" stroke-width="1.7" marker-end="url(#xml-qos-load-ko-blue)"/>
+    <rect x="596.5" y="64" width="233.25" height="84" fill="#EFF5FA" stroke="#20354B" stroke-width="1.15"/>
+    <text x="713.125" y="100" text-anchor="middle" font-size="16" font-weight="bold">C++ QoS 값</text>
+    <text x="713.125" y="122" text-anchor="middle" font-size="15" font-family="Consolas, Menlo, monospace" textLength="211" lengthAdjust="spacingAndGlyphs">DataWriterQos / DataReaderQos</text>
+    <path d="M 829.75 106 H 882.75" fill="none" stroke="#20354B" stroke-width="1.15" marker-end="url(#xml-qos-load-ko-arrow)"/>
+    <rect x="882.75" y="64" width="233.25" height="84" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <text x="999.375" y="100" text-anchor="middle" font-size="16" font-weight="bold">설정값 비교</text>
+    <text x="999.375" y="122" text-anchor="middle" font-size="15">기본값과 XML profile</text>
+    <text x="570" y="188" text-anchor="middle" font-size="15">예제는 C++ 값을 확인하는 동안 C profile 저장소를 유지합니다.</text>
+  </g>
+</svg>

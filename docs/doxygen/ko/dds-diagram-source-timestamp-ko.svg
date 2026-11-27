@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1140" height="219" viewBox="0 0 1140 219" role="img" aria-label="Participant에서 timestamp를 얻어 write()에 전달하고 Reader에서 SampleInfo::timestamp()로 확인합니다. 애플리케이션의 대기 시간은 steady clock으로 측정합니다." data-dds-diagram="true">
+  <title id="source-timestamp-ko-title">소스 timestamp가 샘플과 함께 전달되는 경로</title>
+  <desc>Participant에서 timestamp를 얻어 write()에 전달하고 Reader에서 SampleInfo::timestamp()로 확인합니다. 애플리케이션의 대기 시간은 steady clock으로 측정합니다.</desc>
+  <defs>
+    <marker id="source-timestamp-ko-arrow" viewBox="0 0 10 12" refX="9" refY="6" markerWidth="9" markerHeight="10" orient="auto" markerUnits="userSpaceOnUse"><path d="M 1,1 L 9,6 L 1,11" fill="none" stroke="#20354B" stroke-width="1.2"/></marker>
+    <marker id="source-timestamp-ko-blue" viewBox="0 0 11 10" refX="10" refY="5" markerWidth="10" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M 0,0 L 11,5 L 0,10 Z" fill="#356B96"/></marker>
+    <marker id="source-timestamp-ko-uml" viewBox="0 0 15 15" refX="14" refY="7.5" markerWidth="15" markerHeight="15" orient="auto" markerUnits="userSpaceOnUse"><path d="M 1,1 L 14,7.5 L 1,14 Z" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/></marker>
+  </defs>
+  <rect width="1140" height="219" fill="#FFFFFF"/>
+  <g fill="#20354B" font-family="Arial, Malgun Gothic, sans-serif">
+    <rect x="24" y="64" width="328.6666666666667" height="84" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <text x="188.33333333333334" y="100" text-anchor="middle" font-size="16" font-weight="bold">DomainParticipant</text>
+    <text x="188.33333333333334" y="122" text-anchor="middle" font-size="15" font-family="Consolas, Menlo, monospace">current_time()</text>
+    <path d="M 352.6666666666667 106 H 405.6666666666667" fill="none" stroke="#20354B" stroke-width="1.15" marker-end="url(#source-timestamp-ko-arrow)"/>
+    <rect x="405.6666666666667" y="64" width="328.6666666666667" height="84" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <text x="570" y="100" text-anchor="middle" font-size="16" font-weight="bold">DataWriter</text>
+    <text x="570" y="122" text-anchor="middle" font-size="15" font-family="Consolas, Menlo, monospace">write(sample, handle, t)</text>
+    <path d="M 734.3333333333334 106 H 787.3333333333334" fill="none" stroke="#356B96" stroke-width="1.7" marker-end="url(#source-timestamp-ko-blue)"/>
+    <rect x="787.3333333333334" y="64" width="328.6666666666667" height="84" fill="#EFF5FA" stroke="#20354B" stroke-width="1.15"/>
+    <text x="951.6666666666667" y="100" text-anchor="middle" font-size="16" font-weight="bold">DataReader</text>
+    <text x="951.6666666666667" y="122" text-anchor="middle" font-size="15" font-family="Consolas, Menlo, monospace">sample.info().timestamp()</text>
+    <text x="570" y="188" text-anchor="middle" font-size="15">로컬 대기 시간은 std::chrono::steady_clock으로 별도 측정합니다.</text>
+  </g>
+</svg>

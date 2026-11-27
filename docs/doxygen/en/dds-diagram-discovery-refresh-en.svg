@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1140" height="306" viewBox="0 0 1140 306" role="img" aria-label="Read the Writer's matched subscriptions. A handle from that snapshot can become stale if the Reader exits before a metadata lookup. Refresh the matches. When the only Reader is gone, the current count is zero and the list is empty." data-dds-diagram="true">
+  <title id="discovery-refresh-en-title">Refresh the matched Reader snapshot after an exit</title>
+  <desc>Read the Writer's matched subscriptions. A handle from that snapshot can become stale if the Reader exits before a metadata lookup. Refresh the matches. When the only Reader is gone, the current count is zero and the list is empty.</desc>
+  <defs>
+    <marker id="discovery-refresh-en-arrow" viewBox="0 0 10 12" refX="9" refY="6" markerWidth="9" markerHeight="10" orient="auto" markerUnits="userSpaceOnUse"><path d="M 1,1 L 9,6 L 1,11" fill="none" stroke="#20354B" stroke-width="1.2"/></marker>
+    <marker id="discovery-refresh-en-blue" viewBox="0 0 11 10" refX="10" refY="5" markerWidth="10" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M 0,0 L 11,5 L 0,10 Z" fill="#356B96"/></marker>
+  </defs>
+  <rect width="1140" height="306" fill="#FFFFFF"/>
+  <g fill="#20354B" font-family="Arial, Malgun Gothic, sans-serif">
+    <path d="M 324 153 H 350 V 69 H 378" fill="none" stroke="#20354B" stroke-width="1.15" marker-end="url(#discovery-refresh-en-arrow)"/>
+    <path d="M 324 153 H 350 V 230 H 378" fill="none" stroke="#20354B" stroke-width="1.15" marker-end="url(#discovery-refresh-en-arrow)"/>
+    <path d="M 725 230 H 773" fill="none" stroke="#356B96" stroke-width="1.7" marker-end="url(#discovery-refresh-en-blue)"/>
+    <rect x="28" y="104" width="296" height="98" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <rect x="378" y="27" width="347" height="83" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <rect x="378" y="177" width="347" height="106" fill="#EFF5FA" stroke="#20354B" stroke-width="1.15"/>
+    <rect x="773" y="177" width="340" height="106" fill="#EFF5FA" stroke="#20354B" stroke-width="1.15"/>
+    <text x="176" y="132" text-anchor="middle" font-size="16" font-weight="bold">Get Reader handles</text>
+    <text x="176" y="162" text-anchor="middle" font-size="14" font-family="Consolas, Menlo, monospace">matched_subscriptions(writer)</text>
+    <text x="176" y="182" text-anchor="middle" font-size="15">A snapshot of current matches</text>
+    <text x="552" y="53" text-anchor="middle" font-size="16" font-weight="bold">Reader stays matched</text>
+    <text x="552" y="82" text-anchor="middle" font-size="13" font-family="Consolas, Menlo, monospace">matched_subscription_data(writer, handle)</text>
+    <text x="552" y="208" text-anchor="middle" font-size="16" font-weight="bold">Reader exits before lookup</text>
+    <text x="552" y="235" text-anchor="middle" font-size="15">The saved handle can be stale</text>
+    <text x="552" y="260" text-anchor="middle" font-size="15">Refresh the list</text>
+    <text x="943" y="201" text-anchor="middle" font-size="16" font-weight="bold">Only matched Reader has exited</text>
+    <text x="943" y="229" text-anchor="middle" font-size="15" font-family="Consolas, Menlo, monospace">current_count() == 0</text>
+    <text x="943" y="253" text-anchor="middle" font-size="13" font-family="Consolas, Menlo, monospace">matched_subscriptions(writer).empty()</text>
+  </g>
+</svg>

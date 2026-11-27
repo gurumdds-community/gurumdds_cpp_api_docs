@@ -1,0 +1,228 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/xhtml;charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=11" http-equiv="X-UA-Compatible"/>
+<meta content="Doxygen 1.18.0" name="generator"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>GurumDDS C++ API Reference: Hello World Subscriber</title>
+<link href="gurum-networks-logo.png" rel="icon" type="image/x-icon"/>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script src="dynsections.js" type="text/javascript"></script>
+<script src="codefolding.js" type="text/javascript"></script>
+<script src="clipboard.js" type="text/javascript"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script src="navtreedata.js" type="text/javascript"></script>
+<script src="navtree.js" type="text/javascript"></script>
+<script src="cookie.js" type="text/javascript"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script src="search/searchdata.js" type="text/javascript"></script>
+<script src="search/search.js" type="text/javascript"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+<link href="ReferenceBranding.css" rel="stylesheet" type="text/css"/>
+<script defer="True" src="ReferenceUi.js"></script><link href="../en/dds_example_legacy_sub.html" hreflang="en" rel="alternate"/><link href="../ko/dds_example_legacy_sub.html" hreflang="ko" rel="alternate"/><link href="../language.css" rel="stylesheet"/><script defer="defer" src="../language.js"></script></head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellpadding="0" cellspacing="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">GurumDDS C++ API Reference<span id="projectnumber"> 1.3.2</span>
+   </div>
+  </td>
+ <td class="doc-language-cell"><label class="doc-language"><select aria-label="문서 언어" data-current="1"><option lang="en" value="../en/dds_example_legacy_sub.html">English</option><option lang="en" selected="selected" value="../ko/dds_example_legacy_sub.html">Korean</option></select></label></td></tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script id="doxygen-config" type="application/json">
+{
+  "relPath": "",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script src="menudata.js" type="text/javascript"></script>
+<script src="menu.js" type="text/javascript"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> 주 메뉴 표시 전환</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div class="MSearchBoxInactive" id="MSearchBox">
+        <span class="left">
+          <span class="search-icon" id="MSearchSelect"><span class="search-icon-dropdown"></span></span>
+          <input accesskey="S" id="MSearchField" placeholder="검색" type="text" value=""/>
+          </span><span class="right">
+            <a href="javascript:searchBox.CloseResultsWindow()" id="MSearchClose"><div class="close-icon" id="MSearchCloseImg"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div class="ui-resizable side-nav-resizable" id="side-nav">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div class="sync" id="nav-sync"></div>
+    </div>
+  </div>
+  <div class="ui-resizable-handle" id="splitbar">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('dds_example_legacy_sub.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">로딩중...</div>
+<div class="SRStatus" id="Searching">검색중...</div>
+<div class="SRStatus" id="NoMatches">일치하는것 없음</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Hello World Subscriber </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p>데이터 타입을 지정한 DataReader를 만들고 sample을 폴링합니다.</p>
+<p>애플리케이션 코드에서 payload를 읽기 전에 <span class="tt">SampleInfo::valid()</span>를 확인하세요.</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;ctime&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;gurumdds/dds.hpp&gt;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">#define MY_MAX_LEN 8</span></div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Generated Code ==============================================================</span></div>
+<div class="line"><span class="comment">// Contains Type Structure, CDR Meta information, and CXX topic traits</span></div>
+<div class="line"><span class="comment">// GurumIDL MUST be able to provide following codes</span></div>
+<div class="line"><span class="keyword">struct </span>HelloWorldData_Msg {</div>
+<div class="line">    dds_Long    userId;</div>
+<div class="line">    dds_String  message;</div>
+<div class="line">};</div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">#define METADATA_STR_ARR_LEN 3</span></div>
+<div class="line"><span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* metadata_str_arr[METADATA_STR_ARR_LEN] = {</div>
+<div class="line">    <span class="stringliteral">"!1{(type=HelloWorldData::Msg,member=2)"</span>,</div>
+<div class="line">    <span class="stringliteral">"i(name=userId)"</span>,</div>
+<div class="line">    <span class="stringliteral">"'(name=message)"</span>,</div>
+<div class="line">};</div>
+<div class="line"><span class="keyword">static</span> dds_TypeSupport* ts;</div>
+<div class="line">dds_TypeSupport* HelloWorldData_MsgTypeSupport_get_instance(<span class="keywordtype">void</span>) {</div>
+<div class="line">    <span class="keywordflow">if</span>(ts == NULL)</div>
+<div class="line">        ts = dds_TypeSupport_create2(metadata_str_arr, METADATA_STR_ARR_LEN);</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">return</span> ts;</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacedds.html">dds</a> { <span class="keyword">namespace </span>topic {</div>
+<div class="line">    <span class="keyword">template</span> &lt;&gt;</div>
+<div class="line">    <span class="keyword">struct </span>is_topic_type&lt;HelloWorldData_Msg&gt; {</div>
+<div class="line">        <span class="keyword">enum</span> { value = 1 };</div>
+<div class="line">    };</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">template</span> &lt;&gt;</div>
+<div class="line">    <span class="keyword">struct </span><a class="code hl_struct" href="structdds_1_1topic_1_1topic__type__support.html">topic_type_support</a>&lt;HelloWorldData_Msg&gt; {</div>
+<div class="line">        <span class="keyword">static</span> dds_TypeSupport* ref() { <span class="keywordflow">return</span> HelloWorldData_MsgTypeSupport_get_instance(); }</div>
+<div class="line">    };</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">template</span> &lt;&gt;</div>
+<div class="line">    <span class="keyword">struct </span><a class="code hl_struct" href="structdds_1_1topic_1_1topic__type__name.html">topic_type_name</a>&lt;HelloWorldData_Msg&gt; {</div>
+<div class="line">        <span class="keyword">static</span> std::string value() { <span class="keywordflow">return</span> <span class="stringliteral">"HelloWorldData_Msg"</span>; }</div>
+<div class="line">    };</div>
+<div class="line">} }</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>** argv) {</div>
+<div class="line">    <span class="keywordflow">try</span> {</div>
+<div class="line">        <a class="code hl_typedef" href="namespacedds_1_1domain.html#a492326d51518fe7033886c54a25d4bf0">dds::domain::DomainId</a> <span class="keywordtype">id</span> = 0;</div>
+<div class="line">        <a class="code hl_typedef" href="group__dds__domain.html#gab1bd86ffa9ac0869166a446dd0120f3d">dds::domain::DomainParticipant</a> dp(<span class="keywordtype">id</span>);</div>
+<div class="line"> </div>
+<div class="line">        <a class="code hl_typedef" href="group__dds__subscription.html#ga9a6d78b2a23f864211da5bd2edf28750">dds::sub::Subscriber</a> sub(dp);</div>
+<div class="line"> </div>
+<div class="line">        <a class="code hl_class" href="classdds_1_1topic_1_1_topic.html">dds::topic::Topic&lt;T&gt;</a> topic(dp, <span class="stringliteral">"HelloWorld"</span>);</div>
+<div class="line"> </div>
+<div class="line">        <a class="code hl_class" href="classdds_1_1sub_1_1_data_reader.html">dds::sub::DataReader&lt;T&gt;</a> dr(sub, topic);</div>
+<div class="line"> </div>
+<div class="line">        <span class="keywordflow">do</span> {</div>
+<div class="line">            <a class="code hl_class" href="classdds_1_1sub_1_1_loaned_samples.html">dds::sub::LoanedSamples&lt;HelloWorldData_Msg&gt;</a> samples = dr.take();</div>
+<div class="line">            <span class="keywordflow">if</span>(samples.<a class="code hl_function" href="classdds_1_1sub_1_1_loaned_samples.html#a812849954f1426edf6841bfd321613c6">length</a>() == 0) {</div>
+<div class="line">                <span class="keyword">struct </span>timespec delay = { 0, 500 * 1000 * 1000 };</div>
+<div class="line">                nanosleep(&amp;delay, NULL);</div>
+<div class="line">                <span class="keywordflow">continue</span>;</div>
+<div class="line">            }</div>
+<div class="line"> </div>
+<div class="line">            <span class="keywordflow">for</span>(<span class="keyword">auto</span> item : samples) {</div>
+<div class="line">                std::cout &lt;&lt; <span class="stringliteral">"Received: "</span> &lt;&lt; std::endl;</div>
+<div class="line">                std::cout &lt;&lt; <span class="stringliteral">"userId : "</span> &lt;&lt; item.data().userId &lt;&lt; std::endl;</div>
+<div class="line">                std::cout &lt;&lt; <span class="stringliteral">"message: "</span> &lt;&lt; item.data().message &lt;&lt; std::endl;</div>
+<div class="line">            }</div>
+<div class="line">            <span class="keywordflow">break</span>;</div>
+<div class="line">        } <span class="keywordflow">while</span>(1);</div>
+<div class="line"> </div>
+<div class="line">    } <span class="keywordflow">catch</span> (<span class="keyword">const</span> <a class="code hl_class" href="classdds_1_1core_1_1_exception.html">dds::core::Exception</a>&amp; e) {</div>
+<div class="line">        std::cerr &lt;&lt; e.<a class="code hl_function" href="classdds_1_1core_1_1_exception.html#a51f0ecff258b8ea97c1e20dc72f10770">what</a>();</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="ttc" id="aclassdds_1_1core_1_1_exception_html"><div class="ttname"><a href="classdds_1_1core_1_1_exception.html">dds::core::Exception</a></div><div class="ttdoc">DDS 예외에 대한 기본 인터페이스</div><div class="ttdef"><b>정의</b> Exception.hpp:35</div></div>
+<div class="ttc" id="aclassdds_1_1core_1_1_exception_html_a51f0ecff258b8ea97c1e20dc72f10770"><div class="ttname"><a href="classdds_1_1core_1_1_exception.html#a51f0ecff258b8ea97c1e20dc72f10770">dds::core::Exception::what</a></div><div class="ttdeci">virtual const char * what() const =0</div><div class="ttdoc">진단 메시지를 가져옵니다</div></div>
+<div class="ttc" id="aclassdds_1_1sub_1_1_data_reader_html"><div class="ttname"><a href="classdds_1_1sub_1_1_data_reader.html">dds::sub::DataReader&lt;T&gt;</a></div><div class="ttdoc">Topic에서 지정된 타입의 sample을 수신합니다.</div><div class="ttdef"><b>정의</b> TDataReader.hpp:76</div></div>
+<div class="ttc" id="aclassdds_1_1sub_1_1_loaned_samples_html"><div class="ttname"><a href="classdds_1_1sub_1_1_loaned_samples.html">dds::sub::LoanedSamples</a></div><div class="ttdoc">수신된 sample을 보관하고 미들웨어 loan을 관리합니다.</div><div class="ttdef"><b>정의</b> LoanedSamples.hpp:84</div></div>
+<div class="ttc" id="aclassdds_1_1sub_1_1_loaned_samples_html_a812849954f1426edf6841bfd321613c6"><div class="ttname"><a href="classdds_1_1sub_1_1_loaned_samples.html#a812849954f1426edf6841bfd321613c6">dds::sub::LoanedSamples::length</a></div><div class="ttdeci">uint32_t length() const</div><div class="ttdoc">sample 레코드의 수를 가져옵니다</div><div class="ttdef"><b>정의</b> LoanedSamples.hpp:170</div></div>
+<div class="ttc" id="aclassdds_1_1topic_1_1_topic_html"><div class="ttname"><a href="classdds_1_1topic_1_1_topic.html">dds::topic::Topic&lt;T&gt;</a></div><div class="ttdoc">domain에서 Topic 이름을 DDS 데이터 타입과 연결합니다.</div><div class="ttdef"><b>정의</b> TTopic.hpp:54</div></div>
+<div class="ttc" id="agroup__dds__domain_html_gab1bd86ffa9ac0869166a446dd0120f3d"><div class="ttname"><a href="group__dds__domain.html#gab1bd86ffa9ac0869166a446dd0120f3d">dds::domain::DomainParticipant</a></div><div class="ttdeci">::dds::domain::detail::DomainParticipant DomainParticipant</div><div class="ttdoc">DDS domain에 가입하고 관리하는 데 사용되는 DomainParticipant handle</div><div class="ttdef"><b>정의</b> DomainParticipant.hpp:30</div></div>
+<div class="ttc" id="agroup__dds__subscription_html_ga9a6d78b2a23f864211da5bd2edf28750"><div class="ttname"><a href="group__dds__subscription.html#ga9a6d78b2a23f864211da5bd2edf28750">dds::sub::Subscriber</a></div><div class="ttdeci">dds::sub::detail::Subscriber Subscriber</div><div class="ttdoc">DataReader를 소유하고 기본값을 설정하는 데 사용되는 Subscriber handle</div><div class="ttdef"><b>정의</b> Subscriber.hpp:31</div></div>
+<div class="ttc" id="anamespacedds_1_1domain_html_a492326d51518fe7033886c54a25d4bf0"><div class="ttname"><a href="namespacedds_1_1domain.html#a492326d51518fe7033886c54a25d4bf0">dds::domain::DomainId</a></div><div class="ttdeci">int32_t DomainId</div><div class="ttdoc">DDS domain을 식별하는 숫자</div><div class="ttdef"><b>정의</b> ddsdomain.hpp:10</div></div>
+<div class="ttc" id="anamespacedds_html"><div class="ttname"><a href="namespacedds.html">dds</a></div><div class="ttdoc">GurumDDS C++ API의 최상위 네임스페이스</div><div class="ttdef"><b>정의</b> array.hpp:7</div></div>
+<div class="ttc" id="astructdds_1_1topic_1_1topic__type__name_html"><div class="ttname"><a href="structdds_1_1topic_1_1topic__type__name.html">dds::topic::topic_type_name</a></div><div class="ttdef"><b>정의</b> TopicTraits.hpp:46</div></div>
+<div class="ttc" id="astructdds_1_1topic_1_1topic__type__support_html"><div class="ttname"><a href="structdds_1_1topic_1_1topic__type__support.html">dds::topic::topic_type_support</a></div><div class="ttdef"><b>정의</b> TopicTraits.hpp:43</div></div>
+</div><!-- fragment --> </div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div class="page-nav-panel" id="page-nav">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div class="navpath" id="nav-path"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="examples.html">예제</a></li><li class="navelem"><a href="dds_examples_legacy.html">Legacy</a></li>
+    <li class="footer">다음에 의해 생성됨 :  <a href="https://www.doxygen.org/index.html"><img alt="doxygen" class="footer" height="31" src="doxygen.svg" width="104"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

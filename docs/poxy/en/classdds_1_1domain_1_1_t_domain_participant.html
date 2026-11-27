@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<title>dds::domain::DomainParticipant | GurumDDS C++ API Reference</title>
+<link href="gurum-networks-logo.png" rel="icon" type="image/png"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="#cb4b16" name="theme-color"/>
+<link href="poxy/poxy.css" referrerpolicy="no-referrer" rel="stylesheet"/>
+<link href="ReferenceBranding.css" referrerpolicy="no-referrer" rel="stylesheet"/>
+<script src="poxy/poxy.js"></script>
+<script>initialize_theme("light");</script>
+<meta content="GurumDDS C++" name="twitter:title"/>
+<meta content="GurumDDS C++" property="og:title"/>
+<meta content="GurumDDS C++" itemprop="name"/>
+<meta content="API Reference" name="description"/>
+<meta content="API Reference" name="twitter:description"/>
+<meta content="API Reference" property="og:description"/>
+<meta content="API Reference" itemprop="description"/>
+<meta content="telephone=no" name="format-detection"/>
+<meta content="Poxy v0.27.2" name="generator"/>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<script defer="True" src="ReferenceUi.js"></script><link href="../en/classdds_1_1domain_1_1_t_domain_participant.html" hreflang="en" rel="alternate"/><link href="../ko/classdds_1_1domain_1_1_t_domain_participant.html" hreflang="ko" rel="alternate"/><link href="../language.css" rel="stylesheet"/><script defer="defer" src="../language.js"></script></head>
+<body class="poxy-has-toc">
+<header><nav id="navigation">
+<div class="m-container">
+<div class="m-row doc-language-header">
+<a class="m-col-t-8 m-col-m-none m-left-m" href="index.html" id="m-navbar-brand"><img alt="" src="gurum-networks-logo.png"/>GurumDDS C++ <span class="m-thin">API Reference</span></a>
+<div class="m-col-t-4 m-hide-m m-text-right m-nopadr">
+<a class="m-doc-search-icon" href="#search" onclick="return showSearch()" title="Search"><svg style="height: 0.9rem;" viewbox="0 0 16 16">
+<path d="m6 0c-3.31 0-6 2.69-6 6 0 3.31 2.69 6 6 6 1.49 0 2.85-0.541 3.89-1.44-0.0164 0.338 0.147 0.759 0.5 1.15l3.22 3.79c0.552 0.614 1.45 0.665 2 0.115 0.55-0.55 0.499-1.45-0.115-2l-3.79-3.22c-0.392-0.353-0.812-0.515-1.15-0.5 0.895-1.05 1.44-2.41 1.44-3.89 0-3.31-2.69-6-6-6zm0 1.56a4.44 4.44 0 0 1 4.44 4.44 4.44 4.44 0 0 1-4.44 4.44 4.44 4.44 0 0 1-4.44-4.44 4.44 4.44 0 0 1 4.44-4.44z" id="m-doc-search-icon-path"></path>
+</svg></a>
+<a href="#navigation" id="m-navbar-show" title="Show navigation"></a>
+<a href="#" id="m-navbar-hide" title="Hide navigation"></a>
+</div>
+<div class="m-col-t-12 m-show-m m-col-m-none m-right-m" id="m-navbar-collapse">
+<div class="m-row">
+<ol class="m-col-t-6 m-col-m-none">
+<li><a href="modules.html">Modules</a></li>
+<li><a href="annotated.html">Classes</a></li>
+<li><a href="namespaces.html">Namespaces</a></li>
+</ol>
+<ol class="m-col-t-6 m-col-m-none" start="4">
+<li><a href="examples.html">Examples</a></li>
+<li><a class="poxy-icon theme" href="javascript:void(null);" id="poxy-theme-switch" onclick="toggle_theme(); return false;" role="button" title="Toggle dark and light themes"><svg id="poxy-theme-switch-img" version="1.1" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><circle cx="185.6708" cy="183.8122" fill="currentColor" r="65.625"></circle><path d="M185.6708,87.5622a13.1256,13.1256,0,0,0,13.125-13.125V52.5622a13.125,13.125,0,1,0-26.25,0v21.875A13.1257,13.1257,0,0,0,185.6708,87.5622Z" fill="currentColor"></path><path d="M99.051,115.7519a13.1236,13.1236,0,1,0,18.56-18.56L102.1442,81.726a13.1236,13.1236,0,0,0-18.5595,18.56Z" fill="currentColor"></path><path d="M89.4208,183.8122a13.1257,13.1257,0,0,0-13.125-13.125H54.4208a13.125,13.125,0,0,0,0,26.25h21.875A13.1256,13.1256,0,0,0,89.4208,183.8122Z" fill="currentColor"></path><path d="M99.051,251.8725,83.5847,267.3431a13.1236,13.1236,0,1,0,18.56,18.56l15.4663-15.4706a13.1236,13.1236,0,1,0-18.5595-18.56Z" fill="currentColor"></path><path d="M185.6708,280.0622a13.1258,13.1258,0,0,0-13.125,13.125v21.875a13.125,13.125,0,0,0,26.25,0v-21.875A13.1257,13.1257,0,0,0,185.6708,280.0622Z" fill="currentColor"></path><path d="M272.2907,251.8725a13.1236,13.1236,0,1,0-18.56,18.56l15.4663,15.4706a13.1236,13.1236,0,1,0,18.56-18.56Z" fill="currentColor"></path><path d="M330.0458,183.8122a13.1257,13.1257,0,0,0-13.125-13.125h-21.875a13.125,13.125,0,0,0,0,26.25h21.875A13.1256,13.1256,0,0,0,330.0458,183.8122Z" fill="currentColor"></path><path d="M263.0109,119.5971a13.0824,13.0824,0,0,0,9.28-3.8452l15.4663-15.4663a13.1236,13.1236,0,1,0-18.56-18.56L253.7312,97.1923a13.125,13.125,0,0,0,9.28,22.4048Z" fill="currentColor"></path><path d="M456.9379,401.6714a63.97,63.97,0,0,1-14.9963,7.2055c-19.6448,6.5283-41.8787,2.9566-58.1439-9.8523a68.9311,68.9311,0,0,1-10.835-10.8339c-12.8088-16.2663-16.3806-38.5-9.8523-58.1471a63.8444,63.8444,0,0,1,7.2077-14.9931,8.8036,8.8036,0,0,0-10.1172-13.3034,87.5188,87.5188,0,1,0,110.0372,110.04A8.8,8.8,0,0,0,456.9379,401.6714Z" fill="currentColor"></path></svg></a></li>
+<li class="m-show-m"><a class="m-doc-search-icon" href="#search" onclick="return showSearch()" title="Search"><svg style="height: 0.9rem;" viewbox="0 0 16 16">
+<use href="#m-doc-search-icon-path"></use>
+</svg></a></li>
+</ol>
+</div>
+</div>
+<label class="doc-language"><select aria-label="Documentation language" data-current="0"><option lang="en" selected="selected" value="../en/classdds_1_1domain_1_1_t_domain_participant.html">English</option><option lang="en" value="../ko/classdds_1_1domain_1_1_t_domain_participant.html">Korean</option></select></label></div>
+</div>
+</nav></header>
+<main><article>
+<div class="m-container m-container-inflatable">
+<div class="m-row">
+<div class="m-col-l-10 m-push-l-1">
+<nav aria-label="Related pages" class="dds-page-links"><a href="group__dds__domain.html">Domain</a><a href="namespacedds_1_1domain.html">dds::domain</a><a href="group__dds__tutorial__participant.html">Tutorial</a></nav><h1>
+<span class="m-breadcrumb"><a href="namespacedds.html">dds</a>::<wbr/></span><span class="m-breadcrumb"><a href="namespacedds_1_1domain.html">domain</a>::<wbr/></span> DomainParticipant <span class="m-thin">class</span>
+</h1><p class="dds-class-include"><code>#include &lt;gurumdds/cpp/domain/DomainParticipant.hpp&gt;</code></p>
+<p>Joins a DDS domain and owns the entities created within it.</p>
+<p>A domain ID identifies a DDS communication domain. Participants using the same domain ID can discover each other, subject to discovery configuration. Different domain IDs let independent DDS applications share the same physical network.</p><p>Create topics, publishers, and subscribers through a participant. Use different participants in one process to join different domains.</p><aside class="m-note m-default"><h4>See also</h4><p><a class="m-doc" href="group__dds__domain.html#ga4b95ba7209610a3a50b4adfc5dc5f0be">dds::<wbr/>domain::<wbr/>qos::<wbr/>DomainParticipantQos</a></p><p><a class="m-doc" href="classdds_1_1domain_1_1_domain_participant_listener.html">dds::<wbr/>domain::<wbr/>DomainParticipantListener</a></p><p><a class="m-doc" href="group__dds__tutorial__participant.html">Domain participants</a></p><p><a class="m-doc" href="dds_example_new_helloworld.html">Hello World</a></p></aside>
+<figure class="dds-inheritance"><div class="dds-inheritance-graph"><svg height="40pt" viewbox="0.00 0.00 419.00 40.00" width="419pt" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g class="graph" id="graph0" transform="scale(1 1) rotate(0) translate(4 36)">
+<title>dds::domain::TDomainParticipant&lt; DELEGATE &gt;</title>
+<!-- Node1 -->
+<g class="node" id="Node000001">
+<title>Node1</title>
+<g id="a_Node000001"><a target="_top" xlink:title="Joins a DDS domain and owns the entities created within it.">
+<polygon fill="#999999" points="411,-32 257.5,-32 257.5,0 411,0 411,-32" stroke="none"></polygon>
+<text font-family="Helvetica,sans-Serif" font-size="10.00" text-anchor="start" x="261.5" xml:space="preserve" y="-18.5">dds::domain::TDomainParticipant</text>
+<text font-family="Helvetica,sans-Serif" font-size="10.00" text-anchor="start" x="299" xml:space="preserve" y="-6.5">&lt; DELEGATE &gt;</text>
+<polygon fill="none" points="257.5,0 257.5,-32 411,-32 411,0 257.5,0" stroke="#666666"></polygon>
+</a>
+</g>
+</g>
+<!-- Node2 -->
+<g class="node" id="Node000002">
+<title>Node2</title>
+<g id="a_Node000002"><a target="_top" xlink:href="classdds_1_1core_1_1_t_entity.html" xlink:title="Provides common operations on a DDS entity handle.">
+<polygon fill="white" points="221.5,-32 135.5,-32 135.5,0 221.5,0 221.5,-32" stroke="none"></polygon>
+<text font-family="Helvetica,sans-Serif" font-size="10.00" text-anchor="start" x="139.5" xml:space="preserve" y="-18.5">dds::core::TEntity</text>
+<text font-family="Helvetica,sans-Serif" font-size="10.00" text-anchor="start" x="143.25" xml:space="preserve" y="-6.5">&lt; DELEGATE &gt;</text>
+<polygon fill="none" points="135.5,0 135.5,-32 221.5,-32 221.5,0 135.5,0" stroke="#666666"></polygon>
+</a>
+</g>
+</g>
+<!-- Node2&#45;&gt;Node1 -->
+<g class="edge" id="edge1_Node000001_Node000002">
+<title>Node2-&gt;Node1</title>
+<g id="a_edge1_Node000001_Node000002"><a xlink:title=" ">
+<path d="M232.6,-16C240.66,-16 249.11,-16 257.54,-16" fill="none" stroke="#63b8ff"></path>
+<polygon fill="none" points="232.62,-12.5 222.62,-16 232.62,-19.5 232.62,-12.5" stroke="#63b8ff"></polygon>
+</a>
+</g>
+</g>
+<!-- Node3 -->
+<g class="node" id="Node000003">
+<title>Node3</title>
+<g id="a_Node000003"><a target="_top" xlink:href="classdds_1_1core_1_1_reference.html" xlink:title="Defines shared-handle operations for DDS reference types.">
+<polygon fill="white" points="99.5,-32 0,-32 0,0 99.5,0 99.5,-32" stroke="none"></polygon>
+<text font-family="Helvetica,sans-Serif" font-size="10.00" text-anchor="start" x="4" xml:space="preserve" y="-18.5">dds::core::Reference</text>
+<text font-family="Helvetica,sans-Serif" font-size="10.00" text-anchor="start" x="14.5" xml:space="preserve" y="-6.5">&lt; DELEGATE &gt;</text>
+<polygon fill="none" points="0,0 0,-32 99.5,-32 99.5,0 0,0" stroke="#666666"></polygon>
+</a>
+</g>
+</g>
+<!-- Node3&#45;&gt;Node2 -->
+<g class="edge" id="edge2_Node000002_Node000003">
+<title>Node3-&gt;Node2</title>
+<g id="a_edge2_Node000002_Node000003"><a xlink:title=" ">
+<path d="M110.81,-16C119.26,-16 127.79,-16 135.8,-16" fill="none" stroke="#63b8ff"></path>
+<polygon fill="none" points="110.91,-12.5 100.91,-16 110.91,-19.5 110.91,-12.5" stroke="#63b8ff"></polygon>
+</a>
+</g>
+</g>
+</g>
+</svg></div><figcaption>Inheritance diagram</figcaption></figure><details class="dds-reference-details" data-dds-signatures=""><summary>Full template declaration</summary><div class="m-doc-template">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename DELEGATE</span></span>&gt;</div><table class="m-table m-fullwidth m-flat">
+<thead>
+<tr><th colspan="2">Template parameters</th></tr>
+</thead>
+<tbody>
+<tr>
+<td style="width: 1%">DELEGATE</td>
+<td>Participant implementation type</td>
+</tr>
+</tbody>
+</table></details><nav class="m-block m-default poxy-toc" id="poxy-toc">
+<h3>Contents</h3>
+<ul>
+<li>
+              Reference
+              <ul>
+<li><a href="#base-classes">Base classes</a></li>
+<li><a href="#pub-types">Public types</a></li>
+<li><a href="#pub-static-methods">Public static functions</a></li>
+<li><a href="#typeless-methods">Constructors, destructors, conversion operators</a></li>
+<li><a href="#pub-methods">Public functions</a></li>
+<li><a href="#pro-attribs">Protected variables</a></li>
+</ul>
+</li>
+</ul>
+</nav><section id="base-classes">
+<h2><a href="#base-classes">Base classes</a></h2>
+<dl class="m-doc">
+<dt>
+<div class="m-doc-template">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename DELEGATE</span></span>&gt;</div>
+              class <a class="m-doc" href="classdds_1_1core_1_1_t_entity.html">dds::core::TEntity&lt;DELEGATE&gt;</a>
+</dt>
+<dd>Provides common operations on a DDS entity handle.</dd>
+</dl>
+</section>
+<section id="pub-types">
+<h2><a href="#pub-types">Public types</a></h2>
+<dl class="m-doc">
+<dt>
+              using <a class="m-doc" href="classdds_1_1core_1_1_t_entity.html#ae0ab06ef335ee07eac162d007155c326">BASE_T</a> = <a class="m-doc" href="classdds_1_1core_1_1_reference.html">dds::<wbr/>core::<wbr/>Reference</a>&lt;DELEGATE&gt;
+            </dt>
+<dd></dd>
+<dt>
+              using <a class="m-doc" href="classdds_1_1core_1_1_t_entity.html#ae38d068d6ed16649727e129829568de6">DELEGATE_REF_T</a> = <a class="m-doc" href="structdds_1_1core_1_1smart__ptr__traits.html">::<wbr/>dds::<wbr/>core::<wbr/>smart_ptr_traits</a>&lt;DELEGATE&gt;::ref_type
+            </dt>
+<dd></dd>
+<dt>
+              using <a class="m-doc" href="classdds_1_1core_1_1_t_entity.html#a0f7165a2d03c3f8fa9055d66e4f4205b">DELEGATE_T</a> = DELEGATE
+            </dt>
+<dd></dd>
+<dt>
+              using <a class="m-doc" href="classdds_1_1core_1_1_t_entity.html#ab4572e93bd3b4b0fb8f07463df7e10d3">DELEGATE_WEAK_REF_T</a> = <a class="m-doc" href="structdds_1_1core_1_1smart__ptr__traits.html">::<wbr/>dds::<wbr/>core::<wbr/>smart_ptr_traits</a>&lt;DELEGATE&gt;::weak_ref_type
+            </dt>
+<dd></dd>
+<dt id="a9ce477ff2fea32affb01fa47e7e302c2">
+              using <a class="m-doc-self" href="#a9ce477ff2fea32affb01fa47e7e302c2">Listener</a> = <a class="m-doc" href="classdds_1_1domain_1_1_domain_participant_listener.html">dds::<wbr/>domain::<wbr/>DomainParticipantListener</a>
+</dt>
+<dd></dd>
+</dl>
+</section>
+<section id="pub-static-methods">
+<h2><a href="#pub-static-methods">Public static functions</a></h2>
+<dl class="m-doc">
+<dt>
+<span class="m-doc-wrap-bumper">static auto <a class="m-doc" href="#a490646e6826b2d1e273e4064db70c964">default_participant_qos</a>(</span><span class="m-doc-wrap">) →  <a class="m-doc" href="group__dds__domain.html#ga4b95ba7209610a3a50b4adfc5dc5f0be">dds::<wbr/>domain::<wbr/>qos::<wbr/>DomainParticipantQos</a></span>
+</dt>
+<dd>Gets the factory's participant QoS defaults.</dd>
+<dt>
+<span class="m-doc-wrap-bumper">static void <a class="m-doc" href="#a907737110316327f23e01f9079c58b42">default_participant_qos</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="group__dds__domain.html#ga4b95ba7209610a3a50b4adfc5dc5f0be">::<wbr/>dds::<wbr/>domain::<wbr/>qos::<wbr/>DomainParticipantQos</a>&amp; qos)</span>
+</dt>
+<dd>Updates the factory's participant QoS defaults.</dd>
+</dl>
+</section>
+<section id="typeless-methods">
+<h2><a href="#typeless-methods">Constructors, destructors, conversion operators</a></h2>
+<dl class="m-doc">
+<dt>
+<span class="m-doc-wrap-bumper"><a class="m-doc" href="#a27f25cfb76afd6ee78276caf6133c1c3">TDomainParticipant</a>(</span><span class="m-doc-wrap"><a class="m-doc poxy-injected poxy-external poxy-cppreference" href="https://en.cppreference.com/w/cpp/types/integer" target="_blank">int32_t</a> did)</span>
+</dt>
+<dd>Creates a participant using the factory's default participant QoS.</dd>
+<dt>
+<span class="m-doc-wrap-bumper"><a class="m-doc" href="#a6e25645887e61a4ee29fc68480cda7b3">TDomainParticipant</a>(</span><span class="m-doc-wrap"><a class="m-doc poxy-injected poxy-external poxy-cppreference" href="https://en.cppreference.com/w/cpp/types/integer" target="_blank">int32_t</a> id,
+              const <a class="m-doc" href="group__dds__domain.html#ga4b95ba7209610a3a50b4adfc5dc5f0be">dds::<wbr/>domain::<wbr/>qos::<wbr/>DomainParticipantQos</a>&amp; qos,
+              <a class="m-doc" href="classdds_1_1domain_1_1_domain_participant_listener.html">dds::<wbr/>domain::<wbr/>DomainParticipantListener</a>* listener = NULL,
+              const <a class="m-doc" href="classdds_1_1core_1_1status_1_1_status_mask.html">dds::<wbr/>core::<wbr/>status::<wbr/>StatusMask</a>&amp; mask = <a class="m-doc" href="classdds_1_1core_1_1status_1_1_status_mask.html#a2d5d96c01cceb09a14ff466f43be8173">dds::<wbr/>core::<wbr/>status::<wbr/>StatusMask::<wbr/>all</a>())</span>
+</dt>
+<dd>Creates a participant and configures its listener.</dd>
+<dt>
+<span class="m-doc-wrap-bumper"><a class="m-doc" href="classdds_1_1core_1_1_reference.html#a80cff5eadf8554d3b5772b352c518fe8">operator DELEGATE_REF_T</a>(</span><span class="m-doc-wrap">) const</span>
+</dt>
+<dd>Accesses the stored delegate pointer.</dd>
+<dt>
+<span class="m-doc-wrap-bumper"><a class="m-doc" href="classdds_1_1core_1_1_reference.html#a6e30d68985ca187b16562617d4a7b9f9">operator DELEGATE_REF_T&amp;</a>(</span><span class="m-doc-wrap">)</span>
+</dt>
+<dd>Accesses the stored delegate pointer.</dd>
+<dt>
+<span class="m-doc-wrap-bumper"><a class="m-doc" href="classdds_1_1core_1_1_reference.html#a373c3aa4c921f21eabdf3a020ac8ef0c">operator const DELEGATE_REF_T&amp;</a>(</span><span class="m-doc-wrap">) const</span>
+</dt>
+<dd>Accesses the stored delegate pointer.</dd>
+<dt id="af3ca513e0ea14a4e84b37675c6ab061b">
+<span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#af3ca513e0ea14a4e84b37675c6ab061b">~TDomainParticipant</a>(</span><span class="m-doc-wrap">)</span>
+</dt>
+<dd>Releases this handle to the participant.</dd>
+</dl>
+</section>
+<section id="pub-methods">
+<h2><a href="#pub-methods">Public functions</a></h2>
+<dl class="m-doc">
+<dt>
+<span class="m-doc-wrap-bumper">void <a class="m-doc" href="#a0c8284e8c38a5bfbab96fd73c34fe2e1">assert_liveliness</a>(</span><span class="m-doc-wrap">)</span>
+</dt>
+<dd>Manually asserts liveliness through the participant.</dd>
+<dt>
+<span class="m-doc-wrap-bumper">void <a class="m-doc" href="classdds_1_1core_1_1_t_entity.html#af8f8ea2b0053002aaba7be9f3ab3184b">close</a>(</span><span class="m-doc-wrap">)</span>
+</dt>
+<dd>Exposes an explicit close operation for entity delegates.</dd>
+<dt>
+<span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#a98d7c3ba1fe9ffcfe527e1a6026de63d">contains_entity</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="group__dds__core.html#ga8ee18acd2002fb15f2650f5c7cb055d0">::<wbr/>dds::<wbr/>core::<wbr/>InstanceHandle</a>&amp; handle) →  bool</span>
+</dt>
+<dd></dd>
+<dt>
+<span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#a3eaa001bcec3ce1012699cdcbb2b0e5b">current_time</a>(</span><span class="m-doc-wrap">) →  <a class="m-doc" href="classdds_1_1core_1_1_time.html">dds::<wbr/>core::<wbr/>Time</a></span>
+</dt>
+<dd>Gets the current time from the local DDS service.</dd>
+<dt>
+<span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#a0c15fd6d178c7bd9d152391c16de3371">default_publisher_qos</a>(</span><span class="m-doc-wrap">) const →  <a class="m-doc" href="group__dds__publication.html#ga5a397b3fef78f6e0788de250ad51b80f">dds::<wbr/>pub::<wbr/>qos::<wbr/>PublisherQos</a></span>
+</dt>
+<dd>Gets the participant's default publisher QoS.</dd>
+<dt>
+<span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#add5d5d30e64f88b571a8cea456eec1f5">default_publisher_qos</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="group__dds__publication.html#ga5a397b3fef78f6e0788de250ad51b80f">::<wbr/>dds::<wbr/>pub::<wbr/>qos::<wbr/>PublisherQos</a>&amp; qos) →  <a class="m-doc" href="#a27f25cfb76afd6ee78276caf6133c1c3">TDomainParticipant</a>&amp;</span>
+</dt>
+<dd>Updates the participant's default publisher QoS.</dd>
+<dt>
+<span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#a80fd6e457ee3d46035692f067cc71807">default_subscriber_qos</a>(</span><span class="m-doc-wrap">) const →  <a class="m-doc" href="group__dds__subscription.html#gaf7f2f1fd9a8d66d37b7da82b130245cb">dds::<wbr/>sub::<wbr/>qos::<wbr/>SubscriberQos</a></span>
+</dt>
+<dd>Gets the participant's default subscriber QoS.</dd>
+<dt>
+<span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#a462e0f5c66d1caef32ba5aae6ed4bc72">default_subscriber_qos</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="group__dds__subscription.html#gaf7f2f1fd9a8d66d37b7da82b130245cb">::<wbr/>dds::<wbr/>sub::<wbr/>qos::<wbr/>SubscriberQos</a>&amp; qos) →  <a class="m-doc" href="#a27f25cfb76afd6ee78276caf6133c1c3">TDomainParticipant</a>&amp;</span>
+</dt>
+<dd>Updates the participant's default subscriber QoS.</dd>
+<dt>
+<span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#afe6d63097d64e74b91aeee719a433a5b">default_topic_qos</a>(</span><span class="m-doc-wrap">) const →  <a class="m-doc" href="group__dds__topic.html#ga1c569583302b1543e4f4be1d373359f2">dds::<wbr/>topic::<wbr/>qos::<wbr/>TopicQos</a></span>
+</dt>
+<dd>Gets the participant's default topic QoS.</dd>
+<dt>
+<span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#a2b5ab3e6feaf008d30f5764d1de50755">default_topic_qos</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="group__dds__topic.html#ga1c569583302b1543e4f4be1d373359f2">dds::<wbr/>topic::<wbr/>qos::<wbr/>TopicQos</a>&amp; qos) →  <a class="m-doc" href="#a27f25cfb76afd6ee78276caf6133c1c3">TDomainParticipant</a>&amp;</span>
+</dt>
+<dd>Updates the participant's default topic QoS.</dd>
+<dt>
+<span class="m-doc-wrap-bumper">auto <a class="m-doc" href="classdds_1_1core_1_1_reference.html#a0a024fbfa03682004825f278ad114d7c">delegate</a>(</span><span class="m-doc-wrap">) const →  const <a class="m-doc" href="classdds_1_1core_1_1_t_entity.html#ae38d068d6ed16649727e129829568de6">DELEGATE_<wbr/>REF_<wbr/>T</a>&amp;</span>
+</dt>
+<dd></dd>
+<dt>
+<span class="m-doc-wrap-bumper">auto <a class="m-doc" href="classdds_1_1core_1_1_reference.html#a0da9a614a6f6158cd7f0a7ba491cf127">delegate</a>(</span><span class="m-doc-wrap">) →  <a class="m-doc" href="classdds_1_1core_1_1_t_entity.html#ae38d068d6ed16649727e129829568de6">DELEGATE_<wbr/>REF_<wbr/>T</a>&amp;</span>
+</dt>
+<dd></dd>
+<dt>
+<span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#a84e4149bbe6d8d0345dc2d7a10b4204f">domain_id</a>(</span><span class="m-doc-wrap">) const →  <a class="m-doc poxy-injected poxy-external poxy-cppreference" href="https://en.cppreference.com/w/cpp/types/integer" target="_blank">int32_t</a></span>
+</dt>
+<dd></dd>
+<dt>
+<span class="m-doc-wrap-bumper">void <a class="m-doc" href="classdds_1_1core_1_1_t_entity.html#ae5bece31716bf36a99e579294ac2da00">enable</a>(</span><span class="m-doc-wrap">)</span>
+</dt>
+<dd>Requests that the C layer enable this entity.</dd>
+<dt>
+<span class="m-doc-wrap-bumper">auto <a class="m-doc" href="classdds_1_1core_1_1_t_entity.html#ae071a4ffa15ea47acc2cca09d76e03af">instance_handle</a>(</span><span class="m-doc-wrap">) const →  const <a class="m-doc" href="group__dds__core.html#ga8ee18acd2002fb15f2650f5c7cb055d0">dds::<wbr/>core::<wbr/>InstanceHandle</a></span>
+</dt>
+<dd>Gets the instance handle for this entity.</dd>
+<dt>
+<span class="m-doc-wrap-bumper">auto <a class="m-doc" href="classdds_1_1core_1_1_reference.html#aba3a3901a14d7999e39e0bdd7efc1023">is_nil</a>(</span><span class="m-doc-wrap">) const →  bool</span>
+</dt>
+<dd></dd>
+<dt>
+<span class="m-doc-wrap-bumper">void <a class="m-doc" href="#a00e17d2fc71e2f50dad2da9cc2d1c279">listener</a>(</span><span class="m-doc-wrap"><a class="m-doc" href="#a9ce477ff2fea32affb01fa47e7e302c2">Listener</a>* the_listener,
+              const <a class="m-doc" href="classdds_1_1core_1_1status_1_1_status_mask.html">::<wbr/>dds::<wbr/>core::<wbr/>status::<wbr/>StatusMask</a>&amp; event_mask)</span>
+</dt>
+<dd>Sets the participant's listener and status mask.</dd>
+<dt>
+<span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#a1e7b3d20c272dcbf7ae4a4e99b6eee82">listener</a>(</span><span class="m-doc-wrap">) const →  <a class="m-doc" href="#a9ce477ff2fea32affb01fa47e7e302c2">Listener</a>*</span>
+</dt>
+<dd>Gets the registered participant listener.</dd>
+<dt>
+<div class="m-doc-template">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename R</span></span>&gt;</div>
+<span class="m-doc-wrap-bumper">auto <a class="m-doc" href="classdds_1_1core_1_1_reference.html#ac0f06ae1197b8ccec9d35cbe20302797">operator!=</a>(</span><span class="m-doc-wrap">const R&amp; ref) const →  bool</span>
+</dt>
+<dd></dd>
+<dt>
+<span class="m-doc-wrap-bumper">auto <a class="m-doc" href="classdds_1_1core_1_1_reference.html#abb281aa6cfee0f470c311d420525e8b9">operator!=</a>(</span><span class="m-doc-wrap">const null_type nil) const →  bool</span>
+</dt>
+<dd>Checks whether this handle contains a delegate.</dd>
+<dt>
+<span class="m-doc-wrap-bumper">auto <a class="m-doc" href="classdds_1_1core_1_1_reference.html#a5719abf42970dad5751f69531de91fb3">operator-&gt;</a>(</span><span class="m-doc-wrap">) →  DELEGATE*</span>
+</dt>
+<dd></dd>
+<dt>
+<span class="m-doc-wrap-bumper">auto <a class="m-doc" href="classdds_1_1core_1_1_reference.html#a35437fb6e2e4e139ff2394c73d8dbb3a">operator-&gt;</a>(</span><span class="m-doc-wrap">) const →  const DELEGATE*</span>
+</dt>
+<dd></dd>
+<dt>
+<div class="m-doc-template">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename R</span></span>&gt;</div>
+<span class="m-doc-wrap-bumper">auto <a class="m-doc" href="classdds_1_1core_1_1_reference.html#a4a3c2a0f5c12439fef21afa0cd189735">operator==</a>(</span><span class="m-doc-wrap">const R&amp; ref) const →  bool</span>
+</dt>
+<dd></dd>
+<dt>
+<span class="m-doc-wrap-bumper">auto <a class="m-doc" href="classdds_1_1core_1_1_reference.html#a253245a76f79b7415030ae5f00313651">operator==</a>(</span><span class="m-doc-wrap">const null_type) const →  bool</span>
+</dt>
+<dd></dd>
+<dt>
+<span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#a6069da363eb6f899485d251508b7b2f1">qos</a>(</span><span class="m-doc-wrap">) const →  const <a class="m-doc" href="group__dds__domain.html#ga4b95ba7209610a3a50b4adfc5dc5f0be">dds::<wbr/>domain::<wbr/>qos::<wbr/>DomainParticipantQos</a></span>
+</dt>
+<dd></dd>
+<dt>
+<span class="m-doc-wrap-bumper">void <a class="m-doc" href="#aa5e38fba385f28363e32adef6c34103d">qos</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="group__dds__domain.html#ga4b95ba7209610a3a50b4adfc5dc5f0be">dds::<wbr/>domain::<wbr/>qos::<wbr/>DomainParticipantQos</a>&amp; the_qos)</span>
+</dt>
+<dd>Updates the participant's QoS.</dd>
+<dt>
+<span class="m-doc-wrap-bumper">void <a class="m-doc" href="classdds_1_1core_1_1_t_entity.html#ac317023c350c2a1938e15755d2070a56">retain</a>(</span><span class="m-doc-wrap">)</span>
+</dt>
+<dd>Marks the native entity as retained by the delegate.</dd>
+<dt>
+<span class="m-doc-wrap-bumper">auto <a class="m-doc" href="classdds_1_1core_1_1_t_entity.html#a19ada6b4919fd7f45a79ade070dc14bb">status_changes</a>(</span><span class="m-doc-wrap">) →  const <a class="m-doc" href="classdds_1_1core_1_1status_1_1_status_mask.html">dds::<wbr/>core::<wbr/>status::<wbr/>StatusMask</a></span>
+</dt>
+<dd>Exposes the entity's status-change query.</dd>
+</dl>
+</section>
+<section id="pro-attribs">
+<h2><a href="#pro-attribs">Protected variables</a></h2>
+<dl class="m-doc">
+<dt>
+<a class="m-doc" href="classdds_1_1core_1_1_t_entity.html#ae38d068d6ed16649727e129829568de6">DELEGATE_<wbr/>REF_<wbr/>T</a> <a class="m-doc" href="classdds_1_1core_1_1_reference.html#ab3a71f25696efba22cf3744cf5826839">impl_</a>
+</dt>
+<dd></dd>
+</dl>
+</section>
+<section>
+<h2>Member Functions</h2>
+<section class="m-doc-details" id="a490646e6826b2d1e273e4064db70c964"><div>
+<h3>
+<div class="m-doc-template dds-full-signature">
+<span class="m-doc-template-parent">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename DELEGATE</span></span>&gt;</span>
+</div>
+<span class="m-doc-wrap-bumper">static <a class="m-doc" href="group__dds__domain.html#ga4b95ba7209610a3a50b4adfc5dc5f0be">dds::<wbr/>domain::<wbr/>qos::<wbr/>DomainParticipantQos</a> <span class="m-doc-details-prefix">dds::domain::TDomainParticipant::</span></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a490646e6826b2d1e273e4064db70c964">default_participant_qos</a>(</span><span class="m-doc-wrap">)</span></span>
+</h3>
+<p>Gets the factory's participant QoS defaults.</p>
+<table class="m-table m-fullwidth m-flat">
+<tfoot>
+<tr>
+<th style="width: 1%">Returns</th>
+<td>Policies used by the constructor that takes only a domain ID</td>
+</tr>
+</tfoot>
+</table>
+</div></section>
+<section class="m-doc-details" id="a907737110316327f23e01f9079c58b42"><div>
+<h3>
+<div class="m-doc-template dds-full-signature">
+<span class="m-doc-template-parent">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename DELEGATE</span></span>&gt;</span>
+</div>
+<span class="m-doc-wrap-bumper">static void <span class="m-doc-details-prefix">dds::domain::TDomainParticipant::</span></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a907737110316327f23e01f9079c58b42">default_participant_qos</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="group__dds__domain.html#ga4b95ba7209610a3a50b4adfc5dc5f0be">::<wbr/>dds::<wbr/>domain::<wbr/>qos::<wbr/>DomainParticipantQos</a>&amp; qos)</span></span>
+</h3>
+<p>Updates the factory's participant QoS defaults.</p>
+<table class="m-table m-fullwidth m-flat">
+<thead>
+<tr><th colspan="2">Parameters</th></tr>
+</thead>
+<tbody>
+<tr>
+<td style="width: 1%">qos <span class="m-label m-flat m-info">in</span></td>
+<td>Policies for future participants created with default QoS</td>
+</tr>
+</tbody>
+</table>
+</div></section>
+<section class="m-doc-details" id="a27f25cfb76afd6ee78276caf6133c1c3"><div>
+<h3>
+<div class="m-doc-template dds-full-signature">
+<span class="m-doc-template-parent">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename DELEGATE</span></span>&gt;</span>
+</div>
+<span class="m-doc-wrap-bumper"> <span class="m-doc-details-prefix">dds::domain::TDomainParticipant::</span></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a27f25cfb76afd6ee78276caf6133c1c3">TDomainParticipant</a>(</span><span class="m-doc-wrap"><a class="m-doc poxy-injected poxy-external poxy-cppreference" href="https://en.cppreference.com/w/cpp/types/integer" target="_blank">int32_t</a> did)</span></span>
+</h3>
+<p>Creates a participant using the factory's default participant QoS.</p>
+<table class="m-table m-fullwidth m-flat">
+<thead>
+<tr><th colspan="2">Parameters</th></tr>
+</thead>
+<tbody>
+<tr>
+<td style="width: 1%">did <span class="m-label m-flat m-info">in</span></td>
+<td>ID of the DDS domain to join</td>
+</tr>
+</tbody>
+<thead>
+<tr><th colspan="2">Exceptions</th></tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="m-doc" href="classdds_1_1core_1_1_error.html">dds::<wbr/>core::<wbr/>Error</a></td>
+<td>The C library could not create the participant</td>
+</tr>
+</tbody>
+</table>
+</div></section>
+<section class="m-doc-details" id="a6e25645887e61a4ee29fc68480cda7b3"><div>
+<h3>
+<div class="m-doc-template dds-full-signature">
+<span class="m-doc-template-parent">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename DELEGATE</span></span>&gt;</span>
+</div>
+<span class="m-doc-wrap-bumper"> <span class="m-doc-details-prefix">dds::domain::TDomainParticipant::</span></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a6e25645887e61a4ee29fc68480cda7b3">TDomainParticipant</a>(</span><span class="m-doc-wrap"><a class="m-doc poxy-injected poxy-external poxy-cppreference" href="https://en.cppreference.com/w/cpp/types/integer" target="_blank">int32_t</a> id,
+              const <a class="m-doc" href="group__dds__domain.html#ga4b95ba7209610a3a50b4adfc5dc5f0be">dds::<wbr/>domain::<wbr/>qos::<wbr/>DomainParticipantQos</a>&amp; qos,
+              <a class="m-doc" href="classdds_1_1domain_1_1_domain_participant_listener.html">dds::<wbr/>domain::<wbr/>DomainParticipantListener</a>* listener = NULL,
+              const <a class="m-doc" href="classdds_1_1core_1_1status_1_1_status_mask.html">dds::<wbr/>core::<wbr/>status::<wbr/>StatusMask</a>&amp; mask = <a class="m-doc" href="classdds_1_1core_1_1status_1_1_status_mask.html#a2d5d96c01cceb09a14ff466f43be8173">dds::<wbr/>core::<wbr/>status::<wbr/>StatusMask::<wbr/>all</a>())</span></span>
+</h3>
+<p>Creates a participant and configures its listener.</p>
+<table class="m-table m-fullwidth m-flat">
+<thead>
+<tr><th colspan="2">Parameters</th></tr>
+</thead>
+<tbody>
+<tr>
+<td style="width: 1%">id <span class="m-label m-flat m-info">in</span></td>
+<td>ID of the DDS domain to join</td>
+</tr>
+<tr>
+<td>qos <span class="m-label m-flat m-info">in</span></td>
+<td>Participant policies. The default delegate currently ignores this argument</td>
+</tr>
+<tr>
+<td>listener <span class="m-label m-flat m-info">in</span></td>
+<td>Application-owned listener, or <code>nullptr</code></td>
+</tr>
+<tr>
+<td>mask <span class="m-label m-flat m-info">in</span></td>
+<td>Statuses delivered to the listener</td>
+</tr>
+</tbody>
+</table>
+<p>The default GurumDDS delegate reads the factory's default participant QoS for this overload. To apply custom policies, call <a class="m-doc" href="#aa5e38fba385f28363e32adef6c34103d">qos(const dds::<wbr/>domain::<wbr/>qos::<wbr/>DomainParticipantQos&amp;)</a> or configure the factory defaults before construction when creation-time settings are required.</p>
+</div></section>
+<section class="m-doc-details" id="a0c8284e8c38a5bfbab96fd73c34fe2e1"><div>
+<h3>
+<div class="m-doc-template dds-full-signature">
+<span class="m-doc-template-parent">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename DELEGATE</span></span>&gt;</span>
+</div>
+<span class="m-doc-wrap-bumper">void <span class="m-doc-details-prefix">dds::domain::TDomainParticipant::</span></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a0c8284e8c38a5bfbab96fd73c34fe2e1">assert_liveliness</a>(</span><span class="m-doc-wrap">)</span></span>
+</h3>
+<p>Manually asserts liveliness through the participant.</p>
+<p>For writers configured with <code>MANUAL_BY_PARTICIPANT</code> liveliness, service activity from the participant maintains their liveliness. Call this operation within the configured lease duration during periods when publication alone does not provide that activity. Use the writer's own assertion for <code>MANUAL_BY_TOPIC</code>.</p><aside class="m-note m-default"><h4>See also</h4><p><a class="m-doc" href="classdds_1_1pub_1_1_data_writer.html#a906117803b9d584a8320b895e8ca1361">dds::<wbr/>pub::<wbr/>DataWriter::<wbr/>assert_liveliness()</a></p></aside>
+</div></section>
+<section class="m-doc-details" id="a98d7c3ba1fe9ffcfe527e1a6026de63d"><div>
+<h3>
+<div class="m-doc-template dds-full-signature">
+<span class="m-doc-template-parent">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename DELEGATE</span></span>&gt;</span>
+</div>
+<span class="m-doc-wrap-bumper">bool <span class="m-doc-details-prefix">dds::domain::TDomainParticipant::</span></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a98d7c3ba1fe9ffcfe527e1a6026de63d">contains_entity</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="group__dds__core.html#ga8ee18acd2002fb15f2650f5c7cb055d0">::<wbr/>dds::<wbr/>core::<wbr/>InstanceHandle</a>&amp; handle)</span></span>
+</h3>
+<table class="m-table m-fullwidth m-flat">
+<thead>
+<tr><th colspan="2">Parameters</th></tr>
+</thead>
+<tbody>
+<tr>
+<td style="width: 1%">handle</td>
+<td>the instance handle for which the containement relationship has to be checked.</td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+<th>Returns</th>
+<td>true if the handle belongs to an <code>Entity</code> belonging to this <code>DomainParticipant</code></td>
+</tr>
+</tfoot>
+</table>
+<p>Checks whether or not the given a_handle represents an Entity that was created from the <a class="m-doc" href="group__dds__domain.html#gab1bd86ffa9ac0869166a446dd0120f3d">DomainParticipant</a>. The containment applies recursively. That is, it applies both to entities (TopicDescription, Publisher, or Subscriber) created directly using the <a class="m-doc" href="group__dds__domain.html#gab1bd86ffa9ac0869166a446dd0120f3d">DomainParticipant</a> as well as entities created using a contained Publisher, or Subscriber as the factory, and so forth.</p>
+</div></section>
+<section class="m-doc-details" id="a3eaa001bcec3ce1012699cdcbb2b0e5b"><div>
+<h3>
+<div class="m-doc-template dds-full-signature">
+<span class="m-doc-template-parent">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename DELEGATE</span></span>&gt;</span>
+</div>
+<span class="m-doc-wrap-bumper"><a class="m-doc" href="classdds_1_1core_1_1_time.html">dds::<wbr/>core::<wbr/>Time</a> <span class="m-doc-details-prefix">dds::domain::TDomainParticipant::</span></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a3eaa001bcec3ce1012699cdcbb2b0e5b">current_time</a>(</span><span class="m-doc-wrap">)</span></span>
+</h3>
+<p>Gets the current time from the local DDS service.</p>
+<table class="m-table m-fullwidth m-flat">
+<tfoot>
+<tr>
+<th style="width: 1%">Returns</th>
+<td>Local DDS time in seconds and nanoseconds</td>
+</tr>
+</tfoot>
+</table>
+<p>The result uses the local DDS service clock. Obtain a new value when preparing a source timestamp to pass to a writer. Participants on different hosts may use different clocks.</p>
+</div></section>
+<section class="m-doc-details" id="a0c15fd6d178c7bd9d152391c16de3371"><div>
+<h3>
+<div class="m-doc-template dds-full-signature">
+<span class="m-doc-template-parent">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename DELEGATE</span></span>&gt;</span>
+</div>
+<span class="m-doc-wrap-bumper"><a class="m-doc" href="group__dds__publication.html#ga5a397b3fef78f6e0788de250ad51b80f">dds::<wbr/>pub::<wbr/>qos::<wbr/>PublisherQos</a> <span class="m-doc-details-prefix">dds::domain::TDomainParticipant::</span></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a0c15fd6d178c7bd9d152391c16de3371">default_publisher_qos</a>(</span><span class="m-doc-wrap">) const</span></span>
+</h3>
+<p>Gets the participant's default publisher QoS.</p>
+<table class="m-table m-fullwidth m-flat">
+<tfoot>
+<tr>
+<th style="width: 1%">Returns</th>
+<td>Default Publisher policies</td>
+</tr>
+</tfoot>
+</table>
+</div></section>
+<section class="m-doc-details" id="add5d5d30e64f88b571a8cea456eec1f5"><div>
+<h3>
+<div class="m-doc-template dds-full-signature">
+<span class="m-doc-template-parent">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename DELEGATE</span></span>&gt;</span>
+</div>
+<span class="m-doc-wrap-bumper"><a class="m-doc" href="#a27f25cfb76afd6ee78276caf6133c1c3">TDomainParticipant</a>&amp; <span class="m-doc-details-prefix">dds::domain::TDomainParticipant::</span></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#add5d5d30e64f88b571a8cea456eec1f5">default_publisher_qos</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="group__dds__publication.html#ga5a397b3fef78f6e0788de250ad51b80f">::<wbr/>dds::<wbr/>pub::<wbr/>qos::<wbr/>PublisherQos</a>&amp; qos)</span></span>
+</h3>
+<p>Updates the participant's default publisher QoS.</p>
+<table class="m-table m-fullwidth m-flat">
+<thead>
+<tr><th colspan="2">Parameters</th></tr>
+</thead>
+<tbody>
+<tr>
+<td style="width: 1%">qos <span class="m-label m-flat m-info">in</span></td>
+<td>Default policies for future publishers</td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+<th>Returns</th>
+<td>This participant</td>
+</tr>
+</tfoot>
+</table>
+</div></section>
+<section class="m-doc-details" id="a80fd6e457ee3d46035692f067cc71807"><div>
+<h3>
+<div class="m-doc-template dds-full-signature">
+<span class="m-doc-template-parent">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename DELEGATE</span></span>&gt;</span>
+</div>
+<span class="m-doc-wrap-bumper"><a class="m-doc" href="group__dds__subscription.html#gaf7f2f1fd9a8d66d37b7da82b130245cb">dds::<wbr/>sub::<wbr/>qos::<wbr/>SubscriberQos</a> <span class="m-doc-details-prefix">dds::domain::TDomainParticipant::</span></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a80fd6e457ee3d46035692f067cc71807">default_subscriber_qos</a>(</span><span class="m-doc-wrap">) const</span></span>
+</h3>
+<p>Gets the participant's default subscriber QoS.</p>
+<table class="m-table m-fullwidth m-flat">
+<tfoot>
+<tr>
+<th style="width: 1%">Returns</th>
+<td>Default Subscriber policies</td>
+</tr>
+</tfoot>
+</table>
+</div></section>
+<section class="m-doc-details" id="a462e0f5c66d1caef32ba5aae6ed4bc72"><div>
+<h3>
+<div class="m-doc-template dds-full-signature">
+<span class="m-doc-template-parent">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename DELEGATE</span></span>&gt;</span>
+</div>
+<span class="m-doc-wrap-bumper"><a class="m-doc" href="#a27f25cfb76afd6ee78276caf6133c1c3">TDomainParticipant</a>&amp; <span class="m-doc-details-prefix">dds::domain::TDomainParticipant::</span></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a462e0f5c66d1caef32ba5aae6ed4bc72">default_subscriber_qos</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="group__dds__subscription.html#gaf7f2f1fd9a8d66d37b7da82b130245cb">::<wbr/>dds::<wbr/>sub::<wbr/>qos::<wbr/>SubscriberQos</a>&amp; qos)</span></span>
+</h3>
+<p>Updates the participant's default subscriber QoS.</p>
+<table class="m-table m-fullwidth m-flat">
+<thead>
+<tr><th colspan="2">Parameters</th></tr>
+</thead>
+<tbody>
+<tr>
+<td style="width: 1%">qos <span class="m-label m-flat m-info">in</span></td>
+<td>Default policies for future subscribers</td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+<th>Returns</th>
+<td>This participant</td>
+</tr>
+</tfoot>
+</table>
+</div></section>
+<section class="m-doc-details" id="afe6d63097d64e74b91aeee719a433a5b"><div>
+<h3>
+<div class="m-doc-template dds-full-signature">
+<span class="m-doc-template-parent">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename DELEGATE</span></span>&gt;</span>
+</div>
+<span class="m-doc-wrap-bumper"><a class="m-doc" href="group__dds__topic.html#ga1c569583302b1543e4f4be1d373359f2">dds::<wbr/>topic::<wbr/>qos::<wbr/>TopicQos</a> <span class="m-doc-details-prefix">dds::domain::TDomainParticipant::</span></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#afe6d63097d64e74b91aeee719a433a5b">default_topic_qos</a>(</span><span class="m-doc-wrap">) const</span></span>
+</h3>
+<p>Gets the participant's default topic QoS.</p>
+<table class="m-table m-fullwidth m-flat">
+<tfoot>
+<tr>
+<th style="width: 1%">Returns</th>
+<td>Default Topic policies</td>
+</tr>
+</tfoot>
+</table>
+</div></section>
+<section class="m-doc-details" id="a2b5ab3e6feaf008d30f5764d1de50755"><div>
+<h3>
+<div class="m-doc-template dds-full-signature">
+<span class="m-doc-template-parent">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename DELEGATE</span></span>&gt;</span>
+</div>
+<span class="m-doc-wrap-bumper"><a class="m-doc" href="#a27f25cfb76afd6ee78276caf6133c1c3">TDomainParticipant</a>&amp; <span class="m-doc-details-prefix">dds::domain::TDomainParticipant::</span></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a2b5ab3e6feaf008d30f5764d1de50755">default_topic_qos</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="group__dds__topic.html#ga1c569583302b1543e4f4be1d373359f2">dds::<wbr/>topic::<wbr/>qos::<wbr/>TopicQos</a>&amp; qos)</span></span>
+</h3>
+<p>Updates the participant's default topic QoS.</p>
+<table class="m-table m-fullwidth m-flat">
+<thead>
+<tr><th colspan="2">Parameters</th></tr>
+</thead>
+<tbody>
+<tr>
+<td style="width: 1%">qos <span class="m-label m-flat m-info">in</span></td>
+<td>Default policies for future topics</td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+<th>Returns</th>
+<td>This participant</td>
+</tr>
+</tfoot>
+</table>
+</div></section>
+<section class="m-doc-details" id="a84e4149bbe6d8d0345dc2d7a10b4204f"><div>
+<h3>
+<div class="m-doc-template dds-full-signature">
+<span class="m-doc-template-parent">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename DELEGATE</span></span>&gt;</span>
+</div>
+<span class="m-doc-wrap-bumper"><a class="m-doc poxy-injected poxy-external poxy-cppreference" href="https://en.cppreference.com/w/cpp/types/integer" target="_blank">int32_t</a> <span class="m-doc-details-prefix">dds::domain::TDomainParticipant::</span></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a84e4149bbe6d8d0345dc2d7a10b4204f">domain_id</a>(</span><span class="m-doc-wrap">) const</span></span>
+</h3>
+<table class="m-table m-fullwidth m-flat">
+<tfoot>
+<tr>
+<th style="width: 1%">Returns</th>
+<td>the domain id</td>
+</tr>
+</tfoot>
+</table>
+<p>Retrieves the domain_id used to create the <code>DomainParticipant</code>. The domain_id identifies the DDS domain to which the <code>DomainParticipant</code> belongs. As described in the introduction to Section 7.1.2.2.1, <a class="m-doc" href="group__dds__domain.html#gab1bd86ffa9ac0869166a446dd0120f3d">DomainParticipant</a> Class, on page 22 each DDS domain represents a separate data communication plane isolated from other domains.</p>
+</div></section>
+<section class="m-doc-details" id="a00e17d2fc71e2f50dad2da9cc2d1c279"><div>
+<h3>
+<div class="m-doc-template dds-full-signature">
+<span class="m-doc-template-parent">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename DELEGATE</span></span>&gt;</span>
+</div>
+<span class="m-doc-wrap-bumper">void <span class="m-doc-details-prefix">dds::domain::TDomainParticipant::</span></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a00e17d2fc71e2f50dad2da9cc2d1c279">listener</a>(</span><span class="m-doc-wrap"><a class="m-doc" href="#a9ce477ff2fea32affb01fa47e7e302c2">Listener</a>* the_listener,
+              const <a class="m-doc" href="classdds_1_1core_1_1status_1_1_status_mask.html">::<wbr/>dds::<wbr/>core::<wbr/>status::<wbr/>StatusMask</a>&amp; event_mask)</span></span>
+</h3>
+<p>Sets the participant's listener and status mask.</p>
+<table class="m-table m-fullwidth m-flat">
+<thead>
+<tr><th colspan="2">Parameters</th></tr>
+</thead>
+<tbody>
+<tr>
+<td style="width: 1%">the_listener <span class="m-label m-flat m-info">in</span></td>
+<td><a class="m-doc" href="#a9ce477ff2fea32affb01fa47e7e302c2">Listener</a> supplied by the application</td>
+</tr>
+<tr>
+<td>event_mask <span class="m-label m-flat m-info">in</span></td>
+<td>Statuses delivered to the listener</td>
+</tr>
+</tbody>
+</table>
+<p>Keep the listener object alive while it is registered. Pass <code>nullptr</code> to clear it.</p>
+</div></section>
+<section class="m-doc-details" id="a1e7b3d20c272dcbf7ae4a4e99b6eee82"><div>
+<h3>
+<div class="m-doc-template dds-full-signature">
+<span class="m-doc-template-parent">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename DELEGATE</span></span>&gt;</span>
+</div>
+<span class="m-doc-wrap-bumper"><a class="m-doc" href="#a9ce477ff2fea32affb01fa47e7e302c2">Listener</a>* <span class="m-doc-details-prefix">dds::domain::TDomainParticipant::</span></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a1e7b3d20c272dcbf7ae4a4e99b6eee82">listener</a>(</span><span class="m-doc-wrap">) const</span></span>
+</h3>
+<p>Gets the registered participant listener.</p>
+<table class="m-table m-fullwidth m-flat">
+<tfoot>
+<tr>
+<th style="width: 1%">Returns</th>
+<td>Borrowed listener pointer, or <code>nullptr</code> when no listener is registered</td>
+</tr>
+</tfoot>
+</table>
+</div></section>
+<section class="m-doc-details" id="a6069da363eb6f899485d251508b7b2f1"><div>
+<h3>
+<div class="m-doc-template dds-full-signature">
+<span class="m-doc-template-parent">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename DELEGATE</span></span>&gt;</span>
+</div>
+<span class="m-doc-wrap-bumper">const <a class="m-doc" href="group__dds__domain.html#ga4b95ba7209610a3a50b4adfc5dc5f0be">dds::<wbr/>domain::<wbr/>qos::<wbr/>DomainParticipantQos</a> <span class="m-doc-details-prefix">dds::domain::TDomainParticipant::</span></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a6069da363eb6f899485d251508b7b2f1">qos</a>(</span><span class="m-doc-wrap">) const</span></span>
+</h3>
+<table class="m-table m-fullwidth m-flat">
+<tfoot>
+<tr>
+<th style="width: 1%">Returns</th>
+<td>the qos setting.</td>
+</tr>
+</tfoot>
+</table>
+<p>Return the <code>DomainParticipantQos</code> setting for this instance.</p>
+</div></section>
+<section class="m-doc-details" id="aa5e38fba385f28363e32adef6c34103d"><div>
+<h3>
+<div class="m-doc-template dds-full-signature">
+<span class="m-doc-template-parent">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename DELEGATE</span></span>&gt;</span>
+</div>
+<span class="m-doc-wrap-bumper">void <span class="m-doc-details-prefix">dds::domain::TDomainParticipant::</span></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#aa5e38fba385f28363e32adef6c34103d">qos</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="group__dds__domain.html#ga4b95ba7209610a3a50b4adfc5dc5f0be">dds::<wbr/>domain::<wbr/>qos::<wbr/>DomainParticipantQos</a>&amp; the_qos)</span></span>
+</h3>
+<p>Updates the participant's QoS.</p>
+<table class="m-table m-fullwidth m-flat">
+<thead>
+<tr><th colspan="2">Parameters</th></tr>
+</thead>
+<tbody>
+<tr>
+<td style="width: 1%">the_qos <span class="m-label m-flat m-info">in</span></td>
+<td>Policies to apply to this participant</td>
+</tr>
+</tbody>
+</table>
+</div></section>
+</section>
+</div>
+</div>
+</div>
+</article></main>
+<div class="m-doc-search" id="search">
+<a href="#!" onclick="return hideSearch()"></a>
+<div class="m-container">
+<div class="m-row">
+<div class="m-col-m-8 m-push-m-2">
+<div class="m-doc-search-header m-text m-small">
+<div><span class="m-label m-default">Tab</span> / <span class="m-label m-default">T</span> to search, <span class="m-label m-default">Esc</span> to close</div>
+<div id="search-symbolcount">…</div>
+</div>
+<div class="m-doc-search-content">
+<form>
+<input autocomplete="off" autofocus="autofocus" disabled="disabled" id="search-input" name="q" placeholder="Loading …" spellcheck="false" type="search"/>
+</form>
+<noscript class="m-text m-danger m-text-center">Unlike everything else in the docs, the search functionality <em>requires</em> JavaScript.</noscript>
+<div class="m-text m-dim m-text-center" id="search-help">
+<p class="m-noindent">Search for symbols, directories, files, pages or
+            modules. You can omit any prefix from the symbol or file path; adding a
+            <code>:</code> or <code>/</code> suffix lists all members of given symbol or
+            directory.</p>
+<p class="m-noindent">Use <span class="m-label m-dim">↓</span>
+            / <span class="m-label m-dim">↑</span> to navigate through the list,
+            <span class="m-label m-dim">Enter</span> to go.
+            <span class="m-label m-dim">Tab</span> autocompletes common prefix, you can
+            copy a link to the result using <span class="m-label m-dim">⌘</span>
+<span class="m-label m-dim">L</span> while <span class="m-label m-dim">⌘</span>
+<span class="m-label m-dim">M</span> produces a Markdown link.</p>
+</div>
+<div class="m-text m-warning m-text-center" id="search-notfound">Sorry, nothing was found.</div>
+<ul id="search-results"></ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src="search-v2.js"></script><script>install_mcss_search_shim();</script>
+<script async="async" src="searchdata-v2.js"></script>
+<footer><nav>
+<div class="m-container">
+<div class="m-row">
+<div class="m-col-l-10 m-push-l-1">
+<a download="" href="GurumDDS_C++.tagfile.xml" target="_blank" type="text/xml">Doxygen tagfile</a>
+<br/><br/>
+Site generated using <a class="poxy-external" href="https://github.com/marzer/poxy/" target="_blank">Poxy</a>
+</div>
+</div>
+</div>
+</nav></footer>
+</body></html>

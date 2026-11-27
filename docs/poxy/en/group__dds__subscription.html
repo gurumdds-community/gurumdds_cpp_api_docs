@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<title>API modules » Subscription module | GurumDDS C++ API Reference</title>
+<link href="gurum-networks-logo.png" rel="icon" type="image/png"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="#cb4b16" name="theme-color"/>
+<link href="poxy/poxy.css" referrerpolicy="no-referrer" rel="stylesheet"/>
+<link href="ReferenceBranding.css" referrerpolicy="no-referrer" rel="stylesheet"/>
+<script src="poxy/poxy.js"></script>
+<script>initialize_theme("light");</script>
+<meta content="GurumDDS C++" name="twitter:title"/>
+<meta content="GurumDDS C++" property="og:title"/>
+<meta content="GurumDDS C++" itemprop="name"/>
+<meta content="API Reference" name="description"/>
+<meta content="API Reference" name="twitter:description"/>
+<meta content="API Reference" property="og:description"/>
+<meta content="API Reference" itemprop="description"/>
+<meta content="telephone=no" name="format-detection"/>
+<meta content="Poxy v0.27.2" name="generator"/>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<script defer="True" src="ReferenceUi.js"></script><link href="../en/group__dds__subscription.html" hreflang="en" rel="alternate"/><link href="../ko/group__dds__subscription.html" hreflang="ko" rel="alternate"/><link href="../language.css" rel="stylesheet"/><script defer="defer" src="../language.js"></script></head>
+<body class="poxy-has-toc">
+<header><nav id="navigation">
+<div class="m-container">
+<div class="m-row doc-language-header">
+<a class="m-col-t-8 m-col-m-none m-left-m" href="index.html" id="m-navbar-brand"><img alt="" src="gurum-networks-logo.png"/>GurumDDS C++ <span class="m-thin">API Reference</span></a>
+<div class="m-col-t-4 m-hide-m m-text-right m-nopadr">
+<a class="m-doc-search-icon" href="#search" onclick="return showSearch()" title="Search"><svg style="height: 0.9rem;" viewbox="0 0 16 16">
+<path d="m6 0c-3.31 0-6 2.69-6 6 0 3.31 2.69 6 6 6 1.49 0 2.85-0.541 3.89-1.44-0.0164 0.338 0.147 0.759 0.5 1.15l3.22 3.79c0.552 0.614 1.45 0.665 2 0.115 0.55-0.55 0.499-1.45-0.115-2l-3.79-3.22c-0.392-0.353-0.812-0.515-1.15-0.5 0.895-1.05 1.44-2.41 1.44-3.89 0-3.31-2.69-6-6-6zm0 1.56a4.44 4.44 0 0 1 4.44 4.44 4.44 4.44 0 0 1-4.44 4.44 4.44 4.44 0 0 1-4.44-4.44 4.44 4.44 0 0 1 4.44-4.44z" id="m-doc-search-icon-path"></path>
+</svg></a>
+<a href="#navigation" id="m-navbar-show" title="Show navigation"></a>
+<a href="#" id="m-navbar-hide" title="Hide navigation"></a>
+</div>
+<div class="m-col-t-12 m-show-m m-col-m-none m-right-m" id="m-navbar-collapse">
+<div class="m-row">
+<ol class="m-col-t-6 m-col-m-none">
+<li><a href="modules.html">Modules</a></li>
+<li><a href="annotated.html">Classes</a></li>
+<li><a href="namespaces.html">Namespaces</a></li>
+</ol>
+<ol class="m-col-t-6 m-col-m-none" start="4">
+<li><a href="examples.html">Examples</a></li>
+<li><a class="poxy-icon theme" href="javascript:void(null);" id="poxy-theme-switch" onclick="toggle_theme(); return false;" role="button" title="Toggle dark and light themes"><svg id="poxy-theme-switch-img" version="1.1" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><circle cx="185.6708" cy="183.8122" fill="currentColor" r="65.625"></circle><path d="M185.6708,87.5622a13.1256,13.1256,0,0,0,13.125-13.125V52.5622a13.125,13.125,0,1,0-26.25,0v21.875A13.1257,13.1257,0,0,0,185.6708,87.5622Z" fill="currentColor"></path><path d="M99.051,115.7519a13.1236,13.1236,0,1,0,18.56-18.56L102.1442,81.726a13.1236,13.1236,0,0,0-18.5595,18.56Z" fill="currentColor"></path><path d="M89.4208,183.8122a13.1257,13.1257,0,0,0-13.125-13.125H54.4208a13.125,13.125,0,0,0,0,26.25h21.875A13.1256,13.1256,0,0,0,89.4208,183.8122Z" fill="currentColor"></path><path d="M99.051,251.8725,83.5847,267.3431a13.1236,13.1236,0,1,0,18.56,18.56l15.4663-15.4706a13.1236,13.1236,0,1,0-18.5595-18.56Z" fill="currentColor"></path><path d="M185.6708,280.0622a13.1258,13.1258,0,0,0-13.125,13.125v21.875a13.125,13.125,0,0,0,26.25,0v-21.875A13.1257,13.1257,0,0,0,185.6708,280.0622Z" fill="currentColor"></path><path d="M272.2907,251.8725a13.1236,13.1236,0,1,0-18.56,18.56l15.4663,15.4706a13.1236,13.1236,0,1,0,18.56-18.56Z" fill="currentColor"></path><path d="M330.0458,183.8122a13.1257,13.1257,0,0,0-13.125-13.125h-21.875a13.125,13.125,0,0,0,0,26.25h21.875A13.1256,13.1256,0,0,0,330.0458,183.8122Z" fill="currentColor"></path><path d="M263.0109,119.5971a13.0824,13.0824,0,0,0,9.28-3.8452l15.4663-15.4663a13.1236,13.1236,0,1,0-18.56-18.56L253.7312,97.1923a13.125,13.125,0,0,0,9.28,22.4048Z" fill="currentColor"></path><path d="M456.9379,401.6714a63.97,63.97,0,0,1-14.9963,7.2055c-19.6448,6.5283-41.8787,2.9566-58.1439-9.8523a68.9311,68.9311,0,0,1-10.835-10.8339c-12.8088-16.2663-16.3806-38.5-9.8523-58.1471a63.8444,63.8444,0,0,1,7.2077-14.9931,8.8036,8.8036,0,0,0-10.1172-13.3034,87.5188,87.5188,0,1,0,110.0372,110.04A8.8,8.8,0,0,0,456.9379,401.6714Z" fill="currentColor"></path></svg></a></li>
+<li class="m-show-m"><a class="m-doc-search-icon" href="#search" onclick="return showSearch()" title="Search"><svg style="height: 0.9rem;" viewbox="0 0 16 16">
+<use href="#m-doc-search-icon-path"></use>
+</svg></a></li>
+</ol>
+</div>
+</div>
+<label class="doc-language"><select aria-label="Documentation language" data-current="0"><option lang="en" selected="selected" value="../en/group__dds__subscription.html">English</option><option lang="en" value="../ko/group__dds__subscription.html">Korean</option></select></label></div>
+</div>
+</nav></header>
+<main><article>
+<div class="m-container m-container-inflatable">
+<div class="m-row">
+<div class="m-col-l-10 m-push-l-1">
+<h1>
+<span class="m-breadcrumb"><a href="group__dds__api__modules.html">API modules</a> »</span>
+          Subscription <span class="m-thin">module</span></h1>
+<p>Subscribers, readers, sample selection, and received data Use a reader to read or take samples and inspect their states and metadata.</p>
+<nav class="m-block m-default poxy-toc" id="poxy-toc">
+<h3>Contents</h3>
+<ul>
+<li>
+<a href="#subscription_types">Subscription types</a>
+<ul>
+<li><a href="#subscription_essentials">Create a reader</a></li>
+<li><a href="#subscription_notifications">Handle subscription events</a></li>
+<li><a href="#subscription_selection">Select samples</a></li>
+</ul>
+</li>
+<li><a href="#subscription_entity_relationships">Subscription entity relationships</a></li>
+<li>
+<a href="#receiving_guide">Receive and select samples</a>
+<ul>
+<li><a href="#receiving_choose">Choose how to access the reader history</a></li>
+<li><a href="#receiving_empty">Diagnose an empty result</a></li>
+<li><a href="#receiving_loss">Diagnose lost and rejected samples</a></li>
+<li><a href="#receiving_instance_timeline">Follow one keyed instance</a></li>
+<li><a href="#receiving_loan">Process a loaned batch</a></li>
+<li><a href="#receiving_select">Select a batch without changing the default filter</a></li>
+<li><a href="#receiving_copy">Choose a destination for copied records</a></li>
+<li><a href="#receiving_keyed">Follow an instance through disposal and unregister</a></li>
+</ul>
+</li>
+<li>
+              Reference
+              <ul>
+<li><a href="#nested-classes">Classes</a></li>
+<li><a href="#typedef-members">Typedefs</a></li>
+</ul>
+</li>
+</ul>
+</nav>
+<section id="subscription_types"><h2><a href="#subscription_types">Subscription types</a></h2><section id="subscription_essentials"><h3><a href="#subscription_essentials">Create a reader</a></h3><table class="m-table"><thead><tr><th>Type</th><th>Use</th></tr></thead><tbody><tr><td><a class="m-doc" href="#ga9a6d78b2a23f864211da5bd2edf28750">Subscriber</a></td><td>Creates readers and supplies their default QoS.</td></tr><tr><td><a class="m-doc" href="classdds_1_1sub_1_1_data_reader.html">DataReader&lt;T&gt;</a></td><td>Reads or takes samples from a typed topic.</td></tr><tr><td><a class="m-doc" href="#gac759142c11b5f0cb2b2a8f6c41405966">DataReaderQos</a></td><td>Holds policies for an individual reader.</td></tr></tbody></table></section><section id="subscription_notifications"><h3><a href="#subscription_notifications">Handle subscription events</a></h3><table class="m-table"><thead><tr><th>Type</th><th>Use</th></tr></thead><tbody><tr><td><a class="m-doc" href="classdds_1_1sub_1_1_data_reader_listener.html">DataReaderListener&lt;T&gt;</a></td><td>Receives data and status callbacks from a typed reader.</td></tr><tr><td><a class="m-doc" href="classdds_1_1sub_1_1_subscriber_listener.html">SubscriberListener</a></td><td>Reports data availability at Subscriber scope.</td></tr><tr><td><a class="m-doc" href="namespacedds_1_1core_1_1status.html#abb43166d32256fc63bd26ce34140090d">SubscriptionMatchedStatus</a></td><td>Reports current and cumulative publication matches.</td></tr></tbody></table></section><section id="subscription_selection"><h3><a href="#subscription_selection">Select samples</a></h3><table class="m-table"><thead><tr><th>Type</th><th>Use</th></tr></thead><tbody><tr><td><a class="m-doc" href="classdds_1_1sub_1_1_data_reader_1_1_selector.html">DataReader&lt;T&gt;::<wbr/>Selector</a></td><td>Limits a read or take by state, instance, or sample count.</td></tr><tr><td><a class="m-doc" href="classdds_1_1sub_1_1status_1_1_data_state.html">DataState</a></td><td>Combines sample, view, and instance state filters.</td></tr><tr><td><a class="m-doc" href="classdds_1_1sub_1_1_loaned_samples.html">LoanedSamples&lt;T&gt;</a></td><td>Holds samples loaned by a reader.</td></tr></tbody></table></section></section><section id="subscription_entity_relationships"><h2><a href="#subscription_entity_relationships">Subscription entity relationships</a></h2><figure class="m-figure"><svg aria-label="A Subscriber supplies defaults and can report data on readers. A DataReader has a topic description, its own QoS and an optional listener." class="poxy-injected-svg" data-dds-diagram="true" height="292" id="poxy-injected-svg-0" role="img" version="1.1" viewbox="0 0 1140 292" width="1140" xmlns="http://www.w3.org/2000/svg"><title id="poxy-injected-svg-0-subscription-types-en-title">Subscriber and DataReader class relationships</title><desc>A Subscriber supplies defaults and can report data on readers. A DataReader has a topic description, its own QoS and an optional listener.</desc><defs><marker id="poxy-injected-svg-0-subscription-types-en-arrow" markerheight="10" markerunits="userSpaceOnUse" markerwidth="9" orient="auto" refx="9" refy="6" viewbox="0 0 10 12"><path d="M 1,1 L 9,6 L 1,11" fill="none" stroke="#20354B" stroke-width="1.2"></path></marker><marker id="poxy-injected-svg-0-subscription-types-en-blue" markerheight="9" markerunits="userSpaceOnUse" markerwidth="10" orient="auto" refx="10" refy="5" viewbox="0 0 11 10"><path d="M 0,0 L 11,5 L 0,10 Z" fill="#356B96"></path></marker><marker id="poxy-injected-svg-0-subscription-types-en-uml" markerheight="15" markerunits="userSpaceOnUse" markerwidth="15" orient="auto" refx="14" refy="7.5" viewbox="0 0 15 15"><path d="M 1,1 L 14,7.5 L 1,14 Z" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"></path></marker></defs><rect fill="#FFFFFF" height="292" width="1140"></rect><g fill="#20354B" font-family="Arial, Malgun Gothic, sans-serif"><path d="M 334 138 H 416" fill="none" marker-end="url(#poxy-injected-svg-0-subscription-types-en-arrow)" stroke="#20354B" stroke-width="1.15"></path><path d="M 746 112 H 824 V 69 H 875" fill="none" marker-end="url(#poxy-injected-svg-0-subscription-types-en-arrow)" stroke="#20354B" stroke-dasharray="5 4" stroke-width="1.15"></path><path d="M 746 158 H 824 V 202 H 875" fill="none" marker-end="url(#poxy-injected-svg-0-subscription-types-en-arrow)" stroke="#20354B" stroke-dasharray="5 4" stroke-width="1.15"></path><rect fill="#FFFFFF" height="121" stroke="#20354B" stroke-width="1.15" width="310" x="24" y="63"></rect><path d="M 24 97 h 310" fill="none" stroke="#20354B" stroke-width="1.15"></path><path d="M 24 108 h 310" fill="none" stroke="#20354B" stroke-width="1.15"></path><text font-family="Georgia, Malgun Gothic, serif" font-size="19" font-weight="bold" text-anchor="middle" x="179" y="86">Subscriber</text><text font-family="Consolas, Menlo, monospace" font-size="14" text-anchor="start" x="35" y="129">+ participant()</text><text font-family="Consolas, Menlo, monospace" font-size="14" lengthadjust="spacingAndGlyphs" text-anchor="start" textlength="288" x="35" y="150">+ default_datareader_qos() : DataReaderQos</text><text font-family="Consolas, Menlo, monospace" font-size="14" text-anchor="start" x="35" y="171">+ notify_datareaders()</text><rect fill="#FFFFFF" height="142" stroke="#20354B" stroke-width="1.15" width="330" x="416" y="47"></rect><rect fill="#EFF5FA" height="32" width="328" x="417" y="48"></rect><path d="M 416 81 h 330" fill="none" stroke="#20354B" stroke-width="1.15"></path><path d="M 416 92 h 330" fill="none" stroke="#20354B" stroke-width="1.15"></path><text font-family="Georgia, Malgun Gothic, serif" font-size="19" font-weight="bold" text-anchor="middle" x="581" y="70">DataReader&lt;T&gt;</text><text font-family="Consolas, Menlo, monospace" font-size="14" text-anchor="start" x="427" y="113">+ qos() : DataReaderQos</text><text font-family="Consolas, Menlo, monospace" font-size="14" text-anchor="start" x="427" y="134">+ select() : Selector</text><text font-family="Consolas, Menlo, monospace" font-size="14" text-anchor="start" x="427" y="155">+ topic_description()</text><text font-family="Consolas, Menlo, monospace" font-size="14" text-anchor="start" x="427" y="176">+ subscriber()</text><rect fill="#FFFFFF" height="79" stroke="#20354B" stroke-width="1.15" width="240" x="875" y="20"></rect><path d="M 875 54 h 240" fill="none" stroke="#20354B" stroke-width="1.15"></path><path d="M 875 65 h 240" fill="none" stroke="#20354B" stroke-width="1.15"></path><text font-family="Georgia, Malgun Gothic, serif" font-size="19" font-weight="bold" lengthadjust="spacingAndGlyphs" text-anchor="middle" textlength="205" x="995" y="43">TopicDescription&lt;T&gt;</text><text font-family="Consolas, Menlo, monospace" font-size="14" lengthadjust="spacingAndGlyphs" text-anchor="start" textlength="218" x="886" y="86">+ name() : const std::string&amp;</text><rect fill="#FFFFFF" height="79" stroke="#20354B" stroke-width="1.15" width="240" x="875" y="149"></rect><path d="M 875 183 h 240" fill="none" stroke="#20354B" stroke-width="1.15"></path><path d="M 875 194 h 240" fill="none" stroke="#20354B" stroke-width="1.15"></path><text font-family="Georgia, Malgun Gothic, serif" font-size="19" font-weight="bold" lengthadjust="spacingAndGlyphs" text-anchor="middle" textlength="218" x="995" y="172">DataReaderListener&lt;T&gt;</text><text font-family="Consolas, Menlo, monospace" font-size="14" text-anchor="start" x="886" y="215">+ on_data_available(...)</text><text font-size="13" text-anchor="middle" x="375" y="127">0..*</text><text font-size="15" text-anchor="middle" x="570" y="262">Use Selector to choose which records a specific Reader returns.</text></g></svg><figcaption>Subscriber and DataReader class relationships</figcaption></figure></section><section id="receiving_guide"><h2><a href="#receiving_guide">Receive and select samples</a></h2><p>Start with <a class="m-doc" href="group__dds__domain.html#getting_started">Send and receive your first sample</a> to create a matched writer and reader. This guide uses a typed <a class="m-doc" href="classdds_1_1sub_1_1_data_reader.html">dds::sub::DataReader&lt;T&gt;</a> and shows when to read, take, or select records from its history.</p><section id="receiving_choose"><h3><a href="#receiving_choose">Choose how to access the reader history</a></h3><table class="m-table"><thead><tr><th>Goal</th><th>Call</th><th>What happens to the matching records</th></tr></thead><tbody><tr><td>Inspect records and keep them available</td><td><code>reader.read()</code></td><td>The reader retains the records and marks them as read. An unread-only filter skips them on later calls.</td></tr><tr><td>Consume a batch</td><td><code>reader.take()</code></td><td>The reader removes the records it returns. Later reads and takes cannot retrieve those same records.</td></tr><tr><td>Limit a batch by state, instance, or count</td><td><code>reader.select()</code> followed by <code>read()</code> or <code>take()</code></td><td>The selector applies the requested filters. The final operation determines whether records are retained or removed.</td></tr></tbody></table><p>The direct calls use the reader's <code>default_filter_state()</code>. A new selector starts with its own state filter that matches all sample, view, and instance states. Set the selector's state explicitly when the application needs a narrower selection. See <a class="m-doc" href="classdds_1_1sub_1_1status_1_1_data_state.html">dds::<wbr/>sub::<wbr/>status::<wbr/>DataState</a> for the three state masks.</p></section><section id="receiving_empty"><h3><a href="#receiving_empty">Diagnose an empty result</a></h3><p>An empty <code>read()</code> or <code>take()</code> result can mean no matching records, an allocation failure, or an error from the C library. Use <code>subscription_matched_status().current_count()</code> to confirm a writer is matched. Then send a fresh sample and check the content filter, instance handle, and sample-state mask. For example, an unread-only filter skips a sample after <code>read()</code> marks it as read. See <a class="m-doc" href="group__dds__qos.html#matching_guide">Diagnose a writer and reader that do not exchange data</a> when the endpoints do not match.</p><p>With a match and a fresh write, compare the default-state read with an explicit selector that accepts all states. If both are empty, check loss and rejection before assuming the filter is the cause.</p></section><section id="receiving_loss"><h3><a href="#receiving_loss">Diagnose lost and rejected samples</a></h3><p>Read <code>sample_lost_status()</code> to check for losses before delivery. Read <code>sample_rejected_status()</code> to inspect samples the reader rejected and the latest rejection reason. Check <code>last_reason()</code> for a limit on instances, samples, or samples per instance, then compare it with the reader's <code>History</code> and <code>ResourceLimits</code>. <code>last_instance_handle()</code> identifies the instance in the last rejection. Keep one status snapshot if several parts of the application need its change count.</p></section><section id="receiving_instance_timeline"><h3><a href="#receiving_instance_timeline">Follow one keyed instance</a></h3><p>Send a sample for a new key. Look at its instance handle and view state. A read marks the returned record as read. A take removes it. Then dispose the instance as shown in <a class="m-doc" href="group__dds__tutorial__reader.html#dds_tutorial_reader_dispose">Detect a disposed instance</a> and check <code>SampleInfo::valid()</code> before accessing its payload.</p><p>Read <code>rank()</code> for the returned batch. See <a class="m-doc" href="group__dds__tutorial__reader.html#dds_tutorial_reader_ranks">Inspect ranks across instance generations</a> for how the ranks change across two generations.</p></section><section id="receiving_loan"><h3><a href="#receiving_loan">Process a loaned batch</a></h3><figure class="m-figure"><svg aria-label="read retains records in history and marks them read. take removes them. A loan stays usable while at least one owner holds it. Copies stored by the application remain usable." class="poxy-injected-svg" data-dds-diagram="true" height="254" id="poxy-injected-svg-1" role="img" version="1.1" viewbox="0 0 1140 254" width="1140" xmlns="http://www.w3.org/2000/svg"><title id="poxy-injected-svg-1-loan-lifetime-en-title">Reader history and sample loan lifetime</title><desc>read retains records in history and marks them read. take removes them. A loan stays usable while at least one owner holds it. Copies stored by the application remain usable.</desc><defs><marker id="poxy-injected-svg-1-loan-lifetime-en-open" markerheight="10" markerunits="userSpaceOnUse" markerwidth="9" orient="auto" refx="9" refy="6" viewbox="0 0 10 12"><path d="M 1,1 L 9,6 L 1,11" fill="none" stroke="#20354B" stroke-width="1.2"></path></marker><marker id="poxy-injected-svg-1-loan-lifetime-en-arrow" markerheight="9" markerunits="userSpaceOnUse" markerwidth="10" orient="auto" refx="10" refy="5" viewbox="0 0 11 10"><path d="M 0,0 L 11,5 L 0,10 Z" fill="#356B96"></path></marker><marker id="poxy-injected-svg-1-loan-lifetime-en-uml" markerheight="15" markerunits="userSpaceOnUse" markerwidth="15" orient="auto" refx="14" refy="7.5" viewbox="0 0 15 15"><path d="M 1,1 L 14,7.5 L 1,14 Z" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"></path></marker></defs><rect fill="#FFFFFF" height="254" width="1140"></rect><g fill="#20354B" font-family="Arial, Malgun Gothic, sans-serif"><path d="M 158 77 H 196" fill="none" marker-end="url(#poxy-injected-svg-1-loan-lifetime-en-open)" stroke="#20354B" stroke-width="1.15"></path><path d="M 158 179 H 196" fill="none" marker-end="url(#poxy-injected-svg-1-loan-lifetime-en-open)" stroke="#20354B" stroke-width="1.15"></path><path d="M 437 77 H 467 V 125 H 496" fill="none" marker-end="url(#poxy-injected-svg-1-loan-lifetime-en-open)" stroke="#20354B" stroke-width="1.15"></path><path d="M 437 179 H 467 V 125" fill="none" stroke="#20354B" stroke-width="1.15"></path><path d="M 774 125 H 831" fill="none" marker-end="url(#poxy-injected-svg-1-loan-lifetime-en-arrow)" stroke="#356B96" stroke-width="1.7"></path><rect fill="#FFFFFF" height="52" stroke="#20354B" stroke-width="1.15" width="134" x="24" y="51"></rect><rect fill="#FFFFFF" height="52" stroke="#20354B" stroke-width="1.15" width="134" x="24" y="153"></rect><rect fill="#FFFFFF" height="82" stroke="#20354B" stroke-width="1.15" width="241" x="196" y="36"></rect><rect fill="#FFFFFF" height="82" stroke="#20354B" stroke-width="1.15" width="241" x="196" y="138"></rect><rect fill="#EFF5FA" height="126" stroke="#20354B" stroke-width="1.15" width="278" x="496" y="62"></rect><rect fill="#FFFFFF" height="126" stroke="#20354B" stroke-width="1.15" width="284" x="831" y="62"></rect><text font-family="Consolas, Menlo, monospace" font-size="16" text-anchor="middle" x="91" y="83">read()</text><text font-family="Consolas, Menlo, monospace" font-size="16" text-anchor="middle" x="91" y="185">take()</text><text font-size="16" font-weight="bold" text-anchor="middle" x="316" y="69">Records stay in history</text><text font-size="15" text-anchor="middle" x="316" y="95">Marked as read</text><text font-size="16" font-weight="bold" text-anchor="middle" x="316" y="184">Records leave history</text><text font-family="Consolas, Menlo, monospace" font-size="18" text-anchor="middle" x="635" y="95">LoanedSamples</text><text font-size="15" text-anchor="middle" x="635" y="125">Check valid() before payload access</text><text font-size="15" text-anchor="middle" x="635" y="155">Copy the fields you need to keep</text><text font-size="16" font-weight="bold" text-anchor="middle" x="973" y="95">Last owner releases the loan</text><text font-size="15" text-anchor="middle" x="973" y="125">Loaned references expire</text><text font-size="15" text-anchor="middle" x="973" y="155">Owned copies remain usable</text></g></svg><figcaption>Reader history and sample loan lifetime</figcaption></figure><p>Pass a typed reader whose topic type has <code>userId</code> and <code>message</code> fields, such as the <code>HelloWorldData_Msg</code> reader in the Hello World example.</p><pre class="m-code"><span class="cp">#include</span> <span class="cpf">&lt;gurumdds/dds.hpp&gt;</span>
+<span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="nc">T</span><span class="o">&gt;</span>
+<span class="k">void</span> <span class="nf">print_next_batch</span><span class="p">(</span><span class="nn">dds::sub</span><span class="o">::</span><span class="nc">DataReader</span><span class="o">&lt;</span><span class="nc">T</span><span class="o">&gt;&amp;</span> <span class="n">reader</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">const</span> <span class="k">auto</span> <span class="n">samples</span> <span class="o">=</span> <span class="n">reader</span><span class="p">.</span><span class="nf">take</span><span class="p">();</span>
+
+    <span class="k">for</span> <span class="p">(</span><span class="k">const</span> <span class="k">auto</span><span class="o">&amp;</span> <span class="n">sample</span> <span class="o">:</span> <span class="n">samples</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">sample</span><span class="p">.</span><span class="nf">info</span><span class="p">().</span><span class="nf">valid</span><span class="p">())</span>
+            <span class="k">continue</span><span class="p">;</span>
+
+        <span class="nn">std</span><span class="o">::</span><span class="nc">cout</span> <span class="o">&lt;&lt;</span> <span class="n">sample</span><span class="p">.</span><span class="nf">data</span><span class="p">().</span><span class="n">userId</span> <span class="o">&lt;&lt;</span> <span class="sc">' '</span> <span class="o">&lt;&lt;</span> <span class="n">sample</span><span class="p">.</span><span class="nf">data</span><span class="p">().</span><span class="n">message</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span></pre><p>Check <code>SampleInfo::valid()</code> before reading the payload. An instance state change can arrive without a payload.</p><p>Keep the <a class="m-doc" href="classdds_1_1sub_1_1_loaned_samples.html">dds::<wbr/>sub::<wbr/>LoanedSamples</a> collection alive while using a sample reference, iterator, or a pointer stored in a payload. Copy the fields your application needs into owned storage before the collection is destroyed. For example, construct a <code><a class="m-doc poxy-injected poxy-external poxy-cppreference" href="https://en.cppreference.com/w/cpp/string/basic_string" target="_blank">std::string</a></code> from a valid <code>HelloWorldData_Msg::message</code> while the loan is alive if the application needs that text later.</p></section><section id="receiving_select"><h3><a href="#receiving_select">Select a batch without changing the default filter</a></h3><figure class="m-figure"><svg aria-label="DataReader creates a Selector. Its read and take methods return LoanedSamples. Each record exposes data and metadata." class="poxy-injected-svg" data-dds-diagram="true" height="294" id="poxy-injected-svg-2" role="img" version="1.1" viewbox="0 0 1280 294" width="1280" xmlns="http://www.w3.org/2000/svg"><title id="poxy-injected-svg-2-reader-selection-en-title">DataReader selection and returned samples</title><desc>DataReader creates a Selector. Its read and take methods return LoanedSamples. Each record exposes data and metadata.</desc><defs><marker id="poxy-injected-svg-2-reader-selection-en-arrow" markerheight="10" markerunits="userSpaceOnUse" markerwidth="9" orient="auto" refx="9" refy="6" viewbox="0 0 10 12"><path d="M 1,1 L 9,6 L 1,11" fill="none" stroke="#20354B" stroke-width="1.2"></path></marker><marker id="poxy-injected-svg-2-reader-selection-en-blue" markerheight="9" markerunits="userSpaceOnUse" markerwidth="10" orient="auto" refx="10" refy="5" viewbox="0 0 11 10"><path d="M 0,0 L 11,5 L 0,10 Z" fill="#356B96"></path></marker></defs><rect fill="#FFFFFF" height="294" width="1280"></rect><g fill="#20354B" font-family="Arial, Malgun Gothic, sans-serif"><path d="M 300 139 H 343" fill="none" marker-end="url(#poxy-injected-svg-2-reader-selection-en-arrow)" stroke="#20354B" stroke-dasharray="5 4" stroke-width="1.15"></path><path d="M 628 139 H 670" fill="none" marker-end="url(#poxy-injected-svg-2-reader-selection-en-blue)" stroke="#356B96" stroke-dasharray="5 4" stroke-width="1.7"></path><path d="M 945 139 H 987" fill="none" marker-end="url(#poxy-injected-svg-2-reader-selection-en-arrow)" stroke="#20354B" stroke-dasharray="5 4" stroke-width="1.15"></path><rect fill="#FFFFFF" height="120" stroke="#20354B" stroke-width="1.15" width="280" x="20" y="78"></rect><text font-size="18" font-weight="bold" text-anchor="middle" x="160" y="100">DataReader&lt;T&gt;</text><path d="M 20 111 h 280" fill="none" stroke="#20354B" stroke-width="1.15"></path><path d="M 20 121 h 280" fill="none" stroke="#20354B" stroke-width="1.15"></path><text font-family="Consolas, Menlo, monospace" font-size="14" text-anchor="start" x="30" y="142">+ select() : Selector</text><text font-family="Consolas, Menlo, monospace" font-size="14" text-anchor="start" x="30" y="163">+ read() : LoanedSamples&lt;T&gt;</text><text font-family="Consolas, Menlo, monospace" font-size="14" text-anchor="start" x="30" y="184">+ take() : LoanedSamples&lt;T&gt;</text><rect fill="#FFFFFF" height="162" stroke="#20354B" stroke-width="1.15" width="285" x="343" y="57"></rect><rect fill="#EFF5FA" height="31" width="283" x="344" y="58"></rect><text font-size="18" font-weight="bold" text-anchor="middle" x="485.5" y="79">DataReader&lt;T&gt;::Selector</text><path d="M 343 90 h 285" fill="none" stroke="#20354B" stroke-width="1.15"></path><path d="M 343 100 h 285" fill="none" stroke="#20354B" stroke-width="1.15"></path><text font-family="Consolas, Menlo, monospace" font-size="14" text-anchor="start" x="353" y="121">+ instance(h) : Selector&amp;</text><text font-family="Consolas, Menlo, monospace" font-size="14" text-anchor="start" x="353" y="142">+ state(s) : Selector&amp;</text><text font-family="Consolas, Menlo, monospace" font-size="14" text-anchor="start" x="353" y="163">+ max_samples(n) : Selector&amp;</text><text font-family="Consolas, Menlo, monospace" font-size="14" text-anchor="start" x="353" y="184">+ read() : LoanedSamples&lt;T&gt;</text><text font-family="Consolas, Menlo, monospace" font-size="14" text-anchor="start" x="353" y="205">+ take() : LoanedSamples&lt;T&gt;</text><rect fill="#FFFFFF" height="120" stroke="#20354B" stroke-width="1.15" width="275" x="670" y="78"></rect><text font-size="18" font-weight="bold" text-anchor="middle" x="807.5" y="100">LoanedSamples&lt;T&gt;</text><path d="M 670 111 h 275" fill="none" stroke="#20354B" stroke-width="1.15"></path><path d="M 670 121 h 275" fill="none" stroke="#20354B" stroke-width="1.15"></path><text font-family="Consolas, Menlo, monospace" font-size="14" text-anchor="start" x="680" y="142">+ begin() : const_iterator</text><text font-family="Consolas, Menlo, monospace" font-size="14" text-anchor="start" x="680" y="163">+ end() : const_iterator</text><text font-family="Consolas, Menlo, monospace" font-size="14" text-anchor="start" x="680" y="184">+ length() : uint32_t</text><rect fill="#FFFFFF" height="99" stroke="#20354B" stroke-width="1.15" width="273" x="987" y="89"></rect><text font-size="18" font-weight="bold" text-anchor="middle" x="1123.5" y="111">Sample&lt;T, TInfo&gt;</text><path d="M 987 122 h 273" fill="none" stroke="#20354B" stroke-width="1.15"></path><path d="M 987 132 h 273" fill="none" stroke="#20354B" stroke-width="1.15"></path><text font-family="Consolas, Menlo, monospace" font-size="14" text-anchor="start" x="997" y="153">+ data() : const T&amp;</text><text font-family="Consolas, Menlo, monospace" font-size="14" text-anchor="start" x="997" y="174">+ info() : const TInfo&amp;</text><text font-size="12" text-anchor="middle" x="321" y="124">creates</text><text font-size="12" text-anchor="middle" x="650" y="124">returns</text><text font-size="12" text-anchor="middle" x="967" y="124">iterates</text><text font-size="15" text-anchor="start" x="20" y="263">Check info().valid() before accessing data(). Template parameters and overloads are abbreviated.</text></g></svg><figcaption>DataReader selection and returned samples</figcaption></figure><p>Use a reader on a keyed topic with a <code>message</code> field, such as <code>Hello::Msg</code> in the keyed example. Pass a handle obtained from that reader to take up to eight unread records for one known instance. Checking for a nil handle avoids selecting all instances when a lookup did not find the requested key.</p><pre class="m-code"><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="nc">T</span><span class="o">&gt;</span>
+<span class="k">void</span> <span class="nf">print_unread_instance</span><span class="p">(</span><span class="nn">dds::sub</span><span class="o">::</span><span class="nc">DataReader</span><span class="o">&lt;</span><span class="nc">T</span><span class="o">&gt;&amp;</span> <span class="n">reader</span><span class="p">,</span> <span class="k">const</span> <span class="nn">dds::core</span><span class="o">::</span><span class="nc">InstanceHandle</span><span class="o">&amp;</span> <span class="n">handle</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">handle</span><span class="p">.</span><span class="nf">is_nil</span><span class="p">())</span>
+        <span class="k">return</span><span class="p">;</span>
+
+    <span class="k">const</span> <span class="nn">dds::sub::status</span><span class="o">::</span><span class="nc">DataState</span> <span class="nf">unread</span><span class="p">(</span><span class="nn">dds::sub::status</span><span class="o">::</span><span class="nc">SampleState</span><span class="o">::</span><span class="nf">not_read</span><span class="p">());</span>
+    <span class="k">const</span> <span class="k">auto</span> <span class="n">samples</span> <span class="o">=</span> <span class="n">reader</span><span class="p">.</span><span class="nf">select</span><span class="p">().</span><span class="nf">instance</span><span class="p">(</span><span class="n">handle</span><span class="p">).</span><span class="nf">state</span><span class="p">(</span><span class="n">unread</span><span class="p">).</span><span class="nf">max_samples</span><span class="p">(</span><span class="mi">8</span><span class="p">).</span><span class="nf">take</span><span class="p">();</span>
+
+    <span class="k">for</span> <span class="p">(</span><span class="k">const</span> <span class="k">auto</span><span class="o">&amp;</span> <span class="n">sample</span> <span class="o">:</span> <span class="n">samples</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">sample</span><span class="p">.</span><span class="nf">info</span><span class="p">().</span><span class="nf">valid</span><span class="p">())</span>
+            <span class="k">continue</span><span class="p">;</span>
+
+        <span class="nn">std</span><span class="o">::</span><span class="nc">cout</span> <span class="o">&lt;&lt;</span> <span class="n">sample</span><span class="p">.</span><span class="nf">data</span><span class="p">().</span><span class="n">message</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span></pre><p>Use <code>lookup_instance()</code> for a known key. <code>sample.info().instance_handle()</code> identifies the instance of an incoming record.</p><p>To filter on values in the payload, create the reader on a content-filtered topic. The <a class="m-doc" href="dds_example_legacy_filtered.html">Content-filtered subscriber</a> shows a reader that accepts samples with <code>userId &gt; 5</code>.</p></section><section id="receiving_copy"><h3><a href="#receiving_copy">Choose a destination for copied records</a></h3><p>The iterator overloads write records and metadata into application-provided storage. A call with <code>buffer.begin()</code> and a positive count uses existing writable slots. Ensure the buffer has at least that many slots before calling. A call with <code>std::back_inserter(buffer)</code> appends to a growable container and may allocate. Both forms return the number of records written.</p><p>For a topic type <code>T</code> whose copy owns its payload fields, use containers with the element type <code>dds::sub::Sample&lt;T, dds::sub::SampleInfo&gt;</code>. The two functions below are alternatives. Each uses the reader's default state filter.</p><pre class="m-code"><span class="cp">#include</span> <span class="cpf">&lt;gurumdds/dds.hpp&gt;</span>
+<span class="cp">#include</span> <span class="cpf">&lt;array&gt;</span>
+<span class="cp">#include</span> <span class="cpf">&lt;cstdint&gt;</span>
+<span class="cp">#include</span> <span class="cpf">&lt;iterator&gt;</span>
+<span class="cp">#include</span> <span class="cpf">&lt;vector&gt;</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="nc">T</span><span class="o">&gt;</span>
+<span class="nn">std</span><span class="o">::</span><span class="nc"><a class="m-doc poxy-injected poxy-external poxy-cppreference" href="https://en.cppreference.com/w/cpp/types/integer" target="_blank">uint32_t</a></span> <span class="nf">read_into_buffer</span><span class="p">(</span><span class="nn">dds::sub</span><span class="o">::</span><span class="nc">DataReader</span><span class="o">&lt;</span><span class="nc">T</span><span class="o">&gt;&amp;</span> <span class="n">reader</span><span class="p">,</span>
+                               <span class="nn">std</span><span class="o">::</span><span class="nc">array</span><span class="o">&lt;</span><span class="nn">dds::sub</span><span class="o">::</span><span class="nc">Sample</span><span class="o">&lt;</span><span class="nc">T</span><span class="p">,</span> <span class="nn">dds::sub</span><span class="o">::</span><span class="nc">SampleInfo</span><span class="o">&gt;</span><span class="p">,</span> <span class="mi">8</span><span class="o">&gt;&amp;</span> <span class="n">buffer</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">return</span> <span class="n">reader</span><span class="p">.</span><span class="nf">read</span><span class="p">(</span><span class="n">buffer</span><span class="p">.</span><span class="nf">begin</span><span class="p">(),</span> <span class="k"><a class="m-doc poxy-injected poxy-external poxy-cppreference" href="https://en.cppreference.com/w/cpp/language/static_cast" target="_blank">static_cast</a></span><span class="o">&lt;</span><span class="nn">std</span><span class="o">::</span><span class="nc"><a class="m-doc poxy-injected poxy-external poxy-cppreference" href="https://en.cppreference.com/w/cpp/types/integer" target="_blank">uint32_t</a></span><span class="o">&gt;</span><span class="p">(</span><span class="n">buffer</span><span class="p">.</span><span class="nf">size</span><span class="p">()));</span>
+<span class="p">}</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="nc">T</span><span class="o">&gt;</span>
+<span class="nn">std</span><span class="o">::</span><span class="nc"><a class="m-doc poxy-injected poxy-external poxy-cppreference" href="https://en.cppreference.com/w/cpp/types/integer" target="_blank">uint32_t</a></span> <span class="nf">append_taken_records</span><span class="p">(</span><span class="nn">dds::sub</span><span class="o">::</span><span class="nc">DataReader</span><span class="o">&lt;</span><span class="nc">T</span><span class="o">&gt;&amp;</span> <span class="n">reader</span><span class="p">,</span>
+                                   <span class="nn">std</span><span class="o">::</span><span class="nc">vector</span><span class="o">&lt;</span><span class="nn">dds::sub</span><span class="o">::</span><span class="nc">Sample</span><span class="o">&lt;</span><span class="nc">T</span><span class="p">,</span> <span class="nn">dds::sub</span><span class="o">::</span><span class="nc">SampleInfo</span><span class="o">&gt;&gt;&amp;</span> <span class="n">buffer</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">return</span> <span class="n">reader</span><span class="p">.</span><span class="nf">take</span><span class="p">(</span><span class="nn">std</span><span class="o">::</span><span class="nf">back_inserter</span><span class="p">(</span><span class="n">buffer</span><span class="p">));</span>
+<span class="p">}</span></pre><p>If the topic type contains borrowed pointers, use the loan and copy the needed values into owned fields while it is alive. Copying the record with an iterator uses the topic type's C++ copy semantics.</p><p>Set <code>max_samples(n)</code> on the selector itself when copying a bounded selection. The selector's forward-iterator overload uses this setting. For fixed-capacity storage, choose a positive limit no larger than the number of writable slots.</p><aside class="m-note m-danger"><h4>Warning</h4><p><a class="m-doc poxy-injected poxy-external poxy-cppreference poxy-named-requirement" href="https://en.cppreference.com/w/cpp/named_req/Iterator" target="_blank">Iterator</a>-based <code>take()</code> removes records from history before copying. If assignment or insertion throws, the destination may contain only part of the batch, and the removed records stay out of history.</p></aside></section><section id="receiving_keyed"><h3><a href="#receiving_keyed">Follow an instance through disposal and unregister</a></h3><p>Build the <code>example_cpp_helloworld_keyed_subscriber</code> and <code>example_cpp_helloworld_keyed_publisher</code> targets with the example build from <a class="m-doc" href="group__dds__domain.html#getting_started">Send and receive your first sample</a>. Start the subscriber first. Both programs use domain <code>79</code>, topic <code>HelloWorld</code>, and a type keyed by <code>userId</code>.</p><p>The <a class="m-doc" href="dds_example_legacy_keyed.html#dds_example_legacy_keyed_publisher">keyed publisher</a> writes three keys. For <code>userId</code> 1, it registers and writes <code>hello</code>, explicitly disposes the instance, writes <code>world</code> for the same key, and unregisters that key. The <a class="m-doc" href="dds_example_legacy_keyed.html#dds_example_legacy_keyed_subscriber">keyed subscriber</a> reads batches of up to eight unread records and prints the key and instance state.</p><table class="m-table"><thead><tr><th>Publisher action for key 1</th><th>What to look for on the subscriber</th></tr></thead><tbody><tr><td>Write <code>hello</code></td><td><code>ALIVE</code> with the value <code>hello</code></td></tr><tr><td>Dispose the instance</td><td><code>NOT_ALIVE_DISPOSED</code></td></tr><tr><td>Write <code>world</code></td><td><code>ALIVE</code> with the value <code>world</code></td></tr><tr><td>Unregister the last writer for the key</td><td><code>NOT_ALIVE_NO_WRITERS</code></td></tr></tbody></table><figure class="m-figure"><svg aria-label="A write makes the instance alive. dispose marks it disposed. Another write makes it alive again. The only writer unregisters, with automatic disposal off." class="poxy-injected-svg" data-dds-diagram="true" height="202" id="poxy-injected-svg-3" role="img" version="1.1" viewbox="0 0 1140 202" width="1140" xmlns="http://www.w3.org/2000/svg"><title id="poxy-injected-svg-3-keyed-instance-en-title">Instance state changes for a single key</title><desc>A write makes the instance alive. dispose marks it disposed. Another write makes it alive again. The only writer unregisters, with automatic disposal off.</desc><defs><marker id="poxy-injected-svg-3-keyed-instance-en-open" markerheight="10" markerunits="userSpaceOnUse" markerwidth="9" orient="auto" refx="9" refy="6" viewbox="0 0 10 12"><path d="M 1,1 L 9,6 L 1,11" fill="none" stroke="#20354B" stroke-width="1.2"></path></marker><marker id="poxy-injected-svg-3-keyed-instance-en-arrow" markerheight="9" markerunits="userSpaceOnUse" markerwidth="10" orient="auto" refx="10" refy="5" viewbox="0 0 11 10"><path d="M 0,0 L 11,5 L 0,10 Z" fill="#356B96"></path></marker><marker id="poxy-injected-svg-3-keyed-instance-en-uml" markerheight="15" markerunits="userSpaceOnUse" markerwidth="15" orient="auto" refx="14" refy="7.5" viewbox="0 0 15 15"><path d="M 1,1 L 14,7.5 L 1,14 Z" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"></path></marker></defs><rect fill="#FFFFFF" height="202" width="1140"></rect><g fill="#20354B" font-family="Arial, Malgun Gothic, sans-serif"><circle cx="37" cy="103" fill="#20354B" r="6"></circle><path d="M 44 103 H 118" fill="none" marker-end="url(#poxy-injected-svg-3-keyed-instance-en-open)" stroke="#20354B" stroke-width="1.15"></path><path d="M 250 103 H 342" fill="none" marker-end="url(#poxy-injected-svg-3-keyed-instance-en-open)" stroke="#20354B" stroke-width="1.15"></path><path d="M 560 103 H 659" fill="none" marker-end="url(#poxy-injected-svg-3-keyed-instance-en-open)" stroke="#20354B" stroke-width="1.15"></path><path d="M 794 103 H 881" fill="none" marker-end="url(#poxy-injected-svg-3-keyed-instance-en-open)" stroke="#20354B" stroke-width="1.15"></path><rect fill="#EFF5FA" height="48" rx="7" stroke="#20354B" stroke-width="1.15" width="132" x="118" y="79"></rect><rect fill="#FFFFFF" height="48" rx="7" stroke="#20354B" stroke-width="1.15" width="218" x="342" y="79"></rect><rect fill="#EFF5FA" height="48" rx="7" stroke="#20354B" stroke-width="1.15" width="135" x="659" y="79"></rect><rect fill="#FFFFFF" height="48" rx="7" stroke="#20354B" stroke-width="1.15" width="235" x="881" y="79"></rect><text font-family="Consolas, Menlo, monospace" font-size="17" text-anchor="middle" x="184" y="109">ALIVE</text><text font-family="Consolas, Menlo, monospace" font-size="17" text-anchor="middle" x="451" y="109">NOT_ALIVE_DISPOSED</text><text font-family="Consolas, Menlo, monospace" font-size="17" text-anchor="middle" x="726" y="109">ALIVE</text><text font-family="Consolas, Menlo, monospace" font-size="17" text-anchor="middle" x="998" y="109">NOT_ALIVE_NO_WRITERS</text><text font-family="Consolas, Menlo, monospace" font-size="14" text-anchor="middle" x="82" y="63">write("hello")</text><text font-family="Consolas, Menlo, monospace" font-size="14" text-anchor="middle" x="296" y="63">dispose_instance()</text><text font-family="Consolas, Menlo, monospace" font-size="14" text-anchor="middle" x="609" y="63">write("world")</text><text font-family="Consolas, Menlo, monospace" font-size="14" text-anchor="middle" x="837" y="63">unregister_instance()</text><text font-size="15" text-anchor="middle" x="570" y="168">One Writer for the key, with automatic disposal on unregister disabled</text></g></svg><figcaption>Instance state changes for one key</figcaption></figure><figure class="m-figure"><svg aria-label="The Reader uses separate configured delays to purge samples for disposed instances and instances without writers." class="poxy-injected-svg" data-dds-diagram="true" height="228" id="poxy-injected-svg-4" role="img" version="1.1" viewbox="0 0 1140 228" width="1140" xmlns="http://www.w3.org/2000/svg"><title id="poxy-injected-svg-4-reader-purge-delay-en-title">Instance state and Reader purge delays</title><desc>The Reader uses separate configured delays to purge samples for disposed instances and instances without writers.</desc><defs><marker id="poxy-injected-svg-4-reader-purge-delay-en-arrow" markerheight="10" markerunits="userSpaceOnUse" markerwidth="9" orient="auto" refx="9" refy="6" viewbox="0 0 10 12"><path d="M 1,1 L 9,6 L 1,11" fill="none" stroke="#20354B" stroke-width="1.2"></path></marker><marker id="poxy-injected-svg-4-reader-purge-delay-en-blue" markerheight="9" markerunits="userSpaceOnUse" markerwidth="10" orient="auto" refx="10" refy="5" viewbox="0 0 11 10"><path d="M 0,0 L 11,5 L 0,10 Z" fill="#356B96"></path></marker><marker id="poxy-injected-svg-4-reader-purge-delay-en-uml" markerheight="15" markerunits="userSpaceOnUse" markerwidth="15" orient="auto" refx="14" refy="7.5" viewbox="0 0 15 15"><path d="M 1,1 L 14,7.5 L 1,14 Z" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"></path></marker></defs><rect fill="#FFFFFF" height="228" width="1140"></rect><g fill="#20354B" font-family="Arial, Malgun Gothic, sans-serif"><rect fill="#EFF5FA" height="46" stroke="#20354B" stroke-width="1.15" width="300" x="25" y="30"></rect><text font-size="16" font-weight="bold" text-anchor="middle" x="175" y="58">Instance state</text><rect fill="#FFFFFF" height="46" stroke="#20354B" stroke-width="1.15" width="300" x="25" y="76"></rect><text font-family="Consolas, Menlo, monospace" font-size="15" text-anchor="middle" x="175" y="104">NOT_ALIVE_DISPOSED</text><rect fill="#FFFFFF" height="46" stroke="#20354B" stroke-width="1.15" width="300" x="25" y="122"></rect><text font-family="Consolas, Menlo, monospace" font-size="15" text-anchor="middle" x="175" y="150">NOT_ALIVE_NO_WRITERS</text><rect fill="#EFF5FA" height="46" stroke="#20354B" stroke-width="1.15" width="465" x="325" y="30"></rect><text font-size="16" font-weight="bold" text-anchor="middle" x="557.5" y="58">Delay used by the Reader</text><rect fill="#FFFFFF" height="46" stroke="#20354B" stroke-width="1.15" width="465" x="325" y="76"></rect><text font-family="Consolas, Menlo, monospace" font-size="15" text-anchor="middle" x="557.5" y="104">autopurge_disposed_samples_delay()</text><rect fill="#FFFFFF" height="46" stroke="#20354B" stroke-width="1.15" width="465" x="325" y="122"></rect><text font-family="Consolas, Menlo, monospace" font-size="15" text-anchor="middle" x="557.5" y="150">autopurge_nowriter_samples_delay()</text><rect fill="#EFF5FA" height="46" stroke="#20354B" stroke-width="1.15" width="325" x="790" y="30"></rect><text font-size="16" font-weight="bold" text-anchor="middle" x="952.5" y="58">When the delay expires</text><rect fill="#FFFFFF" height="46" stroke="#20354B" stroke-width="1.15" width="325" x="790" y="76"></rect><text font-size="15" lengthadjust="spacingAndGlyphs" text-anchor="middle" textlength="256" x="952.5" y="104">Eligible samples can be purged</text><rect fill="#FFFFFF" height="46" stroke="#20354B" stroke-width="1.15" width="325" x="790" y="122"></rect><text font-size="15" lengthadjust="spacingAndGlyphs" text-anchor="middle" textlength="256" x="952.5" y="150">Eligible samples can be purged</text><text font-size="15" text-anchor="middle" x="570" y="204">Set the delays before creating the Reader. The sample remains subject to history and resource limits.</text></g></svg><figcaption>Instance state and Reader purge delays</figcaption></figure><p>This sequence assumes the example is the only writer for that key and the subscriber reads while the publisher is running. The publisher disables automatic disposal on unregister so the final unregister can be observed as loss of the last writer. With automatic disposal enabled, unregistering also requests disposal.</p><p>The subscriber gets the key for a state notification through <code>key_value()</code> using the record's <code>instance_handle()</code>. It reads payload fields only when <code>valid()</code> returns true. After observing <code>NOT_ALIVE_NO_WRITERS</code>, it uses a selector to take records still retained for the saved handle. Check <a class="m-doc" href="group__dds__qos.html#matching_guide">Diagnose a writer and reader that do not exchange data</a> if the subscriber receives no records.</p></section></section>
+<section id="nested-classes">
+<h2><a href="#nested-classes">Classes</a></h2>
+<dl class="m-doc">
+<dt>
+              class <a class="m-doc" href="classdds_1_1sub_1_1_any_data_reader.html">dds::sub::AnyDataReader</a>
+</dt>
+<dd>Holds a reader without exposing its topic type.</dd>
+<dt>
+<div class="m-doc-template">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename T</span>, <span class="m-doc-template-param">template&lt;typename Q&gt; class DELEGATE</span></span>&gt;</div>
+              class <a class="m-doc" href="classdds_1_1sub_1_1_data_reader.html">dds::sub::DataReader&lt;T&gt;</a>
+</dt>
+<dd>Receives typed samples for a topic.</dd>
+<dt>
+<div class="m-doc-template">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename T</span></span>&gt;</div>
+              class <a class="m-doc" href="classdds_1_1sub_1_1_data_reader_listener.html">dds::sub::DataReaderListener</a>
+</dt>
+<dd>Receives data availability and status notifications from a typed reader.</dd>
+<dt>
+<div class="m-doc-template">template &lt;<span class="m-doc-template-params m-doc-template-long"><span class="m-doc-template-param">typename T</span>, <span class="m-doc-template-param">typename TInfo</span>, <span class="m-doc-template-param">template&lt;typename Q, typename W&gt; class DELEGATE</span></span>&gt;</div>
+              class <a class="m-doc" href="classdds_1_1sub_1_1_loaned_samples.html">dds::sub::LoanedSamples</a>
+</dt>
+<dd>Holds received samples and manages their middleware loan.</dd>
+<dt>
+<div class="m-doc-template">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename T</span></span>&gt;</div>
+              class <a class="m-doc" href="classdds_1_1sub_1_1_no_op_data_reader_listener.html">dds::sub::NoOpDataReaderListener</a>
+</dt>
+<dd>Provides default no-op reader callbacks for selective overriding.</dd>
+<dt>
+              class <a class="m-doc" href="classdds_1_1sub_1_1_query.html">dds::sub::Query</a>
+</dt>
+<dd>Stores a reader, query expression, and expression parameters.</dd>
+<dt>
+              class <a class="m-doc" href="classdds_1_1sub_1_1_subscriber_listener.html">dds::sub::SubscriberListener</a>
+</dt>
+<dd>Receives subscriber-level and type-erased reader status notifications.</dd>
+<dt>
+<div class="m-doc-template">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename DELEGATE</span></span>&gt;</div>
+              class <a class="m-doc" href="classdds_1_1sub_1_1_t_coherent_access.html">dds::sub::TCoherentAccess</a>
+</dt>
+<dd>Exposes the subscriber coherent-access scope.</dd>
+<dt>
+<div class="m-doc-template">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename DELEGATE</span></span>&gt;</div>
+              class <a class="m-doc" href="classdds_1_1sub_1_1_t_generation_count.html">dds::sub::TGenerationCount</a>
+</dt>
+<dd>Counts the disposed and no-writers generations reported for a received instance.</dd>
+<dt>
+<div class="m-doc-template">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename DELEGATE</span></span>&gt;</div>
+              class <a class="m-doc" href="classdds_1_1sub_1_1_t_sample_info.html">dds::sub::TSampleInfo</a>
+</dt>
+<dd>Describes a received sample and its instance state.</dd>
+<dt>
+<div class="m-doc-template">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename DELEGATE</span></span>&gt;</div>
+              class <a class="m-doc" href="classdds_1_1sub_1_1_t_subscriber.html">dds::sub::Subscriber</a>
+</dt>
+<dd>Owns readers and configures subscription defaults.</dd>
+<dt>
+<div class="m-doc-template">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename DELEGATE</span></span>&gt;</div>
+              class <a class="m-doc" href="classdds_1_1sub_1_1cond_1_1_t_read_condition.html">dds::sub::cond::TReadCondition</a>
+</dt>
+<dd>Describes a condition associated with a reader and sample-state masks.</dd>
+<dt>
+              class <a class="m-doc" href="classdds_1_1sub_1_1status_1_1_data_state.html">dds::sub::status::DataState</a>
+</dt>
+<dd>Combines sample, view, and instance state masks.</dd>
+<dt>
+              class <a class="m-doc" href="classdds_1_1sub_1_1status_1_1_instance_state.html">dds::sub::status::InstanceState</a>
+</dt>
+<dd>Selects samples from alive, disposed, or no-writers instances.</dd>
+<dt>
+              class <a class="m-doc" href="classdds_1_1sub_1_1status_1_1_sample_state.html">dds::sub::status::SampleState</a>
+</dt>
+<dd>Selects samples according to whether the reader has already read them.</dd>
+<dt>
+              class <a class="m-doc" href="classdds_1_1sub_1_1status_1_1_view_state.html">dds::sub::status::ViewState</a>
+</dt>
+<dd>Selects samples according to whether their instance is new to the reader.</dd>
+</dl>
+</section>
+<section id="typedef-members">
+<h2><a href="#typedef-members">Typedefs</a></h2>
+<dl class="m-doc">
+<dt>
+              using <a class="m-doc" href="#ga1a326dc6ca679ff7cbe0ad659b4aebff">CoherentAccess</a> = dds::sub::detail::CoherentAccess
+            </dt>
+<dd>Exposes the coherent-access scope type.</dd>
+<dt>
+              using <a class="m-doc" href="#gac759142c11b5f0cb2b2a8f6c41405966">DataReaderQos</a> = dds::sub::qos::detail::DataReaderQos
+            </dt>
+<dd>QoS policy set used to configure a data reader.</dd>
+<dt>
+              using <a class="m-doc" href="#ga8f7732a7386d2be5fd9d9a1766755ab3">GenerationCount</a> = detail::GenerationCount
+            </dt>
+<dd>Counts the instance's disposed and no-writers generations.</dd>
+<dt>
+              using <a class="m-doc" href="#ga047504f38cd18b1385a400cd858ef2df">Rank</a> = detail::Rank
+            </dt>
+<dd>Ranks describing a sample's position relative to samples of the same instance.</dd>
+<dt>
+              using <a class="m-doc" href="#ga29994a5bb9146e584461a7c13e08fa29">ReadCondition</a> = detail::ReadCondition
+            </dt>
+<dd>Condition that filters a reader's samples by state.</dd>
+<dt>
+              using <a class="m-doc" href="#ga8ce43296febeef280d08d5b58541ee65">SampleInfo</a> = detail::SampleInfo
+            </dt>
+<dd>Metadata indicating payload validity, instance state, and sample origin.</dd>
+<dt>
+              using <a class="m-doc" href="#ga9a6d78b2a23f864211da5bd2edf28750">Subscriber</a> = dds::sub::detail::Subscriber
+            </dt>
+<dd><a class="m-doc" href="#ga9a6d78b2a23f864211da5bd2edf28750">Subscriber</a> handle used to own readers and set their defaults.</dd>
+<dt>
+              using <a class="m-doc" href="#gaf7f2f1fd9a8d66d37b7da82b130245cb">SubscriberQos</a> = dds::sub::qos::detail::SubscriberQos
+            </dt>
+<dd>QoS policy set used to configure a subscriber.</dd>
+</dl>
+</section>
+<section>
+<h2>Typedef documentation</h2>
+<section class="m-doc-details" id="ga1a326dc6ca679ff7cbe0ad659b4aebff"><div>
+<h3>
+              typedef dds::sub::detail::CoherentAccess <a class="m-doc-self" href="#ga1a326dc6ca679ff7cbe0ad659b4aebff">CoherentAccess</a>
+</h3>
+<p>Exposes the coherent-access scope type.</p>
+<p>The current delegate calls the C begin-access operation from <code>end()</code>. The binding does not provide a working begin/end pair.</p><aside class="m-note m-default"><h4>See also</h4><p><a class="m-doc" href="classdds_1_1sub_1_1_t_coherent_access.html">dds::<wbr/>sub::<wbr/>TCoherentAccess</a></p></aside>
+</div></section>
+<section class="m-doc-details" id="gac759142c11b5f0cb2b2a8f6c41405966"><div>
+<h3>
+              typedef dds::sub::qos::detail::DataReaderQos <a class="m-doc-self" href="#gac759142c11b5f0cb2b2a8f6c41405966">DataReaderQos</a>
+</h3>
+<p>QoS policy set used to configure a data reader.</p>
+<aside class="m-note m-default"><h4>See also</h4><p><a class="m-doc" href="classdds_1_1core_1_1_t_entity_qos.html">dds::<wbr/>core::<wbr/>TEntityQos</a></p></aside>
+</div></section>
+<section class="m-doc-details" id="ga8f7732a7386d2be5fd9d9a1766755ab3"><div>
+<h3>
+              typedef detail::GenerationCount <a class="m-doc-self" href="#ga8f7732a7386d2be5fd9d9a1766755ab3">GenerationCount</a>
+</h3>
+<p>Counts the instance's disposed and no-writers generations.</p>
+<aside class="m-note m-default"><h4>See also</h4><p><a class="m-doc" href="classdds_1_1sub_1_1_t_generation_count.html">dds::<wbr/>sub::<wbr/>TGenerationCount</a></p></aside>
+</div></section>
+<section class="m-doc-details" id="ga047504f38cd18b1385a400cd858ef2df"><div>
+<h3>
+              typedef detail::Rank <a class="m-doc-self" href="#ga047504f38cd18b1385a400cd858ef2df">Rank</a>
+</h3>
+<p>Ranks describing a sample's position relative to samples of the same instance.</p>
+<aside class="m-note m-default"><h4>See also</h4><p><a class="m-doc" href="classdds_1_1sub_1_1_t_rank.html">dds::<wbr/>sub::<wbr/>TRank</a></p></aside>
+</div></section>
+<section class="m-doc-details" id="ga29994a5bb9146e584461a7c13e08fa29"><div>
+<h3>
+              typedef detail::ReadCondition <a class="m-doc-self" href="#ga29994a5bb9146e584461a7c13e08fa29">ReadCondition</a>
+</h3>
+<p>Condition that filters a reader's samples by state.</p>
+<aside class="m-note m-default"><h4>See also</h4><p><a class="m-doc" href="classdds_1_1sub_1_1cond_1_1_t_read_condition.html">dds::<wbr/>sub::<wbr/>cond::<wbr/>TReadCondition</a></p></aside>
+</div></section>
+<section class="m-doc-details" id="ga8ce43296febeef280d08d5b58541ee65"><div>
+<h3>
+              typedef detail::SampleInfo <a class="m-doc-self" href="#ga8ce43296febeef280d08d5b58541ee65">SampleInfo</a>
+</h3>
+<p>Metadata indicating payload validity, instance state, and sample origin.</p>
+<aside class="m-note m-default"><h4>See also</h4><p><a class="m-doc" href="classdds_1_1sub_1_1_t_sample_info.html">dds::<wbr/>sub::<wbr/>TSampleInfo</a></p></aside>
+</div></section>
+<section class="m-doc-details" id="ga9a6d78b2a23f864211da5bd2edf28750"><div>
+<h3>
+              typedef dds::sub::detail::Subscriber <a class="m-doc-self" href="#ga9a6d78b2a23f864211da5bd2edf28750">Subscriber</a>
+</h3>
+<p><a class="m-doc" href="#ga9a6d78b2a23f864211da5bd2edf28750">Subscriber</a> handle used to own readers and set their defaults.</p>
+<aside class="m-note m-default"><h4>See also</h4><p><a class="m-doc" href="classdds_1_1sub_1_1_t_subscriber.html">dds::sub::Subscriber</a></p></aside>
+</div></section>
+<section class="m-doc-details" id="gaf7f2f1fd9a8d66d37b7da82b130245cb"><div>
+<h3>
+              typedef dds::sub::qos::detail::SubscriberQos <a class="m-doc-self" href="#gaf7f2f1fd9a8d66d37b7da82b130245cb">SubscriberQos</a>
+</h3>
+<p>QoS policy set used to configure a subscriber.</p>
+<aside class="m-note m-default"><h4>See also</h4><p><a class="m-doc" href="classdds_1_1core_1_1_t_entity_qos.html">dds::<wbr/>core::<wbr/>TEntityQos</a></p></aside>
+</div></section>
+</section>
+</div>
+</div>
+</div>
+</article></main>
+<div class="m-doc-search" id="search">
+<a href="#!" onclick="return hideSearch()"></a>
+<div class="m-container">
+<div class="m-row">
+<div class="m-col-m-8 m-push-m-2">
+<div class="m-doc-search-header m-text m-small">
+<div><span class="m-label m-default">Tab</span> / <span class="m-label m-default">T</span> to search, <span class="m-label m-default">Esc</span> to close</div>
+<div id="search-symbolcount">…</div>
+</div>
+<div class="m-doc-search-content">
+<form>
+<input autocomplete="off" autofocus="autofocus" disabled="disabled" id="search-input" name="q" placeholder="Loading …" spellcheck="false" type="search"/>
+</form>
+<noscript class="m-text m-danger m-text-center">Unlike everything else in the docs, the search functionality <em>requires</em> JavaScript.</noscript>
+<div class="m-text m-dim m-text-center" id="search-help">
+<p class="m-noindent">Search for symbols, directories, files, pages or
+            modules. You can omit any prefix from the symbol or file path; adding a
+            <code>:</code> or <code>/</code> suffix lists all members of given symbol or
+            directory.</p>
+<p class="m-noindent">Use <span class="m-label m-dim">↓</span>
+            / <span class="m-label m-dim">↑</span> to navigate through the list,
+            <span class="m-label m-dim">Enter</span> to go.
+            <span class="m-label m-dim">Tab</span> autocompletes common prefix, you can
+            copy a link to the result using <span class="m-label m-dim">⌘</span>
+<span class="m-label m-dim">L</span> while <span class="m-label m-dim">⌘</span>
+<span class="m-label m-dim">M</span> produces a Markdown link.</p>
+</div>
+<div class="m-text m-warning m-text-center" id="search-notfound">Sorry, nothing was found.</div>
+<ul id="search-results"></ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src="search-v2.js"></script><script>install_mcss_search_shim();</script>
+<script async="async" src="searchdata-v2.js"></script>
+<footer><nav>
+<div class="m-container">
+<div class="m-row">
+<div class="m-col-l-10 m-push-l-1">
+<a download="" href="GurumDDS_C++.tagfile.xml" target="_blank" type="text/xml">Doxygen tagfile</a>
+<br/><br/>
+Site generated using <a class="poxy-external" href="https://github.com/marzer/poxy/" target="_blank">Poxy</a>
+</div>
+</div>
+</div>
+</nav></footer>
+</body></html>

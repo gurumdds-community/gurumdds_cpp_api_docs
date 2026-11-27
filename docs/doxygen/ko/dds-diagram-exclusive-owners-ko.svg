@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1140" height="228" viewBox="0 0 1140 228" role="img" aria-label="두 Writer가 매칭됩니다. 높은 strength의 Writer가 key 7을 쓰면 해당 instance에서 그 Writer의 값이 선택됩니다. 낮은 strength의 Writer는 key 8을 쓸 수 있습니다." data-dds-diagram="true">
+  <title id="exclusive-owners-ko-title">key별 Exclusive Ownership 선택</title>
+  <desc>두 Writer가 매칭됩니다. 높은 strength의 Writer가 key 7을 쓰면 해당 instance에서 그 Writer의 값이 선택됩니다. 낮은 strength의 Writer는 key 8을 쓸 수 있습니다.</desc>
+  <defs>
+    <marker id="exclusive-owners-ko-arrow" viewBox="0 0 10 12" refX="9" refY="6" markerWidth="9" markerHeight="10" orient="auto" markerUnits="userSpaceOnUse"><path d="M 1,1 L 9,6 L 1,11" fill="none" stroke="#20354B" stroke-width="1.2"/></marker>
+    <marker id="exclusive-owners-ko-blue" viewBox="0 0 11 10" refX="10" refY="5" markerWidth="10" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M 0,0 L 11,5 L 0,10 Z" fill="#356B96"/></marker>
+    <marker id="exclusive-owners-ko-uml" viewBox="0 0 15 15" refX="14" refY="7.5" markerWidth="15" markerHeight="15" orient="auto" markerUnits="userSpaceOnUse"><path d="M 1,1 L 14,7.5 L 1,14 Z" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/></marker>
+  </defs>
+  <rect width="1140" height="228" fill="#FFFFFF"/>
+  <g fill="#20354B" font-family="Arial, Malgun Gothic, sans-serif">
+    <rect x="25" y="30" width="130" height="46" fill="#EFF5FA" stroke="#20354B" stroke-width="1.15"/>
+    <text x="90" y="58" text-anchor="middle" font-size="16" font-weight="bold">Key</text>
+    <rect x="25" y="76" width="130" height="46" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <text x="90" y="104" text-anchor="middle" font-size="15" font-family="Consolas, Menlo, monospace">7</text>
+    <rect x="25" y="122" width="130" height="46" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <text x="90" y="150" text-anchor="middle" font-size="15" font-family="Consolas, Menlo, monospace">8</text>
+    <rect x="155" y="30" width="325" height="46" fill="#EFF5FA" stroke="#20354B" stroke-width="1.15"/>
+    <text x="317.5" y="58" text-anchor="middle" font-size="16" font-weight="bold">strength 20인 Writer</text>
+    <rect x="155" y="76" width="325" height="46" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <text x="317.5" y="104" text-anchor="middle" font-size="15">먼저 씀</text>
+    <rect x="155" y="122" width="325" height="46" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <text x="317.5" y="150" text-anchor="middle" font-size="15">이 key에는 쓰지 않음</text>
+    <rect x="480" y="30" width="325" height="46" fill="#EFF5FA" stroke="#20354B" stroke-width="1.15"/>
+    <text x="642.5" y="58" text-anchor="middle" font-size="16" font-weight="bold">strength 10인 Writer</text>
+    <rect x="480" y="76" width="325" height="46" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <text x="642.5" y="104" text-anchor="middle" font-size="15">같은 key를 씀</text>
+    <rect x="480" y="122" width="325" height="46" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <text x="642.5" y="150" text-anchor="middle" font-size="15">다른 key를 씀</text>
+    <rect x="805" y="30" width="310" height="46" fill="#EFF5FA" stroke="#20354B" stroke-width="1.15"/>
+    <text x="960" y="58" text-anchor="middle" font-size="16" font-weight="bold">Reader 반환값</text>
+    <rect x="805" y="76" width="310" height="46" fill="#EFF5FA" stroke="#20354B" stroke-width="1.15"/>
+    <text x="960" y="104" text-anchor="middle" font-size="15">strength 20의 샘플</text>
+    <rect x="805" y="122" width="310" height="46" fill="#EFF5FA" stroke="#20354B" stroke-width="1.15"/>
+    <text x="960" y="150" text-anchor="middle" font-size="15">strength 10의 샘플</text>
+    <text x="570" y="204" text-anchor="middle" font-size="15">이 keyed Topic의 Writer와 Reader는 EXCLUSIVE ownership을 사용합니다.</text>
+  </g>
+</svg>

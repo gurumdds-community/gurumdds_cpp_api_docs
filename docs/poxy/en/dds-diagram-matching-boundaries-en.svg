@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1140" height="274" viewBox="0 0 1140 274" role="img" aria-label="With the same Topic and compatible endpoint QoS, a Reader matches the Writer in the same domain and literal Partition." data-dds-diagram="true">
+  <title id="matching-boundaries-en-title">Domain and Partition matching boundaries</title>
+  <desc>With the same Topic and compatible endpoint QoS, a Reader matches the Writer in the same domain and literal Partition.</desc>
+  <defs>
+    <marker id="matching-boundaries-en-arrow" viewBox="0 0 10 12" refX="9" refY="6" markerWidth="9" markerHeight="10" orient="auto" markerUnits="userSpaceOnUse"><path d="M 1,1 L 9,6 L 1,11" fill="none" stroke="#20354B" stroke-width="1.2"/></marker>
+    <marker id="matching-boundaries-en-blue" viewBox="0 0 11 10" refX="10" refY="5" markerWidth="10" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M 0,0 L 11,5 L 0,10 Z" fill="#356B96"/></marker>
+    <marker id="matching-boundaries-en-uml" viewBox="0 0 15 15" refX="14" refY="7.5" markerWidth="15" markerHeight="15" orient="auto" markerUnits="userSpaceOnUse"><path d="M 1,1 L 14,7.5 L 1,14 Z" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/></marker>
+  </defs>
+  <rect width="1140" height="274" fill="#FFFFFF"/>
+  <g fill="#20354B" font-family="Arial, Malgun Gothic, sans-serif">
+    <rect x="25" y="30" width="340" height="46" fill="#EFF5FA" stroke="#20354B" stroke-width="1.15"/>
+    <text x="195" y="58" text-anchor="middle" font-size="16" font-weight="bold">Writer</text>
+    <rect x="25" y="76" width="340" height="46" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <text x="195" y="104" text-anchor="middle" font-size="15" font-family="Consolas, Menlo, monospace">domain 92, &quot;howto&quot;</text>
+    <rect x="25" y="122" width="340" height="46" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <text x="195" y="150" text-anchor="middle" font-size="15" font-family="Consolas, Menlo, monospace">domain 92, &quot;howto&quot;</text>
+    <rect x="25" y="168" width="340" height="46" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <text x="195" y="196" text-anchor="middle" font-size="15" font-family="Consolas, Menlo, monospace">domain 92, &quot;howto&quot;</text>
+    <rect x="365" y="30" width="340" height="46" fill="#EFF5FA" stroke="#20354B" stroke-width="1.15"/>
+    <text x="535" y="58" text-anchor="middle" font-size="16" font-weight="bold">Reader</text>
+    <rect x="365" y="76" width="340" height="46" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <text x="535" y="104" text-anchor="middle" font-size="15" font-family="Consolas, Menlo, monospace">domain 92, &quot;howto&quot;</text>
+    <rect x="365" y="122" width="340" height="46" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <text x="535" y="150" text-anchor="middle" font-size="15" font-family="Consolas, Menlo, monospace">domain 92, &quot;other&quot;</text>
+    <rect x="365" y="168" width="340" height="46" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <text x="535" y="196" text-anchor="middle" font-size="15" font-family="Consolas, Menlo, monospace">domain 93, &quot;howto&quot;</text>
+    <rect x="705" y="30" width="410" height="46" fill="#EFF5FA" stroke="#20354B" stroke-width="1.15"/>
+    <text x="910" y="58" text-anchor="middle" font-size="16" font-weight="bold">Match</text>
+    <rect x="705" y="76" width="410" height="46" fill="#EFF5FA" stroke="#20354B" stroke-width="1.15"/>
+    <text x="910" y="104" text-anchor="middle" font-size="15">Yes</text>
+    <rect x="705" y="122" width="410" height="46" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <text x="910" y="150" text-anchor="middle" font-size="15">Partition differs</text>
+    <rect x="705" y="168" width="410" height="46" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <text x="910" y="196" text-anchor="middle" font-size="15">Domain differs</text>
+    <text x="570" y="250" text-anchor="middle" font-size="15">The comparison assumes the same Topic and otherwise compatible endpoint QoS.</text>
+  </g>
+</svg>

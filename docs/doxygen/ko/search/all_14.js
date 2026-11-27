@@ -1,0 +1,9 @@
+var searchData=
+[
+  ['underlying_0',['underlying',['../classdds_1_1core_1_1safe__enum.html#aa1f2d221dd276cc834c4deaff46ad707',1,'dds::core::safe_enum']]],
+  ['unregister_5finstance_1',['unregister_instance',['../classdds_1_1pub_1_1_data_writer.html#a3d1745b1899b5d91737d0c3366d98354',1,'dds::pub::DataWriter::unregister_instance(const ::dds::core::InstanceHandle &amp;i)'],['../classdds_1_1pub_1_1_data_writer.html#a57bbd27f841ea4fd658d82dc48222644',1,'dds::pub::DataWriter::unregister_instance(const ::dds::core::InstanceHandle &amp;i, const dds::core::Time &amp;ts)']]],
+  ['unsupportederror_2',['UnsupportedError',['../classdds_1_1core_1_1_unsupported_error.html',1,'dds::core::UnsupportedError'],['../classdds_1_1core_1_1_unsupported_error.html#ab7ededad7407b872233273e1001e54e1',1,'dds::core::UnsupportedError::UnsupportedError(const std::string &amp;msg)'],['../classdds_1_1core_1_1_unsupported_error.html#a195daf3fa0bd47ea8098e9c3a3acd915',1,'dds::core::UnsupportedError::UnsupportedError(const UnsupportedError &amp;src)']]],
+  ['user_5fdata_3',['user_data',['../classdds_1_1topic_1_1_t_participant_builtin_topic_data.html#a0c10463d14b64138cc9297a530cf6d81',1,'dds::topic::TParticipantBuiltinTopicData::user_data()'],['../classdds_1_1topic_1_1_t_publication_builtin_topic_data.html#af571cf157cbed711fe8b1d42358f2477',1,'dds::topic::TPublicationBuiltinTopicData::user_data()'],['../classdds_1_1topic_1_1_t_subscription_builtin_topic_data.html#a45f4a8f15f0fc21534e2ddc44fa5ef84',1,'dds::topic::TSubscriptionBuiltinTopicData::user_data()']]],
+  ['userdata_4',['UserData',['../group__dds__qos.html#ga3082013b21e53c2cb3c462fcd1151d77',1,'dds::core::policy']]],
+  ['userdata_20설정_5',['DomainParticipant의 UserData 설정',['../group__dds__tutorial__participant.html#dds_tutorial_participant_user_data',1,'']]]
+];

@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<title>Programming Tutorials » Domain participants module | GurumDDS C++ API Reference</title>
+<link href="gurum-networks-logo.png" rel="icon" type="image/png"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="#cb4b16" name="theme-color"/>
+<link href="poxy/poxy.css" referrerpolicy="no-referrer" rel="stylesheet"/>
+<link href="ReferenceBranding.css" referrerpolicy="no-referrer" rel="stylesheet"/>
+<script src="poxy/poxy.js"></script>
+<script>initialize_theme("light");</script>
+<meta content="GurumDDS C++" name="twitter:title"/>
+<meta content="GurumDDS C++" property="og:title"/>
+<meta content="GurumDDS C++" itemprop="name"/>
+<meta content="API Reference" name="description"/>
+<meta content="API Reference" name="twitter:description"/>
+<meta content="API Reference" property="og:description"/>
+<meta content="API Reference" itemprop="description"/>
+<meta content="telephone=no" name="format-detection"/>
+<meta content="Poxy v0.27.2" name="generator"/>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<script defer="True" src="ReferenceUi.js"></script><link href="../en/group__dds__tutorial__participant.html" hreflang="en" rel="alternate"/><link href="../ko/group__dds__tutorial__participant.html" hreflang="ko" rel="alternate"/><link href="../language.css" rel="stylesheet"/><script defer="defer" src="../language.js"></script></head>
+<body class="poxy-has-toc">
+<header><nav id="navigation">
+<div class="m-container">
+<div class="m-row doc-language-header">
+<a class="m-col-t-8 m-col-m-none m-left-m" href="index.html" id="m-navbar-brand"><img alt="" src="gurum-networks-logo.png"/>GurumDDS C++ <span class="m-thin">API Reference</span></a>
+<div class="m-col-t-4 m-hide-m m-text-right m-nopadr">
+<a class="m-doc-search-icon" href="#search" onclick="return showSearch()" title="Search"><svg style="height: 0.9rem;" viewbox="0 0 16 16">
+<path d="m6 0c-3.31 0-6 2.69-6 6 0 3.31 2.69 6 6 6 1.49 0 2.85-0.541 3.89-1.44-0.0164 0.338 0.147 0.759 0.5 1.15l3.22 3.79c0.552 0.614 1.45 0.665 2 0.115 0.55-0.55 0.499-1.45-0.115-2l-3.79-3.22c-0.392-0.353-0.812-0.515-1.15-0.5 0.895-1.05 1.44-2.41 1.44-3.89 0-3.31-2.69-6-6-6zm0 1.56a4.44 4.44 0 0 1 4.44 4.44 4.44 4.44 0 0 1-4.44 4.44 4.44 4.44 0 0 1-4.44-4.44 4.44 4.44 0 0 1 4.44-4.44z" id="m-doc-search-icon-path"></path>
+</svg></a>
+<a href="#navigation" id="m-navbar-show" title="Show navigation"></a>
+<a href="#" id="m-navbar-hide" title="Hide navigation"></a>
+</div>
+<div class="m-col-t-12 m-show-m m-col-m-none m-right-m" id="m-navbar-collapse">
+<div class="m-row">
+<ol class="m-col-t-6 m-col-m-none">
+<li><a href="modules.html">Modules</a></li>
+<li><a href="annotated.html">Classes</a></li>
+<li><a href="namespaces.html">Namespaces</a></li>
+</ol>
+<ol class="m-col-t-6 m-col-m-none" start="4">
+<li><a href="examples.html">Examples</a></li>
+<li><a class="poxy-icon theme" href="javascript:void(null);" id="poxy-theme-switch" onclick="toggle_theme(); return false;" role="button" title="Toggle dark and light themes"><svg id="poxy-theme-switch-img" version="1.1" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><circle cx="185.6708" cy="183.8122" fill="currentColor" r="65.625"></circle><path d="M185.6708,87.5622a13.1256,13.1256,0,0,0,13.125-13.125V52.5622a13.125,13.125,0,1,0-26.25,0v21.875A13.1257,13.1257,0,0,0,185.6708,87.5622Z" fill="currentColor"></path><path d="M99.051,115.7519a13.1236,13.1236,0,1,0,18.56-18.56L102.1442,81.726a13.1236,13.1236,0,0,0-18.5595,18.56Z" fill="currentColor"></path><path d="M89.4208,183.8122a13.1257,13.1257,0,0,0-13.125-13.125H54.4208a13.125,13.125,0,0,0,0,26.25h21.875A13.1256,13.1256,0,0,0,89.4208,183.8122Z" fill="currentColor"></path><path d="M99.051,251.8725,83.5847,267.3431a13.1236,13.1236,0,1,0,18.56,18.56l15.4663-15.4706a13.1236,13.1236,0,1,0-18.5595-18.56Z" fill="currentColor"></path><path d="M185.6708,280.0622a13.1258,13.1258,0,0,0-13.125,13.125v21.875a13.125,13.125,0,0,0,26.25,0v-21.875A13.1257,13.1257,0,0,0,185.6708,280.0622Z" fill="currentColor"></path><path d="M272.2907,251.8725a13.1236,13.1236,0,1,0-18.56,18.56l15.4663,15.4706a13.1236,13.1236,0,1,0,18.56-18.56Z" fill="currentColor"></path><path d="M330.0458,183.8122a13.1257,13.1257,0,0,0-13.125-13.125h-21.875a13.125,13.125,0,0,0,0,26.25h21.875A13.1256,13.1256,0,0,0,330.0458,183.8122Z" fill="currentColor"></path><path d="M263.0109,119.5971a13.0824,13.0824,0,0,0,9.28-3.8452l15.4663-15.4663a13.1236,13.1236,0,1,0-18.56-18.56L253.7312,97.1923a13.125,13.125,0,0,0,9.28,22.4048Z" fill="currentColor"></path><path d="M456.9379,401.6714a63.97,63.97,0,0,1-14.9963,7.2055c-19.6448,6.5283-41.8787,2.9566-58.1439-9.8523a68.9311,68.9311,0,0,1-10.835-10.8339c-12.8088-16.2663-16.3806-38.5-9.8523-58.1471a63.8444,63.8444,0,0,1,7.2077-14.9931,8.8036,8.8036,0,0,0-10.1172-13.3034,87.5188,87.5188,0,1,0,110.0372,110.04A8.8,8.8,0,0,0,456.9379,401.6714Z" fill="currentColor"></path></svg></a></li>
+<li class="m-show-m"><a class="m-doc-search-icon" href="#search" onclick="return showSearch()" title="Search"><svg style="height: 0.9rem;" viewbox="0 0 16 16">
+<use href="#m-doc-search-icon-path"></use>
+</svg></a></li>
+</ol>
+</div>
+</div>
+<label class="doc-language"><select aria-label="Documentation language" data-current="0"><option lang="en" selected="selected" value="../en/group__dds__tutorial__participant.html">English</option><option lang="en" value="../ko/group__dds__tutorial__participant.html">Korean</option></select></label></div>
+</div>
+</nav></header>
+<main><article>
+<div class="m-container m-container-inflatable">
+<div class="m-row">
+<div class="m-col-l-10 m-push-l-1">
+<h1>
+<span class="m-breadcrumb"><a href="group__dds__howto.html">Programming Tutorials</a> »</span>
+          Domain participants <span class="m-thin">module</span></h1>
+<nav class="m-block m-default poxy-toc" id="poxy-toc">
+<h3>Contents</h3>
+<ul>
+<li><a href="#dds_tutorial_participant_create">Create a participant in a domain</a></li>
+<li><a href="#participant_qos_sources">Choose the scope of a QoS change</a></li>
+<li><a href="#dds_tutorial_participant_user_data">Set UserData on a participant</a></li>
+<li><a href="#dds_tutorial_participant_defaults">Set default QoS for new Publishers and Subscribers</a></li>
+<li><a href="#dds_tutorial_participant_contains">Check whether an entity belongs to a participant</a></li>
+<li><a href="#dds_tutorial_participant_time">Get a timestamp from the participant</a></li>
+<li><a href="#dds_tutorial_src_entities">Entities and QoS</a></li>
+</ul>
+</nav>
+<p>A DomainParticipant joins a DDS domain and provides the context for Topics, Publishers, and Subscribers. Create it before any of those objects. Use the same domain ID in applications that should discover each other.</p><p>Include <code>&lt;gurumdds/dds.hpp&gt;</code> to use the C++ API. The first line of the example chooses the domain ID and the next line creates the handle named <code>participant</code>. The <code>require()</code> helper in the complete program checks the result.</p><section id="dds_tutorial_participant_create"><h2><a href="#dds_tutorial_participant_create">Create a participant in a domain</a></h2><p>Pass the domain ID to the constructor and use <code>domain_id()</code> to verify it. A participant in another domain can use the same topic name independently. Keep the participant in scope while you use its entities.</p><pre class="m-code"><span class="k">const</span> <span class="nn">dds::domain</span><span class="o">::</span><span class="nc">DomainId</span> <span class="n">domain</span> <span class="o">=</span> <span class="mi">92</span><span class="p">;</span>
+<span class="nn">dds::domain</span><span class="o">::</span><span class="nc">DomainParticipant</span> <span class="nf">participant</span><span class="p">(</span><span class="n">domain</span><span class="p">);</span>
+<span class="nf">require</span><span class="p">(</span><span class="n">participant</span><span class="p">.</span><span class="nf">domain_id</span><span class="p">()</span> <span class="o">==</span> <span class="n">domain</span><span class="p">,</span> <span class="s">"Participant domain differs"</span><span class="p">);</span></pre><p>The domain ID determines where discovery takes place. Endpoint matching also requires compatible topics and QoS. See <a class="m-doc" href="group__dds__tutorial__discovery.html">Matching and discovery</a> for the checks to make after creating a writer and reader.</p></section><section id="participant_qos_sources"><h2><a href="#participant_qos_sources">Choose the scope of a QoS change</a></h2><table class="m-table"><thead><tr><th>Scope</th><th>Set and verify</th></tr></thead><tbody><tr><td>Future participants</td><td>Use <code>DomainParticipant::default_participant_qos()</code> before construction. Read it back and check the new participant's <code>qos()</code>.</td></tr><tr><td>Existing participant</td><td>Apply a mutable policy with <code>participant.qos(value)</code> and read it back.</td></tr><tr><td>Future publishers and subscribers</td><td>Set the participant's child defaults, then read <code>qos()</code> on the newly created child.</td></tr></tbody></table></section><section id="dds_tutorial_participant_user_data"><h2><a href="#dds_tutorial_participant_user_data">Set UserData on a participant</a></h2><p>Read the QoS of an existing participant, change <code>UserData</code>, and apply the updated QoS to that participant. Read it back to check the byte sequence.</p><pre class="m-code"><span class="k">using</span> <span class="nn">dds::core::policy</span><span class="o">::</span><span class="nc">UserData</span><span class="p">;</span>
+<span class="k">const</span> <span class="nn">dds::core</span><span class="o">::</span><span class="nc">ByteSeq</span> <span class="n">data</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">};</span>
+<span class="k">auto</span> <span class="n">participant_qos</span> <span class="o">=</span> <span class="n">participant</span><span class="p">.</span><span class="nf">qos</span><span class="p">();</span>
+<span class="n">participant_qos</span> <span class="o">&lt;&lt;</span> <span class="nf">UserData</span><span class="p">(</span><span class="n">data</span><span class="p">);</span>
+<span class="n">participant</span><span class="p">.</span><span class="nf">qos</span><span class="p">(</span><span class="n">participant_qos</span><span class="p">);</span>
+<span class="nf">require</span><span class="p">(</span><span class="n">participant</span><span class="p">.</span><span class="nf">qos</span><span class="p">().</span><span class="n">policy</span><span class="o">&lt;</span><span class="n">UserData</span><span class="o">&gt;</span><span class="p">().</span><span class="nf">value</span><span class="p">()</span> <span class="o">==</span> <span class="n">data</span><span class="p">,</span> <span class="s">"Participant UserData differs"</span><span class="p">);</span></pre><p>The defaults in the next step are templates for creating other entities. Changing them affects future Publisher and Subscriber construction. The previous step applied <code>UserData</code> to the participant itself.</p></section><section id="dds_tutorial_participant_defaults"><h2><a href="#dds_tutorial_participant_defaults">Set default QoS for new Publishers and Subscribers</a></h2><p>Set the participant defaults before creating the Publisher and Subscriber. Constructors without explicit QoS use those defaults. To configure an existing entity, update its QoS directly.</p><pre class="m-code"><span class="k">const</span> <span class="nn">dds::core</span><span class="o">::</span><span class="nc">StringSeq</span> <span class="n">partition_names</span><span class="p">{</span><span class="s">"defaults"</span><span class="p">};</span>
+<span class="k">auto</span> <span class="n">default_publisher_qos</span> <span class="o">=</span> <span class="n">participant</span><span class="p">.</span><span class="nf">default_publisher_qos</span><span class="p">();</span>
+<span class="n">default_publisher_qos</span> <span class="o">&lt;&lt;</span> <span class="nf">Partition</span><span class="p">(</span><span class="n">partition_names</span><span class="p">);</span>
+<span class="n">participant</span><span class="p">.</span><span class="nf">default_publisher_qos</span><span class="p">(</span><span class="n">default_publisher_qos</span><span class="p">);</span>
+
+<span class="k">auto</span> <span class="n">default_subscriber_qos</span> <span class="o">=</span> <span class="n">participant</span><span class="p">.</span><span class="nf">default_subscriber_qos</span><span class="p">();</span>
+<span class="n">default_subscriber_qos</span> <span class="o">&lt;&lt;</span> <span class="nf">Partition</span><span class="p">(</span><span class="n">partition_names</span><span class="p">);</span>
+<span class="n">participant</span><span class="p">.</span><span class="nf">default_subscriber_qos</span><span class="p">(</span><span class="n">default_subscriber_qos</span><span class="p">);</span>
+
+<span class="nn">dds::pub</span><span class="o">::</span><span class="nc">Publisher</span> <span class="nf">default_publisher</span><span class="p">(</span><span class="n">participant</span><span class="p">);</span>
+<span class="nn">dds::sub</span><span class="o">::</span><span class="nc">Subscriber</span> <span class="nf">default_subscriber</span><span class="p">(</span><span class="n">participant</span><span class="p">);</span>
+<span class="nf">require</span><span class="p">(</span><span class="n">default_publisher</span><span class="p">.</span><span class="nf">qos</span><span class="p">().</span><span class="n">policy</span><span class="o">&lt;</span><span class="n">Partition</span><span class="o">&gt;</span><span class="p">().</span><span class="nf">name</span><span class="p">()</span> <span class="o">==</span> <span class="n">partition_names</span><span class="p">,</span> <span class="s">"Publisher Partition differs"</span><span class="p">);</span>
+<span class="nf">require</span><span class="p">(</span><span class="n">default_subscriber</span><span class="p">.</span><span class="nf">qos</span><span class="p">().</span><span class="n">policy</span><span class="o">&lt;</span><span class="n">Partition</span><span class="o">&gt;</span><span class="p">().</span><span class="nf">name</span><span class="p">()</span> <span class="o">==</span> <span class="n">partition_names</span><span class="p">,</span> <span class="s">"Subscriber Partition differs"</span><span class="p">);</span></pre><p>The full program creates <code>publisher</code> from <code>participant</code>, then creates <code>writer</code> from that Publisher and a Topic. This gives the participant a direct child and an indirect child to check.</p></section><section id="dds_tutorial_participant_contains"><h2><a href="#dds_tutorial_participant_contains">Check whether an entity belongs to a participant</a></h2><p>Pass the entity's <code>instance_handle()</code> to <code>contains_entity()</code>. The check covers a direct child such as a Publisher and an indirect child such as its DataWriter.</p><pre class="m-code"><span class="nf">require</span><span class="p">(</span><span class="n">participant</span><span class="p">.</span><span class="nf">contains_entity</span><span class="p">(</span><span class="n">publisher</span><span class="p">.</span><span class="nf">instance_handle</span><span class="p">()),</span> <span class="s">"Publisher is not contained"</span><span class="p">);</span>
+<span class="nf">require</span><span class="p">(</span><span class="n">participant</span><span class="p">.</span><span class="nf">contains_entity</span><span class="p">(</span><span class="n">writer</span><span class="p">.</span><span class="nf">instance_handle</span><span class="p">()),</span> <span class="s">"Writer is not contained"</span><span class="p">);</span>
+<span class="nn">dds::domain</span><span class="o">::</span><span class="nc">DomainParticipant</span> <span class="nf">other_participant</span><span class="p">(</span><span class="mi">107</span><span class="p">);</span>
+<span class="nf">require</span><span class="p">(</span><span class="k">not</span> <span class="n">other_participant</span><span class="p">.</span><span class="nf">contains_entity</span><span class="p">(</span><span class="n">writer</span><span class="p">.</span><span class="nf">instance_handle</span><span class="p">()),</span> <span class="s">"Another participant owns the writer"</span><span class="p">);</span></pre><p>Use the same participant to obtain a DDS timestamp. The DataWriter tutorial shows how to attach that timestamp to a sample.</p></section><section id="dds_tutorial_participant_time"><h2><a href="#dds_tutorial_participant_time">Get a timestamp from the participant</a></h2><p>Pass the DDS timestamp from <code>current_time()</code> to a timestamped write. Measure local timeouts with a steady clock.</p><pre class="m-code"><span class="k">const</span> <span class="k">auto</span> <span class="n">now</span> <span class="o">=</span> <span class="n">participant</span><span class="p">.</span><span class="nf">current_time</span><span class="p">();</span>
+<span class="nf">require</span><span class="p">(</span><span class="n">now</span><span class="p">.</span><span class="nf">sec</span><span class="p">()</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">,</span> <span class="s">"Participant time is invalid"</span><span class="p">);</span></pre><figure class="m-figure"><svg aria-label="Get the timestamp from a participant, supply it in write(), then inspect SampleInfo::timestamp() at the Reader. The application uses a steady clock to measure its own wait." class="poxy-injected-svg" data-dds-diagram="true" height="219" id="poxy-injected-svg-0" role="img" version="1.1" viewbox="0 0 1140 219" width="1140" xmlns="http://www.w3.org/2000/svg"><title id="poxy-injected-svg-0-source-timestamp-en-title">Source timestamps follow the sample</title><desc>Get the timestamp from a participant, supply it in write(), then inspect SampleInfo::timestamp() at the Reader. The application uses a steady clock to measure its own wait.</desc><defs><marker id="poxy-injected-svg-0-source-timestamp-en-arrow" markerheight="10" markerunits="userSpaceOnUse" markerwidth="9" orient="auto" refx="9" refy="6" viewbox="0 0 10 12"><path d="M 1,1 L 9,6 L 1,11" fill="none" stroke="#20354B" stroke-width="1.2"></path></marker><marker id="poxy-injected-svg-0-source-timestamp-en-blue" markerheight="9" markerunits="userSpaceOnUse" markerwidth="10" orient="auto" refx="10" refy="5" viewbox="0 0 11 10"><path d="M 0,0 L 11,5 L 0,10 Z" fill="#356B96"></path></marker><marker id="poxy-injected-svg-0-source-timestamp-en-uml" markerheight="15" markerunits="userSpaceOnUse" markerwidth="15" orient="auto" refx="14" refy="7.5" viewbox="0 0 15 15"><path d="M 1,1 L 14,7.5 L 1,14 Z" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"></path></marker></defs><rect fill="#FFFFFF" height="219" width="1140"></rect><g fill="#20354B" font-family="Arial, Malgun Gothic, sans-serif"><rect fill="#FFFFFF" height="84" stroke="#20354B" stroke-width="1.15" width="328.6666666666667" x="24" y="64"></rect><text font-size="16" font-weight="bold" text-anchor="middle" x="188.33333333333334" y="100">DomainParticipant</text><text font-family="Consolas, Menlo, monospace" font-size="15" text-anchor="middle" x="188.33333333333334" y="122">current_time()</text><path d="M 352.6666666666667 106 H 405.6666666666667" fill="none" marker-end="url(#poxy-injected-svg-0-source-timestamp-en-arrow)" stroke="#20354B" stroke-width="1.15"></path><rect fill="#FFFFFF" height="84" stroke="#20354B" stroke-width="1.15" width="328.6666666666667" x="405.6666666666667" y="64"></rect><text font-size="16" font-weight="bold" text-anchor="middle" x="570" y="100">DataWriter</text><text font-family="Consolas, Menlo, monospace" font-size="15" text-anchor="middle" x="570" y="122">write(sample, handle, t)</text><path d="M 734.3333333333334 106 H 787.3333333333334" fill="none" marker-end="url(#poxy-injected-svg-0-source-timestamp-en-blue)" stroke="#356B96" stroke-width="1.7"></path><rect fill="#EFF5FA" height="84" stroke="#20354B" stroke-width="1.15" width="328.6666666666667" x="787.3333333333334" y="64"></rect><text font-size="16" font-weight="bold" text-anchor="middle" x="951.6666666666667" y="100">DataReader</text><text font-family="Consolas, Menlo, monospace" font-size="15" text-anchor="middle" x="951.6666666666667" y="122">sample.info().timestamp()</text><text font-size="15" text-anchor="middle" x="570" y="188">Measure local wait budgets separately with std::chrono::steady_clock.</text></g></svg><figcaption>Source timestamps follow the sample</figcaption></figure></section><section id="dds_tutorial_src_entities"><h2><a href="#dds_tutorial_src_entities">Entities and QoS</a></h2><p>Creates entities, configures partitions and endpoint defaults, and catches a DDS exception.</p><p>Build the program with the command below. A successful run prints <code>Entity and QoS examples passed</code>.</p><pre class="m-code">cmake --build . --target example_cpp_howto_entities</pre><details class="dds-reference-details"><summary>Complete source</summary><pre class="m-code"><span class="cp">#include</span> <span class="cpf">"demo.hpp"</span>
+
+<span class="k">namespace</span>
+<span class="p">{</span>
+<span class="k">void</span> <span class="nf">use_entities</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="k">using</span> <span class="n">howto</span><span class="o">::</span><span class="n">require</span><span class="p">;</span>
+    <span class="k">using</span> <span class="nn">dds::core::policy</span><span class="o">::</span><span class="nc">History</span><span class="p">;</span>
+    <span class="k">using</span> <span class="nn">dds::core::policy</span><span class="o">::</span><span class="nc">Partition</span><span class="p">;</span>
+
+    <span class="c1">// [open_participant]</span>
+    <span class="k">const</span> <span class="nn">dds::domain</span><span class="o">::</span><span class="nc">DomainId</span> <span class="n">domain</span> <span class="o">=</span> <span class="mi">92</span><span class="p">;</span>
+    <span class="nn">dds::domain</span><span class="o">::</span><span class="nc">DomainParticipant</span> <span class="nf">participant</span><span class="p">(</span><span class="n">domain</span><span class="p">);</span>
+    <span class="nf">require</span><span class="p">(</span><span class="n">participant</span><span class="p">.</span><span class="nf">domain_id</span><span class="p">()</span> <span class="o">==</span> <span class="n">domain</span><span class="p">,</span> <span class="s">"Participant domain differs"</span><span class="p">);</span>
+    <span class="c1">// [open_participant]</span>
+
+    <span class="c1">// [participant_user_data]</span>
+    <span class="k">using</span> <span class="nn">dds::core::policy</span><span class="o">::</span><span class="nc">UserData</span><span class="p">;</span>
+    <span class="k">const</span> <span class="nn">dds::core</span><span class="o">::</span><span class="nc">ByteSeq</span> <span class="n">data</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">};</span>
+    <span class="k">auto</span> <span class="n">participant_qos</span> <span class="o">=</span> <span class="n">participant</span><span class="p">.</span><span class="nf">qos</span><span class="p">();</span>
+    <span class="n">participant_qos</span> <span class="o">&lt;&lt;</span> <span class="nf">UserData</span><span class="p">(</span><span class="n">data</span><span class="p">);</span>
+    <span class="n">participant</span><span class="p">.</span><span class="nf">qos</span><span class="p">(</span><span class="n">participant_qos</span><span class="p">);</span>
+    <span class="nf">require</span><span class="p">(</span><span class="n">participant</span><span class="p">.</span><span class="nf">qos</span><span class="p">().</span><span class="n">policy</span><span class="o">&lt;</span><span class="n">UserData</span><span class="o">&gt;</span><span class="p">().</span><span class="nf">value</span><span class="p">()</span> <span class="o">==</span> <span class="n">data</span><span class="p">,</span> <span class="s">"Participant UserData differs"</span><span class="p">);</span>
+    <span class="c1">// [participant_user_data]</span>
+
+    <span class="c1">// [participant_child_defaults]</span>
+    <span class="k">const</span> <span class="nn">dds::core</span><span class="o">::</span><span class="nc">StringSeq</span> <span class="n">partition_names</span><span class="p">{</span><span class="s">"defaults"</span><span class="p">};</span>
+    <span class="k">auto</span> <span class="n">default_publisher_qos</span> <span class="o">=</span> <span class="n">participant</span><span class="p">.</span><span class="nf">default_publisher_qos</span><span class="p">();</span>
+    <span class="n">default_publisher_qos</span> <span class="o">&lt;&lt;</span> <span class="nf">Partition</span><span class="p">(</span><span class="n">partition_names</span><span class="p">);</span>
+    <span class="n">participant</span><span class="p">.</span><span class="nf">default_publisher_qos</span><span class="p">(</span><span class="n">default_publisher_qos</span><span class="p">);</span>
+
+    <span class="k">auto</span> <span class="n">default_subscriber_qos</span> <span class="o">=</span> <span class="n">participant</span><span class="p">.</span><span class="nf">default_subscriber_qos</span><span class="p">();</span>
+    <span class="n">default_subscriber_qos</span> <span class="o">&lt;&lt;</span> <span class="nf">Partition</span><span class="p">(</span><span class="n">partition_names</span><span class="p">);</span>
+    <span class="n">participant</span><span class="p">.</span><span class="nf">default_subscriber_qos</span><span class="p">(</span><span class="n">default_subscriber_qos</span><span class="p">);</span>
+
+    <span class="nn">dds::pub</span><span class="o">::</span><span class="nc">Publisher</span> <span class="nf">default_publisher</span><span class="p">(</span><span class="n">participant</span><span class="p">);</span>
+    <span class="nn">dds::sub</span><span class="o">::</span><span class="nc">Subscriber</span> <span class="nf">default_subscriber</span><span class="p">(</span><span class="n">participant</span><span class="p">);</span>
+    <span class="nf">require</span><span class="p">(</span><span class="n">default_publisher</span><span class="p">.</span><span class="nf">qos</span><span class="p">().</span><span class="n">policy</span><span class="o">&lt;</span><span class="n">Partition</span><span class="o">&gt;</span><span class="p">().</span><span class="nf">name</span><span class="p">()</span> <span class="o">==</span> <span class="n">partition_names</span><span class="p">,</span> <span class="s">"Publisher Partition differs"</span><span class="p">);</span>
+    <span class="nf">require</span><span class="p">(</span><span class="n">default_subscriber</span><span class="p">.</span><span class="nf">qos</span><span class="p">().</span><span class="n">policy</span><span class="o">&lt;</span><span class="n">Partition</span><span class="o">&gt;</span><span class="p">().</span><span class="nf">name</span><span class="p">()</span> <span class="o">==</span> <span class="n">partition_names</span><span class="p">,</span> <span class="s">"Subscriber Partition differs"</span><span class="p">);</span>
+    <span class="c1">// [participant_child_defaults]</span>
+
+    <span class="c1">// [participant_time]</span>
+    <span class="k">const</span> <span class="k">auto</span> <span class="n">now</span> <span class="o">=</span> <span class="n">participant</span><span class="p">.</span><span class="nf">current_time</span><span class="p">();</span>
+    <span class="nf">require</span><span class="p">(</span><span class="n">now</span><span class="p">.</span><span class="nf">sec</span><span class="p">()</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">,</span> <span class="s">"Participant time is invalid"</span><span class="p">);</span>
+    <span class="c1">// [participant_time]</span>
+
+    <span class="c1">// [create_topic]</span>
+    <span class="nn">dds::topic</span><span class="o">::</span><span class="nc">Topic</span><span class="o">&lt;</span><span class="n">Hello</span><span class="o">::</span><span class="n">Msg</span><span class="o">&gt;</span> <span class="nf">topic</span><span class="p">(</span><span class="n">participant</span><span class="p">,</span> <span class="s">"HowToEntities"</span><span class="p">);</span>
+    <span class="k">const</span> <span class="k">auto</span> <span class="nc">registered_type</span> <span class="o">=</span> <span class="nn">dds::topic</span><span class="o">::</span><span class="nc">topic_type_name</span><span class="o">&lt;</span><span class="n">Hello</span><span class="o">::</span><span class="n">Msg</span><span class="o">&gt;::</span><span class="nf">value</span><span class="p">();</span>
+    <span class="nf">require</span><span class="p">(</span><span class="n">topic</span><span class="p">.</span><span class="nf">name</span><span class="p">()</span> <span class="o">==</span> <span class="s">"HowToEntities"</span> <span class="k">and</span> <span class="n">topic</span><span class="p">.</span><span class="nf">type_name</span><span class="p">()</span> <span class="o">==</span> <span class="nc">registered_type</span><span class="p">,</span> <span class="s">"Topic description differs"</span><span class="p">);</span>
+    <span class="c1">// [create_topic]</span>
+
+    <span class="c1">// [publisher_partition]</span>
+    <span class="k">auto</span> <span class="n">publisher_qos</span> <span class="o">=</span> <span class="n">participant</span><span class="p">.</span><span class="nf">default_publisher_qos</span><span class="p">();</span>
+    <span class="n">publisher_qos</span> <span class="o">&lt;&lt;</span> <span class="nf">Partition</span><span class="p">(</span><span class="s">"howto"</span><span class="p">);</span>
+    <span class="nn">dds::pub</span><span class="o">::</span><span class="nc">Publisher</span> <span class="nf">publisher</span><span class="p">(</span><span class="n">participant</span><span class="p">,</span> <span class="n">publisher_qos</span><span class="p">);</span>
+    <span class="c1">// [publisher_partition]</span>
+
+    <span class="c1">// [publisher_participant]</span>
+    <span class="k">const</span> <span class="k">auto</span> <span class="n">owner</span> <span class="o">=</span> <span class="n">publisher</span><span class="p">.</span><span class="nf">participant</span><span class="p">();</span>
+    <span class="nf">require</span><span class="p">(</span><span class="n">owner</span> <span class="o">==</span> <span class="n">participant</span><span class="p">,</span> <span class="s">"Publisher belongs to another participant"</span><span class="p">);</span>
+    <span class="c1">// [publisher_participant]</span>
+
+    <span class="c1">// [subscriber_partition]</span>
+    <span class="k">auto</span> <span class="n">subscriber_qos</span> <span class="o">=</span> <span class="n">participant</span><span class="p">.</span><span class="nf">default_subscriber_qos</span><span class="p">();</span>
+    <span class="n">subscriber_qos</span> <span class="o">&lt;&lt;</span> <span class="nf">Partition</span><span class="p">(</span><span class="s">"howto"</span><span class="p">);</span>
+    <span class="nn">dds::sub</span><span class="o">::</span><span class="nc">Subscriber</span> <span class="nf">subscriber</span><span class="p">(</span><span class="n">participant</span><span class="p">,</span> <span class="n">subscriber_qos</span><span class="p">);</span>
+    <span class="c1">// [subscriber_partition]</span>
+
+    <span class="c1">// [publisher_defaults]</span>
+    <span class="k">auto</span> <span class="n">writer_defaults</span> <span class="o">=</span> <span class="n">publisher</span><span class="p">.</span><span class="nf">default_writer_qos</span><span class="p">();</span>
+    <span class="n">writer_defaults</span> <span class="o">&lt;&lt;</span> <span class="n">History</span><span class="o">::</span><span class="nf">KeepLast</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
+    <span class="n">publisher</span><span class="p">.</span><span class="nf">default_writer_qos</span><span class="p">(</span><span class="n">writer_defaults</span><span class="p">);</span>
+    <span class="nn">dds::pub</span><span class="o">::</span><span class="nc">DataWriter</span><span class="o">&lt;</span><span class="n">Hello</span><span class="o">::</span><span class="n">Msg</span><span class="o">&gt;</span> <span class="nf">writer</span><span class="p">(</span><span class="n">publisher</span><span class="p">,</span> <span class="n">topic</span><span class="p">);</span>
+    <span class="nf">require</span><span class="p">(</span><span class="n">writer</span><span class="p">.</span><span class="nf">qos</span><span class="p">().</span><span class="n">policy</span><span class="o">&lt;</span><span class="n">History</span><span class="o">&gt;</span><span class="p">().</span><span class="nf">depth</span><span class="p">()</span> <span class="o">==</span> <span class="mi">3</span><span class="p">,</span> <span class="s">"Writer did not inherit history depth"</span><span class="p">);</span>
+    <span class="c1">// [publisher_defaults]</span>
+
+    <span class="c1">// [participant_contains]</span>
+    <span class="nf">require</span><span class="p">(</span><span class="n">participant</span><span class="p">.</span><span class="nf">contains_entity</span><span class="p">(</span><span class="n">publisher</span><span class="p">.</span><span class="nf">instance_handle</span><span class="p">()),</span> <span class="s">"Publisher is not contained"</span><span class="p">);</span>
+    <span class="nf">require</span><span class="p">(</span><span class="n">participant</span><span class="p">.</span><span class="nf">contains_entity</span><span class="p">(</span><span class="n">writer</span><span class="p">.</span><span class="nf">instance_handle</span><span class="p">()),</span> <span class="s">"Writer is not contained"</span><span class="p">);</span>
+    <span class="nn">dds::domain</span><span class="o">::</span><span class="nc">DomainParticipant</span> <span class="nf">other_participant</span><span class="p">(</span><span class="mi">107</span><span class="p">);</span>
+    <span class="nf">require</span><span class="p">(</span><span class="k">not</span> <span class="n">other_participant</span><span class="p">.</span><span class="nf">contains_entity</span><span class="p">(</span><span class="n">writer</span><span class="p">.</span><span class="nf">instance_handle</span><span class="p">()),</span> <span class="s">"Another participant owns the writer"</span><span class="p">);</span>
+    <span class="c1">// [participant_contains]</span>
+
+    <span class="c1">// [entity_nil]</span>
+    <span class="nn">dds::pub</span><span class="o">::</span><span class="nc">DataWriter</span><span class="o">&lt;</span><span class="n">Hello</span><span class="o">::</span><span class="n">Msg</span><span class="o">&gt;</span> <span class="nf">optional_writer</span><span class="p">(</span><span class="nn">dds::core</span><span class="o">::</span><span class="n">null</span><span class="p">);</span>
+    <span class="nf">require</span><span class="p">(</span><span class="n">optional_writer</span><span class="p">.</span><span class="nf">is_nil</span><span class="p">(),</span> <span class="s">"Empty writer handle is not nil"</span><span class="p">);</span>
+    <span class="n">optional_writer</span> <span class="o">=</span> <span class="n">writer</span><span class="p">;</span>
+    <span class="nf">require</span><span class="p">(</span><span class="k">not</span> <span class="n">optional_writer</span><span class="p">.</span><span class="nf">is_nil</span><span class="p">(),</span> <span class="s">"Assigned writer handle is nil"</span><span class="p">);</span>
+    <span class="c1">// [entity_nil]</span>
+
+    <span class="c1">// [subscriber_reader_qos]</span>
+    <span class="k">auto</span> <span class="n">reader_qos</span> <span class="o">=</span> <span class="n">subscriber</span><span class="p">.</span><span class="nf">default_datareader_qos</span><span class="p">();</span>
+    <span class="k">auto</span> <span class="n">reader_history</span> <span class="o">=</span> <span class="n">reader_qos</span><span class="p">.</span><span class="n">policy</span><span class="o">&lt;</span><span class="n">History</span><span class="o">&gt;</span><span class="p">();</span>
+    <span class="n">reader_history</span><span class="p">.</span><span class="nf">kind</span><span class="p">(</span><span class="nn">dds::core::policy</span><span class="o">::</span><span class="n">HistoryKind</span><span class="o">::</span><span class="n">KEEP_LAST</span><span class="p">).</span><span class="nf">depth</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+    <span class="n">reader_qos</span><span class="p">.</span><span class="nf">policy</span><span class="p">(</span><span class="n">reader_history</span><span class="p">);</span>
+    <span class="nn">dds::sub</span><span class="o">::</span><span class="nc">DataReader</span><span class="o">&lt;</span><span class="n">Hello</span><span class="o">::</span><span class="n">Msg</span><span class="o">&gt;</span> <span class="nf">reader</span><span class="p">(</span><span class="n">subscriber</span><span class="p">,</span> <span class="n">topic</span><span class="p">,</span> <span class="n">reader_qos</span><span class="p">);</span>
+    <span class="nf">require</span><span class="p">(</span><span class="n">reader</span><span class="p">.</span><span class="nf">qos</span><span class="p">().</span><span class="n">policy</span><span class="o">&lt;</span><span class="n">History</span><span class="o">&gt;</span><span class="p">().</span><span class="nf">depth</span><span class="p">()</span> <span class="o">==</span> <span class="mi">2</span><span class="p">,</span> <span class="s">"Reader did not use the requested history depth"</span><span class="p">);</span>
+    <span class="c1">// [subscriber_reader_qos]</span>
+
+    <span class="c1">// [subscriber_check_settings]</span>
+    <span class="k">const</span> <span class="k">auto</span> <span class="n">subscriber_domain</span> <span class="o">=</span> <span class="n">subscriber</span><span class="p">.</span><span class="nf">participant</span><span class="p">().</span><span class="nf">domain_id</span><span class="p">();</span>
+    <span class="k">const</span> <span class="k">auto</span> <span class="n">subscriber_partitions</span> <span class="o">=</span> <span class="n">subscriber</span><span class="p">.</span><span class="nf">qos</span><span class="p">().</span><span class="n">policy</span><span class="o">&lt;</span><span class="n">Partition</span><span class="o">&gt;</span><span class="p">().</span><span class="nf">name</span><span class="p">();</span>
+    <span class="nf">require</span><span class="p">(</span><span class="n">subscriber_domain</span> <span class="o">==</span> <span class="n">domain</span><span class="p">,</span> <span class="s">"Subscriber domain differs"</span><span class="p">);</span>
+    <span class="nf">require</span><span class="p">(</span><span class="n">subscriber_partitions</span> <span class="o">==</span> <span class="nn">dds::core</span><span class="o">::</span><span class="nc">StringSeq</span><span class="p">{</span><span class="s">"howto"</span><span class="p">},</span> <span class="s">"Subscriber Partition differs"</span><span class="p">);</span>
+    <span class="c1">// [subscriber_check_settings]</span>
+
+    <span class="c1">// [share_entity_handle]</span>
+    <span class="p">{</span>
+        <span class="k">const</span> <span class="k">auto</span> <span class="n">writer_alias</span> <span class="o">=</span> <span class="n">writer</span><span class="p">;</span>
+        <span class="nf">require</span><span class="p">(</span><span class="n">writer_alias</span> <span class="o">==</span> <span class="n">writer</span><span class="p">,</span> <span class="s">"Copied handle refers to a different writer"</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="nf">require</span><span class="p">(</span><span class="k">not</span> <span class="n">writer</span><span class="p">.</span><span class="nf">is_nil</span><span class="p">(),</span> <span class="s">"Releasing a copy affected the original"</span><span class="p">);</span>
+    <span class="c1">// [share_entity_handle]</span>
+
+    <span class="c1">// [read_qos]</span>
+    <span class="n">History</span> <span class="n">history</span><span class="p">;</span>
+    <span class="n">writer</span><span class="p">.</span><span class="nf">qos</span><span class="p">()</span> <span class="o">&gt;&gt;</span> <span class="n">history</span><span class="p">;</span>
+    <span class="nf">require</span><span class="p">(</span><span class="n">history</span><span class="p">.</span><span class="nf">depth</span><span class="p">()</span> <span class="o">==</span> <span class="mi">3</span><span class="p">,</span> <span class="s">"Could not extract writer history policy"</span><span class="p">);</span>
+    <span class="c1">// [read_qos]</span>
+
+    <span class="c1">// [partition_delivery]</span>
+    <span class="k">auto</span> <span class="n">other_qos</span> <span class="o">=</span> <span class="n">participant</span><span class="p">.</span><span class="nf">default_subscriber_qos</span><span class="p">();</span>
+    <span class="n">other_qos</span> <span class="o">&lt;&lt;</span> <span class="nf">Partition</span><span class="p">(</span><span class="s">"other"</span><span class="p">);</span>
+    <span class="nn">dds::sub</span><span class="o">::</span><span class="nc">Subscriber</span> <span class="nf">other_subscriber</span><span class="p">(</span><span class="n">participant</span><span class="p">,</span> <span class="n">other_qos</span><span class="p">);</span>
+    <span class="nn">dds::sub</span><span class="o">::</span><span class="nc">DataReader</span><span class="o">&lt;</span><span class="n">Hello</span><span class="o">::</span><span class="n">Msg</span><span class="o">&gt;</span> <span class="nf">other_reader</span><span class="p">(</span><span class="n">other_subscriber</span><span class="p">,</span> <span class="n">topic</span><span class="p">,</span> <span class="n">reader_qos</span><span class="p">);</span>
+
+    <span class="n">howto</span><span class="o">::</span><span class="nf">wait_for_readers</span><span class="p">(</span><span class="n">writer</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+    <span class="k">char</span> <span class="n">message</span><span class="p">[]</span> <span class="o">=</span> <span class="s">"partition example"</span><span class="p">;</span>
+    <span class="n">Hello</span><span class="o">::</span><span class="n">Msg</span> <span class="n">sample</span><span class="p">{};</span>
+    <span class="n">sample</span><span class="p">.</span><span class="n">userId</span> <span class="o">=</span> <span class="mi">7</span><span class="p">;</span>
+    <span class="n">sample</span><span class="p">.</span><span class="n">message</span> <span class="o">=</span> <span class="n">message</span><span class="p">;</span>
+    <span class="n">writer</span><span class="p">.</span><span class="nf">write</span><span class="p">(</span><span class="n">sample</span><span class="p">);</span>
+
+    <span class="n">howto</span><span class="o">::</span><span class="nf">wait_until</span><span class="p">([</span><span class="o">&amp;</span><span class="n">reader</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">sample</span><span class="p">]()</span> <span class="o">-&gt;</span> <span class="k">bool</span> <span class="p">{</span>
+        <span class="k">const</span> <span class="k">auto</span> <span class="n">batch</span> <span class="o">=</span> <span class="n">reader</span><span class="p">.</span><span class="nf">take</span><span class="p">();</span>
+        <span class="k">for</span> <span class="p">(</span><span class="k">const</span> <span class="k">auto</span><span class="o">&amp;</span> <span class="n">received</span> <span class="o">:</span> <span class="n">batch</span><span class="p">)</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">received</span><span class="p">.</span><span class="nf">info</span><span class="p">().</span><span class="nf">valid</span><span class="p">()</span> <span class="k">and</span> <span class="n">received</span><span class="p">.</span><span class="nf">data</span><span class="p">().</span><span class="n">userId</span> <span class="o">==</span> <span class="n">sample</span><span class="p">.</span><span class="n">userId</span><span class="p">)</span>
+                <span class="k">return</span> <span class="k">true</span><span class="p">;</span>
+
+        <span class="k">return</span> <span class="k">false</span><span class="p">;</span>
+    <span class="p">},</span> <span class="s">"The reader in the matching partition did not receive the sample"</span><span class="p">);</span>
+
+    <span class="nf">require</span><span class="p">(</span><span class="n">writer</span><span class="p">.</span><span class="nf">publication_matched_status</span><span class="p">().</span><span class="nf">current_count</span><span class="p">()</span> <span class="o">==</span> <span class="mi">1</span><span class="p">,</span> <span class="s">"Expected exactly one matched reader"</span><span class="p">);</span>
+    <span class="nf">require</span><span class="p">(</span><span class="n">other_reader</span><span class="p">.</span><span class="nf">subscription_matched_status</span><span class="p">().</span><span class="nf">current_count</span><span class="p">()</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span> <span class="s">"The reader in the other partition matched"</span><span class="p">);</span>
+    <span class="nf">require</span><span class="p">(</span><span class="n">other_reader</span><span class="p">.</span><span class="nf">take</span><span class="p">().</span><span class="nf">length</span><span class="p">()</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span> <span class="s">"The reader in the other partition received data"</span><span class="p">);</span>
+    <span class="c1">// [partition_delivery]</span>
+    <span class="nn">std</span><span class="o">::</span><span class="nc">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Partition: one matched reader received the sample</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">void</span> <span class="nf">catch_dds_exception</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="c1">// [catch_dds_exception]</span>
+    <span class="k">try</span>
+    <span class="p">{</span>
+        <span class="k">const</span> <span class="k">auto</span> <span class="n">elapsed</span> <span class="o">=</span> <span class="nn">dds::core</span><span class="o">::</span><span class="nc">Duration</span><span class="o">::</span><span class="nf">from_millisecs</span><span class="p">(</span><span class="mi">20</span><span class="p">);</span>
+        <span class="k">const</span> <span class="k">auto</span> <span class="n">budget</span> <span class="o">=</span> <span class="nn">dds::core</span><span class="o">::</span><span class="nc">Duration</span><span class="o">::</span><span class="nf">from_millisecs</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
+        <span class="k">const</span> <span class="k">auto</span> <span class="n">remaining</span> <span class="o">=</span> <span class="n">budget</span> <span class="o">-</span> <span class="n">elapsed</span><span class="p">;</span>
+        <span class="p">(</span><span class="k">void</span><span class="p">)</span><span class="n">remaining</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">catch</span> <span class="p">(</span><span class="k">const</span> <span class="nn">dds::core</span><span class="o">::</span><span class="nc">InvalidDataError</span><span class="o">&amp;</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="nn">std</span><span class="o">::</span><span class="nc">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Caught a negative duration</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
+        <span class="k">return</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="c1">// [catch_dds_exception]</span>
+
+    <span class="k">throw</span> <span class="nn">std</span><span class="o">::</span><span class="nf">runtime_error</span><span class="p">(</span><span class="s">"Expected InvalidDataError"</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="k">return</span> <span class="n">howto</span><span class="o">::</span><span class="nf">run</span><span class="p">([]()</span> <span class="o">-&gt;</span> <span class="k">void</span> <span class="p">{</span>
+        <span class="nf">use_entities</span><span class="p">();</span>
+        <span class="nf">catch_dds_exception</span><span class="p">();</span>
+    <span class="p">},</span> <span class="s">"Entity and QoS examples passed"</span><span class="p">);</span>
+<span class="p">}</span></pre></details></section>
+</div>
+</div>
+</div>
+</article></main>
+<div class="m-doc-search" id="search">
+<a href="#!" onclick="return hideSearch()"></a>
+<div class="m-container">
+<div class="m-row">
+<div class="m-col-m-8 m-push-m-2">
+<div class="m-doc-search-header m-text m-small">
+<div><span class="m-label m-default">Tab</span> / <span class="m-label m-default">T</span> to search, <span class="m-label m-default">Esc</span> to close</div>
+<div id="search-symbolcount">…</div>
+</div>
+<div class="m-doc-search-content">
+<form>
+<input autocomplete="off" autofocus="autofocus" disabled="disabled" id="search-input" name="q" placeholder="Loading …" spellcheck="false" type="search"/>
+</form>
+<noscript class="m-text m-danger m-text-center">Unlike everything else in the docs, the search functionality <em>requires</em> JavaScript.</noscript>
+<div class="m-text m-dim m-text-center" id="search-help">
+<p class="m-noindent">Search for symbols, directories, files, pages or
+            modules. You can omit any prefix from the symbol or file path; adding a
+            <code>:</code> or <code>/</code> suffix lists all members of given symbol or
+            directory.</p>
+<p class="m-noindent">Use <span class="m-label m-dim">↓</span>
+            / <span class="m-label m-dim">↑</span> to navigate through the list,
+            <span class="m-label m-dim">Enter</span> to go.
+            <span class="m-label m-dim">Tab</span> autocompletes common prefix, you can
+            copy a link to the result using <span class="m-label m-dim">⌘</span>
+<span class="m-label m-dim">L</span> while <span class="m-label m-dim">⌘</span>
+<span class="m-label m-dim">M</span> produces a Markdown link.</p>
+</div>
+<div class="m-text m-warning m-text-center" id="search-notfound">Sorry, nothing was found.</div>
+<ul id="search-results"></ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src="search-v2.js"></script><script>install_mcss_search_shim();</script>
+<script async="async" src="searchdata-v2.js"></script>
+<footer><nav>
+<div class="m-container">
+<div class="m-row">
+<div class="m-col-l-10 m-push-l-1">
+<a download="" href="GurumDDS_C++.tagfile.xml" target="_blank" type="text/xml">Doxygen tagfile</a>
+<br/><br/>
+Site generated using <a class="poxy-external" href="https://github.com/marzer/poxy/" target="_blank">Poxy</a>
+</div>
+</div>
+</div>
+</nav></footer>
+</body></html>

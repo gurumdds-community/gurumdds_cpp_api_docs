@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1140" height="291" viewBox="0 0 1140 291" role="img" aria-label="Reliable Writer에 전송 공간이 필요하면 write는 max_blocking_time까지 대기할 수 있습니다. 공간이 확보되면 샘플을 넣고, 기한이 지나면 타임아웃을 보고합니다." data-dds-diagram="true">
+  <title id="reliable-write-wait-ko-title">Reliable write에서 공간이 생길 때까지 대기</title>
+  <desc>Reliable Writer에 전송 공간이 필요하면 write는 max_blocking_time까지 대기할 수 있습니다. 공간이 확보되면 샘플을 넣고, 기한이 지나면 타임아웃을 보고합니다.</desc>
+  <defs>
+    <marker id="reliable-write-wait-ko-arrow" viewBox="0 0 10 12" refX="9" refY="6" markerWidth="9" markerHeight="10" orient="auto" markerUnits="userSpaceOnUse"><path d="M 1,1 L 9,6 L 1,11" fill="none" stroke="#20354B" stroke-width="1.2"/></marker>
+    <marker id="reliable-write-wait-ko-blue" viewBox="0 0 11 10" refX="10" refY="5" markerWidth="10" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M 0,0 L 11,5 L 0,10 Z" fill="#356B96"/></marker>
+    <marker id="reliable-write-wait-ko-uml" viewBox="0 0 15 15" refX="14" refY="7.5" markerWidth="15" markerHeight="15" orient="auto" markerUnits="userSpaceOnUse"><path d="M 1,1 L 14,7.5 L 1,14 Z" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/></marker>
+  </defs>
+  <rect width="1140" height="291" fill="#FFFFFF"/>
+  <g fill="#20354B" font-family="Arial, Malgun Gothic, sans-serif">
+    <path d="M 267 132 H 346" fill="none" stroke="#20354B" stroke-width="1.15" marker-end="url(#reliable-write-wait-ko-arrow)"/>
+    <path d="M 694 132 H 742 V 72 H 799" fill="none" stroke="#356B96" stroke-width="1.7" marker-end="url(#reliable-write-wait-ko-blue)"/>
+    <path d="M 694 132 H 742 V 199 H 799" fill="none" stroke="#20354B" stroke-width="1.15" marker-end="url(#reliable-write-wait-ko-arrow)"/>
+    <rect x="25" y="93" width="242" height="78" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <text x="146" y="126" text-anchor="middle" font-size="16" font-family="Consolas, Menlo, monospace" font-weight="bold">write(sample)</text>
+    <text x="146" y="148" text-anchor="middle" font-size="15">Reliable DataWriter</text>
+    <rect x="346" y="93" width="348" height="78" fill="#EFF5FA" stroke="#20354B" stroke-width="1.15"/>
+    <text x="520" y="126" text-anchor="middle" font-size="16" font-weight="bold">전송 버퍼 공간 부족</text>
+    <text x="520" y="148" text-anchor="middle" font-size="15" font-family="Consolas, Menlo, monospace">max_blocking_time()</text>
+    <rect x="799" y="34" width="316" height="76" fill="#EFF5FA" stroke="#20354B" stroke-width="1.15"/>
+    <text x="957" y="66" text-anchor="middle" font-size="16" font-weight="bold">공간 확보</text>
+    <text x="957" y="88" text-anchor="middle" font-size="15">샘플을 전송 대기열에 넣음</text>
+    <rect x="799" y="162" width="316" height="76" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <text x="957" y="194" text-anchor="middle" font-size="16" font-weight="bold">최대 대기 시간 경과</text>
+    <text x="957" y="216" text-anchor="middle" font-size="15" font-family="Consolas, Menlo, monospace">dds::core::TimeoutError</text>
+    <text x="570" y="268" text-anchor="middle" font-size="15">이 제한은 write()에 적용합니다. acknowledgment 대기는 별도 타임아웃을 사용합니다.</text>
+  </g>
+</svg>

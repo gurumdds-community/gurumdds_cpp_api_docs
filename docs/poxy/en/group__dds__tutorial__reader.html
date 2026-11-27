@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<title>Programming Tutorials » Data readers module | GurumDDS C++ API Reference</title>
+<link href="gurum-networks-logo.png" rel="icon" type="image/png"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="#cb4b16" name="theme-color"/>
+<link href="poxy/poxy.css" referrerpolicy="no-referrer" rel="stylesheet"/>
+<link href="ReferenceBranding.css" referrerpolicy="no-referrer" rel="stylesheet"/>
+<script src="poxy/poxy.js"></script>
+<script>initialize_theme("light");</script>
+<meta content="GurumDDS C++" name="twitter:title"/>
+<meta content="GurumDDS C++" property="og:title"/>
+<meta content="GurumDDS C++" itemprop="name"/>
+<meta content="API Reference" name="description"/>
+<meta content="API Reference" name="twitter:description"/>
+<meta content="API Reference" property="og:description"/>
+<meta content="API Reference" itemprop="description"/>
+<meta content="telephone=no" name="format-detection"/>
+<meta content="Poxy v0.27.2" name="generator"/>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<script defer="True" src="ReferenceUi.js"></script><link href="../en/group__dds__tutorial__reader.html" hreflang="en" rel="alternate"/><link href="../ko/group__dds__tutorial__reader.html" hreflang="ko" rel="alternate"/><link href="../language.css" rel="stylesheet"/><script defer="defer" src="../language.js"></script></head>
+<body class="poxy-has-toc">
+<header><nav id="navigation">
+<div class="m-container">
+<div class="m-row doc-language-header">
+<a class="m-col-t-8 m-col-m-none m-left-m" href="index.html" id="m-navbar-brand"><img alt="" src="gurum-networks-logo.png"/>GurumDDS C++ <span class="m-thin">API Reference</span></a>
+<div class="m-col-t-4 m-hide-m m-text-right m-nopadr">
+<a class="m-doc-search-icon" href="#search" onclick="return showSearch()" title="Search"><svg style="height: 0.9rem;" viewbox="0 0 16 16">
+<path d="m6 0c-3.31 0-6 2.69-6 6 0 3.31 2.69 6 6 6 1.49 0 2.85-0.541 3.89-1.44-0.0164 0.338 0.147 0.759 0.5 1.15l3.22 3.79c0.552 0.614 1.45 0.665 2 0.115 0.55-0.55 0.499-1.45-0.115-2l-3.79-3.22c-0.392-0.353-0.812-0.515-1.15-0.5 0.895-1.05 1.44-2.41 1.44-3.89 0-3.31-2.69-6-6-6zm0 1.56a4.44 4.44 0 0 1 4.44 4.44 4.44 4.44 0 0 1-4.44 4.44 4.44 4.44 0 0 1-4.44-4.44 4.44 4.44 0 0 1 4.44-4.44z" id="m-doc-search-icon-path"></path>
+</svg></a>
+<a href="#navigation" id="m-navbar-show" title="Show navigation"></a>
+<a href="#" id="m-navbar-hide" title="Hide navigation"></a>
+</div>
+<div class="m-col-t-12 m-show-m m-col-m-none m-right-m" id="m-navbar-collapse">
+<div class="m-row">
+<ol class="m-col-t-6 m-col-m-none">
+<li><a href="modules.html">Modules</a></li>
+<li><a href="annotated.html">Classes</a></li>
+<li><a href="namespaces.html">Namespaces</a></li>
+</ol>
+<ol class="m-col-t-6 m-col-m-none" start="4">
+<li><a href="examples.html">Examples</a></li>
+<li><a class="poxy-icon theme" href="javascript:void(null);" id="poxy-theme-switch" onclick="toggle_theme(); return false;" role="button" title="Toggle dark and light themes"><svg id="poxy-theme-switch-img" version="1.1" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><circle cx="185.6708" cy="183.8122" fill="currentColor" r="65.625"></circle><path d="M185.6708,87.5622a13.1256,13.1256,0,0,0,13.125-13.125V52.5622a13.125,13.125,0,1,0-26.25,0v21.875A13.1257,13.1257,0,0,0,185.6708,87.5622Z" fill="currentColor"></path><path d="M99.051,115.7519a13.1236,13.1236,0,1,0,18.56-18.56L102.1442,81.726a13.1236,13.1236,0,0,0-18.5595,18.56Z" fill="currentColor"></path><path d="M89.4208,183.8122a13.1257,13.1257,0,0,0-13.125-13.125H54.4208a13.125,13.125,0,0,0,0,26.25h21.875A13.1256,13.1256,0,0,0,89.4208,183.8122Z" fill="currentColor"></path><path d="M99.051,251.8725,83.5847,267.3431a13.1236,13.1236,0,1,0,18.56,18.56l15.4663-15.4706a13.1236,13.1236,0,1,0-18.5595-18.56Z" fill="currentColor"></path><path d="M185.6708,280.0622a13.1258,13.1258,0,0,0-13.125,13.125v21.875a13.125,13.125,0,0,0,26.25,0v-21.875A13.1257,13.1257,0,0,0,185.6708,280.0622Z" fill="currentColor"></path><path d="M272.2907,251.8725a13.1236,13.1236,0,1,0-18.56,18.56l15.4663,15.4706a13.1236,13.1236,0,1,0,18.56-18.56Z" fill="currentColor"></path><path d="M330.0458,183.8122a13.1257,13.1257,0,0,0-13.125-13.125h-21.875a13.125,13.125,0,0,0,0,26.25h21.875A13.1256,13.1256,0,0,0,330.0458,183.8122Z" fill="currentColor"></path><path d="M263.0109,119.5971a13.0824,13.0824,0,0,0,9.28-3.8452l15.4663-15.4663a13.1236,13.1236,0,1,0-18.56-18.56L253.7312,97.1923a13.125,13.125,0,0,0,9.28,22.4048Z" fill="currentColor"></path><path d="M456.9379,401.6714a63.97,63.97,0,0,1-14.9963,7.2055c-19.6448,6.5283-41.8787,2.9566-58.1439-9.8523a68.9311,68.9311,0,0,1-10.835-10.8339c-12.8088-16.2663-16.3806-38.5-9.8523-58.1471a63.8444,63.8444,0,0,1,7.2077-14.9931,8.8036,8.8036,0,0,0-10.1172-13.3034,87.5188,87.5188,0,1,0,110.0372,110.04A8.8,8.8,0,0,0,456.9379,401.6714Z" fill="currentColor"></path></svg></a></li>
+<li class="m-show-m"><a class="m-doc-search-icon" href="#search" onclick="return showSearch()" title="Search"><svg style="height: 0.9rem;" viewbox="0 0 16 16">
+<use href="#m-doc-search-icon-path"></use>
+</svg></a></li>
+</ol>
+</div>
+</div>
+<label class="doc-language"><select aria-label="Documentation language" data-current="0"><option lang="en" selected="selected" value="../en/group__dds__tutorial__reader.html">English</option><option lang="en" value="../ko/group__dds__tutorial__reader.html">Korean</option></select></label></div>
+</div>
+</nav></header>
+<main><article>
+<div class="m-container m-container-inflatable">
+<div class="m-row">
+<div class="m-col-l-10 m-push-l-1">
+<h1>
+<span class="m-breadcrumb"><a href="group__dds__howto.html">Programming Tutorials</a> »</span>
+          Data readers <span class="m-thin">module</span></h1>
+<nav class="m-block m-default poxy-toc" id="poxy-toc">
+<h3>Contents</h3>
+<ul>
+<li><a href="#dds_tutorial_reader_create">Create a DataReader</a></li>
+<li><a href="#dds_howto_read_take">Read a sample and then remove it</a></li>
+<li><a href="#dds_tutorial_reader_metadata">Inspect source timestamps and payload validity</a></li>
+<li><a href="#dds_tutorial_reader_copy_generated_fields">Keep generated fields after returning a loan</a></li>
+<li><a href="#dds_tutorial_reader_instance">Select one sample for a key</a></li>
+<li><a href="#dds_tutorial_reader_state_masks">Take read and unread samples separately</a></li>
+<li><a href="#dds_tutorial_reader_dispose">Detect a disposed instance</a></li>
+<li><a href="#dds_tutorial_reader_ranks">Inspect ranks across instance generations</a></li>
+<li><a href="#dds_tutorial_src_reliable_receive">Reliable send and receive</a></li>
+<li><a href="#dds_tutorial_src_idl">Generated type and field ownership</a></li>
+</ul>
+</nav>
+<p>A DataReader receives samples of its Topic type and stores them in its history. Create it with a Subscriber and Topic from the same participant. Use <code>read()</code> to inspect a sample and leave it in history. Use <code>take()</code> to remove it.</p><p>Use <code>subscriber</code> from <a class="m-doc" href="group__dds__tutorial__subscriber.html">Subscribers</a> and the receive-side <code>topic</code> of type <code>Topic&lt;Hello::Msg&gt;</code>. The reader's template argument must match the Topic's sample type.</p><section id="dds_tutorial_reader_create"><h2><a href="#dds_tutorial_reader_create">Create a DataReader</a></h2><pre class="m-code"><span class="nn">dds::sub</span><span class="o">::</span><span class="nc">DataReader</span><span class="o">&lt;</span><span class="n">Hello</span><span class="o">::</span><span class="n">Msg</span><span class="o">&gt;</span> <span class="nf">reader</span><span class="p">(</span><span class="n">subscriber</span><span class="p">,</span> <span class="n">topic</span><span class="p">);</span></pre><p>Read the <code>SampleInfo</code> before using the payload. An instance state change can arrive without valid data. Keep a returned loan alive while you use its samples.</p><p>The complete send-and-receive program matches a reliable writer and reader before it writes one sample. The snippets below start after that write. The unread and read filters let the program first inspect the record and then take the same record.</p></section><section id="dds_howto_read_take"><h2><a href="#dds_howto_read_take">Read a sample and then remove it</a></h2><p>Select unread samples and call <code>read()</code>. The reader marks the returned samples as read and keeps them in its history. In this example the helper polls for a valid payload for up to two seconds.</p><pre class="m-code"><span class="nn">std</span><span class="o">::</span><span class="nc">string</span> <span class="nf">read_message</span><span class="p">(</span><span class="nn">dds::sub</span><span class="o">::</span><span class="nc">DataReader</span><span class="o">&lt;</span><span class="n">Hello</span><span class="o">::</span><span class="n">Msg</span><span class="o">&gt;&amp;</span> <span class="n">reader</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">const</span> <span class="nn">dds::sub::status</span><span class="o">::</span><span class="nc">DataState</span> <span class="nf">unread</span><span class="p">(</span><span class="nn">dds::sub::status</span><span class="o">::</span><span class="nc">SampleState</span><span class="o">::</span><span class="nf">not_read</span><span class="p">());</span>
+    <span class="k">const</span> <span class="k">auto</span> <span class="n">deadline</span> <span class="o">=</span> <span class="nn">std::chrono</span><span class="o">::</span><span class="nc">steady_clock</span><span class="o">::</span><span class="nf">now</span><span class="p">()</span> <span class="o">+</span> <span class="nn">std::chrono</span><span class="o">::</span><span class="nf">seconds</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+    <span class="k">while</span> <span class="p">(</span><span class="nn">std::chrono</span><span class="o">::</span><span class="nc">steady_clock</span><span class="o">::</span><span class="nf">now</span><span class="p">()</span> <span class="o">&lt;</span> <span class="n">deadline</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="p">{</span>
+            <span class="k">const</span> <span class="k">auto</span> <span class="n">samples</span> <span class="o">=</span> <span class="n">reader</span><span class="p">.</span><span class="nf">select</span><span class="p">().</span><span class="nf">state</span><span class="p">(</span><span class="n">unread</span><span class="p">).</span><span class="nf">read</span><span class="p">();</span>
+            <span class="k">for</span> <span class="p">(</span><span class="k">const</span> <span class="k">auto</span><span class="o">&amp;</span> <span class="n">sample</span> <span class="o">:</span> <span class="n">samples</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="k">if</span> <span class="p">(</span><span class="n">sample</span><span class="p">.</span><span class="nf">info</span><span class="p">().</span><span class="nf">valid</span><span class="p">())</span>
+                    <span class="k">return</span> <span class="nn">std</span><span class="o">::</span><span class="nf">string</span><span class="p">(</span><span class="n">sample</span><span class="p">.</span><span class="nf">data</span><span class="p">().</span><span class="n">message</span><span class="p">);</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+
+        <span class="nn">std::this_thread</span><span class="o">::</span><span class="nf">sleep_for</span><span class="p">(</span><span class="nn">std::chrono</span><span class="o">::</span><span class="nf">milliseconds</span><span class="p">(</span><span class="mi">20</span><span class="p">));</span>
+    <span class="p">}</span>
+
+    <span class="k">throw</span> <span class="nn">std</span><span class="o">::</span><span class="nf">runtime_error</span><span class="p">(</span><span class="s">"No valid sample was read within two seconds"</span><span class="p">);</span>
+<span class="p">}</span></pre><p>Check <code>SampleInfo::valid()</code> before accessing a payload, then copy the message while the loan is alive. After the read loan goes out of scope, select read samples and use <code>take()</code> to remove them. Each operation can return a batch. This example sends only one sample and checks that both calls return its payload.</p><pre class="m-code"><span class="nn">std</span><span class="o">::</span><span class="nc">string</span> <span class="nf">take_read_message</span><span class="p">(</span><span class="nn">dds::sub</span><span class="o">::</span><span class="nc">DataReader</span><span class="o">&lt;</span><span class="n">Hello</span><span class="o">::</span><span class="n">Msg</span><span class="o">&gt;&amp;</span> <span class="n">reader</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">const</span> <span class="nn">dds::sub::status</span><span class="o">::</span><span class="nc">DataState</span> <span class="nf">already_read</span><span class="p">(</span><span class="nn">dds::sub::status</span><span class="o">::</span><span class="nc">SampleState</span><span class="o">::</span><span class="nf">read</span><span class="p">());</span>
+    <span class="k">const</span> <span class="k">auto</span> <span class="n">samples</span> <span class="o">=</span> <span class="n">reader</span><span class="p">.</span><span class="nf">select</span><span class="p">().</span><span class="nf">state</span><span class="p">(</span><span class="n">already_read</span><span class="p">).</span><span class="nf">take</span><span class="p">();</span>
+    <span class="k">for</span> <span class="p">(</span><span class="k">const</span> <span class="k">auto</span><span class="o">&amp;</span> <span class="n">sample</span> <span class="o">:</span> <span class="n">samples</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">sample</span><span class="p">.</span><span class="nf">info</span><span class="p">().</span><span class="nf">valid</span><span class="p">())</span>
+            <span class="k">return</span> <span class="nn">std</span><span class="o">::</span><span class="nf">string</span><span class="p">(</span><span class="n">sample</span><span class="p">.</span><span class="nf">data</span><span class="p">().</span><span class="n">message</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="k">throw</span> <span class="nn">std</span><span class="o">::</span><span class="nf">runtime_error</span><span class="p">(</span><span class="s">"No previously read sample with a valid payload was taken"</span><span class="p">);</span>
+<span class="p">}</span></pre></section><section id="dds_tutorial_reader_metadata"><h2><a href="#dds_tutorial_reader_metadata">Inspect source timestamps and payload validity</a></h2><p>Select unread samples and inspect <code>SampleInfo</code>. Check <code>valid()</code> before accessing <code>data()</code>. The example checks the received source timestamp against the timestamp supplied to the writer.</p><pre class="m-code"><span class="n">howto</span><span class="o">::</span><span class="nf">wait_until</span><span class="p">([</span><span class="o">&amp;</span><span class="n">reader</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">sent_at</span><span class="p">]()</span> <span class="o">-&gt;</span> <span class="k">bool</span> <span class="p">{</span>
+    <span class="k">const</span> <span class="k">auto</span> <span class="n">samples</span> <span class="o">=</span> <span class="n">reader</span><span class="p">.</span><span class="nf">select</span><span class="p">().</span><span class="nf">state</span><span class="p">(</span><span class="n">DataState</span><span class="o">::</span><span class="nf">new_data</span><span class="p">()).</span><span class="nf">read</span><span class="p">();</span>
+    <span class="k">for</span> <span class="p">(</span><span class="k">const</span> <span class="k">auto</span><span class="o">&amp;</span> <span class="n">sample</span> <span class="o">:</span> <span class="n">samples</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="k">not</span> <span class="n">sample</span><span class="p">.</span><span class="nf">info</span><span class="p">().</span><span class="nf">valid</span><span class="p">())</span>
+            <span class="k">continue</span><span class="p">;</span>
+
+        <span class="k">const</span> <span class="k">auto</span> <span class="n">timestamp</span> <span class="o">=</span> <span class="n">sample</span><span class="p">.</span><span class="nf">info</span><span class="p">().</span><span class="nf">timestamp</span><span class="p">();</span>
+        <span class="nf">require</span><span class="p">(</span><span class="n">timestamp</span><span class="p">.</span><span class="nf">sec</span><span class="p">()</span> <span class="o">==</span> <span class="n">sent_at</span><span class="p">.</span><span class="nf">sec</span><span class="p">()</span> <span class="k">and</span> <span class="n">timestamp</span><span class="p">.</span><span class="nf">nanosec</span><span class="p">()</span> <span class="o">==</span> <span class="n">sent_at</span><span class="p">.</span><span class="nf">nanosec</span><span class="p">(),</span> <span class="s">"Timestamp differs"</span><span class="p">);</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">sample</span><span class="p">.</span><span class="nf">data</span><span class="p">().</span><span class="n">userId</span> <span class="o">==</span> <span class="mi">7</span><span class="p">)</span>
+            <span class="k">return</span> <span class="k">true</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="k">false</span><span class="p">;</span>
+<span class="p">},</span> <span class="s">"Timestamped sample did not arrive"</span><span class="p">);</span></pre><p>Up to this point the sample is used inside the loan's scope. To keep data for later, copy any borrowed fields before the loan ends. This example switches from <code>Hello::Msg</code> to <code>Tutorial::Reading</code> to show a string, a fixed array, and a sequence together.</p></section><section id="dds_tutorial_reader_copy_generated_fields"><h2><a href="#dds_tutorial_reader_copy_generated_fields">Keep generated fields after returning a loan</a></h2><pre class="m-code"><span class="kn">module</span> <span class="nn">Tutorial</span>
+<span class="p">{</span>
+    <span class="k">struct</span> <span class="nc">Reading</span>
+    <span class="p">{</span>
+        <span class="k">long</span> <span class="n">id</span><span class="p">;</span>
+        <span class="kt">string</span> <span class="n">label</span><span class="p">;</span>
+        <span class="k">long</span> <span class="n">bounds</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span>
+        <span class="kt">sequence</span><span class="p">&lt;</span><span class="k">long</span><span class="p">&gt;</span> <span class="n">values</span><span class="p">;</span>
+    <span class="p">};</span>
+<span class="p">};</span></pre><p>In the generated <code>Tutorial::Reading</code> struct, the fixed array is stored inline. Copying the struct copies the array elements and shares the string and sequence pointers.</p><p>Copy the string and sequence contents into application-owned containers while the loan is alive. The example checks the owned values after the loan ends.</p><figure class="m-figure"><svg aria-label="The generated Tutorial::Reading copy shares the string and sequence pointers and copies its inline array by value. Application-owned containers can keep the values after the loan is returned." class="poxy-injected-svg" data-dds-diagram="true" height="306" id="poxy-injected-svg-0" role="img" version="1.1" viewbox="0 0 1140 306" width="1140" xmlns="http://www.w3.org/2000/svg"><title id="poxy-injected-svg-0-idl-field-copy-en-title">Ownership of fields copied from a loaned IDL value</title><desc>The generated Tutorial::Reading copy shares the string and sequence pointers and copies its inline array by value. Application-owned containers can keep the values after the loan is returned.</desc><defs><marker id="poxy-injected-svg-0-idl-field-copy-en-arrow" markerheight="10" markerunits="userSpaceOnUse" markerwidth="9" orient="auto" refx="9" refy="6" viewbox="0 0 10 12"><path d="M 1,1 L 9,6 L 1,11" fill="none" stroke="#20354B" stroke-width="1.2"></path></marker><marker id="poxy-injected-svg-0-idl-field-copy-en-blue" markerheight="9" markerunits="userSpaceOnUse" markerwidth="10" orient="auto" refx="10" refy="5" viewbox="0 0 11 10"><path d="M 0,0 L 11,5 L 0,10 Z" fill="#356B96"></path></marker></defs><rect fill="#FFFFFF" height="306" width="1140"></rect><g fill="#20354B" font-family="Arial, Malgun Gothic, sans-serif"><text font-size="16" font-weight="bold" text-anchor="middle" x="158" y="36">Loaned Tutorial::Reading</text><text font-size="16" font-weight="bold" text-anchor="middle" x="562" y="36">Copy the struct</text><text font-size="16" font-weight="bold" text-anchor="middle" x="969" y="36">Application-owned copies</text><path d="M 285 95 H 456" fill="none" marker-end="url(#poxy-injected-svg-0-idl-field-copy-en-arrow)" stroke="#20354B" stroke-dasharray="5 4" stroke-width="1.15"></path><path d="M 670 95 H 826" fill="none" marker-end="url(#poxy-injected-svg-0-idl-field-copy-en-blue)" stroke="#356B96" stroke-width="1.7"></path><rect fill="#FFFFFF" height="46" stroke="#20354B" stroke-width="1.15" width="253" x="32" y="73"></rect><rect fill="#FFFFFF" height="46" stroke="#20354B" stroke-width="1.15" width="214" x="456" y="73"></rect><rect fill="#EFF5FA" height="46" stroke="#20354B" stroke-width="1.15" width="283" x="826" y="73"></rect><text font-family="Consolas, Menlo, monospace" font-size="16" text-anchor="middle" x="158" y="102">label</text><text font-family="Consolas, Menlo, monospace" font-size="16" text-anchor="middle" x="562" y="102">label</text><text font-family="Consolas, Menlo, monospace" font-size="15" text-anchor="middle" x="969" y="102">std::string</text><text font-size="14" text-anchor="middle" x="371" y="88">Same pointer</text><text font-size="14" text-anchor="middle" x="748" y="88">Copy values</text><path d="M 285 164 H 456" fill="none" marker-end="url(#poxy-injected-svg-0-idl-field-copy-en-arrow)" stroke="#20354B" stroke-width="1.15"></path><path d="M 670 164 H 826" fill="none" marker-end="url(#poxy-injected-svg-0-idl-field-copy-en-blue)" stroke="#356B96" stroke-width="1.7"></path><rect fill="#FFFFFF" height="46" stroke="#20354B" stroke-width="1.15" width="253" x="32" y="142"></rect><rect fill="#FFFFFF" height="46" stroke="#20354B" stroke-width="1.15" width="214" x="456" y="142"></rect><rect fill="#EFF5FA" height="46" stroke="#20354B" stroke-width="1.15" width="283" x="826" y="142"></rect><text font-family="Consolas, Menlo, monospace" font-size="16" text-anchor="middle" x="158" y="171">bounds[2]</text><text font-family="Consolas, Menlo, monospace" font-size="16" text-anchor="middle" x="562" y="171">bounds[2]</text><text font-family="Consolas, Menlo, monospace" font-size="15" text-anchor="middle" x="969" y="171">std::array&lt;dds_Long, 2&gt;</text><text font-size="14" text-anchor="middle" x="371" y="157">Array values copied</text><text font-size="14" text-anchor="middle" x="748" y="157">Copy values</text><path d="M 285 233 H 456" fill="none" marker-end="url(#poxy-injected-svg-0-idl-field-copy-en-arrow)" stroke="#20354B" stroke-dasharray="5 4" stroke-width="1.15"></path><path d="M 670 233 H 826" fill="none" marker-end="url(#poxy-injected-svg-0-idl-field-copy-en-blue)" stroke="#356B96" stroke-width="1.7"></path><rect fill="#FFFFFF" height="46" stroke="#20354B" stroke-width="1.15" width="253" x="32" y="211"></rect><rect fill="#FFFFFF" height="46" stroke="#20354B" stroke-width="1.15" width="214" x="456" y="211"></rect><rect fill="#EFF5FA" height="46" stroke="#20354B" stroke-width="1.15" width="283" x="826" y="211"></rect><text font-family="Consolas, Menlo, monospace" font-size="16" text-anchor="middle" x="158" y="240">values</text><text font-family="Consolas, Menlo, monospace" font-size="16" text-anchor="middle" x="562" y="240">values</text><text font-family="Consolas, Menlo, monospace" font-size="15" text-anchor="middle" x="969" y="240">std::vector&lt;dds_Long&gt;</text><text font-size="14" text-anchor="middle" x="371" y="226">Same pointer</text><text font-size="14" text-anchor="middle" x="748" y="226">Copy values</text><text font-size="15" text-anchor="middle" x="570" y="287">While the loan is alive, copy any fields the application needs to keep.</text></g></svg><figcaption>Ownership of fields copied from a loaned IDL value</figcaption></figure><pre class="m-code"><span class="nn">std</span><span class="o">::</span><span class="nc">string</span> <span class="n">owned_label</span><span class="p">;</span>
+<span class="nn">std</span><span class="o">::</span><span class="nc">array</span><span class="o">&lt;</span><span class="n">dds_Long</span><span class="p">,</span> <span class="mi">2</span><span class="o">&gt;</span> <span class="n">owned_bounds</span><span class="p">{};</span>
+<span class="nn">std</span><span class="o">::</span><span class="nc">vector</span><span class="o">&lt;</span><span class="n">dds_Long</span><span class="o">&gt;</span> <span class="n">owned_values</span><span class="p">;</span>
+<span class="n">howto</span><span class="o">::</span><span class="nf">wait_until</span><span class="p">([</span><span class="o">&amp;</span><span class="p">]()</span> <span class="o">-&gt;</span> <span class="k">bool</span> <span class="p">{</span>
+    <span class="k">const</span> <span class="k">auto</span> <span class="n">samples</span> <span class="o">=</span> <span class="n">reader</span><span class="p">.</span><span class="nf">take</span><span class="p">();</span>
+    <span class="k">for</span> <span class="p">(</span><span class="k">const</span> <span class="k">auto</span><span class="o">&amp;</span> <span class="n">sample</span> <span class="o">:</span> <span class="n">samples</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="k">not</span> <span class="n">sample</span><span class="p">.</span><span class="nf">info</span><span class="p">().</span><span class="nf">valid</span><span class="p">()</span> <span class="k">or</span> <span class="n">sample</span><span class="p">.</span><span class="nf">data</span><span class="p">().</span><span class="n">id</span> <span class="o">!=</span> <span class="mi">7</span><span class="p">)</span>
+            <span class="k">continue</span><span class="p">;</span>
+
+        <span class="k">const</span> <span class="k">auto</span><span class="o">&amp;</span> <span class="n">received</span> <span class="o">=</span> <span class="n">sample</span><span class="p">.</span><span class="nf">data</span><span class="p">();</span>
+        <span class="k">const</span> <span class="n">Tutorial</span><span class="o">::</span><span class="n">Reading</span> <span class="n">shallow_copy</span> <span class="o">=</span> <span class="n">received</span><span class="p">;</span>
+        <span class="n">howto</span><span class="o">::</span><span class="nf">require</span><span class="p">(</span><span class="n">shallow_copy</span><span class="p">.</span><span class="n">label</span> <span class="o">==</span> <span class="n">received</span><span class="p">.</span><span class="n">label</span> <span class="k">and</span> <span class="n">shallow_copy</span><span class="p">.</span><span class="n">values</span> <span class="o">==</span> <span class="n">received</span><span class="p">.</span><span class="n">values</span><span class="p">,</span>
+            <span class="s">"Expected the generated copy to share the string and sequence pointers"</span><span class="p">);</span>
+        <span class="n">owned_label</span> <span class="o">=</span> <span class="n">shallow_copy</span><span class="p">.</span><span class="n">label</span><span class="p">;</span>
+        <span class="n">owned_bounds</span> <span class="o">=</span> <span class="p">{{</span> <span class="n">shallow_copy</span><span class="p">.</span><span class="n">bounds</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">shallow_copy</span><span class="p">.</span><span class="n">bounds</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="p">}};</span>
+        <span class="k">for</span> <span class="p">(</span><span class="nc"><a class="m-doc poxy-injected poxy-external poxy-cppreference" href="https://en.cppreference.com/w/cpp/types/integer" target="_blank">uint32_t</a></span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nf">dds_LongSeq_length</span><span class="p">(</span><span class="n">shallow_copy</span><span class="p">.</span><span class="n">values</span><span class="p">);</span> <span class="o">++i</span><span class="p">)</span>
+            <span class="n">owned_values</span><span class="p">.</span><span class="nf">push_back</span><span class="p">(</span><span class="nf">dds_LongSeq_get</span><span class="p">(</span><span class="n">shallow_copy</span><span class="p">.</span><span class="n">values</span><span class="p">,</span> <span class="n">i</span><span class="p">));</span>
+        <span class="k">return</span> <span class="k">true</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="k">false</span><span class="p">;</span>
+<span class="p">},</span> <span class="s">"No generated Reading arrived"</span><span class="p">);</span>
+
+<span class="n">howto</span><span class="o">::</span><span class="nf">require</span><span class="p">(</span><span class="n">owned_label</span> <span class="o">==</span> <span class="s">"outside temperature"</span><span class="p">,</span> <span class="s">"The copied string differs"</span><span class="p">);</span>
+<span class="n">howto</span><span class="o">::</span><span class="nf">require</span><span class="p">(</span><span class="n">owned_bounds</span> <span class="o">==</span> <span class="nn">std</span><span class="o">::</span><span class="nc">array</span><span class="o">&lt;</span><span class="n">dds_Long</span><span class="p">,</span> <span class="mi">2</span><span class="o">&gt;</span><span class="p">{{</span> <span class="mi">-20</span><span class="p">,</span> <span class="mi">50</span> <span class="p">}},</span> <span class="s">"The copied array differs"</span><span class="p">);</span>
+<span class="n">howto</span><span class="o">::</span><span class="nf">require</span><span class="p">(</span><span class="n">owned_values</span> <span class="o">==</span> <span class="nn">std</span><span class="o">::</span><span class="nc">vector</span><span class="o">&lt;</span><span class="n">dds_Long</span><span class="o">&gt;</span><span class="p">{</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">34</span> <span class="p">},</span> <span class="s">"The copied sequence differs"</span><span class="p">);</span></pre></section><section id="dds_tutorial_reader_instance"><h2><a href="#dds_tutorial_reader_instance">Select one sample for a key</a></h2><p>Use <code>lookup_instance()</code> on the reader to get its handle for the key. Pass that handle to the selector, then set <code>max_samples(1)</code> to limit the read to one record. The loan goes out of scope while the sample remains in the reader's history.</p><pre class="m-code"><span class="k">const</span> <span class="k">auto</span> <span class="n">reader_handle</span> <span class="o">=</span> <span class="n">reader</span><span class="p">.</span><span class="nf">lookup_instance</span><span class="p">(</span><span class="n">message</span><span class="p">);</span>
+<span class="nf">require</span><span class="p">(</span><span class="k">not</span> <span class="n">reader_handle</span><span class="p">.</span><span class="nf">is_nil</span><span class="p">(),</span> <span class="s">"Reader has no handle for this key"</span><span class="p">);</span>
+<span class="p">{</span>
+    <span class="k">const</span> <span class="k">auto</span> <span class="n">selected</span> <span class="o">=</span> <span class="n">reader</span><span class="p">.</span><span class="nf">select</span><span class="p">().</span><span class="nf">instance</span><span class="p">(</span><span class="n">reader_handle</span><span class="p">).</span><span class="nf">max_samples</span><span class="p">(</span><span class="mi">1</span><span class="p">).</span><span class="nf">read</span><span class="p">();</span>
+    <span class="nf">require</span><span class="p">(</span><span class="n">selected</span><span class="p">.</span><span class="nf">length</span><span class="p">()</span> <span class="o">==</span> <span class="mi">1</span><span class="p">,</span> <span class="s">"Expected one record for the selected instance"</span><span class="p">);</span>
+    <span class="k">const</span> <span class="k">auto</span><span class="o">&amp;</span> <span class="n">sample</span> <span class="o">=</span> <span class="o">*</span><span class="n">selected</span><span class="p">.</span><span class="nf">begin</span><span class="p">();</span>
+    <span class="nf">require</span><span class="p">(</span><span class="n">sample</span><span class="p">.</span><span class="nf">info</span><span class="p">().</span><span class="nf">valid</span><span class="p">()</span> <span class="k">and</span> <span class="n">sample</span><span class="p">.</span><span class="nf">data</span><span class="p">().</span><span class="n">userId</span> <span class="o">==</span> <span class="n">message</span><span class="p">.</span><span class="n">userId</span><span class="p">,</span> <span class="s">"Selected a different instance"</span><span class="p">);</span>
+<span class="p">}</span></pre></section><section id="dds_tutorial_reader_state_masks"><h2><a href="#dds_tutorial_reader_state_masks">Take read and unread samples separately</a></h2><p>Combine <code>SampleState</code> and <code>InstanceState</code> to select records by both conditions. This example leaves <code>ViewState</code> unrestricted.</p><p>Read the sample for key 7 without removing it from the reader. Then send key 8. Take read records from alive instances first, then take unread records. The two calls return different keys.</p><figure class="m-figure"><svg aria-label="The Reader reads key 7 without removing it and then receives key 8. A read-state mask and an unread-state mask return different keys." class="poxy-injected-svg" data-dds-diagram="true" height="228" id="poxy-injected-svg-1" role="img" version="1.1" viewbox="0 0 1140 228" width="1140" xmlns="http://www.w3.org/2000/svg"><title id="poxy-injected-svg-1-sample-state-selection-en-title">Select read and unread records independently</title><desc>The Reader reads key 7 without removing it and then receives key 8. A read-state mask and an unread-state mask return different keys.</desc><defs><marker id="poxy-injected-svg-1-sample-state-selection-en-arrow" markerheight="10" markerunits="userSpaceOnUse" markerwidth="9" orient="auto" refx="9" refy="6" viewbox="0 0 10 12"><path d="M 1,1 L 9,6 L 1,11" fill="none" stroke="#20354B" stroke-width="1.2"></path></marker><marker id="poxy-injected-svg-1-sample-state-selection-en-blue" markerheight="9" markerunits="userSpaceOnUse" markerwidth="10" orient="auto" refx="10" refy="5" viewbox="0 0 11 10"><path d="M 0,0 L 11,5 L 0,10 Z" fill="#356B96"></path></marker><marker id="poxy-injected-svg-1-sample-state-selection-en-uml" markerheight="15" markerunits="userSpaceOnUse" markerwidth="15" orient="auto" refx="14" refy="7.5" viewbox="0 0 15 15"><path d="M 1,1 L 14,7.5 L 1,14 Z" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"></path></marker></defs><rect fill="#FFFFFF" height="228" width="1140"></rect><g fill="#20354B" font-family="Arial, Malgun Gothic, sans-serif"><rect fill="#EFF5FA" height="46" stroke="#20354B" stroke-width="1.15" width="220" x="25" y="30"></rect><text font-size="16" font-weight="bold" text-anchor="middle" x="135" y="58">Reader history</text><rect fill="#FFFFFF" height="46" stroke="#20354B" stroke-width="1.15" width="220" x="25" y="76"></rect><text font-family="Consolas, Menlo, monospace" font-size="15" text-anchor="middle" x="135" y="104">key 7</text><rect fill="#FFFFFF" height="46" stroke="#20354B" stroke-width="1.15" width="220" x="25" y="122"></rect><text font-family="Consolas, Menlo, monospace" font-size="15" text-anchor="middle" x="135" y="150">key 8</text><rect fill="#EFF5FA" height="46" stroke="#20354B" stroke-width="1.15" width="225" x="245" y="30"></rect><text font-size="16" font-weight="bold" text-anchor="middle" x="357.5" y="58">SampleState</text><rect fill="#FFFFFF" height="46" stroke="#20354B" stroke-width="1.15" width="225" x="245" y="76"></rect><text font-size="15" text-anchor="middle" x="357.5" y="104">Read</text><rect fill="#FFFFFF" height="46" stroke="#20354B" stroke-width="1.15" width="225" x="245" y="122"></rect><text font-size="15" text-anchor="middle" x="357.5" y="150">Unread</text><rect fill="#EFF5FA" height="46" stroke="#20354B" stroke-width="1.15" width="420" x="470" y="30"></rect><text font-size="16" font-weight="bold" text-anchor="middle" x="680" y="58">Selection</text><rect fill="#FFFFFF" height="46" stroke="#20354B" stroke-width="1.15" width="420" x="470" y="76"></rect><text font-family="Consolas, Menlo, monospace" font-size="15" text-anchor="middle" x="680" y="104">read() + alive()</text><rect fill="#FFFFFF" height="46" stroke="#20354B" stroke-width="1.15" width="420" x="470" y="122"></rect><text font-family="Consolas, Menlo, monospace" font-size="15" text-anchor="middle" x="680" y="150">not_read() + alive()</text><rect fill="#EFF5FA" height="46" stroke="#20354B" stroke-width="1.15" width="225" x="890" y="30"></rect><text font-size="16" font-weight="bold" text-anchor="middle" x="1002.5" y="58">Returned key</text><rect fill="#EFF5FA" height="46" stroke="#20354B" stroke-width="1.15" width="225" x="890" y="76"></rect><text font-family="Consolas, Menlo, monospace" font-size="15" text-anchor="middle" x="1002.5" y="104">7</text><rect fill="#EFF5FA" height="46" stroke="#20354B" stroke-width="1.15" width="225" x="890" y="122"></rect><text font-family="Consolas, Menlo, monospace" font-size="15" text-anchor="middle" x="1002.5" y="150">8</text><text font-size="15" text-anchor="middle" x="570" y="204">The example combines SampleState and InstanceState. ViewState::any() leaves the view unrestricted.</text></g></svg><figcaption>Select read and unread records independently</figcaption></figure><pre class="m-code"><span class="k">const</span> <span class="n">DataState</span> <span class="nf">unread_alive</span><span class="p">(</span><span class="n">SampleState</span><span class="o">::</span><span class="nf">not_read</span><span class="p">(),</span> <span class="n">ViewState</span><span class="o">::</span><span class="nf">any</span><span class="p">(),</span> <span class="n">InstanceState</span><span class="o">::</span><span class="nf">alive</span><span class="p">());</span>
+<span class="k">const</span> <span class="n">DataState</span> <span class="nf">read_alive</span><span class="p">(</span><span class="n">SampleState</span><span class="o">::</span><span class="nf">read</span><span class="p">(),</span> <span class="n">ViewState</span><span class="o">::</span><span class="nf">any</span><span class="p">(),</span> <span class="n">InstanceState</span><span class="o">::</span><span class="nf">alive</span><span class="p">());</span>
+
+<span class="n">writer</span><span class="p">.</span><span class="nf">write</span><span class="p">(</span><span class="n">sample</span><span class="p">);</span>
+<span class="n">howto</span><span class="o">::</span><span class="nf">wait_until</span><span class="p">([</span><span class="o">&amp;</span><span class="n">reader</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">unread_alive</span><span class="p">]()</span> <span class="o">-&gt;</span> <span class="k">bool</span> <span class="p">{</span>
+    <span class="k">const</span> <span class="k">auto</span> <span class="n">batch</span> <span class="o">=</span> <span class="n">reader</span><span class="p">.</span><span class="nf">select</span><span class="p">().</span><span class="nf">state</span><span class="p">(</span><span class="n">unread_alive</span><span class="p">).</span><span class="nf">read</span><span class="p">();</span>
+    <span class="k">return</span> <span class="n">batch</span><span class="p">.</span><span class="nf">length</span><span class="p">()</span> <span class="o">==</span> <span class="mi">1</span> <span class="k">and</span> <span class="n">batch</span><span class="p">.</span><span class="nf">begin</span><span class="p">()</span><span class="o">-&gt;</span><span class="nf">info</span><span class="p">().</span><span class="nf">valid</span><span class="p">()</span> <span class="k">and</span> <span class="n">batch</span><span class="p">.</span><span class="nf">begin</span><span class="p">()</span><span class="o">-&gt;</span><span class="nf">data</span><span class="p">().</span><span class="n">userId</span> <span class="o">==</span> <span class="mi">7</span><span class="p">;</span>
+<span class="p">},</span> <span class="s">"Key 7 did not arrive as unread data"</span><span class="p">);</span>
+
+<span class="n">sample</span><span class="p">.</span><span class="n">userId</span> <span class="o">=</span> <span class="mi">8</span><span class="p">;</span>
+<span class="n">writer</span><span class="p">.</span><span class="nf">write</span><span class="p">(</span><span class="n">sample</span><span class="p">);</span>
+
+<span class="p">{</span>
+    <span class="k">const</span> <span class="k">auto</span> <span class="n">read</span> <span class="o">=</span> <span class="n">reader</span><span class="p">.</span><span class="nf">select</span><span class="p">().</span><span class="nf">state</span><span class="p">(</span><span class="n">read_alive</span><span class="p">).</span><span class="nf">take</span><span class="p">();</span>
+    <span class="n">howto</span><span class="o">::</span><span class="nf">require</span><span class="p">(</span><span class="n">read</span><span class="p">.</span><span class="nf">length</span><span class="p">()</span> <span class="o">==</span> <span class="mi">1</span> <span class="k">and</span> <span class="n">read</span><span class="p">.</span><span class="nf">begin</span><span class="p">()</span><span class="o">-&gt;</span><span class="nf">info</span><span class="p">().</span><span class="nf">valid</span><span class="p">()</span> <span class="k">and</span> <span class="n">read</span><span class="p">.</span><span class="nf">begin</span><span class="p">()</span><span class="o">-&gt;</span><span class="nf">data</span><span class="p">().</span><span class="n">userId</span> <span class="o">==</span> <span class="mi">7</span><span class="p">,</span>
+        <span class="s">"Expected only the previously read key"</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="n">howto</span><span class="o">::</span><span class="nf">wait_until</span><span class="p">([</span><span class="o">&amp;</span><span class="n">reader</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">unread_alive</span><span class="p">]()</span> <span class="o">-&gt;</span> <span class="k">bool</span> <span class="p">{</span>
+    <span class="k">const</span> <span class="k">auto</span> <span class="n">batch</span> <span class="o">=</span> <span class="n">reader</span><span class="p">.</span><span class="nf">select</span><span class="p">().</span><span class="nf">state</span><span class="p">(</span><span class="n">unread_alive</span><span class="p">).</span><span class="nf">take</span><span class="p">();</span>
+    <span class="k">return</span> <span class="n">batch</span><span class="p">.</span><span class="nf">length</span><span class="p">()</span> <span class="o">==</span> <span class="mi">1</span> <span class="k">and</span> <span class="n">batch</span><span class="p">.</span><span class="nf">begin</span><span class="p">()</span><span class="o">-&gt;</span><span class="nf">info</span><span class="p">().</span><span class="nf">valid</span><span class="p">()</span> <span class="k">and</span> <span class="n">batch</span><span class="p">.</span><span class="nf">begin</span><span class="p">()</span><span class="o">-&gt;</span><span class="nf">data</span><span class="p">().</span><span class="n">userId</span> <span class="o">==</span> <span class="mi">8</span><span class="p">;</span>
+<span class="p">},</span> <span class="s">"Expected only the unread key"</span><span class="p">);</span></pre></section><section id="dds_tutorial_reader_dispose"><h2><a href="#dds_tutorial_reader_dispose">Detect a disposed instance</a></h2><p>Use the reader's instance handle to identify the key. A dispose notification in this example has <code>valid()</code> set to <code>false</code> and an instance state of <code>not_alive_disposed()</code>. Check <code>SampleInfo</code> and leave the payload untouched.</p><p>The full example sets a longer <code>ReaderDataLifecycle</code> purge delay before creating the reader so it can observe the notification.</p><pre class="m-code"><span class="n">howto</span><span class="o">::</span><span class="nf">wait_until</span><span class="p">([</span><span class="o">&amp;</span><span class="n">reader</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">reader_handle</span><span class="p">]()</span> <span class="o">-&gt;</span> <span class="k">bool</span> <span class="p">{</span>
+    <span class="k">const</span> <span class="k">auto</span> <span class="n">samples</span> <span class="o">=</span> <span class="n">reader</span><span class="p">.</span><span class="nf">take</span><span class="p">();</span>
+    <span class="k">for</span> <span class="p">(</span><span class="k">const</span> <span class="k">auto</span><span class="o">&amp;</span> <span class="n">sample</span> <span class="o">:</span> <span class="n">samples</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">const</span> <span class="k">auto</span><span class="o">&amp;</span> <span class="n">info</span> <span class="o">=</span> <span class="n">sample</span><span class="p">.</span><span class="nf">info</span><span class="p">();</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">info</span><span class="p">.</span><span class="nf">instance_handle</span><span class="p">()</span> <span class="o">==</span> <span class="n">reader_handle</span>
+            <span class="k">and</span> <span class="k">not</span> <span class="n">info</span><span class="p">.</span><span class="nf">valid</span><span class="p">()</span>
+            <span class="k">and</span> <span class="n">info</span><span class="p">.</span><span class="nf">state</span><span class="p">().</span><span class="nf">instance_state</span><span class="p">()</span> <span class="o">==</span> <span class="n">InstanceState</span><span class="o">::</span><span class="nf">not_alive_disposed</span><span class="p">())</span>
+            <span class="k">return</span> <span class="k">true</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="k">false</span><span class="p">;</span>
+<span class="p">},</span> <span class="s">"The reader did not observe the dispose notification"</span><span class="p">);</span></pre></section><section id="dds_tutorial_reader_ranks"><h2><a href="#dds_tutorial_reader_ranks">Inspect ranks across instance generations</a></h2><p>Read a sample without removing it, dispose the instance, then write again with the same key. This keeps valid samples from both generations in the reader history.</p><pre class="m-code"><span class="k">char</span> <span class="n">first</span><span class="p">[]</span> <span class="o">=</span> <span class="s">"before dispose"</span><span class="p">;</span>
+<span class="k">char</span> <span class="n">second</span><span class="p">[]</span> <span class="o">=</span> <span class="s">"after dispose"</span><span class="p">;</span>
+<span class="n">Hello</span><span class="o">::</span><span class="n">Msg</span> <span class="n">value</span><span class="p">{};</span>
+<span class="n">value</span><span class="p">.</span><span class="n">userId</span> <span class="o">=</span> <span class="mi">42</span><span class="p">;</span>
+<span class="n">value</span><span class="p">.</span><span class="n">message</span> <span class="o">=</span> <span class="n">first</span><span class="p">;</span>
+<span class="k">const</span> <span class="k">auto</span> <span class="n">handle</span> <span class="o">=</span> <span class="n">writer</span><span class="p">.</span><span class="nf">register_instance</span><span class="p">(</span><span class="n">value</span><span class="p">);</span>
+<span class="n">writer</span><span class="p">.</span><span class="nf">write</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">handle</span><span class="p">);</span>
+<span class="n">howto</span><span class="o">::</span><span class="nf">wait_until</span><span class="p">([</span><span class="o">&amp;</span><span class="n">reader</span><span class="p">]()</span> <span class="o">-&gt;</span> <span class="k">bool</span> <span class="p">{</span>
+    <span class="k">const</span> <span class="k">auto</span> <span class="n">samples</span> <span class="o">=</span> <span class="n">reader</span><span class="p">.</span><span class="nf">read</span><span class="p">();</span>
+    <span class="k">return</span> <span class="n">samples</span><span class="p">.</span><span class="nf">length</span><span class="p">()</span> <span class="o">==</span> <span class="mi">1</span> <span class="k">and</span> <span class="n">samples</span><span class="p">.</span><span class="nf">begin</span><span class="p">()</span><span class="o">-&gt;</span><span class="nf">info</span><span class="p">().</span><span class="nf">valid</span><span class="p">();</span>
+<span class="p">},</span> <span class="s">"The first generation did not arrive"</span><span class="p">);</span>
+
+<span class="n">writer</span><span class="p">.</span><span class="nf">dispose_instance</span><span class="p">(</span><span class="n">handle</span><span class="p">);</span>
+<span class="n">value</span><span class="p">.</span><span class="n">message</span> <span class="o">=</span> <span class="n">second</span><span class="p">;</span>
+<span class="n">writer</span><span class="p">.</span><span class="nf">write</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">handle</span><span class="p">);</span></pre><p>Print the sample, generation, and absolute generation ranks reported by <code>SampleInfo::rank()</code>. The comparison depends on the returned batch and the reader history.</p><pre class="m-code"><span class="n">howto</span><span class="o">::</span><span class="nf">wait_until</span><span class="p">([</span><span class="o">&amp;</span><span class="n">reader</span><span class="p">]()</span> <span class="o">-&gt;</span> <span class="k">bool</span> <span class="p">{</span>
+    <span class="k">const</span> <span class="k">auto</span> <span class="n">batch</span> <span class="o">=</span> <span class="n">reader</span><span class="p">.</span><span class="nf">read</span><span class="p">();</span>
+    <span class="k">unsigned</span> <span class="k">int</span> <span class="n">valid_count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">for</span> <span class="p">(</span><span class="k">const</span> <span class="k">auto</span><span class="o">&amp;</span> <span class="n">sample</span> <span class="o">:</span> <span class="n">batch</span><span class="p">)</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">sample</span><span class="p">.</span><span class="nf">info</span><span class="p">().</span><span class="nf">valid</span><span class="p">())</span>
+            <span class="o">++</span><span class="n">valid_count</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">valid_count</span> <span class="o">!=</span> <span class="mi">2</span><span class="p">)</span>
+        <span class="k">return</span> <span class="k">false</span><span class="p">;</span>
+
+    <span class="nn">std</span><span class="o">::</span><span class="nc">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"payload | sample | generation | absolute generation</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
+    <span class="k">for</span> <span class="p">(</span><span class="k">const</span> <span class="k">auto</span><span class="o">&amp;</span> <span class="n">sample</span> <span class="o">:</span> <span class="n">batch</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="k">not</span> <span class="n">sample</span><span class="p">.</span><span class="nf">info</span><span class="p">().</span><span class="nf">valid</span><span class="p">())</span>
+            <span class="k">continue</span><span class="p">;</span>
+
+        <span class="k">const</span> <span class="k">auto</span> <span class="n">rank</span> <span class="o">=</span> <span class="n">sample</span><span class="p">.</span><span class="nf">info</span><span class="p">().</span><span class="nf">rank</span><span class="p">();</span>
+        <span class="nn">std</span><span class="o">::</span><span class="nc">cout</span> <span class="o">&lt;&lt;</span> <span class="n">sample</span><span class="p">.</span><span class="nf">data</span><span class="p">().</span><span class="n">message</span> <span class="o">&lt;&lt;</span> <span class="s">" | "</span> <span class="o">&lt;&lt;</span> <span class="n">rank</span><span class="p">.</span><span class="nf">sample</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="s">" | "</span>
+            <span class="o">&lt;&lt;</span> <span class="n">rank</span><span class="p">.</span><span class="nf">generation</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="s">" | "</span> <span class="o">&lt;&lt;</span> <span class="n">rank</span><span class="p">.</span><span class="nf">absolute_generation</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="k">true</span><span class="p">;</span>
+<span class="p">},</span> <span class="s">"Expected two generations in the same read batch"</span><span class="p">);</span></pre><aside class="m-note m-default"><h4>See also</h4><p><a class="m-doc" href="group__dds__subscription.html#receiving_guide">Receive and select samples</a></p><p><a class="m-doc" href="group__dds__tutorial__writer.html#dds_tutorial_src_keyed_samples">Keyed sample operations</a></p></aside><p>To check the applied reader policy, retain the requested QoS before construction and read <code>reader.qos()</code> after creation. A later Subscriber default update applies to future readers.</p></section><section id="dds_tutorial_src_reliable_receive"><h2><a href="#dds_tutorial_src_reliable_receive">Reliable send and receive</a></h2><p>Configures reliable endpoints, waits for discovery, sends one sample, then reads and removes it.</p><p>Build the program with the command below. A successful run prints <code>Received: Hello from the how-to</code>.</p><pre class="m-code">cmake --build . --target example_cpp_programming_howto</pre><details class="dds-reference-details"><summary>Complete source</summary><pre class="m-code"><span class="cp">#include</span> <span class="cpf">&lt;chrono&gt;</span>
+<span class="cp">#include</span> <span class="cpf">&lt;ciso646&gt;</span>
+<span class="cp">#include</span> <span class="cpf">&lt;cstdlib&gt;</span>
+<span class="cp">#include</span> <span class="cpf">&lt;exception&gt;</span>
+<span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span>
+<span class="cp">#include</span> <span class="cpf">&lt;stdexcept&gt;</span>
+<span class="cp">#include</span> <span class="cpf">&lt;string&gt;</span>
+<span class="cp">#include</span> <span class="cpf">&lt;thread&gt;</span>
+
+<span class="cp">#include</span> <span class="cpf">&lt;gurumdds/dds.hpp&gt;</span>
+
+<span class="cp">#include</span> <span class="cpf">&lt;HelloWorldTypeSupport.hpp&gt;</span>
+
+<span class="k">namespace</span>
+<span class="p">{</span>
+<span class="c1">// [wait_for_match]</span>
+<span class="k">void</span> <span class="nf">wait_for_match</span><span class="p">(</span><span class="nn">dds::pub</span><span class="o">::</span><span class="nc">DataWriter</span><span class="o">&lt;</span><span class="n">Hello</span><span class="o">::</span><span class="n">Msg</span><span class="o">&gt;&amp;</span> <span class="n">writer</span><span class="p">,</span> <span class="nn">dds::sub</span><span class="o">::</span><span class="nc">DataReader</span><span class="o">&lt;</span><span class="n">Hello</span><span class="o">::</span><span class="n">Msg</span><span class="o">&gt;&amp;</span> <span class="n">reader</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">const</span> <span class="k">auto</span> <span class="n">deadline</span> <span class="o">=</span> <span class="nn">std::chrono</span><span class="o">::</span><span class="nc">steady_clock</span><span class="o">::</span><span class="nf">now</span><span class="p">()</span> <span class="o">+</span> <span class="nn">std::chrono</span><span class="o">::</span><span class="nf">seconds</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
+    <span class="k">while</span> <span class="p">(</span><span class="nn">std::chrono</span><span class="o">::</span><span class="nc">steady_clock</span><span class="o">::</span><span class="nf">now</span><span class="p">()</span> <span class="o">&lt;</span> <span class="n">deadline</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">const</span> <span class="k">auto</span> <span class="n">writer_match</span> <span class="o">=</span> <span class="n">writer</span><span class="p">.</span><span class="nf">publication_matched_status</span><span class="p">();</span>
+        <span class="k">const</span> <span class="k">auto</span> <span class="n">reader_match</span> <span class="o">=</span> <span class="n">reader</span><span class="p">.</span><span class="nf">subscription_matched_status</span><span class="p">();</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">writer_match</span><span class="p">.</span><span class="nf">current_count</span><span class="p">()</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">and</span> <span class="n">reader_match</span><span class="p">.</span><span class="nf">current_count</span><span class="p">()</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span>
+            <span class="k">return</span><span class="p">;</span>
+
+        <span class="nn">std::this_thread</span><span class="o">::</span><span class="nf">sleep_for</span><span class="p">(</span><span class="nn">std::chrono</span><span class="o">::</span><span class="nf">milliseconds</span><span class="p">(</span><span class="mi">20</span><span class="p">));</span>
+    <span class="p">}</span>
+
+    <span class="k">throw</span> <span class="nn">std</span><span class="o">::</span><span class="nf">runtime_error</span><span class="p">(</span><span class="s">"No writer and reader match within five seconds"</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="c1">// [wait_for_match]</span>
+
+<span class="c1">// [read_sample]</span>
+<span class="nn">std</span><span class="o">::</span><span class="nc">string</span> <span class="nf">read_message</span><span class="p">(</span><span class="nn">dds::sub</span><span class="o">::</span><span class="nc">DataReader</span><span class="o">&lt;</span><span class="n">Hello</span><span class="o">::</span><span class="n">Msg</span><span class="o">&gt;&amp;</span> <span class="n">reader</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">const</span> <span class="nn">dds::sub::status</span><span class="o">::</span><span class="nc">DataState</span> <span class="nf">unread</span><span class="p">(</span><span class="nn">dds::sub::status</span><span class="o">::</span><span class="nc">SampleState</span><span class="o">::</span><span class="nf">not_read</span><span class="p">());</span>
+    <span class="k">const</span> <span class="k">auto</span> <span class="n">deadline</span> <span class="o">=</span> <span class="nn">std::chrono</span><span class="o">::</span><span class="nc">steady_clock</span><span class="o">::</span><span class="nf">now</span><span class="p">()</span> <span class="o">+</span> <span class="nn">std::chrono</span><span class="o">::</span><span class="nf">seconds</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+    <span class="k">while</span> <span class="p">(</span><span class="nn">std::chrono</span><span class="o">::</span><span class="nc">steady_clock</span><span class="o">::</span><span class="nf">now</span><span class="p">()</span> <span class="o">&lt;</span> <span class="n">deadline</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="p">{</span>
+            <span class="k">const</span> <span class="k">auto</span> <span class="n">samples</span> <span class="o">=</span> <span class="n">reader</span><span class="p">.</span><span class="nf">select</span><span class="p">().</span><span class="nf">state</span><span class="p">(</span><span class="n">unread</span><span class="p">).</span><span class="nf">read</span><span class="p">();</span>
+            <span class="k">for</span> <span class="p">(</span><span class="k">const</span> <span class="k">auto</span><span class="o">&amp;</span> <span class="n">sample</span> <span class="o">:</span> <span class="n">samples</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="k">if</span> <span class="p">(</span><span class="n">sample</span><span class="p">.</span><span class="nf">info</span><span class="p">().</span><span class="nf">valid</span><span class="p">())</span>
+                    <span class="k">return</span> <span class="nn">std</span><span class="o">::</span><span class="nf">string</span><span class="p">(</span><span class="n">sample</span><span class="p">.</span><span class="nf">data</span><span class="p">().</span><span class="n">message</span><span class="p">);</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+
+        <span class="nn">std::this_thread</span><span class="o">::</span><span class="nf">sleep_for</span><span class="p">(</span><span class="nn">std::chrono</span><span class="o">::</span><span class="nf">milliseconds</span><span class="p">(</span><span class="mi">20</span><span class="p">));</span>
+    <span class="p">}</span>
+
+    <span class="k">throw</span> <span class="nn">std</span><span class="o">::</span><span class="nf">runtime_error</span><span class="p">(</span><span class="s">"No valid sample was read within two seconds"</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="c1">// [read_sample]</span>
+
+<span class="c1">// [take_read_sample]</span>
+<span class="nn">std</span><span class="o">::</span><span class="nc">string</span> <span class="nf">take_read_message</span><span class="p">(</span><span class="nn">dds::sub</span><span class="o">::</span><span class="nc">DataReader</span><span class="o">&lt;</span><span class="n">Hello</span><span class="o">::</span><span class="n">Msg</span><span class="o">&gt;&amp;</span> <span class="n">reader</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">const</span> <span class="nn">dds::sub::status</span><span class="o">::</span><span class="nc">DataState</span> <span class="nf">already_read</span><span class="p">(</span><span class="nn">dds::sub::status</span><span class="o">::</span><span class="nc">SampleState</span><span class="o">::</span><span class="nf">read</span><span class="p">());</span>
+    <span class="k">const</span> <span class="k">auto</span> <span class="n">samples</span> <span class="o">=</span> <span class="n">reader</span><span class="p">.</span><span class="nf">select</span><span class="p">().</span><span class="nf">state</span><span class="p">(</span><span class="n">already_read</span><span class="p">).</span><span class="nf">take</span><span class="p">();</span>
+    <span class="k">for</span> <span class="p">(</span><span class="k">const</span> <span class="k">auto</span><span class="o">&amp;</span> <span class="n">sample</span> <span class="o">:</span> <span class="n">samples</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">sample</span><span class="p">.</span><span class="nf">info</span><span class="p">().</span><span class="nf">valid</span><span class="p">())</span>
+            <span class="k">return</span> <span class="nn">std</span><span class="o">::</span><span class="nf">string</span><span class="p">(</span><span class="n">sample</span><span class="p">.</span><span class="nf">data</span><span class="p">().</span><span class="n">message</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="k">throw</span> <span class="nn">std</span><span class="o">::</span><span class="nf">runtime_error</span><span class="p">(</span><span class="s">"No previously read sample with a valid payload was taken"</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="c1">// [take_read_sample]</span>
+<span class="p">}</span>
+
+<span class="k">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="k">try</span>
+    <span class="p">{</span>
+        <span class="nn">dds::domain</span><span class="o">::</span><span class="nc">DomainParticipant</span> <span class="nf">participant</span><span class="p">(</span><span class="mi">91</span><span class="p">);</span>
+        <span class="nn">dds::topic</span><span class="o">::</span><span class="nc">Topic</span><span class="o">&lt;</span><span class="n">Hello</span><span class="o">::</span><span class="n">Msg</span><span class="o">&gt;</span> <span class="nf">topic</span><span class="p">(</span><span class="n">participant</span><span class="p">,</span> <span class="s">"GurumDDSProgrammingHowTo"</span><span class="p">);</span>
+        <span class="nn">dds::pub</span><span class="o">::</span><span class="nc">Publisher</span> <span class="nf">publisher</span><span class="p">(</span><span class="n">participant</span><span class="p">);</span>
+        <span class="nn">dds::sub</span><span class="o">::</span><span class="nc">Subscriber</span> <span class="nf">subscriber</span><span class="p">(</span><span class="n">participant</span><span class="p">);</span>
+
+        <span class="c1">// [reliable_endpoints]</span>
+        <span class="k">using</span> <span class="nn">dds::core::policy</span><span class="o">::</span><span class="nc">History</span><span class="p">;</span>
+        <span class="k">using</span> <span class="nn">dds::core::policy</span><span class="o">::</span><span class="nc">Reliability</span><span class="p">;</span>
+        <span class="k">const</span> <span class="k">auto</span> <span class="n">reliable</span> <span class="o">=</span> <span class="n">Reliability</span><span class="o">::</span><span class="nf">Reliable</span><span class="p">(</span><span class="nn">dds::core</span><span class="o">::</span><span class="nc">Duration</span><span class="o">::</span><span class="nf">from_millisecs</span><span class="p">(</span><span class="mi">200</span><span class="p">));</span>
+
+        <span class="k">auto</span> <span class="n">writer_qos</span> <span class="o">=</span> <span class="n">publisher</span><span class="p">.</span><span class="nf">default_writer_qos</span><span class="p">();</span>
+        <span class="n">writer_qos</span> <span class="o">&lt;&lt;</span> <span class="n">reliable</span> <span class="o">&lt;&lt;</span> <span class="n">History</span><span class="o">::</span><span class="nf">KeepLast</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span>
+        <span class="k">auto</span> <span class="n">reader_qos</span> <span class="o">=</span> <span class="n">subscriber</span><span class="p">.</span><span class="nf">default_datareader_qos</span><span class="p">();</span>
+        <span class="n">reader_qos</span> <span class="o">&lt;&lt;</span> <span class="n">reliable</span> <span class="o">&lt;&lt;</span> <span class="n">History</span><span class="o">::</span><span class="nf">KeepLast</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span>
+
+        <span class="nn">dds::pub</span><span class="o">::</span><span class="nc">DataWriter</span><span class="o">&lt;</span><span class="n">Hello</span><span class="o">::</span><span class="n">Msg</span><span class="o">&gt;</span> <span class="nf">writer</span><span class="p">(</span><span class="n">publisher</span><span class="p">,</span> <span class="n">topic</span><span class="p">,</span> <span class="n">writer_qos</span><span class="p">);</span>
+        <span class="nn">dds::sub</span><span class="o">::</span><span class="nc">DataReader</span><span class="o">&lt;</span><span class="n">Hello</span><span class="o">::</span><span class="n">Msg</span><span class="o">&gt;</span> <span class="nf">reader</span><span class="p">(</span><span class="n">subscriber</span><span class="p">,</span> <span class="n">topic</span><span class="p">,</span> <span class="n">reader_qos</span><span class="p">);</span>
+        <span class="c1">// [reliable_endpoints]</span>
+
+        <span class="c1">// [publish_after_match]</span>
+        <span class="nf">wait_for_match</span><span class="p">(</span><span class="n">writer</span><span class="p">,</span> <span class="n">reader</span><span class="p">);</span>
+
+        <span class="k">char</span> <span class="n">message</span><span class="p">[]</span> <span class="o">=</span> <span class="s">"Hello from the how-to"</span><span class="p">;</span>
+        <span class="n">Hello</span><span class="o">::</span><span class="n">Msg</span> <span class="n">sample</span><span class="p">{};</span>
+        <span class="n">sample</span><span class="p">.</span><span class="n">userId</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+        <span class="n">sample</span><span class="p">.</span><span class="n">message</span> <span class="o">=</span> <span class="n">message</span><span class="p">;</span>
+        <span class="n">writer</span><span class="p">.</span><span class="nf">write</span><span class="p">(</span><span class="n">sample</span><span class="p">);</span>
+        <span class="c1">// [publish_after_match]</span>
+
+        <span class="k">const</span> <span class="nn">std</span><span class="o">::</span><span class="nc">string</span> <span class="n">received</span> <span class="o">=</span> <span class="nf">read_message</span><span class="p">(</span><span class="n">reader</span><span class="p">);</span>
+        <span class="k">const</span> <span class="nn">std</span><span class="o">::</span><span class="nc">string</span> <span class="n">removed</span> <span class="o">=</span> <span class="nf">take_read_message</span><span class="p">(</span><span class="n">reader</span><span class="p">);</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">received</span> <span class="o">!=</span> <span class="n">message</span> <span class="k">or</span> <span class="n">removed</span> <span class="o">!=</span> <span class="n">message</span><span class="p">)</span>
+            <span class="k">throw</span> <span class="nn">std</span><span class="o">::</span><span class="nf">runtime_error</span><span class="p">(</span><span class="s">"The read and take did not return the sent message"</span><span class="p">);</span>
+
+        <span class="nn">std</span><span class="o">::</span><span class="nc">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Received: "</span> <span class="o">&lt;&lt;</span> <span class="n">received</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">catch</span> <span class="p">(</span><span class="k">const</span> <span class="nn">std</span><span class="o">::</span><span class="nc">exception</span><span class="o">&amp;</span> <span class="n">error</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="nn">std</span><span class="o">::</span><span class="nc">cerr</span> <span class="o">&lt;&lt;</span> <span class="n">error</span><span class="p">.</span><span class="nf">what</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span><span class="p">;</span>
+        <span class="k">return</span> <span class="n">EXIT_FAILURE</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="n">EXIT_SUCCESS</span><span class="p">;</span>
+<span class="p">}</span></pre></details></section><section id="dds_tutorial_src_idl"><h2><a href="#dds_tutorial_src_idl">Generated type and field ownership</a></h2><p>Exchanges a sample of the generated type and keeps copies of its fields after the loan ends.</p><p>Build the program with the command below. A successful run prints <code>Generated IDL and field ownership examples passed</code>.</p><pre class="m-code">cmake --build . --target example_cpp_howto_idl</pre><details class="dds-reference-details"><summary>Complete source</summary><pre class="m-code"><span class="cp">#include</span> <span class="cpf">&lt;array&gt;</span>
+<span class="cp">#include</span> <span class="cpf">&lt;memory&gt;</span>
+<span class="cp">#include</span> <span class="cpf">&lt;string&gt;</span>
+<span class="cp">#include</span> <span class="cpf">&lt;vector&gt;</span>
+
+<span class="cp">#include</span> <span class="cpf">"demo.hpp"</span>
+<span class="cp">#include</span> <span class="cpf">&lt;TutorialReadingTypeSupport.hpp&gt;</span>
+
+<span class="k">namespace</span>
+<span class="p">{</span>
+<span class="k">void</span> <span class="nf">send_and_copy_reading</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="k">using</span> <span class="nn">dds::core</span><span class="o">::</span><span class="nc">Duration</span><span class="p">;</span>
+    <span class="k">using</span> <span class="nn">dds::core::policy</span><span class="o">::</span><span class="nc">Reliability</span><span class="p">;</span>
+
+    <span class="c1">// [reading_endpoints]</span>
+    <span class="nn">dds::domain</span><span class="o">::</span><span class="nc">DomainParticipant</span> <span class="nf">participant</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>
+    <span class="nn">dds::topic</span><span class="o">::</span><span class="nc">Topic</span><span class="o">&lt;</span><span class="n">Tutorial</span><span class="o">::</span><span class="n">Reading</span><span class="o">&gt;</span> <span class="nf">topic</span><span class="p">(</span><span class="n">participant</span><span class="p">,</span> <span class="s">"HowToGeneratedType"</span><span class="p">);</span>
+    <span class="nn">dds::pub</span><span class="o">::</span><span class="nc">Publisher</span> <span class="nf">publisher</span><span class="p">(</span><span class="n">participant</span><span class="p">);</span>
+    <span class="nn">dds::sub</span><span class="o">::</span><span class="nc">Subscriber</span> <span class="nf">subscriber</span><span class="p">(</span><span class="n">participant</span><span class="p">);</span>
+    <span class="k">const</span> <span class="k">auto</span> <span class="n">reliable</span> <span class="o">=</span> <span class="n">Reliability</span><span class="o">::</span><span class="nf">Reliable</span><span class="p">(</span><span class="n">Duration</span><span class="o">::</span><span class="nf">from_millisecs</span><span class="p">(</span><span class="mi">200</span><span class="p">));</span>
+    <span class="k">auto</span> <span class="n">writer_qos</span> <span class="o">=</span> <span class="n">publisher</span><span class="p">.</span><span class="nf">default_writer_qos</span><span class="p">();</span>
+    <span class="n">writer_qos</span> <span class="o">&lt;&lt;</span> <span class="n">reliable</span><span class="p">;</span>
+    <span class="k">auto</span> <span class="n">reader_qos</span> <span class="o">=</span> <span class="n">subscriber</span><span class="p">.</span><span class="nf">default_datareader_qos</span><span class="p">();</span>
+    <span class="n">reader_qos</span> <span class="o">&lt;&lt;</span> <span class="n">reliable</span><span class="p">;</span>
+    <span class="nn">dds::pub</span><span class="o">::</span><span class="nc">DataWriter</span><span class="o">&lt;</span><span class="n">Tutorial</span><span class="o">::</span><span class="n">Reading</span><span class="o">&gt;</span> <span class="nf">writer</span><span class="p">(</span><span class="n">publisher</span><span class="p">,</span> <span class="n">topic</span><span class="p">,</span> <span class="n">writer_qos</span><span class="p">);</span>
+    <span class="nn">dds::sub</span><span class="o">::</span><span class="nc">DataReader</span><span class="o">&lt;</span><span class="n">Tutorial</span><span class="o">::</span><span class="n">Reading</span><span class="o">&gt;</span> <span class="nf">reader</span><span class="p">(</span><span class="n">subscriber</span><span class="p">,</span> <span class="n">topic</span><span class="p">,</span> <span class="n">reader_qos</span><span class="p">);</span>
+    <span class="n">howto</span><span class="o">::</span><span class="nf">wait_until</span><span class="p">([</span><span class="o">&amp;</span><span class="n">writer</span><span class="p">]()</span> <span class="o">-&gt;</span> <span class="k">bool</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">writer</span><span class="p">.</span><span class="nf">publication_matched_status</span><span class="p">().</span><span class="nf">current_count</span><span class="p">()</span> <span class="o">==</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="p">},</span> <span class="s">"The generated-type reader did not match"</span><span class="p">);</span>
+
+    <span class="nn">std</span><span class="o">::</span><span class="nc">unique_ptr</span><span class="o">&lt;</span><span class="n">dds_LongSeq</span><span class="p">,</span> <span class="k">decltype</span><span class="p">(</span><span class="o">&amp;</span><span class="n">dds_LongSeq_delete</span><span class="p">)</span><span class="o">&gt;</span> <span class="nf">sequence</span><span class="p">(</span><span class="nf">dds_LongSeq_create</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span> <span class="n">dds_LongSeq_delete</span><span class="p">);</span>
+    <span class="n">howto</span><span class="o">::</span><span class="nf">require</span><span class="p">(</span><span class="n">sequence</span> <span class="o">!=</span> <span class="nb">nullptr</span><span class="p">,</span> <span class="s">"Could not allocate the outgoing sequence"</span><span class="p">);</span>
+    <span class="n">howto</span><span class="o">::</span><span class="nf">require</span><span class="p">(</span><span class="nf">dds_LongSeq_add</span><span class="p">(</span><span class="n">sequence</span><span class="p">.</span><span class="nf">get</span><span class="p">(),</span> <span class="mi">12</span><span class="p">)</span> <span class="k">and</span> <span class="nf">dds_LongSeq_add</span><span class="p">(</span><span class="n">sequence</span><span class="p">.</span><span class="nf">get</span><span class="p">(),</span> <span class="mi">34</span><span class="p">),</span>
+        <span class="s">"Could not populate the outgoing sequence"</span><span class="p">);</span>
+    <span class="k">char</span> <span class="n">label</span><span class="p">[]</span> <span class="o">=</span> <span class="s">"outside temperature"</span><span class="p">;</span>
+    <span class="n">Tutorial</span><span class="o">::</span><span class="n">Reading</span> <span class="n">outgoing</span><span class="p">{};</span>
+    <span class="n">outgoing</span><span class="p">.</span><span class="n">id</span> <span class="o">=</span> <span class="mi">7</span><span class="p">;</span>
+    <span class="n">outgoing</span><span class="p">.</span><span class="n">label</span> <span class="o">=</span> <span class="n">label</span><span class="p">;</span>
+    <span class="n">outgoing</span><span class="p">.</span><span class="n">bounds</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">-20</span><span class="p">;</span>
+    <span class="n">outgoing</span><span class="p">.</span><span class="n">bounds</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">50</span><span class="p">;</span>
+    <span class="n">outgoing</span><span class="p">.</span><span class="n">values</span> <span class="o">=</span> <span class="n">sequence</span><span class="p">.</span><span class="nf">get</span><span class="p">();</span>
+    <span class="n">writer</span><span class="p">.</span><span class="nf">write</span><span class="p">(</span><span class="n">outgoing</span><span class="p">);</span>
+    <span class="c1">// [reading_endpoints]</span>
+
+    <span class="c1">// [copy_reading_fields]</span>
+    <span class="nn">std</span><span class="o">::</span><span class="nc">string</span> <span class="n">owned_label</span><span class="p">;</span>
+    <span class="nn">std</span><span class="o">::</span><span class="nc">array</span><span class="o">&lt;</span><span class="n">dds_Long</span><span class="p">,</span> <span class="mi">2</span><span class="o">&gt;</span> <span class="n">owned_bounds</span><span class="p">{};</span>
+    <span class="nn">std</span><span class="o">::</span><span class="nc">vector</span><span class="o">&lt;</span><span class="n">dds_Long</span><span class="o">&gt;</span> <span class="n">owned_values</span><span class="p">;</span>
+    <span class="n">howto</span><span class="o">::</span><span class="nf">wait_until</span><span class="p">([</span><span class="o">&amp;</span><span class="p">]()</span> <span class="o">-&gt;</span> <span class="k">bool</span> <span class="p">{</span>
+        <span class="k">const</span> <span class="k">auto</span> <span class="n">samples</span> <span class="o">=</span> <span class="n">reader</span><span class="p">.</span><span class="nf">take</span><span class="p">();</span>
+        <span class="k">for</span> <span class="p">(</span><span class="k">const</span> <span class="k">auto</span><span class="o">&amp;</span> <span class="n">sample</span> <span class="o">:</span> <span class="n">samples</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="k">not</span> <span class="n">sample</span><span class="p">.</span><span class="nf">info</span><span class="p">().</span><span class="nf">valid</span><span class="p">()</span> <span class="k">or</span> <span class="n">sample</span><span class="p">.</span><span class="nf">data</span><span class="p">().</span><span class="n">id</span> <span class="o">!=</span> <span class="mi">7</span><span class="p">)</span>
+                <span class="k">continue</span><span class="p">;</span>
+
+            <span class="k">const</span> <span class="k">auto</span><span class="o">&amp;</span> <span class="n">received</span> <span class="o">=</span> <span class="n">sample</span><span class="p">.</span><span class="nf">data</span><span class="p">();</span>
+            <span class="k">const</span> <span class="n">Tutorial</span><span class="o">::</span><span class="n">Reading</span> <span class="n">shallow_copy</span> <span class="o">=</span> <span class="n">received</span><span class="p">;</span>
+            <span class="n">howto</span><span class="o">::</span><span class="nf">require</span><span class="p">(</span><span class="n">shallow_copy</span><span class="p">.</span><span class="n">label</span> <span class="o">==</span> <span class="n">received</span><span class="p">.</span><span class="n">label</span> <span class="k">and</span> <span class="n">shallow_copy</span><span class="p">.</span><span class="n">values</span> <span class="o">==</span> <span class="n">received</span><span class="p">.</span><span class="n">values</span><span class="p">,</span>
+                <span class="s">"Expected the generated copy to share the string and sequence pointers"</span><span class="p">);</span>
+            <span class="n">owned_label</span> <span class="o">=</span> <span class="n">shallow_copy</span><span class="p">.</span><span class="n">label</span><span class="p">;</span>
+            <span class="n">owned_bounds</span> <span class="o">=</span> <span class="p">{{</span> <span class="n">shallow_copy</span><span class="p">.</span><span class="n">bounds</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">shallow_copy</span><span class="p">.</span><span class="n">bounds</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="p">}};</span>
+            <span class="k">for</span> <span class="p">(</span><span class="nc"><a class="m-doc poxy-injected poxy-external poxy-cppreference" href="https://en.cppreference.com/w/cpp/types/integer" target="_blank">uint32_t</a></span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nf">dds_LongSeq_length</span><span class="p">(</span><span class="n">shallow_copy</span><span class="p">.</span><span class="n">values</span><span class="p">);</span> <span class="o">++i</span><span class="p">)</span>
+                <span class="n">owned_values</span><span class="p">.</span><span class="nf">push_back</span><span class="p">(</span><span class="nf">dds_LongSeq_get</span><span class="p">(</span><span class="n">shallow_copy</span><span class="p">.</span><span class="n">values</span><span class="p">,</span> <span class="n">i</span><span class="p">));</span>
+            <span class="k">return</span> <span class="k">true</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="k">false</span><span class="p">;</span>
+    <span class="p">},</span> <span class="s">"No generated Reading arrived"</span><span class="p">);</span>
+
+    <span class="n">howto</span><span class="o">::</span><span class="nf">require</span><span class="p">(</span><span class="n">owned_label</span> <span class="o">==</span> <span class="s">"outside temperature"</span><span class="p">,</span> <span class="s">"The copied string differs"</span><span class="p">);</span>
+    <span class="n">howto</span><span class="o">::</span><span class="nf">require</span><span class="p">(</span><span class="n">owned_bounds</span> <span class="o">==</span> <span class="nn">std</span><span class="o">::</span><span class="nc">array</span><span class="o">&lt;</span><span class="n">dds_Long</span><span class="p">,</span> <span class="mi">2</span><span class="o">&gt;</span><span class="p">{{</span> <span class="mi">-20</span><span class="p">,</span> <span class="mi">50</span> <span class="p">}},</span> <span class="s">"The copied array differs"</span><span class="p">);</span>
+    <span class="n">howto</span><span class="o">::</span><span class="nf">require</span><span class="p">(</span><span class="n">owned_values</span> <span class="o">==</span> <span class="nn">std</span><span class="o">::</span><span class="nc">vector</span><span class="o">&lt;</span><span class="n">dds_Long</span><span class="o">&gt;</span><span class="p">{</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">34</span> <span class="p">},</span> <span class="s">"The copied sequence differs"</span><span class="p">);</span>
+    <span class="c1">// [copy_reading_fields]</span>
+<span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="k">return</span> <span class="n">howto</span><span class="o">::</span><span class="nf">run</span><span class="p">(</span><span class="n">send_and_copy_reading</span><span class="p">,</span> <span class="s">"Generated IDL and field ownership examples passed"</span><span class="p">);</span>
+<span class="p">}</span></pre></details></section>
+</div>
+</div>
+</div>
+</article></main>
+<div class="m-doc-search" id="search">
+<a href="#!" onclick="return hideSearch()"></a>
+<div class="m-container">
+<div class="m-row">
+<div class="m-col-m-8 m-push-m-2">
+<div class="m-doc-search-header m-text m-small">
+<div><span class="m-label m-default">Tab</span> / <span class="m-label m-default">T</span> to search, <span class="m-label m-default">Esc</span> to close</div>
+<div id="search-symbolcount">…</div>
+</div>
+<div class="m-doc-search-content">
+<form>
+<input autocomplete="off" autofocus="autofocus" disabled="disabled" id="search-input" name="q" placeholder="Loading …" spellcheck="false" type="search"/>
+</form>
+<noscript class="m-text m-danger m-text-center">Unlike everything else in the docs, the search functionality <em>requires</em> JavaScript.</noscript>
+<div class="m-text m-dim m-text-center" id="search-help">
+<p class="m-noindent">Search for symbols, directories, files, pages or
+            modules. You can omit any prefix from the symbol or file path; adding a
+            <code>:</code> or <code>/</code> suffix lists all members of given symbol or
+            directory.</p>
+<p class="m-noindent">Use <span class="m-label m-dim">↓</span>
+            / <span class="m-label m-dim">↑</span> to navigate through the list,
+            <span class="m-label m-dim">Enter</span> to go.
+            <span class="m-label m-dim">Tab</span> autocompletes common prefix, you can
+            copy a link to the result using <span class="m-label m-dim">⌘</span>
+<span class="m-label m-dim">L</span> while <span class="m-label m-dim">⌘</span>
+<span class="m-label m-dim">M</span> produces a Markdown link.</p>
+</div>
+<div class="m-text m-warning m-text-center" id="search-notfound">Sorry, nothing was found.</div>
+<ul id="search-results"></ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src="search-v2.js"></script><script>install_mcss_search_shim();</script>
+<script async="async" src="searchdata-v2.js"></script>
+<footer><nav>
+<div class="m-container">
+<div class="m-row">
+<div class="m-col-l-10 m-push-l-1">
+<a download="" href="GurumDDS_C++.tagfile.xml" target="_blank" type="text/xml">Doxygen tagfile</a>
+<br/><br/>
+Site generated using <a class="poxy-external" href="https://github.com/marzer/poxy/" target="_blank">Poxy</a>
+</div>
+</div>
+</div>
+</nav></footer>
+</body></html>

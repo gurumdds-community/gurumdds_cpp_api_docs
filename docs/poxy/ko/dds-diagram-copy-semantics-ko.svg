@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1140" height="367" viewBox="0 0 1140 367" role="img" aria-label="Entity handle 두 개는 같은 Entity를 가리킵니다. 복사한 QoS 정책은 독립된 값을 보관합니다. LoanedSamples 복사본은 같은 loan을 가리키며 마지막 소유자가 loan을 반환합니다." data-dds-diagram="true">
+  <title id="copy-semantics-ko-title">복사한 객체를 해제한 뒤 남는 것</title>
+  <desc>Entity handle 두 개는 같은 Entity를 가리킵니다. 복사한 QoS 정책은 독립된 값을 보관합니다. LoanedSamples 복사본은 같은 loan을 가리키며 마지막 소유자가 loan을 반환합니다.</desc>
+  <defs>
+    <marker id="copy-semantics-ko-arrow" viewBox="0 0 10 12" refX="9" refY="6" markerWidth="9" markerHeight="10" orient="auto" markerUnits="userSpaceOnUse"><path d="M 1,1 L 9,6 L 1,11" fill="none" stroke="#20354B" stroke-width="1.2"/></marker>
+    <marker id="copy-semantics-ko-blue" viewBox="0 0 11 10" refX="10" refY="5" markerWidth="10" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M 0,0 L 11,5 L 0,10 Z" fill="#356B96"/></marker>
+    <marker id="copy-semantics-ko-uml" viewBox="0 0 15 15" refX="14" refY="7.5" markerWidth="15" markerHeight="15" orient="auto" markerUnits="userSpaceOnUse"><path d="M 1,1 L 14,7.5 L 1,14 Z" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/></marker>
+  </defs>
+  <rect width="1140" height="367" fill="#FFFFFF"/>
+  <g fill="#20354B" font-family="Arial, Malgun Gothic, sans-serif">
+    <path d="M 406 68 H 448" fill="none" stroke="#20354B" stroke-width="1.15" marker-end="url(#copy-semantics-ko-arrow)"/>
+    <path d="M 709 68 H 751" fill="none" stroke="#20354B" stroke-width="1.15" marker-end="url(#copy-semantics-ko-arrow)"/>
+    <text x="23" y="74" text-anchor="start" font-size="16" font-weight="bold">Entity handle</text>
+    <rect x="183" y="39" width="223" height="58" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <text x="294.5" y="73" text-anchor="middle" font-size="16" font-weight="bold">handle A와 B</text>
+    <rect x="448" y="39" width="261" height="58" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <text x="578.5" y="73" text-anchor="middle" font-size="16" font-weight="bold">같은 Entity</text>
+    <rect x="751" y="39" width="365" height="58" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <text x="933.5" y="73" text-anchor="middle" font-size="16" font-weight="bold">B는 계속 같은 Entity를 가리킴</text>
+    <path d="M 406 156 H 448" fill="none" stroke="#20354B" stroke-width="1.15" marker-end="url(#copy-semantics-ko-arrow)"/>
+    <path d="M 709 156 H 751" fill="none" stroke="#20354B" stroke-width="1.15" marker-end="url(#copy-semantics-ko-arrow)"/>
+    <text x="23" y="162" text-anchor="start" font-size="16" font-weight="bold">QoS 정책</text>
+    <rect x="183" y="127" width="223" height="58" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <text x="294.5" y="161" text-anchor="middle" font-size="16" font-weight="bold">정책 복사</text>
+    <rect x="448" y="127" width="261" height="58" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <text x="578.5" y="161" text-anchor="middle" font-size="16" font-weight="bold">독립된 값</text>
+    <rect x="751" y="127" width="365" height="58" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <text x="933.5" y="161" text-anchor="middle" font-size="16" font-weight="bold">한쪽 수정은 다른 쪽에 영향이 없음</text>
+    <path d="M 406 244 H 448" fill="none" stroke="#20354B" stroke-width="1.15" marker-end="url(#copy-semantics-ko-arrow)"/>
+    <path d="M 709 244 H 751" fill="none" stroke="#356B96" stroke-width="1.7" marker-end="url(#copy-semantics-ko-blue)"/>
+    <text x="23" y="250" text-anchor="start" font-size="16" font-weight="bold">LoanedSamples</text>
+    <rect x="183" y="215" width="223" height="58" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <text x="294.5" y="249" text-anchor="middle" font-size="16" font-weight="bold">소유자 A와 B</text>
+    <rect x="448" y="215" width="261" height="58" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <text x="578.5" y="249" text-anchor="middle" font-size="16" font-weight="bold">같은 loan</text>
+    <rect x="751" y="215" width="365" height="58" fill="#EFF5FA" stroke="#20354B" stroke-width="1.15"/>
+    <text x="933.5" y="249" text-anchor="middle" font-size="16" font-weight="bold">마지막 소유자가 loan 반환</text>
+    <text x="570" y="340" text-anchor="middle" font-size="15">빌린 샘플 포인터는 loan을 유지하는 동안 사용합니다.</text>
+  </g>
+</svg>

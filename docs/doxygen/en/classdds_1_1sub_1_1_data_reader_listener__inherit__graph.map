@@ -1,0 +1,5 @@
+<map id="dds::sub::DataReaderListener&lt; T &gt;" name="dds::sub::DataReaderListener&lt; T &gt;">
+<area shape="rect" id="Node000001" target="_top" title="Receives data availability and status notifications from a typed reader." alt="" coords="5,5,221,32"/>
+<area shape="rect" id="Node000002" href="$classdds_1_1sub_1_1_no_op_data_reader_listener.html" target="_top" title="Provides default no&#45;op reader callbacks for selective overriding." alt="" coords="27,80,200,123"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="115,45,116,81,111,79,111,49"/>
+</map>

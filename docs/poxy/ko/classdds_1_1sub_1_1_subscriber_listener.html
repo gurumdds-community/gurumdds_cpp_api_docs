@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ko"><head>
+<meta charset="utf-8"/>
+<title>dds::sub::SubscriberListener 클래스 | GurumDDS C++ API Reference</title>
+<link href="gurum-networks-logo.png" rel="icon" type="image/png"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="#cb4b16" name="theme-color"/>
+<link href="poxy/poxy.css" referrerpolicy="no-referrer" rel="stylesheet"/>
+<link href="ReferenceBranding.css" referrerpolicy="no-referrer" rel="stylesheet"/>
+<script src="poxy/poxy.js"></script>
+<script>initialize_theme("light");</script>
+<meta content="GurumDDS C++" name="twitter:title"/>
+<meta content="GurumDDS C++" property="og:title"/>
+<meta content="GurumDDS C++" itemprop="name"/>
+<meta content="API Reference" name="description"/>
+<meta content="API Reference" name="twitter:description"/>
+<meta content="API Reference" property="og:description"/>
+<meta content="API Reference" itemprop="description"/>
+<meta content="telephone=no" name="format-detection"/>
+<meta content="Poxy v0.27.2" name="generator"/>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<script defer="True" src="ReferenceUi.js"></script><link href="../en/classdds_1_1sub_1_1_subscriber_listener.html" hreflang="en" rel="alternate"/><link href="../ko/classdds_1_1sub_1_1_subscriber_listener.html" hreflang="ko" rel="alternate"/><link href="../language.css" rel="stylesheet"/><script defer="defer" src="../language.js"></script></head>
+<body class="poxy-has-toc">
+<header><nav id="navigation">
+<div class="m-container">
+<div class="m-row doc-language-header">
+<a class="m-col-t-8 m-col-m-none m-left-m" href="index.html" id="m-navbar-brand"><img alt="" src="gurum-networks-logo.png"/>GurumDDS C++ <span class="m-thin">API Reference</span></a>
+<div class="m-col-t-4 m-hide-m m-text-right m-nopadr">
+<a class="m-doc-search-icon" href="#search" onclick="return showSearch()" title="검색"><svg style="height: 0.9rem;" viewbox="0 0 16 16">
+<path d="m6 0c-3.31 0-6 2.69-6 6 0 3.31 2.69 6 6 6 1.49 0 2.85-0.541 3.89-1.44-0.0164 0.338 0.147 0.759 0.5 1.15l3.22 3.79c0.552 0.614 1.45 0.665 2 0.115 0.55-0.55 0.499-1.45-0.115-2l-3.79-3.22c-0.392-0.353-0.812-0.515-1.15-0.5 0.895-1.05 1.44-2.41 1.44-3.89 0-3.31-2.69-6-6-6zm0 1.56a4.44 4.44 0 0 1 4.44 4.44 4.44 4.44 0 0 1-4.44 4.44 4.44 4.44 0 0 1-4.44-4.44 4.44 4.44 0 0 1 4.44-4.44z" id="m-doc-search-icon-path"></path>
+</svg></a>
+<a href="#navigation" id="m-navbar-show" title="탐색 메뉴 열기"></a>
+<a href="#" id="m-navbar-hide" title="탐색 메뉴 닫기"></a>
+</div>
+<div class="m-col-t-12 m-show-m m-col-m-none m-right-m" id="m-navbar-collapse">
+<div class="m-row">
+<ol class="m-col-t-6 m-col-m-none">
+<li><a href="modules.html">모듈</a></li>
+<li><a href="annotated.html">클래스</a></li>
+<li><a href="namespaces.html">네임스페이스</a></li>
+</ol>
+<ol class="m-col-t-6 m-col-m-none" start="4">
+<li><a href="examples.html">예제</a></li>
+<li><a class="poxy-icon theme" href="javascript:void(null);" id="poxy-theme-switch" onclick="toggle_theme(); return false;" role="button" title="밝은 테마와 어두운 테마 전환"><svg id="poxy-theme-switch-img" version="1.1" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><circle cx="185.6708" cy="183.8122" fill="currentColor" r="65.625"></circle><path d="M185.6708,87.5622a13.1256,13.1256,0,0,0,13.125-13.125V52.5622a13.125,13.125,0,1,0-26.25,0v21.875A13.1257,13.1257,0,0,0,185.6708,87.5622Z" fill="currentColor"></path><path d="M99.051,115.7519a13.1236,13.1236,0,1,0,18.56-18.56L102.1442,81.726a13.1236,13.1236,0,0,0-18.5595,18.56Z" fill="currentColor"></path><path d="M89.4208,183.8122a13.1257,13.1257,0,0,0-13.125-13.125H54.4208a13.125,13.125,0,0,0,0,26.25h21.875A13.1256,13.1256,0,0,0,89.4208,183.8122Z" fill="currentColor"></path><path d="M99.051,251.8725,83.5847,267.3431a13.1236,13.1236,0,1,0,18.56,18.56l15.4663-15.4706a13.1236,13.1236,0,1,0-18.5595-18.56Z" fill="currentColor"></path><path d="M185.6708,280.0622a13.1258,13.1258,0,0,0-13.125,13.125v21.875a13.125,13.125,0,0,0,26.25,0v-21.875A13.1257,13.1257,0,0,0,185.6708,280.0622Z" fill="currentColor"></path><path d="M272.2907,251.8725a13.1236,13.1236,0,1,0-18.56,18.56l15.4663,15.4706a13.1236,13.1236,0,1,0,18.56-18.56Z" fill="currentColor"></path><path d="M330.0458,183.8122a13.1257,13.1257,0,0,0-13.125-13.125h-21.875a13.125,13.125,0,0,0,0,26.25h21.875A13.1256,13.1256,0,0,0,330.0458,183.8122Z" fill="currentColor"></path><path d="M263.0109,119.5971a13.0824,13.0824,0,0,0,9.28-3.8452l15.4663-15.4663a13.1236,13.1236,0,1,0-18.56-18.56L253.7312,97.1923a13.125,13.125,0,0,0,9.28,22.4048Z" fill="currentColor"></path><path d="M456.9379,401.6714a63.97,63.97,0,0,1-14.9963,7.2055c-19.6448,6.5283-41.8787,2.9566-58.1439-9.8523a68.9311,68.9311,0,0,1-10.835-10.8339c-12.8088-16.2663-16.3806-38.5-9.8523-58.1471a63.8444,63.8444,0,0,1,7.2077-14.9931,8.8036,8.8036,0,0,0-10.1172-13.3034,87.5188,87.5188,0,1,0,110.0372,110.04A8.8,8.8,0,0,0,456.9379,401.6714Z" fill="currentColor"></path></svg></a></li>
+<li class="m-show-m"><a class="m-doc-search-icon" href="#search" onclick="return showSearch()" title="검색"><svg style="height: 0.9rem;" viewbox="0 0 16 16">
+<use href="#m-doc-search-icon-path"></use>
+</svg></a></li>
+</ol>
+</div>
+</div>
+<label class="doc-language"><select aria-label="문서 언어" data-current="1"><option lang="en" value="../en/classdds_1_1sub_1_1_subscriber_listener.html">English</option><option lang="en" selected="selected" value="../ko/classdds_1_1sub_1_1_subscriber_listener.html">Korean</option></select></label></div>
+</div>
+</nav></header>
+<main><article>
+<div class="m-container m-container-inflatable">
+<div class="m-row">
+<div class="m-col-l-10 m-push-l-1">
+<h1>
+<span class="m-breadcrumb"><a href="namespacedds.html">dds</a>::<wbr/></span><span class="m-breadcrumb"><a href="namespacedds_1_1sub.html">sub</a>::<wbr/></span>SubscriberListener <span class="m-thin">클래스</span>
+</h1><p class="dds-class-include"><code>#include &lt;gurumdds/cpp/sub/SubscriberListener.hpp&gt;</code></p>
+<p>Subscriber와 AnyDataReader의 상태 알림을 받습니다.</p>
+<nav class="m-block m-default poxy-toc" id="poxy-toc">
+<h3>목차</h3>
+<ul>
+<li>
+              Reference
+              <ul>
+<li><a href="#base-classes">기반 클래스</a></li>
+<li><a href="#derived-classes">파생 클래스</a></li>
+<li><a href="#pub-types">공개 타입</a></li>
+<li><a href="#typeless-methods">생성자, 소멸자, 변환 연산자</a></li>
+<li><a href="#pub-methods">공개 함수</a></li>
+</ul>
+</li>
+</ul>
+</nav>
+<aside class="m-note m-default"><h4>콜백 요약</h4></aside><table class="m-table"><thead><tr><th>콜백</th><th>호출 조건</th><th>Status 인수</th></tr></thead><tbody><tr><td><a class="m-doc" href="#aae00b846fbc662df45e99e45e90da70c">on_<wbr/>data_<wbr/>on_<wbr/>readers()</a></td><td>Subscriber에 속한 <a class="m-doc" href="classdds_1_1sub_1_1_data_reader.html">DataReader&lt;T&gt;</a> 중 하나 이상에 읽을 수 있는 sample이 있습니다.</td><td>—</td></tr></tbody></table><p>상속받은 콜백은 <a class="m-doc" href="classdds_1_1sub_1_1_any_data_reader_listener.html">dds::<wbr/>sub::<wbr/>AnyDataReaderListener</a> 에서 확인하세요.</p>
+<figure class="dds-inheritance"><div class="dds-inheritance-graph"><svg height="90pt" viewbox="0.00 0.00 725.00 90.00" width="725pt" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g class="graph" id="graph0" transform="scale(1 1) rotate(0) translate(4 86)">
+<title>dds::sub::SubscriberListener</title>
+<!-- Node1 -->
+<g class="node" id="Node000001">
+<title>Node1</title>
+<g id="a_Node000001"><a target="_top" xlink:title="Subscriber와 AnyDataReader의 상태 알림을 받습니다.">
+<polygon fill="#999999" points="324.25,-51 191.75,-51 191.75,-31 324.25,-31 324.25,-51" stroke="none"></polygon>
+<text font-family="Helvetica,sans-Serif" font-size="10.00" text-anchor="start" x="195.75" xml:space="preserve" y="-37.5">dds::sub::SubscriberListener</text>
+<polygon fill="none" points="191.75,-31 191.75,-51 324.25,-51 324.25,-31 191.75,-31" stroke="#666666"></polygon>
+</a>
+</g>
+</g>
+<!-- Node3 -->
+<g class="node" id="Node000003">
+<title>Node3</title>
+<g id="a_Node000003"><a target="_top" xlink:href="classdds_1_1domain_1_1_domain_participant_listener.html" xlink:title="DomainParticipant 범위에서 Topic, 게시물 및 구독 callback을 결합합니다.">
+<polygon fill="white" points="507.75,-82 360.25,-82 360.25,-50 507.75,-50 507.75,-82" stroke="none"></polygon>
+<text font-family="Helvetica,sans-Serif" font-size="10.00" text-anchor="start" x="364.25" xml:space="preserve" y="-68.5">dds::domain::DomainParticipant</text>
+<text font-family="Helvetica,sans-Serif" font-size="10.00" text-anchor="start" x="416.75" xml:space="preserve" y="-56.5">Listener</text>
+<polygon fill="none" points="360.25,-50 360.25,-82 507.75,-82 507.75,-50 360.25,-50" stroke="#666666"></polygon>
+</a>
+</g>
+</g>
+<!-- Node1&#45;&gt;Node3 -->
+<g class="edge" id="edge2_Node000001_Node000003">
+<title>Node1-&gt;Node3</title>
+<g id="a_edge2_Node000001_Node000003"><a xlink:title=" ">
+<path d="M335.08,-51.93C343.44,-53.13 351.93,-54.35 360.25,-55.55" fill="none" stroke="#63b8ff"></path>
+<polygon fill="none" points="335.69,-48.48 325.29,-50.52 334.69,-55.41 335.69,-48.48" stroke="#63b8ff"></polygon>
+</a>
+</g>
+</g>
+<!-- Node5 -->
+<g class="node" id="Node000005">
+<title>Node5</title>
+<g id="a_Node000005"><a target="_top" xlink:href="classdds_1_1sub_1_1_no_op_subscriber_listener.html" xlink:title=" ">
+<polygon fill="white" points="495.75,-32 372.25,-32 372.25,0 495.75,0 495.75,-32" stroke="none"></polygon>
+<text font-family="Helvetica,sans-Serif" font-size="10.00" text-anchor="start" x="376.25" xml:space="preserve" y="-18.5">dds::sub::NoOpSubscriber</text>
+<text font-family="Helvetica,sans-Serif" font-size="10.00" text-anchor="start" x="416.75" xml:space="preserve" y="-6.5">Listener</text>
+<polygon fill="none" points="372.25,0 372.25,-32 495.75,-32 495.75,0 372.25,0" stroke="#bfbfbf"></polygon>
+</a>
+</g>
+</g>
+<!-- Node1&#45;&gt;Node5 -->
+<g class="edge" id="edge4_Node000001_Node000005">
+<title>Node1-&gt;Node5</title>
+<g id="a_edge4_Node000001_Node000005"><a xlink:title=" ">
+<path d="M335.15,-30.06C347.64,-28.26 360.43,-26.43 372.48,-24.7" fill="none" stroke="#63b8ff"></path>
+<polygon fill="none" points="334.69,-26.59 325.29,-31.48 335.69,-33.52 334.69,-26.59" stroke="#63b8ff"></polygon>
+</a>
+</g>
+</g>
+<!-- Node2 -->
+<g class="node" id="Node000002">
+<title>Node2</title>
+<g id="a_Node000002"><a target="_top" xlink:href="classdds_1_1sub_1_1_any_data_reader_listener.html" xlink:title=" ">
+<polygon fill="white" points="155.75,-51 0,-51 0,-31 155.75,-31 155.75,-51" stroke="none"></polygon>
+<text font-family="Helvetica,sans-Serif" font-size="10.00" text-anchor="start" x="4" xml:space="preserve" y="-37.5">dds::sub::AnyDataReaderListener</text>
+<polygon fill="none" points="0,-31 0,-51 155.75,-51 155.75,-31 0,-31" stroke="#bfbfbf"></polygon>
+</a>
+</g>
+</g>
+<!-- Node2&#45;&gt;Node1 -->
+<g class="edge" id="edge1_Node000001_Node000002">
+<title>Node2-&gt;Node1</title>
+<g id="a_edge1_Node000001_Node000002"><a xlink:title=" ">
+<path d="M167.07,-41C175.43,-41 183.79,-41 191.87,-41" fill="none" stroke="#63b8ff"></path>
+<polygon fill="none" points="167.22,-37.5 157.22,-41 167.22,-44.5 167.22,-37.5" stroke="#63b8ff"></polygon>
+</a>
+</g>
+</g>
+<!-- Node4 -->
+<g class="node" id="Node000004">
+<title>Node4</title>
+<g id="a_Node000004"><a target="_top" xlink:href="classdds_1_1domain_1_1_no_op_domain_participant_listener.html" xlink:title=" ">
+<polygon fill="white" points="716.75,-57 543.75,-57 543.75,-25 716.75,-25 716.75,-57" stroke="none"></polygon>
+<text font-family="Helvetica,sans-Serif" font-size="10.00" text-anchor="start" x="547.75" xml:space="preserve" y="-43.5">dds::domain::NoOpDomainParticipant</text>
+<text font-family="Helvetica,sans-Serif" font-size="10.00" text-anchor="start" x="613" xml:space="preserve" y="-31.5">Listener</text>
+<polygon fill="none" points="543.75,-25 543.75,-57 716.75,-57 716.75,-25 543.75,-25" stroke="#bfbfbf"></polygon>
+</a>
+</g>
+</g>
+<!-- Node3&#45;&gt;Node4 -->
+<g class="edge" id="edge3_Node000003_Node000004">
+<title>Node3-&gt;Node4</title>
+<g id="a_edge3_Node000003_Node000004"><a xlink:title=" ">
+<path d="M518.85,-55.21C527.17,-54.14 535.63,-53.05 543.96,-51.98" fill="none" stroke="#63b8ff"></path>
+<polygon fill="none" points="518.58,-51.71 509.11,-56.46 519.47,-58.66 518.58,-51.71" stroke="#63b8ff"></polygon>
+</a>
+</g>
+</g>
+<!-- Node5&#45;&gt;Node4 -->
+<g class="edge" id="edge5_Node000005_Node000004">
+<title>Node5-&gt;Node4</title>
+<g id="a_edge5_Node000005_Node000004"><a xlink:title=" ">
+<path d="M506.96,-25.26C518.95,-26.8 531.49,-28.42 543.78,-30" fill="none" stroke="#63b8ff"></path>
+<polygon fill="none" points="507.53,-21.81 497.16,-24 506.64,-28.75 507.53,-21.81" stroke="#63b8ff"></polygon>
+</a>
+</g>
+</g>
+</g>
+</svg></div><figcaption>상속 다이어그램</figcaption></figure><section id="base-classes">
+<h2><a href="#base-classes">기반 클래스</a></h2>
+<dl class="m-doc">
+<dt>
+              클래스 <a class="m-doc" href="classdds_1_1sub_1_1_any_data_reader_listener.html">AnyDataReaderListener</a> <span class="m-label m-flat m-warning">virtual</span>
+</dt>
+<dd></dd>
+</dl>
+</section>
+<section id="derived-classes">
+<h2><a href="#derived-classes">파생 클래스</a></h2>
+<dl class="m-doc">
+<dt>
+              클래스 <a class="m-doc" href="classdds_1_1domain_1_1_domain_participant_listener.html">dds::domain::DomainParticipantListener</a> <span class="m-label m-flat m-warning">virtual</span>
+</dt>
+<dd><a class="m-doc" href="group__dds__domain.html#gab1bd86ffa9ac0869166a446dd0120f3d">DomainParticipant</a> 범위에서 Topic, 게시물 및 구독 callback을 결합합니다.</dd>
+<dt>
+              클래스 <a class="m-doc" href="classdds_1_1sub_1_1_no_op_subscriber_listener.html">NoOpSubscriberListener</a> <span class="m-label m-flat m-warning">virtual</span>
+</dt>
+<dd></dd>
+</dl>
+</section>
+<section id="pub-types">
+<h2><a href="#pub-types">공개 타입</a></h2>
+<dl class="m-doc">
+<dt id="a28e5ce1a04645287dadc10dfa615b29a">
+              using <a class="m-doc-self" href="#a28e5ce1a04645287dadc10dfa615b29a">ref_type</a> = <a class="m-doc" href="structdds_1_1core_1_1smart__ptr__traits.html">::<wbr/>dds::<wbr/>core::<wbr/>smart_ptr_traits</a>&lt;<a class="m-doc" href="classdds_1_1sub_1_1_subscriber_listener.html">SubscriberListener</a>&gt;::ref_type
+            </dt>
+<dd></dd>
+</dl>
+</section>
+<section id="typeless-methods">
+<h2><a href="#typeless-methods">생성자, 소멸자, 변환 연산자</a></h2>
+<dl class="m-doc">
+<dt>
+<span class="m-doc-wrap-bumper"><a class="m-doc" href="#a2594e1a02fd6b9e8b34849ba54b93006">~SubscriberListener</a>(</span><span class="m-doc-wrap">) <span class="m-label m-flat m-warning">virtual</span></span>
+</dt>
+<dd>listener 개체를 파괴합니다</dd>
+</dl>
+</section>
+<section id="pub-methods">
+<h2><a href="#pub-methods">공개 함수</a></h2>
+<dl class="m-doc">
+<dt>
+<span class="m-doc-wrap-bumper">void <a class="m-doc" href="classdds_1_1sub_1_1_any_data_reader_listener.html#aa3b505b19d45572597c23fc38044a1fb">on_data_available</a>(</span><span class="m-doc-wrap"><a class="m-doc" href="classdds_1_1sub_1_1_any_data_reader.html">AnyDataReader</a>&amp; the_reader) <span class="m-label m-flat m-warning">순수 가상</span></span>
+</dt>
+<dd>DataReader가 데이터를 사용할 수 있음을 보고할 때 호출됨</dd>
+<dt>
+<span class="m-doc-wrap-bumper">void <a class="m-doc" href="#aae00b846fbc662df45e99e45e90da70c">on_data_on_readers</a>(</span><span class="m-doc-wrap"><a class="m-doc" href="group__dds__subscription.html#ga9a6d78b2a23f864211da5bd2edf28750">Subscriber</a>&amp; sub) <span class="m-label m-flat m-warning">순수 가상</span></span>
+</dt>
+<dd><a class="m-doc" href="group__dds__subscription.html#ga9a6d78b2a23f864211da5bd2edf28750">Subscriber</a> 아래의 하나 이상의 DataReader가 데이터를 사용할 수 있을 때 호출</dd>
+<dt>
+<span class="m-doc-wrap-bumper">void <a class="m-doc" href="classdds_1_1sub_1_1_any_data_reader_listener.html#a460590d737ac2cf7b1705e75b447bee9">on_liveliness_changed</a>(</span><span class="m-doc-wrap"><a class="m-doc" href="classdds_1_1sub_1_1_any_data_reader.html">AnyDataReader</a>&amp; the_reader,
+              const <a class="m-doc" href="namespacedds_1_1core_1_1status.html#a5314c4075763105161d295a7933db13d">dds::<wbr/>core::<wbr/>status::<wbr/>LivelinessChangedStatus</a>&amp; status) <span class="m-label m-flat m-warning">순수 가상</span></span>
+</dt>
+<dd>일치하는 DataWriter가 Liveliness 상태를 바꿀 때 호출됨</dd>
+<dt>
+<span class="m-doc-wrap-bumper">void <a class="m-doc" href="classdds_1_1sub_1_1_any_data_reader_listener.html#a0b4a6aecd462f66424ea14c41db28d90">on_requested_deadline_missed</a>(</span><span class="m-doc-wrap"><a class="m-doc" href="classdds_1_1sub_1_1_any_data_reader.html">AnyDataReader</a>&amp; the_reader,
+              const <a class="m-doc" href="namespacedds_1_1core_1_1status.html#afe3225b6689c6d6c32f99642822c2b0d">dds::<wbr/>core::<wbr/>status::<wbr/>RequestedDeadlineMissedStatus</a>&amp; status) <span class="m-label m-flat m-warning">순수 가상</span></span>
+</dt>
+<dd>DataReader가 instance에 대한 요청된 업데이트 간격을 놓치면 호출됨</dd>
+<dt>
+<span class="m-doc-wrap-bumper">void <a class="m-doc" href="classdds_1_1sub_1_1_any_data_reader_listener.html#a6420c986262a7c03a927bacd186f3b68">on_requested_incompatible_qos</a>(</span><span class="m-doc-wrap"><a class="m-doc" href="classdds_1_1sub_1_1_any_data_reader.html">AnyDataReader</a>&amp; the_reader,
+              const <a class="m-doc" href="namespacedds_1_1core_1_1status.html#a5eff3bdd977e5b923e3610f347a64449">dds::<wbr/>core::<wbr/>status::<wbr/>RequestedIncompatibleQosStatus</a>&amp; status) <span class="m-label m-flat m-warning">순수 가상</span></span>
+</dt>
+<dd>발견된 DataWriter가 호환되지 않는 QoS를 제공할 때 호출</dd>
+<dt>
+<span class="m-doc-wrap-bumper">void <a class="m-doc" href="classdds_1_1sub_1_1_any_data_reader_listener.html#a5c35243572e49ac1f2a0fec45ba9142b">on_sample_lost</a>(</span><span class="m-doc-wrap"><a class="m-doc" href="classdds_1_1sub_1_1_any_data_reader.html">AnyDataReader</a>&amp; the_reader,
+              const <a class="m-doc" href="namespacedds_1_1core_1_1status.html#a04af02f4c95b6f099b2eee842879808b">dds::<wbr/>core::<wbr/>status::<wbr/>SampleLostStatus</a>&amp; status) <span class="m-label m-flat m-warning">순수 가상</span></span>
+</dt>
+<dd>DataReader가 sample 손실을 보고할 때 호출됨</dd>
+<dt>
+<span class="m-doc-wrap-bumper">void <a class="m-doc" href="classdds_1_1sub_1_1_any_data_reader_listener.html#ad70501e73d92e0261ad8fb9a626374e8">on_sample_rejected</a>(</span><span class="m-doc-wrap"><a class="m-doc" href="classdds_1_1sub_1_1_any_data_reader.html">AnyDataReader</a>&amp; the_reader,
+              const <a class="m-doc" href="namespacedds_1_1core_1_1status.html#a545c7d7cb2c055ebffb2f1770f76da01">dds::<wbr/>core::<wbr/>status::<wbr/>SampleRejectedStatus</a>&amp; status) <span class="m-label m-flat m-warning">순수 가상</span></span>
+</dt>
+<dd>DataReader가 받은 sample을 거부할 때 호출됨</dd>
+<dt>
+<span class="m-doc-wrap-bumper">void <a class="m-doc" href="classdds_1_1sub_1_1_any_data_reader_listener.html#a0c960ca2975bc3de2b5c68694e54a0f0">on_subscription_matched</a>(</span><span class="m-doc-wrap"><a class="m-doc" href="classdds_1_1sub_1_1_any_data_reader.html">AnyDataReader</a>&amp; the_reader,
+              const <a class="m-doc" href="namespacedds_1_1core_1_1status.html#abb43166d32256fc63bd26ce34140090d">dds::<wbr/>core::<wbr/>status::<wbr/>SubscriptionMatchedStatus</a>&amp; status) <span class="m-label m-flat m-warning">순수 가상</span></span>
+</dt>
+<dd>DataReader와 일치하는 publication의 세트가 변경될 때 호출됨</dd>
+</dl>
+</section>
+<section>
+<h2>멤버 함수</h2>
+<section class="m-doc-details" id="a2594e1a02fd6b9e8b34849ba54b93006"><div>
+<h3>
+<span class="m-doc-wrap-bumper"> <span class="m-doc-details-prefix">dds::<wbr/>sub::<wbr/>SubscriberListener::<wbr/></span></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a2594e1a02fd6b9e8b34849ba54b93006">~SubscriberListener</a>(</span><span class="m-doc-wrap">) <span class="m-label m-warning">virtual</span></span></span>
+</h3>
+<p>listener 개체를 파괴합니다</p>
+<p>listener가 엔터티에 등록되어 있는 동안 listener를 살아있게 유지합니다.</p>
+</div></section>
+<section class="m-doc-details" id="aae00b846fbc662df45e99e45e90da70c"><div>
+<h3>
+<span class="m-doc-wrap-bumper">void <span class="m-doc-details-prefix">dds::<wbr/>sub::<wbr/>SubscriberListener::<wbr/></span></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#aae00b846fbc662df45e99e45e90da70c">on_data_on_readers</a>(</span><span class="m-doc-wrap"><a class="m-doc" href="group__dds__subscription.html#ga9a6d78b2a23f864211da5bd2edf28750">Subscriber</a>&amp; sub) <span class="m-label m-warning">pure virtual</span></span></span>
+</h3>
+<p><a class="m-doc" href="group__dds__subscription.html#ga9a6d78b2a23f864211da5bd2edf28750">Subscriber</a> 아래의 하나 이상의 DataReader가 데이터를 사용할 수 있을 때 호출</p>
+<table class="m-table m-fullwidth m-flat">
+<thead>
+<tr><th colspan="2">매개변수</th></tr>
+</thead>
+<tbody>
+<tr>
+<td style="width: 1%">sub <span class="m-label m-flat m-danger">입출력</span></td>
+<td>이벤트를 보고하는 <a class="m-doc" href="group__dds__subscription.html#ga9a6d78b2a23f864211da5bd2edf28750">Subscriber</a></td>
+</tr>
+</tbody>
+</table>
+<p>이 callback은 사용할 때 개별 <a class="m-doc" href="classdds_1_1sub_1_1_data_reader.html">DataReader&lt;T&gt;</a> callback보다 우선합니다. 여기에서 <code>sub.notify_datareaders()</code> 를 호출하여 기록에 아직 sample이 있는 Subscriber의 DataReader에 대해 사용 가능한 <code>on_data_available()</code> callback을 예약합니다.</p><aside class="m-note m-default"><h4>참고 항목</h4><p><a class="m-doc" href="classdds_1_1sub_1_1_t_subscriber.html#ac39582614d0a2edd40e8f1b044858a35">dds::<wbr/>sub::<wbr/>TSubscriber::<wbr/>notify_datareaders()</a></p></aside>
+</div></section>
+</section>
+</div>
+</div>
+</div>
+</article></main>
+<div class="m-doc-search" id="search">
+<a href="#!" onclick="return hideSearch()"></a>
+<div class="m-container">
+<div class="m-row">
+<div class="m-col-m-8 m-push-m-2">
+<div class="m-doc-search-header m-text m-small">
+<div>Tab 또는 T로 검색하고 Esc로 닫습니다.</div>
+<div id="search-symbolcount">…</div>
+</div>
+<div class="m-doc-search-content">
+<form>
+<input autocomplete="off" autofocus="autofocus" disabled="disabled" id="search-input" name="q" placeholder="불러오는 중…" spellcheck="false" type="search"/>
+</form>
+<noscript class="m-text m-danger m-text-center">검색을 사용하려면 JavaScript가 필요합니다.</noscript>
+<div class="m-text m-dim m-text-center" id="search-help">심볼, 디렉터리, 파일, 페이지 또는 모듈을 검색합니다. 심볼이나 파일 경로의 앞부분을 생략할 수 있습니다. 끝에 : 또는 /를 붙이면 하위 항목을 표시합니다. ↑와 ↓로 결과를 이동하고 Enter로 엽니다. Tab으로 공통 접두사를 자동 완성합니다. ⌘ L로 링크를 복사하고 ⌘ M으로 Markdown 링크를 복사합니다.</div>
+<div class="m-text m-warning m-text-center" id="search-notfound">검색 결과가 없습니다.</div>
+<ul id="search-results"></ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src="search-v2.js"></script><script>install_mcss_search_shim();</script>
+<script async="async" src="searchdata-v2.js"></script>
+<footer><nav>
+<div class="m-container">
+<div class="m-row">
+<div class="m-col-l-10 m-push-l-1">
+<a download="" href="GurumDDS_C++.tagfile.xml" target="_blank" type="text/xml">Doxygen 태그 파일</a>
+<br/><br/>
+사이트 생성 도구 <a class="poxy-external" href="https://github.com/marzer/poxy/" target="_blank">Poxy</a>
+</div>
+</div>
+</div>
+</nav></footer>
+</body></html>

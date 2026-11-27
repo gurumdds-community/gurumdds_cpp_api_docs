@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1140" height="254" viewBox="0 0 1140 254" role="img" aria-label="read retains records in history and marks them read. take removes them. A loan stays usable while at least one owner holds it. Copies stored by the application remain usable." data-dds-diagram="true">
+  <title id="loan-lifetime-en-title">Reader history and sample loan lifetime</title>
+  <desc>read retains records in history and marks them read. take removes them. A loan stays usable while at least one owner holds it. Copies stored by the application remain usable.</desc>
+  <defs>
+    <marker id="loan-lifetime-en-open" viewBox="0 0 10 12" refX="9" refY="6" markerWidth="9" markerHeight="10" orient="auto" markerUnits="userSpaceOnUse"><path d="M 1,1 L 9,6 L 1,11" fill="none" stroke="#20354B" stroke-width="1.2"/></marker>
+    <marker id="loan-lifetime-en-arrow" viewBox="0 0 11 10" refX="10" refY="5" markerWidth="10" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M 0,0 L 11,5 L 0,10 Z" fill="#356B96"/></marker>
+    <marker id="loan-lifetime-en-uml" viewBox="0 0 15 15" refX="14" refY="7.5" markerWidth="15" markerHeight="15" orient="auto" markerUnits="userSpaceOnUse"><path d="M 1,1 L 14,7.5 L 1,14 Z" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/></marker>
+  </defs>
+  <rect width="1140" height="254" fill="#FFFFFF"/>
+  <g fill="#20354B" font-family="Arial, Malgun Gothic, sans-serif">
+    <path d="M 158 77 H 196" fill="none" stroke="#20354B" stroke-width="1.15" marker-end="url(#loan-lifetime-en-open)"/>
+    <path d="M 158 179 H 196" fill="none" stroke="#20354B" stroke-width="1.15" marker-end="url(#loan-lifetime-en-open)"/>
+    <path d="M 437 77 H 467 V 125 H 496" fill="none" stroke="#20354B" stroke-width="1.15" marker-end="url(#loan-lifetime-en-open)"/>
+    <path d="M 437 179 H 467 V 125" fill="none" stroke="#20354B" stroke-width="1.15"/>
+    <path d="M 774 125 H 831" fill="none" stroke="#356B96" stroke-width="1.7" marker-end="url(#loan-lifetime-en-arrow)"/>
+    <rect x="24" y="51" width="134" height="52" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <rect x="24" y="153" width="134" height="52" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <rect x="196" y="36" width="241" height="82" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <rect x="196" y="138" width="241" height="82" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <rect x="496" y="62" width="278" height="126" fill="#EFF5FA" stroke="#20354B" stroke-width="1.15"/>
+    <rect x="831" y="62" width="284" height="126" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <text x="91" y="83" text-anchor="middle" font-size="16" font-family="Consolas, Menlo, monospace">read()</text>
+    <text x="91" y="185" text-anchor="middle" font-size="16" font-family="Consolas, Menlo, monospace">take()</text>
+    <text x="316" y="69" text-anchor="middle" font-size="16" font-weight="bold">Records stay in history</text>
+    <text x="316" y="95" text-anchor="middle" font-size="15">Marked as read</text>
+    <text x="316" y="184" text-anchor="middle" font-size="16" font-weight="bold">Records leave history</text>
+    <text x="635" y="95" text-anchor="middle" font-size="18" font-family="Consolas, Menlo, monospace">LoanedSamples</text>
+    <text x="635" y="125" text-anchor="middle" font-size="15">Check valid() before payload access</text>
+    <text x="635" y="155" text-anchor="middle" font-size="15">Copy the fields you need to keep</text>
+    <text x="973" y="95" text-anchor="middle" font-size="16" font-weight="bold">Last owner releases the loan</text>
+    <text x="973" y="125" text-anchor="middle" font-size="15">Loaned references expire</text>
+    <text x="973" y="155" text-anchor="middle" font-size="15">Owned copies remain usable</text>
+  </g>
+</svg>

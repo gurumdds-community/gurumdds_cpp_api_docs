@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1140" height="235" viewBox="0 0 1140 235" role="img" aria-label="In the MANUAL_BY_TOPIC example, the Writer asserts liveliness. If no further assertion arrives within the configured lease, the Reader can report a liveliness change." data-dds-diagram="true">
+  <title id="liveliness-lease-en-title">Manual liveliness and the lease</title>
+  <desc>In the MANUAL_BY_TOPIC example, the Writer asserts liveliness. If no further assertion arrives within the configured lease, the Reader can report a liveliness change.</desc>
+  <defs>
+    <marker id="liveliness-lease-en-arrow" viewBox="0 0 10 12" refX="9" refY="6" markerWidth="9" markerHeight="10" orient="auto" markerUnits="userSpaceOnUse"><path d="M 1,1 L 9,6 L 1,11" fill="none" stroke="#20354B" stroke-width="1.2"/></marker>
+    <marker id="liveliness-lease-en-blue" viewBox="0 0 11 10" refX="10" refY="5" markerWidth="10" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M 0,0 L 11,5 L 0,10 Z" fill="#356B96"/></marker>
+    <marker id="liveliness-lease-en-uml" viewBox="0 0 15 15" refX="14" refY="7.5" markerWidth="15" markerHeight="15" orient="auto" markerUnits="userSpaceOnUse"><path d="M 1,1 L 14,7.5 L 1,14 Z" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/></marker>
+  </defs>
+  <rect width="1140" height="235" fill="#FFFFFF"/>
+  <g fill="#20354B" font-family="Arial, Malgun Gothic, sans-serif">
+    <path d="M 126 116 H 1102" fill="none" stroke="#20354B" stroke-width="1.15" marker-end="url(#liveliness-lease-en-arrow)"/>
+    <path d="M 296 73 H 792" fill="none" stroke="#356B96" stroke-width="1.7" marker-end="url(#liveliness-lease-en-blue)"/>
+    <path d="M 296 82 V 112" fill="none" stroke="#20354B" stroke-width="1.15" stroke-dasharray="5 4"/>
+    <path d="M 792 82 V 112" fill="none" stroke="#20354B" stroke-width="1.15" stroke-dasharray="5 4"/>
+    <circle cx="296" cy="116" r="4" fill="#20354B"/>
+    <circle cx="792" cy="116" r="4" fill="#356B96"/>
+    <text x="296" y="146" text-anchor="middle" font-size="16" font-family="Consolas, Menlo, monospace">assert_liveliness()</text>
+    <text x="544" y="60" text-anchor="middle" font-size="16" font-weight="bold">3 s lease in the example</text>
+    <text x="797" y="146" text-anchor="middle" font-size="16">Lease expires without another assertion</text>
+    <text x="570" y="198" text-anchor="middle" font-size="15">The Reader observes liveliness changes through its listener or liveliness_changed_status().</text>
+  </g>
+</svg>

@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1140" height="367" viewBox="0 0 1140 367" role="img" aria-label="Two Entity handles refer to the same Entity. A copied QoS policy holds a separate value. Copies of LoanedSamples refer to the same loan, and the last owner returns it." data-dds-diagram="true">
+  <title id="copy-semantics-en-title">What survives after a copy is released</title>
+  <desc>Two Entity handles refer to the same Entity. A copied QoS policy holds a separate value. Copies of LoanedSamples refer to the same loan, and the last owner returns it.</desc>
+  <defs>
+    <marker id="copy-semantics-en-arrow" viewBox="0 0 10 12" refX="9" refY="6" markerWidth="9" markerHeight="10" orient="auto" markerUnits="userSpaceOnUse"><path d="M 1,1 L 9,6 L 1,11" fill="none" stroke="#20354B" stroke-width="1.2"/></marker>
+    <marker id="copy-semantics-en-blue" viewBox="0 0 11 10" refX="10" refY="5" markerWidth="10" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M 0,0 L 11,5 L 0,10 Z" fill="#356B96"/></marker>
+    <marker id="copy-semantics-en-uml" viewBox="0 0 15 15" refX="14" refY="7.5" markerWidth="15" markerHeight="15" orient="auto" markerUnits="userSpaceOnUse"><path d="M 1,1 L 14,7.5 L 1,14 Z" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/></marker>
+  </defs>
+  <rect width="1140" height="367" fill="#FFFFFF"/>
+  <g fill="#20354B" font-family="Arial, Malgun Gothic, sans-serif">
+    <path d="M 406 68 H 448" fill="none" stroke="#20354B" stroke-width="1.15" marker-end="url(#copy-semantics-en-arrow)"/>
+    <path d="M 709 68 H 751" fill="none" stroke="#20354B" stroke-width="1.15" marker-end="url(#copy-semantics-en-arrow)"/>
+    <text x="23" y="74" text-anchor="start" font-size="16" font-weight="bold">Entity handle</text>
+    <rect x="183" y="39" width="223" height="58" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <text x="294.5" y="73" text-anchor="middle" font-size="16" font-weight="bold">Handle A and B</text>
+    <rect x="448" y="39" width="261" height="58" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <text x="578.5" y="73" text-anchor="middle" font-size="16" font-weight="bold">Same Entity</text>
+    <rect x="751" y="39" width="365" height="58" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <text x="933.5" y="73" text-anchor="middle" font-size="16" font-weight="bold">B still refers to the Entity</text>
+    <path d="M 406 156 H 448" fill="none" stroke="#20354B" stroke-width="1.15" marker-end="url(#copy-semantics-en-arrow)"/>
+    <path d="M 709 156 H 751" fill="none" stroke="#20354B" stroke-width="1.15" marker-end="url(#copy-semantics-en-arrow)"/>
+    <text x="23" y="162" text-anchor="start" font-size="16" font-weight="bold">QoS policy</text>
+    <rect x="183" y="127" width="223" height="58" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <text x="294.5" y="161" text-anchor="middle" font-size="16" font-weight="bold">Copy the policy</text>
+    <rect x="448" y="127" width="261" height="58" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <text x="578.5" y="161" text-anchor="middle" font-size="16" font-weight="bold">Independent values</text>
+    <rect x="751" y="127" width="365" height="58" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <text x="933.5" y="161" text-anchor="middle" font-size="16" textLength="343" lengthAdjust="spacingAndGlyphs" font-weight="bold">Editing one leaves the other unchanged</text>
+    <path d="M 406 244 H 448" fill="none" stroke="#20354B" stroke-width="1.15" marker-end="url(#copy-semantics-en-arrow)"/>
+    <path d="M 709 244 H 751" fill="none" stroke="#356B96" stroke-width="1.7" marker-end="url(#copy-semantics-en-blue)"/>
+    <text x="23" y="250" text-anchor="start" font-size="16" font-weight="bold">LoanedSamples</text>
+    <rect x="183" y="215" width="223" height="58" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <text x="294.5" y="249" text-anchor="middle" font-size="16" font-weight="bold">Owner A and B</text>
+    <rect x="448" y="215" width="261" height="58" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <text x="578.5" y="249" text-anchor="middle" font-size="16" font-weight="bold">Same loan</text>
+    <rect x="751" y="215" width="365" height="58" fill="#EFF5FA" stroke="#20354B" stroke-width="1.15"/>
+    <text x="933.5" y="249" text-anchor="middle" font-size="16" font-weight="bold">The last owner returns it</text>
+    <text x="570" y="340" text-anchor="middle" font-size="15">Borrowed sample pointers must remain within the lifetime of the loan.</text>
+  </g>
+</svg>

@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1140" height="286" viewBox="0 0 1140 286" role="img" aria-label="A reliable DataReader acknowledges receipt through DDS. The receiving application gets data through a separate read or take and may send its own processing signal." data-dds-diagram="true">
+  <title id="acknowledgment-scope-en-title">DDS acknowledgment and application processing</title>
+  <desc>A reliable DataReader acknowledges receipt through DDS. The receiving application gets data through a separate read or take and may send its own processing signal.</desc>
+  <defs>
+    <marker id="acknowledgment-scope-en-arrow" viewBox="0 0 10 12" refX="9" refY="6" markerWidth="9" markerHeight="10" orient="auto" markerUnits="userSpaceOnUse"><path d="M 1,1 L 9,6 L 1,11" fill="none" stroke="#20354B" stroke-width="1.2"/></marker>
+    <marker id="acknowledgment-scope-en-blue" viewBox="0 0 11 10" refX="10" refY="5" markerWidth="10" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M 0,0 L 11,5 L 0,10 Z" fill="#356B96"/></marker>
+  </defs>
+  <rect width="1140" height="286" fill="#FFFFFF"/>
+  <g fill="#20354B" font-family="Arial, Malgun Gothic, sans-serif">
+    <path d="M 603 29 V 242" fill="none" stroke="#20354B" stroke-width="1.15" stroke-dasharray="5 4"/>
+    <text x="307" y="41" text-anchor="middle" font-size="16" font-weight="bold">DDS delivery</text>
+    <text x="863" y="41" text-anchor="middle" font-size="16" font-weight="bold">Application processing</text>
+    <path d="M 144 91 V 235" fill="none" stroke="#20354B" stroke-width="1.15" stroke-dasharray="5 4"/>
+    <path d="M 458 91 V 235" fill="none" stroke="#20354B" stroke-width="1.15" stroke-dasharray="5 4"/>
+    <path d="M 741 91 V 235" fill="none" stroke="#20354B" stroke-width="1.15" stroke-dasharray="5 4"/>
+    <path d="M 978 91 V 235" fill="none" stroke="#20354B" stroke-width="1.15" stroke-dasharray="5 4"/>
+    <rect x="42" y="58" width="204" height="33" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <rect x="355" y="58" width="206" height="33" fill="#EFF5FA" stroke="#20354B" stroke-width="1.15"/>
+    <rect x="667" y="58" width="148" height="33" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <rect x="881" y="58" width="194" height="33" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <text x="144" y="80" text-anchor="middle" font-size="15" font-family="Consolas, Menlo, monospace">DataWriter&lt;T&gt;</text>
+    <text x="458" y="80" text-anchor="middle" font-size="15" font-weight="bold">Reliable reader</text>
+    <text x="741" y="80" text-anchor="middle" font-size="15" font-family="Consolas, Menlo, monospace">DataReader&lt;T&gt;</text>
+    <text x="978" y="80" text-anchor="middle" font-size="15" font-weight="bold">Application</text>
+    <path d="M 144 130 H 458" fill="none" stroke="#20354B" stroke-width="1.15" marker-end="url(#acknowledgment-scope-en-arrow)"/>
+    <text x="301" y="119" text-anchor="middle" font-size="14" font-family="Consolas, Menlo, monospace">write()</text>
+    <path d="M 458 175 H 144" fill="none" stroke="#356B96" stroke-width="1.7" marker-end="url(#acknowledgment-scope-en-blue)"/>
+    <text x="301" y="164" text-anchor="middle" font-size="14">DDS acknowledgment</text>
+    <text x="300" y="210" text-anchor="middle" font-size="14" font-family="Consolas, Menlo, monospace">wait_for_acknowledgments(timeout)</text>
+    <path d="M 978 130 H 741" fill="none" stroke="#20354B" stroke-width="1.15" marker-end="url(#acknowledgment-scope-en-arrow)"/>
+    <text x="860" y="119" text-anchor="middle" font-size="14" font-family="Consolas, Menlo, monospace">read() / take()</text>
+    <path d="M 741 175 H 978" fill="none" stroke="#20354B" stroke-width="1.15" stroke-dasharray="5 4" marker-end="url(#acknowledgment-scope-en-arrow)"/>
+    <text x="860" y="164" text-anchor="middle" font-size="14">A batch of samples</text>
+    <text x="863" y="220" text-anchor="middle" font-size="14" paint-order="stroke" stroke="#FFFFFF" stroke-width="5" stroke-linejoin="round">Confirm processing with a separate signal</text>
+    <text x="570" y="264" text-anchor="middle" font-size="15">The time lanes are independent. This example assumes a matched reliable reader.</text>
+  </g>
+</svg>

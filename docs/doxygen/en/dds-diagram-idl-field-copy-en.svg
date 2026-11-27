@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1140" height="306" viewBox="0 0 1140 306" role="img" aria-label="The generated Tutorial::Reading copy shares the string and sequence pointers and copies its inline array by value. Application-owned containers can keep the values after the loan is returned." data-dds-diagram="true">
+  <title id="idl-field-copy-en-title">Ownership of fields copied from a loaned IDL value</title>
+  <desc>The generated Tutorial::Reading copy shares the string and sequence pointers and copies its inline array by value. Application-owned containers can keep the values after the loan is returned.</desc>
+  <defs>
+    <marker id="idl-field-copy-en-arrow" viewBox="0 0 10 12" refX="9" refY="6" markerWidth="9" markerHeight="10" orient="auto" markerUnits="userSpaceOnUse"><path d="M 1,1 L 9,6 L 1,11" fill="none" stroke="#20354B" stroke-width="1.2"/></marker>
+    <marker id="idl-field-copy-en-blue" viewBox="0 0 11 10" refX="10" refY="5" markerWidth="10" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse"><path d="M 0,0 L 11,5 L 0,10 Z" fill="#356B96"/></marker>
+  </defs>
+  <rect width="1140" height="306" fill="#FFFFFF"/>
+  <g fill="#20354B" font-family="Arial, Malgun Gothic, sans-serif">
+    <text x="158" y="36" text-anchor="middle" font-size="16" font-weight="bold">Loaned Tutorial::Reading</text>
+    <text x="562" y="36" text-anchor="middle" font-size="16" font-weight="bold">Copy the struct</text>
+    <text x="969" y="36" text-anchor="middle" font-size="16" font-weight="bold">Application-owned copies</text>
+    <path d="M 285 95 H 456" fill="none" stroke="#20354B" stroke-width="1.15" stroke-dasharray="5 4" marker-end="url(#idl-field-copy-en-arrow)"/>
+    <path d="M 670 95 H 826" fill="none" stroke="#356B96" stroke-width="1.7" marker-end="url(#idl-field-copy-en-blue)"/>
+    <rect x="32" y="73" width="253" height="46" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <rect x="456" y="73" width="214" height="46" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <rect x="826" y="73" width="283" height="46" fill="#EFF5FA" stroke="#20354B" stroke-width="1.15"/>
+    <text x="158" y="102" text-anchor="middle" font-size="16" font-family="Consolas, Menlo, monospace">label</text>
+    <text x="562" y="102" text-anchor="middle" font-size="16" font-family="Consolas, Menlo, monospace">label</text>
+    <text x="969" y="102" text-anchor="middle" font-size="15" font-family="Consolas, Menlo, monospace">std::string</text>
+    <text x="371" y="88" text-anchor="middle" font-size="14">Same pointer</text>
+    <text x="748" y="88" text-anchor="middle" font-size="14">Copy values</text>
+    <path d="M 285 164 H 456" fill="none" stroke="#20354B" stroke-width="1.15" marker-end="url(#idl-field-copy-en-arrow)"/>
+    <path d="M 670 164 H 826" fill="none" stroke="#356B96" stroke-width="1.7" marker-end="url(#idl-field-copy-en-blue)"/>
+    <rect x="32" y="142" width="253" height="46" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <rect x="456" y="142" width="214" height="46" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <rect x="826" y="142" width="283" height="46" fill="#EFF5FA" stroke="#20354B" stroke-width="1.15"/>
+    <text x="158" y="171" text-anchor="middle" font-size="16" font-family="Consolas, Menlo, monospace">bounds[2]</text>
+    <text x="562" y="171" text-anchor="middle" font-size="16" font-family="Consolas, Menlo, monospace">bounds[2]</text>
+    <text x="969" y="171" text-anchor="middle" font-size="15" font-family="Consolas, Menlo, monospace">std::array&lt;dds_Long, 2&gt;</text>
+    <text x="371" y="157" text-anchor="middle" font-size="14">Array values copied</text>
+    <text x="748" y="157" text-anchor="middle" font-size="14">Copy values</text>
+    <path d="M 285 233 H 456" fill="none" stroke="#20354B" stroke-width="1.15" stroke-dasharray="5 4" marker-end="url(#idl-field-copy-en-arrow)"/>
+    <path d="M 670 233 H 826" fill="none" stroke="#356B96" stroke-width="1.7" marker-end="url(#idl-field-copy-en-blue)"/>
+    <rect x="32" y="211" width="253" height="46" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <rect x="456" y="211" width="214" height="46" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"/>
+    <rect x="826" y="211" width="283" height="46" fill="#EFF5FA" stroke="#20354B" stroke-width="1.15"/>
+    <text x="158" y="240" text-anchor="middle" font-size="16" font-family="Consolas, Menlo, monospace">values</text>
+    <text x="562" y="240" text-anchor="middle" font-size="16" font-family="Consolas, Menlo, monospace">values</text>
+    <text x="969" y="240" text-anchor="middle" font-size="15" font-family="Consolas, Menlo, monospace">std::vector&lt;dds_Long&gt;</text>
+    <text x="371" y="226" text-anchor="middle" font-size="14">Same pointer</text>
+    <text x="748" y="226" text-anchor="middle" font-size="14">Copy values</text>
+    <text x="570" y="287" text-anchor="middle" font-size="15">While the loan is alive, copy any fields the application needs to keep.</text>
+  </g>
+</svg>

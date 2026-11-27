@@ -1,0 +1,284 @@
+@font-face {
+    font-family: Pretendard;
+    font-style: normal;
+    font-weight: 45 920;
+    font-display: swap;
+    src: url("PretendardVariable.woff2") format("woff2");
+}
+
+:root,
+html.dark-mode,
+html:not(.dark-mode) {
+    --dds-prose-font: Pretendard, system-ui, sans-serif;
+    --font: var(--dds-prose-font);
+    --font-family-normal: var(--dds-prose-font);
+    --font-family-nav: var(--dds-prose-font);
+    --font-family-title: var(--dds-prose-font);
+    --font-family-toc: var(--dds-prose-font);
+    --font-family-search: var(--dds-prose-font);
+    --font-family-tooltip: var(--dds-prose-font);
+    --nav-font-size-level1: 14px;
+    --nav-font-size-level2: 11px;
+    --nav-font-size-level3: 10px;
+}
+
+#nav-tree .label {
+    font-size: 13px;
+}
+
+#m-navbar-collapse li > a[href$=".html"] {
+    font-size: calc(1rem + 1px);
+}
+
+.dds-directory-page .contents :is(li > a, td, summary) {
+    font-size: 15px;
+}
+
+.dds-directory-page main article :is(li > a, dt > a, td, summary) {
+    font-size: calc(1rem + 1px);
+}
+
+/* Match the prose size to the module and example lists. */
+.contents :is(.textblock, .memdoc, .mdescRight, p, dl),
+.contents table.markdownTable {
+    font-size: 15px;
+}
+
+.contents :where(.textblock, .memdoc, .mdescRight, p, dl) :is(code, tt, .tt) {
+    font-size: 14px;
+}
+
+.dds-directory-page .contents td :is(code, tt, .tt):not(p *) {
+    font-size: inherit;
+}
+
+main article :where(p, ul, ol, dd, th, td, blockquote) {
+    font-size: calc(1rem + 1px);
+}
+
+main article :where(p, ul, ol, dd, th, td, blockquote) :where(code, pre) {
+    --code-font-size: .9rem;
+}
+
+.dds-directory-page main article td :where(code, pre):not(p *) {
+    --code-font-size: .9em;
+}
+
+#projectname,
+.dds-home-page .headertitle .title,
+.dds-home-page main article h1,
+body > header > nav #m-navbar-brand,
+body > header > nav #m-navbar-brand .m-thin {
+    font-weight: 700;
+}
+
+#projectnumber {
+    font-weight: 400;
+}
+
+#projectname::before {
+    content: "";
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    margin-inline-end: 8px;
+    vertical-align: middle;
+    background: url("gurum-networks-logo.png") center / contain no-repeat;
+}
+
+.image:has(> img[src^="dds-diagram-"], > object[data^="dds-diagram-"]),
+figure.m-figure:has(> img[src^="dds-diagram-"], > svg[data-dds-diagram]) {
+    display: block;
+    margin: 1.25rem 0;
+    overflow-x: auto;
+}
+
+img[src^="dds-diagram-"],
+object[data^="dds-diagram-"],
+svg[data-dds-diagram] {
+    display: block;
+    width: 100%;
+    min-width: 760px;
+    max-width: 1120px;
+    height: auto;
+    margin-inline: auto;
+}
+
+figure.m-figure:has(> img[src^="dds-diagram-"], > svg[data-dds-diagram])::before {
+    content: none;
+}
+
+figure.m-figure:has(> img[src^="dds-diagram-"], > svg[data-dds-diagram]) > figcaption {
+    display: block;
+    text-align: center;
+}
+
+/* Separate a heading from the preceding prose, list, or code block. */
+.contents :is(.textblock, .memdoc) :is(p, ul, ol, dl, table, figure, .fragment, .image) + .doxsection,
+main article :is(section[id], p, ul, ol, dl, table, figure, pre) + section[id]:not(.m-doc-details) > :is(h2, h3, h4, h5, h6) {
+    margin-block-start: 1.75rem;
+}
+
+.contents :is(.textblock, .memdoc) :is(p, .fragment) + p,
+main article :is(p, pre) + p {
+    margin-block-start: 1rem;
+}
+
+.dds-inheritance {
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.dds-inheritance-graph > svg {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.dds-inheritance > figcaption {
+    margin-block-start: .5rem;
+    font-size: .9em;
+}
+
+/* The class brief is already included in the detailed description. */
+.contents > p:has(> code) + p:has(> a[href="#details"]) {
+    display: none;
+}
+
+.dds-class-include {
+    margin-block: 0.75rem 1rem;
+    padding: 0.55rem 0.8rem;
+    border: 1px solid color-mix(in srgb, currentColor 22%, transparent);
+    border-radius: 0.25rem;
+    background-color: color-mix(in srgb, currentColor 6%, transparent);
+    overflow-wrap: anywhere;
+}
+
+.dds-class-include > code {
+    padding: 0;
+    background: transparent;
+}
+
+
+.dds-page-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .35rem 1rem;
+    margin: .6rem 0;
+    font-size: .9em;
+}
+
+.dds-reference-details {
+    margin: 1rem 0;
+}
+
+.dds-reference-details > summary {
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.dds-code-actions {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: .35rem;
+    margin-block: .65rem .2rem;
+}
+
+.dds-code-actions button,
+.dds-diagram-action,
+.dds-diagram-dialog button,
+.dds-mobile-nav {
+    border: 1px solid color-mix(in srgb, currentColor 30%, transparent);
+    border-radius: .25rem;
+    color: inherit;
+    background: color-mix(in srgb, currentColor 7%, transparent);
+    padding: .2rem .55rem;
+    font: inherit;
+    cursor: pointer;
+}
+
+.dds-code-actions [aria-pressed="true"] {
+    background: color-mix(in srgb, currentColor 17%, transparent);
+}
+
+main article pre.dds-code-wrap {
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+
+:is(img[src^="dds-diagram-"], object[data^="dds-diagram-"], svg[data-dds-diagram]) {
+    min-width: 0;
+}
+
+.dds-diagram-action {
+    display: block;
+    margin: .4rem auto;
+}
+
+.dds-diagram-dialog {
+    width: min(92vw, 76rem);
+    max-height: 90vh;
+    color: CanvasText;
+    background: Canvas;
+    border: 1px solid GrayText;
+    border-radius: .35rem;
+    padding: 1rem;
+}
+
+.dds-diagram-dialog::backdrop {
+    background: rgb(0 0 0 / .4);
+}
+
+.dds-diagram-dialog > div {
+    margin-top: .7rem;
+    overflow: auto;
+}
+
+.dds-diagram-dialog > div > :is(svg, img, object) {
+    display: block;
+    width: max(48rem, 100%);
+    max-width: none;
+}
+
+.dds-mobile-nav {
+    display: none;
+}
+
+@media (max-width: 720px) {
+    .dds-mobile-ready .dds-mobile-nav {
+        display: inline-block;
+        margin: .25rem .75rem;
+    }
+
+    .dds-mobile-ready #doc-content {
+        width: 100% !important;
+        margin-inline: 0 !important;
+    }
+
+    .dds-mobile-ready:not(.dds-nav-open) #side-nav,
+    .dds-mobile-ready:not(.dds-outline-open) #page-nav {
+        display: none;
+    }
+
+    .dds-mobile-ready.dds-nav-open #side-nav,
+    .dds-mobile-ready.dds-outline-open #page-nav {
+        display: block;
+        position: fixed;
+        z-index: 100;
+        width: min(82vw, 19rem) !important;
+        background: var(--page-background-color, Canvas);
+        box-shadow: 0 0 .5rem rgb(0 0 0 / .25);
+    }
+}
+
+
+html:not(.dds-show-signatures) .dds-full-signature,
+html.dds-show-signatures .dds-short-signature {
+    display: none;
+}
+
+.dds-detail-jump {
+    padding-inline: .25em;
+}

@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<title>API modules » Core module | GurumDDS C++ API Reference</title>
+<link href="gurum-networks-logo.png" rel="icon" type="image/png"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="#cb4b16" name="theme-color"/>
+<link href="poxy/poxy.css" referrerpolicy="no-referrer" rel="stylesheet"/>
+<link href="ReferenceBranding.css" referrerpolicy="no-referrer" rel="stylesheet"/>
+<script src="poxy/poxy.js"></script>
+<script>initialize_theme("light");</script>
+<meta content="GurumDDS C++" name="twitter:title"/>
+<meta content="GurumDDS C++" property="og:title"/>
+<meta content="GurumDDS C++" itemprop="name"/>
+<meta content="API Reference" name="description"/>
+<meta content="API Reference" name="twitter:description"/>
+<meta content="API Reference" property="og:description"/>
+<meta content="API Reference" itemprop="description"/>
+<meta content="telephone=no" name="format-detection"/>
+<meta content="Poxy v0.27.2" name="generator"/>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<script defer="True" src="ReferenceUi.js"></script><link href="../en/group__dds__core.html" hreflang="en" rel="alternate"/><link href="../ko/group__dds__core.html" hreflang="ko" rel="alternate"/><link href="../language.css" rel="stylesheet"/><script defer="defer" src="../language.js"></script></head>
+<body class="poxy-has-toc">
+<header><nav id="navigation">
+<div class="m-container">
+<div class="m-row doc-language-header">
+<a class="m-col-t-8 m-col-m-none m-left-m" href="index.html" id="m-navbar-brand"><img alt="" src="gurum-networks-logo.png"/>GurumDDS C++ <span class="m-thin">API Reference</span></a>
+<div class="m-col-t-4 m-hide-m m-text-right m-nopadr">
+<a class="m-doc-search-icon" href="#search" onclick="return showSearch()" title="Search"><svg style="height: 0.9rem;" viewbox="0 0 16 16">
+<path d="m6 0c-3.31 0-6 2.69-6 6 0 3.31 2.69 6 6 6 1.49 0 2.85-0.541 3.89-1.44-0.0164 0.338 0.147 0.759 0.5 1.15l3.22 3.79c0.552 0.614 1.45 0.665 2 0.115 0.55-0.55 0.499-1.45-0.115-2l-3.79-3.22c-0.392-0.353-0.812-0.515-1.15-0.5 0.895-1.05 1.44-2.41 1.44-3.89 0-3.31-2.69-6-6-6zm0 1.56a4.44 4.44 0 0 1 4.44 4.44 4.44 4.44 0 0 1-4.44 4.44 4.44 4.44 0 0 1-4.44-4.44 4.44 4.44 0 0 1 4.44-4.44z" id="m-doc-search-icon-path"></path>
+</svg></a>
+<a href="#navigation" id="m-navbar-show" title="Show navigation"></a>
+<a href="#" id="m-navbar-hide" title="Hide navigation"></a>
+</div>
+<div class="m-col-t-12 m-show-m m-col-m-none m-right-m" id="m-navbar-collapse">
+<div class="m-row">
+<ol class="m-col-t-6 m-col-m-none">
+<li><a href="modules.html">Modules</a></li>
+<li><a href="annotated.html">Classes</a></li>
+<li><a href="namespaces.html">Namespaces</a></li>
+</ol>
+<ol class="m-col-t-6 m-col-m-none" start="4">
+<li><a href="examples.html">Examples</a></li>
+<li><a class="poxy-icon theme" href="javascript:void(null);" id="poxy-theme-switch" onclick="toggle_theme(); return false;" role="button" title="Toggle dark and light themes"><svg id="poxy-theme-switch-img" version="1.1" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><circle cx="185.6708" cy="183.8122" fill="currentColor" r="65.625"></circle><path d="M185.6708,87.5622a13.1256,13.1256,0,0,0,13.125-13.125V52.5622a13.125,13.125,0,1,0-26.25,0v21.875A13.1257,13.1257,0,0,0,185.6708,87.5622Z" fill="currentColor"></path><path d="M99.051,115.7519a13.1236,13.1236,0,1,0,18.56-18.56L102.1442,81.726a13.1236,13.1236,0,0,0-18.5595,18.56Z" fill="currentColor"></path><path d="M89.4208,183.8122a13.1257,13.1257,0,0,0-13.125-13.125H54.4208a13.125,13.125,0,0,0,0,26.25h21.875A13.1256,13.1256,0,0,0,89.4208,183.8122Z" fill="currentColor"></path><path d="M99.051,251.8725,83.5847,267.3431a13.1236,13.1236,0,1,0,18.56,18.56l15.4663-15.4706a13.1236,13.1236,0,1,0-18.5595-18.56Z" fill="currentColor"></path><path d="M185.6708,280.0622a13.1258,13.1258,0,0,0-13.125,13.125v21.875a13.125,13.125,0,0,0,26.25,0v-21.875A13.1257,13.1257,0,0,0,185.6708,280.0622Z" fill="currentColor"></path><path d="M272.2907,251.8725a13.1236,13.1236,0,1,0-18.56,18.56l15.4663,15.4706a13.1236,13.1236,0,1,0,18.56-18.56Z" fill="currentColor"></path><path d="M330.0458,183.8122a13.1257,13.1257,0,0,0-13.125-13.125h-21.875a13.125,13.125,0,0,0,0,26.25h21.875A13.1256,13.1256,0,0,0,330.0458,183.8122Z" fill="currentColor"></path><path d="M263.0109,119.5971a13.0824,13.0824,0,0,0,9.28-3.8452l15.4663-15.4663a13.1236,13.1236,0,1,0-18.56-18.56L253.7312,97.1923a13.125,13.125,0,0,0,9.28,22.4048Z" fill="currentColor"></path><path d="M456.9379,401.6714a63.97,63.97,0,0,1-14.9963,7.2055c-19.6448,6.5283-41.8787,2.9566-58.1439-9.8523a68.9311,68.9311,0,0,1-10.835-10.8339c-12.8088-16.2663-16.3806-38.5-9.8523-58.1471a63.8444,63.8444,0,0,1,7.2077-14.9931,8.8036,8.8036,0,0,0-10.1172-13.3034,87.5188,87.5188,0,1,0,110.0372,110.04A8.8,8.8,0,0,0,456.9379,401.6714Z" fill="currentColor"></path></svg></a></li>
+<li class="m-show-m"><a class="m-doc-search-icon" href="#search" onclick="return showSearch()" title="Search"><svg style="height: 0.9rem;" viewbox="0 0 16 16">
+<use href="#m-doc-search-icon-path"></use>
+</svg></a></li>
+</ol>
+</div>
+</div>
+<label class="doc-language"><select aria-label="Documentation language" data-current="0"><option lang="en" selected="selected" value="../en/group__dds__core.html">English</option><option lang="en" value="../ko/group__dds__core.html">Korean</option></select></label></div>
+</div>
+</nav></header>
+<main><article>
+<div class="m-container m-container-inflatable">
+<div class="m-row">
+<div class="m-col-l-10 m-push-l-1">
+<h1>
+<span class="m-breadcrumb"><a href="group__dds__api__modules.html">API modules</a> »</span>
+          Core <span class="m-thin">module</span></h1>
+<p>Common DDS types and services. Use durations for intervals, times for timestamps, and conditions to wait for events.</p>
+<nav class="m-block m-default poxy-toc" id="poxy-toc">
+<h3>Contents</h3>
+<ul>
+<li>
+<a href="#api_usage_notes">Errors and threading</a>
+<ul>
+<li><a href="#api_usage_errors">Handling DDS exceptions</a></li>
+<li><a href="#api_usage_return_codes">C return codes and C++ exceptions</a></li>
+<li><a href="#api_usage_waitsets">Coordinating a WaitSet</a></li>
+<li><a href="#api_usage_callbacks">Working with listeners</a></li>
+<li><a href="#status_checklist">Match status to a callback or getter</a></li>
+<li><a href="#listener_lifecycle">Choose the listener scope and release it</a></li>
+<li><a href="#operation_results">Choose the check for each operation</a></li>
+</ul>
+</li>
+<li>
+              Reference
+              <ul>
+<li><a href="#groups">Modules</a></li>
+<li><a href="#nested-classes">Classes</a></li>
+<li><a href="#typedef-members">Typedefs</a></li>
+</ul>
+</li>
+</ul>
+</nav>
+<section id="api_usage_notes"><h2><a href="#api_usage_notes">Errors and threading</a></h2><p>Check the return value before retrying. Handle the exceptions documented for each operation.</p><section id="api_usage_errors"><h3><a href="#api_usage_errors">Handling DDS exceptions</a></h3><p>Operations that translate native errors throw types derived from <a class="m-doc" href="classdds_1_1core_1_1_exception.html">dds::<wbr/>core::<wbr/>Exception</a>. Catch specific exceptions when you can act on them. Catch the base type where you report failures to the caller.</p><ul><li><a class="m-doc" href="classdds_1_1core_1_1_invalid_argument_error.html">dds::<wbr/>core::<wbr/>InvalidArgumentError</a> and <a class="m-doc" href="classdds_1_1core_1_1_precondition_not_met_error.html">dds::<wbr/>core::<wbr/>PreconditionNotMetError</a> indicate that the application should check the arguments, entity state, or call order.</li><li><a class="m-doc" href="classdds_1_1core_1_1_not_enabled_error.html">dds::<wbr/>core::<wbr/>NotEnabledError</a> indicates that the operation requires an enabled entity.</li><li><a class="m-doc" href="classdds_1_1core_1_1_inconsistent_policy_error.html">dds::<wbr/>core::<wbr/>InconsistentPolicyError</a> indicates that the application should check the policy combination.</li><li><a class="m-doc" href="classdds_1_1core_1_1_immutable_policy_error.html">dds::<wbr/>core::<wbr/>ImmutablePolicyError</a> indicates that the setter rejected a change. Set creation-time policies such as <code>Reliability</code> and <code>History</code> when creating the entity. To change them, recreate the entity with the desired QoS.</li><li><a class="m-doc" href="classdds_1_1core_1_1_timeout_error.html">dds::<wbr/>core::<wbr/>TimeoutError</a> and <a class="m-doc" href="classdds_1_1core_1_1_out_of_resources_error.html">dds::<wbr/>core::<wbr/>OutOfResourcesError</a> indicate that the requested operation could not complete in time or DDS could not obtain resources. The exact condition depends on the function.</li></ul><p>The following function takes an enabled, reliable writer and waits for pending acknowledgments for up to 250 ms. It handles a timeout and leaves other failures for the caller to handle.</p><pre class="m-code"><span class="cp">#include</span> <span class="cpf">&lt;gurumdds/dds.hpp&gt;</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="nc">T</span><span class="o">&gt;</span>
+<span class="k">bool</span> <span class="nf">wait_for_ack</span><span class="p">(</span><span class="nn">dds::pub</span><span class="o">::</span><span class="nc">DataWriter</span><span class="o">&lt;</span><span class="nc">T</span><span class="o">&gt;&amp;</span> <span class="n">writer</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">try</span>
+    <span class="p">{</span>
+        <span class="n">writer</span><span class="p">.</span><span class="nf">wait_for_acknowledgments</span><span class="p">(</span><span class="nn">dds::core</span><span class="o">::</span><span class="nc">Duration</span><span class="o">::</span><span class="nf">from_millisecs</span><span class="p">(</span><span class="mi">250</span><span class="p">));</span>
+
+        <span class="k">return</span> <span class="k">true</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">catch</span> <span class="p">(</span><span class="k">const</span> <span class="nn">dds::core</span><span class="o">::</span><span class="nc">TimeoutError</span><span class="o">&amp;</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="k">false</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span></pre><p>An acknowledgment wait can succeed with no reliable reader matched. Check the matching status in <a class="m-doc" href="group__dds__qos.html#matching_guide">Diagnose a writer and reader that do not exchange data</a> to confirm peers.</p><p>A wait on <a class="m-doc" href="classdds_1_1core_1_1cond_1_1_t_wait_set.html">dds::<wbr/>core::<wbr/>cond::<wbr/>TWaitSet</a> uses a different result contract. It reports triggered conditions through its returned sequence, and an empty sequence does not identify the reason why no condition was reported.</p></section><section id="api_usage_return_codes"><h3><a href="#api_usage_return_codes">C return codes and C++ exceptions</a></h3><p>This table applies when the C++ operation translates the native return code. Check the operation's result contract before catching an exception.</p><table class="m-table"><thead><tr><th>C return code</th><th>C++ exception</th></tr></thead><tbody><tr><td><code>dds_RETCODE_ERROR</code></td><td><a class="m-doc" href="classdds_1_1core_1_1_error.html">dds::<wbr/>core::<wbr/>Error</a></td></tr><tr><td><code>dds_RETCODE_UNSUPPORTED</code></td><td><a class="m-doc" href="classdds_1_1core_1_1_unsupported_error.html">dds::<wbr/>core::<wbr/>UnsupportedError</a></td></tr><tr><td><code>dds_RETCODE_BAD_PARAMETER</code></td><td><a class="m-doc" href="classdds_1_1core_1_1_invalid_argument_error.html">dds::<wbr/>core::<wbr/>InvalidArgumentError</a></td></tr><tr><td><code>dds_RETCODE_PRECONDITION_NOT_MET</code></td><td><a class="m-doc" href="classdds_1_1core_1_1_precondition_not_met_error.html">dds::<wbr/>core::<wbr/>PreconditionNotMetError</a></td></tr><tr><td><code>dds_RETCODE_OUT_OF_RESOURCES</code></td><td><a class="m-doc" href="classdds_1_1core_1_1_out_of_resources_error.html">dds::<wbr/>core::<wbr/>OutOfResourcesError</a></td></tr><tr><td><code>dds_RETCODE_NOT_ENABLED</code></td><td><a class="m-doc" href="classdds_1_1core_1_1_not_enabled_error.html">dds::<wbr/>core::<wbr/>NotEnabledError</a></td></tr><tr><td><code>dds_RETCODE_IMMUTABLE_POLICY</code></td><td><a class="m-doc" href="classdds_1_1core_1_1_immutable_policy_error.html">dds::<wbr/>core::<wbr/>ImmutablePolicyError</a></td></tr><tr><td><code>dds_RETCODE_INCONSISTENT_POLICY</code></td><td><a class="m-doc" href="classdds_1_1core_1_1_inconsistent_policy_error.html">dds::<wbr/>core::<wbr/>InconsistentPolicyError</a></td></tr><tr><td><code>dds_RETCODE_ALREADY_DELETED</code></td><td><a class="m-doc" href="classdds_1_1core_1_1_already_closed_error.html">dds::<wbr/>core::<wbr/>AlreadyClosedError</a></td></tr><tr><td><code>dds_RETCODE_TIMEOUT</code></td><td><a class="m-doc" href="classdds_1_1core_1_1_timeout_error.html">dds::<wbr/>core::<wbr/>TimeoutError</a> when the operation enables timeout exceptions</td></tr><tr><td><code>dds_RETCODE_ILLEGAL_OPERATION</code></td><td><a class="m-doc" href="classdds_1_1core_1_1_illegal_operation_error.html">dds::<wbr/>core::<wbr/>IllegalOperationError</a></td></tr></tbody></table></section><section id="api_usage_waitsets"><h3><a href="#api_usage_waitsets">Coordinating a WaitSet</a></h3><p>Use one waiting thread per WaitSet. Attach or detach conditions before waiting. Keep the WaitSet and condition owners alive until the wait returns. A finite timeout lets the thread check for shutdown. For each returned condition, read its entity status or take the matching samples.</p></section><section id="api_usage_callbacks"><h3><a href="#api_usage_callbacks">Working with listeners</a></h3><p>The application owns the listener. Keep it alive while registered and until its callbacks finish. Synchronize state shared with other threads. A callback can hand longer work to an application worker. Copy the worker’s sample data before releasing <code>LoanedSamples</code>.</p><p>On the subscription side, an enabled <a class="m-doc" href="classdds_1_1sub_1_1_subscriber_listener.html#aae00b846fbc662df45e99e45e90da70c">dds::<wbr/>sub::<wbr/>SubscriberListener::<wbr/>on_data_on_readers()</a> takes precedence over a reader's data-available callback. The subscriber callback can call <a class="m-doc" href="classdds_1_1sub_1_1_t_subscriber.html#ac39582614d0a2edd40e8f1b044858a35">dds::<wbr/>sub::<wbr/>TSubscriber::<wbr/>notify_datareaders()</a> to schedule reader callbacks for eligible readers. See <a class="m-doc" href="group__dds__subscription.html#receiving_guide">Receive and select samples</a> for sample access and loan lifetimes.</p><figure class="m-figure"><svg aria-label="With both callbacks enabled, DDS invokes the Subscriber callback first. notify_datareaders schedules the Reader callback for readers that have data." class="poxy-injected-svg" data-dds-diagram="true" height="219" id="poxy-injected-svg-0" role="img" version="1.1" viewbox="0 0 1140 219" width="1140" xmlns="http://www.w3.org/2000/svg"><title id="poxy-injected-svg-0-subscriber-dispatch-en-title">Subscriber and Reader data notifications</title><desc>With both callbacks enabled, DDS invokes the Subscriber callback first. notify_datareaders schedules the Reader callback for readers that have data.</desc><defs><marker id="poxy-injected-svg-0-subscriber-dispatch-en-arrow" markerheight="10" markerunits="userSpaceOnUse" markerwidth="9" orient="auto" refx="9" refy="6" viewbox="0 0 10 12"><path d="M 1,1 L 9,6 L 1,11" fill="none" stroke="#20354B" stroke-width="1.2"></path></marker><marker id="poxy-injected-svg-0-subscriber-dispatch-en-blue" markerheight="9" markerunits="userSpaceOnUse" markerwidth="10" orient="auto" refx="10" refy="5" viewbox="0 0 11 10"><path d="M 0,0 L 11,5 L 0,10 Z" fill="#356B96"></path></marker><marker id="poxy-injected-svg-0-subscriber-dispatch-en-uml" markerheight="15" markerunits="userSpaceOnUse" markerwidth="15" orient="auto" refx="14" refy="7.5" viewbox="0 0 15 15"><path d="M 1,1 L 14,7.5 L 1,14 Z" fill="#FFFFFF" stroke="#20354B" stroke-width="1.15"></path></marker></defs><rect fill="#FFFFFF" height="219" width="1140"></rect><g fill="#20354B" font-family="Arial, Malgun Gothic, sans-serif"><rect fill="#FFFFFF" height="84" stroke="#20354B" stroke-width="1.15" width="233.25" x="24" y="64"></rect><text font-size="16" font-weight="bold" text-anchor="middle" x="140.625" y="100">Data arrives</text><text font-size="15" text-anchor="middle" x="140.625" y="122">Reader history</text><path d="M 257.25 106 H 310.25" fill="none" marker-end="url(#poxy-injected-svg-0-subscriber-dispatch-en-arrow)" stroke="#20354B" stroke-width="1.15"></path><rect fill="#FFFFFF" height="84" stroke="#20354B" stroke-width="1.15" width="233.25" x="310.25" y="64"></rect><text font-size="16" font-weight="bold" text-anchor="middle" x="426.875" y="100">Subscriber</text><text font-family="Consolas, Menlo, monospace" font-size="15" text-anchor="middle" x="426.875" y="122">on_data_on_readers()</text><path d="M 543.5 106 H 596.5" fill="none" marker-end="url(#poxy-injected-svg-0-subscriber-dispatch-en-arrow)" stroke="#20354B" stroke-width="1.15"></path><rect fill="#FFFFFF" height="84" stroke="#20354B" stroke-width="1.15" width="233.25" x="596.5" y="64"></rect><text font-size="16" font-weight="bold" text-anchor="middle" x="713.125" y="100">Application thread</text><text font-family="Consolas, Menlo, monospace" font-size="15" text-anchor="middle" x="713.125" y="122">notify_datareaders()</text><path d="M 829.75 106 H 882.75" fill="none" marker-end="url(#poxy-injected-svg-0-subscriber-dispatch-en-blue)" stroke="#356B96" stroke-width="1.7"></path><rect fill="#EFF5FA" height="84" stroke="#20354B" stroke-width="1.15" width="233.25" x="882.75" y="64"></rect><text font-size="16" font-weight="bold" text-anchor="middle" x="999.375" y="100">DataReader</text><text font-family="Consolas, Menlo, monospace" font-size="15" text-anchor="middle" x="999.375" y="122">on_data_available()</text><text font-size="15" text-anchor="middle" x="570" y="188">Keep both listeners alive while registered. The callbacks in this example set flags for the application.</text></g></svg><figcaption>Subscriber and Reader data notifications</figcaption></figure></section><section id="status_checklist"><h3><a href="#status_checklist">Match status to a callback or getter</a></h3><table class="m-table"><thead><tr><th>Event</th><th>Mask</th><th>Callback or getter</th></tr></thead><tbody><tr><td>A writer gains or loses a match.</td><td><code>publication_matched()</code></td><td><code>on_publication_matched()</code> or <code>publication_matched_status()</code></td></tr><tr><td>A reader gains or loses a match.</td><td><code>subscription_matched()</code></td><td><code>on_subscription_matched()</code> or <code>subscription_matched_status()</code></td></tr><tr><td>New samples are available.</td><td><code>data_available()</code></td><td><code>on_data_available()</code> followed by <code>read()</code> or <code>take()</code></td></tr><tr><td>A reader rejects a sample.</td><td><code>sample_rejected()</code></td><td><code>on_sample_rejected()</code> or <code>sample_rejected_status()</code></td></tr><tr><td>A sample is lost before delivery.</td><td><code>sample_lost()</code></td><td><code>on_sample_lost()</code> or <code>sample_lost_status()</code></td></tr><tr><td>The writer misses its offered deadline.</td><td><code>offered_deadline_missed()</code></td><td><code>on_offered_deadline_missed()</code> or <code>offered_deadline_missed_status()</code></td></tr><tr><td>The reader misses its requested deadline.</td><td><code>requested_deadline_missed()</code></td><td><code>on_requested_deadline_missed()</code> or <code>requested_deadline_missed_status()</code></td></tr><tr><td>A reader requests incompatible QoS.</td><td><code>offered_incompatible_qos()</code></td><td><code>on_offered_incompatible_qos()</code> or <code>offered_incompatible_qos_staus()</code></td></tr><tr><td>A writer offers incompatible QoS.</td><td><code>requested_incompatible_qos()</code></td><td><code>on_requested_incompatible_qos()</code> or <code>requested_incompatible_qos_status()</code></td></tr><tr><td>The writer loses liveliness.</td><td><code>liveliness_lost()</code></td><td><code>on_liveliness_lost()</code> or <code>liveliness_lost_status()</code></td></tr><tr><td>A matched writer changes liveliness.</td><td><code>liveliness_changed()</code></td><td><code>on_liveliness_changed()</code> or <code>liveliness_changed_status()</code></td></tr></tbody></table><p>Share one snapshot if several components need the change count. Reading a match status resets that change count and leaves the cumulative count available. See <a class="m-doc" href="group__dds__qos.html#matching_status">Read the status snapshots</a>.</p></section><section id="listener_lifecycle"><h3><a href="#listener_lifecycle">Choose the listener scope and release it</a></h3><p>Use a typed DataReader or DataWriter listener for one endpoint. Use the Subscriber listener for aggregate data availability. A parent listener receives the callback types and status mask supported by that parent.</p><p>During shutdown, stop handing off new work. Deregister through the entity's listener setter where supported. Let running callbacks finish, finish work that uses loaned samples, then release the loan owners and listener.</p></section><section id="operation_results"><h3><a href="#operation_results">Choose the check for each operation</a></h3><table class="m-table"><thead><tr><th>Operation</th><th>What to check</th></tr></thead><tbody><tr><td><code>DataWriter::wait_for_acknowledgments()</code></td><td>Handle <code>TimeoutError</code> for an expired reliable wait. Confirm the match separately.</td></tr><tr><td><code>DataReader::take()</code></td><td>Check for an empty result and inspect matching, selection, and loss.</td></tr><tr><td><code>ContentFilteredTopic::filter_parameters()</code> setter</td><td>Handle errors from the update and send a sample to verify the active filter.</td></tr></tbody></table></section></section>
+<section id="groups">
+<h2><a href="#groups">Modules</a></h2>
+<dl class="m-doc">
+<dt>module <a class="m-doc" href="group__dds__qos.html">Quality of Service</a></dt>
+<dd>Policies for entity configuration and endpoint compatibility. Each entity QoS type groups its policies. Set them before creating the entity or call its QoS setter.</dd>
+</dl>
+</section>
+<section id="nested-classes">
+<h2><a href="#nested-classes">Classes</a></h2>
+<dl class="m-doc">
+<dt>
+              class <a class="m-doc" href="classdds_1_1core_1_1_already_closed_error.html">dds::core::AlreadyClosedError</a>
+</dt>
+<dd>Reports an operation on an entity already deleted by DDS.</dd>
+<dt>
+              class <a class="m-doc" href="classdds_1_1core_1_1_duration.html">dds::core::Duration</a>
+</dt>
+<dd>Represents an interval in seconds and nanoseconds.</dd>
+<dt>
+              class <a class="m-doc" href="classdds_1_1core_1_1_error.html">dds::core::Error</a>
+</dt>
+<dd>Reports a generic DDS operation failure.</dd>
+<dt>
+              class <a class="m-doc" href="classdds_1_1core_1_1_exception.html">dds::core::Exception</a>
+</dt>
+<dd>Base interface for DDS exceptions.</dd>
+<dt>
+              class <a class="m-doc" href="classdds_1_1core_1_1_illegal_operation_error.html">dds::core::IllegalOperationError</a>
+</dt>
+<dd>Reports an operation that the current context disallows.</dd>
+<dt>
+              class <a class="m-doc" href="classdds_1_1core_1_1_immutable_policy_error.html">dds::core::ImmutablePolicyError</a>
+</dt>
+<dd>Reports an attempt to change an immutable QoS policy.</dd>
+<dt>
+              class <a class="m-doc" href="classdds_1_1core_1_1_inconsistent_policy_error.html">dds::core::InconsistentPolicyError</a>
+</dt>
+<dd>Reports a conflicting combination of QoS policies.</dd>
+<dt>
+              class <a class="m-doc" href="classdds_1_1core_1_1_invalid_argument_error.html">dds::core::InvalidArgumentError</a>
+</dt>
+<dd>Reports an invalid argument passed to a DDS operation.</dd>
+<dt>
+              class <a class="m-doc" href="classdds_1_1core_1_1_invalid_data_error.html">dds::core::InvalidDataError</a>
+</dt>
+<dd>Reports a data value that the requested operation cannot use.</dd>
+<dt>
+              class <a class="m-doc" href="classdds_1_1core_1_1_invalid_downcast_error.html">dds::core::InvalidDowncastError</a>
+</dt>
+<dd>Reports a failed conversion to a more specific DDS type.</dd>
+<dt>
+              class <a class="m-doc" href="classdds_1_1core_1_1_not_enabled_error.html">dds::core::NotEnabledError</a>
+</dt>
+<dd>Reports an operation requiring an enabled entity.</dd>
+<dt>
+              class <a class="m-doc" href="classdds_1_1core_1_1_null_reference_error.html">dds::core::NullReferenceError</a>
+</dt>
+<dd>Reports use of an empty DDS reference.</dd>
+<dt>
+              class <a class="m-doc" href="classdds_1_1core_1_1_out_of_resources_error.html">dds::core::OutOfResourcesError</a>
+</dt>
+<dd>Reports that DDS cannot allocate resources for an operation.</dd>
+<dt>
+              class <a class="m-doc" href="classdds_1_1core_1_1_precondition_not_met_error.html">dds::core::PreconditionNotMetError</a>
+</dt>
+<dd>Reports an unmet DDS operation precondition.</dd>
+<dt>
+<div class="m-doc-template">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename DELEGATE</span></span>&gt;</div>
+              class <a class="m-doc" href="classdds_1_1core_1_1_t_entity.html">dds::core::TEntity</a>
+</dt>
+<dd>Provides common operations on a DDS entity handle.</dd>
+<dt>
+<div class="m-doc-template">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename DELEGATE</span></span>&gt;</div>
+              class <a class="m-doc" href="classdds_1_1core_1_1_t_entity_qos.html">dds::core::TEntityQos</a>
+</dt>
+<dd>Holds the policies for one category of DDS entity.</dd>
+<dt>
+<div class="m-doc-template">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename DELEGATE</span></span>&gt;</div>
+              class <a class="m-doc" href="classdds_1_1core_1_1_t_instance_handle.html">dds::core::TInstanceHandle</a>
+</dt>
+<dd>Identifies a DDS entity or data instance.</dd>
+<dt>
+              class <a class="m-doc" href="classdds_1_1core_1_1_time.html">dds::core::Time</a>
+</dt>
+<dd>Represents a timestamp as seconds and nanoseconds.</dd>
+<dt>
+              class <a class="m-doc" href="classdds_1_1core_1_1_timeout_error.html">dds::core::TimeoutError</a>
+</dt>
+<dd>Reports that a time-limited DDS operation did not finish.</dd>
+<dt>
+<div class="m-doc-template">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename T</span></span>&gt;</div>
+              struct <a class="m-doc" href="structdds_1_1core_1_1_type_support.html">dds::core::TypeSupport</a>
+</dt>
+<dd>Adapter for registering a generated or application-supplied topic type.</dd>
+<dt>
+              class <a class="m-doc" href="classdds_1_1core_1_1_unsupported_error.html">dds::core::UnsupportedError</a>
+</dt>
+<dd>Reports an operation without support in the current binding.</dd>
+<dt>
+<div class="m-doc-template">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename DELEGATE</span></span>&gt;</div>
+              class <a class="m-doc" href="classdds_1_1core_1_1cond_1_1_t_condition.html">dds::core::cond::TCondition</a>
+</dt>
+<dd>Supplies the common interface for <a class="m-doc" href="#ga7bc1f763ff0ef0a2f796e947ffacd2d2">WaitSet</a> conditions.</dd>
+<dt>
+<div class="m-doc-template">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename DELEGATE</span></span>&gt;</div>
+              class <a class="m-doc" href="classdds_1_1core_1_1cond_1_1_t_guard_condition.html">dds::core::cond::TGuardCondition</a>
+</dt>
+<dd>Signals a <a class="m-doc" href="#ga7bc1f763ff0ef0a2f796e947ffacd2d2">WaitSet</a> from application code.</dd>
+<dt>
+<div class="m-doc-template">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename DELEGATE</span></span>&gt;</div>
+              class <a class="m-doc" href="classdds_1_1core_1_1cond_1_1_t_status_condition.html">dds::core::cond::TStatusCondition</a>
+</dt>
+<dd>Signals changes to selected entity statuses.</dd>
+<dt>
+<div class="m-doc-template">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename DELEGATE</span></span>&gt;</div>
+              class <a class="m-doc" href="classdds_1_1core_1_1cond_1_1_t_wait_set.html">dds::core::cond::TWaitSet</a>
+</dt>
+<dd>Waits for attached conditions to become active.</dd>
+<dt>
+<div class="m-doc-template">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename D</span></span>&gt;</div>
+              class <a class="m-doc" href="classdds_1_1core_1_1status_1_1_t_inconsistent_topic_status.html">dds::core::status::TInconsistentTopicStatus</a>
+</dt>
+<dd>Reports encounters with a conflicting definition of the same named topic.</dd>
+<dt>
+<div class="m-doc-template">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename D</span></span>&gt;</div>
+              class <a class="m-doc" href="classdds_1_1core_1_1status_1_1_t_liveliness_changed_status.html">dds::core::status::TLivelinessChangedStatus</a>
+</dt>
+<dd>Tracks matched writers changing between alive and not alive.</dd>
+<dt>
+<div class="m-doc-template">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename D</span></span>&gt;</div>
+              class <a class="m-doc" href="classdds_1_1core_1_1status_1_1_t_liveliness_lost_status.html">dds::core::status::TLivelinessLostStatus</a>
+</dt>
+<dd>Counts losses of writer liveliness.</dd>
+<dt>
+<div class="m-doc-template">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename D</span></span>&gt;</div>
+              class <a class="m-doc" href="classdds_1_1core_1_1status_1_1_t_offered_deadline_missed_status.html">dds::core::status::TOfferedDeadlineMissedStatus</a>
+</dt>
+<dd>Counts missed write deadlines and identifies the latest instance.</dd>
+<dt>
+<div class="m-doc-template">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename D</span></span>&gt;</div>
+              class <a class="m-doc" href="classdds_1_1core_1_1status_1_1_t_offered_incompatible_qos_status.html">dds::core::status::TOfferedIncompatibleQosStatus</a>
+</dt>
+<dd>Reports QoS incompatibilities seen by a writer.</dd>
+<dt>
+<div class="m-doc-template">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename D</span></span>&gt;</div>
+              class <a class="m-doc" href="classdds_1_1core_1_1status_1_1_t_publication_matched_status.html">dds::core::status::TPublicationMatchedStatus</a>
+</dt>
+<dd>Tracks subscriptions matched to a writer.</dd>
+<dt>
+<div class="m-doc-template">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename D</span></span>&gt;</div>
+              class <a class="m-doc" href="classdds_1_1core_1_1status_1_1_t_requested_deadline_missed_status.html">dds::core::status::TRequestedDeadlineMissedStatus</a>
+</dt>
+<dd>Counts missed receive deadlines and identifies the latest instance.</dd>
+<dt>
+<div class="m-doc-template">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename D</span></span>&gt;</div>
+              class <a class="m-doc" href="classdds_1_1core_1_1status_1_1_t_requested_incompatible_qos_status.html">dds::core::status::TRequestedIncompatibleQosStatus</a>
+</dt>
+<dd>Reports QoS incompatibilities seen by a reader.</dd>
+<dt>
+<div class="m-doc-template">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename D</span></span>&gt;</div>
+              class <a class="m-doc" href="classdds_1_1core_1_1status_1_1_t_sample_lost_status.html">dds::core::status::TSampleLostStatus</a>
+</dt>
+<dd>Counts samples lost before the reader could deliver them.</dd>
+<dt>
+<div class="m-doc-template">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename D</span></span>&gt;</div>
+              class <a class="m-doc" href="classdds_1_1core_1_1status_1_1_t_sample_rejected_status.html">dds::core::status::TSampleRejectedStatus</a>
+</dt>
+<dd>Counts samples the reader rejected and identifies the latest reason.</dd>
+<dt>
+<div class="m-doc-template">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename D</span></span>&gt;</div>
+              class <a class="m-doc" href="classdds_1_1core_1_1status_1_1_t_subscription_matched_status.html">dds::core::status::TSubscriptionMatchedStatus</a>
+</dt>
+<dd>Tracks publications matched to a reader.</dd>
+</dl>
+</section>
+<section id="typedef-members">
+<h2><a href="#typedef-members">Typedefs</a></h2>
+<dl class="m-doc">
+<dt>
+              using <a class="m-doc" href="#gaf4aaa31758be91359d0dda2127013c85">Condition</a> = dds::core::cond::detail::Condition
+            </dt>
+<dd>Handle for a condition that can be attached to a <a class="m-doc" href="#ga7bc1f763ff0ef0a2f796e947ffacd2d2">WaitSet</a>.</dd>
+<dt>
+              using <a class="m-doc" href="#ga9c487d701cb3e2131d9da3ddd608a9b4">Entity</a> = dds::core::detail::Entity
+            </dt>
+<dd>Handle with operations shared by DDS entities.</dd>
+<dt>
+              using <a class="m-doc" href="#ga9ec3321e16a0bc4997ca36f9c90f6362">GuardCondition</a> = dds::core::cond::detail::GuardCondition
+            </dt>
+<dd><a class="m-doc" href="#gaf4aaa31758be91359d0dda2127013c85">Condition</a> whose trigger is controlled by the application.</dd>
+<dt>
+              using <a class="m-doc" href="#ga8ee18acd2002fb15f2650f5c7cb055d0">InstanceHandle</a> = dds::core::detail::InstanceHandle
+            </dt>
+<dd>Identifier for a DDS entity or data instance.</dd>
+<dt>
+              using <a class="m-doc" href="#ga4d65825d27f1862f1c0cafa7d13f369e">StatusCondition</a> = TStatusCondition&lt;detail::StatusCondition&gt;
+            </dt>
+<dd><a class="m-doc" href="#gaf4aaa31758be91359d0dda2127013c85">Condition</a> activated by an enabled status of an entity.</dd>
+<dt>
+              using <a class="m-doc" href="#ga7bc1f763ff0ef0a2f796e947ffacd2d2">WaitSet</a> = dds::core::cond::detail::WaitSet
+            </dt>
+<dd>Waits for DDS conditions and returns the handles that became active.</dd>
+</dl>
+</section>
+<section>
+<h2>Typedef documentation</h2>
+<section class="m-doc-details" id="gaf4aaa31758be91359d0dda2127013c85"><div>
+<h3>
+              typedef dds::core::cond::detail::Condition <a class="m-doc-self" href="#gaf4aaa31758be91359d0dda2127013c85">Condition</a>
+</h3>
+<p>Handle for a condition that can be attached to a <a class="m-doc" href="#ga7bc1f763ff0ef0a2f796e947ffacd2d2">WaitSet</a>.</p>
+<aside class="m-note m-default"><h4>See also</h4><p><a class="m-doc" href="classdds_1_1core_1_1cond_1_1_t_condition.html">dds::<wbr/>core::<wbr/>cond::<wbr/>TCondition</a></p></aside>
+</div></section>
+<section class="m-doc-details" id="ga9c487d701cb3e2131d9da3ddd608a9b4"><div>
+<h3>
+              typedef dds::core::detail::Entity <a class="m-doc-self" href="#ga9c487d701cb3e2131d9da3ddd608a9b4">Entity</a>
+</h3>
+<p>Handle with operations shared by DDS entities.</p>
+<aside class="m-note m-default"><h4>See also</h4><p><a class="m-doc" href="classdds_1_1core_1_1_t_entity.html">dds::<wbr/>core::<wbr/>TEntity</a></p></aside>
+</div></section>
+<section class="m-doc-details" id="ga9ec3321e16a0bc4997ca36f9c90f6362"><div>
+<h3>
+              typedef dds::core::cond::detail::GuardCondition <a class="m-doc-self" href="#ga9ec3321e16a0bc4997ca36f9c90f6362">GuardCondition</a>
+</h3>
+<p><a class="m-doc" href="#gaf4aaa31758be91359d0dda2127013c85">Condition</a> whose trigger is controlled by the application.</p>
+<aside class="m-note m-default"><h4>See also</h4><p><a class="m-doc" href="classdds_1_1core_1_1cond_1_1_t_guard_condition.html">dds::<wbr/>core::<wbr/>cond::<wbr/>TGuardCondition</a></p></aside>
+</div></section>
+<section class="m-doc-details" id="ga8ee18acd2002fb15f2650f5c7cb055d0"><div>
+<h3>
+              typedef dds::core::detail::InstanceHandle <a class="m-doc-self" href="#ga8ee18acd2002fb15f2650f5c7cb055d0">InstanceHandle</a>
+</h3>
+<p>Identifier for a DDS entity or data instance.</p>
+<aside class="m-note m-default"><h4>See also</h4><p><a class="m-doc" href="classdds_1_1core_1_1_t_instance_handle.html">dds::<wbr/>core::<wbr/>TInstanceHandle</a></p></aside>
+</div></section>
+<section class="m-doc-details" id="ga4d65825d27f1862f1c0cafa7d13f369e"><div>
+<h3>
+              typedef TStatusCondition&lt;detail::StatusCondition&gt; <a class="m-doc-self" href="#ga4d65825d27f1862f1c0cafa7d13f369e">StatusCondition</a>
+</h3>
+<p><a class="m-doc" href="#gaf4aaa31758be91359d0dda2127013c85">Condition</a> activated by an enabled status of an entity.</p>
+<aside class="m-note m-default"><h4>See also</h4><p><a class="m-doc" href="classdds_1_1core_1_1cond_1_1_t_status_condition.html">dds::<wbr/>core::<wbr/>cond::<wbr/>TStatusCondition</a></p></aside>
+</div></section>
+<section class="m-doc-details" id="ga7bc1f763ff0ef0a2f796e947ffacd2d2"><div>
+<h3>
+              typedef dds::core::cond::detail::WaitSet <a class="m-doc-self" href="#ga7bc1f763ff0ef0a2f796e947ffacd2d2">WaitSet</a>
+</h3>
+<p>Waits for DDS conditions and returns the handles that became active.</p>
+<aside class="m-note m-default"><h4>See also</h4><p><a class="m-doc" href="classdds_1_1core_1_1cond_1_1_t_wait_set.html">dds::<wbr/>core::<wbr/>cond::<wbr/>TWaitSet</a></p></aside>
+</div></section>
+</section>
+</div>
+</div>
+</div>
+</article></main>
+<div class="m-doc-search" id="search">
+<a href="#!" onclick="return hideSearch()"></a>
+<div class="m-container">
+<div class="m-row">
+<div class="m-col-m-8 m-push-m-2">
+<div class="m-doc-search-header m-text m-small">
+<div><span class="m-label m-default">Tab</span> / <span class="m-label m-default">T</span> to search, <span class="m-label m-default">Esc</span> to close</div>
+<div id="search-symbolcount">…</div>
+</div>
+<div class="m-doc-search-content">
+<form>
+<input autocomplete="off" autofocus="autofocus" disabled="disabled" id="search-input" name="q" placeholder="Loading …" spellcheck="false" type="search"/>
+</form>
+<noscript class="m-text m-danger m-text-center">Unlike everything else in the docs, the search functionality <em>requires</em> JavaScript.</noscript>
+<div class="m-text m-dim m-text-center" id="search-help">
+<p class="m-noindent">Search for symbols, directories, files, pages or
+            modules. You can omit any prefix from the symbol or file path; adding a
+            <code>:</code> or <code>/</code> suffix lists all members of given symbol or
+            directory.</p>
+<p class="m-noindent">Use <span class="m-label m-dim">↓</span>
+            / <span class="m-label m-dim">↑</span> to navigate through the list,
+            <span class="m-label m-dim">Enter</span> to go.
+            <span class="m-label m-dim">Tab</span> autocompletes common prefix, you can
+            copy a link to the result using <span class="m-label m-dim">⌘</span>
+<span class="m-label m-dim">L</span> while <span class="m-label m-dim">⌘</span>
+<span class="m-label m-dim">M</span> produces a Markdown link.</p>
+</div>
+<div class="m-text m-warning m-text-center" id="search-notfound">Sorry, nothing was found.</div>
+<ul id="search-results"></ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src="search-v2.js"></script><script>install_mcss_search_shim();</script>
+<script async="async" src="searchdata-v2.js"></script>
+<footer><nav>
+<div class="m-container">
+<div class="m-row">
+<div class="m-col-l-10 m-push-l-1">
+<a download="" href="GurumDDS_C++.tagfile.xml" target="_blank" type="text/xml">Doxygen tagfile</a>
+<br/><br/>
+Site generated using <a class="poxy-external" href="https://github.com/marzer/poxy/" target="_blank">Poxy</a>
+</div>
+</div>
+</div>
+</nav></footer>
+</body></html>
