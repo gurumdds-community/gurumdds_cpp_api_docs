@@ -6,6 +6,167 @@
     src: url("PretendardVariable.woff2") format("woff2");
 }
 
+/* Microsoft Visual Studio C/C++ Light and Dark syntax palettes. */
+.dds-cpp-code {
+    --dds-cpp-foreground: light-dark(#000000, #DADADA);
+    color-scheme: light;
+    color: var(--dds-cpp-foreground);
+    background-color: light-dark(#FFFFFF, #1E1E1E);
+}
+
+html.dark-mode .dds-cpp-code,
+.poxy-theme-dark .dds-cpp-code {
+    color-scheme: dark;
+}
+
+@media (prefers-color-scheme: dark) {
+    html:not(.light-mode, .dark-mode, .poxy-theme-light) .dds-cpp-code {
+        color-scheme: dark;
+    }
+}
+
+.doc-header-controls {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    white-space: nowrap;
+}
+
+.doc-header-controls :is(.doc-theme, select) {
+    min-height: 1.75rem;
+}
+
+.doc-theme {
+    --doc-theme-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linejoin='round'%3E%3Cpath d='M20.5 14.2a8.8 8.8 0 0 1-10.7-10.7A8.8 8.8 0 1 0 20.5 14.2Z'/%3E%3C/svg%3E");
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    inline-size: 2rem;
+    padding: 0;
+    font-size: 0;
+    color: var(--page-link-color);
+    background: var(--title-background-color);
+    border: 1px solid var(--title-separator-color);
+    border-radius: .25rem;
+    cursor: pointer;
+}
+
+.doc-theme::before {
+    content: "";
+    flex: 0 0 1.125rem;
+    block-size: 1.125rem;
+    background-color: currentColor;
+    mask: var(--doc-theme-icon) center / contain no-repeat;
+}
+
+.doc-theme[aria-pressed="true"] {
+    --doc-theme-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round'%3E%3Ccircle cx='12' cy='12' r='4'/%3E%3Cpath d='M12 2v2m0 16v2M2 12h2m16 0h2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4m0-14.2-1.4 1.4M6.3 17.7l-1.4 1.4'/%3E%3C/svg%3E");
+}
+
+.doc-theme:hover {
+    background-color: var(--memdef-proto-background-color);
+    border-color: currentColor;
+}
+
+.doc-theme:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 2px;
+}
+
+@media (forced-colors: active) {
+    .doc-theme::before {
+        forced-color-adjust: none;
+        background-color: ButtonText;
+    }
+}
+
+@media (max-width: 420px) {
+    #projectrow:has(.doc-header-controls) #projectname {
+        font-size: 1.25rem;
+    }
+
+    #projectrow:has(.doc-header-controls) #projectname::before {
+        width: 32px;
+        height: 32px;
+    }
+
+    #projectrow .doc-language-cell:has(.doc-header-controls) {
+        padding-inline: .375rem .75rem;
+    }
+}
+
+.fragment.dds-cpp-code .line :where(a.code, a.codeRef, span.keyword, span.keywordtype,
+    span.keywordflow, span.comment, span.preprocessor, span.stringliteral, span.charliteral) {
+    color: inherit;
+}
+
+.dds-cpp-code [data-cpp-color="punctuation"],
+.dds-cpp-code [data-cpp-color="global"],
+.dds-cpp-code [data-cpp-color="field"] {
+    color: var(--dds-cpp-foreground);
+}
+
+.dds-cpp-code [data-cpp-color="directive"] {
+    color: light-dark(#808080, #9A9A9A);
+}
+
+.dds-cpp-code [data-cpp-color="header"],
+.dds-cpp-code [data-cpp-color="string"] {
+    color: light-dark(#A31515, #CE9178);
+}
+
+.dds-cpp-code [data-cpp-color="comment"] {
+    color: light-dark(#008000, #57A64A);
+}
+
+.dds-cpp-code [data-cpp-color="macro"],
+.fragment.dds-cpp-code .line a.hl_define {
+    color: light-dark(#8A1BFF, #BEB7FF);
+}
+
+.dds-cpp-code [data-cpp-color="keyword"] {
+    color: light-dark(#0000FF, #569CD6);
+}
+
+.dds-cpp-code [data-cpp-color="control"] {
+    color: light-dark(#8F08C4, #D8A0DF);
+}
+
+.dds-cpp-code [data-cpp-color="namespace"],
+.fragment.dds-cpp-code .line a.hl_namespace {
+    color: light-dark(#000000, #C8C8C8);
+}
+
+.dds-cpp-code [data-cpp-color="type"],
+.dds-cpp-code [data-cpp-color="class-template"],
+.fragment.dds-cpp-code .line a:is(.hl_class, .hl_struct, .hl_union, .hl_typedef, .hl_enumeration, .hl_concept) {
+    color: light-dark(#2B91AF, #4EC9B0);
+}
+
+.dds-cpp-code [data-cpp-color="function"],
+.dds-cpp-code [data-cpp-color="method"],
+.fragment.dds-cpp-code .line a.hl_function {
+    color: light-dark(#74531F, #DCDCAA);
+}
+
+.dds-cpp-code [data-cpp-color="enumerator"],
+.fragment.dds-cpp-code .line a.hl_enumvalue {
+    color: light-dark(#000000, #B5CEA8);
+}
+
+.dds-cpp-code [data-cpp-color="local"],
+.dds-cpp-code [data-cpp-color="parameter"] {
+    color: light-dark(#1F377F, #9CDCFE);
+}
+
+.dds-cpp-code [data-cpp-color="escape"] {
+    color: light-dark(#B776FB, #FFD68F);
+}
+
+.dds-cpp-code [data-cpp-color="number"] {
+    color: light-dark(#098658, #B5CEA8);
+}
+
 :root,
 html.dark-mode,
 html:not(.dark-mode) {
@@ -50,6 +211,28 @@ html:not(.dark-mode) {
 
 .dds-directory-page .contents td :is(code, tt, .tt):not(p *) {
     font-size: inherit;
+}
+
+.contents :is(.dds-table-scroll, .memproto) {
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+@media (max-width: 767px) {
+    .contents .memitem {
+        display: block !important; /* Override Doxygen's table layout for member definitions. */
+    }
+
+    .contents .memtitle {
+        box-sizing: border-box;
+        max-width: 100%;
+        overflow-wrap: anywhere;
+    }
+
+    .contents :where(p, li, dd) :is(code, tt, .tt) {
+        white-space: normal;
+        overflow-wrap: anywhere;
+    }
 }
 
 main article :where(p, ul, ol, dd, th, td, blockquote) {
@@ -114,7 +297,7 @@ figure.m-figure:has(> img[src^="dds-diagram-"], > svg[data-dds-diagram]) > figca
 }
 
 /* Separate a heading from the preceding prose, list, or code block. */
-.contents :is(.textblock, .memdoc) :is(p, ul, ol, dl, table, figure, .fragment, .image) + .doxsection,
+.contents :is(.textblock, .memdoc) :is(p, ul, ol, dl, table, figure, .fragment, .image, .dds-table-scroll) + .doxsection,
 main article :is(section[id], p, ul, ol, dl, table, figure, pre) + section[id]:not(.m-doc-details) > :is(h2, h3, h4, h5, h6) {
     margin-block-start: 1.75rem;
 }
@@ -139,11 +322,6 @@ main article :is(p, pre) + p {
 .dds-inheritance > figcaption {
     margin-block-start: .5rem;
     font-size: .9em;
-}
-
-/* The class brief is already included in the detailed description. */
-.contents > p:has(> code) + p:has(> a[href="#details"]) {
-    display: none;
 }
 
 .dds-class-include {

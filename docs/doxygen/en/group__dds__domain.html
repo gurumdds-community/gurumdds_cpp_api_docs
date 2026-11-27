@@ -18,7 +18,7 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script src="search/searchdata.js" type="text/javascript"></script>
 <script src="search/search.js" type="text/javascript"></script>
-<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+<script src="../theme.js" type="text/javascript"></script><link href="doxygen.css" rel="stylesheet" type="text/css"/>
 <link href="ReferenceBranding.css" rel="stylesheet" type="text/css"/>
 <script defer="True" src="ReferenceUi.js"></script><link href="../en/group__dds__domain.html" hreflang="en" rel="alternate"/><link href="../ko/group__dds__domain.html" hreflang="ko" rel="alternate"/><link href="../language.css" rel="stylesheet"/><script defer="defer" src="../language.js"></script></head>
 <body>
@@ -31,7 +31,7 @@
    <div id="projectname">GurumDDS C++ API Reference<span id="projectnumber"> 1.3.2</span>
    </div>
   </td>
- <td class="doc-language-cell"><label class="doc-language"><select aria-label="Documentation language" data-current="0"><option lang="en" selected="selected" value="../en/group__dds__domain.html">English</option><option lang="en" value="../ko/group__dds__domain.html">Korean</option></select></label></td></tr>
+ <td class="doc-language-cell"><div class="doc-header-controls"><button aria-pressed="false" class="doc-theme" type="button">Dark mode</button><label class="doc-language"><select aria-label="Documentation language" data-current="0"><option lang="en" selected="selected" value="../en/group__dds__domain.html">English</option><option lang="en" value="../ko/group__dds__domain.html">Korean</option></select></label></div></td></tr>
  </tbody>
 </table>
 </div>
@@ -115,69 +115,72 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('group__dds__do
 </div><!--header-->
 <div class="contents">
 
-<p>Domain participants and remote participant discovery.  
-<a href="#details">More...</a></p>
-<table class="memberdecls">
+
+<a id="details" name="details"></a><h2 class="groupheader" id="header-details">Detailed Description</h2><div class="textblock"><p>Domain participants and remote participant discovery. </p>
+<p>A participant owns the topics, publishers, and subscribers it creates in its DDS domain.</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__dds__qos.html#matching_guide" title="Diagnose a writer and reader that do not exchange data">Diagnose a writer and reader that do not exchange data</a></dd></dl>
+<h1 class="doxsection"><a class="anchor" id="getting_started"></a>
+Send and receive your first sample</h1>
+<p>Start with the Linux build that matches how you obtained GurumDDS.</p>
+<h2 class="doxsection"><a class="anchor" id="getting_started_prepare"></a>
+Choose a build path</h2>
+<div class="dds-table-scroll"><table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Build path  </th><th class="markdownTableHeadNone">Requirements  </th><th class="markdownTableHeadNone">Starting point  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">C++ binding source  </td><td class="markdownTableBodyNone">GCC with C++11, CMake 3.13 or later, Conan 1.x, and access to <span class="tt">dds/3.2.36@gurumnet/stable</span>.  </td><td class="markdownTableBodyNone"><a class="el" href="#getting_started_build" title="Build the C++ binding and run a reliable round trip on Linux">Build the C++ binding and run a reliable round trip on Linux</a>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Application with an installed SDK  </td><td class="markdownTableBodyNone">A C++11 compiler, CMake 3.18 or later, GurumIDL, and the native SDK and C++ binding.  </td><td class="markdownTableBodyNone"><a class="el" href="#installed_cpp_project" title="Build against an installed SDK">Build against an installed SDK</a>  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Community examples  </td><td class="markdownTableBodyNone">A C++17 compiler, CMake 3.20 or later, and the GurumDDS 3.2 SDK with GurumIDL and the C++ binding.  </td><td class="markdownTableBodyNone"><a class="el" href="dds_examples_new.html#dds_examples_new_build" title="Build the New examples">Build the New examples</a>  </td></tr>
+</table></div>
+<p>This reference describes C++ binding 1.3.2. Match the architecture and compiler ABI of the SDK, binding, and application. Set up any license required by your SDK before running the programs.</p>
+<h2 class="doxsection"><a class="anchor" id="getting_started_build"></a>
+Build the C++ binding and run a reliable round trip on Linux</h2>
+<p>Use a Conan 1 profile that matches your GCC version, architecture, and C++ standard library ABI. Run these commands from the C++ binding repository root. Replace <span class="tt">gcc-release</span> with your profile name.</p>
+<div class="fragment"><div class="line">conan install . -if build/tutorials --build=missing -pr gcc-release -s build_type=Release</div>
+<div class="line">cmake -S . -B build/tutorials -DCMAKE_BUILD_TYPE=Release -DBUILD_EXAMPLE=ON</div>
+<div class="line">cmake --build build/tutorials --target example_cpp_programming_howto</div>
+<div class="line">./build/tutorials/bin/example_cpp_programming_howto</div>
+</div><!-- fragment --><p>With CMake 4, add <span class="tt">-DCMAKE_POLICY_VERSION_MINIMUM=3.5</span> to the configure command for the repository's older CMake files.</p>
+<p>If the loader cannot find a shared library, add the directories containing <span class="tt">libgurumdds.so</span> and <span class="tt">libgurumdds_psm_cxx.so</span> to <span class="tt">LD_LIBRARY_PATH</span>. The Release build also copies the binding and headers into <span class="tt">output/lib</span> and <span class="tt">output/include</span> for use by a separate project.</p>
+<p>The program creates both endpoints in one process, waits for a match, and verifies one read and one take. It prints the following line. See <a class="el" href="group__dds__tutorial__reader.html#dds_tutorial_src_reliable_receive" title="Reliable send and receive">Reliable send and receive</a> for the code.</p>
+<div class="fragment"><div class="line">Received: Hello from the how-to</div>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="getting_started_run"></a>
+Run the two-process example on Linux</h2>
+<p>Build the legacy Publisher and Subscriber in the same build directory.</p>
+<div class="fragment"><div class="line">cmake --build build/tutorials --target sub_cpp pub_cpp</div>
+</div><!-- fragment --><p>Run the Subscriber in one terminal.</p>
+<div class="fragment"><div class="line">./build/tutorials/bin/sub_cpp</div>
+</div><!-- fragment --><p>Run the Publisher from the repository root in a second terminal with the same SDK runtime setup.</p>
+<div class="fragment"><div class="line">./build/tutorials/bin/pub_cpp</div>
+</div><!-- fragment --><p>Both processes join domain 0 and use the <span class="tt">HelloWorld</span> Topic. The Subscriber prints <span class="tt">Hello!</span> when it receives the sample. The legacy Publisher waits 500 ms and writes once. See <a class="el" href="group__dds__qos.html#matching_guide" title="Diagnose a writer and reader that do not exchange data">Diagnose a writer and reader that do not exchange data</a> if discovery takes longer. See <a class="el" href="dds_example_legacy_pub.html" title="Hello World Publisher">Hello World Publisher</a> and <a class="el" href="dds_example_legacy_sub.html" title="Hello World Subscriber">Hello World Subscriber</a> for the source.</p>
+<h2 class="doxsection"><a class="anchor" id="installed_cpp_project"></a>
+Build against an installed SDK</h2>
+<p>Start with <a class="el" href="group__dds__tutorial__idl__example.html" title="Generate and use C++ code from IDL">Generate and use C++ code from IDL</a> to generate a C++ type and register a Topic. Its CMake project uses <span class="tt">GURUMDDS_ROOT</span> for the native SDK and <span class="tt">GURUMDDS_CXX_ROOT</span> for the C++ binding. It compiles the generated type-support source and links the two libraries. If your application already has generated type support, use the same include and link settings.</p>
+<p>To verify communication with an installed SDK, build <a class="el" href="dds_example_new_helloworld.html" title="Hello World">Hello World</a> with a C++17 compiler and run its Subscriber and Publisher. The Subscriber prints <span class="tt">Received HelloWorld</span> and the payload. </p>
+</div><div class="dds-table-scroll"><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-nested-classes"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:dds_3A_3Adomain_3A_3ADomainParticipantListener" id="r_dds_3A_3Adomain_3A_3ADomainParticipantListener"><td class="memItemLeft">class  </td><td class="memItemRight"><a class="el" href="classdds_1_1domain_1_1_domain_participant_listener.html">dds::domain::DomainParticipantListener</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft"> </td><td class="mdescRight">Combines topic, publication, and subscription callbacks at participant scope.  <a href="classdds_1_1domain_1_1_domain_participant_listener.html#details">More...</a><br/></td></tr>
 <tr class="memitem:dds_3A_3Adomain_3A_3ATDomainParticipant_3C_20DELEGATE_20_3E" id="r_dds_3A_3Adomain_3A_3ATDomainParticipant_3C_20DELEGATE_20_3E"><td class="memItemLeft">class  </td><td class="memItemRight"><a class="el" href="classdds_1_1domain_1_1_t_domain_participant.html">dds::domain::DomainParticipant</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft"> </td><td class="mdescRight">Joins a DDS domain and owns the entities created within it.  <a href="classdds_1_1domain_1_1_t_domain_participant.html#details">More...</a><br/></td></tr>
-</table><table class="memberdecls">
+</table></div><div class="dds-table-scroll"><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-typedef-members"><a id="typedef-members" name="typedef-members"></a>
 Typedefs</h2></td></tr>
 <tr class="memitem:gab1bd86ffa9ac0869166a446dd0120f3d" id="r_gab1bd86ffa9ac0869166a446dd0120f3d"><td class="memItemLeft">typedef ::dds::domain::detail::DomainParticipant </td><td class="memItemRight"><a class="el" href="#gab1bd86ffa9ac0869166a446dd0120f3d">dds::domain::DomainParticipant</a></td></tr>
 <tr class="memdesc:gab1bd86ffa9ac0869166a446dd0120f3d"><td class="mdescLeft"> </td><td class="mdescRight">Domain participant handle used to join and manage a DDS domain.  <br/></td></tr>
 <tr class="memitem:ga4b95ba7209610a3a50b4adfc5dc5f0be" id="r_ga4b95ba7209610a3a50b4adfc5dc5f0be"><td class="memItemLeft">typedef dds::domain::qos::detail::DomainParticipantQos </td><td class="memItemRight"><a class="el" href="#ga4b95ba7209610a3a50b4adfc5dc5f0be">dds::domain::qos::DomainParticipantQos</a></td></tr>
 <tr class="memdesc:ga4b95ba7209610a3a50b4adfc5dc5f0be"><td class="mdescLeft"> </td><td class="mdescRight">QoS policy set used to configure a participant.  <br/></td></tr>
-</table><table class="memberdecls">
+</table></div><div class="dds-table-scroll"><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-func-members"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:gae23170582a817039c4baf6460f690170" id="r_gae23170582a817039c4baf6460f690170"><td class="memItemLeft"><a class="el" href="#gab1bd86ffa9ac0869166a446dd0120f3d">DomainParticipant</a> </td><td class="memItemRight"><a class="el" href="#gae23170582a817039c4baf6460f690170">dds::domain::find</a> (int32_t id)</td></tr>
 <tr class="memdesc:gae23170582a817039c4baf6460f690170"><td class="mdescLeft"> </td><td class="mdescRight">Looks up a locally created participant by its domain ID.  <br/></td></tr>
-</table>
-<a id="details" name="details"></a><h2 class="groupheader" id="header-details">Detailed Description</h2>
-<div class="textblock"><p>Domain participants and remote participant discovery. </p>
-<p>A participant owns the topics, publishers, and subscribers it creates in its DDS domain.</p>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__dds__qos.html#matching_guide" title="Diagnose a writer and reader that do not exchange data">Diagnose a writer and reader that do not exchange data</a></dd></dl>
-<h1 class="doxsection"><a class="anchor" id="getting_started"></a>
-Send and receive your first sample</h1>
-<p>Run the reliable tutorial first. It creates both endpoints in one process, waits for a match, then verifies one read and one take.</p>
-<h2 class="doxsection"><a class="anchor" id="getting_started_prepare"></a>
-Choose a build path</h2>
-<table class="markdownTable">
-<tr class="markdownTableHead">
-<th class="markdownTableHeadNone">Build path  </th><th class="markdownTableHeadNone">Requirements  </th><th class="markdownTableHeadNone">Starting point  </th></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">C++ repository  </td><td class="markdownTableBodyNone">C++11, CMake, Conan 1.x, and <span class="tt">dds/3.2.36@gurumnet/stable</span>.  </td><td class="markdownTableBodyNone"><a class="el" href="#getting_started_build" title="Build and run the reliable tutorial">Build and run the reliable tutorial</a>  </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">Installed SDK  </td><td class="markdownTableBodyNone">C++11, CMake 3.18 or later for this example, and the native SDK and binding with the same ABI.  </td><td class="markdownTableBodyNone"><a class="el" href="#installed_cpp_project" title="Build against the installed SDK">Build against the installed SDK</a>  </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">Community examples  </td><td class="markdownTableBodyNone">C++17, CMake 3.20 or later, and the GurumDDS 3.2 SDK with GurumIDL.  </td><td class="markdownTableBodyNone"><a class="el" href="dds_examples_new.html" title="New(C++17)">New(C++17)</a>  </td></tr>
-</table>
-<p>This reference describes C++ binding 1.3.2. Match the SDK and binding architecture and compiler ABI. For MSVC, use the runtime for the selected configuration.</p>
-<h2 class="doxsection"><a class="anchor" id="getting_started_build"></a>
-Build and run the reliable tutorial</h2>
-<p>On Linux, run the following commands from the repository root with a matching Conan profile. Set up the DDS runtime and any required SDK activation first.</p>
-<div class="fragment"><div class="line">mkdir -p build/helloworld</div>
-<div class="line">cd build/helloworld</div>
-<div class="line">conan install --build missing ../..</div>
-<div class="line">cmake -DBUILD_EXAMPLE=ON ../..</div>
-<div class="line">cmake --build . --target example_cpp_programming_howto</div>
-<div class="line">./bin/example_cpp_programming_howto</div>
-</div><!-- fragment --><p>On Windows, run <span class="tt">./build-msvc.ps1 -build_type Release</span> for MSVC 2022 or <span class="tt">./build-mingw.ps1</span> for MinGW-w64 with a matching Conan profile. Run <span class="tt">example_cpp_programming_howto.exe</span> from the build's binary directory using the selected configuration.</p>
-<p>If the loader cannot find the libraries, add the SDK and binding runtime directories to <span class="tt">PATH</span> on Windows or <span class="tt">LD_LIBRARY_PATH</span> on Linux. A successful run prints the line below. See <a class="el" href="group__dds__tutorial__reader.html#dds_tutorial_src_reliable_receive" title="Reliable send and receive">Reliable send and receive</a> for the code.</p>
-<div class="fragment"><div class="line">Received: Hello from the how-to</div>
-</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="getting_started_run"></a>
-Run the two-process example</h2>
-<p>Build the <span class="tt">sub_cpp</span> and <span class="tt">pub_cpp</span> targets. Start the subscriber, then run the publisher in a second terminal. Both join domain 0 and use the <span class="tt">HelloWorld</span> topic. The subscriber prints <span class="tt">Hello!</span> when it receives the sample.</p>
-<p>The legacy publisher waits 500 ms and writes once. See <a class="el" href="group__dds__qos.html#matching_guide" title="Diagnose a writer and reader that do not exchange data">Diagnose a writer and reader that do not exchange data</a> if discovery takes longer. The programs are in <a class="el" href="dds_example_legacy_pub.html" title="Hello World Publisher">Hello World Publisher</a> and <a class="el" href="dds_example_legacy_sub.html" title="Hello World Subscriber">Hello World Subscriber</a>.</p>
-<h2 class="doxsection"><a class="anchor" id="installed_cpp_project"></a>
-Build against the installed SDK</h2>
-<p>Use the standalone project in <a class="el" href="group__dds__tutorial__idl__example.html" title="Generate and use C++ code from IDL">Generate and use C++ code from IDL</a>. Its CMake file locates the SDK headers and library with <span class="tt">GURUMDDS_ROOT</span> and the C++ binding headers and library with <span class="tt">GURUMDDS_CXX_ROOT</span>. It links the binding and <span class="tt">gurumdds</span>.</p>
-<p>For an application with generated type support already available, reuse the include and link settings and compile the generated type-support source with your application. Add the runtime library directories before running it. </p>
-</div><a id="doc-typedef-members" name="doc-typedef-members"></a><h2 class="groupheader" id="header-doc-typedef-members">Typedef Documentation</h2>
+</table></div>
+
+<a id="doc-typedef-members" name="doc-typedef-members"></a><h2 class="groupheader" id="header-doc-typedef-members">Typedef Documentation</h2>
 <a id="gab1bd86ffa9ac0869166a446dd0120f3d" name="gab1bd86ffa9ac0869166a446dd0120f3d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gab1bd86ffa9ac0869166a446dd0120f3d">◆ </a></span>DomainParticipant</h2>
 
@@ -212,7 +215,7 @@ Build against the installed SDK</h2>
 
 </div>
 </div>
-<a id="doc-func-members" name="doc-func-members"></a><h2 class="groupheader" id="header-doc-func-members">Function Documentation</h2>
+<a id="doc-func-members" name="doc-func-members"></a><h2 class="groupheader" id="header-doc-func-members">Functions</h2>
 <a id="gae23170582a817039c4baf6460f690170" name="gae23170582a817039c4baf6460f690170"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gae23170582a817039c4baf6460f690170">◆ </a></span>find()</h2>
 
@@ -231,17 +234,17 @@ Build against the installed SDK</h2>
 <p>Looks up a locally created participant by its domain ID. </p>
 <p>Use this operation to recover the C++ handle for a participant created through the C++ binding</p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">id</td><td>DDS domain ID to look up</td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Handle for the matching local participant</dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
+  <div class="dds-table-scroll"><table class="exception">
     <tr><td class="paramname"><a class="el" href="classdds_1_1core_1_1_null_reference_error.html" title="Reports use of an empty DDS reference.">dds::core::NullReferenceError</a></td><td>The participant factory is unavailable </td></tr>
     <tr><td class="paramname"><a class="el" href="classdds_1_1core_1_1_precondition_not_met_error.html" title="Reports an unmet DDS operation precondition.">dds::core::PreconditionNotMetError</a></td><td>The factory contains no participants </td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 

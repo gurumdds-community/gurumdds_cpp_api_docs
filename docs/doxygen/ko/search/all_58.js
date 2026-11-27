@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['알리기_0',['데이터 도착 시 애플리케이션에 알리기',['../group__dds__tutorial__filter.html#dds_tutorial_filter_listener',1,'']]],
-  ['알림_1',['Subscriber와 Reader의 수신 알림',['../group__dds__tutorial__subscriber.html#dds_tutorial_src_subscriber_listener',1,'']]],
-  ['알림_20전달_2',['Subscriber에서 Reader로 데이터 알림 전달',['../group__dds__tutorial__subscriber.html#dds_tutorial_subscriber_notification_order',1,'']]]
+  ['않고_20일괄_20선택_0',['기본 필터를 변경하지 않고 일괄 선택',['../group__dds__subscription.html#receiving_select',1,'']]],
+  ['않은_20sample을_20따로_20take_1',['읽은 sample과 읽지 않은 sample을 따로 take()',['../group__dds__tutorial__reader.html#dds_tutorial_reader_state_masks',1,'']]]
 ];

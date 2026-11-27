@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['추적_0',['추적',['../group__dds__subscription.html#receiving_keyed',1,'처리 및 등록 해제를 통해 instance 추적'],['../group__dds__subscription.html#receiving_instance_timeline',1,'하나의 keyed instance 추적']]]
+  ['최근_20sample_20두_20개_20유지_0',['key별 최근 sample 두 개 유지',['../group__dds__howto__qos.html#dds_tutorial_qos_keep_last',1,'']]]
 ];

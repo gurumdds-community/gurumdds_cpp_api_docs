@@ -18,7 +18,7 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script src="search/searchdata.js" type="text/javascript"></script>
 <script src="search/search.js" type="text/javascript"></script>
-<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+<script src="../theme.js" type="text/javascript"></script><link href="doxygen.css" rel="stylesheet" type="text/css"/>
 <link href="ReferenceBranding.css" rel="stylesheet" type="text/css"/>
 <script defer="True" src="ReferenceUi.js"></script><link href="../en/classdds_1_1core_1_1cond_1_1_t_condition.html" hreflang="en" rel="alternate"/><link href="../ko/classdds_1_1core_1_1cond_1_1_t_condition.html" hreflang="ko" rel="alternate"/><link href="../language.css" rel="stylesheet"/><script defer="defer" src="../language.js"></script></head>
 <body>
@@ -31,7 +31,7 @@
    <div id="projectname">GurumDDS C++ API Reference<span id="projectnumber"> 1.3.2</span>
    </div>
   </td>
- <td class="doc-language-cell"><label class="doc-language"><select aria-label="Documentation language" data-current="0"><option lang="en" selected="selected" value="../en/classdds_1_1core_1_1cond_1_1_t_condition.html">English</option><option lang="en" value="../ko/classdds_1_1core_1_1cond_1_1_t_condition.html">Korean</option></select></label></td></tr>
+ <td class="doc-language-cell"><div class="doc-header-controls"><button aria-pressed="false" class="doc-theme" type="button">Dark mode</button><label class="doc-language"><select aria-label="Documentation language" data-current="0"><option lang="en" selected="selected" value="../en/classdds_1_1core_1_1cond_1_1_t_condition.html">English</option><option lang="en" value="../ko/classdds_1_1core_1_1cond_1_1_t_condition.html">Korean</option></select></label></div></td></tr>
  </tbody>
 </table>
 </div>
@@ -117,20 +117,19 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('classdds_1_1co
 
 <p class="dds-class-include"><code>#include &lt;gurumdds/cpp/core/cond/Condition.hpp&gt;</code></p>
 
-<p>Supplies the common interface for <a class="el" href="group__dds__core.html#ga7bc1f763ff0ef0a2f796e947ffacd2d2" title="Waits for DDS conditions and returns the handles that became active.">WaitSet</a> conditions.  
- <a href="#details">More...</a></p>
+
 <a id="details" name="details"></a><h2 class="groupheader" id="header-details">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename DELEGATE&gt;<br/>
 class dds::core::cond::TCondition&lt; DELEGATE &gt;</div><p>Supplies the common interface for <a class="el" href="group__dds__core.html#ga7bc1f763ff0ef0a2f796e947ffacd2d2" title="Waits for DDS conditions and returns the handles that became active.">WaitSet</a> conditions. </p>
 <p>A condition reports a Boolean trigger value. A guard condition exposes an application-controlled signal. A status condition monitors selected statuses on an entity. A read condition looks for samples that match sample, view, and instance state masks.</p>
 <p>Use a <a class="el" href="group__dds__core.html#ga7bc1f763ff0ef0a2f796e947ffacd2d2" title="Waits for DDS conditions and returns the handles that became active.">WaitSet</a> to retrieve triggered conditions, then consult the associated entity for the status or data. A trigger value can change after a wait returns, for example when another operation consumes matching samples.</p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
+  <div class="dds-table-scroll"><table class="tparams">
     <tr><td class="paramname">DELEGATE</td><td><a class="el" href="group__dds__core.html#gaf4aaa31758be91359d0dda2127013c85" title="Handle for a condition that can be attached to a WaitSet.">Condition</a> implementation type </td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
-</div><table class="memberdecls">
+</div><div class="dds-table-scroll"><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-pub-methods"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a1159a356b581e49da6d6d7a2cd27c2d3" id="r_a1159a356b581e49da6d6d7a2cd27c2d3"><td class="memItemLeft"><a id="a1159a356b581e49da6d6d7a2cd27c2d3" name="a1159a356b581e49da6d6d7a2cd27c2d3"></a>
@@ -191,13 +190,13 @@ bool </td><td class="memItemRight"><b>is_nil</b> () const</td></tr>
 <tr class="memdesc:a6e30d68985ca187b16562617d4a7b9f9 inherit pub_methods_classdds_1_1core_1_1_reference"><td class="mdescLeft"> </td><td class="mdescRight">Accesses the stored delegate pointer.  <br/></td></tr>
 <tr class="memitem:a373c3aa4c921f21eabdf3a020ac8ef0c inherit pub_methods_classdds_1_1core_1_1_reference" id="r_a373c3aa4c921f21eabdf3a020ac8ef0c"><td class="memItemLeft"> </td><td class="memItemRight"><a class="el" href="classdds_1_1core_1_1_reference.html#a373c3aa4c921f21eabdf3a020ac8ef0c">operator const DELEGATE_REF_T &amp;</a> () const</td></tr>
 <tr class="memdesc:a373c3aa4c921f21eabdf3a020ac8ef0c inherit pub_methods_classdds_1_1core_1_1_reference"><td class="mdescLeft"> </td><td class="mdescRight">Accesses the stored delegate pointer.  <br/></td></tr>
-</table><table class="memberdecls">
+</table></div><div class="dds-table-scroll"><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-inherited"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_attribs_classdds_1_1core_1_1_reference"><td class="dyn-inherit" colspan="2"><span class="dynarrow"><span class="arrowhead closed"></span></span>Protected Attributes inherited from <a class="el" href="classdds_1_1core_1_1_reference.html">dds::core::Reference&lt; DELEGATE &gt;</a></td></tr>
 <tr class="memitem:ab3a71f25696efba22cf3744cf5826839 inherit pro_attribs_classdds_1_1core_1_1_reference" id="r_ab3a71f25696efba22cf3744cf5826839"><td class="memItemLeft">
 DELEGATE_REF_T </td><td class="memItemRight"><b>impl_</b></td></tr>
-</table>
+</table></div>
 <a id="doc-func-members" name="doc-func-members"></a><h2 class="groupheader" id="header-doc-func-members">Member Functions</h2>
 <a id="a26ea0196098e913ac4fe9a6c14d17750" name="a26ea0196098e913ac4fe9a6c14d17750"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a26ea0196098e913ac4fe9a6c14d17750">◆ </a></span>dispatch()</h2>

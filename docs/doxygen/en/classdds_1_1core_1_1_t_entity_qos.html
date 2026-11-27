@@ -18,7 +18,7 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script src="search/searchdata.js" type="text/javascript"></script>
 <script src="search/search.js" type="text/javascript"></script>
-<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+<script src="../theme.js" type="text/javascript"></script><link href="doxygen.css" rel="stylesheet" type="text/css"/>
 <link href="ReferenceBranding.css" rel="stylesheet" type="text/css"/>
 <script defer="True" src="ReferenceUi.js"></script><link href="../en/classdds_1_1core_1_1_t_entity_qos.html" hreflang="en" rel="alternate"/><link href="../ko/classdds_1_1core_1_1_t_entity_qos.html" hreflang="ko" rel="alternate"/><link href="../language.css" rel="stylesheet"/><script defer="defer" src="../language.js"></script></head>
 <body>
@@ -31,7 +31,7 @@
    <div id="projectname">GurumDDS C++ API Reference<span id="projectnumber"> 1.3.2</span>
    </div>
   </td>
- <td class="doc-language-cell"><label class="doc-language"><select aria-label="Documentation language" data-current="0"><option lang="en" selected="selected" value="../en/classdds_1_1core_1_1_t_entity_qos.html">English</option><option lang="en" value="../ko/classdds_1_1core_1_1_t_entity_qos.html">Korean</option></select></label></td></tr>
+ <td class="doc-language-cell"><div class="doc-header-controls"><button aria-pressed="false" class="doc-theme" type="button">Dark mode</button><label class="doc-language"><select aria-label="Documentation language" data-current="0"><option lang="en" selected="selected" value="../en/classdds_1_1core_1_1_t_entity_qos.html">English</option><option lang="en" value="../ko/classdds_1_1core_1_1_t_entity_qos.html">Korean</option></select></label></div></td></tr>
  </tbody>
 </table>
 </div>
@@ -117,17 +117,16 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('classdds_1_1co
 
 <p class="dds-class-include"><code>#include &lt;gurumdds/cpp/core/TEntityQos.hpp&gt;</code></p>
 
-<p>Holds the policies for one category of DDS entity.  
- <a href="#details">More...</a></p>
+
 <a id="details" name="details"></a><h2 class="groupheader" id="header-details">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename DELEGATE&gt;<br/>
 class dds::core::TEntityQos&lt; DELEGATE &gt;</div><p>Holds the policies for one category of DDS entity. </p>
 <p>Each QoS type supports the policies available for that kind of entity. The default constructor loads the native defaults for the entity type. To start with a particular factory's defaults for new entities, retrieve them from that factory before changing individual policies.</p>
 <p>Use <code><a class="el" href="namespacedds_1_1core_1_1policy.html" title="QoS policies used by DDS entities.">policy(value)</a></code> or the insertion operator to install a policy. The following example prepares a reader QoS with a keep-last depth of four. Pass the resulting QoS to the reader constructor or apply it with the reader's <code>qos()</code> setter, subject to the reader's policy mutability rules.</p>
-<div class="fragment"><div class="line"><a class="code hl_typedef" href="group__dds__subscription.html#gac759142c11b5f0cb2b2a8f6c41405966">dds::sub::qos::DataReaderQos</a> qos;</div>
-<div class="line">qos &lt;&lt; dds::core::policy::History::KeepLast(4);</div>
+<div class="fragment dds-cpp-code"><div class="line"><a class="code hl_typedef" href="group__dds__subscription.html#gac759142c11b5f0cb2b2a8f6c41405966"><span data-cpp-color="namespace">dds</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="namespace">sub</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="namespace">qos</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="type">DataReaderQos</span></a> <span data-cpp-color="local">qos</span><span data-cpp-color="punctuation">;</span></div>
+<div class="line"><span data-cpp-color="local">qos</span> <span data-cpp-color="punctuation">&lt;&lt;</span> <span data-cpp-color="namespace">dds</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="namespace">core</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="namespace">policy</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="type">History</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="method">KeepLast</span><span data-cpp-color="punctuation">(</span><span data-cpp-color="number">4</span><span data-cpp-color="punctuation">);</span></div>
 <div class="ttc" id="agroup__dds__subscription_html_gac759142c11b5f0cb2b2a8f6c41405966"><div class="ttname"><a href="group__dds__subscription.html#gac759142c11b5f0cb2b2a8f6c41405966">dds::sub::qos::DataReaderQos</a></div><div class="ttdeci">dds::sub::qos::detail::DataReaderQos DataReaderQos</div><div class="ttdoc">QoS policy set used to configure a data reader.</div><div class="ttdef"><b>Definition</b> DataReaderQos.hpp:12</div></div>
-</div><!-- fragment --> </div><table class="memberdecls">
+</div><!-- fragment --> </div><div class="dds-table-scroll"><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-pub-methods"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aaa14a481df7f6204cc43b11044979111" id="r_aaa14a481df7f6204cc43b11044979111"><td class="memItemLeft"> </td><td class="memItemRight"><a class="el" href="#aaa14a481df7f6204cc43b11044979111">TEntityQos</a> (const DELEGATE dcps_qos)</td></tr>
@@ -185,13 +184,13 @@ const DELEGATE &amp; </td><td class="memItemRight"><b>delegate</b> () const</td
 <tr class="memitem:a3b691bb7dfa340e55660b78ac9951b22 inherit pub_methods_classdds_1_1core_1_1_value" id="r_a3b691bb7dfa340e55660b78ac9951b22"><td class="memItemLeft">
  </td><td class="memItemRight"><b>operator const DELEGATE &amp;</b> () const</td></tr>
 <tr class="memdesc:a3b691bb7dfa340e55660b78ac9951b22 inherit pub_methods_classdds_1_1core_1_1_value"><td class="mdescLeft"> </td><td class="mdescRight">Cast Operator. <br/></td></tr>
-</table><table class="memberdecls">
+</table></div><div class="dds-table-scroll"><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-inherited"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_attribs_classdds_1_1core_1_1_value"><td class="dyn-inherit" colspan="2"><span class="dynarrow"><span class="arrowhead closed"></span></span>Protected Attributes inherited from <a class="el" href="classdds_1_1core_1_1_value.html">dds::core::Value&lt; DELEGATE &gt;</a></td></tr>
 <tr class="memitem:a524bb581d6961d26653838488712edf4 inherit pro_attribs_classdds_1_1core_1_1_value" id="r_a524bb581d6961d26653838488712edf4"><td class="memItemLeft">
 DELEGATE </td><td class="memItemRight"><b>d_</b></td></tr>
-</table>
+</table></div>
 <a id="doc-constructors" name="doc-constructors"></a><h2 class="groupheader" id="header-doc-constructors">Constructors and Destructors</h2>
 <a id="aaa14a481df7f6204cc43b11044979111" name="aaa14a481df7f6204cc43b11044979111"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aaa14a481df7f6204cc43b11044979111">◆ </a></span>TEntityQos() <span class="overload">[1/3]</span></h2>
@@ -212,9 +211,9 @@ template&lt;typename DELEGATE&gt; </div>
 
 <p>Initializes the C++ policy values from native DDS QoS. </p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">dcps_qos</td><td>Source QoS structure for this entity type </td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 
@@ -239,9 +238,9 @@ template&lt;typename DELEGATE&gt; </div>
 
 <p>Copies the policies for the same entity type. </p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">other</td><td>QoS value to copy </td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 
@@ -269,9 +268,9 @@ template&lt;typename T&gt; </div>
 <p>Initializes this QoS from another entity type. </p>
 <p>The provided topic-to-writer and topic-to-reader conversions start with native endpoint defaults and copy the mapped topic policies. Reader-specific settings such as the time-based filter retain their default values during conversion from a topic.</p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">qos</td><td>QoS value for the source entity type </td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 
@@ -300,9 +299,9 @@ template&lt;typename POLICY&gt; </div>
 <p>Applies a policy to this QoS value. </p>
 <p>This modifies the QoS value. Apply it to an entity separately.</p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">p</td><td>Policy supported by this entity type</td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>This QoS value </dd></dl>
@@ -328,9 +327,9 @@ template&lt;typename DELEGATE&gt; </div>
 
 <p>Assigns policies from a QoS value of the same entity type. </p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">other</td><td>Source QoS value</td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>This QoS value </dd></dl>
@@ -359,9 +358,9 @@ template&lt;typename T&gt; </div>
 <p>Assigns policies from another QoS value. </p>
 <p>Cross-entity assignment changes the policies mapped by the corresponding specialization.</p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">other</td><td>Source QoS value</td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>This QoS value </dd></dl>
@@ -389,9 +388,9 @@ template&lt;typename POLICY&gt; </div>
 
 <p>Copies the requested policy out of this QoS value. </p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[out]</td><td class="paramname">p</td><td>Destination for the supported policy</td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>This QoS value </dd></dl>
@@ -420,9 +419,9 @@ template&lt;typename POLICY&gt; </div>
 <p>Accesses the stored policy for this QoS type. </p>
 <p>This reference exposes the C++ policy. An edit through the reference leaves the native QoS structure unchanged. Pass the edited policy to <code><a class="el" href="namespacedds_1_1core_1_1policy.html" title="QoS policies used by DDS entities.">policy(value)</a></code> before applying the QoS to an entity.</p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
+  <div class="dds-table-scroll"><table class="tparams">
     <tr><td class="paramname">POLICY</td><td>Policy type supported by this QoS value</td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Mutable reference to the corresponding policy </dd></dl>
@@ -450,9 +449,9 @@ template&lt;typename POLICY&gt; </div>
 
 <p>Accesses the stored policy for this QoS type. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
+  <div class="dds-table-scroll"><table class="tparams">
     <tr><td class="paramname">POLICY</td><td>Policy type supported by this QoS value</td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Const reference to the corresponding policy </dd></dl>
@@ -481,15 +480,15 @@ template&lt;typename POLICY&gt; </div>
 <p>Replaces one policy in the QoS value. </p>
 <p>This specialization updates the native policy structure used by entity constructors and setters and the C++ policy exposed by <code><a class="el" href="#a44b7716666cbe19b989e78e3e2d8eb3c" title="Accesses the stored policy for this QoS type.">policy&lt;POLICY&gt;()</a></code>. The QoS value can then be passed to the entity.</p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
+  <div class="dds-table-scroll"><table class="tparams">
     <tr><td class="paramname">POLICY</td><td>Type of policy to store </td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">p</td><td>Policy value to copy</td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>This QoS value </dd></dl>

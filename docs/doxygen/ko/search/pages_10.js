@@ -8,6 +8,5 @@ var searchData=
   ['reliability로_20endpoint_20설정하기_5',['Reliability로 endpoint 설정하기',['../group__dds__howto__qos.html#dds_tutorial_qos_reliable',1,'']]],
   ['reliability_20불일치를_20재현하고_20수정_6',['Reliability 불일치를 재현하고 수정',['../group__dds__qos.html#matching_reliability_example',1,'']]],
   ['reliability_20불일치_20확인하기_7',['Reliability 불일치 확인하기',['../group__dds__howto__qos.html#dds_tutorial_qos_incompatible',1,'']]],
-  ['reliable_20송수신_20튜토리얼_20빌드_20및_20실행_8',['Reliable 송수신 튜토리얼 빌드 및 실행',['../group__dds__domain.html#getting_started_build',1,'']]],
-  ['reliable_20전송과_20수신_9',['reliable 전송과 수신',['../group__dds__tutorial__reader.html#dds_tutorial_src_reliable_receive',1,'']]]
+  ['reliable_20전송과_20수신_8',['reliable 전송과 수신',['../group__dds__tutorial__reader.html#dds_tutorial_src_reliable_receive',1,'']]]
 ];

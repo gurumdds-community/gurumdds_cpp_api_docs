@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['방법_20선택_0',['DataReader 기록에 액세스하는 방법 선택',['../group__dds__subscription.html#receiving_choose',1,'']]],
-  ['방식_20선택_1',['빌드 방식 선택',['../group__dds__domain.html#getting_started_prepare',1,'']]]
+  ['발행된_20sample_20받기_0',['DataReader 참가 전에 발행된 sample 받기',['../group__dds__howto__qos.html#dds_tutorial_qos_late_joiner',1,'']]],
+  ['발행하기_1',['Matching을 확인한 뒤 발행하기',['../group__dds__howto__match.html',1,'']]]
 ];

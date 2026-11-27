@@ -291,7 +291,7 @@ function SearchBox(name, resultsPath, extension) {
       }
 
       if (idx!=-1) {
-        searchResults.Search(searchValue);
+        searchResults.Search(searchValue.replace(/^offered_incompatible_qos_status(?:\(\))?\s*$/i, 'offered_incompatible_qos_staus'));
       } else { // no file with search results => force empty search results
         searchResults.Search('====');
       }

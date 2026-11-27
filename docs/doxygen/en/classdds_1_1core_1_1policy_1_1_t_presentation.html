@@ -18,7 +18,7 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script src="search/searchdata.js" type="text/javascript"></script>
 <script src="search/search.js" type="text/javascript"></script>
-<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+<script src="../theme.js" type="text/javascript"></script><link href="doxygen.css" rel="stylesheet" type="text/css"/>
 <link href="ReferenceBranding.css" rel="stylesheet" type="text/css"/>
 <script defer="True" src="ReferenceUi.js"></script><link href="../en/classdds_1_1core_1_1policy_1_1_t_presentation.html" hreflang="en" rel="alternate"/><link href="../ko/classdds_1_1core_1_1policy_1_1_t_presentation.html" hreflang="ko" rel="alternate"/><link href="../language.css" rel="stylesheet"/><script defer="defer" src="../language.js"></script></head>
 <body>
@@ -31,7 +31,7 @@
    <div id="projectname">GurumDDS C++ API Reference<span id="projectnumber"> 1.3.2</span>
    </div>
   </td>
- <td class="doc-language-cell"><label class="doc-language"><select aria-label="Documentation language" data-current="0"><option lang="en" selected="selected" value="../en/classdds_1_1core_1_1policy_1_1_t_presentation.html">English</option><option lang="en" value="../ko/classdds_1_1core_1_1policy_1_1_t_presentation.html">Korean</option></select></label></td></tr>
+ <td class="doc-language-cell"><div class="doc-header-controls"><button aria-pressed="false" class="doc-theme" type="button">Dark mode</button><label class="doc-language"><select aria-label="Documentation language" data-current="0"><option lang="en" selected="selected" value="../en/classdds_1_1core_1_1policy_1_1_t_presentation.html">English</option><option lang="en" value="../ko/classdds_1_1core_1_1policy_1_1_t_presentation.html">Korean</option></select></label></div></td></tr>
  </tbody>
 </table>
 </div>
@@ -117,14 +117,13 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('classdds_1_1co
 
 <p class="dds-class-include"><code>#include &lt;gurumdds/cpp/core/policy/CorePolicy.hpp&gt;</code></p>
 
-<p>Configures presentation scope and requests coherent or ordered access.  
- <a href="#details">More...</a></p>
+
 <a id="details" name="details"></a><h2 class="groupheader" id="header-details">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename D&gt;<br/>
 class dds::core::policy::TPresentation&lt; D &gt;</div><p>Configures presentation scope and requests coherent or ordered access. </p>
 <p>Set this policy on a publisher or subscriber. The scope identifies whether the presentation rules apply within a single instance or across instances of a topic. Coherent access requests that related updates be made available as a set. Ordered access requests that the middleware preserve their order within the scope.</p>
 <p>The standalone policy defaults to <code>INSTANCE</code> with both flags disabled. The full DDS object model profile is disabled in this binding. In particular, <code><a class="el" href="#a0955e2867beaeb77232d087173e13451" title="Creates a policy with instance scope in the current GurumDDS implementation.">GroupAccessScope()</a></code> creates an <code>INSTANCE</code> policy. </p>
-</div><table class="memberdecls">
+</div><div class="dds-table-scroll"><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-pub-methods"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a40c73e580ead3cee086da571f068c911" id="r_a40c73e580ead3cee086da571f068c911"><td class="memItemLeft"><a id="a40c73e580ead3cee086da571f068c911" name="a40c73e580ead3cee086da571f068c911"></a>
@@ -180,7 +179,7 @@ D &amp; </td><td class="memItemRight"><b>delegate</b> ()</td></tr>
 <tr class="memitem:a3b691bb7dfa340e55660b78ac9951b22 inherit pub_methods_classdds_1_1core_1_1_value" id="r_a3b691bb7dfa340e55660b78ac9951b22"><td class="memItemLeft">
  </td><td class="memItemRight"><b>operator const D &amp;</b> () const</td></tr>
 <tr class="memdesc:a3b691bb7dfa340e55660b78ac9951b22 inherit pub_methods_classdds_1_1core_1_1_value"><td class="mdescLeft"> </td><td class="mdescRight">Cast Operator. <br/></td></tr>
-</table><table class="memberdecls">
+</table></div><div class="dds-table-scroll"><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-pub-static-methods"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a0955e2867beaeb77232d087173e13451" id="r_a0955e2867beaeb77232d087173e13451"><td class="memItemLeft">static <a class="el" href="#a40c73e580ead3cee086da571f068c911">TPresentation</a> </td><td class="memItemRight"><a class="el" href="#a0955e2867beaeb77232d087173e13451">GroupAccessScope</a> (bool coherent=false, bool ordered=false)</td></tr>
@@ -189,7 +188,7 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memdesc:a216d2d0f41f657b3c3c126de68bca8df"><td class="mdescLeft"> </td><td class="mdescRight">Creates a policy with instance access scope.  <br/></td></tr>
 <tr class="memitem:ad4c468abec189b287844df8eb7ff72af" id="r_ad4c468abec189b287844df8eb7ff72af"><td class="memItemLeft">static <a class="el" href="#a40c73e580ead3cee086da571f068c911">TPresentation</a> </td><td class="memItemRight"><a class="el" href="#ad4c468abec189b287844df8eb7ff72af">TopicAccessScope</a> (bool coherent=false, bool ordered=false)</td></tr>
 <tr class="memdesc:ad4c468abec189b287844df8eb7ff72af"><td class="mdescLeft"> </td><td class="mdescRight">Creates a policy with topic access scope.  <br/></td></tr>
-</table><table class="memberdecls">
+</table></div><div class="dds-table-scroll"><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-inherited"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_methods_classdds_1_1core_1_1_value"><td class="dyn-inherit" colspan="2"><span class="dynarrow"><span class="arrowhead closed"></span></span>Protected Member Functions inherited from <a class="el" href="classdds_1_1core_1_1_value.html">dds::core::Value&lt; D &gt;</a></td></tr>
@@ -198,7 +197,7 @@ Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_attribs_classdds_1_1core_1_1_value"><td class="dyn-inherit" colspan="2"><span class="dynarrow"><span class="arrowhead closed"></span></span>Protected Attributes inherited from <a class="el" href="classdds_1_1core_1_1_value.html">dds::core::Value&lt; D &gt;</a></td></tr>
 <tr class="memitem:a524bb581d6961d26653838488712edf4 inherit pro_attribs_classdds_1_1core_1_1_value" id="r_a524bb581d6961d26653838488712edf4"><td class="memItemLeft">
 D </td><td class="memItemRight"><b>d_</b></td></tr>
-</table>
+</table></div>
 <a id="doc-constructors" name="doc-constructors"></a><h2 class="groupheader" id="header-doc-constructors">Constructors and Destructors</h2>
 <a id="ad46f8cef32fb225e7777ee9f8f2c4075" name="ad46f8cef32fb225e7777ee9f8f2c4075"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad46f8cef32fb225e7777ee9f8f2c4075">◆ </a></span>TPresentation() <span class="overload">[1/2]</span></h2>
@@ -228,11 +227,11 @@ template&lt;typename D&gt; </div>
 
 <p>Constructs the presentation policy with explicit settings. </p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">the_access_scope</td><td>Access scope </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">the_coherent_access</td><td>Whether to request coherent access </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">the_ordered_access</td><td>Whether to request ordered access </td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 
@@ -257,9 +256,9 @@ template&lt;typename D&gt; </div>
 
 <p>Copies the presentation policy. </p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">other</td><td>Policy to copy </td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 
@@ -307,9 +306,9 @@ template&lt;typename D&gt; </div>
 
 <p>Sets the presentation access scope. </p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">as</td><td>Policy setting to store</td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>This policy </dd></dl>
@@ -357,9 +356,9 @@ template&lt;typename D&gt; </div>
 
 <p>Configures whether coherent access is requested. </p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">on</td><td>Policy setting to store</td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>This policy </dd></dl>
@@ -397,10 +396,10 @@ template&lt;typename D&gt; </div>
 
 <p>Creates a policy with instance scope in the current GurumDDS implementation. </p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">coherent</td><td>Whether to request coherent access </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">ordered</td><td>Whether to request ordered access</td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Configured presentation policy </dd></dl>
@@ -438,10 +437,10 @@ template&lt;typename D&gt; </div>
 
 <p>Creates a policy with instance access scope. </p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">coherent</td><td>Whether to request coherent access </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">ordered</td><td>Whether to request ordered access</td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Configured presentation policy </dd></dl>
@@ -489,9 +488,9 @@ template&lt;typename D&gt; </div>
 
 <p>Configures whether ordered access is requested. </p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">on</td><td>Policy setting to store</td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>This policy </dd></dl>
@@ -529,10 +528,10 @@ template&lt;typename D&gt; </div>
 
 <p>Creates a policy with topic access scope. </p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">coherent</td><td>Whether to request coherent access </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">ordered</td><td>Whether to request ordered access</td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Configured presentation policy </dd></dl>

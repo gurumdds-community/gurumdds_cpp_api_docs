@@ -18,7 +18,7 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script src="search/searchdata.js" type="text/javascript"></script>
 <script src="search/search.js" type="text/javascript"></script>
-<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+<script src="../theme.js" type="text/javascript"></script><link href="doxygen.css" rel="stylesheet" type="text/css"/>
 <link href="ReferenceBranding.css" rel="stylesheet" type="text/css"/>
 <script defer="True" src="ReferenceUi.js"></script><link href="../en/pub_2discovery_8hpp.html" hreflang="en" rel="alternate"/><link href="../ko/pub_2discovery_8hpp.html" hreflang="ko" rel="alternate"/><link href="../language.css" rel="stylesheet"/><script defer="defer" src="../language.js"></script></head>
 <body>
@@ -31,7 +31,7 @@
    <div id="projectname">GurumDDS C++ API Reference<span id="projectnumber"> 1.3.2</span>
    </div>
   </td>
- <td class="doc-language-cell"><label class="doc-language"><select aria-label="Documentation language" data-current="0"><option lang="en" selected="selected" value="../en/pub_2discovery_8hpp.html">English</option><option lang="en" value="../ko/pub_2discovery_8hpp.html">Korean</option></select></label></td></tr>
+ <td class="doc-language-cell"><div class="doc-header-controls"><button aria-pressed="false" class="doc-theme" type="button">Dark mode</button><label class="doc-language"><select aria-label="Documentation language" data-current="0"><option lang="en" selected="selected" value="../en/pub_2discovery_8hpp.html">English</option><option lang="en" value="../ko/pub_2discovery_8hpp.html">Korean</option></select></label></div></td></tr>
  </tbody>
 </table>
 </div>
@@ -115,17 +115,17 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('pub_2discovery
 </div><!--header-->
 <div class="contents">
 
-<p>Publication-side endpoint discovery and ignore operations.  
-<a href="#details">More...</a></p>
-<div class="textblock"><code>#include &lt;gurumdds/cpp/pub/detail/discovery.hpp&gt;</code><br/>
-</div><table class="memberdecls">
+
+<a id="details" name="details"></a><h2 class="groupheader" id="header-details">Detailed Description</h2><div class="textblock"><p>Publication-side endpoint discovery and ignore operations. </p>
+</div><div class="textblock"><code>#include &lt;gurumdds/cpp/pub/detail/discovery.hpp&gt;</code><br/>
+</div><div class="dds-table-scroll"><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-namespaces"><a id="namespaces" name="namespaces"></a>
 Namespaces</h2></td></tr>
 <tr class="memitem:dds" id="r_dds"><td class="memItemLeft">namespace  </td><td class="memItemRight"><a class="el" href="namespacedds.html">dds</a></td></tr>
 <tr class="memdesc:namespacedds"><td class="mdescLeft"> </td><td class="mdescRight">Root namespace of the GurumDDS C++ API. <br/></td></tr>
 <tr class="memitem:dds_3A_3Apub" id="r_dds_3A_3Apub"><td class="memItemLeft">namespace  </td><td class="memItemRight"><a class="el" href="namespacedds_1_1pub.html">dds::pub</a></td></tr>
 <tr class="memdesc:namespacedds_1_1pub"><td class="mdescLeft"> </td><td class="mdescRight">Publishers, DataWriters, and publication listeners. <br/></td></tr>
-</table><table class="memberdecls">
+</table></div><div class="dds-table-scroll"><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-func-members"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:aee1323e2f432791145523b64a615b9ef" id="r_aee1323e2f432791145523b64a615b9ef"><td class="memItemLeft">void </td><td class="memItemRight"><a class="el" href="namespacedds_1_1pub.html#aee1323e2f432791145523b64a615b9ef">dds::pub::ignore</a> (const <a class="el" href="group__dds__domain.html#gab1bd86ffa9ac0869166a446dd0120f3d">dds::domain::DomainParticipant</a> &amp;dp, const <a class="el" href="group__dds__core.html#ga8ee18acd2002fb15f2650f5c7cb055d0">dds::core::InstanceHandle</a> &amp;handle)</td></tr>
@@ -142,10 +142,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a2a077f46734fa260830ef8f8e4f13a21" id="r_a2a077f46734fa260830ef8f8e4f13a21"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
 <tr class="memitem:a2a077f46734fa260830ef8f8e4f13a21 template"><td class="memItemLeft">const <a class="el" href="namespacedds_1_1topic.html#a50066084d9983a1ba8e61e709e887bee">dds::topic::SubscriptionBuiltinTopicData</a> </td><td class="memItemRight"><a class="el" href="namespacedds_1_1pub.html#a2a077f46734fa260830ef8f8e4f13a21">dds::pub::matched_subscription_data</a> (const <a class="el" href="classdds_1_1pub_1_1_data_writer.html">dds::pub::DataWriter&lt;T&gt;</a>&lt; T &gt; &amp;dw, const <a class="el" href="group__dds__core.html#ga8ee18acd2002fb15f2650f5c7cb055d0">::dds::core::InstanceHandle</a> &amp;h)</td></tr>
 <tr class="memdesc:a2a077f46734fa260830ef8f8e4f13a21"><td class="mdescLeft"> </td><td class="mdescRight">Returns discovery data for a subscription that matches the writer.  <br/></td></tr>
-</table>
-<a id="details" name="details"></a><h2 class="groupheader" id="header-details">Detailed Description</h2>
-<div class="textblock"><p>Publication-side endpoint discovery and ignore operations. </p>
-</div></div><!-- contents -->
+</table></div>
+
+</div><!-- contents -->
 </div><!-- doc-content -->
 <div class="page-nav-panel" id="page-nav">
 <div id="page-nav-resize-handle"></div>

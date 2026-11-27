@@ -18,7 +18,7 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script src="search/searchdata.js" type="text/javascript"></script>
 <script src="search/search.js" type="text/javascript"></script>
-<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+<script src="../theme.js" type="text/javascript"></script><link href="doxygen.css" rel="stylesheet" type="text/css"/>
 <link href="ReferenceBranding.css" rel="stylesheet" type="text/css"/>
 <script defer="True" src="ReferenceUi.js"></script><link href="../en/classdds_1_1core_1_1_t_entity.html" hreflang="en" rel="alternate"/><link href="../ko/classdds_1_1core_1_1_t_entity.html" hreflang="ko" rel="alternate"/><link href="../language.css" rel="stylesheet"/><script defer="defer" src="../language.js"></script></head>
 <body>
@@ -31,7 +31,7 @@
    <div id="projectname">GurumDDS C++ API Reference<span id="projectnumber"> 1.3.2</span>
    </div>
   </td>
- <td class="doc-language-cell"><label class="doc-language"><select aria-label="Documentation language" data-current="0"><option lang="en" selected="selected" value="../en/classdds_1_1core_1_1_t_entity.html">English</option><option lang="en" value="../ko/classdds_1_1core_1_1_t_entity.html">Korean</option></select></label></td></tr>
+ <td class="doc-language-cell"><div class="doc-header-controls"><button aria-pressed="false" class="doc-theme" type="button">Dark mode</button><label class="doc-language"><select aria-label="Documentation language" data-current="0"><option lang="en" selected="selected" value="../en/classdds_1_1core_1_1_t_entity.html">English</option><option lang="en" value="../ko/classdds_1_1core_1_1_t_entity.html">Korean</option></select></label></div></td></tr>
  </tbody>
 </table>
 </div>
@@ -117,17 +117,16 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('classdds_1_1co
 
 <p class="dds-class-include"><code>#include &lt;gurumdds/cpp/core/Entity.hpp&gt;</code></p>
 
-<p>Provides common operations on a DDS entity handle.  
- <a href="#details">More...</a></p>
+
 <a id="details" name="details"></a><h2 class="groupheader" id="header-details">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename DELEGATE&gt;<br/>
 class dds::core::TEntity&lt; DELEGATE &gt;</div><p>Provides common operations on a DDS entity handle. </p>
 <p>Participants, topics, publishers, subscribers, writers, and readers share these operations. A copy of an entity handle shares the same delegate. Entity-specific QoS accessors, listener operations, and status getters belong to the corresponding derived type.</p>
 <p>A handle may be empty. Check it against <span class="tt"><a class="el" href="namespacedds_1_1core.html#a22c3217bb51dfe3db2887417da74d917" title="Empty DDS reference value.">dds::core::null</a></span> before calling members that forward to the delegate.</p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
+  <div class="dds-table-scroll"><table class="tparams">
     <tr><td class="paramname">DELEGATE</td><td><a class="el" href="group__dds__core.html#ga9c487d701cb3e2131d9da3ddd608a9b4" title="Handle with operations shared by DDS entities.">Entity</a> implementation type </td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 </div>
@@ -228,7 +227,7 @@ class dds::core::TEntity&lt; DELEGATE &gt;</div><p>Provides common operations on
 </g>
 </g>
 </svg></div><figcaption>Inheritance diagram</figcaption></figure>
-<table class="memberdecls">
+<div class="dds-table-scroll"><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-pub-methods"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a36ba1fa6cb7c1a670658adc0fa806122" id="r_a36ba1fa6cb7c1a670658adc0fa806122"><td class="memItemLeft"><a id="a36ba1fa6cb7c1a670658adc0fa806122" name="a36ba1fa6cb7c1a670658adc0fa806122"></a>
@@ -295,13 +294,13 @@ bool </td><td class="memItemRight"><b>is_nil</b> () const</td></tr>
 <tr class="memdesc:a6e30d68985ca187b16562617d4a7b9f9 inherit pub_methods_classdds_1_1core_1_1_reference"><td class="mdescLeft"> </td><td class="mdescRight">Accesses the stored delegate pointer.  <br/></td></tr>
 <tr class="memitem:a373c3aa4c921f21eabdf3a020ac8ef0c inherit pub_methods_classdds_1_1core_1_1_reference" id="r_a373c3aa4c921f21eabdf3a020ac8ef0c"><td class="memItemLeft"> </td><td class="memItemRight"><a class="el" href="classdds_1_1core_1_1_reference.html#a373c3aa4c921f21eabdf3a020ac8ef0c">operator const DELEGATE_REF_T &amp;</a> () const</td></tr>
 <tr class="memdesc:a373c3aa4c921f21eabdf3a020ac8ef0c inherit pub_methods_classdds_1_1core_1_1_reference"><td class="mdescLeft"> </td><td class="mdescRight">Accesses the stored delegate pointer.  <br/></td></tr>
-</table><table class="memberdecls">
+</table></div><div class="dds-table-scroll"><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-inherited"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_attribs_classdds_1_1core_1_1_reference"><td class="dyn-inherit" colspan="2"><span class="dynarrow"><span class="arrowhead closed"></span></span>Protected Attributes inherited from <a class="el" href="classdds_1_1core_1_1_reference.html">dds::core::Reference&lt; DELEGATE &gt;</a></td></tr>
 <tr class="memitem:ab3a71f25696efba22cf3744cf5826839 inherit pro_attribs_classdds_1_1core_1_1_reference" id="r_ab3a71f25696efba22cf3744cf5826839"><td class="memItemLeft">
 DELEGATE_REF_T </td><td class="memItemRight"><b>impl_</b></td></tr>
-</table>
+</table></div>
 <a id="doc-func-members" name="doc-func-members"></a><h2 class="groupheader" id="header-doc-func-members">Member Functions</h2>
 <a id="af8f8ea2b0053002aaba7be9f3ab3184b" name="af8f8ea2b0053002aaba7be9f3ab3184b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af8f8ea2b0053002aaba7be9f3ab3184b">◆ </a></span>close()</h2>

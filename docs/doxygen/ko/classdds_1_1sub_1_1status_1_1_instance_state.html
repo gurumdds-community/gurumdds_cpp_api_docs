@@ -18,400 +18,399 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script src="search/searchdata.js" type="text/javascript"></script>
 <script src="search/search.js" type="text/javascript"></script>
-<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+<script src="../theme.js" type="text/javascript"></script><link href="doxygen.css" rel="stylesheet" type="text/css"/>
 <link href="ReferenceBranding.css" rel="stylesheet" type="text/css"/>
 <script defer="True" src="ReferenceUi.js"></script><link href="../en/classdds_1_1sub_1_1status_1_1_instance_state.html" hreflang="en" rel="alternate"/><link href="../ko/classdds_1_1sub_1_1status_1_1_instance_state.html" hreflang="ko" rel="alternate"/><link href="../language.css" rel="stylesheet"/><script defer="defer" src="../language.js"></script></head>
 <body>
-<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
-<div id="titlearea">
-<table cellpadding="0" cellspacing="0">
- <tbody>
- <tr id="projectrow">
-  <td id="projectalign">
-   <div id="projectname">GurumDDS C++ API Reference<span id="projectnumber"> 1.3.2</span>
-   </div>
-  </td>
- <td class="doc-language-cell"><label class="doc-language"><select aria-label="문서 언어" data-current="1"><option lang="en" value="../en/classdds_1_1sub_1_1status_1_1_instance_state.html">English</option><option lang="en" selected="selected" value="../ko/classdds_1_1sub_1_1status_1_1_instance_state.html">Korean</option></select></label></td></tr>
- </tbody>
-</table>
-</div>
-<!-- end header part -->
-<!-- 다음에 의해 생성됨 :  Doxygen 1.18.0 -->
-<script type="text/javascript">
-let searchBox = new SearchBox("searchBox", "search/",'.html');
-</script>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', codefold.init);
-</script>
-<script id="doxygen-config" type="application/json">
-{
-  "relPath": "",
-  "generateTreeView": true,
-  "searchEngine": true,
-  "serverBasedSearch": false,
-  "disableIndex": false,
-  "dynamicMenus": true,
-  "fullSidebar": false
-}
-</script>
-<script src="menudata.js" type="text/javascript"></script>
-<script src="menu.js" type="text/javascript"></script>
-<div id="main-nav-mobile">
-<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
-<label class="main-menu-btn" for="main-menu-state">
-<span class="main-menu-btn-icon"></span> 주 메뉴 표시 전환</label>
-<span id="searchBoxPos1"></span>
-</div>
-</div><!-- main-nav-mobile -->
-<div id="main-nav">
-  <ul class="sm sm-dox" id="main-menu">
-    <li id="searchBoxPos2">
-        <div class="MSearchBoxInactive" id="MSearchBox">
-        <span class="left">
-          <span class="search-icon" id="MSearchSelect"><span class="search-icon-dropdown"></span></span>
-          <input accesskey="S" id="MSearchField" placeholder="검색" type="text" value=""/>
-          </span><span class="right">
-            <a href="javascript:searchBox.CloseResultsWindow()" id="MSearchClose"><div class="close-icon" id="MSearchCloseImg"></div></a>
-          </span>
-        </div>
-    </li>
-  </ul>
-</div><!-- main-nav -->
-</div><!-- top -->
-<div class="ui-resizable side-nav-resizable" id="side-nav">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div class="sync" id="nav-sync"></div>
-    </div>
-  </div>
-  <div class="ui-resizable-handle" id="splitbar">
-  </div>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellpadding="0" cellspacing="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">GurumDDS C++ API Reference<span id="projectnumber"> 1.3.2</span>
+   </div>
+  </td>
+ <td class="doc-language-cell"><div class="doc-header-controls"><button aria-pressed="false" class="doc-theme" type="button">다크 모드</button><label class="doc-language"><select aria-label="문서 언어" data-current="1"><option lang="en" value="../en/classdds_1_1sub_1_1status_1_1_instance_state.html">English</option><option lang="en" selected="selected" value="../ko/classdds_1_1sub_1_1status_1_1_instance_state.html">Korean</option></select></label></div></td></tr>
+ </tbody>
+</table>
 </div>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded',() => { initNavTree('classdds_1_1sub_1_1status_1_1_instance_state.html','','classdds_1_1sub_1_1status_1_1_instance_state-members'); });
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
 </script>
-<div id="container">
-<div id="doc-content">
-<!-- window showing the filter options -->
-<div id="MSearchSelectWindow">
-</div>
-
-<!-- iframe showing the search results (closed by default) -->
-<div id="MSearchResultsWindow">
-<div id="MSearchResults">
-<div class="SRPage">
-<div id="SRIndex">
-<div id="SRResults"></div>
-<div class="SRStatus" id="Loading">로딩중...</div>
-<div class="SRStatus" id="Searching">검색중...</div>
-<div class="SRStatus" id="NoMatches">일치하는것 없음</div>
-</div>
-</div>
-</div>
-</div>
-
-<div class="header">
-  <div class="headertitle"><div class="title">dds::sub::status::InstanceState 클래스<div class="ingroups"><a class="el" href="group__dds__api__modules.html">API 모듈</a> » <a class="el" href="group__dds__subscription.html">Subscription</a></div></div></div>
-</div><!--header-->
-<div class="contents">
-
-<p class="dds-class-include"><code>#include &lt;gurumdds/cpp/sub/status/DataState.hpp&gt;</code></p>
-
-<p>살아있는, 처리된 또는 기록되지 않은 instance에서 sample을 선택합니다.  
- <a href="#details">더 자세히 ...</a></p>
-<a id="details" name="details"></a><h2 class="groupheader" id="header-details">상세한 설명</h2>
-<div class="textblock"><p>살아있는, 처리된 또는 기록되지 않은 instance에서 sample을 선택합니다. </p>
-</div><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-pub-types"><a id="pub-types" name="pub-types"></a>
-공개 타입</h2></td></tr>
-<tr class="memitem:a7af66c940b8eac3a9ede06ca9633540d" id="r_a7af66c940b8eac3a9ede06ca9633540d"><td class="memItemLeft"><a id="a7af66c940b8eac3a9ede06ca9633540d" name="a7af66c940b8eac3a9ede06ca9633540d"></a>
-typedef std::bitset&lt; OMG_DDS_STATE_BIT_COUNT &gt; </td><td class="memItemRight"><b>MaskType</b></td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-pub-methods"><a id="pub-methods" name="pub-methods"></a>
-공개 멤버 함수</h2></td></tr>
-<tr class="memitem:a18a01b8e98c351a4274ade42f1e15c2e" id="r_a18a01b8e98c351a4274ade42f1e15c2e"><td class="memItemLeft"><a id="a18a01b8e98c351a4274ade42f1e15c2e" name="a18a01b8e98c351a4274ade42f1e15c2e"></a>
- </td><td class="memItemRight"><b>InstanceState</b> ()</td></tr>
-<tr class="memdesc:a18a01b8e98c351a4274ade42f1e15c2e"><td class="mdescLeft"> </td><td class="mdescRight">비트가 설정되지 않은 상태 마스크를 만듭니다 <br/></td></tr>
-<tr class="memitem:a667fa3c8e6ded882fced19547c4a003e" id="r_a667fa3c8e6ded882fced19547c4a003e"><td class="memItemLeft"> </td><td class="memItemRight"><a class="el" href="#a667fa3c8e6ded882fced19547c4a003e">InstanceState</a> (uint32_t m)</td></tr>
-<tr class="memdesc:a667fa3c8e6ded882fced19547c4a003e"><td class="mdescLeft"> </td><td class="mdescRight">기존 비트에서 상태 마스크를 초기화합니다  <br/></td></tr>
-<tr class="memitem:a20d33a71ea795ed0e8647327377f4b35" id="r_a20d33a71ea795ed0e8647327377f4b35"><td class="memItemLeft"> </td><td class="memItemRight"><a class="el" href="#a20d33a71ea795ed0e8647327377f4b35">InstanceState</a> (const InstanceState &amp;src)</td></tr>
-<tr class="memdesc:a20d33a71ea795ed0e8647327377f4b35"><td class="mdescLeft"> </td><td class="mdescRight">기존 비트에서 상태 마스크를 초기화합니다  <br/></td></tr>
-<tr class="memitem:aed7905d472769b3f3f33df9289155488" id="r_aed7905d472769b3f3f33df9289155488"><td class="memItemLeft"> </td><td class="memItemRight"><a class="el" href="#aed7905d472769b3f3f33df9289155488">InstanceState</a> (const MaskType &amp;src)</td></tr>
-<tr class="memdesc:aed7905d472769b3f3f33df9289155488"><td class="mdescLeft"> </td><td class="mdescRight">기존 비트에서 상태 마스크를 초기화합니다  <br/></td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-pub-static-methods"><a id="pub-static-methods" name="pub-static-methods"></a>
-공개 정적 멤버 함수</h2></td></tr>
-<tr class="memitem:aa84c5cb12f5dfe392bb80710cc2ef070" id="r_aa84c5cb12f5dfe392bb80710cc2ef070"><td class="memItemLeft">static const <a class="el" href="#a18a01b8e98c351a4274ade42f1e15c2e">InstanceState</a> </td><td class="memItemRight"><a class="el" href="#aa84c5cb12f5dfe392bb80710cc2ef070">alive</a> ()</td></tr>
-<tr class="memdesc:aa84c5cb12f5dfe392bb80710cc2ef070"><td class="mdescLeft"> </td><td class="mdescRight">라이브 instance에 대한 필터를 만듭니다  <br/></td></tr>
-<tr class="memitem:a2e518cf3afa4fa47ad989ee81a5cb27e" id="r_a2e518cf3afa4fa47ad989ee81a5cb27e"><td class="memItemLeft">static const <a class="el" href="#a18a01b8e98c351a4274ade42f1e15c2e">InstanceState</a> </td><td class="memItemRight"><a class="el" href="#a2e518cf3afa4fa47ad989ee81a5cb27e">not_alive_disposed</a> ()</td></tr>
-<tr class="memdesc:a2e518cf3afa4fa47ad989ee81a5cb27e"><td class="mdescLeft"> </td><td class="mdescRight">처리된 instance에 대한 필터를 만듭니다  <br/></td></tr>
-<tr class="memitem:aaaf8cee2916adfe3dce35985dc2a05f5" id="r_aaaf8cee2916adfe3dce35985dc2a05f5"><td class="memItemLeft">static const <a class="el" href="#a18a01b8e98c351a4274ade42f1e15c2e">InstanceState</a> </td><td class="memItemRight"><a class="el" href="#aaaf8cee2916adfe3dce35985dc2a05f5">not_alive_no_writers</a> ()</td></tr>
-<tr class="memdesc:aaaf8cee2916adfe3dce35985dc2a05f5"><td class="mdescLeft"> </td><td class="mdescRight">활성 DataWriter가 없는 instance에 대한 필터를 만듭니다  <br/></td></tr>
-<tr class="memitem:ae192646dc0a1907f8d7fb0335862e733" id="r_ae192646dc0a1907f8d7fb0335862e733"><td class="memItemLeft">static const <a class="el" href="#a18a01b8e98c351a4274ade42f1e15c2e">InstanceState</a> </td><td class="memItemRight"><a class="el" href="#ae192646dc0a1907f8d7fb0335862e733">not_alive_mask</a> ()</td></tr>
-<tr class="memdesc:ae192646dc0a1907f8d7fb0335862e733"><td class="mdescLeft"> </td><td class="mdescRight">활성화된 DataWriter가 없는 instance와 폐기된 instance에 대한 필터를 만듭니다.  <br/></td></tr>
-<tr class="memitem:a559209357d8f64d21afec18184ab3707" id="r_a559209357d8f64d21afec18184ab3707"><td class="memItemLeft">static const <a class="el" href="#a18a01b8e98c351a4274ade42f1e15c2e">InstanceState</a> </td><td class="memItemRight"><a class="el" href="#a559209357d8f64d21afec18184ab3707">any</a> ()</td></tr>
-<tr class="memdesc:a559209357d8f64d21afec18184ab3707"><td class="mdescLeft"> </td><td class="mdescRight">어떤 instance state와도 일치  <br/></td></tr>
-</table>
-<a id="doc-constructors" name="doc-constructors"></a><h2 class="groupheader" id="header-doc-constructors">생성자와 소멸자</h2>
-<a id="a667fa3c8e6ded882fced19547c4a003e" name="a667fa3c8e6ded882fced19547c4a003e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a667fa3c8e6ded882fced19547c4a003e">◆ </a></span>InstanceState() <span class="overload">[1/3]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">dds::sub::status::InstanceState::InstanceState </td>
-          <td>(</td>
-          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>m</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel explicit">explicit</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>기존 비트에서 상태 마스크를 초기화합니다 </p>
-<dl class="params"><dt>매개변수</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[입력]</td><td class="paramname">m</td><td>복사할 마스크 또는 원시 비트 </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="a20d33a71ea795ed0e8647327377f4b35" name="a20d33a71ea795ed0e8647327377f4b35"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a20d33a71ea795ed0e8647327377f4b35">◆ </a></span>InstanceState() <span class="overload">[2/3]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">dds::sub::status::InstanceState::InstanceState </td>
-          <td>(</td>
-          <td class="paramtype">const InstanceState &amp;</td>          <td class="paramname"><span class="paramname"><em>src</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>기존 비트에서 상태 마스크를 초기화합니다 </p>
-<dl class="params"><dt>매개변수</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[입력]</td><td class="paramname">src</td><td>복사할 마스크 또는 원시 비트 </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="aed7905d472769b3f3f33df9289155488" name="aed7905d472769b3f3f33df9289155488"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aed7905d472769b3f3f33df9289155488">◆ </a></span>InstanceState() <span class="overload">[3/3]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">dds::sub::status::InstanceState::InstanceState </td>
-          <td>(</td>
-          <td class="paramtype">const MaskType &amp;</td>          <td class="paramname"><span class="paramname"><em>src</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>기존 비트에서 상태 마스크를 초기화합니다 </p>
-<dl class="params"><dt>매개변수</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[입력]</td><td class="paramname">src</td><td>복사할 마스크 또는 원시 비트 </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="doc-func-members" name="doc-func-members"></a><h2 class="groupheader" id="header-doc-func-members">멤버 함수</h2>
-<a id="aa84c5cb12f5dfe392bb80710cc2ef070" name="aa84c5cb12f5dfe392bb80710cc2ef070"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa84c5cb12f5dfe392bb80710cc2ef070">◆ </a></span>alive()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const <a class="el" href="#a18a01b8e98c351a4274ade42f1e15c2e">InstanceState</a> dds::sub::status::InstanceState::alive </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>라이브 instance에 대한 필터를 만듭니다 </p>
-<dl class="section return"><dt>반환값</dt><dd>활성 instance와 일치하는 마스크 </dd></dl>
-
-</div>
-</div>
-<a id="a559209357d8f64d21afec18184ab3707" name="a559209357d8f64d21afec18184ab3707"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a559209357d8f64d21afec18184ab3707">◆ </a></span>any()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const <a class="el" href="#a18a01b8e98c351a4274ade42f1e15c2e">InstanceState</a> dds::sub::status::InstanceState::any </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>어떤 instance state와도 일치 </p>
-<dl class="section return"><dt>반환값</dt><dd>지원되는 모든 상태 비트를 설정한 마스크 </dd></dl>
-
-</div>
-</div>
-<a id="a2e518cf3afa4fa47ad989ee81a5cb27e" name="a2e518cf3afa4fa47ad989ee81a5cb27e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2e518cf3afa4fa47ad989ee81a5cb27e">◆ </a></span>not_alive_disposed()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const <a class="el" href="#a18a01b8e98c351a4274ade42f1e15c2e">InstanceState</a> dds::sub::status::InstanceState::not_alive_disposed </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>처리된 instance에 대한 필터를 만듭니다 </p>
-<dl class="section return"><dt>반환값</dt><dd>처리된 instance에 일치하는 마스크 </dd></dl>
-
-</div>
-</div>
-<a id="ae192646dc0a1907f8d7fb0335862e733" name="ae192646dc0a1907f8d7fb0335862e733"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae192646dc0a1907f8d7fb0335862e733">◆ </a></span>not_alive_mask()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const <a class="el" href="#a18a01b8e98c351a4274ade42f1e15c2e">InstanceState</a> dds::sub::status::InstanceState::not_alive_mask </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>활성화된 DataWriter가 없는 instance와 폐기된 instance에 대한 필터를 만듭니다. </p>
-<dl class="section return"><dt>반환값</dt><dd>활성화된 DataWriter가 없는 instance와 처리된 instance를 일치시키는 마스크 </dd></dl>
-
-</div>
-</div>
-<a id="aaaf8cee2916adfe3dce35985dc2a05f5" name="aaaf8cee2916adfe3dce35985dc2a05f5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaaf8cee2916adfe3dce35985dc2a05f5">◆ </a></span>not_alive_no_writers()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const <a class="el" href="#a18a01b8e98c351a4274ade42f1e15c2e">InstanceState</a> dds::sub::status::InstanceState::not_alive_no_writers </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>활성 DataWriter가 없는 instance에 대한 필터를 만듭니다 </p>
-<dl class="section return"><dt>반환값</dt><dd>활성 DataWriter가 없는 일치하는 instance를 마스크합니다 </dd></dl>
-
-</div>
-</div>
-<hr/>이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.:<ul>
-<li>include/gurumdds/cpp/sub/status/<b>DataState.hpp</b></li>
-</ul>
-</div><!-- contents -->
-</div><!-- doc-content -->
-<div class="page-nav-panel" id="page-nav">
-<div id="page-nav-resize-handle"></div>
-<div id="page-nav-tree">
-<div id="page-nav-contents">
-</div><!-- page-nav-contents -->
-</div><!-- page-nav-tree -->
-</div><!-- page-nav -->
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script id="doxygen-config" type="application/json">
+{
+  "relPath": "",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script src="menudata.js" type="text/javascript"></script>
+<script src="menu.js" type="text/javascript"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> 주 메뉴 표시 전환</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div class="MSearchBoxInactive" id="MSearchBox">
+        <span class="left">
+          <span class="search-icon" id="MSearchSelect"><span class="search-icon-dropdown"></span></span>
+          <input accesskey="S" id="MSearchField" placeholder="검색" type="text" value=""/>
+          </span><span class="right">
+            <a href="javascript:searchBox.CloseResultsWindow()" id="MSearchClose"><div class="close-icon" id="MSearchCloseImg"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div class="ui-resizable side-nav-resizable" id="side-nav">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div class="sync" id="nav-sync"></div>
+    </div>
+  </div>
+  <div class="ui-resizable-handle" id="splitbar">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('classdds_1_1sub_1_1status_1_1_instance_state.html','','classdds_1_1sub_1_1status_1_1_instance_state-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">로딩중...</div>
+<div class="SRStatus" id="Searching">검색중...</div>
+<div class="SRStatus" id="NoMatches">일치하는것 없음</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">dds::sub::status::InstanceState 클래스<div class="ingroups"><a class="el" href="group__dds__api__modules.html">API 모듈</a> » <a class="el" href="group__dds__subscription.html">Subscription</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p class="dds-class-include"><code>#include &lt;gurumdds/cpp/sub/status/DataState.hpp&gt;</code></p>
+
+
+<a id="details" name="details"></a><h2 class="groupheader" id="header-details">상세한 설명</h2>
+<div class="textblock"><p>살아있는, 처리된 또는 기록되지 않은 instance에서 sample을 선택합니다. </p>
+</div><div class="dds-table-scroll"><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-pub-types"><a id="pub-types" name="pub-types"></a>
+공개 타입</h2></td></tr>
+<tr class="memitem:a7af66c940b8eac3a9ede06ca9633540d" id="r_a7af66c940b8eac3a9ede06ca9633540d"><td class="memItemLeft"><a id="a7af66c940b8eac3a9ede06ca9633540d" name="a7af66c940b8eac3a9ede06ca9633540d"></a>
+typedef std::bitset&lt; OMG_DDS_STATE_BIT_COUNT &gt; </td><td class="memItemRight"><b>MaskType</b></td></tr>
+</table></div><div class="dds-table-scroll"><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-pub-methods"><a id="pub-methods" name="pub-methods"></a>
+공개 멤버 함수</h2></td></tr>
+<tr class="memitem:a18a01b8e98c351a4274ade42f1e15c2e" id="r_a18a01b8e98c351a4274ade42f1e15c2e"><td class="memItemLeft"><a id="a18a01b8e98c351a4274ade42f1e15c2e" name="a18a01b8e98c351a4274ade42f1e15c2e"></a>
+ </td><td class="memItemRight"><b>InstanceState</b> ()</td></tr>
+<tr class="memdesc:a18a01b8e98c351a4274ade42f1e15c2e"><td class="mdescLeft"> </td><td class="mdescRight">비트가 설정되지 않은 상태 마스크를 만듭니다 <br/></td></tr>
+<tr class="memitem:a667fa3c8e6ded882fced19547c4a003e" id="r_a667fa3c8e6ded882fced19547c4a003e"><td class="memItemLeft"> </td><td class="memItemRight"><a class="el" href="#a667fa3c8e6ded882fced19547c4a003e">InstanceState</a> (uint32_t m)</td></tr>
+<tr class="memdesc:a667fa3c8e6ded882fced19547c4a003e"><td class="mdescLeft"> </td><td class="mdescRight">기존 비트에서 상태 마스크를 초기화합니다  <br/></td></tr>
+<tr class="memitem:a20d33a71ea795ed0e8647327377f4b35" id="r_a20d33a71ea795ed0e8647327377f4b35"><td class="memItemLeft"> </td><td class="memItemRight"><a class="el" href="#a20d33a71ea795ed0e8647327377f4b35">InstanceState</a> (const InstanceState &amp;src)</td></tr>
+<tr class="memdesc:a20d33a71ea795ed0e8647327377f4b35"><td class="mdescLeft"> </td><td class="mdescRight">기존 비트에서 상태 마스크를 초기화합니다  <br/></td></tr>
+<tr class="memitem:aed7905d472769b3f3f33df9289155488" id="r_aed7905d472769b3f3f33df9289155488"><td class="memItemLeft"> </td><td class="memItemRight"><a class="el" href="#aed7905d472769b3f3f33df9289155488">InstanceState</a> (const MaskType &amp;src)</td></tr>
+<tr class="memdesc:aed7905d472769b3f3f33df9289155488"><td class="mdescLeft"> </td><td class="mdescRight">기존 비트에서 상태 마스크를 초기화합니다  <br/></td></tr>
+</table></div><div class="dds-table-scroll"><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-pub-static-methods"><a id="pub-static-methods" name="pub-static-methods"></a>
+공개 정적 멤버 함수</h2></td></tr>
+<tr class="memitem:aa84c5cb12f5dfe392bb80710cc2ef070" id="r_aa84c5cb12f5dfe392bb80710cc2ef070"><td class="memItemLeft">static const <a class="el" href="#a18a01b8e98c351a4274ade42f1e15c2e">InstanceState</a> </td><td class="memItemRight"><a class="el" href="#aa84c5cb12f5dfe392bb80710cc2ef070">alive</a> ()</td></tr>
+<tr class="memdesc:aa84c5cb12f5dfe392bb80710cc2ef070"><td class="mdescLeft"> </td><td class="mdescRight">라이브 instance에 대한 필터를 만듭니다  <br/></td></tr>
+<tr class="memitem:a2e518cf3afa4fa47ad989ee81a5cb27e" id="r_a2e518cf3afa4fa47ad989ee81a5cb27e"><td class="memItemLeft">static const <a class="el" href="#a18a01b8e98c351a4274ade42f1e15c2e">InstanceState</a> </td><td class="memItemRight"><a class="el" href="#a2e518cf3afa4fa47ad989ee81a5cb27e">not_alive_disposed</a> ()</td></tr>
+<tr class="memdesc:a2e518cf3afa4fa47ad989ee81a5cb27e"><td class="mdescLeft"> </td><td class="mdescRight">처리된 instance에 대한 필터를 만듭니다  <br/></td></tr>
+<tr class="memitem:aaaf8cee2916adfe3dce35985dc2a05f5" id="r_aaaf8cee2916adfe3dce35985dc2a05f5"><td class="memItemLeft">static const <a class="el" href="#a18a01b8e98c351a4274ade42f1e15c2e">InstanceState</a> </td><td class="memItemRight"><a class="el" href="#aaaf8cee2916adfe3dce35985dc2a05f5">not_alive_no_writers</a> ()</td></tr>
+<tr class="memdesc:aaaf8cee2916adfe3dce35985dc2a05f5"><td class="mdescLeft"> </td><td class="mdescRight">활성 DataWriter가 없는 instance에 대한 필터를 만듭니다  <br/></td></tr>
+<tr class="memitem:ae192646dc0a1907f8d7fb0335862e733" id="r_ae192646dc0a1907f8d7fb0335862e733"><td class="memItemLeft">static const <a class="el" href="#a18a01b8e98c351a4274ade42f1e15c2e">InstanceState</a> </td><td class="memItemRight"><a class="el" href="#ae192646dc0a1907f8d7fb0335862e733">not_alive_mask</a> ()</td></tr>
+<tr class="memdesc:ae192646dc0a1907f8d7fb0335862e733"><td class="mdescLeft"> </td><td class="mdescRight">활성화된 DataWriter가 없는 instance와 폐기된 instance에 대한 필터를 만듭니다.  <br/></td></tr>
+<tr class="memitem:a559209357d8f64d21afec18184ab3707" id="r_a559209357d8f64d21afec18184ab3707"><td class="memItemLeft">static const <a class="el" href="#a18a01b8e98c351a4274ade42f1e15c2e">InstanceState</a> </td><td class="memItemRight"><a class="el" href="#a559209357d8f64d21afec18184ab3707">any</a> ()</td></tr>
+<tr class="memdesc:a559209357d8f64d21afec18184ab3707"><td class="mdescLeft"> </td><td class="mdescRight">어떤 instance state와도 일치  <br/></td></tr>
+</table></div>
+<a id="doc-constructors" name="doc-constructors"></a><h2 class="groupheader" id="header-doc-constructors">생성자와 소멸자</h2>
+<a id="a667fa3c8e6ded882fced19547c4a003e" name="a667fa3c8e6ded882fced19547c4a003e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a667fa3c8e6ded882fced19547c4a003e">◆ </a></span>InstanceState() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">dds::sub::status::InstanceState::InstanceState </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>m</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel explicit">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>기존 비트에서 상태 마스크를 초기화합니다 </p>
+<dl class="params"><dt>매개변수</dt><dd>
+  <div class="dds-table-scroll"><table class="params">
+    <tr><td class="paramdir">[입력]</td><td class="paramname">m</td><td>복사할 마스크 또는 원시 비트 </td></tr>
+  </table></div>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a20d33a71ea795ed0e8647327377f4b35" name="a20d33a71ea795ed0e8647327377f4b35"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20d33a71ea795ed0e8647327377f4b35">◆ </a></span>InstanceState() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">dds::sub::status::InstanceState::InstanceState </td>
+          <td>(</td>
+          <td class="paramtype">const InstanceState &amp;</td>          <td class="paramname"><span class="paramname"><em>src</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>기존 비트에서 상태 마스크를 초기화합니다 </p>
+<dl class="params"><dt>매개변수</dt><dd>
+  <div class="dds-table-scroll"><table class="params">
+    <tr><td class="paramdir">[입력]</td><td class="paramname">src</td><td>복사할 마스크 또는 원시 비트 </td></tr>
+  </table></div>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aed7905d472769b3f3f33df9289155488" name="aed7905d472769b3f3f33df9289155488"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed7905d472769b3f3f33df9289155488">◆ </a></span>InstanceState() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">dds::sub::status::InstanceState::InstanceState </td>
+          <td>(</td>
+          <td class="paramtype">const MaskType &amp;</td>          <td class="paramname"><span class="paramname"><em>src</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>기존 비트에서 상태 마스크를 초기화합니다 </p>
+<dl class="params"><dt>매개변수</dt><dd>
+  <div class="dds-table-scroll"><table class="params">
+    <tr><td class="paramdir">[입력]</td><td class="paramname">src</td><td>복사할 마스크 또는 원시 비트 </td></tr>
+  </table></div>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="doc-func-members" name="doc-func-members"></a><h2 class="groupheader" id="header-doc-func-members">멤버 함수</h2>
+<a id="aa84c5cb12f5dfe392bb80710cc2ef070" name="aa84c5cb12f5dfe392bb80710cc2ef070"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa84c5cb12f5dfe392bb80710cc2ef070">◆ </a></span>alive()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="#a18a01b8e98c351a4274ade42f1e15c2e">InstanceState</a> dds::sub::status::InstanceState::alive </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>라이브 instance에 대한 필터를 만듭니다 </p>
+<dl class="section return"><dt>반환값</dt><dd>활성 instance와 일치하는 마스크 </dd></dl>
+
+</div>
+</div>
+<a id="a559209357d8f64d21afec18184ab3707" name="a559209357d8f64d21afec18184ab3707"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a559209357d8f64d21afec18184ab3707">◆ </a></span>any()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="#a18a01b8e98c351a4274ade42f1e15c2e">InstanceState</a> dds::sub::status::InstanceState::any </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>어떤 instance state와도 일치 </p>
+<dl class="section return"><dt>반환값</dt><dd>지원되는 모든 상태 비트를 설정한 마스크 </dd></dl>
+
+</div>
+</div>
+<a id="a2e518cf3afa4fa47ad989ee81a5cb27e" name="a2e518cf3afa4fa47ad989ee81a5cb27e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e518cf3afa4fa47ad989ee81a5cb27e">◆ </a></span>not_alive_disposed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="#a18a01b8e98c351a4274ade42f1e15c2e">InstanceState</a> dds::sub::status::InstanceState::not_alive_disposed </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>처리된 instance에 대한 필터를 만듭니다 </p>
+<dl class="section return"><dt>반환값</dt><dd>처리된 instance에 일치하는 마스크 </dd></dl>
+
+</div>
+</div>
+<a id="ae192646dc0a1907f8d7fb0335862e733" name="ae192646dc0a1907f8d7fb0335862e733"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae192646dc0a1907f8d7fb0335862e733">◆ </a></span>not_alive_mask()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="#a18a01b8e98c351a4274ade42f1e15c2e">InstanceState</a> dds::sub::status::InstanceState::not_alive_mask </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>활성화된 DataWriter가 없는 instance와 폐기된 instance에 대한 필터를 만듭니다. </p>
+<dl class="section return"><dt>반환값</dt><dd>활성화된 DataWriter가 없는 instance와 처리된 instance를 일치시키는 마스크 </dd></dl>
+
+</div>
+</div>
+<a id="aaaf8cee2916adfe3dce35985dc2a05f5" name="aaaf8cee2916adfe3dce35985dc2a05f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaaf8cee2916adfe3dce35985dc2a05f5">◆ </a></span>not_alive_no_writers()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="#a18a01b8e98c351a4274ade42f1e15c2e">InstanceState</a> dds::sub::status::InstanceState::not_alive_no_writers </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>활성 DataWriter가 없는 instance에 대한 필터를 만듭니다 </p>
+<dl class="section return"><dt>반환값</dt><dd>활성 DataWriter가 없는 일치하는 instance를 마스크합니다 </dd></dl>
+
+</div>
+</div>
+<hr/>이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.:<ul>
+<li>include/gurumdds/cpp/sub/status/<b>DataState.hpp</b></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div class="page-nav-panel" id="page-nav">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
 </div><!-- container -->
 <!-- start footer part -->
-<div class="navpath" id="nav-path"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="navelem"><a href="namespacedds.html">dds</a></li><li class="navelem"><a href="namespacedds_1_1sub.html">sub</a></li><li class="navelem"><a href="namespacedds_1_1sub_1_1status.html">status</a></li><li class="navelem"><a href="classdds_1_1sub_1_1status_1_1_instance_state.html">InstanceState</a></li>
-    <li class="footer">다음에 의해 생성됨 :  <a href="https://www.doxygen.org/index.html"><img alt="doxygen" class="footer" height="31" src="doxygen.svg" width="104"/></a> 1.18.0 </li>
-  </ul>
+<div class="navpath" id="nav-path"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="namespacedds.html">dds</a></li><li class="navelem"><a href="namespacedds_1_1sub.html">sub</a></li><li class="navelem"><a href="namespacedds_1_1sub_1_1status.html">status</a></li><li class="navelem"><a href="classdds_1_1sub_1_1status_1_1_instance_state.html">InstanceState</a></li>
+    <li class="footer">다음에 의해 생성됨 :  <a href="https://www.doxygen.org/index.html"><img alt="doxygen" class="footer" height="31" src="doxygen.svg" width="104"/></a> 1.18.0 </li>
+  </ul>
 </div>
 </body>
 </html>

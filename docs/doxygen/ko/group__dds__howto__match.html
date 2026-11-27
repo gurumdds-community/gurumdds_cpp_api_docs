@@ -18,142 +18,142 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script src="search/searchdata.js" type="text/javascript"></script>
 <script src="search/search.js" type="text/javascript"></script>
-<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+<script src="../theme.js" type="text/javascript"></script><link href="doxygen.css" rel="stylesheet" type="text/css"/>
 <link href="ReferenceBranding.css" rel="stylesheet" type="text/css"/>
 <script defer="True" src="ReferenceUi.js"></script><link href="../en/group__dds__howto__match.html" hreflang="en" rel="alternate"/><link href="../ko/group__dds__howto__match.html" hreflang="ko" rel="alternate"/><link href="../language.css" rel="stylesheet"/><script defer="defer" src="../language.js"></script></head>
 <body>
-<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
-<div id="titlearea">
-<table cellpadding="0" cellspacing="0">
- <tbody>
- <tr id="projectrow">
-  <td id="projectalign">
-   <div id="projectname">GurumDDS C++ API Reference<span id="projectnumber"> 1.3.2</span>
-   </div>
-  </td>
- <td class="doc-language-cell"><label class="doc-language"><select aria-label="문서 언어" data-current="1"><option lang="en" value="../en/group__dds__howto__match.html">English</option><option lang="en" selected="selected" value="../ko/group__dds__howto__match.html">Korean</option></select></label></td></tr>
- </tbody>
-</table>
-</div>
-<!-- end header part -->
-<!-- 다음에 의해 생성됨 :  Doxygen 1.18.0 -->
-<script type="text/javascript">
-let searchBox = new SearchBox("searchBox", "search/",'.html');
-</script>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', codefold.init);
-</script>
-<script id="doxygen-config" type="application/json">
-{
-  "relPath": "",
-  "generateTreeView": true,
-  "searchEngine": true,
-  "serverBasedSearch": false,
-  "disableIndex": false,
-  "dynamicMenus": true,
-  "fullSidebar": false
-}
-</script>
-<script src="menudata.js" type="text/javascript"></script>
-<script src="menu.js" type="text/javascript"></script>
-<div id="main-nav-mobile">
-<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
-<label class="main-menu-btn" for="main-menu-state">
-<span class="main-menu-btn-icon"></span> 주 메뉴 표시 전환</label>
-<span id="searchBoxPos1"></span>
-</div>
-</div><!-- main-nav-mobile -->
-<div id="main-nav">
-  <ul class="sm sm-dox" id="main-menu">
-    <li id="searchBoxPos2">
-        <div class="MSearchBoxInactive" id="MSearchBox">
-        <span class="left">
-          <span class="search-icon" id="MSearchSelect"><span class="search-icon-dropdown"></span></span>
-          <input accesskey="S" id="MSearchField" placeholder="검색" type="text" value=""/>
-          </span><span class="right">
-            <a href="javascript:searchBox.CloseResultsWindow()" id="MSearchClose"><div class="close-icon" id="MSearchCloseImg"></div></a>
-          </span>
-        </div>
-    </li>
-  </ul>
-</div><!-- main-nav -->
-</div><!-- top -->
-<div class="ui-resizable side-nav-resizable" id="side-nav">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div class="sync" id="nav-sync"></div>
-    </div>
-  </div>
-  <div class="ui-resizable-handle" id="splitbar">
-  </div>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellpadding="0" cellspacing="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">GurumDDS C++ API Reference<span id="projectnumber"> 1.3.2</span>
+   </div>
+  </td>
+ <td class="doc-language-cell"><div class="doc-header-controls"><button aria-pressed="false" class="doc-theme" type="button">다크 모드</button><label class="doc-language"><select aria-label="문서 언어" data-current="1"><option lang="en" value="../en/group__dds__howto__match.html">English</option><option lang="en" selected="selected" value="../ko/group__dds__howto__match.html">Korean</option></select></label></div></td></tr>
+ </tbody>
+</table>
 </div>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded',() => { initNavTree('group__dds__howto__match.html','',''); });
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
 </script>
-<div id="container">
-<div id="doc-content">
-<!-- window showing the filter options -->
-<div id="MSearchSelectWindow">
-</div>
-
-<!-- iframe showing the search results (closed by default) -->
-<div id="MSearchResultsWindow">
-<div id="MSearchResults">
-<div class="SRPage">
-<div id="SRIndex">
-<div id="SRResults"></div>
-<div class="SRStatus" id="Loading">로딩중...</div>
-<div class="SRStatus" id="Searching">검색중...</div>
-<div class="SRStatus" id="NoMatches">일치하는것 없음</div>
-</div>
-</div>
-</div>
-</div>
-
-<div class="header">
-  <div class="headertitle"><div class="title">Matching을 확인한 뒤 발행하기 <div class="ingroups"><a class="el" href="group__dds__howto.html">Programming Tutorials</a> » <a class="el" href="group__dds__tutorial__discovery.html">Matching과 Discovery</a></div></div></div>
-</div><!--header-->
-<div class="contents">
-<div class="textblock"><p>예제는 DataWriter와 DataReader를 하나씩 만듭니다. 함수는 양쪽의 현재 매칭 수가 모두 양수가 될 때까지 최대 5초 동안 기다립니다. 한 Topic에 여러 endpoint가 있고 특정 상대를 식별해야 한다면 discovery 데이터를 사용하세요.</p>
-<div class="fragment"><div class="line"><span class="keywordtype">void</span> wait_for_match(<a class="code hl_class" href="classdds_1_1pub_1_1_data_writer.html">dds::pub::DataWriter&lt;T&gt;</a>&amp; writer, <a class="code hl_class" href="classdds_1_1sub_1_1_data_reader.html">dds::sub::DataReader&lt;T&gt;</a>&amp; reader)</div>
-<div class="line">{</div>
-<div class="line">    <span class="keyword">const</span> <span class="keyword">auto</span> deadline = std::chrono::steady_clock::now() + std::chrono::seconds(5);</div>
-<div class="line">    <span class="keywordflow">while</span> (std::chrono::steady_clock::now() &lt; deadline)</div>
-<div class="line">    {</div>
-<div class="line">        <span class="keyword">const</span> <span class="keyword">auto</span> writer_match = writer.<a class="code hl_function" href="classdds_1_1pub_1_1_data_writer.html#a240dae5bf8da60439c4284a762ce6b7e">publication_matched_status</a>();</div>
-<div class="line">        <span class="keyword">const</span> <span class="keyword">auto</span> reader_match = reader.<a class="code hl_function" href="classdds_1_1sub_1_1_data_reader.html#a08c009efb49a3ad883d17b9ede60ed6c">subscription_matched_status</a>();</div>
-<div class="line">        <span class="keywordflow">if</span> (writer_match.current_count() &gt; 0 and reader_match.current_count() &gt; 0)</div>
-<div class="line">            <span class="keywordflow">return</span>;</div>
-<div class="line"> </div>
-<div class="line">        std::this_thread::sleep_for(std::chrono::milliseconds(20));</div>
-<div class="line">    }</div>
-<div class="line"> </div>
-<div class="line">    <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">"No writer and reader match within five seconds"</span>);</div>
-<div class="line">}</div>
-</div><!-- fragment --><p>discovery를 마치고 matching을 확인한 뒤 발행합니다. matching은 두 endpoint가 호환된다는 뜻입니다. 애플리케이션이 특정 sample을 수신하거나 처리했는지는 수신 측에서 확인합니다.</p>
-<div class="fragment"><div class="line">wait_for_match(writer, reader);</div>
-<div class="line"> </div>
-<div class="line"><span class="keywordtype">char</span> message[] = <span class="stringliteral">"Hello from the how-to"</span>;</div>
-<div class="line">Hello::Msg sample{};</div>
-<div class="line">sample.userId = 1;</div>
-<div class="line">sample.message = message;</div>
-<div class="line">writer.<a class="code hl_function" href="classdds_1_1pub_1_1_data_writer.html#ab4131332cd4d7d1d0598cdce2fede459">write</a>(sample);</div>
-</div><!-- fragment --><dl class="section see"><dt>참고</dt><dd><a class="el" href="group__dds__qos.html#matching_guide" title="DataWriter와 DataReader가 데이터를 교환하지 못할 때 진단하기">DataWriter와 DataReader가 데이터를 교환하지 못할 때 진단하기</a> </dd></dl>
-</div></div><!-- contents -->
-</div><!-- doc-content -->
-<div class="page-nav-panel" id="page-nav">
-<div id="page-nav-resize-handle"></div>
-<div id="page-nav-tree">
-<div id="page-nav-contents">
-</div><!-- page-nav-contents -->
-</div><!-- page-nav-tree -->
-</div><!-- page-nav -->
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script id="doxygen-config" type="application/json">
+{
+  "relPath": "",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script src="menudata.js" type="text/javascript"></script>
+<script src="menu.js" type="text/javascript"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> 주 메뉴 표시 전환</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div class="MSearchBoxInactive" id="MSearchBox">
+        <span class="left">
+          <span class="search-icon" id="MSearchSelect"><span class="search-icon-dropdown"></span></span>
+          <input accesskey="S" id="MSearchField" placeholder="검색" type="text" value=""/>
+          </span><span class="right">
+            <a href="javascript:searchBox.CloseResultsWindow()" id="MSearchClose"><div class="close-icon" id="MSearchCloseImg"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div class="ui-resizable side-nav-resizable" id="side-nav">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div class="sync" id="nav-sync"></div>
+    </div>
+  </div>
+  <div class="ui-resizable-handle" id="splitbar">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('group__dds__howto__match.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">로딩중...</div>
+<div class="SRStatus" id="Searching">검색중...</div>
+<div class="SRStatus" id="NoMatches">일치하는것 없음</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Matching을 확인한 뒤 발행하기 <div class="ingroups"><a class="el" href="group__dds__howto.html">Programming Tutorials</a> » <a class="el" href="group__dds__tutorial__discovery.html">Matching과 Discovery</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p>예제는 DataWriter와 DataReader를 하나씩 만듭니다. 함수는 양쪽의 현재 매칭 수가 모두 양수가 될 때까지 최대 5초 동안 기다립니다. 한 Topic에 여러 endpoint가 있고 특정 상대를 식별해야 한다면 discovery 데이터를 사용하세요.</p>
+<div class="fragment dds-cpp-code"><div class="line"><span class="keywordtype"><span data-cpp-color="keyword">void</span></span> <span data-cpp-color="function">wait_for_match</span><span data-cpp-color="punctuation">(</span><a class="code hl_class" href="classdds_1_1pub_1_1_data_writer.html"><span data-cpp-color="namespace">dds</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="namespace">pub</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="class-template">DataWriter</span><span data-cpp-color="punctuation">&lt;</span><span data-cpp-color="namespace">Hello</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="type">Msg</span><span data-cpp-color="punctuation">&gt;</span></a><span data-cpp-color="punctuation">&amp;</span> <span data-cpp-color="parameter">writer</span><span data-cpp-color="punctuation">,</span> <a class="code hl_class" href="classdds_1_1sub_1_1_data_reader.html"><span data-cpp-color="namespace">dds</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="namespace">sub</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="class-template">DataReader</span><span data-cpp-color="punctuation">&lt;</span><span data-cpp-color="namespace">Hello</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="type">Msg</span><span data-cpp-color="punctuation">&gt;</span></a><span data-cpp-color="punctuation">&amp;</span> <span data-cpp-color="parameter">reader</span><span data-cpp-color="punctuation">)</span></div>
+<div class="line"><span data-cpp-color="punctuation">{</span></div>
+<div class="line">    <span class="keyword"><span data-cpp-color="keyword">const</span></span> <span class="keyword"><span data-cpp-color="keyword">auto</span></span> <span data-cpp-color="local">deadline</span> <span data-cpp-color="punctuation">=</span> <span data-cpp-color="namespace">std</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="namespace">chrono</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="type">steady_clock</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="method">now</span><span data-cpp-color="punctuation">()</span> <span data-cpp-color="punctuation">+</span> <span data-cpp-color="namespace">std</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="namespace">chrono</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="type">seconds</span><span data-cpp-color="punctuation">(</span><span data-cpp-color="number">5</span><span data-cpp-color="punctuation">);</span></div>
+<div class="line">    <span class="keywordflow"><span data-cpp-color="control">while</span></span> <span data-cpp-color="punctuation">(</span><span data-cpp-color="namespace">std</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="namespace">chrono</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="type">steady_clock</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="method">now</span><span data-cpp-color="punctuation">()</span> <span data-cpp-color="punctuation">&lt;</span> <span data-cpp-color="local">deadline</span><span data-cpp-color="punctuation">)</span></div>
+<div class="line">    <span data-cpp-color="punctuation">{</span></div>
+<div class="line">        <span class="keyword"><span data-cpp-color="keyword">const</span></span> <span class="keyword"><span data-cpp-color="keyword">auto</span></span> <span data-cpp-color="local">writer_match</span> <span data-cpp-color="punctuation">=</span> <span data-cpp-color="parameter">writer</span><span data-cpp-color="punctuation">.</span><a class="code hl_function" href="classdds_1_1pub_1_1_data_writer.html#a240dae5bf8da60439c4284a762ce6b7e"><span data-cpp-color="method">publication_matched_status</span></a><span data-cpp-color="punctuation">();</span></div>
+<div class="line">        <span class="keyword"><span data-cpp-color="keyword">const</span></span> <span class="keyword"><span data-cpp-color="keyword">auto</span></span> <span data-cpp-color="local">reader_match</span> <span data-cpp-color="punctuation">=</span> <span data-cpp-color="parameter">reader</span><span data-cpp-color="punctuation">.</span><a class="code hl_function" href="classdds_1_1sub_1_1_data_reader.html#a08c009efb49a3ad883d17b9ede60ed6c"><span data-cpp-color="method">subscription_matched_status</span></a><span data-cpp-color="punctuation">();</span></div>
+<div class="line">        <span class="keywordflow"><span data-cpp-color="control">if</span></span> <span data-cpp-color="punctuation">(</span><span data-cpp-color="local">writer_match</span><span data-cpp-color="punctuation">.</span><span data-cpp-color="method">current_count</span><span data-cpp-color="punctuation">()</span> <span data-cpp-color="punctuation">&gt;</span> <span data-cpp-color="number">0</span> <span data-cpp-color="keyword">and</span> <span data-cpp-color="local">reader_match</span><span data-cpp-color="punctuation">.</span><span data-cpp-color="method">current_count</span><span data-cpp-color="punctuation">()</span> <span data-cpp-color="punctuation">&gt;</span> <span data-cpp-color="number">0</span><span data-cpp-color="punctuation">)</span></div>
+<div class="line">            <span class="keywordflow"><span data-cpp-color="control">return</span></span><span data-cpp-color="punctuation">;</span></div>
+<div class="line"> </div>
+<div class="line">        <span data-cpp-color="namespace">std</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="namespace">this_thread</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="function">sleep_for</span><span data-cpp-color="punctuation">(</span><span data-cpp-color="namespace">std</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="namespace">chrono</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="type">milliseconds</span><span data-cpp-color="punctuation">(</span><span data-cpp-color="number">20</span><span data-cpp-color="punctuation">));</span></div>
+<div class="line">    <span data-cpp-color="punctuation">}</span></div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow"><span data-cpp-color="control">throw</span></span> <span data-cpp-color="namespace">std</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="type">runtime_error</span><span data-cpp-color="punctuation">(</span><span class="stringliteral"><span data-cpp-color="string">"No writer and reader match within five seconds"</span></span><span data-cpp-color="punctuation">);</span></div>
+<div class="line"><span data-cpp-color="punctuation">}</span></div>
+</div><!-- fragment --><p>discovery를 마치고 matching을 확인한 뒤 발행합니다. matching은 두 endpoint가 호환된다는 뜻입니다. 애플리케이션이 특정 sample을 수신하거나 처리했는지는 수신 측에서 확인합니다.</p>
+<div class="fragment dds-cpp-code"><div class="line"><span data-cpp-color="function">wait_for_match</span><span data-cpp-color="punctuation">(</span><span data-cpp-color="local">writer</span><span data-cpp-color="punctuation">,</span> <span data-cpp-color="local">reader</span><span data-cpp-color="punctuation">);</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype"><span data-cpp-color="keyword">char</span></span> <span data-cpp-color="local">message</span><span data-cpp-color="punctuation">[]</span> <span data-cpp-color="punctuation">=</span> <span class="stringliteral"><span data-cpp-color="string">"Hello from the how-to"</span></span><span data-cpp-color="punctuation">;</span></div>
+<div class="line"><span data-cpp-color="namespace">Hello</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="type">Msg</span> <span data-cpp-color="local">sample</span><span data-cpp-color="punctuation">{};</span></div>
+<div class="line"><span data-cpp-color="local">sample</span><span data-cpp-color="punctuation">.</span><span data-cpp-color="field">userId</span> <span data-cpp-color="punctuation">=</span> <span data-cpp-color="number">1</span><span data-cpp-color="punctuation">;</span></div>
+<div class="line"><span data-cpp-color="local">sample</span><span data-cpp-color="punctuation">.</span><span data-cpp-color="field">message</span> <span data-cpp-color="punctuation">=</span> <span data-cpp-color="local">message</span><span data-cpp-color="punctuation">;</span></div>
+<div class="line"><span data-cpp-color="local">writer</span><span data-cpp-color="punctuation">.</span><a class="code hl_function" href="classdds_1_1pub_1_1_data_writer.html#ab4131332cd4d7d1d0598cdce2fede459"><span data-cpp-color="method">write</span></a><span data-cpp-color="punctuation">(</span><span data-cpp-color="local">sample</span><span data-cpp-color="punctuation">);</span></div>
+</div><!-- fragment --><dl class="section see"><dt>참고</dt><dd><a class="el" href="group__dds__qos.html#matching_guide" title="DataWriter와 DataReader가 데이터를 교환하지 못할 때 진단하기">DataWriter와 DataReader가 데이터를 교환하지 못할 때 진단하기</a> </dd></dl>
+</div></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="page-nav-panel" id="page-nav">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
 </div><!-- container -->
 <!-- start footer part -->
-<div class="navpath" id="nav-path"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="footer">다음에 의해 생성됨 :  <a href="https://www.doxygen.org/index.html"><img alt="doxygen" class="footer" height="31" src="doxygen.svg" width="104"/></a> 1.18.0 </li>
-  </ul>
+<div class="navpath" id="nav-path"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">다음에 의해 생성됨 :  <a href="https://www.doxygen.org/index.html"><img alt="doxygen" class="footer" height="31" src="doxygen.svg" width="104"/></a> 1.18.0 </li>
+  </ul>
 </div>
 </body>
 </html>

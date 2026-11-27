@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['종료된_20후_20매칭_20목록_20갱신_0',['Reader가 종료된 후 매칭 목록 갱신',['../group__dds__tutorial__discovery.html#dds_tutorial_discovery_reader_exit',1,'']]]
+  ['조정_0',['WaitSet 조정',['../group__dds__core.html#api_usage_waitsets',1,'']]],
+  ['조회_1',['매칭된 DataWriter 조회',['../group__dds__tutorial__discovery.html#dds_tutorial_discovery_writers',1,'']]]
 ];

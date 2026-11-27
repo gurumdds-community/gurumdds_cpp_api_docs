@@ -18,7 +18,7 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script src="search/searchdata.js" type="text/javascript"></script>
 <script src="search/search.js" type="text/javascript"></script>
-<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+<script src="../theme.js" type="text/javascript"></script><link href="doxygen.css" rel="stylesheet" type="text/css"/>
 <link href="ReferenceBranding.css" rel="stylesheet" type="text/css"/>
 <script defer="True" src="ReferenceUi.js"></script><link href="../en/classdds_1_1topic_1_1_any_topic.html" hreflang="en" rel="alternate"/><link href="../ko/classdds_1_1topic_1_1_any_topic.html" hreflang="ko" rel="alternate"/><link href="../language.css" rel="stylesheet"/><script defer="defer" src="../language.js"></script></head>
 <body>
@@ -31,7 +31,7 @@
    <div id="projectname">GurumDDS C++ API Reference<span id="projectnumber"> 1.3.2</span>
    </div>
   </td>
- <td class="doc-language-cell"><label class="doc-language"><select aria-label="Documentation language" data-current="0"><option lang="en" selected="selected" value="../en/classdds_1_1topic_1_1_any_topic.html">English</option><option lang="en" value="../ko/classdds_1_1topic_1_1_any_topic.html">Korean</option></select></label></td></tr>
+ <td class="doc-language-cell"><div class="doc-header-controls"><button aria-pressed="false" class="doc-theme" type="button">Dark mode</button><label class="doc-language"><select aria-label="Documentation language" data-current="0"><option lang="en" selected="selected" value="../en/classdds_1_1topic_1_1_any_topic.html">English</option><option lang="en" value="../ko/classdds_1_1topic_1_1_any_topic.html">Korean</option></select></label></div></td></tr>
  </tbody>
 </table>
 </div>
@@ -117,13 +117,12 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('classdds_1_1to
 
 <p class="dds-class-include"><code>#include &lt;gurumdds/cpp/topic/AnyTopic.hpp&gt;</code></p>
 
-<p>Holds a topic without exposing its data type.  
- <a href="#details">More...</a></p>
+
 <a id="details" name="details"></a><h2 class="groupheader" id="header-details">Detailed Description</h2>
 <div class="textblock"><p>Holds a topic without exposing its data type. </p>
 <p>Use this handle to inspect topic QoS, the participant, or inconsistent-topic status. Recover a typed <span class="tt"><a class="el" href="classdds_1_1topic_1_1_topic.html" title="Associates a topic name with a DDS data type in a domain.">Topic&lt;T&gt;</a>&lt;T&gt;</span> before creating a typed endpoint.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classdds_1_1topic_1_1_topic.html" title="Associates a topic name with a DDS data type in a domain.">dds::topic::Topic&lt;T&gt;</a> </dd></dl>
-</div><table class="memberdecls">
+</div><div class="dds-table-scroll"><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-pub-methods"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:af35b1eb89b201c385ee955b29950015f" id="r_af35b1eb89b201c385ee955b29950015f"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
@@ -131,7 +130,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:af35b1eb89b201c385ee955b29950015f"><td class="mdescLeft"> </td><td class="mdescRight">Creates a type-erased view of a typed topic.  <br/></td></tr>
 <tr class="memitem:a07effc378af3aa8ca06a3a47cfb67c2d" id="r_a07effc378af3aa8ca06a3a47cfb67c2d"><td class="memItemLeft">const <a class="el" href="group__dds__domain.html#gab1bd86ffa9ac0869166a446dd0120f3d">dds::domain::DomainParticipant</a> &amp; </td><td class="memItemRight"><a class="el" href="#a07effc378af3aa8ca06a3a47cfb67c2d">domain_participant</a> () const</td></tr>
 <tr class="memdesc:a07effc378af3aa8ca06a3a47cfb67c2d"><td class="mdescLeft"> </td><td class="mdescRight">Gets the domain participant associated with the topic.  <br/></td></tr>
-<tr class="memitem:a1ab2400333602a33ac0f5937b5f74f92" id="r_a1ab2400333602a33ac0f5937b5f74f92"><td class="memItemLeft">const dds::core::status::InconsistentTopicStatus &amp; </td><td class="memItemRight"><a class="el" href="#a1ab2400333602a33ac0f5937b5f74f92">inconsistent_topic_status</a> ()</td></tr>
+<tr class="memitem:a1ab2400333602a33ac0f5937b5f74f92" id="r_a1ab2400333602a33ac0f5937b5f74f92"><td class="memItemLeft">const <a class="el" href="namespacedds_1_1core_1_1status.html#abe411539687fdab9d40418fd9ab8e3e2">dds::core::status::InconsistentTopicStatus</a> &amp; </td><td class="memItemRight"><a class="el" href="#a1ab2400333602a33ac0f5937b5f74f92">inconsistent_topic_status</a> ()</td></tr>
 <tr class="memdesc:a1ab2400333602a33ac0f5937b5f74f92"><td class="mdescLeft"> </td><td class="mdescRight">Gets the inconsistent-topic status.  <br/></td></tr>
 <tr class="memitem:adbe686be22518f32fd0a457087e76e0b" id="r_adbe686be22518f32fd0a457087e76e0b"><td class="memItemLeft">const <a class="el" href="group__dds__topic.html#ga1c569583302b1543e4f4be1d373359f2">dds::topic::qos::TopicQos</a> &amp; </td><td class="memItemRight"><a class="el" href="#adbe686be22518f32fd0a457087e76e0b">qos</a> () const</td></tr>
 <tr class="memdesc:adbe686be22518f32fd0a457087e76e0b"><td class="mdescLeft"> </td><td class="mdescRight">Gets the QoS stored by the underlying topic.  <br/></td></tr>
@@ -144,7 +143,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:ac80aabad540cf5cd4314c409cc8f0aec"><td class="mdescLeft"> </td><td class="mdescRight">Gets a pointer to the type-erased holder.  <br/></td></tr>
 <tr class="memitem:a91d56c22c2f35b9a75323228490eb50c" id="r_a91d56c22c2f35b9a75323228490eb50c"><td class="memItemLeft">detail::THolderBase * </td><td class="memItemRight"><a class="el" href="#a91d56c22c2f35b9a75323228490eb50c">operator-&gt;</a> ()</td></tr>
 <tr class="memdesc:a91d56c22c2f35b9a75323228490eb50c"><td class="mdescLeft"> </td><td class="mdescRight">Gets a pointer to the type-erased holder.  <br/></td></tr>
-</table>
+</table></div>
 <a id="doc-constructors" name="doc-constructors"></a><h2 class="groupheader" id="header-doc-constructors">Constructors and Destructors</h2>
 <a id="af35b1eb89b201c385ee955b29950015f" name="af35b1eb89b201c385ee955b29950015f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af35b1eb89b201c385ee955b29950015f">◆ </a></span>AnyTopic()</h2>
@@ -173,9 +172,9 @@ template&lt;typename T&gt; </div>
 
 <p>Creates a type-erased view of a typed topic. </p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">t</td><td>Typed topic whose delegate is shared </td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 
@@ -239,9 +238,9 @@ template&lt;typename T&gt; </div>
 <p>The requested template type must match the type originally stored in the holder.</p>
 <dl class="section return"><dt>Returns</dt><dd>Typed topic referring to the stored delegate</dd></dl>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
+  <div class="dds-table-scroll"><table class="tparams">
     <tr><td class="paramname">T</td><td>Original topic data type </td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 
@@ -257,7 +256,7 @@ template&lt;typename T&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const dds::core::status::InconsistentTopicStatus &amp; dds::topic::AnyTopic::inconsistent_topic_status </td>
+          <td class="memname">const <a class="el" href="namespacedds_1_1core_1_1status.html#abe411539687fdab9d40418fd9ab8e3e2">dds::core::status::InconsistentTopicStatus</a> &amp; dds::topic::AnyTopic::inconsistent_topic_status </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -384,9 +383,9 @@ template&lt;typename T&gt; </div>
 
 <p>Applies new QoS settings to the underlying topic. </p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">q</td><td>QoS policies to apply </td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 

@@ -18,7 +18,7 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script src="search/searchdata.js" type="text/javascript"></script>
 <script src="search/search.js" type="text/javascript"></script>
-<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+<script src="../theme.js" type="text/javascript"></script><link href="doxygen.css" rel="stylesheet" type="text/css"/>
 <link href="ReferenceBranding.css" rel="stylesheet" type="text/css"/>
 <script defer="True" src="ReferenceUi.js"></script><link href="../en/classdds_1_1sub_1_1_data_reader_1_1_manipulator_selector.html" hreflang="en" rel="alternate"/><link href="../ko/classdds_1_1sub_1_1_data_reader_1_1_manipulator_selector.html" hreflang="ko" rel="alternate"/><link href="../language.css" rel="stylesheet"/><script defer="defer" src="../language.js"></script></head>
 <body>
@@ -31,7 +31,7 @@
    <div id="projectname">GurumDDS C++ API Reference<span id="projectnumber"> 1.3.2</span>
    </div>
   </td>
- <td class="doc-language-cell"><label class="doc-language"><select aria-label="Documentation language" data-current="0"><option lang="en" selected="selected" value="../en/classdds_1_1sub_1_1_data_reader_1_1_manipulator_selector.html">English</option><option lang="en" value="../ko/classdds_1_1sub_1_1_data_reader_1_1_manipulator_selector.html">Korean</option></select></label></td></tr>
+ <td class="doc-language-cell"><div class="doc-header-controls"><button aria-pressed="false" class="doc-theme" type="button">Dark mode</button><label class="doc-language"><select aria-label="Documentation language" data-current="0"><option lang="en" selected="selected" value="../en/classdds_1_1sub_1_1_data_reader_1_1_manipulator_selector.html">English</option><option lang="en" value="../ko/classdds_1_1sub_1_1_data_reader_1_1_manipulator_selector.html">Korean</option></select></label></div></td></tr>
  </tbody>
 </table>
 </div>
@@ -117,12 +117,11 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('classdds_1_1su
 
 <p class="dds-class-include"><code>#include &lt;gurumdds/cpp/sub/TDataReader.hpp&gt;</code></p>
 
-<p><a class="el" href="classdds_1_1sub_1_1_data_reader_1_1_selector.html" title="Selects samples by state, instance, and count.">Selector</a> class enabling the streaming API.  
- <a href="#details">More...</a></p>
+
 <a id="details" name="details"></a><h2 class="groupheader" id="header-details">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename T, template&lt; typename Q &gt; class DELEGATE&gt;<br/>
 class dds::sub::DataReader&lt; T, DELEGATE &gt;::ManipulatorSelector</div><p><a class="el" href="classdds_1_1sub_1_1_data_reader_1_1_selector.html" title="Selects samples by state, instance, and count.">Selector</a> class enabling the streaming API. </p>
-</div><table class="memberdecls">
+</div><div class="dds-table-scroll"><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-pub-methods"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a7116f870df05ecfd0bf64ae30e2bbbd4" id="r_a7116f870df05ecfd0bf64ae30e2bbbd4"><td class="memItemLeft"> </td><td class="memItemRight"><a class="el" href="#a7116f870df05ecfd0bf64ae30e2bbbd4">ManipulatorSelector</a> (<a class="el" href="classdds_1_1sub_1_1_data_reader.html#adfb0369ca408857cac5a09dd871b1250">DataReader&lt;T&gt;</a> &amp;dr)</td></tr>
@@ -148,7 +147,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ade7e89e184fe66f199976a74a97d2173" id="r_ade7e89e184fe66f199976a74a97d2173"><td class="memTemplParams" colspan="2">template&lt;typename Functor&gt; </td></tr>
 <tr class="memitem:ade7e89e184fe66f199976a74a97d2173 template"><td class="memItemLeft"><a class="el" href="#a7116f870df05ecfd0bf64ae30e2bbbd4">ManipulatorSelector</a> </td><td class="memItemRight"><a class="el" href="#ade7e89e184fe66f199976a74a97d2173">operator&gt;&gt;</a> (Functor f)</td></tr>
 <tr class="memdesc:ade7e89e184fe66f199976a74a97d2173"><td class="mdescLeft"> </td><td class="mdescRight">Applies a streaming selection manipulator.  <br/></td></tr>
-</table>
+</table></div>
 <a id="doc-constructors" name="doc-constructors"></a><h2 class="groupheader" id="header-doc-constructors">Constructors and Destructors</h2>
 <a id="a7116f870df05ecfd0bf64ae30e2bbbd4" name="a7116f870df05ecfd0bf64ae30e2bbbd4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7116f870df05ecfd0bf64ae30e2bbbd4">◆ </a></span>ManipulatorSelector()</h2>
@@ -178,9 +177,9 @@ template&lt;typename T, template&lt; typename Q &gt; class DELEGATE&gt; </div>
 <p>Starts a streaming selection on a reader. </p>
 <p>The selector starts in take mode and uses the reader’s default filter state.</p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">dr</td><td>Reader whose samples will be selected </td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 
@@ -215,9 +214,9 @@ template&lt;typename T, template&lt; typename Q &gt; class DELEGATE&gt; </div>
 <p>Declares query-based sample selection. </p>
 <p>The default delegate does not implement this member. Use a content-filtered topic for expression-based subscription.</p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">query</td><td><a class="el" href="classdds_1_1sub_1_1_query.html" title="Stores a reader, query expression, and expression parameters.">Query</a> to apply if the delegate implements content selection</td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>This selector when implemented by the delegate </dd></dl>
@@ -251,9 +250,9 @@ template&lt;typename T, template&lt; typename Q &gt; class DELEGATE&gt; </div>
 
 <p>Restricts extraction to one instance. </p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">h</td><td>Instance handle, or a nil handle to select all instances</td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>This selector </dd></dl>
@@ -287,9 +286,9 @@ template&lt;typename T, template&lt; typename Q &gt; class DELEGATE&gt; </div>
 
 <p>Limits records returned by extraction. </p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">n</td><td>Maximum number of records, or zero for no explicit limit</td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>This selector </dd></dl>
@@ -324,9 +323,9 @@ template&lt;typename T, template&lt; typename Q &gt; class DELEGATE&gt; </div>
 <p>Selects the next instance after a supplied handle. </p>
 <p>The default delegate takes the unrestricted path when the handle is nil.</p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">h</td><td>Handle that precedes the instance to select</td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>This selector </dd></dl>
@@ -361,9 +360,9 @@ template&lt;typename T, template&lt; typename Q &gt; class DELEGATE&gt; </div>
 <p>Extracts records into a loan-managed collection. </p>
 <p>The selector reads or takes according to its current mode.</p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[out]</td><td class="paramname">samples</td><td>Collection whose previous contents are replaced</td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>This selector </dd></dl>
@@ -399,9 +398,9 @@ template&lt;typename Functor&gt; </div>
 
 <p>Applies a streaming selection manipulator. </p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">f</td><td>Manipulator that configures the selector</td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A selector that can be configured further or used to extract samples </dd></dl>
@@ -495,9 +494,9 @@ template&lt;typename T, template&lt; typename Q &gt; class DELEGATE&gt; </div>
 
 <p>Chooses read or take mode for later extraction. </p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">b</td><td>True to read and retain samples, false to take and remove them </td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 
@@ -530,9 +529,9 @@ template&lt;typename T, template&lt; typename Q &gt; class DELEGATE&gt; </div>
 
 <p>Sets sample, view, and instance filters. </p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">s</td><td>State masks to match</td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>This selector </dd></dl>

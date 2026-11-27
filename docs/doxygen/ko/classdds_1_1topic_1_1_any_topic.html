@@ -18,399 +18,398 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script src="search/searchdata.js" type="text/javascript"></script>
 <script src="search/search.js" type="text/javascript"></script>
-<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+<script src="../theme.js" type="text/javascript"></script><link href="doxygen.css" rel="stylesheet" type="text/css"/>
 <link href="ReferenceBranding.css" rel="stylesheet" type="text/css"/>
 <script defer="True" src="ReferenceUi.js"></script><link href="../en/classdds_1_1topic_1_1_any_topic.html" hreflang="en" rel="alternate"/><link href="../ko/classdds_1_1topic_1_1_any_topic.html" hreflang="ko" rel="alternate"/><link href="../language.css" rel="stylesheet"/><script defer="defer" src="../language.js"></script></head>
 <body>
-<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
-<div id="titlearea">
-<table cellpadding="0" cellspacing="0">
- <tbody>
- <tr id="projectrow">
-  <td id="projectalign">
-   <div id="projectname">GurumDDS C++ API Reference<span id="projectnumber"> 1.3.2</span>
-   </div>
-  </td>
- <td class="doc-language-cell"><label class="doc-language"><select aria-label="문서 언어" data-current="1"><option lang="en" value="../en/classdds_1_1topic_1_1_any_topic.html">English</option><option lang="en" selected="selected" value="../ko/classdds_1_1topic_1_1_any_topic.html">Korean</option></select></label></td></tr>
- </tbody>
-</table>
-</div>
-<!-- end header part -->
-<!-- 다음에 의해 생성됨 :  Doxygen 1.18.0 -->
-<script type="text/javascript">
-let searchBox = new SearchBox("searchBox", "search/",'.html');
-</script>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', codefold.init);
-</script>
-<script id="doxygen-config" type="application/json">
-{
-  "relPath": "",
-  "generateTreeView": true,
-  "searchEngine": true,
-  "serverBasedSearch": false,
-  "disableIndex": false,
-  "dynamicMenus": true,
-  "fullSidebar": false
-}
-</script>
-<script src="menudata.js" type="text/javascript"></script>
-<script src="menu.js" type="text/javascript"></script>
-<div id="main-nav-mobile">
-<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
-<label class="main-menu-btn" for="main-menu-state">
-<span class="main-menu-btn-icon"></span> 주 메뉴 표시 전환</label>
-<span id="searchBoxPos1"></span>
-</div>
-</div><!-- main-nav-mobile -->
-<div id="main-nav">
-  <ul class="sm sm-dox" id="main-menu">
-    <li id="searchBoxPos2">
-        <div class="MSearchBoxInactive" id="MSearchBox">
-        <span class="left">
-          <span class="search-icon" id="MSearchSelect"><span class="search-icon-dropdown"></span></span>
-          <input accesskey="S" id="MSearchField" placeholder="검색" type="text" value=""/>
-          </span><span class="right">
-            <a href="javascript:searchBox.CloseResultsWindow()" id="MSearchClose"><div class="close-icon" id="MSearchCloseImg"></div></a>
-          </span>
-        </div>
-    </li>
-  </ul>
-</div><!-- main-nav -->
-</div><!-- top -->
-<div class="ui-resizable side-nav-resizable" id="side-nav">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div class="sync" id="nav-sync"></div>
-    </div>
-  </div>
-  <div class="ui-resizable-handle" id="splitbar">
-  </div>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellpadding="0" cellspacing="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">GurumDDS C++ API Reference<span id="projectnumber"> 1.3.2</span>
+   </div>
+  </td>
+ <td class="doc-language-cell"><div class="doc-header-controls"><button aria-pressed="false" class="doc-theme" type="button">다크 모드</button><label class="doc-language"><select aria-label="문서 언어" data-current="1"><option lang="en" value="../en/classdds_1_1topic_1_1_any_topic.html">English</option><option lang="en" selected="selected" value="../ko/classdds_1_1topic_1_1_any_topic.html">Korean</option></select></label></div></td></tr>
+ </tbody>
+</table>
 </div>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded',() => { initNavTree('classdds_1_1topic_1_1_any_topic.html','','classdds_1_1topic_1_1_any_topic-members'); });
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
 </script>
-<div id="container">
-<div id="doc-content">
-<!-- window showing the filter options -->
-<div id="MSearchSelectWindow">
-</div>
-
-<!-- iframe showing the search results (closed by default) -->
-<div id="MSearchResultsWindow">
-<div id="MSearchResults">
-<div class="SRPage">
-<div id="SRIndex">
-<div id="SRResults"></div>
-<div class="SRStatus" id="Loading">로딩중...</div>
-<div class="SRStatus" id="Searching">검색중...</div>
-<div class="SRStatus" id="NoMatches">일치하는것 없음</div>
-</div>
-</div>
-</div>
-</div>
-
-<div class="header">
-  <div class="headertitle"><div class="title">dds::topic::AnyTopic 클래스<div class="ingroups"><a class="el" href="group__dds__api__modules.html">API 모듈</a> » <a class="el" href="group__dds__topic.html">Topic</a></div></div></div>
-</div><!--header-->
-<div class="contents">
-
-<p class="dds-class-include"><code>#include &lt;gurumdds/cpp/topic/AnyTopic.hpp&gt;</code></p>
-
-<p>데이터 타입을 드러내지 않고 Topic을 보관합니다  
- <a href="#details">더 자세히 ...</a></p>
-<a id="details" name="details"></a><h2 class="groupheader" id="header-details">상세한 설명</h2>
-<div class="textblock"><p>데이터 타입을 드러내지 않고 Topic을 보관합니다 </p>
-<p>이 handle로 <a class="el" href="classdds_1_1topic_1_1_topic.html" title="domain에서 Topic 이름을 DDS 데이터 타입과 연결합니다.">Topic&lt;T&gt;</a> QoS, Participant, inconsistent topic 상태를 확인할 수 있습니다. 타입이 지정된 Endpoint를 만들려면 <span class="tt"><a class="el" href="classdds_1_1topic_1_1_topic.html" title="domain에서 Topic 이름을 DDS 데이터 타입과 연결합니다.">Topic&lt;T&gt;</a>&lt;T&gt;</span>로 변환하세요.</p>
-<dl class="section see"><dt>참고</dt><dd><a class="el" href="classdds_1_1topic_1_1_topic.html" title="domain에서 Topic 이름을 DDS 데이터 타입과 연결합니다.">dds::topic::Topic&lt;T&gt;</a> </dd></dl>
-</div><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-pub-methods"><a id="pub-methods" name="pub-methods"></a>
-공개 멤버 함수</h2></td></tr>
-<tr class="memitem:af35b1eb89b201c385ee955b29950015f" id="r_af35b1eb89b201c385ee955b29950015f"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
-<tr class="memitem:af35b1eb89b201c385ee955b29950015f template"><td class="memItemLeft"> </td><td class="memItemRight"><a class="el" href="#af35b1eb89b201c385ee955b29950015f">AnyTopic</a> (const <a class="el" href="classdds_1_1topic_1_1_topic.html">dds::topic::Topic&lt;T&gt;</a>&lt; T &gt; &amp;t)</td></tr>
-<tr class="memdesc:af35b1eb89b201c385ee955b29950015f"><td class="mdescLeft"> </td><td class="mdescRight">데이터 타입이 지정된 Topic을 타입 지정 없이 다룰 수 있게 합니다  <br/></td></tr>
-<tr class="memitem:a07effc378af3aa8ca06a3a47cfb67c2d" id="r_a07effc378af3aa8ca06a3a47cfb67c2d"><td class="memItemLeft">const <a class="el" href="group__dds__domain.html#gab1bd86ffa9ac0869166a446dd0120f3d">dds::domain::DomainParticipant</a> &amp; </td><td class="memItemRight"><a class="el" href="#a07effc378af3aa8ca06a3a47cfb67c2d">domain_participant</a> () const</td></tr>
-<tr class="memdesc:a07effc378af3aa8ca06a3a47cfb67c2d"><td class="mdescLeft"> </td><td class="mdescRight">Topic과 연관된 DomainParticipant를 가져옵니다.  <br/></td></tr>
-<tr class="memitem:a1ab2400333602a33ac0f5937b5f74f92" id="r_a1ab2400333602a33ac0f5937b5f74f92"><td class="memItemLeft">const dds::core::status::InconsistentTopicStatus &amp; </td><td class="memItemRight"><a class="el" href="#a1ab2400333602a33ac0f5937b5f74f92">inconsistent_topic_status</a> ()</td></tr>
-<tr class="memdesc:a1ab2400333602a33ac0f5937b5f74f92"><td class="mdescLeft"> </td><td class="mdescRight">불일치- <a class="el" href="classdds_1_1topic_1_1_topic.html" title="domain에서 Topic 이름을 DDS 데이터 타입과 연결합니다.">Topic&lt;T&gt;</a> 상태를 가져옵니다  <br/></td></tr>
-<tr class="memitem:adbe686be22518f32fd0a457087e76e0b" id="r_adbe686be22518f32fd0a457087e76e0b"><td class="memItemLeft">const <a class="el" href="group__dds__topic.html#ga1c569583302b1543e4f4be1d373359f2">dds::topic::qos::TopicQos</a> &amp; </td><td class="memItemRight"><a class="el" href="#adbe686be22518f32fd0a457087e76e0b">qos</a> () const</td></tr>
-<tr class="memdesc:adbe686be22518f32fd0a457087e76e0b"><td class="mdescLeft"> </td><td class="mdescRight">기본 Topic에 의해 저장된 QoS를 가져옵니다  <br/></td></tr>
-<tr class="memitem:ad7afe7c1cc7660ad457d487ce685a125" id="r_ad7afe7c1cc7660ad457d487ce685a125"><td class="memItemLeft">void </td><td class="memItemRight"><a class="el" href="#ad7afe7c1cc7660ad457d487ce685a125">qos</a> (const <a class="el" href="group__dds__topic.html#ga1c569583302b1543e4f4be1d373359f2">dds::topic::qos::TopicQos</a> &amp;q)</td></tr>
-<tr class="memdesc:ad7afe7c1cc7660ad457d487ce685a125"><td class="mdescLeft"> </td><td class="mdescRight">기본 Topic에 새로운 QoS 설정을 적용합니다.  <br/></td></tr>
-<tr class="memitem:a830f55eb19af4c34614ba9f8f23cff02" id="r_a830f55eb19af4c34614ba9f8f23cff02"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
-<tr class="memitem:a830f55eb19af4c34614ba9f8f23cff02 template"><td class="memItemLeft"><a class="el" href="classdds_1_1topic_1_1_topic.html">Topic&lt;T&gt;</a>&lt; T &gt; </td><td class="memItemRight"><a class="el" href="#a830f55eb19af4c34614ba9f8f23cff02">get</a> ()</td></tr>
-<tr class="memdesc:a830f55eb19af4c34614ba9f8f23cff02"><td class="mdescLeft"> </td><td class="mdescRight">홀더에서 원래 데이터 타입의 Topic을 가져옵니다  <br/></td></tr>
-<tr class="memitem:ac80aabad540cf5cd4314c409cc8f0aec" id="r_ac80aabad540cf5cd4314c409cc8f0aec"><td class="memItemLeft">const detail::THolderBase * </td><td class="memItemRight"><a class="el" href="#ac80aabad540cf5cd4314c409cc8f0aec">operator-&gt;</a> () const</td></tr>
-<tr class="memdesc:ac80aabad540cf5cd4314c409cc8f0aec"><td class="mdescLeft"> </td><td class="mdescRight">구체적인 데이터 타입을 숨긴 홀더의 포인터를 가져옵니다  <br/></td></tr>
-<tr class="memitem:a91d56c22c2f35b9a75323228490eb50c" id="r_a91d56c22c2f35b9a75323228490eb50c"><td class="memItemLeft">detail::THolderBase * </td><td class="memItemRight"><a class="el" href="#a91d56c22c2f35b9a75323228490eb50c">operator-&gt;</a> ()</td></tr>
-<tr class="memdesc:a91d56c22c2f35b9a75323228490eb50c"><td class="mdescLeft"> </td><td class="mdescRight">구체적인 데이터 타입을 숨긴 홀더의 포인터를 가져옵니다  <br/></td></tr>
-</table>
-<a id="doc-constructors" name="doc-constructors"></a><h2 class="groupheader" id="header-doc-constructors">생성자와 소멸자</h2>
-<a id="af35b1eb89b201c385ee955b29950015f" name="af35b1eb89b201c385ee955b29950015f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af35b1eb89b201c385ee955b29950015f">◆ </a></span>AnyTopic()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">dds::topic::AnyTopic::AnyTopic </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdds_1_1topic_1_1_topic.html">dds::topic::Topic&lt;T&gt;</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>t</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>데이터 타입이 지정된 Topic을 타입 지정 없이 다룰 수 있게 합니다 </p>
-<dl class="params"><dt>매개변수</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[입력]</td><td class="paramname">t</td><td>구현 객체이 공유된 Topic을 입력했습니다 </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="doc-func-members" name="doc-func-members"></a><h2 class="groupheader" id="header-doc-func-members">멤버 함수</h2>
-<a id="a07effc378af3aa8ca06a3a47cfb67c2d" name="a07effc378af3aa8ca06a3a47cfb67c2d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a07effc378af3aa8ca06a3a47cfb67c2d">◆ </a></span>domain_participant()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const <a class="el" href="group__dds__domain.html#gab1bd86ffa9ac0869166a446dd0120f3d">dds::domain::DomainParticipant</a> &amp; dds::topic::AnyTopic::domain_participant </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Topic과 연관된 DomainParticipant를 가져옵니다. </p>
-<dl class="section return"><dt>반환값</dt><dd>저장된 DomainParticipant handle에 대한 참조 </dd></dl>
-
-</div>
-</div>
-<a id="a830f55eb19af4c34614ba9f8f23cff02" name="a830f55eb19af4c34614ba9f8f23cff02"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a830f55eb19af4c34614ba9f8f23cff02">◆ </a></span>get()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classdds_1_1topic_1_1_topic.html">Topic&lt;T&gt;</a>&lt; T &gt; dds::topic::AnyTopic::get </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>홀더에서 원래 데이터 타입의 Topic을 가져옵니다 </p>
-<p>요청된 템플릿 타입은 원래 홀더에 저장된 타입과 일치해야 합니다.</p>
-<dl class="section return"><dt>반환값</dt><dd>저장된 구현 객체을 참조하는 타입을 지정한 <a class="el" href="classdds_1_1topic_1_1_topic.html" title="domain에서 Topic 이름을 DDS 데이터 타입과 연결합니다.">Topic&lt;T&gt;</a></dd></dl>
-<dl class="tparams"><dt>템플릿 파라메터</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">T</td><td>원래 <a class="el" href="classdds_1_1topic_1_1_topic.html" title="domain에서 Topic 이름을 DDS 데이터 타입과 연결합니다.">Topic&lt;T&gt;</a> 데이터 타입 </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="a1ab2400333602a33ac0f5937b5f74f92" name="a1ab2400333602a33ac0f5937b5f74f92"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1ab2400333602a33ac0f5937b5f74f92">◆ </a></span>inconsistent_topic_status()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const dds::core::status::InconsistentTopicStatus &amp; dds::topic::AnyTopic::inconsistent_topic_status </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>불일치- <a class="el" href="classdds_1_1topic_1_1_topic.html" title="domain에서 Topic 이름을 DDS 데이터 타입과 연결합니다.">Topic&lt;T&gt;</a> 상태를 가져옵니다 </p>
-<dl class="section return"><dt>반환값</dt><dd>상충되는 <a class="el" href="classdds_1_1topic_1_1_topic.html" title="domain에서 Topic 이름을 DDS 데이터 타입과 연결합니다.">Topic&lt;T&gt;</a> 정의 수를 포함한 상태 스냅샷 </dd></dl>
-
-</div>
-</div>
-<a id="a91d56c22c2f35b9a75323228490eb50c" name="a91d56c22c2f35b9a75323228490eb50c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a91d56c22c2f35b9a75323228490eb50c">◆ </a></span>operator-&gt;() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">detail::THolderBase * dds::topic::AnyTopic::operator-&gt; </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>구체적인 데이터 타입을 숨긴 홀더의 포인터를 가져옵니다 </p>
-<dl class="section return"><dt>반환값</dt><dd>이 객체나 복사본이 홀더를 소유하는 동안 유효한 포인터 </dd></dl>
-
-</div>
-</div>
-<a id="ac80aabad540cf5cd4314c409cc8f0aec" name="ac80aabad540cf5cd4314c409cc8f0aec"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac80aabad540cf5cd4314c409cc8f0aec">◆ </a></span>operator-&gt;() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const detail::THolderBase * dds::topic::AnyTopic::operator-&gt; </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>구체적인 데이터 타입을 숨긴 홀더의 포인터를 가져옵니다 </p>
-<dl class="section return"><dt>반환값</dt><dd>이 객체나 복사본이 홀더를 소유하는 동안 유효한 포인터 </dd></dl>
-
-</div>
-</div>
-<a id="adbe686be22518f32fd0a457087e76e0b" name="adbe686be22518f32fd0a457087e76e0b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adbe686be22518f32fd0a457087e76e0b">◆ </a></span>qos() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const <a class="el" href="group__dds__topic.html#ga1c569583302b1543e4f4be1d373359f2">dds::topic::qos::TopicQos</a> &amp; dds::topic::AnyTopic::qos </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>기본 Topic에 의해 저장된 QoS를 가져옵니다 </p>
-<dl class="section return"><dt>반환값</dt><dd>현재 QoS 값에 대한 Const 참조 </dd></dl>
-
-</div>
-</div>
-<a id="ad7afe7c1cc7660ad457d487ce685a125" name="ad7afe7c1cc7660ad457d487ce685a125"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad7afe7c1cc7660ad457d487ce685a125">◆ </a></span>qos() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void dds::topic::AnyTopic::qos </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="group__dds__topic.html#ga1c569583302b1543e4f4be1d373359f2">dds::topic::qos::TopicQos</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>q</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>기본 Topic에 새로운 QoS 설정을 적용합니다. </p>
-<dl class="params"><dt>매개변수</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[입력]</td><td class="paramname">q</td><td>적용할 QoS 정책 </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<hr/>이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.:<ul>
-<li>include/gurumdds/cpp/topic/<a class="el" href="_any_topic_8hpp.html">AnyTopic.hpp</a></li>
-</ul>
-</div><!-- contents -->
-</div><!-- doc-content -->
-<div class="page-nav-panel" id="page-nav">
-<div id="page-nav-resize-handle"></div>
-<div id="page-nav-tree">
-<div id="page-nav-contents">
-</div><!-- page-nav-contents -->
-</div><!-- page-nav-tree -->
-</div><!-- page-nav -->
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script id="doxygen-config" type="application/json">
+{
+  "relPath": "",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script src="menudata.js" type="text/javascript"></script>
+<script src="menu.js" type="text/javascript"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> 주 메뉴 표시 전환</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div class="MSearchBoxInactive" id="MSearchBox">
+        <span class="left">
+          <span class="search-icon" id="MSearchSelect"><span class="search-icon-dropdown"></span></span>
+          <input accesskey="S" id="MSearchField" placeholder="검색" type="text" value=""/>
+          </span><span class="right">
+            <a href="javascript:searchBox.CloseResultsWindow()" id="MSearchClose"><div class="close-icon" id="MSearchCloseImg"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div class="ui-resizable side-nav-resizable" id="side-nav">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div class="sync" id="nav-sync"></div>
+    </div>
+  </div>
+  <div class="ui-resizable-handle" id="splitbar">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('classdds_1_1topic_1_1_any_topic.html','','classdds_1_1topic_1_1_any_topic-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">로딩중...</div>
+<div class="SRStatus" id="Searching">검색중...</div>
+<div class="SRStatus" id="NoMatches">일치하는것 없음</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">dds::topic::AnyTopic 클래스<div class="ingroups"><a class="el" href="group__dds__api__modules.html">API 모듈</a> » <a class="el" href="group__dds__topic.html">Topic</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p class="dds-class-include"><code>#include &lt;gurumdds/cpp/topic/AnyTopic.hpp&gt;</code></p>
+
+
+<a id="details" name="details"></a><h2 class="groupheader" id="header-details">상세한 설명</h2>
+<div class="textblock"><p>데이터 타입을 드러내지 않고 Topic을 보관합니다 </p>
+<p>이 handle로 <a class="el" href="classdds_1_1topic_1_1_topic.html" title="domain에서 Topic 이름을 DDS 데이터 타입과 연결합니다.">Topic&lt;T&gt;</a> QoS, Participant, inconsistent topic 상태를 확인할 수 있습니다. 타입이 지정된 Endpoint를 만들려면 <span class="tt"><a class="el" href="classdds_1_1topic_1_1_topic.html" title="domain에서 Topic 이름을 DDS 데이터 타입과 연결합니다.">Topic&lt;T&gt;</a>&lt;T&gt;</span>로 변환하세요.</p>
+<dl class="section see"><dt>참고</dt><dd><a class="el" href="classdds_1_1topic_1_1_topic.html" title="domain에서 Topic 이름을 DDS 데이터 타입과 연결합니다.">dds::topic::Topic&lt;T&gt;</a> </dd></dl>
+</div><div class="dds-table-scroll"><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-pub-methods"><a id="pub-methods" name="pub-methods"></a>
+공개 멤버 함수</h2></td></tr>
+<tr class="memitem:af35b1eb89b201c385ee955b29950015f" id="r_af35b1eb89b201c385ee955b29950015f"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
+<tr class="memitem:af35b1eb89b201c385ee955b29950015f template"><td class="memItemLeft"> </td><td class="memItemRight"><a class="el" href="#af35b1eb89b201c385ee955b29950015f">AnyTopic</a> (const <a class="el" href="classdds_1_1topic_1_1_topic.html">dds::topic::Topic&lt;T&gt;</a>&lt; T &gt; &amp;t)</td></tr>
+<tr class="memdesc:af35b1eb89b201c385ee955b29950015f"><td class="mdescLeft"> </td><td class="mdescRight">데이터 타입이 지정된 Topic을 타입 지정 없이 다룰 수 있게 합니다  <br/></td></tr>
+<tr class="memitem:a07effc378af3aa8ca06a3a47cfb67c2d" id="r_a07effc378af3aa8ca06a3a47cfb67c2d"><td class="memItemLeft">const <a class="el" href="group__dds__domain.html#gab1bd86ffa9ac0869166a446dd0120f3d">dds::domain::DomainParticipant</a> &amp; </td><td class="memItemRight"><a class="el" href="#a07effc378af3aa8ca06a3a47cfb67c2d">domain_participant</a> () const</td></tr>
+<tr class="memdesc:a07effc378af3aa8ca06a3a47cfb67c2d"><td class="mdescLeft"> </td><td class="mdescRight">Topic과 연관된 DomainParticipant를 가져옵니다.  <br/></td></tr>
+<tr class="memitem:a1ab2400333602a33ac0f5937b5f74f92" id="r_a1ab2400333602a33ac0f5937b5f74f92"><td class="memItemLeft">const <a class="el" href="namespacedds_1_1core_1_1status.html#abe411539687fdab9d40418fd9ab8e3e2">dds::core::status::InconsistentTopicStatus</a> &amp; </td><td class="memItemRight"><a class="el" href="#a1ab2400333602a33ac0f5937b5f74f92">inconsistent_topic_status</a> ()</td></tr>
+<tr class="memdesc:a1ab2400333602a33ac0f5937b5f74f92"><td class="mdescLeft"> </td><td class="mdescRight">불일치- <a class="el" href="classdds_1_1topic_1_1_topic.html" title="domain에서 Topic 이름을 DDS 데이터 타입과 연결합니다.">Topic&lt;T&gt;</a> 상태를 가져옵니다  <br/></td></tr>
+<tr class="memitem:adbe686be22518f32fd0a457087e76e0b" id="r_adbe686be22518f32fd0a457087e76e0b"><td class="memItemLeft">const <a class="el" href="group__dds__topic.html#ga1c569583302b1543e4f4be1d373359f2">dds::topic::qos::TopicQos</a> &amp; </td><td class="memItemRight"><a class="el" href="#adbe686be22518f32fd0a457087e76e0b">qos</a> () const</td></tr>
+<tr class="memdesc:adbe686be22518f32fd0a457087e76e0b"><td class="mdescLeft"> </td><td class="mdescRight">기본 Topic에 의해 저장된 QoS를 가져옵니다  <br/></td></tr>
+<tr class="memitem:ad7afe7c1cc7660ad457d487ce685a125" id="r_ad7afe7c1cc7660ad457d487ce685a125"><td class="memItemLeft">void </td><td class="memItemRight"><a class="el" href="#ad7afe7c1cc7660ad457d487ce685a125">qos</a> (const <a class="el" href="group__dds__topic.html#ga1c569583302b1543e4f4be1d373359f2">dds::topic::qos::TopicQos</a> &amp;q)</td></tr>
+<tr class="memdesc:ad7afe7c1cc7660ad457d487ce685a125"><td class="mdescLeft"> </td><td class="mdescRight">기본 Topic에 새로운 QoS 설정을 적용합니다.  <br/></td></tr>
+<tr class="memitem:a830f55eb19af4c34614ba9f8f23cff02" id="r_a830f55eb19af4c34614ba9f8f23cff02"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
+<tr class="memitem:a830f55eb19af4c34614ba9f8f23cff02 template"><td class="memItemLeft"><a class="el" href="classdds_1_1topic_1_1_topic.html">Topic&lt;T&gt;</a>&lt; T &gt; </td><td class="memItemRight"><a class="el" href="#a830f55eb19af4c34614ba9f8f23cff02">get</a> ()</td></tr>
+<tr class="memdesc:a830f55eb19af4c34614ba9f8f23cff02"><td class="mdescLeft"> </td><td class="mdescRight">홀더에서 원래 데이터 타입의 Topic을 가져옵니다  <br/></td></tr>
+<tr class="memitem:ac80aabad540cf5cd4314c409cc8f0aec" id="r_ac80aabad540cf5cd4314c409cc8f0aec"><td class="memItemLeft">const detail::THolderBase * </td><td class="memItemRight"><a class="el" href="#ac80aabad540cf5cd4314c409cc8f0aec">operator-&gt;</a> () const</td></tr>
+<tr class="memdesc:ac80aabad540cf5cd4314c409cc8f0aec"><td class="mdescLeft"> </td><td class="mdescRight">구체적인 데이터 타입을 숨긴 홀더의 포인터를 가져옵니다  <br/></td></tr>
+<tr class="memitem:a91d56c22c2f35b9a75323228490eb50c" id="r_a91d56c22c2f35b9a75323228490eb50c"><td class="memItemLeft">detail::THolderBase * </td><td class="memItemRight"><a class="el" href="#a91d56c22c2f35b9a75323228490eb50c">operator-&gt;</a> ()</td></tr>
+<tr class="memdesc:a91d56c22c2f35b9a75323228490eb50c"><td class="mdescLeft"> </td><td class="mdescRight">구체적인 데이터 타입을 숨긴 홀더의 포인터를 가져옵니다  <br/></td></tr>
+</table></div>
+<a id="doc-constructors" name="doc-constructors"></a><h2 class="groupheader" id="header-doc-constructors">생성자와 소멸자</h2>
+<a id="af35b1eb89b201c385ee955b29950015f" name="af35b1eb89b201c385ee955b29950015f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af35b1eb89b201c385ee955b29950015f">◆ </a></span>AnyTopic()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">dds::topic::AnyTopic::AnyTopic </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdds_1_1topic_1_1_topic.html">dds::topic::Topic&lt;T&gt;</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>t</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>데이터 타입이 지정된 Topic을 타입 지정 없이 다룰 수 있게 합니다 </p>
+<dl class="params"><dt>매개변수</dt><dd>
+  <div class="dds-table-scroll"><table class="params">
+    <tr><td class="paramdir">[입력]</td><td class="paramname">t</td><td>구현 객체이 공유된 Topic을 입력했습니다 </td></tr>
+  </table></div>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="doc-func-members" name="doc-func-members"></a><h2 class="groupheader" id="header-doc-func-members">멤버 함수</h2>
+<a id="a07effc378af3aa8ca06a3a47cfb67c2d" name="a07effc378af3aa8ca06a3a47cfb67c2d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07effc378af3aa8ca06a3a47cfb67c2d">◆ </a></span>domain_participant()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="group__dds__domain.html#gab1bd86ffa9ac0869166a446dd0120f3d">dds::domain::DomainParticipant</a> &amp; dds::topic::AnyTopic::domain_participant </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Topic과 연관된 DomainParticipant를 가져옵니다. </p>
+<dl class="section return"><dt>반환값</dt><dd>저장된 DomainParticipant handle에 대한 참조 </dd></dl>
+
+</div>
+</div>
+<a id="a830f55eb19af4c34614ba9f8f23cff02" name="a830f55eb19af4c34614ba9f8f23cff02"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a830f55eb19af4c34614ba9f8f23cff02">◆ </a></span>get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdds_1_1topic_1_1_topic.html">Topic&lt;T&gt;</a>&lt; T &gt; dds::topic::AnyTopic::get </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>홀더에서 원래 데이터 타입의 Topic을 가져옵니다 </p>
+<p>요청된 템플릿 타입은 원래 홀더에 저장된 타입과 일치해야 합니다.</p>
+<dl class="section return"><dt>반환값</dt><dd>저장된 구현 객체을 참조하는 타입을 지정한 <a class="el" href="classdds_1_1topic_1_1_topic.html" title="domain에서 Topic 이름을 DDS 데이터 타입과 연결합니다.">Topic&lt;T&gt;</a></dd></dl>
+<dl class="tparams"><dt>템플릿 파라메터</dt><dd>
+  <div class="dds-table-scroll"><table class="tparams">
+    <tr><td class="paramname">T</td><td>원래 <a class="el" href="classdds_1_1topic_1_1_topic.html" title="domain에서 Topic 이름을 DDS 데이터 타입과 연결합니다.">Topic&lt;T&gt;</a> 데이터 타입 </td></tr>
+  </table></div>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a1ab2400333602a33ac0f5937b5f74f92" name="a1ab2400333602a33ac0f5937b5f74f92"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ab2400333602a33ac0f5937b5f74f92">◆ </a></span>inconsistent_topic_status()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="namespacedds_1_1core_1_1status.html#abe411539687fdab9d40418fd9ab8e3e2">dds::core::status::InconsistentTopicStatus</a> &amp; dds::topic::AnyTopic::inconsistent_topic_status </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>불일치- <a class="el" href="classdds_1_1topic_1_1_topic.html" title="domain에서 Topic 이름을 DDS 데이터 타입과 연결합니다.">Topic&lt;T&gt;</a> 상태를 가져옵니다 </p>
+<dl class="section return"><dt>반환값</dt><dd>상충되는 <a class="el" href="classdds_1_1topic_1_1_topic.html" title="domain에서 Topic 이름을 DDS 데이터 타입과 연결합니다.">Topic&lt;T&gt;</a> 정의 수를 포함한 상태 스냅샷 </dd></dl>
+
+</div>
+</div>
+<a id="a91d56c22c2f35b9a75323228490eb50c" name="a91d56c22c2f35b9a75323228490eb50c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91d56c22c2f35b9a75323228490eb50c">◆ </a></span>operator-&gt;() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">detail::THolderBase * dds::topic::AnyTopic::operator-&gt; </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>구체적인 데이터 타입을 숨긴 홀더의 포인터를 가져옵니다 </p>
+<dl class="section return"><dt>반환값</dt><dd>이 객체나 복사본이 홀더를 소유하는 동안 유효한 포인터 </dd></dl>
+
+</div>
+</div>
+<a id="ac80aabad540cf5cd4314c409cc8f0aec" name="ac80aabad540cf5cd4314c409cc8f0aec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac80aabad540cf5cd4314c409cc8f0aec">◆ </a></span>operator-&gt;() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const detail::THolderBase * dds::topic::AnyTopic::operator-&gt; </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>구체적인 데이터 타입을 숨긴 홀더의 포인터를 가져옵니다 </p>
+<dl class="section return"><dt>반환값</dt><dd>이 객체나 복사본이 홀더를 소유하는 동안 유효한 포인터 </dd></dl>
+
+</div>
+</div>
+<a id="adbe686be22518f32fd0a457087e76e0b" name="adbe686be22518f32fd0a457087e76e0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adbe686be22518f32fd0a457087e76e0b">◆ </a></span>qos() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="group__dds__topic.html#ga1c569583302b1543e4f4be1d373359f2">dds::topic::qos::TopicQos</a> &amp; dds::topic::AnyTopic::qos </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>기본 Topic에 의해 저장된 QoS를 가져옵니다 </p>
+<dl class="section return"><dt>반환값</dt><dd>현재 QoS 값에 대한 Const 참조 </dd></dl>
+
+</div>
+</div>
+<a id="ad7afe7c1cc7660ad457d487ce685a125" name="ad7afe7c1cc7660ad457d487ce685a125"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7afe7c1cc7660ad457d487ce685a125">◆ </a></span>qos() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void dds::topic::AnyTopic::qos </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__dds__topic.html#ga1c569583302b1543e4f4be1d373359f2">dds::topic::qos::TopicQos</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>q</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>기본 Topic에 새로운 QoS 설정을 적용합니다. </p>
+<dl class="params"><dt>매개변수</dt><dd>
+  <div class="dds-table-scroll"><table class="params">
+    <tr><td class="paramdir">[입력]</td><td class="paramname">q</td><td>적용할 QoS 정책 </td></tr>
+  </table></div>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.:<ul>
+<li>include/gurumdds/cpp/topic/<a class="el" href="_any_topic_8hpp.html">AnyTopic.hpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div class="page-nav-panel" id="page-nav">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
 </div><!-- container -->
 <!-- start footer part -->
-<div class="navpath" id="nav-path"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="navelem"><a href="namespacedds.html">dds</a></li><li class="navelem"><a href="namespacedds_1_1topic.html">topic</a></li><li class="navelem"><a href="classdds_1_1topic_1_1_any_topic.html">AnyTopic</a></li>
-    <li class="footer">다음에 의해 생성됨 :  <a href="https://www.doxygen.org/index.html"><img alt="doxygen" class="footer" height="31" src="doxygen.svg" width="104"/></a> 1.18.0 </li>
-  </ul>
+<div class="navpath" id="nav-path"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="namespacedds.html">dds</a></li><li class="navelem"><a href="namespacedds_1_1topic.html">topic</a></li><li class="navelem"><a href="classdds_1_1topic_1_1_any_topic.html">AnyTopic</a></li>
+    <li class="footer">다음에 의해 생성됨 :  <a href="https://www.doxygen.org/index.html"><img alt="doxygen" class="footer" height="31" src="doxygen.svg" width="104"/></a> 1.18.0 </li>
+  </ul>
 </div>
 </body>
 </html>

@@ -18,464 +18,464 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script src="search/searchdata.js" type="text/javascript"></script>
 <script src="search/search.js" type="text/javascript"></script>
-<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+<script src="../theme.js" type="text/javascript"></script><link href="doxygen.css" rel="stylesheet" type="text/css"/>
 <link href="ReferenceBranding.css" rel="stylesheet" type="text/css"/>
 <script defer="True" src="ReferenceUi.js"></script><link href="../en/dds_example_new_helloworld_keyed.html" hreflang="en" rel="alternate"/><link href="../ko/dds_example_new_helloworld_keyed.html" hreflang="ko" rel="alternate"/><link href="../language.css" rel="stylesheet"/><script defer="defer" src="../language.js"></script></head>
 <body>
-<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
-<div id="titlearea">
-<table cellpadding="0" cellspacing="0">
- <tbody>
- <tr id="projectrow">
-  <td id="projectalign">
-   <div id="projectname">GurumDDS C++ API Reference<span id="projectnumber"> 1.3.2</span>
-   </div>
-  </td>
- <td class="doc-language-cell"><label class="doc-language"><select aria-label="문서 언어" data-current="1"><option lang="en" value="../en/dds_example_new_helloworld_keyed.html">English</option><option lang="en" selected="selected" value="../ko/dds_example_new_helloworld_keyed.html">Korean</option></select></label></td></tr>
- </tbody>
-</table>
-</div>
-<!-- end header part -->
-<!-- 다음에 의해 생성됨 :  Doxygen 1.18.0 -->
-<script type="text/javascript">
-let searchBox = new SearchBox("searchBox", "search/",'.html');
-</script>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', codefold.init);
-</script>
-<script id="doxygen-config" type="application/json">
-{
-  "relPath": "",
-  "generateTreeView": true,
-  "searchEngine": true,
-  "serverBasedSearch": false,
-  "disableIndex": false,
-  "dynamicMenus": true,
-  "fullSidebar": false
-}
-</script>
-<script src="menudata.js" type="text/javascript"></script>
-<script src="menu.js" type="text/javascript"></script>
-<div id="main-nav-mobile">
-<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
-<label class="main-menu-btn" for="main-menu-state">
-<span class="main-menu-btn-icon"></span> 주 메뉴 표시 전환</label>
-<span id="searchBoxPos1"></span>
-</div>
-</div><!-- main-nav-mobile -->
-<div id="main-nav">
-  <ul class="sm sm-dox" id="main-menu">
-    <li id="searchBoxPos2">
-        <div class="MSearchBoxInactive" id="MSearchBox">
-        <span class="left">
-          <span class="search-icon" id="MSearchSelect"><span class="search-icon-dropdown"></span></span>
-          <input accesskey="S" id="MSearchField" placeholder="검색" type="text" value=""/>
-          </span><span class="right">
-            <a href="javascript:searchBox.CloseResultsWindow()" id="MSearchClose"><div class="close-icon" id="MSearchCloseImg"></div></a>
-          </span>
-        </div>
-    </li>
-  </ul>
-</div><!-- main-nav -->
-</div><!-- top -->
-<div class="ui-resizable side-nav-resizable" id="side-nav">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div class="sync" id="nav-sync"></div>
-    </div>
-  </div>
-  <div class="ui-resizable-handle" id="splitbar">
-  </div>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellpadding="0" cellspacing="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">GurumDDS C++ API Reference<span id="projectnumber"> 1.3.2</span>
+   </div>
+  </td>
+ <td class="doc-language-cell"><div class="doc-header-controls"><button aria-pressed="false" class="doc-theme" type="button">다크 모드</button><label class="doc-language"><select aria-label="문서 언어" data-current="1"><option lang="en" value="../en/dds_example_new_helloworld_keyed.html">English</option><option lang="en" selected="selected" value="../ko/dds_example_new_helloworld_keyed.html">Korean</option></select></label></div></td></tr>
+ </tbody>
+</table>
 </div>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded',() => { initNavTree('dds_example_new_helloworld_keyed.html','',''); });
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
 </script>
-<div id="container">
-<div id="doc-content">
-<!-- window showing the filter options -->
-<div id="MSearchSelectWindow">
-</div>
-
-<!-- iframe showing the search results (closed by default) -->
-<div id="MSearchResultsWindow">
-<div id="MSearchResults">
-<div class="SRPage">
-<div id="SRIndex">
-<div id="SRResults"></div>
-<div class="SRStatus" id="Loading">로딩중...</div>
-<div class="SRStatus" id="Searching">검색중...</div>
-<div class="SRStatus" id="NoMatches">일치하는것 없음</div>
-</div>
-</div>
-</div>
-</div>
-
-<div><div class="header">
-  <div class="headertitle"><div class="title">Keyed sample </div></div>
-</div><!--header-->
-<div class="contents">
-<div class="textblock"><p>여러 instance의 sample을 발행하고 user ID로 특정 instance를 선택합니다.</p>
-<h1 class="doxsection"><a class="anchor" id="dds_example_new_helloworld_keyed_run"></a>
-예제 실행하기</h1>
-<div class="fragment"><div class="line">./helloworld_keyed sub 1</div>
-<div class="line">./helloworld_keyed pub 2</div>
-</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="dds_example_new_helloworld_keyed_source"></a>
-소스 파일</h1>
-<h2 class="doxsection"><a class="anchor" id="dds_example_new_helloworld_keyed_helloworld_idl"></a>
-HelloWorld.idl</h2>
-<div class="fragment"><div class="line"><span class="keyword">struct </span>HelloWorld {</div>
-<div class="line">    @key <span class="keywordtype">long</span> user_id;</div>
-<div class="line">    <span class="keywordtype">string</span> message;</div>
-<div class="line">};</div>
-</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="dds_example_new_helloworld_keyed_src_main_cpp"></a>
-src/main.cpp</h2>
-<div class="fragment"><div class="line"><span class="preprocessor">#include "pub.hpp"</span></div>
-<div class="line"><span class="preprocessor">#include "sub.hpp"</span></div>
-<div class="line"> </div>
-<div class="line"><span class="preprocessor">#include &lt;gurumdds/cpp/core/Exception.hpp&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;gurumdds/cpp/domain/ddsdomain.hpp&gt;</span></div>
-<div class="line"> </div>
-<div class="line"><span class="preprocessor">#include &lt;charconv&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;iostream&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;string_view&gt;</span></div>
-<div class="line"> </div>
-<div class="line"><span class="keyword">namespace </span>{</div>
-<div class="line">    <span class="keyword">inline</span> <span class="keyword">constexpr</span> <a class="code hl_typedef" href="namespacedds_1_1domain.html#a492326d51518fe7033886c54a25d4bf0">dds::domain::DomainId</a> DOMAIN_ID = 0;</div>
-<div class="line">    <span class="keyword">inline</span> <span class="keyword">constexpr</span> <span class="keywordtype">char</span> TOPIC_NAME[] = <span class="stringliteral">"HelloWorld"</span>;</div>
-<div class="line">} <span class="comment">// namespace</span></div>
-<div class="line"> </div>
-<div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>* argv[]) {</div>
-<div class="line">    <span class="keywordflow">if</span>(argc != 3) {</div>
-<div class="line">        std::cerr &lt;&lt; <span class="stringliteral">"Usage: helloworld_keyed pub &lt;instance_count&gt;\n"</span></div>
-<div class="line">                  &lt;&lt; <span class="stringliteral">"       helloworld_keyed sub &lt;user_id&gt; (user_id &gt;= 1)\n"</span>;</div>
-<div class="line">        <span class="keywordflow">return</span> -1;</div>
-<div class="line">    }</div>
-<div class="line"> </div>
-<div class="line">    <span class="keyword">const</span> std::string_view mode = argv[1];</div>
-<div class="line">    <span class="keywordflow">if</span>(mode != <span class="stringliteral">"pub"</span> &amp;&amp; mode != <span class="stringliteral">"sub"</span>) {</div>
-<div class="line">        std::cerr &lt;&lt; <span class="stringliteral">"[ERROR] Unknown mode: "</span> &lt;&lt; mode &lt;&lt; <span class="stringliteral">" (expected pub or sub)\n"</span>;</div>
-<div class="line">        <span class="keywordflow">return</span> -1;</div>
-<div class="line">    }</div>
-<div class="line"> </div>
-<div class="line">    <span class="keyword">const</span> std::string_view input = argv[2];</div>
-<div class="line">    dds_Long value = 0;</div>
-<div class="line">    <span class="keyword">const</span> <span class="keywordtype">char</span>* pEnd = input.data() + input.size();</div>
-<div class="line">    <span class="keyword">const</span> <span class="keyword">auto</span> result = std::from_chars(input.data(), pEnd, value);</div>
-<div class="line">    <span class="keywordflow">if</span>(result.ec != std::errc{} || result.ptr != pEnd || value &lt; 1) {</div>
-<div class="line">        std::cerr &lt;&lt; (mode == <span class="stringliteral">"pub"</span> ? <span class="stringliteral">"[PUB ERROR] instance_count must be a positive 32-bit integer.\n"</span></div>
-<div class="line">                                    : <span class="stringliteral">"[SUB ERROR] user_id must be a positive 32-bit integer.\n"</span>);</div>
-<div class="line">        <span class="keywordflow">return</span> -1;</div>
-<div class="line">    }</div>
-<div class="line"> </div>
-<div class="line">    <span class="keywordflow">try</span> {</div>
-<div class="line">        <span class="keywordflow">if</span>(mode == <span class="stringliteral">"pub"</span>) {</div>
-<div class="line">            helloworld::Publisher pub(DOMAIN_ID, TOPIC_NAME);</div>
-<div class="line">            pub.Run(value);</div>
-<div class="line">            <span class="keywordflow">return</span> 0;</div>
-<div class="line">        }</div>
-<div class="line"> </div>
-<div class="line">        helloworld::Subscriber sub(DOMAIN_ID, TOPIC_NAME);</div>
-<div class="line">        sub.Run(value);</div>
-<div class="line">        <span class="keywordflow">return</span> 0;</div>
-<div class="line">    } <span class="keywordflow">catch</span>(<span class="keyword">const</span> <a class="code hl_class" href="classdds_1_1core_1_1_exception.html">dds::core::Exception</a>&amp; error) {</div>
-<div class="line">        std::cerr &lt;&lt; <span class="stringliteral">"[DDS ERROR] "</span> &lt;&lt; error.<a class="code hl_function" href="classdds_1_1core_1_1_exception.html#a51f0ecff258b8ea97c1e20dc72f10770">what</a>() &lt;&lt; <span class="charliteral">'\n'</span>;</div>
-<div class="line">        <span class="keywordflow">return</span> -1;</div>
-<div class="line">    }</div>
-<div class="line">}</div>
-<div class="ttc" id="aclassdds_1_1core_1_1_exception_html"><div class="ttname"><a href="classdds_1_1core_1_1_exception.html">dds::core::Exception</a></div><div class="ttdoc">DDS 예외에 대한 기본 인터페이스</div><div class="ttdef"><b>정의</b> Exception.hpp:35</div></div>
-<div class="ttc" id="aclassdds_1_1core_1_1_exception_html_a51f0ecff258b8ea97c1e20dc72f10770"><div class="ttname"><a href="classdds_1_1core_1_1_exception.html#a51f0ecff258b8ea97c1e20dc72f10770">dds::core::Exception::what</a></div><div class="ttdeci">virtual const char * what() const =0</div><div class="ttdoc">진단 메시지를 가져옵니다</div></div>
-<div class="ttc" id="anamespacedds_1_1domain_html_a492326d51518fe7033886c54a25d4bf0"><div class="ttname"><a href="namespacedds_1_1domain.html#a492326d51518fe7033886c54a25d4bf0">dds::domain::DomainId</a></div><div class="ttdeci">int32_t DomainId</div><div class="ttdoc">DDS domain을 식별하는 숫자</div><div class="ttdef"><b>정의</b> ddsdomain.hpp:10</div></div>
-</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="dds_example_new_helloworld_keyed_src_pub_cpp"></a>
-src/pub.cpp</h2>
-<div class="fragment"><div class="line"><span class="preprocessor">#include "pub.hpp"</span></div>
-<div class="line"> </div>
-<div class="line"><span class="preprocessor">#include &lt;chrono&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;iostream&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;thread&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;vector&gt;</span></div>
-<div class="line"> </div>
-<div class="line"><span class="keyword">namespace </span>helloworld {</div>
-<div class="line"> </div>
-<div class="line">    Publisher::Publisher(<a class="code hl_typedef" href="namespacedds_1_1domain.html#a492326d51518fe7033886c54a25d4bf0">dds::domain::DomainId</a> domainId, <span class="keyword">const</span> std::string&amp; topicName)</div>
-<div class="line">        : m_participant(domainId),</div>
-<div class="line">          m_topic(m_participant, topicName),</div>
-<div class="line">          m_publisher(m_participant),</div>
-<div class="line">          m_writer(m_publisher, m_topic) {}</div>
-<div class="line"> </div>
-<div class="line">    <span class="keywordtype">void</span> Publisher::Run(dds_Long instanceCount) {</div>
-<div class="line">        <span class="keywordflow">while</span>(m_writer.publication_matched_status().current_count() == 0) {</div>
-<div class="line">            std::this_thread::sleep_for(std::chrono::milliseconds(100));</div>
-<div class="line">        }</div>
-<div class="line"> </div>
-<div class="line">        std::cout &lt;&lt; <span class="stringliteral">"=== PUB | Register instances ==="</span> &lt;&lt; std::endl;</div>
-<div class="line"> </div>
-<div class="line">        <span class="keywordflow">for</span>(dds_Long i = 0; i &lt; instanceCount; ++i) {</div>
-<div class="line">            <span class="keyword">const</span> HelloWorld sample{i + 1, <span class="keyword">nullptr</span>};</div>
-<div class="line">            <span class="keyword">const</span> <a class="code hl_typedef" href="group__dds__core.html#ga8ee18acd2002fb15f2650f5c7cb055d0">dds::core::InstanceHandle</a> instanceHandle = m_writer.register_instance(sample);</div>
-<div class="line">            <span class="keywordflow">if</span>(instanceHandle.is_nil()) {</div>
-<div class="line">                std::cerr &lt;&lt; <span class="stringliteral">"[PUB ERROR] Could not register HelloWorld | user_id="</span> &lt;&lt; sample.user_id &lt;&lt; std::endl;</div>
-<div class="line">                <span class="keywordflow">return</span>;</div>
-<div class="line">            }</div>
-<div class="line"> </div>
-<div class="line">            std::cout &lt;&lt; <span class="stringliteral">"  ["</span> &lt;&lt; i + 1 &lt;&lt; <span class="stringliteral">"] user_id="</span> &lt;&lt; sample.user_id &lt;&lt; <span class="stringliteral">" | instance_handle="</span> &lt;&lt; instanceHandle</div>
-<div class="line">                      &lt;&lt; std::endl;</div>
-<div class="line">        }</div>
-<div class="line"> </div>
-<div class="line">        std::cout &lt;&lt; <span class="stringliteral">"\n=== PUB | Look up instances ==="</span> &lt;&lt; std::endl;</div>
-<div class="line"> </div>
-<div class="line">        std::vector&lt;dds::core::InstanceHandle&gt; instances;</div>
-<div class="line">        <span class="keywordflow">for</span>(dds_Long i = 0; i &lt; instanceCount; ++i) {</div>
-<div class="line">            <span class="keyword">const</span> HelloWorld sample{i + 1, <span class="keyword">nullptr</span>};</div>
-<div class="line">            <span class="keyword">const</span> <a class="code hl_typedef" href="group__dds__core.html#ga8ee18acd2002fb15f2650f5c7cb055d0">dds::core::InstanceHandle</a> instanceHandle = m_writer.lookup_instance(sample);</div>
-<div class="line">            <span class="keywordflow">if</span>(instanceHandle.is_nil()) {</div>
-<div class="line">                std::cerr &lt;&lt; <span class="stringliteral">"[PUB ERROR] Could not look up HelloWorld | user_id="</span> &lt;&lt; sample.user_id &lt;&lt; std::endl;</div>
-<div class="line">                <span class="keywordflow">return</span>;</div>
-<div class="line">            }</div>
-<div class="line"> </div>
-<div class="line">            std::cout &lt;&lt; <span class="stringliteral">"  ["</span> &lt;&lt; i + 1 &lt;&lt; <span class="stringliteral">"] user_id="</span> &lt;&lt; sample.user_id &lt;&lt; <span class="stringliteral">" | instance_handle="</span> &lt;&lt; instanceHandle</div>
-<div class="line">                      &lt;&lt; std::endl;</div>
-<div class="line"> </div>
-<div class="line">            instances.push_back(instanceHandle);</div>
-<div class="line">        }</div>
-<div class="line"> </div>
-<div class="line">        std::cout &lt;&lt; <span class="stringliteral">"\n=== PUB | Read instance keys ==="</span> &lt;&lt; std::endl;</div>
-<div class="line"> </div>
-<div class="line">        <span class="keywordflow">for</span>(dds_Long i = 0; i &lt; instanceCount; ++i) {</div>
-<div class="line">            HelloWorld sample{};</div>
-<div class="line">            m_writer.key_value(sample, instances[i]);</div>
-<div class="line"> </div>
-<div class="line">            std::cout &lt;&lt; <span class="stringliteral">"  ["</span> &lt;&lt; i + 1 &lt;&lt; <span class="stringliteral">"] user_id="</span> &lt;&lt; sample.user_id &lt;&lt; <span class="stringliteral">" | instance_handle="</span> &lt;&lt; instances[i]</div>
-<div class="line">                      &lt;&lt; std::endl;</div>
-<div class="line">        }</div>
-<div class="line"> </div>
-<div class="line">        std::cout &lt;&lt; <span class="stringliteral">"\n=== PUB | Write samples ==="</span> &lt;&lt; std::endl;</div>
-<div class="line"> </div>
-<div class="line">        std::this_thread::sleep_for(std::chrono::milliseconds(1000));</div>
-<div class="line"> </div>
-<div class="line">        <span class="keywordtype">char</span> message[] = <span class="stringliteral">"Hello!"</span>;</div>
-<div class="line">        <span class="keywordflow">for</span>(dds_Long i = 0; i &lt; instanceCount; ++i) {</div>
-<div class="line">            <span class="keyword">const</span> <span class="keyword">auto</span>&amp; instanceHandle = instances[i];</div>
-<div class="line"> </div>
-<div class="line">            <span class="comment">/* When instanceHandle is set to nil during a write operation, the instance is automatically</span></div>
-<div class="line"><span class="comment">             * registered internally, or an existing registered instance is retrieved.</span></div>
-<div class="line"><span class="comment">             * e.g. m_writer.write(sample, dds::core::InstanceHandle::nil());</span></div>
-<div class="line"><span class="comment">             */</span></div>
-<div class="line">            <span class="keyword">const</span> HelloWorld sample{i + 1, message};</div>
-<div class="line">            m_writer.write(sample, instanceHandle);</div>
-<div class="line"> </div>
-<div class="line">            std::cout &lt;&lt; <span class="stringliteral">"  ["</span> &lt;&lt; i + 1 &lt;&lt; <span class="stringliteral">"] user_id="</span> &lt;&lt; sample.user_id &lt;&lt; <span class="stringliteral">" | instance_handle="</span> &lt;&lt; instanceHandle</div>
-<div class="line">                      &lt;&lt; <span class="stringliteral">" | message=\""</span> &lt;&lt; sample.message &lt;&lt; <span class="charliteral">'"'</span> &lt;&lt; std::endl;</div>
-<div class="line">        }</div>
-<div class="line"> </div>
-<div class="line">        std::this_thread::sleep_for(std::chrono::milliseconds(1000));</div>
-<div class="line"> </div>
-<div class="line">        std::cout &lt;&lt; <span class="stringliteral">"\n=== PUB | Dispose instances ==="</span> &lt;&lt; std::endl;</div>
-<div class="line">        <span class="keywordflow">for</span>(dds_Long i = 0; i &lt; instanceCount; ++i) {</div>
-<div class="line">            HelloWorld sample{};</div>
-<div class="line">            m_writer.key_value(sample, instances[i]);</div>
-<div class="line">            m_writer.dispose_instance(instances[i]);</div>
-<div class="line">            std::cout &lt;&lt; <span class="stringliteral">"  ["</span> &lt;&lt; i + 1 &lt;&lt; <span class="stringliteral">"] user_id="</span> &lt;&lt; sample.user_id &lt;&lt; <span class="stringliteral">" | instance_handle="</span> &lt;&lt; instances[i]</div>
-<div class="line">                      &lt;&lt; std::endl;</div>
-<div class="line">        }</div>
-<div class="line"> </div>
-<div class="line">        std::this_thread::sleep_for(std::chrono::milliseconds(1000));</div>
-<div class="line"> </div>
-<div class="line">        std::cout &lt;&lt; <span class="stringliteral">"\n=== PUB | Unregister instances ==="</span> &lt;&lt; std::endl;</div>
-<div class="line">        <span class="keywordflow">for</span>(dds_Long i = 0; i &lt; instanceCount; ++i) {</div>
-<div class="line">            HelloWorld sample{};</div>
-<div class="line">            m_writer.key_value(sample, instances[i]);</div>
-<div class="line">            m_writer.unregister_instance(instances[i]);</div>
-<div class="line">            std::cout &lt;&lt; <span class="stringliteral">"  ["</span> &lt;&lt; i + 1 &lt;&lt; <span class="stringliteral">"] user_id="</span> &lt;&lt; sample.user_id &lt;&lt; <span class="stringliteral">" | instance_handle="</span> &lt;&lt; instances[i]</div>
-<div class="line">                      &lt;&lt; std::endl;</div>
-<div class="line">        }</div>
-<div class="line"> </div>
-<div class="line">        <span class="comment">/* Wait until the subscriber receives the data and terminates.</span></div>
-<div class="line"><span class="comment">         * If the publisher application exits immediately without waiting, it</span></div>
-<div class="line"><span class="comment">         * may terminate before the data is actually transmitted.</span></div>
-<div class="line"><span class="comment">         */</span></div>
-<div class="line">        <span class="keywordflow">while</span>(m_writer.publication_matched_status().current_count() &gt; 0) {</div>
-<div class="line">            std::this_thread::sleep_for(std::chrono::milliseconds(100));</div>
-<div class="line">        }</div>
-<div class="line">    }</div>
-<div class="line">} <span class="comment">// namespace helloworld</span></div>
-<div class="ttc" id="agroup__dds__core_html_ga8ee18acd2002fb15f2650f5c7cb055d0"><div class="ttname"><a href="group__dds__core.html#ga8ee18acd2002fb15f2650f5c7cb055d0">dds::core::InstanceHandle</a></div><div class="ttdeci">dds::core::detail::InstanceHandle InstanceHandle</div><div class="ttdoc">DDS Entity 또는 데이터 instance의 식별자</div><div class="ttdef"><b>정의</b> InstanceHandle.hpp:36</div></div>
-</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="dds_example_new_helloworld_keyed_src_pub_hpp"></a>
-src/pub.hpp</h2>
-<div class="fragment"><div class="line"><span class="preprocessor">#ifndef __HELLOWORLD_PUB_HPP__</span></div>
-<div class="line"><span class="preprocessor">#define __HELLOWORLD_PUB_HPP__</span></div>
-<div class="line"> </div>
-<div class="line"><span class="preprocessor">#include "HelloWorldTypeSupport.hpp"</span></div>
-<div class="line"><span class="preprocessor">#include "gurumdds/dds.hpp"</span></div>
-<div class="line"> </div>
-<div class="line"><span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"> </div>
-<div class="line"><span class="keyword">namespace </span>helloworld {</div>
-<div class="line"> </div>
-<div class="line">    <span class="keyword">class </span>Publisher {</div>
-<div class="line">    <span class="keyword">public</span>:</div>
-<div class="line">        Publisher(<a class="code hl_typedef" href="namespacedds_1_1domain.html#a492326d51518fe7033886c54a25d4bf0">dds::domain::DomainId</a> domainId, <span class="keyword">const</span> std::string&amp; topicName);</div>
-<div class="line">        <span class="keywordtype">void</span> Run(dds_Long instanceCount);</div>
-<div class="line"> </div>
-<div class="line">    <span class="keyword">private</span>:</div>
-<div class="line">        <a class="code hl_typedef" href="group__dds__domain.html#gab1bd86ffa9ac0869166a446dd0120f3d">dds::domain::DomainParticipant</a> m_participant;</div>
-<div class="line">        <a class="code hl_class" href="classdds_1_1topic_1_1_topic.html">dds::topic::Topic&lt;T&gt;</a> m_topic;</div>
-<div class="line">        <a class="code hl_typedef" href="group__dds__publication.html#gada2751fd8ce0e148138e6950f7ef7d37">dds::pub::Publisher</a> m_publisher;</div>
-<div class="line">        <a class="code hl_class" href="classdds_1_1pub_1_1_data_writer.html">dds::pub::DataWriter&lt;T&gt;</a> m_writer;</div>
-<div class="line">    };</div>
-<div class="line"> </div>
-<div class="line">} <span class="comment">// namespace helloworld</span></div>
-<div class="line"> </div>
-<div class="line"><span class="preprocessor">#endif </span><span class="comment">/* __HELLOWORLD_PUB_HPP__ */</span><span class="preprocessor"></span></div>
-<div class="ttc" id="aclassdds_1_1pub_1_1_data_writer_html"><div class="ttname"><a href="classdds_1_1pub_1_1_data_writer.html">dds::pub::DataWriter&lt;T&gt;</a></div><div class="ttdoc">데이터 타입이 지정된 Topic에 sample을 쓰고 instance를 관리합니다.</div><div class="ttdef"><b>정의</b> DataWriter.hpp:73</div></div>
-<div class="ttc" id="aclassdds_1_1topic_1_1_topic_html"><div class="ttname"><a href="classdds_1_1topic_1_1_topic.html">dds::topic::Topic&lt;T&gt;</a></div><div class="ttdoc">domain에서 Topic 이름을 DDS 데이터 타입과 연결합니다.</div><div class="ttdef"><b>정의</b> TTopic.hpp:54</div></div>
-<div class="ttc" id="agroup__dds__domain_html_gab1bd86ffa9ac0869166a446dd0120f3d"><div class="ttname"><a href="group__dds__domain.html#gab1bd86ffa9ac0869166a446dd0120f3d">dds::domain::DomainParticipant</a></div><div class="ttdeci">::dds::domain::detail::DomainParticipant DomainParticipant</div><div class="ttdoc">DDS domain에 가입하고 관리하는 데 사용되는 DomainParticipant handle</div><div class="ttdef"><b>정의</b> DomainParticipant.hpp:30</div></div>
-<div class="ttc" id="agroup__dds__publication_html_gada2751fd8ce0e148138e6950f7ef7d37"><div class="ttname"><a href="group__dds__publication.html#gada2751fd8ce0e148138e6950f7ef7d37">dds::pub::Publisher</a></div><div class="ttdeci">dds::pub::detail::Publisher Publisher</div><div class="ttdoc">DataWriter를 소유하고 기본값을 설정하는 데 사용되는 Publisher handle</div><div class="ttdef"><b>정의</b> Publisher.hpp:31</div></div>
-</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="dds_example_new_helloworld_keyed_src_sub_cpp"></a>
-src/sub.cpp</h2>
-<div class="fragment"><div class="line"><span class="preprocessor">#include "sub.hpp"</span></div>
-<div class="line"> </div>
-<div class="line"><span class="preprocessor">#include &lt;chrono&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;iostream&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;thread&gt;</span></div>
-<div class="line"> </div>
-<div class="line"><span class="keyword">namespace </span>helloworld {</div>
-<div class="line"> </div>
-<div class="line">    Subscriber::Subscriber(<a class="code hl_typedef" href="namespacedds_1_1domain.html#a492326d51518fe7033886c54a25d4bf0">dds::domain::DomainId</a> domainId, <span class="keyword">const</span> std::string&amp; topicName)</div>
-<div class="line">        : m_participant(domainId),</div>
-<div class="line">          m_topic(m_participant, topicName),</div>
-<div class="line">          m_subscriber(m_participant),</div>
-<div class="line">          m_reader(m_subscriber, m_topic,</div>
-<div class="line">                   <span class="comment">/* Without this QoS setting, the instance may be deleted immediately,</span></div>
-<div class="line"><span class="comment">                    * preventing the sample from being taken.</span></div>
-<div class="line"><span class="comment">                    */</span></div>
-<div class="line">                   m_subscriber.default_datareader_qos()</div>
-<div class="line">                       &lt;&lt; <a class="code hl_namespace" href="namespacedds.html">dds</a>::core::policy::ReaderDataLifecycle::NoAutoPurgeDisposedSamples()) {}</div>
-<div class="line"> </div>
-<div class="line">    <span class="keywordtype">void</span> Subscriber::Run(dds_Long userId) {</div>
-<div class="line">        <span class="keyword">const</span> HelloWorld key{userId, <span class="keyword">nullptr</span>};</div>
-<div class="line">        std::cout &lt;&lt; <span class="stringliteral">"[SUB] Waiting for user_id="</span> &lt;&lt; userId &lt;&lt; std::endl;</div>
-<div class="line">        <span class="keyword">auto</span> instanceHandle = m_reader.lookup_instance(key);</div>
-<div class="line">        <span class="keywordflow">while</span>(instanceHandle.is_nil()) {</div>
-<div class="line">            instanceHandle = m_reader.lookup_instance(key);</div>
-<div class="line">            std::this_thread::sleep_for(std::chrono::milliseconds(100));</div>
-<div class="line">        }</div>
-<div class="line"> </div>
-<div class="line">        <span class="keywordtype">bool</span> isRunning = <span class="keyword">true</span>;</div>
-<div class="line"> </div>
-<div class="line">        <span class="keywordflow">while</span>(isRunning) {</div>
-<div class="line">            <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span>&amp; sample: m_reader.select().instance(instanceHandle).take()) {</div>
-<div class="line">                <span class="keyword">const</span> <span class="keyword">auto</span>&amp; info = sample.info();</div>
-<div class="line"> </div>
-<div class="line">                std::cout &lt;&lt; <span class="stringliteral">"[SUB] HelloWorld | key(user_id)="</span> &lt;&lt; userId</div>
-<div class="line">                          &lt;&lt; <span class="stringliteral">" | instance_handle="</span> &lt;&lt; info.instance_handle() &lt;&lt; std::endl;</div>
-<div class="line">                <span class="keywordflow">if</span>(info.valid()) {</div>
-<div class="line">                    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; data = sample.data();</div>
-<div class="line">                    std::cout &lt;&lt; <span class="stringliteral">"  Data  | user_id="</span> &lt;&lt; data.user_id &lt;&lt; <span class="stringliteral">" | message=\""</span> &lt;&lt; data.message &lt;&lt; <span class="charliteral">'"'</span></div>
-<div class="line">                              &lt;&lt; std::endl;</div>
-<div class="line">                }</div>
-<div class="line"> </div>
-<div class="line">                <span class="keyword">const</span> <span class="keyword">auto</span> instanceState = info.state().instance_state();</div>
-<div class="line">                <span class="keywordflow">if</span>(instanceState == <a class="code hl_function" href="classdds_1_1sub_1_1status_1_1_instance_state.html#aa84c5cb12f5dfe392bb80710cc2ef070">dds::sub::status::InstanceState::alive</a>()) {</div>
-<div class="line">                    std::cout &lt;&lt; <span class="stringliteral">"  State | ALIVE"</span> &lt;&lt; std::endl;</div>
-<div class="line">                } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(instanceState == <a class="code hl_function" href="classdds_1_1sub_1_1status_1_1_instance_state.html#a2e518cf3afa4fa47ad989ee81a5cb27e">dds::sub::status::InstanceState::not_alive_disposed</a>()) {</div>
-<div class="line">                    std::cout &lt;&lt; <span class="stringliteral">"  State | NOT_ALIVE_DISPOSED"</span> &lt;&lt; std::endl;</div>
-<div class="line">                } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(instanceState == <a class="code hl_function" href="classdds_1_1sub_1_1status_1_1_instance_state.html#aaaf8cee2916adfe3dce35985dc2a05f5">dds::sub::status::InstanceState::not_alive_no_writers</a>()) {</div>
-<div class="line">                    std::cout &lt;&lt; <span class="stringliteral">"  State | NOT_ALIVE_NO_WRITERS"</span> &lt;&lt; std::endl;</div>
-<div class="line">                    isRunning = <span class="keyword">false</span>;</div>
-<div class="line">                }</div>
-<div class="line"> </div>
-<div class="line">                std::cout &lt;&lt; std::endl;</div>
-<div class="line">            }</div>
-<div class="line"> </div>
-<div class="line">            std::this_thread::sleep_for(std::chrono::milliseconds(100));</div>
-<div class="line">        }</div>
-<div class="line">    }</div>
-<div class="line">} <span class="comment">// namespace helloworld</span></div>
-<div class="ttc" id="aclassdds_1_1sub_1_1status_1_1_instance_state_html_a2e518cf3afa4fa47ad989ee81a5cb27e"><div class="ttname"><a href="classdds_1_1sub_1_1status_1_1_instance_state.html#a2e518cf3afa4fa47ad989ee81a5cb27e">dds::sub::status::InstanceState::not_alive_disposed</a></div><div class="ttdeci">static const InstanceState not_alive_disposed()</div><div class="ttdoc">처리된 instance에 대한 필터를 만듭니다</div><div class="ttdef"><b>정의</b> DataState.hpp:193</div></div>
-<div class="ttc" id="aclassdds_1_1sub_1_1status_1_1_instance_state_html_aa84c5cb12f5dfe392bb80710cc2ef070"><div class="ttname"><a href="classdds_1_1sub_1_1status_1_1_instance_state.html#aa84c5cb12f5dfe392bb80710cc2ef070">dds::sub::status::InstanceState::alive</a></div><div class="ttdeci">static const InstanceState alive()</div><div class="ttdoc">라이브 instance에 대한 필터를 만듭니다</div><div class="ttdef"><b>정의</b> DataState.hpp:185</div></div>
-<div class="ttc" id="aclassdds_1_1sub_1_1status_1_1_instance_state_html_aaaf8cee2916adfe3dce35985dc2a05f5"><div class="ttname"><a href="classdds_1_1sub_1_1status_1_1_instance_state.html#aaaf8cee2916adfe3dce35985dc2a05f5">dds::sub::status::InstanceState::not_alive_no_writers</a></div><div class="ttdeci">static const InstanceState not_alive_no_writers()</div><div class="ttdoc">활성 DataWriter가 없는 instance에 대한 필터를 만듭니다</div><div class="ttdef"><b>정의</b> DataState.hpp:201</div></div>
-<div class="ttc" id="anamespacedds_html"><div class="ttname"><a href="namespacedds.html">dds</a></div><div class="ttdoc">GurumDDS C++ API의 최상위 네임스페이스</div><div class="ttdef"><b>정의</b> array.hpp:7</div></div>
-</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="dds_example_new_helloworld_keyed_src_sub_hpp"></a>
-src/sub.hpp</h2>
-<div class="fragment"><div class="line"><span class="preprocessor">#ifndef __HELLOWORLD_SUB_HPP__</span></div>
-<div class="line"><span class="preprocessor">#define __HELLOWORLD_SUB_HPP__</span></div>
-<div class="line"> </div>
-<div class="line"><span class="preprocessor">#include "HelloWorldTypeSupport.hpp"</span></div>
-<div class="line"><span class="preprocessor">#include "gurumdds/dds.hpp"</span></div>
-<div class="line"> </div>
-<div class="line"><span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"> </div>
-<div class="line"><span class="keyword">namespace </span>helloworld {</div>
-<div class="line"> </div>
-<div class="line">    <span class="keyword">class </span>Subscriber {</div>
-<div class="line">    <span class="keyword">public</span>:</div>
-<div class="line">        Subscriber(<a class="code hl_typedef" href="namespacedds_1_1domain.html#a492326d51518fe7033886c54a25d4bf0">dds::domain::DomainId</a> domainId, <span class="keyword">const</span> std::string&amp; topicName);</div>
-<div class="line">        <span class="keywordtype">void</span> Run(dds_Long userId);</div>
-<div class="line"> </div>
-<div class="line">    <span class="keyword">private</span>:</div>
-<div class="line">        <a class="code hl_typedef" href="group__dds__domain.html#gab1bd86ffa9ac0869166a446dd0120f3d">dds::domain::DomainParticipant</a> m_participant;</div>
-<div class="line">        <a class="code hl_class" href="classdds_1_1topic_1_1_topic.html">dds::topic::Topic&lt;T&gt;</a> m_topic;</div>
-<div class="line">        <a class="code hl_typedef" href="group__dds__subscription.html#ga9a6d78b2a23f864211da5bd2edf28750">dds::sub::Subscriber</a> m_subscriber;</div>
-<div class="line">        <a class="code hl_class" href="classdds_1_1sub_1_1_data_reader.html">dds::sub::DataReader&lt;T&gt;</a> m_reader;</div>
-<div class="line">    };</div>
-<div class="line"> </div>
-<div class="line">} <span class="comment">// namespace helloworld</span></div>
-<div class="line"> </div>
-<div class="line"><span class="preprocessor">#endif </span><span class="comment">/* __HELLOWORLD_SUB_HPP__ */</span><span class="preprocessor"></span></div>
-<div class="ttc" id="aclassdds_1_1sub_1_1_data_reader_html"><div class="ttname"><a href="classdds_1_1sub_1_1_data_reader.html">dds::sub::DataReader&lt;T&gt;</a></div><div class="ttdoc">Topic에서 지정된 타입의 sample을 수신합니다.</div><div class="ttdef"><b>정의</b> TDataReader.hpp:76</div></div>
-<div class="ttc" id="agroup__dds__subscription_html_ga9a6d78b2a23f864211da5bd2edf28750"><div class="ttname"><a href="group__dds__subscription.html#ga9a6d78b2a23f864211da5bd2edf28750">dds::sub::Subscriber</a></div><div class="ttdeci">dds::sub::detail::Subscriber Subscriber</div><div class="ttdoc">DataReader를 소유하고 기본값을 설정하는 데 사용되는 Subscriber handle</div><div class="ttdef"><b>정의</b> Subscriber.hpp:31</div></div>
-</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="dds_example_new_helloworld_keyed_cmakelists_txt"></a>
-CMakeLists.txt</h2>
-<div class="fragment"><div class="line">cmake_minimum_required(VERSION 3.20)</div>
-<div class="line">project(helloworld_keyed VERSION 1.0.0 LANGUAGES CXX)</div>
-<div class="line"> </div>
-<div class="line">set(HELLOWORLD_KEYED_IDL <span class="stringliteral">"${CMAKE_CURRENT_SOURCE_DIR}/HelloWorld.idl"</span>)</div>
-<div class="line">set(HELLOWORLD_KEYED_GENERATED_DIR <span class="stringliteral">"${CMAKE_CURRENT_SOURCE_DIR}/generated"</span>)</div>
-<div class="line">set(HELLOWORLD_KEYED_TYPES_SRCS <span class="stringliteral">"${HELLOWORLD_KEYED_GENERATED_DIR}/HelloWorldTypeSupport.cpp"</span>)</div>
-<div class="line">set(HELLOWORLD_KEYED_TYPES_HEADERS</div>
-<div class="line">    <span class="stringliteral">"${HELLOWORLD_KEYED_GENERATED_DIR}/HelloWorld.hpp"</span></div>
-<div class="line">    <span class="stringliteral">"${HELLOWORLD_KEYED_GENERATED_DIR}/HelloWorldTypeSupport.hpp"</span></div>
-<div class="line">)</div>
-<div class="line"> </div>
-<div class="line">add_custom_command(</div>
-<div class="line">    OUTPUT <span class="stringliteral">"${HELLOWORLD_KEYED_TYPES_SRCS}"</span> ${HELLOWORLD_KEYED_TYPES_HEADERS}</div>
-<div class="line">    COMMAND <span class="stringliteral">"${CMAKE_COMMAND}"</span> -E make_directory <span class="stringliteral">"${HELLOWORLD_KEYED_GENERATED_DIR}"</span></div>
-<div class="line">    COMMAND <span class="stringliteral">"${GURUMIDL}"</span> cpp <span class="stringliteral">"${HELLOWORLD_KEYED_IDL}"</span> <span class="stringliteral">"${HELLOWORLD_KEYED_GENERATED_DIR}"</span> --replace</div>
-<div class="line">    DEPENDS <span class="stringliteral">"${GURUMIDL}"</span> <span class="stringliteral">"${HELLOWORLD_KEYED_IDL}"</span></div>
-<div class="line">    COMMENT <span class="stringliteral">"Generating HelloWorld C++ types from IDL"</span></div>
-<div class="line">    VERBATIM</div>
-<div class="line">)</div>
-<div class="line"> </div>
-<div class="line">add_custom_target(helloworld_keyed_generated</div>
-<div class="line">    DEPENDS <span class="stringliteral">"${HELLOWORLD_KEYED_TYPES_SRCS}"</span> ${HELLOWORLD_KEYED_TYPES_HEADERS}</div>
-<div class="line">)</div>
-<div class="line"> </div>
-<div class="line">add_executable(helloworld_keyed</div>
-<div class="line">    ${CMAKE_CURRENT_SOURCE_DIR}/src/main.cpp</div>
-<div class="line">    ${CMAKE_CURRENT_SOURCE_DIR}/src/pub.cpp</div>
-<div class="line">    ${CMAKE_CURRENT_SOURCE_DIR}/src/sub.cpp</div>
-<div class="line">    <span class="stringliteral">"${HELLOWORLD_KEYED_TYPES_SRCS}"</span>)</div>
-<div class="line">add_dependencies(helloworld_keyed helloworld_keyed_generated)</div>
-<div class="line">target_include_directories(helloworld_keyed PRIVATE <span class="stringliteral">"${HELLOWORLD_KEYED_GENERATED_DIR}"</span>)</div>
-<div class="line">target_link_libraries(helloworld_keyed PRIVATE gurumdds::cxx)</div>
-<div class="line">set_target_properties(helloworld_keyed PROPERTIES OUTPUT_NAME <span class="stringliteral">"helloworld_keyed"</span>)</div>
-</div><!-- fragment --> </div></div><!-- contents -->
-</div><!-- PageDoc -->
-</div><!-- doc-content -->
-<div class="page-nav-panel" id="page-nav">
-<div id="page-nav-resize-handle"></div>
-<div id="page-nav-tree">
-<div id="page-nav-contents">
-</div><!-- page-nav-contents -->
-</div><!-- page-nav-tree -->
-</div><!-- page-nav -->
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script id="doxygen-config" type="application/json">
+{
+  "relPath": "",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script src="menudata.js" type="text/javascript"></script>
+<script src="menu.js" type="text/javascript"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> 주 메뉴 표시 전환</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div class="MSearchBoxInactive" id="MSearchBox">
+        <span class="left">
+          <span class="search-icon" id="MSearchSelect"><span class="search-icon-dropdown"></span></span>
+          <input accesskey="S" id="MSearchField" placeholder="검색" type="text" value=""/>
+          </span><span class="right">
+            <a href="javascript:searchBox.CloseResultsWindow()" id="MSearchClose"><div class="close-icon" id="MSearchCloseImg"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div class="ui-resizable side-nav-resizable" id="side-nav">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div class="sync" id="nav-sync"></div>
+    </div>
+  </div>
+  <div class="ui-resizable-handle" id="splitbar">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('dds_example_new_helloworld_keyed.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">로딩중...</div>
+<div class="SRStatus" id="Searching">검색중...</div>
+<div class="SRStatus" id="NoMatches">일치하는것 없음</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title" id="dds_example_new_helloworld_keyed">Keyed sample </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p>여러 instance의 sample을 발행하고 user ID로 특정 instance를 선택합니다.</p>
+<h1 class="doxsection"><a class="anchor" id="dds_example_new_helloworld_keyed_run"></a>
+예제 실행하기</h1>
+<div class="fragment"><div class="line">./helloworld_keyed sub 1</div>
+<div class="line">./helloworld_keyed pub 2</div>
+</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="dds_example_new_helloworld_keyed_source"></a>
+소스 파일</h1>
+<h2 class="doxsection"><a class="anchor" id="dds_example_new_helloworld_keyed_helloworld_idl"></a>
+HelloWorld.idl</h2>
+<div class="fragment"><div class="line"><span class="keyword">struct </span>HelloWorld {</div>
+<div class="line">    @key <span class="keywordtype">long</span> user_id;</div>
+<div class="line">    <span class="keywordtype">string</span> message;</div>
+<div class="line">};</div>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="dds_example_new_helloworld_keyed_src_main_cpp"></a>
+src/main.cpp</h2>
+<div class="fragment dds-cpp-code"><div class="line"><span class="preprocessor"><span data-cpp-color="directive">#include</span> <span data-cpp-color="header">"pub.hpp"</span></span></div>
+<div class="line"><span class="preprocessor"><span data-cpp-color="directive">#include</span> <span data-cpp-color="header">"sub.hpp"</span></span></div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor"><span data-cpp-color="directive">#include</span> <span data-cpp-color="header">&lt;gurumdds/cpp/core/Exception.hpp&gt;</span></span></div>
+<div class="line"><span class="preprocessor"><span data-cpp-color="directive">#include</span> <span data-cpp-color="header">&lt;gurumdds/cpp/domain/ddsdomain.hpp&gt;</span></span></div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor"><span data-cpp-color="directive">#include</span> <span data-cpp-color="header">&lt;charconv&gt;</span></span></div>
+<div class="line"><span class="preprocessor"><span data-cpp-color="directive">#include</span> <span data-cpp-color="header">&lt;iostream&gt;</span></span></div>
+<div class="line"><span class="preprocessor"><span data-cpp-color="directive">#include</span> <span data-cpp-color="header">&lt;string_view&gt;</span></span></div>
+<div class="line"> </div>
+<div class="line"><span class="keyword"><span data-cpp-color="keyword">namespace</span> </span><span data-cpp-color="punctuation">{</span></div>
+<div class="line">    <span class="keyword"><span data-cpp-color="keyword">inline</span></span> <span class="keyword"><span data-cpp-color="keyword">constexpr</span></span> <a class="code hl_typedef" href="namespacedds_1_1domain.html#a492326d51518fe7033886c54a25d4bf0"><span data-cpp-color="namespace">dds</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="namespace">domain</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="type">DomainId</span></a> <span data-cpp-color="global">DOMAIN_ID</span> <span data-cpp-color="punctuation">=</span> <span data-cpp-color="number">0</span><span data-cpp-color="punctuation">;</span></div>
+<div class="line">    <span class="keyword"><span data-cpp-color="keyword">inline</span></span> <span class="keyword"><span data-cpp-color="keyword">constexpr</span></span> <span class="keywordtype"><span data-cpp-color="keyword">char</span></span> <span data-cpp-color="global">TOPIC_NAME</span><span data-cpp-color="punctuation">[]</span> <span data-cpp-color="punctuation">=</span> <span class="stringliteral"><span data-cpp-color="string">"HelloWorld"</span></span><span data-cpp-color="punctuation">;</span></div>
+<div class="line"><span data-cpp-color="punctuation">}</span> <span class="comment"><span data-cpp-color="comment">// namespace</span></span></div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype"><span data-cpp-color="keyword">int</span></span> <span data-cpp-color="function">main</span><span data-cpp-color="punctuation">(</span><span class="keywordtype"><span data-cpp-color="keyword">int</span></span> <span data-cpp-color="parameter">argc</span><span data-cpp-color="punctuation">,</span> <span class="keywordtype"><span data-cpp-color="keyword">char</span></span><span data-cpp-color="punctuation">*</span> <span data-cpp-color="parameter">argv</span><span data-cpp-color="punctuation">[])</span> <span data-cpp-color="punctuation">{</span></div>
+<div class="line">    <span class="keywordflow"><span data-cpp-color="control">if</span></span><span data-cpp-color="punctuation">(</span><span data-cpp-color="parameter">argc</span> <span data-cpp-color="punctuation">!=</span> <span data-cpp-color="number">3</span><span data-cpp-color="punctuation">)</span> <span data-cpp-color="punctuation">{</span></div>
+<div class="line">        <span data-cpp-color="namespace">std</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="global">cerr</span> <span data-cpp-color="punctuation">&lt;&lt;</span> <span class="stringliteral"><span data-cpp-color="string">"Usage: helloworld_keyed pub &lt;instance_count&gt;</span><span data-cpp-color="escape">\n</span><span data-cpp-color="string">"</span></span></div>
+<div class="line">                  <span data-cpp-color="punctuation">&lt;&lt;</span> <span class="stringliteral"><span data-cpp-color="string">"       helloworld_keyed sub &lt;user_id&gt; (user_id &gt;= 1)</span><span data-cpp-color="escape">\n</span><span data-cpp-color="string">"</span></span><span data-cpp-color="punctuation">;</span></div>
+<div class="line">        <span class="keywordflow"><span data-cpp-color="control">return</span></span> <span data-cpp-color="number">-1</span><span data-cpp-color="punctuation">;</span></div>
+<div class="line">    <span data-cpp-color="punctuation">}</span></div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword"><span data-cpp-color="keyword">const</span></span> <span data-cpp-color="namespace">std</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="type">string_view</span> <span data-cpp-color="local">mode</span> <span data-cpp-color="punctuation">=</span> <span data-cpp-color="parameter">argv</span><span data-cpp-color="punctuation">[</span><span data-cpp-color="number">1</span><span data-cpp-color="punctuation">];</span></div>
+<div class="line">    <span class="keywordflow"><span data-cpp-color="control">if</span></span><span data-cpp-color="punctuation">(</span><span data-cpp-color="local">mode</span> <span data-cpp-color="punctuation">!=</span> <span class="stringliteral"><span data-cpp-color="string">"pub"</span></span> <span data-cpp-color="punctuation">&amp;&amp;</span> <span data-cpp-color="local">mode</span> <span data-cpp-color="punctuation">!=</span> <span class="stringliteral"><span data-cpp-color="string">"sub"</span></span><span data-cpp-color="punctuation">)</span> <span data-cpp-color="punctuation">{</span></div>
+<div class="line">        <span data-cpp-color="namespace">std</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="global">cerr</span> <span data-cpp-color="punctuation">&lt;&lt;</span> <span class="stringliteral"><span data-cpp-color="string">"[ERROR] Unknown mode: "</span></span> <span data-cpp-color="punctuation">&lt;&lt;</span> <span data-cpp-color="local">mode</span> <span data-cpp-color="punctuation">&lt;&lt;</span> <span class="stringliteral"><span data-cpp-color="string">" (expected pub or sub)</span><span data-cpp-color="escape">\n</span><span data-cpp-color="string">"</span></span><span data-cpp-color="punctuation">;</span></div>
+<div class="line">        <span class="keywordflow"><span data-cpp-color="control">return</span></span> <span data-cpp-color="number">-1</span><span data-cpp-color="punctuation">;</span></div>
+<div class="line">    <span data-cpp-color="punctuation">}</span></div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword"><span data-cpp-color="keyword">const</span></span> <span data-cpp-color="namespace">std</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="type">string_view</span> <span data-cpp-color="local">input</span> <span data-cpp-color="punctuation">=</span> <span data-cpp-color="parameter">argv</span><span data-cpp-color="punctuation">[</span><span data-cpp-color="number">2</span><span data-cpp-color="punctuation">];</span></div>
+<div class="line">    <span data-cpp-color="type">dds_Long</span> <span data-cpp-color="local">value</span> <span data-cpp-color="punctuation">=</span> <span data-cpp-color="number">0</span><span data-cpp-color="punctuation">;</span></div>
+<div class="line">    <span class="keyword"><span data-cpp-color="keyword">const</span></span> <span class="keywordtype"><span data-cpp-color="keyword">char</span></span><span data-cpp-color="punctuation">*</span> <span data-cpp-color="local">pEnd</span> <span data-cpp-color="punctuation">=</span> <span data-cpp-color="local">input</span><span data-cpp-color="punctuation">.</span><span data-cpp-color="method">data</span><span data-cpp-color="punctuation">()</span> <span data-cpp-color="punctuation">+</span> <span data-cpp-color="local">input</span><span data-cpp-color="punctuation">.</span><span data-cpp-color="method">size</span><span data-cpp-color="punctuation">();</span></div>
+<div class="line">    <span class="keyword"><span data-cpp-color="keyword">const</span></span> <span class="keyword"><span data-cpp-color="keyword">auto</span></span> <span data-cpp-color="local">result</span> <span data-cpp-color="punctuation">=</span> <span data-cpp-color="namespace">std</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="function">from_chars</span><span data-cpp-color="punctuation">(</span><span data-cpp-color="local">input</span><span data-cpp-color="punctuation">.</span><span data-cpp-color="method">data</span><span data-cpp-color="punctuation">(),</span> <span data-cpp-color="local">pEnd</span><span data-cpp-color="punctuation">,</span> <span data-cpp-color="local">value</span><span data-cpp-color="punctuation">);</span></div>
+<div class="line">    <span class="keywordflow"><span data-cpp-color="control">if</span></span><span data-cpp-color="punctuation">(</span><span data-cpp-color="local">result</span><span data-cpp-color="punctuation">.</span><span data-cpp-color="field">ec</span> <span data-cpp-color="punctuation">!=</span> <span data-cpp-color="namespace">std</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="type">errc</span><span data-cpp-color="punctuation">{}</span> <span data-cpp-color="punctuation">||</span> <span data-cpp-color="local">result</span><span data-cpp-color="punctuation">.</span><span data-cpp-color="field">ptr</span> <span data-cpp-color="punctuation">!=</span> <span data-cpp-color="local">pEnd</span> <span data-cpp-color="punctuation">||</span> <span data-cpp-color="local">value</span> <span data-cpp-color="punctuation">&lt;</span> <span data-cpp-color="number">1</span><span data-cpp-color="punctuation">)</span> <span data-cpp-color="punctuation">{</span></div>
+<div class="line">        <span data-cpp-color="namespace">std</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="global">cerr</span> <span data-cpp-color="punctuation">&lt;&lt;</span> <span data-cpp-color="punctuation">(</span><span data-cpp-color="local">mode</span> <span data-cpp-color="punctuation">==</span> <span class="stringliteral"><span data-cpp-color="string">"pub"</span></span> <span data-cpp-color="punctuation">?</span> <span class="stringliteral"><span data-cpp-color="string">"[PUB ERROR] instance_count must be a positive 32-bit integer.</span><span data-cpp-color="escape">\n</span><span data-cpp-color="string">"</span></span></div>
+<div class="line">                                    <span data-cpp-color="punctuation">:</span> <span class="stringliteral"><span data-cpp-color="string">"[SUB ERROR] user_id must be a positive 32-bit integer.</span><span data-cpp-color="escape">\n</span><span data-cpp-color="string">"</span></span><span data-cpp-color="punctuation">);</span></div>
+<div class="line">        <span class="keywordflow"><span data-cpp-color="control">return</span></span> <span data-cpp-color="number">-1</span><span data-cpp-color="punctuation">;</span></div>
+<div class="line">    <span data-cpp-color="punctuation">}</span></div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow"><span data-cpp-color="control">try</span></span> <span data-cpp-color="punctuation">{</span></div>
+<div class="line">        <span class="keywordflow"><span data-cpp-color="control">if</span></span><span data-cpp-color="punctuation">(</span><span data-cpp-color="local">mode</span> <span data-cpp-color="punctuation">==</span> <span class="stringliteral"><span data-cpp-color="string">"pub"</span></span><span data-cpp-color="punctuation">)</span> <span data-cpp-color="punctuation">{</span></div>
+<div class="line">            <span data-cpp-color="namespace">helloworld</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="type">Publisher</span> <span data-cpp-color="local">pub</span><span data-cpp-color="punctuation">(</span><span data-cpp-color="global">DOMAIN_ID</span><span data-cpp-color="punctuation">,</span> <span data-cpp-color="global">TOPIC_NAME</span><span data-cpp-color="punctuation">);</span></div>
+<div class="line">            <span data-cpp-color="local">pub</span><span data-cpp-color="punctuation">.</span><span data-cpp-color="method">Run</span><span data-cpp-color="punctuation">(</span><span data-cpp-color="local">value</span><span data-cpp-color="punctuation">);</span></div>
+<div class="line">            <span class="keywordflow"><span data-cpp-color="control">return</span></span> <span data-cpp-color="number">0</span><span data-cpp-color="punctuation">;</span></div>
+<div class="line">        <span data-cpp-color="punctuation">}</span></div>
+<div class="line"> </div>
+<div class="line">        <span data-cpp-color="namespace">helloworld</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="type">Subscriber</span> <span data-cpp-color="local">sub</span><span data-cpp-color="punctuation">(</span><span data-cpp-color="global">DOMAIN_ID</span><span data-cpp-color="punctuation">,</span> <span data-cpp-color="global">TOPIC_NAME</span><span data-cpp-color="punctuation">);</span></div>
+<div class="line">        <span data-cpp-color="local">sub</span><span data-cpp-color="punctuation">.</span><span data-cpp-color="method">Run</span><span data-cpp-color="punctuation">(</span><span data-cpp-color="local">value</span><span data-cpp-color="punctuation">);</span></div>
+<div class="line">        <span class="keywordflow"><span data-cpp-color="control">return</span></span> <span data-cpp-color="number">0</span><span data-cpp-color="punctuation">;</span></div>
+<div class="line">    <span data-cpp-color="punctuation">}</span> <span class="keywordflow"><span data-cpp-color="control">catch</span></span><span data-cpp-color="punctuation">(</span><span class="keyword"><span data-cpp-color="keyword">const</span></span> <a class="code hl_class" href="classdds_1_1core_1_1_exception.html"><span data-cpp-color="namespace">dds</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="namespace">core</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="type">Exception</span></a><span data-cpp-color="punctuation">&amp;</span> <span data-cpp-color="local">error</span><span data-cpp-color="punctuation">)</span> <span data-cpp-color="punctuation">{</span></div>
+<div class="line">        <span data-cpp-color="namespace">std</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="global">cerr</span> <span data-cpp-color="punctuation">&lt;&lt;</span> <span class="stringliteral"><span data-cpp-color="string">"[DDS ERROR] "</span></span> <span data-cpp-color="punctuation">&lt;&lt;</span> <span data-cpp-color="local">error</span><span data-cpp-color="punctuation">.</span><a class="code hl_function" href="classdds_1_1core_1_1_exception.html#a51f0ecff258b8ea97c1e20dc72f10770"><span data-cpp-color="method">what</span></a><span data-cpp-color="punctuation">()</span> <span data-cpp-color="punctuation">&lt;&lt;</span> <span class="charliteral"><span data-cpp-color="string">'\n'</span></span><span data-cpp-color="punctuation">;</span></div>
+<div class="line">        <span class="keywordflow"><span data-cpp-color="control">return</span></span> <span data-cpp-color="number">-1</span><span data-cpp-color="punctuation">;</span></div>
+<div class="line">    <span data-cpp-color="punctuation">}</span></div>
+<div class="line"><span data-cpp-color="punctuation">}</span></div>
+<div class="ttc" id="aclassdds_1_1core_1_1_exception_html"><div class="ttname"><a href="classdds_1_1core_1_1_exception.html">dds::core::Exception</a></div><div class="ttdoc">DDS 예외에 대한 기본 인터페이스</div><div class="ttdef"><b>정의</b> Exception.hpp:35</div></div>
+<div class="ttc" id="aclassdds_1_1core_1_1_exception_html_a51f0ecff258b8ea97c1e20dc72f10770"><div class="ttname"><a href="classdds_1_1core_1_1_exception.html#a51f0ecff258b8ea97c1e20dc72f10770">dds::core::Exception::what</a></div><div class="ttdeci">virtual const char * what() const =0</div><div class="ttdoc">진단 메시지를 가져옵니다</div></div>
+<div class="ttc" id="anamespacedds_1_1domain_html_a492326d51518fe7033886c54a25d4bf0"><div class="ttname"><a href="namespacedds_1_1domain.html#a492326d51518fe7033886c54a25d4bf0">dds::domain::DomainId</a></div><div class="ttdeci">int32_t DomainId</div><div class="ttdoc">DDS domain을 식별하는 숫자</div><div class="ttdef"><b>정의</b> ddsdomain.hpp:10</div></div>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="dds_example_new_helloworld_keyed_src_pub_cpp"></a>
+src/pub.cpp</h2>
+<div class="fragment dds-cpp-code"><div class="line"><span class="preprocessor"><span data-cpp-color="directive">#include</span> <span data-cpp-color="header">"pub.hpp"</span></span></div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor"><span data-cpp-color="directive">#include</span> <span data-cpp-color="header">&lt;chrono&gt;</span></span></div>
+<div class="line"><span class="preprocessor"><span data-cpp-color="directive">#include</span> <span data-cpp-color="header">&lt;iostream&gt;</span></span></div>
+<div class="line"><span class="preprocessor"><span data-cpp-color="directive">#include</span> <span data-cpp-color="header">&lt;thread&gt;</span></span></div>
+<div class="line"><span class="preprocessor"><span data-cpp-color="directive">#include</span> <span data-cpp-color="header">&lt;vector&gt;</span></span></div>
+<div class="line"> </div>
+<div class="line"><span class="keyword"><span data-cpp-color="keyword">namespace</span> </span><span data-cpp-color="namespace">helloworld</span> <span data-cpp-color="punctuation">{</span></div>
+<div class="line"> </div>
+<div class="line">    <span data-cpp-color="type">Publisher</span><span data-cpp-color="punctuation">::</span>Publisher<span data-cpp-color="punctuation">(</span><a class="code hl_typedef" href="namespacedds_1_1domain.html#a492326d51518fe7033886c54a25d4bf0"><span data-cpp-color="namespace">dds</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="namespace">domain</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="type">DomainId</span></a> <span data-cpp-color="parameter">domainId</span><span data-cpp-color="punctuation">,</span> <span class="keyword"><span data-cpp-color="keyword">const</span></span> <span data-cpp-color="namespace">std</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="type">string</span><span data-cpp-color="punctuation">&amp;</span> <span data-cpp-color="parameter">topicName</span><span data-cpp-color="punctuation">)</span></div>
+<div class="line">        <span data-cpp-color="punctuation">:</span> <span data-cpp-color="field">m_participant</span><span data-cpp-color="punctuation">(</span><span data-cpp-color="parameter">domainId</span><span data-cpp-color="punctuation">),</span></div>
+<div class="line">          <span data-cpp-color="field">m_topic</span><span data-cpp-color="punctuation">(</span><span data-cpp-color="field">m_participant</span><span data-cpp-color="punctuation">,</span> <span data-cpp-color="parameter">topicName</span><span data-cpp-color="punctuation">),</span></div>
+<div class="line">          <span data-cpp-color="field">m_publisher</span><span data-cpp-color="punctuation">(</span><span data-cpp-color="field">m_participant</span><span data-cpp-color="punctuation">),</span></div>
+<div class="line">          <span data-cpp-color="field">m_writer</span><span data-cpp-color="punctuation">(</span><span data-cpp-color="field">m_publisher</span><span data-cpp-color="punctuation">,</span> <span data-cpp-color="field">m_topic</span><span data-cpp-color="punctuation">)</span> <span data-cpp-color="punctuation">{}</span></div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordtype"><span data-cpp-color="keyword">void</span></span> <span data-cpp-color="type">Publisher</span>::<span data-cpp-color="method">Run</span><span data-cpp-color="punctuation">(</span><span data-cpp-color="type">dds_Long</span> <span data-cpp-color="parameter">instanceCount</span><span data-cpp-color="punctuation">)</span> <span data-cpp-color="punctuation">{</span></div>
+<div class="line">        <span class="keywordflow"><span data-cpp-color="control">while</span></span><span data-cpp-color="punctuation">(</span><span data-cpp-color="field">m_writer</span><span data-cpp-color="punctuation">.</span><span data-cpp-color="method">publication_matched_status</span><span data-cpp-color="punctuation">().</span><span data-cpp-color="method">current_count</span><span data-cpp-color="punctuation">()</span> <span data-cpp-color="punctuation">==</span> <span data-cpp-color="number">0</span><span data-cpp-color="punctuation">)</span> <span data-cpp-color="punctuation">{</span></div>
+<div class="line">            <span data-cpp-color="namespace">std</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="namespace">this_thread</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="function">sleep_for</span><span data-cpp-color="punctuation">(</span><span data-cpp-color="namespace">std</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="namespace">chrono</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="type">milliseconds</span><span data-cpp-color="punctuation">(</span><span data-cpp-color="number">100</span><span data-cpp-color="punctuation">));</span></div>
+<div class="line">        <span data-cpp-color="punctuation">}</span></div>
+<div class="line"> </div>
+<div class="line">        <span data-cpp-color="namespace">std</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="global">cout</span> <span data-cpp-color="punctuation">&lt;&lt;</span> <span class="stringliteral"><span data-cpp-color="string">"=== PUB | Register instances ==="</span></span> <span data-cpp-color="punctuation">&lt;&lt;</span> <span data-cpp-color="namespace">std</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="function">endl</span><span data-cpp-color="punctuation">;</span></div>
+<div class="line"> </div>
+<div class="line">        <span class="keywordflow"><span data-cpp-color="control">for</span></span><span data-cpp-color="punctuation">(</span><span data-cpp-color="type">dds_Long</span> <span data-cpp-color="local">i</span> <span data-cpp-color="punctuation">=</span> <span data-cpp-color="number">0</span><span data-cpp-color="punctuation">;</span> <span data-cpp-color="local">i</span> <span data-cpp-color="punctuation">&lt;</span> <span data-cpp-color="parameter">instanceCount</span><span data-cpp-color="punctuation">;</span> <span data-cpp-color="punctuation">++</span><span data-cpp-color="local">i</span><span data-cpp-color="punctuation">)</span> <span data-cpp-color="punctuation">{</span></div>
+<div class="line">            <span class="keyword"><span data-cpp-color="keyword">const</span></span> <span data-cpp-color="type">HelloWorld</span> <span data-cpp-color="local">sample</span><span data-cpp-color="punctuation">{</span><span data-cpp-color="local">i</span> <span data-cpp-color="punctuation">+</span> <span data-cpp-color="number">1</span><span data-cpp-color="punctuation">,</span> <span class="keyword">nullptr</span><span data-cpp-color="punctuation">};</span></div>
+<div class="line">            <span class="keyword"><span data-cpp-color="keyword">const</span></span> <a class="code hl_typedef" href="group__dds__core.html#ga8ee18acd2002fb15f2650f5c7cb055d0"><span data-cpp-color="namespace">dds</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="namespace">core</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="type">InstanceHandle</span></a> <span data-cpp-color="local">instanceHandle</span> <span data-cpp-color="punctuation">=</span> <span data-cpp-color="field">m_writer</span><span data-cpp-color="punctuation">.</span><span data-cpp-color="method">register_instance</span><span data-cpp-color="punctuation">(</span><span data-cpp-color="local">sample</span><span data-cpp-color="punctuation">);</span></div>
+<div class="line">            <span class="keywordflow"><span data-cpp-color="control">if</span></span><span data-cpp-color="punctuation">(</span><span data-cpp-color="local">instanceHandle</span><span data-cpp-color="punctuation">.</span><span data-cpp-color="method">is_nil</span><span data-cpp-color="punctuation">())</span> <span data-cpp-color="punctuation">{</span></div>
+<div class="line">                <span data-cpp-color="namespace">std</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="global">cerr</span> <span data-cpp-color="punctuation">&lt;&lt;</span> <span class="stringliteral"><span data-cpp-color="string">"[PUB ERROR] Could not register HelloWorld | user_id="</span></span> <span data-cpp-color="punctuation">&lt;&lt;</span> <span data-cpp-color="local">sample</span><span data-cpp-color="punctuation">.</span><span data-cpp-color="field">user_id</span> <span data-cpp-color="punctuation">&lt;&lt;</span> <span data-cpp-color="namespace">std</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="function">endl</span><span data-cpp-color="punctuation">;</span></div>
+<div class="line">                <span class="keywordflow"><span data-cpp-color="control">return</span></span><span data-cpp-color="punctuation">;</span></div>
+<div class="line">            <span data-cpp-color="punctuation">}</span></div>
+<div class="line"> </div>
+<div class="line">            <span data-cpp-color="namespace">std</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="global">cout</span> <span data-cpp-color="punctuation">&lt;&lt;</span> <span class="stringliteral"><span data-cpp-color="string">"  ["</span></span> <span data-cpp-color="punctuation">&lt;&lt;</span> <span data-cpp-color="local">i</span> <span data-cpp-color="punctuation">+</span> <span data-cpp-color="number">1</span> <span data-cpp-color="punctuation">&lt;&lt;</span> <span class="stringliteral"><span data-cpp-color="string">"] user_id="</span></span> <span data-cpp-color="punctuation">&lt;&lt;</span> <span data-cpp-color="local">sample</span><span data-cpp-color="punctuation">.</span><span data-cpp-color="field">user_id</span> <span data-cpp-color="punctuation">&lt;&lt;</span> <span class="stringliteral"><span data-cpp-color="string">" | instance_handle="</span></span> <span data-cpp-color="punctuation">&lt;&lt;</span> <span data-cpp-color="local">instanceHandle</span></div>
+<div class="line">                      <span data-cpp-color="punctuation">&lt;&lt;</span> <span data-cpp-color="namespace">std</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="function">endl</span><span data-cpp-color="punctuation">;</span></div>
+<div class="line">        <span data-cpp-color="punctuation">}</span></div>
+<div class="line"> </div>
+<div class="line">        <span data-cpp-color="namespace">std</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="global">cout</span> <span data-cpp-color="punctuation">&lt;&lt;</span> <span class="stringliteral"><span data-cpp-color="string">"</span><span data-cpp-color="escape">\n</span><span data-cpp-color="string">=== PUB | Look up instances ==="</span></span> <span data-cpp-color="punctuation">&lt;&lt;</span> <span data-cpp-color="namespace">std</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="function">endl</span><span data-cpp-color="punctuation">;</span></div>
+<div class="line"> </div>
+<div class="line">        <span data-cpp-color="namespace">std</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="class-template">vector</span><span data-cpp-color="punctuation">&lt;</span><span data-cpp-color="namespace">dds</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="namespace">core</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="type">InstanceHandle</span><span data-cpp-color="punctuation">&gt;</span> <span data-cpp-color="local">instances</span><span data-cpp-color="punctuation">;</span></div>
+<div class="line">        <span class="keywordflow"><span data-cpp-color="control">for</span></span><span data-cpp-color="punctuation">(</span><span data-cpp-color="type">dds_Long</span> <span data-cpp-color="local">i</span> <span data-cpp-color="punctuation">=</span> <span data-cpp-color="number">0</span><span data-cpp-color="punctuation">;</span> <span data-cpp-color="local">i</span> <span data-cpp-color="punctuation">&lt;</span> <span data-cpp-color="parameter">instanceCount</span><span data-cpp-color="punctuation">;</span> <span data-cpp-color="punctuation">++</span><span data-cpp-color="local">i</span><span data-cpp-color="punctuation">)</span> <span data-cpp-color="punctuation">{</span></div>
+<div class="line">            <span class="keyword"><span data-cpp-color="keyword">const</span></span> <span data-cpp-color="type">HelloWorld</span> <span data-cpp-color="local">sample</span><span data-cpp-color="punctuation">{</span><span data-cpp-color="local">i</span> <span data-cpp-color="punctuation">+</span> <span data-cpp-color="number">1</span><span data-cpp-color="punctuation">,</span> <span class="keyword">nullptr</span><span data-cpp-color="punctuation">};</span></div>
+<div class="line">            <span class="keyword"><span data-cpp-color="keyword">const</span></span> <a class="code hl_typedef" href="group__dds__core.html#ga8ee18acd2002fb15f2650f5c7cb055d0"><span data-cpp-color="namespace">dds</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="namespace">core</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="type">InstanceHandle</span></a> <span data-cpp-color="local">instanceHandle</span> <span data-cpp-color="punctuation">=</span> <span data-cpp-color="field">m_writer</span><span data-cpp-color="punctuation">.</span><span data-cpp-color="method">lookup_instance</span><span data-cpp-color="punctuation">(</span><span data-cpp-color="local">sample</span><span data-cpp-color="punctuation">);</span></div>
+<div class="line">            <span class="keywordflow"><span data-cpp-color="control">if</span></span><span data-cpp-color="punctuation">(</span><span data-cpp-color="local">instanceHandle</span><span data-cpp-color="punctuation">.</span><span data-cpp-color="method">is_nil</span><span data-cpp-color="punctuation">())</span> <span data-cpp-color="punctuation">{</span></div>
+<div class="line">                <span data-cpp-color="namespace">std</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="global">cerr</span> <span data-cpp-color="punctuation">&lt;&lt;</span> <span class="stringliteral"><span data-cpp-color="string">"[PUB ERROR] Could not look up HelloWorld | user_id="</span></span> <span data-cpp-color="punctuation">&lt;&lt;</span> <span data-cpp-color="local">sample</span><span data-cpp-color="punctuation">.</span><span data-cpp-color="field">user_id</span> <span data-cpp-color="punctuation">&lt;&lt;</span> <span data-cpp-color="namespace">std</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="function">endl</span><span data-cpp-color="punctuation">;</span></div>
+<div class="line">                <span class="keywordflow"><span data-cpp-color="control">return</span></span><span data-cpp-color="punctuation">;</span></div>
+<div class="line">            <span data-cpp-color="punctuation">}</span></div>
+<div class="line"> </div>
+<div class="line">            <span data-cpp-color="namespace">std</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="global">cout</span> <span data-cpp-color="punctuation">&lt;&lt;</span> <span class="stringliteral"><span data-cpp-color="string">"  ["</span></span> <span data-cpp-color="punctuation">&lt;&lt;</span> <span data-cpp-color="local">i</span> <span data-cpp-color="punctuation">+</span> <span data-cpp-color="number">1</span> <span data-cpp-color="punctuation">&lt;&lt;</span> <span class="stringliteral"><span data-cpp-color="string">"] user_id="</span></span> <span data-cpp-color="punctuation">&lt;&lt;</span> <span data-cpp-color="local">sample</span><span data-cpp-color="punctuation">.</span><span data-cpp-color="field">user_id</span> <span data-cpp-color="punctuation">&lt;&lt;</span> <span class="stringliteral"><span data-cpp-color="string">" | instance_handle="</span></span> <span data-cpp-color="punctuation">&lt;&lt;</span> <span data-cpp-color="local">instanceHandle</span></div>
+<div class="line">                      <span data-cpp-color="punctuation">&lt;&lt;</span> <span data-cpp-color="namespace">std</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="function">endl</span><span data-cpp-color="punctuation">;</span></div>
+<div class="line"> </div>
+<div class="line">            <span data-cpp-color="local">instances</span><span data-cpp-color="punctuation">.</span><span data-cpp-color="method">push_back</span><span data-cpp-color="punctuation">(</span><span data-cpp-color="local">instanceHandle</span><span data-cpp-color="punctuation">);</span></div>
+<div class="line">        <span data-cpp-color="punctuation">}</span></div>
+<div class="line"> </div>
+<div class="line">        <span data-cpp-color="namespace">std</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="global">cout</span> <span data-cpp-color="punctuation">&lt;&lt;</span> <span class="stringliteral"><span data-cpp-color="string">"</span><span data-cpp-color="escape">\n</span><span data-cpp-color="string">=== PUB | Read instance keys ==="</span></span> <span data-cpp-color="punctuation">&lt;&lt;</span> <span data-cpp-color="namespace">std</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="function">endl</span><span data-cpp-color="punctuation">;</span></div>
+<div class="line"> </div>
+<div class="line">        <span class="keywordflow"><span data-cpp-color="control">for</span></span><span data-cpp-color="punctuation">(</span><span data-cpp-color="type">dds_Long</span> <span data-cpp-color="local">i</span> <span data-cpp-color="punctuation">=</span> <span data-cpp-color="number">0</span><span data-cpp-color="punctuation">;</span> <span data-cpp-color="local">i</span> <span data-cpp-color="punctuation">&lt;</span> <span data-cpp-color="parameter">instanceCount</span><span data-cpp-color="punctuation">;</span> <span data-cpp-color="punctuation">++</span><span data-cpp-color="local">i</span><span data-cpp-color="punctuation">)</span> <span data-cpp-color="punctuation">{</span></div>
+<div class="line">            <span data-cpp-color="type">HelloWorld</span> <span data-cpp-color="local">sample</span><span data-cpp-color="punctuation">{};</span></div>
+<div class="line">            <span data-cpp-color="field">m_writer</span><span data-cpp-color="punctuation">.</span><span data-cpp-color="method">key_value</span><span data-cpp-color="punctuation">(</span><span data-cpp-color="local">sample</span><span data-cpp-color="punctuation">,</span> <span data-cpp-color="local">instances</span><span data-cpp-color="punctuation">[</span><span data-cpp-color="local">i</span><span data-cpp-color="punctuation">]);</span></div>
+<div class="line"> </div>
+<div class="line">            <span data-cpp-color="namespace">std</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="global">cout</span> <span data-cpp-color="punctuation">&lt;&lt;</span> <span class="stringliteral"><span data-cpp-color="string">"  ["</span></span> <span data-cpp-color="punctuation">&lt;&lt;</span> <span data-cpp-color="local">i</span> <span data-cpp-color="punctuation">+</span> <span data-cpp-color="number">1</span> <span data-cpp-color="punctuation">&lt;&lt;</span> <span class="stringliteral"><span data-cpp-color="string">"] user_id="</span></span> <span data-cpp-color="punctuation">&lt;&lt;</span> <span data-cpp-color="local">sample</span><span data-cpp-color="punctuation">.</span><span data-cpp-color="field">user_id</span> <span data-cpp-color="punctuation">&lt;&lt;</span> <span class="stringliteral"><span data-cpp-color="string">" | instance_handle="</span></span> <span data-cpp-color="punctuation">&lt;&lt;</span> <span data-cpp-color="local">instances</span><span data-cpp-color="punctuation">[</span><span data-cpp-color="local">i</span><span data-cpp-color="punctuation">]</span></div>
+<div class="line">                      <span data-cpp-color="punctuation">&lt;&lt;</span> <span data-cpp-color="namespace">std</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="function">endl</span><span data-cpp-color="punctuation">;</span></div>
+<div class="line">        <span data-cpp-color="punctuation">}</span></div>
+<div class="line"> </div>
+<div class="line">        <span data-cpp-color="namespace">std</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="global">cout</span> <span data-cpp-color="punctuation">&lt;&lt;</span> <span class="stringliteral"><span data-cpp-color="string">"</span><span data-cpp-color="escape">\n</span><span data-cpp-color="string">=== PUB | Write samples ==="</span></span> <span data-cpp-color="punctuation">&lt;&lt;</span> <span data-cpp-color="namespace">std</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="function">endl</span><span data-cpp-color="punctuation">;</span></div>
+<div class="line"> </div>
+<div class="line">        <span data-cpp-color="namespace">std</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="namespace">this_thread</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="function">sleep_for</span><span data-cpp-color="punctuation">(</span><span data-cpp-color="namespace">std</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="namespace">chrono</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="type">milliseconds</span><span data-cpp-color="punctuation">(</span><span data-cpp-color="number">1000</span><span data-cpp-color="punctuation">));</span></div>
+<div class="line"> </div>
+<div class="line">        <span class="keywordtype"><span data-cpp-color="keyword">char</span></span> <span data-cpp-color="local">message</span><span data-cpp-color="punctuation">[]</span> <span data-cpp-color="punctuation">=</span> <span class="stringliteral"><span data-cpp-color="string">"Hello!"</span></span><span data-cpp-color="punctuation">;</span></div>
+<div class="line">        <span class="keywordflow"><span data-cpp-color="control">for</span></span><span data-cpp-color="punctuation">(</span><span data-cpp-color="type">dds_Long</span> <span data-cpp-color="local">i</span> <span data-cpp-color="punctuation">=</span> <span data-cpp-color="number">0</span><span data-cpp-color="punctuation">;</span> <span data-cpp-color="local">i</span> <span data-cpp-color="punctuation">&lt;</span> <span data-cpp-color="parameter">instanceCount</span><span data-cpp-color="punctuation">;</span> <span data-cpp-color="punctuation">++</span><span data-cpp-color="local">i</span><span data-cpp-color="punctuation">)</span> <span data-cpp-color="punctuation">{</span></div>
+<div class="line">            <span class="keyword"><span data-cpp-color="keyword">const</span></span> <span class="keyword"><span data-cpp-color="keyword">auto</span></span><span data-cpp-color="punctuation">&amp;</span> <span data-cpp-color="local">instanceHandle</span> <span data-cpp-color="punctuation">=</span> <span data-cpp-color="local">instances</span><span data-cpp-color="punctuation">[</span><span data-cpp-color="local">i</span><span data-cpp-color="punctuation">];</span></div>
+<div class="line"> </div>
+<div class="line">            <span class="comment"><span data-cpp-color="comment">/* When instanceHandle is set to nil during a write operation, the instance is automatically</span></span></div>
+<div class="line"><span class="comment">             <span data-cpp-color="comment">* registered internally, or an existing registered instance is retrieved.</span></span></div>
+<div class="line"><span class="comment">             <span data-cpp-color="comment">* e.g. m_writer.write(sample, dds::core::InstanceHandle::nil());</span></span></div>
+<div class="line"><span class="comment">             <span data-cpp-color="comment">*/</span></span></div>
+<div class="line">            <span class="keyword"><span data-cpp-color="keyword">const</span></span> <span data-cpp-color="type">HelloWorld</span> <span data-cpp-color="local">sample</span><span data-cpp-color="punctuation">{</span><span data-cpp-color="local">i</span> <span data-cpp-color="punctuation">+</span> <span data-cpp-color="number">1</span><span data-cpp-color="punctuation">,</span> <span data-cpp-color="local">message</span><span data-cpp-color="punctuation">};</span></div>
+<div class="line">            <span data-cpp-color="field">m_writer</span><span data-cpp-color="punctuation">.</span><span data-cpp-color="method">write</span><span data-cpp-color="punctuation">(</span><span data-cpp-color="local">sample</span><span data-cpp-color="punctuation">,</span> <span data-cpp-color="local">instanceHandle</span><span data-cpp-color="punctuation">);</span></div>
+<div class="line"> </div>
+<div class="line">            <span data-cpp-color="namespace">std</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="global">cout</span> <span data-cpp-color="punctuation">&lt;&lt;</span> <span class="stringliteral"><span data-cpp-color="string">"  ["</span></span> <span data-cpp-color="punctuation">&lt;&lt;</span> <span data-cpp-color="local">i</span> <span data-cpp-color="punctuation">+</span> <span data-cpp-color="number">1</span> <span data-cpp-color="punctuation">&lt;&lt;</span> <span class="stringliteral"><span data-cpp-color="string">"] user_id="</span></span> <span data-cpp-color="punctuation">&lt;&lt;</span> <span data-cpp-color="local">sample</span><span data-cpp-color="punctuation">.</span><span data-cpp-color="field">user_id</span> <span data-cpp-color="punctuation">&lt;&lt;</span> <span class="stringliteral"><span data-cpp-color="string">" | instance_handle="</span></span> <span data-cpp-color="punctuation">&lt;&lt;</span> <span data-cpp-color="local">instanceHandle</span></div>
+<div class="line">                      <span data-cpp-color="punctuation">&lt;&lt;</span> <span class="stringliteral"><span data-cpp-color="string">" | message=</span><span data-cpp-color="escape">\"</span><span data-cpp-color="string">"</span></span> <span data-cpp-color="punctuation">&lt;&lt;</span> <span data-cpp-color="local">sample</span><span data-cpp-color="punctuation">.</span><span data-cpp-color="field">message</span> <span data-cpp-color="punctuation">&lt;&lt;</span> <span class="charliteral"><span data-cpp-color="string">'"'</span></span> <span data-cpp-color="punctuation">&lt;&lt;</span> <span data-cpp-color="namespace">std</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="function">endl</span><span data-cpp-color="punctuation">;</span></div>
+<div class="line">        <span data-cpp-color="punctuation">}</span></div>
+<div class="line"> </div>
+<div class="line">        <span data-cpp-color="namespace">std</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="namespace">this_thread</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="function">sleep_for</span><span data-cpp-color="punctuation">(</span><span data-cpp-color="namespace">std</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="namespace">chrono</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="type">milliseconds</span><span data-cpp-color="punctuation">(</span><span data-cpp-color="number">1000</span><span data-cpp-color="punctuation">));</span></div>
+<div class="line"> </div>
+<div class="line">        <span data-cpp-color="namespace">std</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="global">cout</span> <span data-cpp-color="punctuation">&lt;&lt;</span> <span class="stringliteral"><span data-cpp-color="string">"</span><span data-cpp-color="escape">\n</span><span data-cpp-color="string">=== PUB | Dispose instances ==="</span></span> <span data-cpp-color="punctuation">&lt;&lt;</span> <span data-cpp-color="namespace">std</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="function">endl</span><span data-cpp-color="punctuation">;</span></div>
+<div class="line">        <span class="keywordflow"><span data-cpp-color="control">for</span></span><span data-cpp-color="punctuation">(</span><span data-cpp-color="type">dds_Long</span> <span data-cpp-color="local">i</span> <span data-cpp-color="punctuation">=</span> <span data-cpp-color="number">0</span><span data-cpp-color="punctuation">;</span> <span data-cpp-color="local">i</span> <span data-cpp-color="punctuation">&lt;</span> <span data-cpp-color="parameter">instanceCount</span><span data-cpp-color="punctuation">;</span> <span data-cpp-color="punctuation">++</span><span data-cpp-color="local">i</span><span data-cpp-color="punctuation">)</span> <span data-cpp-color="punctuation">{</span></div>
+<div class="line">            <span data-cpp-color="type">HelloWorld</span> <span data-cpp-color="local">sample</span><span data-cpp-color="punctuation">{};</span></div>
+<div class="line">            <span data-cpp-color="field">m_writer</span><span data-cpp-color="punctuation">.</span><span data-cpp-color="method">key_value</span><span data-cpp-color="punctuation">(</span><span data-cpp-color="local">sample</span><span data-cpp-color="punctuation">,</span> <span data-cpp-color="local">instances</span><span data-cpp-color="punctuation">[</span><span data-cpp-color="local">i</span><span data-cpp-color="punctuation">]);</span></div>
+<div class="line">            <span data-cpp-color="field">m_writer</span><span data-cpp-color="punctuation">.</span><span data-cpp-color="method">dispose_instance</span><span data-cpp-color="punctuation">(</span><span data-cpp-color="local">instances</span><span data-cpp-color="punctuation">[</span><span data-cpp-color="local">i</span><span data-cpp-color="punctuation">]);</span></div>
+<div class="line">            <span data-cpp-color="namespace">std</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="global">cout</span> <span data-cpp-color="punctuation">&lt;&lt;</span> <span class="stringliteral"><span data-cpp-color="string">"  ["</span></span> <span data-cpp-color="punctuation">&lt;&lt;</span> <span data-cpp-color="local">i</span> <span data-cpp-color="punctuation">+</span> <span data-cpp-color="number">1</span> <span data-cpp-color="punctuation">&lt;&lt;</span> <span class="stringliteral"><span data-cpp-color="string">"] user_id="</span></span> <span data-cpp-color="punctuation">&lt;&lt;</span> <span data-cpp-color="local">sample</span><span data-cpp-color="punctuation">.</span><span data-cpp-color="field">user_id</span> <span data-cpp-color="punctuation">&lt;&lt;</span> <span class="stringliteral"><span data-cpp-color="string">" | instance_handle="</span></span> <span data-cpp-color="punctuation">&lt;&lt;</span> <span data-cpp-color="local">instances</span><span data-cpp-color="punctuation">[</span><span data-cpp-color="local">i</span><span data-cpp-color="punctuation">]</span></div>
+<div class="line">                      <span data-cpp-color="punctuation">&lt;&lt;</span> <span data-cpp-color="namespace">std</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="function">endl</span><span data-cpp-color="punctuation">;</span></div>
+<div class="line">        <span data-cpp-color="punctuation">}</span></div>
+<div class="line"> </div>
+<div class="line">        <span data-cpp-color="namespace">std</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="namespace">this_thread</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="function">sleep_for</span><span data-cpp-color="punctuation">(</span><span data-cpp-color="namespace">std</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="namespace">chrono</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="type">milliseconds</span><span data-cpp-color="punctuation">(</span><span data-cpp-color="number">1000</span><span data-cpp-color="punctuation">));</span></div>
+<div class="line"> </div>
+<div class="line">        <span data-cpp-color="namespace">std</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="global">cout</span> <span data-cpp-color="punctuation">&lt;&lt;</span> <span class="stringliteral"><span data-cpp-color="string">"</span><span data-cpp-color="escape">\n</span><span data-cpp-color="string">=== PUB | Unregister instances ==="</span></span> <span data-cpp-color="punctuation">&lt;&lt;</span> <span data-cpp-color="namespace">std</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="function">endl</span><span data-cpp-color="punctuation">;</span></div>
+<div class="line">        <span class="keywordflow"><span data-cpp-color="control">for</span></span><span data-cpp-color="punctuation">(</span><span data-cpp-color="type">dds_Long</span> <span data-cpp-color="local">i</span> <span data-cpp-color="punctuation">=</span> <span data-cpp-color="number">0</span><span data-cpp-color="punctuation">;</span> <span data-cpp-color="local">i</span> <span data-cpp-color="punctuation">&lt;</span> <span data-cpp-color="parameter">instanceCount</span><span data-cpp-color="punctuation">;</span> <span data-cpp-color="punctuation">++</span><span data-cpp-color="local">i</span><span data-cpp-color="punctuation">)</span> <span data-cpp-color="punctuation">{</span></div>
+<div class="line">            <span data-cpp-color="type">HelloWorld</span> <span data-cpp-color="local">sample</span><span data-cpp-color="punctuation">{};</span></div>
+<div class="line">            <span data-cpp-color="field">m_writer</span><span data-cpp-color="punctuation">.</span><span data-cpp-color="method">key_value</span><span data-cpp-color="punctuation">(</span><span data-cpp-color="local">sample</span><span data-cpp-color="punctuation">,</span> <span data-cpp-color="local">instances</span><span data-cpp-color="punctuation">[</span><span data-cpp-color="local">i</span><span data-cpp-color="punctuation">]);</span></div>
+<div class="line">            <span data-cpp-color="field">m_writer</span><span data-cpp-color="punctuation">.</span><span data-cpp-color="method">unregister_instance</span><span data-cpp-color="punctuation">(</span><span data-cpp-color="local">instances</span><span data-cpp-color="punctuation">[</span><span data-cpp-color="local">i</span><span data-cpp-color="punctuation">]);</span></div>
+<div class="line">            <span data-cpp-color="namespace">std</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="global">cout</span> <span data-cpp-color="punctuation">&lt;&lt;</span> <span class="stringliteral"><span data-cpp-color="string">"  ["</span></span> <span data-cpp-color="punctuation">&lt;&lt;</span> <span data-cpp-color="local">i</span> <span data-cpp-color="punctuation">+</span> <span data-cpp-color="number">1</span> <span data-cpp-color="punctuation">&lt;&lt;</span> <span class="stringliteral"><span data-cpp-color="string">"] user_id="</span></span> <span data-cpp-color="punctuation">&lt;&lt;</span> <span data-cpp-color="local">sample</span><span data-cpp-color="punctuation">.</span><span data-cpp-color="field">user_id</span> <span data-cpp-color="punctuation">&lt;&lt;</span> <span class="stringliteral"><span data-cpp-color="string">" | instance_handle="</span></span> <span data-cpp-color="punctuation">&lt;&lt;</span> <span data-cpp-color="local">instances</span><span data-cpp-color="punctuation">[</span><span data-cpp-color="local">i</span><span data-cpp-color="punctuation">]</span></div>
+<div class="line">                      <span data-cpp-color="punctuation">&lt;&lt;</span> <span data-cpp-color="namespace">std</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="function">endl</span><span data-cpp-color="punctuation">;</span></div>
+<div class="line">        <span data-cpp-color="punctuation">}</span></div>
+<div class="line"> </div>
+<div class="line">        <span class="comment"><span data-cpp-color="comment">/* Wait until the subscriber receives the data and terminates.</span></span></div>
+<div class="line"><span class="comment">         <span data-cpp-color="comment">* If the publisher application exits immediately without waiting, it</span></span></div>
+<div class="line"><span class="comment">         <span data-cpp-color="comment">* may terminate before the data is actually transmitted.</span></span></div>
+<div class="line"><span class="comment">         <span data-cpp-color="comment">*/</span></span></div>
+<div class="line">        <span class="keywordflow"><span data-cpp-color="control">while</span></span><span data-cpp-color="punctuation">(</span><span data-cpp-color="field">m_writer</span><span data-cpp-color="punctuation">.</span><span data-cpp-color="method">publication_matched_status</span><span data-cpp-color="punctuation">().</span><span data-cpp-color="method">current_count</span><span data-cpp-color="punctuation">()</span> <span data-cpp-color="punctuation">&gt;</span> <span data-cpp-color="number">0</span><span data-cpp-color="punctuation">)</span> <span data-cpp-color="punctuation">{</span></div>
+<div class="line">            <span data-cpp-color="namespace">std</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="namespace">this_thread</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="function">sleep_for</span><span data-cpp-color="punctuation">(</span><span data-cpp-color="namespace">std</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="namespace">chrono</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="type">milliseconds</span><span data-cpp-color="punctuation">(</span><span data-cpp-color="number">100</span><span data-cpp-color="punctuation">));</span></div>
+<div class="line">        <span data-cpp-color="punctuation">}</span></div>
+<div class="line">    <span data-cpp-color="punctuation">}</span></div>
+<div class="line"><span data-cpp-color="punctuation">}</span> <span class="comment"><span data-cpp-color="punctuation">//</span> <span data-cpp-color="keyword">namespace</span> helloworld</span></div>
+<div class="ttc" id="agroup__dds__core_html_ga8ee18acd2002fb15f2650f5c7cb055d0"><div class="ttname"><a href="group__dds__core.html#ga8ee18acd2002fb15f2650f5c7cb055d0">dds::core::InstanceHandle</a></div><div class="ttdeci">dds::core::detail::InstanceHandle InstanceHandle</div><div class="ttdoc">DDS Entity 또는 데이터 instance의 식별자</div><div class="ttdef"><b>정의</b> InstanceHandle.hpp:36</div></div>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="dds_example_new_helloworld_keyed_src_pub_hpp"></a>
+src/pub.hpp</h2>
+<div class="fragment dds-cpp-code"><div class="line"><span class="preprocessor"><span data-cpp-color="directive">#ifndef</span> <span data-cpp-color="macro">__HELLOWORLD_PUB_HPP__</span></span></div>
+<div class="line"><span class="preprocessor"><span data-cpp-color="directive">#define</span> <span data-cpp-color="macro">__HELLOWORLD_PUB_HPP__</span></span></div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor"><span data-cpp-color="directive">#include</span> <span data-cpp-color="header">"HelloWorldTypeSupport.hpp"</span></span></div>
+<div class="line"><span class="preprocessor"><span data-cpp-color="directive">#include</span> <span data-cpp-color="header">"gurumdds/dds.hpp"</span></span></div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor"><span data-cpp-color="directive">#include</span> <span data-cpp-color="header">&lt;string&gt;</span></span></div>
+<div class="line"> </div>
+<div class="line"><span class="keyword"><span data-cpp-color="keyword">namespace</span> </span><span data-cpp-color="namespace">helloworld</span> <span data-cpp-color="punctuation">{</span></div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword"><span data-cpp-color="keyword">class</span> </span><span data-cpp-color="type">Publisher</span> <span data-cpp-color="punctuation">{</span></div>
+<div class="line">    <span class="keyword"><span data-cpp-color="keyword">public</span></span><span data-cpp-color="punctuation">:</span></div>
+<div class="line">        Publisher<span data-cpp-color="punctuation">(</span><a class="code hl_typedef" href="namespacedds_1_1domain.html#a492326d51518fe7033886c54a25d4bf0"><span data-cpp-color="namespace">dds</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="namespace">domain</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="type">DomainId</span></a> <span data-cpp-color="parameter">domainId</span><span data-cpp-color="punctuation">,</span> <span class="keyword"><span data-cpp-color="keyword">const</span></span> <span data-cpp-color="namespace">std</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="type">string</span><span data-cpp-color="punctuation">&amp;</span> <span data-cpp-color="parameter">topicName</span><span data-cpp-color="punctuation">);</span></div>
+<div class="line">        <span class="keywordtype"><span data-cpp-color="keyword">void</span></span> <span data-cpp-color="method">Run</span><span data-cpp-color="punctuation">(</span><span data-cpp-color="type">dds_Long</span> <span data-cpp-color="parameter">instanceCount</span><span data-cpp-color="punctuation">);</span></div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword"><span data-cpp-color="keyword">private</span></span><span data-cpp-color="punctuation">:</span></div>
+<div class="line">        <a class="code hl_typedef" href="group__dds__domain.html#gab1bd86ffa9ac0869166a446dd0120f3d"><span data-cpp-color="namespace">dds</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="namespace">domain</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="type">DomainParticipant</span></a> <span data-cpp-color="field">m_participant</span><span data-cpp-color="punctuation">;</span></div>
+<div class="line">        <a class="code hl_class" href="classdds_1_1topic_1_1_topic.html"><span data-cpp-color="namespace">dds</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="namespace">topic</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="class-template">Topic</span><span data-cpp-color="punctuation">&lt;</span><span data-cpp-color="type">HelloWorld</span><span data-cpp-color="punctuation">&gt;</span></a> <span data-cpp-color="field">m_topic</span><span data-cpp-color="punctuation">;</span></div>
+<div class="line">        <a class="code hl_typedef" href="group__dds__publication.html#gada2751fd8ce0e148138e6950f7ef7d37"><span data-cpp-color="namespace">dds</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="namespace">pub</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="type">Publisher</span></a> <span data-cpp-color="field">m_publisher</span><span data-cpp-color="punctuation">;</span></div>
+<div class="line">        <a class="code hl_class" href="classdds_1_1pub_1_1_data_writer.html"><span data-cpp-color="namespace">dds</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="namespace">pub</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="class-template">DataWriter</span><span data-cpp-color="punctuation">&lt;</span><span data-cpp-color="type">HelloWorld</span><span data-cpp-color="punctuation">&gt;</span></a> <span data-cpp-color="field">m_writer</span><span data-cpp-color="punctuation">;</span></div>
+<div class="line">    <span data-cpp-color="punctuation">};</span></div>
+<div class="line"> </div>
+<div class="line"><span data-cpp-color="punctuation">}</span> <span class="comment"><span data-cpp-color="comment">// namespace helloworld</span></span></div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor"><span data-cpp-color="directive">#endif</span> </span><span class="comment"><span data-cpp-color="comment">/* __HELLOWORLD_PUB_HPP__ */</span></span><span class="preprocessor"></span></div>
+<div class="ttc" id="aclassdds_1_1pub_1_1_data_writer_html"><div class="ttname"><a href="classdds_1_1pub_1_1_data_writer.html">dds::pub::DataWriter&lt;T&gt;</a></div><div class="ttdoc">데이터 타입이 지정된 Topic에 sample을 쓰고 instance를 관리합니다.</div><div class="ttdef"><b>정의</b> DataWriter.hpp:73</div></div>
+<div class="ttc" id="aclassdds_1_1topic_1_1_topic_html"><div class="ttname"><a href="classdds_1_1topic_1_1_topic.html">dds::topic::Topic&lt;T&gt;</a></div><div class="ttdoc">domain에서 Topic 이름을 DDS 데이터 타입과 연결합니다.</div><div class="ttdef"><b>정의</b> TTopic.hpp:54</div></div>
+<div class="ttc" id="agroup__dds__domain_html_gab1bd86ffa9ac0869166a446dd0120f3d"><div class="ttname"><a href="group__dds__domain.html#gab1bd86ffa9ac0869166a446dd0120f3d">dds::domain::DomainParticipant</a></div><div class="ttdeci">::dds::domain::detail::DomainParticipant DomainParticipant</div><div class="ttdoc">DDS domain에 가입하고 관리하는 데 사용되는 DomainParticipant handle</div><div class="ttdef"><b>정의</b> DomainParticipant.hpp:30</div></div>
+<div class="ttc" id="agroup__dds__publication_html_gada2751fd8ce0e148138e6950f7ef7d37"><div class="ttname"><a href="group__dds__publication.html#gada2751fd8ce0e148138e6950f7ef7d37">dds::pub::Publisher</a></div><div class="ttdeci">dds::pub::detail::Publisher Publisher</div><div class="ttdoc">DataWriter를 소유하고 기본값을 설정하는 데 사용되는 Publisher handle</div><div class="ttdef"><b>정의</b> Publisher.hpp:31</div></div>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="dds_example_new_helloworld_keyed_src_sub_cpp"></a>
+src/sub.cpp</h2>
+<div class="fragment dds-cpp-code"><div class="line"><span class="preprocessor"><span data-cpp-color="directive">#include</span> <span data-cpp-color="header">"sub.hpp"</span></span></div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor"><span data-cpp-color="directive">#include</span> <span data-cpp-color="header">&lt;chrono&gt;</span></span></div>
+<div class="line"><span class="preprocessor"><span data-cpp-color="directive">#include</span> <span data-cpp-color="header">&lt;iostream&gt;</span></span></div>
+<div class="line"><span class="preprocessor"><span data-cpp-color="directive">#include</span> <span data-cpp-color="header">&lt;thread&gt;</span></span></div>
+<div class="line"> </div>
+<div class="line"><span class="keyword"><span data-cpp-color="keyword">namespace</span> </span><span data-cpp-color="namespace">helloworld</span> <span data-cpp-color="punctuation">{</span></div>
+<div class="line"> </div>
+<div class="line">    <span data-cpp-color="type">Subscriber</span><span data-cpp-color="punctuation">::</span>Subscriber<span data-cpp-color="punctuation">(</span><a class="code hl_typedef" href="namespacedds_1_1domain.html#a492326d51518fe7033886c54a25d4bf0"><span data-cpp-color="namespace">dds</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="namespace">domain</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="type">DomainId</span></a> <span data-cpp-color="parameter">domainId</span><span data-cpp-color="punctuation">,</span> <span class="keyword"><span data-cpp-color="keyword">const</span></span> <span data-cpp-color="namespace">std</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="type">string</span><span data-cpp-color="punctuation">&amp;</span> <span data-cpp-color="parameter">topicName</span><span data-cpp-color="punctuation">)</span></div>
+<div class="line">        <span data-cpp-color="punctuation">:</span> <span data-cpp-color="field">m_participant</span><span data-cpp-color="punctuation">(</span><span data-cpp-color="parameter">domainId</span><span data-cpp-color="punctuation">),</span></div>
+<div class="line">          <span data-cpp-color="field">m_topic</span><span data-cpp-color="punctuation">(</span><span data-cpp-color="field">m_participant</span><span data-cpp-color="punctuation">,</span> <span data-cpp-color="parameter">topicName</span><span data-cpp-color="punctuation">),</span></div>
+<div class="line">          <span data-cpp-color="field">m_subscriber</span><span data-cpp-color="punctuation">(</span><span data-cpp-color="field">m_participant</span><span data-cpp-color="punctuation">),</span></div>
+<div class="line">          <span data-cpp-color="field">m_reader</span><span data-cpp-color="punctuation">(</span><span data-cpp-color="field">m_subscriber</span><span data-cpp-color="punctuation">,</span> <span data-cpp-color="field">m_topic</span><span data-cpp-color="punctuation">,</span></div>
+<div class="line">                   <span class="comment"><span data-cpp-color="comment">/* Without this QoS setting, the instance may be deleted immediately,</span></span></div>
+<div class="line"><span class="comment">                    <span data-cpp-color="comment">* preventing the sample from being taken.</span></span></div>
+<div class="line"><span class="comment">                    <span data-cpp-color="comment">*/</span></span></div>
+<div class="line">                   <span data-cpp-color="field">m_subscriber</span><span data-cpp-color="punctuation">.</span><span data-cpp-color="method">default_datareader_qos</span><span data-cpp-color="punctuation">()</span></div>
+<div class="line">                       <span data-cpp-color="punctuation">&lt;&lt;</span> <a class="code hl_namespace" href="namespacedds.html"><span data-cpp-color="namespace">dds</span></a><span data-cpp-color="punctuation">::</span><span data-cpp-color="namespace">core</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="namespace">policy</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="type">ReaderDataLifecycle</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="method">NoAutoPurgeDisposedSamples</span><span data-cpp-color="punctuation">())</span> <span data-cpp-color="punctuation">{}</span></div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordtype"><span data-cpp-color="keyword">void</span></span> <span data-cpp-color="type">Subscriber</span>::<span data-cpp-color="method">Run</span><span data-cpp-color="punctuation">(</span><span data-cpp-color="type">dds_Long</span> <span data-cpp-color="parameter">userId</span><span data-cpp-color="punctuation">)</span> <span data-cpp-color="punctuation">{</span></div>
+<div class="line">        <span class="keyword"><span data-cpp-color="keyword">const</span></span> <span data-cpp-color="type">HelloWorld</span> <span data-cpp-color="local">key</span><span data-cpp-color="punctuation">{</span><span data-cpp-color="parameter">userId</span><span data-cpp-color="punctuation">,</span> <span class="keyword">nullptr</span><span data-cpp-color="punctuation">};</span></div>
+<div class="line">        <span data-cpp-color="namespace">std</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="global">cout</span> <span data-cpp-color="punctuation">&lt;&lt;</span> <span class="stringliteral"><span data-cpp-color="string">"[SUB] Waiting for user_id="</span></span> <span data-cpp-color="punctuation">&lt;&lt;</span> <span data-cpp-color="parameter">userId</span> <span data-cpp-color="punctuation">&lt;&lt;</span> <span data-cpp-color="namespace">std</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="function">endl</span><span data-cpp-color="punctuation">;</span></div>
+<div class="line">        <span class="keyword"><span data-cpp-color="keyword">auto</span></span> <span data-cpp-color="local">instanceHandle</span> <span data-cpp-color="punctuation">=</span> <span data-cpp-color="field">m_reader</span><span data-cpp-color="punctuation">.</span><span data-cpp-color="method">lookup_instance</span><span data-cpp-color="punctuation">(</span><span data-cpp-color="local">key</span><span data-cpp-color="punctuation">);</span></div>
+<div class="line">        <span class="keywordflow"><span data-cpp-color="control">while</span></span><span data-cpp-color="punctuation">(</span><span data-cpp-color="local">instanceHandle</span><span data-cpp-color="punctuation">.</span><span data-cpp-color="method">is_nil</span><span data-cpp-color="punctuation">())</span> <span data-cpp-color="punctuation">{</span></div>
+<div class="line">            <span data-cpp-color="local">instanceHandle</span> <span data-cpp-color="punctuation">=</span> <span data-cpp-color="field">m_reader</span><span data-cpp-color="punctuation">.</span><span data-cpp-color="method">lookup_instance</span><span data-cpp-color="punctuation">(</span><span data-cpp-color="local">key</span><span data-cpp-color="punctuation">);</span></div>
+<div class="line">            <span data-cpp-color="namespace">std</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="namespace">this_thread</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="function">sleep_for</span><span data-cpp-color="punctuation">(</span><span data-cpp-color="namespace">std</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="namespace">chrono</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="type">milliseconds</span><span data-cpp-color="punctuation">(</span><span data-cpp-color="number">100</span><span data-cpp-color="punctuation">));</span></div>
+<div class="line">        <span data-cpp-color="punctuation">}</span></div>
+<div class="line"> </div>
+<div class="line">        <span class="keywordtype"><span data-cpp-color="keyword">bool</span></span> <span data-cpp-color="local">isRunning</span> <span data-cpp-color="punctuation">=</span> <span class="keyword">true</span><span data-cpp-color="punctuation">;</span></div>
+<div class="line"> </div>
+<div class="line">        <span class="keywordflow"><span data-cpp-color="control">while</span></span><span data-cpp-color="punctuation">(</span><span data-cpp-color="local">isRunning</span><span data-cpp-color="punctuation">)</span> <span data-cpp-color="punctuation">{</span></div>
+<div class="line">            <span class="keywordflow"><span data-cpp-color="control">for</span></span><span data-cpp-color="punctuation">(</span><span class="keyword"><span data-cpp-color="keyword">const</span></span> <span class="keyword"><span data-cpp-color="keyword">auto</span></span><span data-cpp-color="punctuation">&amp;</span> <span data-cpp-color="local">sample</span><span data-cpp-color="punctuation">:</span> <span data-cpp-color="field">m_reader</span><span data-cpp-color="punctuation">.</span><span data-cpp-color="method">select</span><span data-cpp-color="punctuation">().</span><span data-cpp-color="method">instance</span><span data-cpp-color="punctuation">(</span><span data-cpp-color="local">instanceHandle</span><span data-cpp-color="punctuation">).</span><span data-cpp-color="method">take</span><span data-cpp-color="punctuation">())</span> <span data-cpp-color="punctuation">{</span></div>
+<div class="line">                <span class="keyword"><span data-cpp-color="keyword">const</span></span> <span class="keyword"><span data-cpp-color="keyword">auto</span></span><span data-cpp-color="punctuation">&amp;</span> <span data-cpp-color="local">info</span> <span data-cpp-color="punctuation">=</span> <span data-cpp-color="local">sample</span><span data-cpp-color="punctuation">.</span><span data-cpp-color="method">info</span><span data-cpp-color="punctuation">();</span></div>
+<div class="line"> </div>
+<div class="line">                <span data-cpp-color="namespace">std</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="global">cout</span> <span data-cpp-color="punctuation">&lt;&lt;</span> <span class="stringliteral"><span data-cpp-color="string">"[SUB] HelloWorld | key(user_id)="</span></span> <span data-cpp-color="punctuation">&lt;&lt;</span> <span data-cpp-color="parameter">userId</span></div>
+<div class="line">                          <span data-cpp-color="punctuation">&lt;&lt;</span> <span class="stringliteral"><span data-cpp-color="string">" | instance_handle="</span></span> <span data-cpp-color="punctuation">&lt;&lt;</span> <span data-cpp-color="local">info</span><span data-cpp-color="punctuation">.</span><span data-cpp-color="method">instance_handle</span><span data-cpp-color="punctuation">()</span> <span data-cpp-color="punctuation">&lt;&lt;</span> <span data-cpp-color="namespace">std</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="function">endl</span><span data-cpp-color="punctuation">;</span></div>
+<div class="line">                <span class="keywordflow"><span data-cpp-color="control">if</span></span><span data-cpp-color="punctuation">(</span><span data-cpp-color="local">info</span><span data-cpp-color="punctuation">.</span><span data-cpp-color="method">valid</span><span data-cpp-color="punctuation">())</span> <span data-cpp-color="punctuation">{</span></div>
+<div class="line">                    <span class="keyword"><span data-cpp-color="keyword">const</span></span> <span class="keyword"><span data-cpp-color="keyword">auto</span></span><span data-cpp-color="punctuation">&amp;</span> <span data-cpp-color="local">data</span> <span data-cpp-color="punctuation">=</span> <span data-cpp-color="local">sample</span><span data-cpp-color="punctuation">.</span><span data-cpp-color="method">data</span><span data-cpp-color="punctuation">();</span></div>
+<div class="line">                    <span data-cpp-color="namespace">std</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="global">cout</span> <span data-cpp-color="punctuation">&lt;&lt;</span> <span class="stringliteral"><span data-cpp-color="string">"  Data  | user_id="</span></span> <span data-cpp-color="punctuation">&lt;&lt;</span> <span data-cpp-color="local">data</span><span data-cpp-color="punctuation">.</span><span data-cpp-color="field">user_id</span> <span data-cpp-color="punctuation">&lt;&lt;</span> <span class="stringliteral"><span data-cpp-color="string">" | message=</span><span data-cpp-color="escape">\"</span><span data-cpp-color="string">"</span></span> <span data-cpp-color="punctuation">&lt;&lt;</span> <span data-cpp-color="local">data</span><span data-cpp-color="punctuation">.</span><span data-cpp-color="field">message</span> <span data-cpp-color="punctuation">&lt;&lt;</span> <span class="charliteral"><span data-cpp-color="string">'"'</span></span></div>
+<div class="line">                              <span data-cpp-color="punctuation">&lt;&lt;</span> <span data-cpp-color="namespace">std</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="function">endl</span><span data-cpp-color="punctuation">;</span></div>
+<div class="line">                <span data-cpp-color="punctuation">}</span></div>
+<div class="line"> </div>
+<div class="line">                <span class="keyword"><span data-cpp-color="keyword">const</span></span> <span class="keyword"><span data-cpp-color="keyword">auto</span></span> <span data-cpp-color="local">instanceState</span> <span data-cpp-color="punctuation">=</span> <span data-cpp-color="local">info</span><span data-cpp-color="punctuation">.</span><span data-cpp-color="method">state</span><span data-cpp-color="punctuation">().</span><span data-cpp-color="method">instance_state</span><span data-cpp-color="punctuation">();</span></div>
+<div class="line">                <span class="keywordflow"><span data-cpp-color="control">if</span></span><span data-cpp-color="punctuation">(</span><span data-cpp-color="local">instanceState</span> <span data-cpp-color="punctuation">==</span> <a class="code hl_function" href="classdds_1_1sub_1_1status_1_1_instance_state.html#aa84c5cb12f5dfe392bb80710cc2ef070"><span data-cpp-color="namespace">dds</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="namespace">sub</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="namespace">status</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="type">InstanceState</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="method">alive</span></a><span data-cpp-color="punctuation">())</span> <span data-cpp-color="punctuation">{</span></div>
+<div class="line">                    <span data-cpp-color="namespace">std</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="global">cout</span> <span data-cpp-color="punctuation">&lt;&lt;</span> <span class="stringliteral"><span data-cpp-color="string">"  State | ALIVE"</span></span> <span data-cpp-color="punctuation">&lt;&lt;</span> <span data-cpp-color="namespace">std</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="function">endl</span><span data-cpp-color="punctuation">;</span></div>
+<div class="line">                <span data-cpp-color="punctuation">}</span> <span class="keywordflow"><span data-cpp-color="control">else</span></span> <span class="keywordflow"><span data-cpp-color="control">if</span></span><span data-cpp-color="punctuation">(</span><span data-cpp-color="local">instanceState</span> <span data-cpp-color="punctuation">==</span> <a class="code hl_function" href="classdds_1_1sub_1_1status_1_1_instance_state.html#a2e518cf3afa4fa47ad989ee81a5cb27e"><span data-cpp-color="namespace">dds</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="namespace">sub</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="namespace">status</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="type">InstanceState</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="method">not_alive_disposed</span></a><span data-cpp-color="punctuation">())</span> <span data-cpp-color="punctuation">{</span></div>
+<div class="line">                    <span data-cpp-color="namespace">std</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="global">cout</span> <span data-cpp-color="punctuation">&lt;&lt;</span> <span class="stringliteral"><span data-cpp-color="string">"  State | NOT_ALIVE_DISPOSED"</span></span> <span data-cpp-color="punctuation">&lt;&lt;</span> <span data-cpp-color="namespace">std</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="function">endl</span><span data-cpp-color="punctuation">;</span></div>
+<div class="line">                <span data-cpp-color="punctuation">}</span> <span class="keywordflow"><span data-cpp-color="control">else</span></span> <span class="keywordflow"><span data-cpp-color="control">if</span></span><span data-cpp-color="punctuation">(</span><span data-cpp-color="local">instanceState</span> <span data-cpp-color="punctuation">==</span> <a class="code hl_function" href="classdds_1_1sub_1_1status_1_1_instance_state.html#aaaf8cee2916adfe3dce35985dc2a05f5"><span data-cpp-color="namespace">dds</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="namespace">sub</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="namespace">status</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="type">InstanceState</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="method">not_alive_no_writers</span></a><span data-cpp-color="punctuation">())</span> <span data-cpp-color="punctuation">{</span></div>
+<div class="line">                    <span data-cpp-color="namespace">std</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="global">cout</span> <span data-cpp-color="punctuation">&lt;&lt;</span> <span class="stringliteral"><span data-cpp-color="string">"  State | NOT_ALIVE_NO_WRITERS"</span></span> <span data-cpp-color="punctuation">&lt;&lt;</span> <span data-cpp-color="namespace">std</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="function">endl</span><span data-cpp-color="punctuation">;</span></div>
+<div class="line">                    <span data-cpp-color="local">isRunning</span> <span data-cpp-color="punctuation">=</span> <span class="keyword">false</span><span data-cpp-color="punctuation">;</span></div>
+<div class="line">                <span data-cpp-color="punctuation">}</span></div>
+<div class="line"> </div>
+<div class="line">                <span data-cpp-color="namespace">std</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="global">cout</span> <span data-cpp-color="punctuation">&lt;&lt;</span> <span data-cpp-color="namespace">std</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="function">endl</span><span data-cpp-color="punctuation">;</span></div>
+<div class="line">            <span data-cpp-color="punctuation">}</span></div>
+<div class="line"> </div>
+<div class="line">            <span data-cpp-color="namespace">std</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="namespace">this_thread</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="function">sleep_for</span><span data-cpp-color="punctuation">(</span><span data-cpp-color="namespace">std</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="namespace">chrono</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="type">milliseconds</span><span data-cpp-color="punctuation">(</span><span data-cpp-color="number">100</span><span data-cpp-color="punctuation">));</span></div>
+<div class="line">        <span data-cpp-color="punctuation">}</span></div>
+<div class="line">    <span data-cpp-color="punctuation">}</span></div>
+<div class="line"><span data-cpp-color="punctuation">}</span> <span class="comment"><span data-cpp-color="punctuation">//</span> <span data-cpp-color="keyword">namespace</span> helloworld</span></div>
+<div class="ttc" id="aclassdds_1_1sub_1_1status_1_1_instance_state_html_a2e518cf3afa4fa47ad989ee81a5cb27e"><div class="ttname"><a href="classdds_1_1sub_1_1status_1_1_instance_state.html#a2e518cf3afa4fa47ad989ee81a5cb27e">dds::sub::status::InstanceState::not_alive_disposed</a></div><div class="ttdeci">static const InstanceState not_alive_disposed()</div><div class="ttdoc">처리된 instance에 대한 필터를 만듭니다</div><div class="ttdef"><b>정의</b> DataState.hpp:193</div></div>
+<div class="ttc" id="aclassdds_1_1sub_1_1status_1_1_instance_state_html_aa84c5cb12f5dfe392bb80710cc2ef070"><div class="ttname"><a href="classdds_1_1sub_1_1status_1_1_instance_state.html#aa84c5cb12f5dfe392bb80710cc2ef070">dds::sub::status::InstanceState::alive</a></div><div class="ttdeci">static const InstanceState alive()</div><div class="ttdoc">라이브 instance에 대한 필터를 만듭니다</div><div class="ttdef"><b>정의</b> DataState.hpp:185</div></div>
+<div class="ttc" id="aclassdds_1_1sub_1_1status_1_1_instance_state_html_aaaf8cee2916adfe3dce35985dc2a05f5"><div class="ttname"><a href="classdds_1_1sub_1_1status_1_1_instance_state.html#aaaf8cee2916adfe3dce35985dc2a05f5">dds::sub::status::InstanceState::not_alive_no_writers</a></div><div class="ttdeci">static const InstanceState not_alive_no_writers()</div><div class="ttdoc">활성 DataWriter가 없는 instance에 대한 필터를 만듭니다</div><div class="ttdef"><b>정의</b> DataState.hpp:201</div></div>
+<div class="ttc" id="anamespacedds_html"><div class="ttname"><a href="namespacedds.html">dds</a></div><div class="ttdoc">GurumDDS C++ API의 최상위 네임스페이스</div><div class="ttdef"><b>정의</b> array.hpp:7</div></div>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="dds_example_new_helloworld_keyed_src_sub_hpp"></a>
+src/sub.hpp</h2>
+<div class="fragment dds-cpp-code"><div class="line"><span class="preprocessor"><span data-cpp-color="directive">#ifndef</span> <span data-cpp-color="macro">__HELLOWORLD_SUB_HPP__</span></span></div>
+<div class="line"><span class="preprocessor"><span data-cpp-color="directive">#define</span> <span data-cpp-color="macro">__HELLOWORLD_SUB_HPP__</span></span></div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor"><span data-cpp-color="directive">#include</span> <span data-cpp-color="header">"HelloWorldTypeSupport.hpp"</span></span></div>
+<div class="line"><span class="preprocessor"><span data-cpp-color="directive">#include</span> <span data-cpp-color="header">"gurumdds/dds.hpp"</span></span></div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor"><span data-cpp-color="directive">#include</span> <span data-cpp-color="header">&lt;string&gt;</span></span></div>
+<div class="line"> </div>
+<div class="line"><span class="keyword"><span data-cpp-color="keyword">namespace</span> </span><span data-cpp-color="namespace">helloworld</span> <span data-cpp-color="punctuation">{</span></div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword"><span data-cpp-color="keyword">class</span> </span><span data-cpp-color="type">Subscriber</span> <span data-cpp-color="punctuation">{</span></div>
+<div class="line">    <span class="keyword"><span data-cpp-color="keyword">public</span></span><span data-cpp-color="punctuation">:</span></div>
+<div class="line">        Subscriber<span data-cpp-color="punctuation">(</span><a class="code hl_typedef" href="namespacedds_1_1domain.html#a492326d51518fe7033886c54a25d4bf0"><span data-cpp-color="namespace">dds</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="namespace">domain</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="type">DomainId</span></a> <span data-cpp-color="parameter">domainId</span><span data-cpp-color="punctuation">,</span> <span class="keyword"><span data-cpp-color="keyword">const</span></span> <span data-cpp-color="namespace">std</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="type">string</span><span data-cpp-color="punctuation">&amp;</span> <span data-cpp-color="parameter">topicName</span><span data-cpp-color="punctuation">);</span></div>
+<div class="line">        <span class="keywordtype"><span data-cpp-color="keyword">void</span></span> <span data-cpp-color="method">Run</span><span data-cpp-color="punctuation">(</span><span data-cpp-color="type">dds_Long</span> <span data-cpp-color="parameter">userId</span><span data-cpp-color="punctuation">);</span></div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword"><span data-cpp-color="keyword">private</span></span><span data-cpp-color="punctuation">:</span></div>
+<div class="line">        <a class="code hl_typedef" href="group__dds__domain.html#gab1bd86ffa9ac0869166a446dd0120f3d"><span data-cpp-color="namespace">dds</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="namespace">domain</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="type">DomainParticipant</span></a> <span data-cpp-color="field">m_participant</span><span data-cpp-color="punctuation">;</span></div>
+<div class="line">        <a class="code hl_class" href="classdds_1_1topic_1_1_topic.html"><span data-cpp-color="namespace">dds</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="namespace">topic</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="class-template">Topic</span><span data-cpp-color="punctuation">&lt;</span><span data-cpp-color="type">HelloWorld</span><span data-cpp-color="punctuation">&gt;</span></a> <span data-cpp-color="field">m_topic</span><span data-cpp-color="punctuation">;</span></div>
+<div class="line">        <a class="code hl_typedef" href="group__dds__subscription.html#ga9a6d78b2a23f864211da5bd2edf28750"><span data-cpp-color="namespace">dds</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="namespace">sub</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="type">Subscriber</span></a> <span data-cpp-color="field">m_subscriber</span><span data-cpp-color="punctuation">;</span></div>
+<div class="line">        <a class="code hl_class" href="classdds_1_1sub_1_1_data_reader.html"><span data-cpp-color="namespace">dds</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="namespace">sub</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="class-template">DataReader</span><span data-cpp-color="punctuation">&lt;</span><span data-cpp-color="type">HelloWorld</span><span data-cpp-color="punctuation">&gt;</span></a> <span data-cpp-color="field">m_reader</span><span data-cpp-color="punctuation">;</span></div>
+<div class="line">    <span data-cpp-color="punctuation">};</span></div>
+<div class="line"> </div>
+<div class="line"><span data-cpp-color="punctuation">}</span> <span class="comment"><span data-cpp-color="comment">// namespace helloworld</span></span></div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor"><span data-cpp-color="directive">#endif</span> </span><span class="comment"><span data-cpp-color="comment">/* __HELLOWORLD_SUB_HPP__ */</span></span><span class="preprocessor"></span></div>
+<div class="ttc" id="aclassdds_1_1sub_1_1_data_reader_html"><div class="ttname"><a href="classdds_1_1sub_1_1_data_reader.html">dds::sub::DataReader&lt;T&gt;</a></div><div class="ttdoc">Topic에서 지정된 타입의 sample을 수신합니다.</div><div class="ttdef"><b>정의</b> TDataReader.hpp:76</div></div>
+<div class="ttc" id="agroup__dds__subscription_html_ga9a6d78b2a23f864211da5bd2edf28750"><div class="ttname"><a href="group__dds__subscription.html#ga9a6d78b2a23f864211da5bd2edf28750">dds::sub::Subscriber</a></div><div class="ttdeci">dds::sub::detail::Subscriber Subscriber</div><div class="ttdoc">DataReader를 소유하고 기본값을 설정하는 데 사용되는 Subscriber handle</div><div class="ttdef"><b>정의</b> Subscriber.hpp:31</div></div>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="dds_example_new_helloworld_keyed_cmakelists_txt"></a>
+CMakeLists.txt</h2>
+<div class="fragment"><div class="line">cmake_minimum_required(VERSION 3.20)</div>
+<div class="line">project(helloworld_keyed VERSION 1.0.0 LANGUAGES CXX)</div>
+<div class="line"> </div>
+<div class="line">set(HELLOWORLD_KEYED_IDL <span class="stringliteral">"${CMAKE_CURRENT_SOURCE_DIR}/HelloWorld.idl"</span>)</div>
+<div class="line">set(HELLOWORLD_KEYED_GENERATED_DIR <span class="stringliteral">"${CMAKE_CURRENT_SOURCE_DIR}/generated"</span>)</div>
+<div class="line">set(HELLOWORLD_KEYED_TYPES_SRCS <span class="stringliteral">"${HELLOWORLD_KEYED_GENERATED_DIR}/HelloWorldTypeSupport.cpp"</span>)</div>
+<div class="line">set(HELLOWORLD_KEYED_TYPES_HEADERS</div>
+<div class="line">    <span class="stringliteral">"${HELLOWORLD_KEYED_GENERATED_DIR}/HelloWorld.hpp"</span></div>
+<div class="line">    <span class="stringliteral">"${HELLOWORLD_KEYED_GENERATED_DIR}/HelloWorldTypeSupport.hpp"</span></div>
+<div class="line">)</div>
+<div class="line"> </div>
+<div class="line">add_custom_command(</div>
+<div class="line">    OUTPUT <span class="stringliteral">"${HELLOWORLD_KEYED_TYPES_SRCS}"</span> ${HELLOWORLD_KEYED_TYPES_HEADERS}</div>
+<div class="line">    COMMAND <span class="stringliteral">"${CMAKE_COMMAND}"</span> -E make_directory <span class="stringliteral">"${HELLOWORLD_KEYED_GENERATED_DIR}"</span></div>
+<div class="line">    COMMAND <span class="stringliteral">"${GURUMIDL}"</span> cpp <span class="stringliteral">"${HELLOWORLD_KEYED_IDL}"</span> <span class="stringliteral">"${HELLOWORLD_KEYED_GENERATED_DIR}"</span> --replace</div>
+<div class="line">    DEPENDS <span class="stringliteral">"${GURUMIDL}"</span> <span class="stringliteral">"${HELLOWORLD_KEYED_IDL}"</span></div>
+<div class="line">    COMMENT <span class="stringliteral">"Generating HelloWorld C++ types from IDL"</span></div>
+<div class="line">    VERBATIM</div>
+<div class="line">)</div>
+<div class="line"> </div>
+<div class="line">add_custom_target(helloworld_keyed_generated</div>
+<div class="line">    DEPENDS <span class="stringliteral">"${HELLOWORLD_KEYED_TYPES_SRCS}"</span> ${HELLOWORLD_KEYED_TYPES_HEADERS}</div>
+<div class="line">)</div>
+<div class="line"> </div>
+<div class="line">add_executable(helloworld_keyed</div>
+<div class="line">    ${CMAKE_CURRENT_SOURCE_DIR}/src/main.cpp</div>
+<div class="line">    ${CMAKE_CURRENT_SOURCE_DIR}/src/pub.cpp</div>
+<div class="line">    ${CMAKE_CURRENT_SOURCE_DIR}/src/sub.cpp</div>
+<div class="line">    <span class="stringliteral">"${HELLOWORLD_KEYED_TYPES_SRCS}"</span>)</div>
+<div class="line">add_dependencies(helloworld_keyed helloworld_keyed_generated)</div>
+<div class="line">target_include_directories(helloworld_keyed PRIVATE <span class="stringliteral">"${HELLOWORLD_KEYED_GENERATED_DIR}"</span>)</div>
+<div class="line">target_link_libraries(helloworld_keyed PRIVATE gurumdds::cxx)</div>
+<div class="line">set_target_properties(helloworld_keyed PROPERTIES OUTPUT_NAME <span class="stringliteral">"helloworld_keyed"</span>)</div>
+</div><!-- fragment --> </div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<div class="page-nav-panel" id="page-nav">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
 </div><!-- container -->
 <!-- start footer part -->
-<div class="navpath" id="nav-path"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="navelem"><a href="examples.html">예제</a></li><li class="navelem"><a href="dds_examples_new.html">New(C++17)</a></li>
-    <li class="footer">다음에 의해 생성됨 :  <a href="https://www.doxygen.org/index.html"><img alt="doxygen" class="footer" height="31" src="doxygen.svg" width="104"/></a> 1.18.0 </li>
-  </ul>
+<div class="navpath" id="nav-path"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="examples.html">예제</a></li><li class="navelem"><a href="dds_examples_new.html">New(C++17)</a></li>
+    <li class="footer">다음에 의해 생성됨 :  <a href="https://www.doxygen.org/index.html"><img alt="doxygen" class="footer" height="31" src="doxygen.svg" width="104"/></a> 1.18.0 </li>
+  </ul>
 </div>
 </body>
 </html>

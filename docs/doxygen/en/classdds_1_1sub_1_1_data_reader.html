@@ -18,7 +18,7 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script src="search/searchdata.js" type="text/javascript"></script>
 <script src="search/search.js" type="text/javascript"></script>
-<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+<script src="../theme.js" type="text/javascript"></script><link href="doxygen.css" rel="stylesheet" type="text/css"/>
 <link href="ReferenceBranding.css" rel="stylesheet" type="text/css"/>
 <script defer="True" src="ReferenceUi.js"></script><link href="../en/classdds_1_1sub_1_1_data_reader.html" hreflang="en" rel="alternate"/><link href="../ko/classdds_1_1sub_1_1_data_reader.html" hreflang="ko" rel="alternate"/><link href="../language.css" rel="stylesheet"/><script defer="defer" src="../language.js"></script></head>
 <body>
@@ -31,7 +31,7 @@
    <div id="projectname">GurumDDS C++ API Reference<span id="projectnumber"> 1.3.2</span>
    </div>
   </td>
- <td class="doc-language-cell"><label class="doc-language"><select aria-label="Documentation language" data-current="0"><option lang="en" selected="selected" value="../en/classdds_1_1sub_1_1_data_reader.html">English</option><option lang="en" value="../ko/classdds_1_1sub_1_1_data_reader.html">Korean</option></select></label></td></tr>
+ <td class="doc-language-cell"><div class="doc-header-controls"><button aria-pressed="false" class="doc-theme" type="button">Dark mode</button><label class="doc-language"><select aria-label="Documentation language" data-current="0"><option lang="en" selected="selected" value="../en/classdds_1_1sub_1_1_data_reader.html">English</option><option lang="en" value="../ko/classdds_1_1sub_1_1_data_reader.html">Korean</option></select></label></div></td></tr>
  </tbody>
 </table>
 </div>
@@ -117,14 +117,13 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('classdds_1_1su
 
 <p class="dds-class-include"><code>#include &lt;gurumdds/cpp/sub/DataReader.hpp&gt;</code></p>
 
-<p>Receives typed samples for a topic.  
- <a href="#details">More...</a></p>
+
 <a id="details" name="details"></a><h2 class="groupheader" id="header-details">Detailed Description</h2>
 <div class="textblock"><p>Receives typed samples for a topic. </p>
 <p>The reader selects samples from its local history using sample, view, and instance state masks. <span class="tt"><a class="el" href="#a9f2bc3c9b1817f4601a8ffff0698cca2" title="Reads samples that match the default state filter.">read()</a></span> leaves the returned samples in the history and marks them as read. <span class="tt"><a class="el" href="#a01ee9d4461154984f4f87ba8af5d438c" title="Takes samples that match the default state filter.">take()</a></span> removes them from the history. Each result includes metadata, even when an instance-state notification carries no payload. Check <span class="tt">sample.info().valid()</span> before using <span class="tt">sample.data()</span>. Use the sample's metadata to inspect the instance state or obtain its handle when the payload is invalid.</p>
 <p>Use the reader's default filter for routine access. Create a <a class="el" href="classdds_1_1sub_1_1_data_reader_1_1_selector.html" title="Selector">Selector</a> with <span class="tt"><a class="el" href="#a4c9879cf567d4d627f02cd90247794ac" title="Starts a new selection on this reader.">select()</a></span> to set the instance, state masks, and record limit for a particular selection.</p>
 <dl class="section user"><dt>Choose a receive operation</dt><dd></dd></dl>
-<table class="markdownTable">
+<div class="dds-table-scroll"><table class="markdownTable">
 <tr class="markdownTableHead">
 <th class="markdownTableHeadNone">Goal  </th><th class="markdownTableHeadNone">Call  </th><th class="markdownTableHeadNone">Filter or limit  </th></tr>
 <tr class="markdownTableRowOdd">
@@ -135,13 +134,13 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('classdds_1_1su
 <td class="markdownTableBodyNone">Limit a single selection  </td><td class="markdownTableBodyNone"><span class="tt"><a class="el" href="#a4c9879cf567d4d627f02cd90247794ac" title="Starts a new selection on this reader.">select()</a>.max_samples(n).<a class="el" href="#a01ee9d4461154984f4f87ba8af5d438c" title="Takes samples that match the default state filter.">take()</a></span>  </td><td class="markdownTableBodyNone">Set state, instance, and count on the selector.  </td></tr>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone">Copy into writable storage  </td><td class="markdownTableBodyNone"><span class="tt">read(out, n)</span> or <span class="tt">take(out, n)</span>  </td><td class="markdownTableBodyNone">Supply <span class="tt">n</span> writable positions and use a positive limit.  </td></tr>
-</table>
+</table></div>
 
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classdds_1_1sub_1_1_loaned_samples.html" title="Holds received samples and manages their middleware loan.">dds::sub::LoanedSamples</a> </dd>
 <dd>
 <a class="el" href="group__dds__subscription.html#gac759142c11b5f0cb2b2a8f6c41405966" title="QoS policy set used to configure a data reader.">dds::sub::qos::DataReaderQos</a> </dd>
 <dd>
-dds::core::status::SubscriptionMatchedStatus </dd>
+<a class="el" href="namespacedds_1_1core_1_1status.html#abb43166d32256fc63bd26ce34140090d" title="Current and cumulative publication matches for a reader.">dds::core::status::SubscriptionMatchedStatus</a> </dd>
 <dd>
 <a class="el" href="classdds_1_1sub_1_1_data_reader_listener.html" title="Receives data availability and status notifications from a typed reader.">dds::sub::DataReaderListener</a> </dd>
 <dd>
@@ -152,10 +151,10 @@ dds::core::status::SubscriptionMatchedStatus </dd>
 <a class="el" href="dds_example_new_helloworld_listener.html" title="DataReader listener">DataReader listener</a> </dd></dl>
 <details class="dds-reference-details" data-dds-signatures=""><summary>Full template declaration</summary><div class="compoundTemplParams">template&lt;typename T, template&lt; typename Q &gt; class DELEGATE&gt;<br/>
 class dds::sub::DataReader&lt; T, DELEGATE &gt;</div><dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
+  <div class="dds-table-scroll"><table class="tparams">
     <tr><td class="paramname">T</td><td>Topic data type </td></tr>
     <tr><td class="paramname">DELEGATE</td><td>Reader implementation template</td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl></details></div>
 
@@ -215,21 +214,21 @@ class dds::sub::DataReader&lt; T, DELEGATE &gt;</div><dl class="tparams"><dt>Tem
 </g>
 </g>
 </svg></div><figcaption>Inheritance diagram</figcaption></figure>
-<table class="memberdecls">
+<div class="dds-table-scroll"><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-nested-classes"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:Selector" id="r_Selector"><td class="memItemLeft">class  </td><td class="memItemRight"><a class="el" href="classdds_1_1sub_1_1_data_reader_1_1_selector.html">Selector</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft"> </td><td class="mdescRight">Selects samples by state, instance, and count.  <a href="classdds_1_1sub_1_1_data_reader_1_1_selector.html#details">More...</a><br/></td></tr>
 <tr class="memitem:ManipulatorSelector" id="r_ManipulatorSelector"><td class="memItemLeft">class  </td><td class="memItemRight"><a class="el" href="classdds_1_1sub_1_1_data_reader_1_1_manipulator_selector.html">ManipulatorSelector</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft"> </td><td class="mdescRight"><a class="el" href="classdds_1_1sub_1_1_data_reader_1_1_selector.html" title="Selects samples by state, instance, and count.">Selector</a> class enabling the streaming API.  <a href="classdds_1_1sub_1_1_data_reader_1_1_manipulator_selector.html#details">More...</a><br/></td></tr>
-</table><table class="memberdecls">
+</table></div><div class="dds-table-scroll"><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-pub-types"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
 <tr class="memitem:a5aa616b2927fd8d4ad234c26ceed13e4" id="r_a5aa616b2927fd8d4ad234c26ceed13e4"><td class="memItemLeft"><a id="a5aa616b2927fd8d4ad234c26ceed13e4" name="a5aa616b2927fd8d4ad234c26ceed13e4"></a>
 typedef T </td><td class="memItemRight"><b>DataType</b></td></tr>
 <tr class="memitem:a35c75e4847d5bc95ab72d7c64f2451da" id="r_a35c75e4847d5bc95ab72d7c64f2451da"><td class="memItemLeft"><a id="a35c75e4847d5bc95ab72d7c64f2451da" name="a35c75e4847d5bc95ab72d7c64f2451da"></a>
 typedef <a class="el" href="classdds_1_1sub_1_1_data_reader_listener.html">::dds::sub::DataReaderListener</a>&lt; T &gt; </td><td class="memItemRight"><b>Listener</b></td></tr>
-</table><table class="memberdecls">
+</table></div><div class="dds-table-scroll"><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-pub-methods"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:adfb0369ca408857cac5a09dd871b1250" id="r_adfb0369ca408857cac5a09dd871b1250"><td class="memItemLeft"> </td><td class="memItemRight"><a class="el" href="#adfb0369ca408857cac5a09dd871b1250">DataReader</a> (const <a class="el" href="group__dds__subscription.html#ga9a6d78b2a23f864211da5bd2edf28750">dds::sub::Subscriber</a> &amp;sub, const <a class="el" href="classdds_1_1topic_1_1_topic.html">::dds::topic::Topic&lt;T&gt;</a>&lt; T &gt; &amp;topic)</td></tr>
@@ -309,17 +308,17 @@ const <a class="el" href="group__dds__subscription.html#gac759142c11b5f0cb2b2a8f
 <tr class="memitem:ac4c9b3b717ccdad03d70b1644d0f1a12" id="r_ac4c9b3b717ccdad03d70b1644d0f1a12"><td class="memItemLeft">void </td><td class="memItemRight"><a class="el" href="#ac4c9b3b717ccdad03d70b1644d0f1a12">wait_for_historical_data</a> (const <a class="el" href="classdds_1_1core_1_1_duration.html">dds::core::Duration</a> &amp;timeout)</td></tr>
 <tr class="memdesc:ac4c9b3b717ccdad03d70b1644d0f1a12"><td class="mdescLeft"> </td><td class="mdescRight">Forwards a historical-data wait request to the C library.  <br/></td></tr>
 <tr class="groupHeader" id="pub-methods-5"><td colspan="2"><div class="groupHeader">Reader status and matching</div></td></tr>
-<tr class="memitem:a14b0503cc46371971a1fcf39d85b2053" id="r_a14b0503cc46371971a1fcf39d85b2053"><td class="memItemLeft">const dds::core::status::LivelinessChangedStatus </td><td class="memItemRight"><a class="el" href="#a14b0503cc46371971a1fcf39d85b2053">liveliness_changed_status</a> () const</td></tr>
+<tr class="memitem:a14b0503cc46371971a1fcf39d85b2053" id="r_a14b0503cc46371971a1fcf39d85b2053"><td class="memItemLeft">const <a class="el" href="namespacedds_1_1core_1_1status.html#a5314c4075763105161d295a7933db13d">dds::core::status::LivelinessChangedStatus</a> </td><td class="memItemRight"><a class="el" href="#a14b0503cc46371971a1fcf39d85b2053">liveliness_changed_status</a> () const</td></tr>
 <tr class="memdesc:a14b0503cc46371971a1fcf39d85b2053"><td class="mdescLeft"> </td><td class="mdescRight">Gets the reader status for changes in matched writer liveliness.  <br/></td></tr>
-<tr class="memitem:a9fc4ee24fcb1f13d6f98c0201d9a4136" id="r_a9fc4ee24fcb1f13d6f98c0201d9a4136"><td class="memItemLeft">const dds::core::status::SampleRejectedStatus </td><td class="memItemRight"><a class="el" href="#a9fc4ee24fcb1f13d6f98c0201d9a4136">sample_rejected_status</a> () const</td></tr>
+<tr class="memitem:a9fc4ee24fcb1f13d6f98c0201d9a4136" id="r_a9fc4ee24fcb1f13d6f98c0201d9a4136"><td class="memItemLeft">const <a class="el" href="namespacedds_1_1core_1_1status.html#a545c7d7cb2c055ebffb2f1770f76da01">dds::core::status::SampleRejectedStatus</a> </td><td class="memItemRight"><a class="el" href="#a9fc4ee24fcb1f13d6f98c0201d9a4136">sample_rejected_status</a> () const</td></tr>
 <tr class="memdesc:a9fc4ee24fcb1f13d6f98c0201d9a4136"><td class="mdescLeft"> </td><td class="mdescRight">Gets the reader status for sample rejections and their most recent cause.  <br/></td></tr>
-<tr class="memitem:ad1a8eab152f095bf973d3a177e3bac20" id="r_ad1a8eab152f095bf973d3a177e3bac20"><td class="memItemLeft">const dds::core::status::SampleLostStatus </td><td class="memItemRight"><a class="el" href="#ad1a8eab152f095bf973d3a177e3bac20">sample_lost_status</a> () const</td></tr>
+<tr class="memitem:ad1a8eab152f095bf973d3a177e3bac20" id="r_ad1a8eab152f095bf973d3a177e3bac20"><td class="memItemLeft">const <a class="el" href="namespacedds_1_1core_1_1status.html#a04af02f4c95b6f099b2eee842879808b">dds::core::status::SampleLostStatus</a> </td><td class="memItemRight"><a class="el" href="#ad1a8eab152f095bf973d3a177e3bac20">sample_lost_status</a> () const</td></tr>
 <tr class="memdesc:ad1a8eab152f095bf973d3a177e3bac20"><td class="mdescLeft"> </td><td class="mdescRight">Gets the reader status for samples lost before delivery.  <br/></td></tr>
-<tr class="memitem:ae778fd9f4672182abd26f64ad010d4ea" id="r_ae778fd9f4672182abd26f64ad010d4ea"><td class="memItemLeft">const dds::core::status::RequestedDeadlineMissedStatus </td><td class="memItemRight"><a class="el" href="#ae778fd9f4672182abd26f64ad010d4ea">requested_deadline_missed_status</a> ()</td></tr>
+<tr class="memitem:ae778fd9f4672182abd26f64ad010d4ea" id="r_ae778fd9f4672182abd26f64ad010d4ea"><td class="memItemLeft">const <a class="el" href="namespacedds_1_1core_1_1status.html#afe3225b6689c6d6c32f99642822c2b0d">dds::core::status::RequestedDeadlineMissedStatus</a> </td><td class="memItemRight"><a class="el" href="#ae778fd9f4672182abd26f64ad010d4ea">requested_deadline_missed_status</a> ()</td></tr>
 <tr class="memdesc:ae778fd9f4672182abd26f64ad010d4ea"><td class="mdescLeft"> </td><td class="mdescRight">Gets the reader status for instances that missed their requested update interval.  <br/></td></tr>
-<tr class="memitem:a8852e493189251094bc58f6b220712c6" id="r_a8852e493189251094bc58f6b220712c6"><td class="memItemLeft">const dds::core::status::RequestedIncompatibleQosStatus </td><td class="memItemRight"><a class="el" href="#a8852e493189251094bc58f6b220712c6">requested_incompatible_qos_status</a> () const</td></tr>
+<tr class="memitem:a8852e493189251094bc58f6b220712c6" id="r_a8852e493189251094bc58f6b220712c6"><td class="memItemLeft">const <a class="el" href="namespacedds_1_1core_1_1status.html#a5eff3bdd977e5b923e3610f347a64449">dds::core::status::RequestedIncompatibleQosStatus</a> </td><td class="memItemRight"><a class="el" href="#a8852e493189251094bc58f6b220712c6">requested_incompatible_qos_status</a> () const</td></tr>
 <tr class="memdesc:a8852e493189251094bc58f6b220712c6"><td class="mdescLeft"> </td><td class="mdescRight">Gets the reader status for incompatible offered QoS policies.  <br/></td></tr>
-<tr class="memitem:a08c009efb49a3ad883d17b9ede60ed6c" id="r_a08c009efb49a3ad883d17b9ede60ed6c"><td class="memItemLeft">const dds::core::status::SubscriptionMatchedStatus </td><td class="memItemRight"><a class="el" href="#a08c009efb49a3ad883d17b9ede60ed6c">subscription_matched_status</a> () const</td></tr>
+<tr class="memitem:a08c009efb49a3ad883d17b9ede60ed6c" id="r_a08c009efb49a3ad883d17b9ede60ed6c"><td class="memItemLeft">const <a class="el" href="namespacedds_1_1core_1_1status.html#abb43166d32256fc63bd26ce34140090d">dds::core::status::SubscriptionMatchedStatus</a> </td><td class="memItemRight"><a class="el" href="#a08c009efb49a3ad883d17b9ede60ed6c">subscription_matched_status</a> () const</td></tr>
 <tr class="memdesc:a08c009efb49a3ad883d17b9ede60ed6c"><td class="mdescLeft"> </td><td class="mdescRight">Gets the reader status for current and cumulative publication matches.  <br/></td></tr>
 <tr class="inherit_header pub_methods_classdds_1_1core_1_1_t_entity"><td class="dyn-inherit" colspan="2"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="classdds_1_1core_1_1_t_entity.html">dds::core::TEntity&lt; DELEGATE&lt; T &gt; &gt;</a></td></tr>
 <tr class="memitem:a36ba1fa6cb7c1a670658adc0fa806122 inherit pub_methods_classdds_1_1core_1_1_t_entity" id="r_a36ba1fa6cb7c1a670658adc0fa806122"><td class="memItemLeft">
@@ -386,13 +385,13 @@ bool </td><td class="memItemRight"><b>is_nil</b> () const</td></tr>
 <tr class="memdesc:a6e30d68985ca187b16562617d4a7b9f9 inherit pub_methods_classdds_1_1core_1_1_reference"><td class="mdescLeft"> </td><td class="mdescRight">Accesses the stored delegate pointer.  <br/></td></tr>
 <tr class="memitem:a373c3aa4c921f21eabdf3a020ac8ef0c inherit pub_methods_classdds_1_1core_1_1_reference" id="r_a373c3aa4c921f21eabdf3a020ac8ef0c"><td class="memItemLeft"> </td><td class="memItemRight"><a class="el" href="classdds_1_1core_1_1_reference.html#a373c3aa4c921f21eabdf3a020ac8ef0c">operator const DELEGATE_REF_T &amp;</a> () const</td></tr>
 <tr class="memdesc:a373c3aa4c921f21eabdf3a020ac8ef0c inherit pub_methods_classdds_1_1core_1_1_reference"><td class="mdescLeft"> </td><td class="mdescRight">Accesses the stored delegate pointer.  <br/></td></tr>
-</table><table class="memberdecls">
+</table></div><div class="dds-table-scroll"><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-inherited"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_attribs_classdds_1_1core_1_1_reference"><td class="dyn-inherit" colspan="2"><span class="dynarrow"><span class="arrowhead closed"></span></span>Protected Attributes inherited from <a class="el" href="classdds_1_1core_1_1_reference.html">dds::core::Reference&lt; DELEGATE &gt;</a></td></tr>
 <tr class="memitem:ab3a71f25696efba22cf3744cf5826839 inherit pro_attribs_classdds_1_1core_1_1_reference" id="r_ab3a71f25696efba22cf3744cf5826839"><td class="memItemLeft">
 DELEGATE_REF_T </td><td class="memItemRight"><b>impl_</b></td></tr>
-</table>
+</table></div>
 <a id="doc-constructors" name="doc-constructors"></a><h2 class="groupheader" id="header-doc-constructors">Constructors and Destructors</h2>
 <a id="adfb0369ca408857cac5a09dd871b1250" name="adfb0369ca408857cac5a09dd871b1250"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#adfb0369ca408857cac5a09dd871b1250">◆ </a></span>DataReader(sub, topic) <span class="overload">[1/4]</span></h2>
@@ -425,10 +424,10 @@ template&lt;typename T, template&lt; typename Q &gt; class DELEGATE&gt; </div>
 
 <p>Creates a <code><a class="el" href="classdds_1_1sub_1_1_data_reader.html" title="Receives typed samples for a topic.">DataReader&lt;T&gt;</a></code> with the <a class="el" href="group__dds__subscription.html#ga9a6d78b2a23f864211da5bd2edf28750" title="Subscriber handle used to own readers and set their defaults.">Subscriber</a>'s default <a class="el" href="classdds_1_1sub_1_1_data_reader.html" title="Receives typed samples for a topic.">DataReader&lt;T&gt;</a> QoS. </p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramname">sub</td><td>the subscriber owning this <code><a class="el" href="classdds_1_1sub_1_1_data_reader.html" title="Receives typed samples for a topic.">DataReader&lt;T&gt;</a></code>. </td></tr>
     <tr><td class="paramname">topic</td><td>the topic associated with this <code><a class="el" href="classdds_1_1sub_1_1_data_reader.html" title="Receives typed samples for a topic.">DataReader&lt;T&gt;</a></code>. </td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 
@@ -480,13 +479,13 @@ template&lt;typename T, template&lt; typename Q &gt; class DELEGATE&gt; </div>
 
 <p>Creates a <code><a class="el" href="classdds_1_1sub_1_1_data_reader.html" title="Receives typed samples for a topic.">DataReader&lt;T&gt;</a></code> with the specified QoS. </p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramname">sub</td><td>the subscriber owning this <code><a class="el" href="classdds_1_1sub_1_1_data_reader.html" title="Receives typed samples for a topic.">DataReader&lt;T&gt;</a></code>. </td></tr>
     <tr><td class="paramname">topic</td><td>the topic associated with this <code><a class="el" href="classdds_1_1sub_1_1_data_reader.html" title="Receives typed samples for a topic.">DataReader&lt;T&gt;</a></code>. </td></tr>
     <tr><td class="paramname">qos</td><td>the QoS settings for this <code><a class="el" href="classdds_1_1sub_1_1_data_reader.html" title="Receives typed samples for a topic.">DataReader&lt;T&gt;</a></code>. </td></tr>
     <tr><td class="paramname">listener</td><td>the listener. </td></tr>
     <tr><td class="paramname">mask</td><td>the event mask associated to the <code><a class="el" href="classdds_1_1sub_1_1_data_reader.html" title="Receives typed samples for a topic.">DataReader&lt;T&gt;</a></code> listener. </td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 
@@ -524,10 +523,10 @@ template&lt;typename T, template&lt; typename Q &gt; class DELEGATE&gt; </div>
 <p>Creates a <code><a class="el" href="classdds_1_1sub_1_1_data_reader.html" title="Receives typed samples for a topic.">DataReader&lt;T&gt;</a></code> for a <code>ContentFilteredTopic</code> with the <a class="el" href="group__dds__subscription.html#ga9a6d78b2a23f864211da5bd2edf28750" title="Subscriber handle used to own readers and set their defaults.">Subscriber</a>'s default <a class="el" href="classdds_1_1sub_1_1_data_reader.html" title="Receives typed samples for a topic.">DataReader&lt;T&gt;</a> QoS. </p>
 <p>The <a class="el" href="classdds_1_1sub_1_1_data_reader.html" title="Receives typed samples for a topic.">DataReader&lt;T&gt;</a> receives only samples that match the content filter.</p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramname">sub</td><td>the subscriber owning this <code><a class="el" href="classdds_1_1sub_1_1_data_reader.html" title="Receives typed samples for a topic.">DataReader&lt;T&gt;</a></code>. </td></tr>
     <tr><td class="paramname">topic</td><td>the content filtered topic. </td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 
@@ -580,13 +579,13 @@ template&lt;typename T, template&lt; typename Q &gt; class DELEGATE&gt; </div>
 <p>Creates a <code><a class="el" href="classdds_1_1sub_1_1_data_reader.html" title="Receives typed samples for a topic.">DataReader&lt;T&gt;</a></code> for a <code>ContentFilteredTopic</code> with the specified QoS. </p>
 <p>The <a class="el" href="classdds_1_1sub_1_1_data_reader.html" title="Receives typed samples for a topic.">DataReader&lt;T&gt;</a> receives only samples that match the content filter.</p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramname">sub</td><td>the subscriber owning this <code><a class="el" href="classdds_1_1sub_1_1_data_reader.html" title="Receives typed samples for a topic.">DataReader&lt;T&gt;</a></code>. </td></tr>
     <tr><td class="paramname">topic</td><td>the content filtered topic. </td></tr>
     <tr><td class="paramname">qos</td><td>the QoS settings for this <code><a class="el" href="classdds_1_1sub_1_1_data_reader.html" title="Receives typed samples for a topic.">DataReader&lt;T&gt;</a></code>. </td></tr>
     <tr><td class="paramname">listener</td><td>the listener. </td></tr>
     <tr><td class="paramname">mask</td><td>the event mask associated to the <code><a class="el" href="classdds_1_1sub_1_1_data_reader.html" title="Receives typed samples for a topic.">DataReader&lt;T&gt;</a></code> listener. </td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 
@@ -674,9 +673,9 @@ template&lt;typename T, template&lt; typename Q &gt; class DELEGATE&gt; </div>
 <p>Sets the default state filter for direct read and take calls. </p>
 <p>Subsequent direct read and take calls use these masks, including iterator and extended-metadata overloads. Set the state separately on a selector returned by <span class="tt"><a class="el" href="#a4c9879cf567d4d627f02cd90247794ac" title="Starts a new selection on this reader.">select()</a></span>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">state</td><td><a class="el" href="classdds_1_1sub_1_1_sample.html" title="This class encapsulate the data and meta-data associated with DDS samples.">Sample</a>, view, and instance state masks to apply</td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>This reader </dd></dl>
@@ -707,9 +706,9 @@ template&lt;typename T, template&lt; typename Q &gt; class DELEGATE&gt; </div>
 <p>Extracts records into a loan-managed collection. </p>
 <p>The reader overload starts a selector in take mode.</p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[out]</td><td class="paramname">ls</td><td>Collection whose previous contents are replaced</td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>This reader </dd></dl>
@@ -769,9 +768,9 @@ template&lt;typename Functor&gt; </div>
 <p>Applies a streaming selection manipulator. </p>
 <p>The reader overload constructs a selector before applying the manipulator.</p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">f</td><td>Manipulator that configures the selector</td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A selector that can be configured further or used to extract samples </dd></dl>
@@ -920,10 +919,10 @@ template&lt;typename SamplesFWIterator&gt; </div>
 <p>Reads matching samples into existing storage. </p>
 <p>Uses the reader's default state filter and copies each returned record and its metadata. The reader retains the returned records and marks them as read. For fixed-capacity storage, pass a positive limit representable by a signed 32-bit integer and provide at least that many writable positions. A zero limit passes the native unlimited value.</p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[out]</td><td class="paramname">sfit</td><td>First writable position for the returned records </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">max_samples</td><td>Maximum number of records, or zero for no explicit limit</td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Number of records copied, or zero if the native operation produces no records </dd></dl>
@@ -960,10 +959,10 @@ template&lt;typename SamplesFWIterator&gt; </div>
 <p>Takes matching samples into existing storage. </p>
 <p>Uses the reader's default state filter and copies each returned record and its metadata. The reader removes the returned records from its history before copying begins. If writing to the destination throws, it may contain only some of the records. All removed records stay out of the reader history. For fixed-capacity storage, pass a positive limit representable by a signed 32-bit integer and provide at least that many writable positions. A zero limit passes the native unlimited value.</p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[out]</td><td class="paramname">sfit</td><td>First writable position for the returned records </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">max_samples</td><td>Maximum number of records, or zero for no explicit limit</td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Number of records copied, or zero if the native operation produces no records </dd></dl>
@@ -996,9 +995,9 @@ template&lt;typename SamplesBIIterator&gt; </div>
 <p>Read all samples available in the reader cache using the default filter state. </p>
 <p>The samples are copied into the application provided container using a back-inserting iterator. Notice that as a consequence of using a back-inserting iterator, this operation may allocate memory to resize the underlying container.</p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramname">sbit</td><td>samples back-inserting iterator. </td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the number of read samples. </dd></dl>
@@ -1031,9 +1030,9 @@ template&lt;typename SamplesBIIterator&gt; </div>
 <p>Takes matching samples into an expandable container. </p>
 <p>Uses the reader's default state filter. The reader removes the returned records from its history before appending them to the destination. If insertion throws, for example due to an allocation failure, the container may contain only some of the records. All removed records stay out of the reader history.</p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[out]</td><td class="paramname">sbit</td><td>Back-insertion iterator for the destination</td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Number of records appended </dd></dl>
@@ -1062,12 +1061,9 @@ template&lt;typename T, template&lt; typename Q &gt; class DELEGATE&gt; </div>
 </div><div class="memdoc">
 
 <p>Starts a new selection on this reader. </p>
-<p>Each call creates a selector with independent instance, state, and count filters. For example, given a reader <span class="tt">dr</span> and an instance handle obtained from that reader, take up to eight unread records for that instance. The sample-state filter leaves view and instance states unrestricted.</p>
-<div class="fragment"><div class="line"><span class="keyword">const</span> <a class="code hl_class" href="classdds_1_1sub_1_1status_1_1_data_state.html">dds::sub::status::DataState</a> <a class="code hl_function" href="namespacedds_1_1sub.html#adda957dedf2a7b74c01048e79d1491f8">state</a>(<a class="code hl_function" href="classdds_1_1sub_1_1status_1_1_sample_state.html#ad84dc3347fda6f76a38278e953f1e52e">dds::sub::status::SampleState::not_read</a>());</div>
-<div class="line"><span class="keyword">auto</span> samples = dr.select().instance(handle).state(<a class="code hl_function" href="namespacedds_1_1sub.html#adda957dedf2a7b74c01048e79d1491f8">state</a>).max_samples(8).take();</div>
-<div class="ttc" id="aclassdds_1_1sub_1_1status_1_1_data_state_html"><div class="ttname"><a href="classdds_1_1sub_1_1status_1_1_data_state.html">dds::sub::status::DataState</a></div><div class="ttdoc">Combines sample, view, and instance state masks.</div><div class="ttdef"><b>Definition</b> DataState.hpp:235</div></div>
-<div class="ttc" id="aclassdds_1_1sub_1_1status_1_1_sample_state_html_ad84dc3347fda6f76a38278e953f1e52e"><div class="ttname"><a href="classdds_1_1sub_1_1status_1_1_sample_state.html#ad84dc3347fda6f76a38278e953f1e52e">dds::sub::status::SampleState::not_read</a></div><div class="ttdeci">static const SampleState not_read()</div><div class="ttdoc">Creates a filter for samples the reader has not yet read.</div><div class="ttdef"><b>Definition</b> DataState.hpp:81</div></div>
-<div class="ttc" id="anamespacedds_1_1sub_html_adda957dedf2a7b74c01048e79d1491f8"><div class="ttname"><a href="namespacedds_1_1sub.html#adda957dedf2a7b74c01048e79d1491f8">dds::sub::state</a></div><div class="ttdeci">dds::sub::functors::StateFilterManipulatorFunctor state(const dds::sub::status::DataState &amp;s)</div><div class="ttdoc">Creates a streaming manipulator for state.</div><div class="ttdef"><b>Definition</b> DataReader.hpp:87</div></div>
+<p>Each call creates a selector with independent instance, state, and count filters. For example, given a reader <span class="tt">reader</span> and an instance handle obtained from that reader, take up to eight unread records for that instance. The sample-state filter leaves view and instance states unrestricted.</p>
+<div class="fragment dds-cpp-code"><div class="line"><span class="keyword"><span data-cpp-color="keyword">const</span></span> <a class="code hl_class" href="classdds_1_1sub_1_1status_1_1_data_state.html"><span data-cpp-color="namespace">dds</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="namespace">sub</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="namespace">status</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="type">DataState</span></a> <span data-cpp-color="local">unread</span><span data-cpp-color="punctuation">(</span><a class="code hl_function" href="classdds_1_1sub_1_1status_1_1_sample_state.html#ad84dc3347fda6f76a38278e953f1e52e"><span data-cpp-color="namespace">dds</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="namespace">sub</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="namespace">status</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="type">SampleState</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="method">not_read</span></a><span data-cpp-color="punctuation">());</span></div>
+<div class="line"><span class="keyword"><span data-cpp-color="keyword">const</span></span> <span class="keyword"><span data-cpp-color="keyword">auto</span></span> <span data-cpp-color="local">samples</span> <span data-cpp-color="punctuation">=</span> <span data-cpp-color="parameter">reader</span><span data-cpp-color="punctuation">.</span><a class="code hl_function" href="#a4c9879cf567d4d627f02cd90247794ac"><span data-cpp-color="method">select</span></a><span data-cpp-color="punctuation">().</span><a class="code hl_function" href="classdds_1_1sub_1_1_data_reader_1_1_selector.html#a4385e63265161ff676026a1aa36a7b43"><span data-cpp-color="method">instance</span></a><span data-cpp-color="punctuation">(</span><span data-cpp-color="parameter">handle</span><span data-cpp-color="punctuation">).</span><a class="code hl_function" href="classdds_1_1sub_1_1_data_reader_1_1_selector.html#af60e340287752e5facc7ba3e6a733bb1"><span data-cpp-color="method">state</span></a><span data-cpp-color="punctuation">(</span><span data-cpp-color="local">unread</span><span data-cpp-color="punctuation">).</span><a class="code hl_function" href="classdds_1_1sub_1_1_data_reader_1_1_selector.html#ae7e230bc8a985d2f0829115af34ef73e"><span data-cpp-color="method">max_samples</span></a><span data-cpp-color="punctuation">(</span><span data-cpp-color="number">8</span><span data-cpp-color="punctuation">).</span><a class="code hl_function" href="classdds_1_1sub_1_1_data_reader_1_1_selector.html#a8e3726a2c14c91ae076e04cbfdc70d4e"><span data-cpp-color="method">take</span></a><span data-cpp-color="punctuation">();</span></div>
 </div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd><a class="el" href="classdds_1_1sub_1_1_data_reader_1_1_selector.html" title="Selects samples by state, instance, and count.">Selector</a> associated with this reader</dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classdds_1_1sub_1_1_data_reader_1_1_selector.html" title="Selects samples by state, instance, and count.">Selector</a> </dd>
 <dd>
@@ -1099,17 +1095,17 @@ template&lt;typename T, template&lt; typename Q &gt; class DELEGATE&gt; </div>
 <p>Gets the key for an instance known to this reader. </p>
 <p>Use a handle obtained from this reader, for example from <span class="tt">SampleInfo::instance_handle()</span> on a notification for a keyed instance. Only the returned sample's key fields identify the instance.</p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">h</td><td>Handle of the instance whose key is requested</td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Instance handle and a sample containing the instance key</dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
+  <div class="dds-table-scroll"><table class="exception">
     <tr><td class="paramname"><a class="el" href="classdds_1_1core_1_1_error.html" title="Reports a generic DDS operation failure.">dds::core::Error</a></td><td>The C library could not retrieve the key </td></tr>
     <tr><td class="paramname"><a class="el" href="classdds_1_1core_1_1_illegal_operation_error.html" title="Reports an operation that the current context disallows.">dds::core::IllegalOperationError</a></td><td>This reader's topic has no key </td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 
@@ -1143,18 +1139,18 @@ template&lt;typename T, template&lt; typename Q &gt; class DELEGATE&gt; </div>
 <p>Copies the key for an instance into an existing sample. </p>
 <p>Use a handle obtained from this reader. Read only the key fields as the result of this lookup.</p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[in,out]</td><td class="paramname">sample</td><td>Destination for the key fields </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">h</td><td>Handle of the instance whose key is requested</td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Reference to <span class="tt">sample</span></dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
+  <div class="dds-table-scroll"><table class="exception">
     <tr><td class="paramname"><a class="el" href="classdds_1_1core_1_1_error.html" title="Reports a generic DDS operation failure.">dds::core::Error</a></td><td>The C library could not retrieve the key </td></tr>
     <tr><td class="paramname"><a class="el" href="classdds_1_1core_1_1_illegal_operation_error.html" title="Reports an operation that the current context disallows.">dds::core::IllegalOperationError</a></td><td>This reader's topic has no key </td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 
@@ -1184,9 +1180,9 @@ template&lt;typename T, template&lt; typename Q &gt; class DELEGATE&gt; </div>
 <p>Looks up a local reader instance by its key. </p>
 <p>The lookup uses the key fields and leaves the reader's instance registration unchanged. A handle obtained here can be passed to <span class="tt"><a class="el" href="#a4c9879cf567d4d627f02cd90247794ac" title="Starts a new selection on this reader.">select()</a>.<a class="el" href="namespacedds_1_1sub.html#acb4c61c72e0d47aea594a30ae4d11293" title="Creates a streaming manipulator for instance.">instance()</a></span> on this reader.</p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">key</td><td><a class="el" href="classdds_1_1sub_1_1_sample.html" title="This class encapsulate the data and meta-data associated with DDS samples.">Sample</a> containing the instance key fields</td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Handle for the matching instance, or a nil handle when DDS cannot resolve the key </dd></dl>
@@ -1222,16 +1218,16 @@ template&lt;typename T, template&lt; typename Q &gt; class DELEGATE&gt; </div>
 <p>The reader stores a pointer to the application-owned listener. Keep the listener alive while it is registered. Pass <span class="tt">nullptr</span> to clear the registration. The status mask determines which callbacks this reader can receive.</p>
 <dl class="section user"><dt>Threading</dt><dd>Protect application state shared between callbacks and other threads. Keep the listener alive until any callback using it has finished.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">the_listener</td><td>Listener to register, or <span class="tt">nullptr</span> to clear it </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">event_mask</td><td>Statuses to handle through this listener</td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
+  <div class="dds-table-scroll"><table class="exception">
     <tr><td class="paramname"><a class="el" href="classdds_1_1core_1_1_exception.html" title="Base interface for DDS exceptions.">dds::core::Exception</a></td><td>The C library rejected the listener configuration</td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="group__dds__core.html#api_usage_notes" title="Errors and threading">Errors and threading</a> </dd></dl>
@@ -1261,9 +1257,9 @@ template&lt;typename T, template&lt; typename Q &gt; class DELEGATE&gt; </div>
 
 <p>Set the QoS associated with this reader. </p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramname">the_qos</td><td>the new QoS. </td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 
@@ -1292,9 +1288,9 @@ template&lt;typename T, template&lt; typename Q &gt; class DELEGATE&gt; </div>
 
 <p>Applies QoS policies to this reader. </p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">the_qos</td><td>QoS policies to apply</td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>This reader </dd></dl>
@@ -1324,9 +1320,9 @@ template&lt;typename T, template&lt; typename Q &gt; class DELEGATE&gt; </div>
 
 <p>Copies the reader's current QoS policies to the destination. </p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[out]</td><td class="paramname">the_qos</td><td>Destination for the QoS policies</td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>This reader </dd></dl>
@@ -1357,9 +1353,9 @@ template&lt;typename T, template&lt; typename Q &gt; class DELEGATE&gt; </div>
 <p>Forwards a historical-data wait request to the C library. </p>
 <p>The default delegate passes the seconds and nanoseconds fields directly to the native call and discards its return code. A return from this wrapper does not indicate whether historical data arrived, the timeout elapsed, or the native operation failed.</p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">timeout</td><td>Maximum wait duration passed to the native call </td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 
@@ -1373,7 +1369,7 @@ template&lt;typename T, template&lt; typename Q &gt; class DELEGATE&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const dds::core::status::LivelinessChangedStatus <a class="el" href="classdds_1_1sub_1_1_data_reader.html">dds::sub::DataReader&lt;T&gt;</a><span class="dds-short-signature">&lt;T&gt;</span><span class="dds-full-signature">&lt; T, DELEGATE &gt;</span>::liveliness_changed_status </td>
+          <td class="memname">const <a class="el" href="namespacedds_1_1core_1_1status.html#a5314c4075763105161d295a7933db13d">dds::core::status::LivelinessChangedStatus</a> <a class="el" href="classdds_1_1sub_1_1_data_reader.html">dds::sub::DataReader&lt;T&gt;</a><span class="dds-short-signature">&lt;T&gt;</span><span class="dds-full-signature">&lt; T, DELEGATE &gt;</span>::liveliness_changed_status </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -1400,7 +1396,7 @@ template&lt;typename T, template&lt; typename Q &gt; class DELEGATE&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const dds::core::status::SampleRejectedStatus <a class="el" href="classdds_1_1sub_1_1_data_reader.html">dds::sub::DataReader&lt;T&gt;</a><span class="dds-short-signature">&lt;T&gt;</span><span class="dds-full-signature">&lt; T, DELEGATE &gt;</span>::sample_rejected_status </td>
+          <td class="memname">const <a class="el" href="namespacedds_1_1core_1_1status.html#a545c7d7cb2c055ebffb2f1770f76da01">dds::core::status::SampleRejectedStatus</a> <a class="el" href="classdds_1_1sub_1_1_data_reader.html">dds::sub::DataReader&lt;T&gt;</a><span class="dds-short-signature">&lt;T&gt;</span><span class="dds-full-signature">&lt; T, DELEGATE &gt;</span>::sample_rejected_status </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -1427,7 +1423,7 @@ template&lt;typename T, template&lt; typename Q &gt; class DELEGATE&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const dds::core::status::SampleLostStatus <a class="el" href="classdds_1_1sub_1_1_data_reader.html">dds::sub::DataReader&lt;T&gt;</a><span class="dds-short-signature">&lt;T&gt;</span><span class="dds-full-signature">&lt; T, DELEGATE &gt;</span>::sample_lost_status </td>
+          <td class="memname">const <a class="el" href="namespacedds_1_1core_1_1status.html#a04af02f4c95b6f099b2eee842879808b">dds::core::status::SampleLostStatus</a> <a class="el" href="classdds_1_1sub_1_1_data_reader.html">dds::sub::DataReader&lt;T&gt;</a><span class="dds-short-signature">&lt;T&gt;</span><span class="dds-full-signature">&lt; T, DELEGATE &gt;</span>::sample_lost_status </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -1454,7 +1450,7 @@ template&lt;typename T, template&lt; typename Q &gt; class DELEGATE&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const dds::core::status::RequestedDeadlineMissedStatus <a class="el" href="classdds_1_1sub_1_1_data_reader.html">dds::sub::DataReader&lt;T&gt;</a><span class="dds-short-signature">&lt;T&gt;</span><span class="dds-full-signature">&lt; T, DELEGATE &gt;</span>::requested_deadline_missed_status </td>
+          <td class="memname">const <a class="el" href="namespacedds_1_1core_1_1status.html#afe3225b6689c6d6c32f99642822c2b0d">dds::core::status::RequestedDeadlineMissedStatus</a> <a class="el" href="classdds_1_1sub_1_1_data_reader.html">dds::sub::DataReader&lt;T&gt;</a><span class="dds-short-signature">&lt;T&gt;</span><span class="dds-full-signature">&lt; T, DELEGATE &gt;</span>::requested_deadline_missed_status </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -1481,7 +1477,7 @@ template&lt;typename T, template&lt; typename Q &gt; class DELEGATE&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const dds::core::status::RequestedIncompatibleQosStatus <a class="el" href="classdds_1_1sub_1_1_data_reader.html">dds::sub::DataReader&lt;T&gt;</a><span class="dds-short-signature">&lt;T&gt;</span><span class="dds-full-signature">&lt; T, DELEGATE &gt;</span>::requested_incompatible_qos_status </td>
+          <td class="memname">const <a class="el" href="namespacedds_1_1core_1_1status.html#a5eff3bdd977e5b923e3610f347a64449">dds::core::status::RequestedIncompatibleQosStatus</a> <a class="el" href="classdds_1_1sub_1_1_data_reader.html">dds::sub::DataReader&lt;T&gt;</a><span class="dds-short-signature">&lt;T&gt;</span><span class="dds-full-signature">&lt; T, DELEGATE &gt;</span>::requested_incompatible_qos_status </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -1508,7 +1504,7 @@ template&lt;typename T, template&lt; typename Q &gt; class DELEGATE&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const dds::core::status::SubscriptionMatchedStatus <a class="el" href="classdds_1_1sub_1_1_data_reader.html">dds::sub::DataReader&lt;T&gt;</a><span class="dds-short-signature">&lt;T&gt;</span><span class="dds-full-signature">&lt; T, DELEGATE &gt;</span>::subscription_matched_status </td>
+          <td class="memname">const <a class="el" href="namespacedds_1_1core_1_1status.html#abb43166d32256fc63bd26ce34140090d">dds::core::status::SubscriptionMatchedStatus</a> <a class="el" href="classdds_1_1sub_1_1_data_reader.html">dds::sub::DataReader&lt;T&gt;</a><span class="dds-short-signature">&lt;T&gt;</span><span class="dds-full-signature">&lt; T, DELEGATE &gt;</span>::subscription_matched_status </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>

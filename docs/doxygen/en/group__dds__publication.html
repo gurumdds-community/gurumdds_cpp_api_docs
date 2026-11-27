@@ -18,7 +18,7 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script src="search/searchdata.js" type="text/javascript"></script>
 <script src="search/search.js" type="text/javascript"></script>
-<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+<script src="../theme.js" type="text/javascript"></script><link href="doxygen.css" rel="stylesheet" type="text/css"/>
 <link href="ReferenceBranding.css" rel="stylesheet" type="text/css"/>
 <script defer="True" src="ReferenceUi.js"></script><link href="../en/group__dds__publication.html" hreflang="en" rel="alternate"/><link href="../ko/group__dds__publication.html" hreflang="ko" rel="alternate"/><link href="../language.css" rel="stylesheet"/><script defer="defer" src="../language.js"></script></head>
 <body>
@@ -31,7 +31,7 @@
    <div id="projectname">GurumDDS C++ API Reference<span id="projectnumber"> 1.3.2</span>
    </div>
   </td>
- <td class="doc-language-cell"><label class="doc-language"><select aria-label="Documentation language" data-current="0"><option lang="en" selected="selected" value="../en/group__dds__publication.html">English</option><option lang="en" value="../ko/group__dds__publication.html">Korean</option></select></label></td></tr>
+ <td class="doc-language-cell"><div class="doc-header-controls"><button aria-pressed="false" class="doc-theme" type="button">Dark mode</button><label class="doc-language"><select aria-label="Documentation language" data-current="0"><option lang="en" selected="selected" value="../en/group__dds__publication.html">English</option><option lang="en" value="../ko/group__dds__publication.html">Korean</option></select></label></div></td></tr>
  </tbody>
 </table>
 </div>
@@ -115,13 +115,13 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('group__dds__pu
 </div><!--header-->
 <div class="contents">
 
-<p>Publishers, writers, and publication status Create a writer for a topic and use the writer to publish data or update an instance's lifecycle.  
-<a href="#details">More...</a></p>
-<div class="textblock"><h1 class="doxsection"><a class="anchor" id="publication_types"></a>
+
+<a id="details" name="details"></a><h2 class="groupheader" id="header-details">Detailed Description</h2><div class="textblock"><p>Publishers, writers, and publication status Create a writer for a topic and use the writer to publish data or update an instance's lifecycle. </p>
+<h1 class="doxsection"><a class="anchor" id="publication_types"></a>
 Publication types</h1>
 <h2 class="doxsection"><a class="anchor" id="publication_essentials"></a>
 Create a writer</h2>
-<table class="markdownTable">
+<div class="dds-table-scroll"><table class="markdownTable">
 <tr class="markdownTableHead">
 <th class="markdownTableHeadNone">Type  </th><th class="markdownTableHeadNone">Use  </th></tr>
 <tr class="markdownTableRowOdd">
@@ -130,10 +130,10 @@ Create a writer</h2>
 <td class="markdownTableBodyNone"><a class="el" href="classdds_1_1pub_1_1_data_writer.html" title="dds::pub::DataWriter">DataWriter&lt;T&gt;</a>  </td><td class="markdownTableBodyNone">Writes samples and manages keyed instances.  </td></tr>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone"><a class="el" href="#ga35ad9728577d4bdccfe8677bba0bcf5d" title="dds::pub::qos::DataWriterQos">DataWriterQos</a>  </td><td class="markdownTableBodyNone">Holds policies for an individual writer.  </td></tr>
-</table>
+</table></div>
 <h2 class="doxsection"><a class="anchor" id="publication_notifications"></a>
 Handle publication events</h2>
-<table class="markdownTable">
+<div class="dds-table-scroll"><table class="markdownTable">
 <tr class="markdownTableHead">
 <th class="markdownTableHeadNone">Type  </th><th class="markdownTableHeadNone">Use  </th></tr>
 <tr class="markdownTableRowOdd">
@@ -141,28 +141,28 @@ Handle publication events</h2>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone"><a class="el" href="classdds_1_1pub_1_1_publisher_listener.html" title="dds::pub::PublisherListener">PublisherListener</a>  </td><td class="markdownTableBodyNone">Receives writer status callbacks at Publisher scope.  </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">PublicationMatchedStatus  </td><td class="markdownTableBodyNone">Reports current and cumulative subscription matches.  </td></tr>
-</table>
+<td class="markdownTableBodyNone"><a class="el" href="namespacedds_1_1core_1_1status.html#afab9a639df23ee8ec7c0f006482e5a0d" title="dds::core::status::PublicationMatchedStatus">PublicationMatchedStatus</a>  </td><td class="markdownTableBodyNone">Reports current and cumulative subscription matches.  </td></tr>
+</table></div>
 <h2 class="doxsection"><a class="anchor" id="publication_instance"></a>
 Work with keyed samples</h2>
-<table class="markdownTable">
+<div class="dds-table-scroll"><table class="markdownTable">
 <tr class="markdownTableHead">
 <th class="markdownTableHeadNone">Type  </th><th class="markdownTableHeadNone">Use  </th></tr>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone"><a class="el" href="classdds_1_1topic_1_1_topic_instance.html" title="dds::topic::TopicInstance">TopicInstance&lt;T&gt;</a>  </td><td class="markdownTableBodyNone">Pairs an instance handle with its sample.  </td></tr>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone"><a class="el" href="group__dds__core.html#ga8ee18acd2002fb15f2650f5c7cb055d0" title="dds::core::InstanceHandle">InstanceHandle</a>  </td><td class="markdownTableBodyNone">Identifies the instance for later writes or lifecycle operations.  </td></tr>
-</table>
+</table></div>
 <h1 class="doxsection"><a class="anchor" id="publication_entity_relationships"></a>
 Publication entity relationships</h1>
 <div class="image">
 <object data="dds-diagram-publication-types-en.svg" style="pointer-events: none;" type="image/svg+xml"></object>
 <div class="caption">
 Publisher and DataWriter class relationships</div></div>
- <dl class="section see"><dt>See also</dt><dd><a class="el" href="group__dds__domain.html#getting_started" title="Send and receive your first sample">Send and receive your first sample</a> </dd>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__dds__domain.html#getting_started" title="Send and receive your first sample">Send and receive your first sample</a> </dd>
 <dd>
 <a class="el" href="group__dds__qos.html#matching_guide" title="Diagnose a writer and reader that do not exchange data">Diagnose a writer and reader that do not exchange data</a> </dd></dl>
-</div><table class="memberdecls">
+</div><div class="dds-table-scroll"><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-nested-classes"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:dds_3A_3Apub_3A_3ADataWriter_3C_20T_2C_20DELEGATE_20_3E" id="r_dds_3A_3Apub_3A_3ADataWriter_3C_20T_2C_20DELEGATE_20_3E"><td class="memItemLeft">class  </td><td class="memItemRight"><a class="el" href="classdds_1_1pub_1_1_data_writer.html">dds::pub::DataWriter&lt;T&gt;</a></td></tr>
@@ -181,7 +181,7 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft"> </td><td class="mdescRight">Owns writers and configures publication defaults.  <a href="classdds_1_1pub_1_1_t_publisher.html#details">More...</a><br/></td></tr>
 <tr class="memitem:dds_3A_3Apub_3A_3ATSuspendedPublication_3C_20DELEGATE_20_3E" id="r_dds_3A_3Apub_3A_3ATSuspendedPublication_3C_20DELEGATE_20_3E"><td class="memItemLeft">class  </td><td class="memItemRight"><a class="el" href="classdds_1_1pub_1_1_t_suspended_publication.html">dds::pub::TSuspendedPublication&lt; DELEGATE &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft"> </td><td class="mdescRight">Manages a publisher scope for suspended publication.  <a href="classdds_1_1pub_1_1_t_suspended_publication.html#details">More...</a><br/></td></tr>
-</table><table class="memberdecls">
+</table></div><div class="dds-table-scroll"><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-typedef-members"><a id="typedef-members" name="typedef-members"></a>
 Typedefs</h2></td></tr>
 <tr class="memitem:ga8f70ae058951aac5c115428519ae51e5" id="r_ga8f70ae058951aac5c115428519ae51e5"><td class="memItemLeft">typedef dds::pub::detail::CoherentSet </td><td class="memItemRight"><a class="el" href="#ga8f70ae058951aac5c115428519ae51e5">dds::pub::CoherentSet</a></td></tr>
@@ -194,10 +194,9 @@ Typedefs</h2></td></tr>
 <tr class="memdesc:ga5a397b3fef78f6e0788de250ad51b80f"><td class="mdescLeft"> </td><td class="mdescRight">QoS policy set used to configure a publisher.  <br/></td></tr>
 <tr class="memitem:ga0263143af767b3492479665b9a2fd613" id="r_ga0263143af767b3492479665b9a2fd613"><td class="memItemLeft">typedef dds::pub::detail::SuspendedPublication </td><td class="memItemRight"><a class="el" href="#ga0263143af767b3492479665b9a2fd613">dds::pub::SuspendedPublication</a></td></tr>
 <tr class="memdesc:ga0263143af767b3492479665b9a2fd613"><td class="mdescLeft"> </td><td class="mdescRight">Scope that suspends and resumes publication through a <a class="el" href="#gada2751fd8ce0e148138e6950f7ef7d37" title="Publisher handle used to own writers and set their defaults.">Publisher</a>.  <br/></td></tr>
-</table>
-<a id="details" name="details"></a><h2 class="groupheader" id="header-details">Detailed Description</h2>
-<div class="textblock"><p>Publishers, writers, and publication status Create a writer for a topic and use the writer to publish data or update an instance's lifecycle. </p>
-</div><a id="doc-typedef-members" name="doc-typedef-members"></a><h2 class="groupheader" id="header-doc-typedef-members">Typedef Documentation</h2>
+</table></div>
+
+<a id="doc-typedef-members" name="doc-typedef-members"></a><h2 class="groupheader" id="header-doc-typedef-members">Typedef Documentation</h2>
 <a id="ga8f70ae058951aac5c115428519ae51e5" name="ga8f70ae058951aac5c115428519ae51e5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga8f70ae058951aac5c115428519ae51e5">◆ </a></span>CoherentSet</h2>
 

@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['샘플과_20읽지_20않은_20샘플을_20따로_20가져오기_0',['읽은 샘플과 읽지 않은 샘플을 따로 가져오기',['../group__dds__tutorial__reader.html#dds_tutorial_reader_state_masks',1,'']]],
-  ['샘플을_20따로_20가져오기_1',['읽은 샘플과 읽지 않은 샘플을 따로 가져오기',['../group__dds__tutorial__reader.html#dds_tutorial_reader_state_masks',1,'']]],
-  ['샘플_20수신_20확인_2',['Partition별 샘플 수신 확인',['../group__dds__tutorial__subscriber.html#dds_tutorial_subscriber_partition_delivery',1,'']]],
-  ['샘플_20진단_3',['유실 및 거부 샘플 진단',['../group__dds__subscription.html#receiving_loss',1,'']]]
+  ['새_20datawriter의_20기본_20qos_20설정하기_0',['새 DataWriter의 기본 QoS 설정하기',['../group__dds__tutorial__publisher.html#dds_tutorial_publisher_defaults',1,'']]],
+  ['새_20publisher와_20subscriber의_20기본_20qos_20설정_1',['새 Publisher와 Subscriber의 기본 QoS 설정',['../group__dds__tutorial__participant.html#dds_tutorial_participant_defaults',1,'']]]
 ];

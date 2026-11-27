@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['조정_0',['WaitSet 조정',['../group__dds__core.html#api_usage_waitsets',1,'']]],
-  ['조회_1',['매칭된 DataWriter 조회',['../group__dds__tutorial__discovery.html#dds_tutorial_discovery_writers',1,'']]]
+  ['제거하기_0',['sample을 읽은 다음 제거하기',['../group__dds__tutorial__reader.html#dds_howto_read_take',1,'']]],
+  ['제한_1',['두 key에 걸쳐 history 제한',['../group__dds__howto__qos.html#dds_tutorial_qos_history_limits',1,'']]]
 ];

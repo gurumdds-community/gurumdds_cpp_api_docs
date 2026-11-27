@@ -18,235 +18,247 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script src="search/searchdata.js" type="text/javascript"></script>
 <script src="search/search.js" type="text/javascript"></script>
-<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+<script src="../theme.js" type="text/javascript"></script><link href="doxygen.css" rel="stylesheet" type="text/css"/>
 <link href="ReferenceBranding.css" rel="stylesheet" type="text/css"/>
 <script defer="True" src="ReferenceUi.js"></script><link href="../en/group__dds__tutorial__idl__example.html" hreflang="en" rel="alternate"/><link href="../ko/group__dds__tutorial__idl__example.html" hreflang="ko" rel="alternate"/><link href="../language.css" rel="stylesheet"/><script defer="defer" src="../language.js"></script></head>
 <body>
-<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
-<div id="titlearea">
-<table cellpadding="0" cellspacing="0">
- <tbody>
- <tr id="projectrow">
-  <td id="projectalign">
-   <div id="projectname">GurumDDS C++ API Reference<span id="projectnumber"> 1.3.2</span>
-   </div>
-  </td>
- <td class="doc-language-cell"><label class="doc-language"><select aria-label="문서 언어" data-current="1"><option lang="en" value="../en/group__dds__tutorial__idl__example.html">English</option><option lang="en" selected="selected" value="../ko/group__dds__tutorial__idl__example.html">Korean</option></select></label></td></tr>
- </tbody>
-</table>
-</div>
-<!-- end header part -->
-<!-- 다음에 의해 생성됨 :  Doxygen 1.18.0 -->
-<script type="text/javascript">
-let searchBox = new SearchBox("searchBox", "search/",'.html');
-</script>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', codefold.init);
-</script>
-<script id="doxygen-config" type="application/json">
-{
-  "relPath": "",
-  "generateTreeView": true,
-  "searchEngine": true,
-  "serverBasedSearch": false,
-  "disableIndex": false,
-  "dynamicMenus": true,
-  "fullSidebar": false
-}
-</script>
-<script src="menudata.js" type="text/javascript"></script>
-<script src="menu.js" type="text/javascript"></script>
-<div id="main-nav-mobile">
-<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
-<label class="main-menu-btn" for="main-menu-state">
-<span class="main-menu-btn-icon"></span> 주 메뉴 표시 전환</label>
-<span id="searchBoxPos1"></span>
-</div>
-</div><!-- main-nav-mobile -->
-<div id="main-nav">
-  <ul class="sm sm-dox" id="main-menu">
-    <li id="searchBoxPos2">
-        <div class="MSearchBoxInactive" id="MSearchBox">
-        <span class="left">
-          <span class="search-icon" id="MSearchSelect"><span class="search-icon-dropdown"></span></span>
-          <input accesskey="S" id="MSearchField" placeholder="검색" type="text" value=""/>
-          </span><span class="right">
-            <a href="javascript:searchBox.CloseResultsWindow()" id="MSearchClose"><div class="close-icon" id="MSearchCloseImg"></div></a>
-          </span>
-        </div>
-    </li>
-  </ul>
-</div><!-- main-nav -->
-</div><!-- top -->
-<div class="ui-resizable side-nav-resizable" id="side-nav">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div class="sync" id="nav-sync"></div>
-    </div>
-  </div>
-  <div class="ui-resizable-handle" id="splitbar">
-  </div>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellpadding="0" cellspacing="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">GurumDDS C++ API Reference<span id="projectnumber"> 1.3.2</span>
+   </div>
+  </td>
+ <td class="doc-language-cell"><div class="doc-header-controls"><button aria-pressed="false" class="doc-theme" type="button">다크 모드</button><label class="doc-language"><select aria-label="문서 언어" data-current="1"><option lang="en" value="../en/group__dds__tutorial__idl__example.html">English</option><option lang="en" selected="selected" value="../ko/group__dds__tutorial__idl__example.html">Korean</option></select></label></div></td></tr>
+ </tbody>
+</table>
 </div>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded',() => { initNavTree('group__dds__tutorial__idl__example.html','',''); });
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
 </script>
-<div id="container">
-<div id="doc-content">
-<!-- window showing the filter options -->
-<div id="MSearchSelectWindow">
-</div>
-
-<!-- iframe showing the search results (closed by default) -->
-<div id="MSearchResultsWindow">
-<div id="MSearchResults">
-<div class="SRPage">
-<div id="SRIndex">
-<div id="SRResults"></div>
-<div class="SRStatus" id="Loading">로딩중...</div>
-<div class="SRStatus" id="Searching">검색중...</div>
-<div class="SRStatus" id="NoMatches">일치하는것 없음</div>
-</div>
-</div>
-</div>
-</div>
-
-<div class="header">
-  <div class="headertitle"><div class="title">IDL에서 C++ 코드 생성 및 적용 <div class="ingroups"><a class="el" href="group__dds__howto.html">Programming Tutorials</a></div></div></div>
-</div><!--header-->
-<div class="contents">
-<div class="textblock"><div class="image">
-<object data="dds-diagram-idl-build-ko.svg" style="pointer-events: none;" type="image/svg+xml"></object>
-<div class="caption">
-IDL 타입에서 애플리케이션까지 빌드</div></div>
- <p>Topic 튜토리얼에서는 저장소 빌드가 생성한 <span class="tt">Hello::Msg</span>를 사용했습니다. 여기서는 필드가 하나인 <span class="tt">Message</span>부터 정의하고, Topic 생성에 필요한 C++ 선언과 타입 지원 코드를 직접 만듭니다.</p>
-<h1 class="doxsection"><a class="anchor" id="dds_tutorial_idl_example_define"></a>
-IDL 타입 정의</h1>
-<p>프로젝트 디렉터리를 만듭니다. 그 안에 <span class="tt">Message.idl</span>을 만들고 다음 타입을 정의하세요.</p>
-<div class="fragment"><div class="line">module IdlExample</div>
-<div class="line">{</div>
-<div class="line">    <span class="keyword">struct </span>Message</div>
-<div class="line">    {</div>
-<div class="line">        <span class="keywordtype">long</span> value;</div>
-<div class="line">    };</div>
-<div class="line">};</div>
-</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="dds_tutorial_idl_example_generate"></a>
-C++ 타입과 타입 지원 코드 생성</h1>
-<p>프로젝트 디렉터리에서 PowerShell을 열고 <span class="tt">$sdk</span>에 GurumDDS SDK 경로를 지정하세요. GurumIDL에 <span class="tt">cpp</span> 대상, IDL 파일, 미리 만든 출력 디렉터리를 전달합니다.</p>
-<div class="fragment"><div class="line">$sdk = "C:/Program Files/Gurumnet/DDS"</div>
-<div class="line">cmake -E make_directory generated</div>
-<div class="line">&amp; "$sdk/tool/gurumidl.exe" cpp Message.idl generated</div>
-</div><!-- fragment --><p>GurumIDL은 <span class="tt">generated</span>에 다음 파일을 생성합니다.</p>
-<ul>
-<li><span class="tt">Message.hpp</span>는 C++ 타입 <span class="tt">IdlExample::Message</span>를 정의합니다.</li>
-<li><span class="tt">MessageTypeSupport.hpp</span>는 <span class="tt">Topic&lt;IdlExample::Message&gt;</span>에 필요한 타입 지원을 선언합니다.</li>
-<li><span class="tt">MessageTypeSupport.cpp</span>는 타입 지원을 구현합니다. 프로그램을 빌드할 때 이 파일도 컴파일하세요.</li>
-</ul>
-<h1 class="doxsection"><a class="anchor" id="dds_tutorial_idl_example_apply"></a>
-생성된 타입을 C++에 적용</h1>
-<p><span class="tt">Message.idl</span>과 같은 디렉터리에 <span class="tt">main.cpp</span>를 만드세요. <span class="tt">MessageTypeSupport.hpp</span>를 포함하고 <span class="tt">Topic</span>의 템플릿 인수로 <span class="tt">IdlExample::Message</span>를 지정합니다.</p>
-<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;exception&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;iostream&gt;</span></div>
-<div class="line"> </div>
-<div class="line"><span class="preprocessor">#include "MessageTypeSupport.hpp"</span></div>
-<div class="line"> </div>
-<div class="line"><span class="keywordtype">int</span> main()</div>
-<div class="line"><span class="keyword">try</span></div>
-<div class="line">{</div>
-<div class="line">    <a class="code hl_typedef" href="group__dds__domain.html#gab1bd86ffa9ac0869166a446dd0120f3d">dds::domain::DomainParticipant</a> participant(106);</div>
-<div class="line">    <a class="code hl_class" href="classdds_1_1topic_1_1_topic.html">dds::topic::Topic&lt;T&gt;</a> topic(participant, <span class="stringliteral">"IdlExampleMessage"</span>);</div>
-<div class="line"> </div>
-<div class="line">    std::cout &lt;&lt; <span class="stringliteral">"Topic: "</span> &lt;&lt; topic.name() &lt;&lt; <span class="charliteral">'\n'</span>;</div>
-<div class="line">    std::cout &lt;&lt; <span class="stringliteral">"Type: "</span> &lt;&lt; topic.type_name() &lt;&lt; <span class="charliteral">'\n'</span>;</div>
-<div class="line">    <span class="keywordflow">return</span> 0;</div>
-<div class="line">}</div>
-<div class="line"><span class="keywordflow">catch</span> (<span class="keyword">const</span> std::exception&amp; error)</div>
-<div class="line">{</div>
-<div class="line">    std::cerr &lt;&lt; error.what() &lt;&lt; <span class="charliteral">'\n'</span>;</div>
-<div class="line">    <span class="keywordflow">return</span> 1;</div>
-<div class="line">}</div>
-<div class="ttc" id="aclassdds_1_1topic_1_1_topic_html"><div class="ttname"><a href="classdds_1_1topic_1_1_topic.html">dds::topic::Topic&lt;T&gt;</a></div><div class="ttdoc">domain에서 Topic 이름을 DDS 데이터 타입과 연결합니다.</div><div class="ttdef"><b>정의</b> TTopic.hpp:54</div></div>
-<div class="ttc" id="agroup__dds__domain_html_gab1bd86ffa9ac0869166a446dd0120f3d"><div class="ttname"><a href="group__dds__domain.html#gab1bd86ffa9ac0869166a446dd0120f3d">dds::domain::DomainParticipant</a></div><div class="ttdeci">::dds::domain::detail::DomainParticipant DomainParticipant</div><div class="ttdoc">DDS domain에 가입하고 관리하는 데 사용되는 DomainParticipant handle</div><div class="ttdef"><b>정의</b> DomainParticipant.hpp:30</div></div>
-</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="idl_field_mapping"></a>
-생성된 필드 타입 확인</h1>
-<table class="markdownTable">
-<tr class="markdownTableHead">
-<th class="markdownTableHeadNone">IDL 필드  </th><th class="markdownTableHeadNone">생성된 C++와 데이터 소유권  </th></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone"><span class="tt">long value</span>  </td><td class="markdownTableBodyNone">32비트 정수 필드이며 값을 대입합니다.  </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone"><span class="tt">long bounds[2]</span>  </td><td class="markdownTableBodyNone">구조체에 포함된 배열이며 원소를 복사합니다.  </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone"><span class="tt">string label</span>  </td><td class="markdownTableBodyNone">문자 포인터입니다. Loan 반환 전에 문자열을 복사합니다.  </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone"><span class="tt">sequence&lt;long&gt; values</span>  </td><td class="markdownTableBodyNone">DDS long 시퀀스 포인터입니다. Loan이 유효한 동안 원소를 복사합니다.  </td></tr>
-</table>
-<p>배열, 문자열, 시퀀스 예제는 <a class="el" href="group__dds__tutorial__reader.html#dds_tutorial_reader_copy_generated_fields" title="loan 반환 후에도 생성 타입의 필드 사용">loan 반환 후에도 생성 타입의 필드 사용</a> 에 있습니다.</p>
-<h1 class="doxsection"><a class="anchor" id="dds_tutorial_idl_example_cmake"></a>
-CMake 빌드 설정</h1>
-<p>프로젝트 디렉터리에 <span class="tt">CMakeLists.txt</span>를 만드세요. CMake는 빌드 디렉터리에서 GurumIDL을 실행하고 <span class="tt">MessageTypeSupport.cpp</span>와 <span class="tt">main.cpp</span>를 컴파일한 뒤 GurumDDS 라이브러리를 링크합니다.</p>
-<div class="fragment"><div class="line">cmake_minimum_required(VERSION 3.18)</div>
-<div class="line">project(IdlTutorial LANGUAGES CXX)</div>
-<div class="line"> </div>
-<div class="line">set(CMAKE_CXX_STANDARD 11)</div>
-<div class="line">set(CMAKE_CXX_STANDARD_REQUIRED ON)</div>
-<div class="line"> </div>
-<div class="line">set(GURUMDDS_ROOT <span class="stringliteral">""</span> CACHE PATH <span class="stringliteral">"GurumDDS SDK installation"</span>)</div>
-<div class="line">set(GURUMDDS_CXX_ROOT <span class="stringliteral">"${GURUMDDS_ROOT}"</span> CACHE PATH <span class="stringliteral">"GurumDDS C++ binding installation"</span>)</div>
-<div class="line"> </div>
-<div class="line">find_program(GURUMIDL NAMES gurumidl HINTS <span class="stringliteral">"${GURUMDDS_ROOT}"</span> PATH_SUFFIXES tool bin REQUIRED)</div>
-<div class="line">find_path(GURUMDDS_INCLUDE_DIR gurumdds/<a class="code hl_namespace" href="namespacedds.html">dds</a>.h HINTS <span class="stringliteral">"${GURUMDDS_ROOT}"</span> PATH_SUFFIXES include REQUIRED)</div>
-<div class="line">find_library(GURUMDDS_LIBRARY gurumdds HINTS <span class="stringliteral">"${GURUMDDS_ROOT}"</span> PATH_SUFFIXES lib REQUIRED)</div>
-<div class="line">find_path(GURUMDDS_CXX_INCLUDE_DIR gurumdds/<a class="code hl_namespace" href="namespacedds.html">dds</a>.hpp HINTS <span class="stringliteral">"${GURUMDDS_CXX_ROOT}"</span> PATH_SUFFIXES include REQUIRED)</div>
-<div class="line">find_library(GURUMDDS_CXX_LIBRARY NAMES gurumdds_psm_cxx gurumdds_psm_cxxd</div>
-<div class="line">    HINTS <span class="stringliteral">"${GURUMDDS_CXX_ROOT}"</span> PATH_SUFFIXES lib REQUIRED)</div>
-<div class="line"> </div>
-<div class="line">set(idl_file <span class="stringliteral">"${CMAKE_CURRENT_SOURCE_DIR}/Message.idl"</span>)</div>
-<div class="line">set(generated_dir <span class="stringliteral">"${CMAKE_CURRENT_BINARY_DIR}/generated"</span>)</div>
-<div class="line">set(type_source <span class="stringliteral">"${generated_dir}/MessageTypeSupport.cpp"</span>)</div>
-<div class="line">set(type_headers <span class="stringliteral">"${generated_dir}/Message.hpp"</span> <span class="stringliteral">"${generated_dir}/MessageTypeSupport.hpp"</span>)</div>
-<div class="line"> </div>
-<div class="line">add_custom_command(</div>
-<div class="line">    OUTPUT <span class="stringliteral">"${type_source}"</span> ${type_headers}</div>
-<div class="line">    COMMAND <span class="stringliteral">"${CMAKE_COMMAND}"</span> -E make_directory <span class="stringliteral">"${generated_dir}"</span></div>
-<div class="line">    COMMAND <span class="stringliteral">"${CMAKE_COMMAND}"</span> -E rm -f <span class="stringliteral">"${type_source}"</span> ${type_headers}</div>
-<div class="line">    COMMAND <span class="stringliteral">"${GURUMIDL}"</span> cpp <span class="stringliteral">"${idl_file}"</span> <span class="stringliteral">"${generated_dir}"</span></div>
-<div class="line">    DEPENDS <span class="stringliteral">"${idl_file}"</span> <span class="stringliteral">"${GURUMIDL}"</span></div>
-<div class="line">    VERBATIM</div>
-<div class="line">)</div>
-<div class="line"> </div>
-<div class="line">add_executable(idl_app main.cpp <span class="stringliteral">"${type_source}"</span> ${type_headers})</div>
-<div class="line">target_include_directories(idl_app PRIVATE</div>
-<div class="line">    <span class="stringliteral">"${generated_dir}"</span> <span class="stringliteral">"${GURUMDDS_CXX_INCLUDE_DIR}"</span> <span class="stringliteral">"${GURUMDDS_INCLUDE_DIR}"</span></div>
-<div class="line">)</div>
-<div class="line">target_link_libraries(idl_app PRIVATE <span class="stringliteral">"${GURUMDDS_CXX_LIBRARY}"</span> <span class="stringliteral">"${GURUMDDS_LIBRARY}"</span>)</div>
-<div class="line">target_compile_options(idl_app PRIVATE $&lt;$&lt;CXX_COMPILER_ID:MSVC&gt;:/utf-8&gt;)</div>
-<div class="ttc" id="anamespacedds_html"><div class="ttname"><a href="namespacedds.html">dds</a></div><div class="ttdoc">GurumDDS C++ API의 최상위 네임스페이스</div><div class="ttdef"><b>정의</b> array.hpp:7</div></div>
-</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="dds_tutorial_idl_example_build"></a>
-빌드 및 실행</h1>
-<p>CMake 3.18 이상과 C++11을 지원하는 컴파일러가 필요합니다. 아래 명령은 PowerShell과 Visual Studio 생성기를 사용합니다. <span class="tt">GURUMDDS_ROOT</span>에는 SDK 경로를, <span class="tt">GURUMDDS_CXX_ROOT</span>에는 C++ 바인딩 경로를 지정하세요. 같은 곳에 설치했다면 두 변수에 같은 경로를 사용합니다.</p>
-<div class="fragment"><div class="line">$sdk = "C:/Program Files/Gurumnet/DDS"</div>
-<div class="line">$cxx = "C:/path/to/gurumdds-cxx"</div>
-<div class="line">cmake -S . -B build "-DGURUMDDS_ROOT=$sdk" "-DGURUMDDS_CXX_ROOT=$cxx"</div>
-<div class="line">cmake --build build --config Debug</div>
-</div><!-- fragment --><p>GurumDDS DLL과 C++ 바인딩 DLL이 있는 디렉터리를 <span class="tt">PATH</span>에 추가한 뒤 프로그램을 실행하세요. 정상 실행하면 Topic 이름과 등록된 타입 이름이 표시됩니다.</p>
-<div class="fragment"><div class="line">$env:PATH = "$sdk/lib;$cxx/bin;$env:PATH"</div>
-<div class="line">./build/Debug/idl_app.exe</div>
-</div><!-- fragment --><dl class="section see"><dt>참고</dt><dd><a class="el" href="group__dds__tutorial__topic.html" title="Topic과 keyed 타입">Topic과 keyed type</a> </dd></dl>
-</div></div><!-- contents -->
-</div><!-- doc-content -->
-<div class="page-nav-panel" id="page-nav">
-<div id="page-nav-resize-handle"></div>
-<div id="page-nav-tree">
-<div id="page-nav-contents">
-</div><!-- page-nav-contents -->
-</div><!-- page-nav-tree -->
-</div><!-- page-nav -->
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script id="doxygen-config" type="application/json">
+{
+  "relPath": "",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script src="menudata.js" type="text/javascript"></script>
+<script src="menu.js" type="text/javascript"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> 주 메뉴 표시 전환</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div class="MSearchBoxInactive" id="MSearchBox">
+        <span class="left">
+          <span class="search-icon" id="MSearchSelect"><span class="search-icon-dropdown"></span></span>
+          <input accesskey="S" id="MSearchField" placeholder="검색" type="text" value=""/>
+          </span><span class="right">
+            <a href="javascript:searchBox.CloseResultsWindow()" id="MSearchClose"><div class="close-icon" id="MSearchCloseImg"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div class="ui-resizable side-nav-resizable" id="side-nav">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div class="sync" id="nav-sync"></div>
+    </div>
+  </div>
+  <div class="ui-resizable-handle" id="splitbar">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('group__dds__tutorial__idl__example.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">로딩중...</div>
+<div class="SRStatus" id="Searching">검색중...</div>
+<div class="SRStatus" id="NoMatches">일치하는것 없음</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">IDL에서 C++ 코드 생성 및 적용 <div class="ingroups"><a class="el" href="group__dds__howto.html">Programming Tutorials</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><div class="image">
+<object data="dds-diagram-idl-build-ko.svg" style="pointer-events: none;" type="image/svg+xml"></object>
+<div class="caption">
+IDL 타입에서 애플리케이션까지 빌드</div></div>
+<p>Topic 튜토리얼에서는 저장소 빌드가 생성한 <span class="tt">Hello::Msg</span>를 사용했습니다. 여기서는 필드가 하나인 <span class="tt">Message</span>부터 정의하고, Topic 생성에 필요한 C++ 선언과 타입 지원 코드를 직접 만듭니다.</p>
+<h1 class="doxsection"><a class="anchor" id="dds_tutorial_idl_example_define"></a>
+IDL 타입 정의</h1>
+<p>프로젝트 디렉터리를 만듭니다. 그 안에 <span class="tt">Message.idl</span>을 만들고 다음 타입을 정의하세요.</p>
+<div class="fragment"><div class="line">module IdlExample</div>
+<div class="line">{</div>
+<div class="line">    <span class="keyword">struct </span>Message</div>
+<div class="line">    {</div>
+<div class="line">        <span class="keywordtype">long</span> value;</div>
+<div class="line">    };</div>
+<div class="line">};</div>
+</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="dds_tutorial_idl_example_generate"></a>
+C++ 타입과 타입 지원 코드 생성</h1>
+<p>빌드할 때 CMake가 GurumIDL을 실행합니다. 생성 파일을 먼저 확인하려면 GurumIDL에 <span class="tt">cpp</span>, IDL 파일, 미리 만든 출력 디렉터리를 전달합니다. Linux SDK 패키지가 <span class="tt">/usr</span>에 설치되어 있다면 프로젝트 디렉터리에서 아래 명령을 실행합니다. 설치 위치가 다르면 SDK와 실행 파일 경로를 바꿉니다.</p>
+<div class="fragment"><div class="line">sdk=/usr</div>
+<div class="line">mkdir -p generated</div>
+<div class="line">"$sdk/bin/gurumidl" cpp Message.idl generated</div>
+</div><!-- fragment --><p>GurumIDL은 <span class="tt">generated</span>에 다음 파일을 생성합니다.</p>
+<ul>
+<li><span class="tt">Message.hpp</span>는 C++ 타입 <span class="tt">IdlExample::Message</span>를 정의합니다.</li>
+<li><span class="tt">MessageTypeSupport.hpp</span>는 <span class="tt">Topic&lt;IdlExample::Message&gt;</span>에 필요한 타입 지원을 선언합니다.</li>
+<li><span class="tt">MessageTypeSupport.cpp</span>는 타입 지원을 구현합니다. 프로그램을 빌드할 때 이 파일도 컴파일하세요.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="dds_tutorial_idl_example_apply"></a>
+생성된 타입을 C++에 적용</h1>
+<p><span class="tt">Message.idl</span>과 같은 디렉터리에 <span class="tt">main.cpp</span>를 만드세요. <span class="tt">MessageTypeSupport.hpp</span>를 포함하고 <span class="tt">Topic</span>의 템플릿 인수로 <span class="tt">IdlExample::Message</span>를 지정합니다.</p>
+<div class="fragment dds-cpp-code"><div class="line"><span class="preprocessor"><span data-cpp-color="directive">#include</span> <span data-cpp-color="header">&lt;exception&gt;</span></span></div>
+<div class="line"><span class="preprocessor"><span data-cpp-color="directive">#include</span> <span data-cpp-color="header">&lt;iostream&gt;</span></span></div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor"><span data-cpp-color="directive">#include</span> <span data-cpp-color="header">"MessageTypeSupport.hpp"</span></span></div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype"><span data-cpp-color="keyword">int</span></span> <span data-cpp-color="function">main</span><span data-cpp-color="punctuation">()</span></div>
+<div class="line"><span class="keyword"><span data-cpp-color="control">try</span></span></div>
+<div class="line"><span data-cpp-color="punctuation">{</span></div>
+<div class="line">    <a class="code hl_typedef" href="group__dds__domain.html#gab1bd86ffa9ac0869166a446dd0120f3d"><span data-cpp-color="namespace">dds</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="namespace">domain</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="type">DomainParticipant</span></a> <span data-cpp-color="local">participant</span><span data-cpp-color="punctuation">(</span><span data-cpp-color="number">106</span><span data-cpp-color="punctuation">);</span></div>
+<div class="line">    <a class="code hl_class" href="classdds_1_1topic_1_1_topic.html"><span data-cpp-color="namespace">dds</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="namespace">topic</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="class-template">Topic</span><span data-cpp-color="punctuation">&lt;</span><span data-cpp-color="namespace">IdlExample</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="type">Message</span><span data-cpp-color="punctuation">&gt;</span></a> <span data-cpp-color="local">topic</span><span data-cpp-color="punctuation">(</span><span data-cpp-color="local">participant</span><span data-cpp-color="punctuation">,</span> <span class="stringliteral"><span data-cpp-color="string">"IdlExampleMessage"</span></span><span data-cpp-color="punctuation">);</span></div>
+<div class="line"> </div>
+<div class="line">    <span data-cpp-color="namespace">std</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="global">cout</span> <span data-cpp-color="punctuation">&lt;&lt;</span> <span class="stringliteral"><span data-cpp-color="string">"Topic: "</span></span> <span data-cpp-color="punctuation">&lt;&lt;</span> <span data-cpp-color="local">topic</span><span data-cpp-color="punctuation">.</span><span data-cpp-color="method">name</span><span data-cpp-color="punctuation">()</span> <span data-cpp-color="punctuation">&lt;&lt;</span> <span class="charliteral"><span data-cpp-color="string">'\n'</span></span><span data-cpp-color="punctuation">;</span></div>
+<div class="line">    <span data-cpp-color="namespace">std</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="global">cout</span> <span data-cpp-color="punctuation">&lt;&lt;</span> <span class="stringliteral"><span data-cpp-color="string">"Type: "</span></span> <span data-cpp-color="punctuation">&lt;&lt;</span> <span data-cpp-color="local">topic</span><span data-cpp-color="punctuation">.</span><span data-cpp-color="method">type_name</span><span data-cpp-color="punctuation">()</span> <span data-cpp-color="punctuation">&lt;&lt;</span> <span class="charliteral"><span data-cpp-color="string">'\n'</span></span><span data-cpp-color="punctuation">;</span></div>
+<div class="line">    <span class="keywordflow"><span data-cpp-color="control">return</span></span> <span data-cpp-color="number">0</span><span data-cpp-color="punctuation">;</span></div>
+<div class="line"><span data-cpp-color="punctuation">}</span></div>
+<div class="line"><span class="keywordflow"><span data-cpp-color="control">catch</span></span> <span data-cpp-color="punctuation">(</span><span class="keyword"><span data-cpp-color="keyword">const</span></span> <span data-cpp-color="namespace">std</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="type">exception</span><span data-cpp-color="punctuation">&amp;</span> <span data-cpp-color="local">error</span><span data-cpp-color="punctuation">)</span></div>
+<div class="line"><span data-cpp-color="punctuation">{</span></div>
+<div class="line">    <span data-cpp-color="namespace">std</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="global">cerr</span> <span data-cpp-color="punctuation">&lt;&lt;</span> <span data-cpp-color="local">error</span><span data-cpp-color="punctuation">.</span><span data-cpp-color="method">what</span><span data-cpp-color="punctuation">()</span> <span data-cpp-color="punctuation">&lt;&lt;</span> <span class="charliteral"><span data-cpp-color="string">'\n'</span></span><span data-cpp-color="punctuation">;</span></div>
+<div class="line">    <span class="keywordflow"><span data-cpp-color="control">return</span></span> <span data-cpp-color="number">1</span><span data-cpp-color="punctuation">;</span></div>
+<div class="line"><span data-cpp-color="punctuation">}</span></div>
+<div class="ttc" id="aclassdds_1_1topic_1_1_topic_html"><div class="ttname"><a href="classdds_1_1topic_1_1_topic.html">dds::topic::Topic&lt;T&gt;</a></div><div class="ttdoc">domain에서 Topic 이름을 DDS 데이터 타입과 연결합니다.</div><div class="ttdef"><b>정의</b> TTopic.hpp:54</div></div>
+<div class="ttc" id="agroup__dds__domain_html_gab1bd86ffa9ac0869166a446dd0120f3d"><div class="ttname"><a href="group__dds__domain.html#gab1bd86ffa9ac0869166a446dd0120f3d">dds::domain::DomainParticipant</a></div><div class="ttdeci">::dds::domain::detail::DomainParticipant DomainParticipant</div><div class="ttdoc">DDS domain에 가입하고 관리하는 데 사용되는 DomainParticipant handle</div><div class="ttdef"><b>정의</b> DomainParticipant.hpp:30</div></div>
+</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="idl_field_mapping"></a>
+생성된 필드 타입 확인</h1>
+<div class="dds-table-scroll"><table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">IDL 필드  </th><th class="markdownTableHeadNone">생성된 C++와 데이터 소유권  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">long value</span>  </td><td class="markdownTableBodyNone">32비트 정수 필드이며 값을 대입합니다.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><span class="tt">long bounds[2]</span>  </td><td class="markdownTableBodyNone">구조체에 포함된 배열이며 원소를 복사합니다.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">string label</span>  </td><td class="markdownTableBodyNone">문자 포인터입니다. Loan 반환 전에 문자열을 복사합니다.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><span class="tt">sequence&lt;long&gt; values</span>  </td><td class="markdownTableBodyNone">DDS long 시퀀스 포인터입니다. Loan이 유효한 동안 원소를 복사합니다.  </td></tr>
+</table></div>
+<p>배열, 문자열, 시퀀스 예제는 <a class="el" href="group__dds__tutorial__reader.html#dds_tutorial_reader_copy_generated_fields" title="loan 반환 후에도 생성 타입의 필드 사용">loan 반환 후에도 생성 타입의 필드 사용</a> 에 있습니다.</p>
+<h1 class="doxsection"><a class="anchor" id="dds_tutorial_idl_example_cmake"></a>
+CMake 빌드 설정</h1>
+<p>프로젝트 디렉터리에 <span class="tt">CMakeLists.txt</span>를 만드세요. CMake는 빌드 디렉터리에서 GurumIDL을 실행하고 <span class="tt">MessageTypeSupport.cpp</span>와 <span class="tt">main.cpp</span>를 컴파일한 뒤 GurumDDS 라이브러리를 링크합니다.</p>
+<div class="fragment"><div class="line">cmake_minimum_required(VERSION 3.18)</div>
+<div class="line">project(IdlTutorial LANGUAGES CXX)</div>
+<div class="line"> </div>
+<div class="line">set(CMAKE_CXX_STANDARD 11)</div>
+<div class="line">set(CMAKE_CXX_STANDARD_REQUIRED ON)</div>
+<div class="line"> </div>
+<div class="line">set(GURUMDDS_ROOT <span class="stringliteral">""</span> CACHE PATH <span class="stringliteral">"GurumDDS SDK installation"</span>)</div>
+<div class="line">set(GURUMDDS_CXX_ROOT <span class="stringliteral">"${GURUMDDS_ROOT}"</span> CACHE PATH <span class="stringliteral">"GurumDDS C++ binding installation"</span>)</div>
+<div class="line"> </div>
+<div class="line">find_program(GURUMIDL NAMES gurumidl HINTS <span class="stringliteral">"${GURUMDDS_ROOT}"</span> PATH_SUFFIXES tool bin REQUIRED)</div>
+<div class="line">find_path(GURUMDDS_INCLUDE_DIR gurumdds/<a class="code hl_namespace" href="namespacedds.html">dds</a>.h HINTS <span class="stringliteral">"${GURUMDDS_ROOT}"</span> PATH_SUFFIXES include REQUIRED)</div>
+<div class="line">find_library(GURUMDDS_LIBRARY gurumdds HINTS <span class="stringliteral">"${GURUMDDS_ROOT}"</span> PATH_SUFFIXES lib REQUIRED)</div>
+<div class="line">find_path(GURUMDDS_CXX_INCLUDE_DIR gurumdds/<a class="code hl_namespace" href="namespacedds.html">dds</a>.hpp HINTS <span class="stringliteral">"${GURUMDDS_CXX_ROOT}"</span> PATH_SUFFIXES include REQUIRED)</div>
+<div class="line">find_library(GURUMDDS_CXX_LIBRARY NAMES gurumdds_psm_cxx gurumdds_psm_cxxd</div>
+<div class="line">    HINTS <span class="stringliteral">"${GURUMDDS_CXX_ROOT}"</span> PATH_SUFFIXES lib REQUIRED)</div>
+<div class="line"> </div>
+<div class="line">set(idl_file <span class="stringliteral">"${CMAKE_CURRENT_SOURCE_DIR}/Message.idl"</span>)</div>
+<div class="line">set(generated_dir <span class="stringliteral">"${CMAKE_CURRENT_BINARY_DIR}/generated"</span>)</div>
+<div class="line">set(type_source <span class="stringliteral">"${generated_dir}/MessageTypeSupport.cpp"</span>)</div>
+<div class="line">set(type_headers <span class="stringliteral">"${generated_dir}/Message.hpp"</span> <span class="stringliteral">"${generated_dir}/MessageTypeSupport.hpp"</span>)</div>
+<div class="line"> </div>
+<div class="line">add_custom_command(</div>
+<div class="line">    OUTPUT <span class="stringliteral">"${type_source}"</span> ${type_headers}</div>
+<div class="line">    COMMAND <span class="stringliteral">"${CMAKE_COMMAND}"</span> -E make_directory <span class="stringliteral">"${generated_dir}"</span></div>
+<div class="line">    COMMAND <span class="stringliteral">"${CMAKE_COMMAND}"</span> -E rm -f <span class="stringliteral">"${type_source}"</span> ${type_headers}</div>
+<div class="line">    COMMAND <span class="stringliteral">"${GURUMIDL}"</span> cpp <span class="stringliteral">"${idl_file}"</span> <span class="stringliteral">"${generated_dir}"</span></div>
+<div class="line">    DEPENDS <span class="stringliteral">"${idl_file}"</span> <span class="stringliteral">"${GURUMIDL}"</span></div>
+<div class="line">    VERBATIM</div>
+<div class="line">)</div>
+<div class="line"> </div>
+<div class="line">add_executable(idl_app main.cpp <span class="stringliteral">"${type_source}"</span> ${type_headers})</div>
+<div class="line">target_include_directories(idl_app PRIVATE</div>
+<div class="line">    <span class="stringliteral">"${generated_dir}"</span> <span class="stringliteral">"${GURUMDDS_CXX_INCLUDE_DIR}"</span> <span class="stringliteral">"${GURUMDDS_INCLUDE_DIR}"</span></div>
+<div class="line">)</div>
+<div class="line">target_link_libraries(idl_app PRIVATE <span class="stringliteral">"${GURUMDDS_CXX_LIBRARY}"</span> <span class="stringliteral">"${GURUMDDS_LIBRARY}"</span>)</div>
+<div class="line">target_compile_options(idl_app PRIVATE $&lt;$&lt;CXX_COMPILER_ID:MSVC&gt;:/utf-8&gt;)</div>
+<div class="ttc" id="anamespacedds_html"><div class="ttname"><a href="namespacedds.html">dds</a></div><div class="ttdoc">GurumDDS C++ API의 최상위 네임스페이스</div><div class="ttdef"><b>정의</b> array.hpp:7</div></div>
+</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="dds_tutorial_idl_example_build"></a>
+빌드 및 실행</h1>
+<p>CMake 3.18 이상과 C++11 컴파일러가 필요합니다. <span class="tt">GURUMDDS_ROOT</span>에는 SDK 설치 경로를, <span class="tt">GURUMDDS_CXX_ROOT</span>에는 C++ 바인딩 설치 경로를 지정하세요. 같은 곳에 설치했다면 두 변수에 같은 경로를 사용합니다.</p>
+<h2 class="doxsection"><a class="anchor" id="dds_tutorial_idl_example_build_linux"></a>
+Linux</h2>
+<p>두 Linux 패키지를 모두 <span class="tt">/usr</span>에 설치했다면 두 경로에 <span class="tt">/usr</span>를 지정합니다. 소스에서 Release로 빌드한 C++ 바인딩을 사용하려면 <span class="tt">cxx</span>에 저장소의 <span class="tt">output</span> 디렉터리를 지정합니다. 로더가 공유 라이브러리를 찾지 못하면 해당 디렉터리를 <span class="tt">LD_LIBRARY_PATH</span>에 추가합니다.</p>
+<div class="fragment"><div class="line">sdk=/usr</div>
+<div class="line">cxx=/usr</div>
+<div class="line">cmake -S . -B build -DCMAKE_BUILD_TYPE=Release "-DGURUMDDS_ROOT=$sdk" "-DGURUMDDS_CXX_ROOT=$cxx"</div>
+<div class="line">cmake --build build</div>
+<div class="line">./build/idl_app</div>
+</div><!-- fragment --><p>프로그램은 Topic 이름과 등록된 타입 이름을 출력합니다. 실행 전에 SDK에 필요한 라이선스를 설정합니다.</p>
+<h2 class="doxsection"><a class="anchor" id="dds_tutorial_idl_example_build_windows"></a>
+Windows에서 MSVC 사용</h2>
+<p>MSVC x64용 Release SDK와 C++ 바인딩을 사용합니다. 아래 명령은 Visual Studio 2026과 CMake 4.2 이상을 사용합니다. SDK와 바인딩 경로를 설치한 위치로 바꿉니다. CMake가 C++ 파일을 자동으로 생성합니다.</p>
+<div class="fragment"><div class="line">$sdk = "C:/Program Files/Gurumnet/DDS"</div>
+<div class="line">$cxx = "C:/path/to/gurumdds-cxx"</div>
+<div class="line">cmake -S . -B build-msvc -G "Visual Studio 18 2026" -A x64 "-DGURUMDDS_ROOT=$sdk" "-DGURUMDDS_CXX_ROOT=$cxx"</div>
+<div class="line">cmake --build build-msvc --config Release</div>
+<div class="line">$env:PATH = "$sdk/lib;$cxx/lib;$env:PATH"</div>
+<div class="line">./build-msvc/Release/idl_app.exe</div>
+</div><!-- fragment --><p>아래 절차는 두 DLL이 각 설치 경로의 <span class="tt">lib</span> 디렉터리에 있는 경우입니다. 다른 곳에 설치했다면 실제 디렉터리를 <span class="tt">PATH</span>에 추가합니다.</p>
+<dl class="section see"><dt>참고</dt><dd><a class="el" href="group__dds__tutorial__topic.html" title="Topic과 keyed 타입">Topic과 keyed type</a> </dd></dl>
+</div></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="page-nav-panel" id="page-nav">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
 </div><!-- container -->
 <!-- start footer part -->
-<div class="navpath" id="nav-path"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="footer">다음에 의해 생성됨 :  <a href="https://www.doxygen.org/index.html"><img alt="doxygen" class="footer" height="31" src="doxygen.svg" width="104"/></a> 1.18.0 </li>
-  </ul>
+<div class="navpath" id="nav-path"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">다음에 의해 생성됨 :  <a href="https://www.doxygen.org/index.html"><img alt="doxygen" class="footer" height="31" src="doxygen.svg" width="104"/></a> 1.18.0 </li>
+  </ul>
 </div>
 </body>
 </html>

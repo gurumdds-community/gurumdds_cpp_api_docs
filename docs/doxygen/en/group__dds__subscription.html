@@ -18,7 +18,7 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script src="search/searchdata.js" type="text/javascript"></script>
 <script src="search/search.js" type="text/javascript"></script>
-<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+<script src="../theme.js" type="text/javascript"></script><link href="doxygen.css" rel="stylesheet" type="text/css"/>
 <link href="ReferenceBranding.css" rel="stylesheet" type="text/css"/>
 <script defer="True" src="ReferenceUi.js"></script><link href="../en/group__dds__subscription.html" hreflang="en" rel="alternate"/><link href="../ko/group__dds__subscription.html" hreflang="ko" rel="alternate"/><link href="../language.css" rel="stylesheet"/><script defer="defer" src="../language.js"></script></head>
 <body>
@@ -31,7 +31,7 @@
    <div id="projectname">GurumDDS C++ API Reference<span id="projectnumber"> 1.3.2</span>
    </div>
   </td>
- <td class="doc-language-cell"><label class="doc-language"><select aria-label="Documentation language" data-current="0"><option lang="en" selected="selected" value="../en/group__dds__subscription.html">English</option><option lang="en" value="../ko/group__dds__subscription.html">Korean</option></select></label></td></tr>
+ <td class="doc-language-cell"><div class="doc-header-controls"><button aria-pressed="false" class="doc-theme" type="button">Dark mode</button><label class="doc-language"><select aria-label="Documentation language" data-current="0"><option lang="en" selected="selected" value="../en/group__dds__subscription.html">English</option><option lang="en" value="../ko/group__dds__subscription.html">Korean</option></select></label></div></td></tr>
  </tbody>
 </table>
 </div>
@@ -115,13 +115,13 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('group__dds__su
 </div><!--header-->
 <div class="contents">
 
-<p>Subscribers, readers, sample selection, and received data Use a reader to read or take samples and inspect their states and metadata.  
-<a href="#details">More...</a></p>
-<div class="textblock"><h1 class="doxsection"><a class="anchor" id="subscription_types"></a>
+
+<a id="details" name="details"></a><h2 class="groupheader" id="header-details">Detailed Description</h2><div class="textblock"><p>Subscribers, readers, sample selection, and received data Use a reader to read or take samples and inspect their states and metadata. </p>
+<h1 class="doxsection"><a class="anchor" id="subscription_types"></a>
 Subscription types</h1>
 <h2 class="doxsection"><a class="anchor" id="subscription_essentials"></a>
 Create a reader</h2>
-<table class="markdownTable">
+<div class="dds-table-scroll"><table class="markdownTable">
 <tr class="markdownTableHead">
 <th class="markdownTableHeadNone">Type  </th><th class="markdownTableHeadNone">Use  </th></tr>
 <tr class="markdownTableRowOdd">
@@ -130,10 +130,10 @@ Create a reader</h2>
 <td class="markdownTableBodyNone"><a class="el" href="classdds_1_1sub_1_1_data_reader.html" title="dds::sub::DataReader">DataReader&lt;T&gt;</a>  </td><td class="markdownTableBodyNone">Reads or takes samples from a typed topic.  </td></tr>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone"><a class="el" href="#gac759142c11b5f0cb2b2a8f6c41405966" title="dds::sub::qos::DataReaderQos">DataReaderQos</a>  </td><td class="markdownTableBodyNone">Holds policies for an individual reader.  </td></tr>
-</table>
+</table></div>
 <h2 class="doxsection"><a class="anchor" id="subscription_notifications"></a>
 Handle subscription events</h2>
-<table class="markdownTable">
+<div class="dds-table-scroll"><table class="markdownTable">
 <tr class="markdownTableHead">
 <th class="markdownTableHeadNone">Type  </th><th class="markdownTableHeadNone">Use  </th></tr>
 <tr class="markdownTableRowOdd">
@@ -141,11 +141,11 @@ Handle subscription events</h2>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone"><a class="el" href="classdds_1_1sub_1_1_subscriber_listener.html" title="dds::sub::SubscriberListener">SubscriberListener</a>  </td><td class="markdownTableBodyNone">Reports data availability at Subscriber scope.  </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">SubscriptionMatchedStatus  </td><td class="markdownTableBodyNone">Reports current and cumulative publication matches.  </td></tr>
-</table>
+<td class="markdownTableBodyNone"><a class="el" href="namespacedds_1_1core_1_1status.html#abb43166d32256fc63bd26ce34140090d" title="dds::core::status::SubscriptionMatchedStatus">SubscriptionMatchedStatus</a>  </td><td class="markdownTableBodyNone">Reports current and cumulative publication matches.  </td></tr>
+</table></div>
 <h2 class="doxsection"><a class="anchor" id="subscription_selection"></a>
 Select samples</h2>
-<table class="markdownTable">
+<div class="dds-table-scroll"><table class="markdownTable">
 <tr class="markdownTableHead">
 <th class="markdownTableHeadNone">Type  </th><th class="markdownTableHeadNone">Use  </th></tr>
 <tr class="markdownTableRowOdd">
@@ -154,14 +154,140 @@ Select samples</h2>
 <td class="markdownTableBodyNone"><a class="el" href="classdds_1_1sub_1_1status_1_1_data_state.html" title="dds::sub::status::DataState">DataState</a>  </td><td class="markdownTableBodyNone">Combines sample, view, and instance state filters.  </td></tr>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone"><a class="el" href="classdds_1_1sub_1_1_loaned_samples.html" title="dds::sub::LoanedSamples">LoanedSamples&lt;T&gt;</a>  </td><td class="markdownTableBodyNone">Holds samples loaned by a reader.  </td></tr>
-</table>
+</table></div>
 <h1 class="doxsection"><a class="anchor" id="subscription_entity_relationships"></a>
 Subscription entity relationships</h1>
 <div class="image">
 <object data="dds-diagram-subscription-types-en.svg" style="pointer-events: none;" type="image/svg+xml"></object>
 <div class="caption">
 Subscriber and DataReader class relationships</div></div>
- </div><table class="memberdecls">
+<h1 class="doxsection"><a class="anchor" id="receiving_guide"></a>
+Receive and select samples</h1>
+<p>Start with <a class="el" href="group__dds__domain.html#getting_started" title="Send and receive your first sample">Send and receive your first sample</a> to create a matched writer and reader. This guide uses a typed <a class="el" href="classdds_1_1sub_1_1_data_reader.html" title="dds::sub::DataReader">dds::sub::DataReader&lt;T&gt;</a> and shows when to read, take, or select records from its history.</p>
+<h2 class="doxsection"><a class="anchor" id="receiving_choose"></a>
+Choose how to access the reader history</h2>
+<div class="dds-table-scroll"><table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Goal  </th><th class="markdownTableHeadNone">Call  </th><th class="markdownTableHeadNone">What happens to the matching records  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Inspect records and keep them available  </td><td class="markdownTableBodyNone"><span class="tt">reader.read()</span>  </td><td class="markdownTableBodyNone">The reader retains the records and marks them as read. An unread-only filter skips them on later calls.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Consume a batch  </td><td class="markdownTableBodyNone"><span class="tt">reader.take()</span>  </td><td class="markdownTableBodyNone">The reader removes the records it returns. Later reads and takes cannot retrieve those same records.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Limit a batch by state, instance, or count  </td><td class="markdownTableBodyNone"><span class="tt">reader.select()</span> followed by <span class="tt">read()</span> or <span class="tt">take()</span>  </td><td class="markdownTableBodyNone">The selector applies the requested filters. The final operation determines whether records are retained or removed.  </td></tr>
+</table></div>
+<p>The direct calls use the reader's <span class="tt">default_filter_state()</span>. A new selector starts with its own state filter that matches all sample, view, and instance states. Set the selector's state explicitly when the application needs a narrower selection. See <a class="el" href="classdds_1_1sub_1_1status_1_1_data_state.html" title="dds::sub::status::DataState">dds::sub::status::DataState</a> for the three state masks.</p>
+<h2 class="doxsection"><a class="anchor" id="receiving_empty"></a>
+Diagnose an empty result</h2>
+<p>An empty <span class="tt">read()</span> or <span class="tt">take()</span> result can mean no matching records, an allocation failure, or an error from the C library. Use <span class="tt">subscription_matched_status().current_count()</span> to confirm a writer is matched. Then send a fresh sample and check the content filter, instance handle, and sample-state mask. For example, an unread-only filter skips a sample after <span class="tt">read()</span> marks it as read. See <a class="el" href="group__dds__qos.html#matching_guide" title="Diagnose a writer and reader that do not exchange data">Diagnose a writer and reader that do not exchange data</a> when the endpoints do not match.</p>
+<p>With a match and a fresh write, compare the default-state read with an explicit selector that accepts all states. If both are empty, check loss and rejection before assuming the filter is the cause.</p>
+<h2 class="doxsection"><a class="anchor" id="receiving_loss"></a>
+Diagnose lost and rejected samples</h2>
+<p>Read <span class="tt">sample_lost_status()</span> to check for losses before delivery. Read <span class="tt">sample_rejected_status()</span> to inspect samples the reader rejected and the latest rejection reason. Check <span class="tt">last_reason()</span> for a limit on instances, samples, or samples per instance, then compare it with the reader's <span class="tt">History</span> and <span class="tt">ResourceLimits</span>. <span class="tt">last_instance_handle()</span> identifies the instance in the last rejection. Keep one status snapshot if several parts of the application need its change count.</p>
+<h2 class="doxsection"><a class="anchor" id="receiving_instance_timeline"></a>
+Follow one keyed instance</h2>
+<p>Send a sample for a new key. Look at its instance handle and view state. A read marks the returned record as read. A take removes it. Then dispose the instance as shown in <a class="el" href="group__dds__tutorial__reader.html#dds_tutorial_reader_dispose" title="Detect a disposed instance">Detect a disposed instance</a> and check <span class="tt">SampleInfo::valid()</span> before accessing its payload.</p>
+<p>Read <span class="tt">rank()</span> for the returned batch. See <a class="el" href="group__dds__tutorial__reader.html#dds_tutorial_reader_ranks" title="Inspect ranks across instance generations">Inspect ranks across instance generations</a> for how the ranks change across two generations.</p>
+<h2 class="doxsection"><a class="anchor" id="receiving_loan"></a>
+Process a loaned batch</h2>
+<div class="image">
+<object data="dds-diagram-loan-lifetime-en.svg" style="pointer-events: none;" type="image/svg+xml"></object>
+<div class="caption">
+Reader history and sample loan lifetime</div></div>
+<p>Use the <span class="tt">Hello::Msg</span> DataReader from the keyed tutorial. Its topic type contains <span class="tt">userId</span> and <span class="tt">message</span> fields.</p>
+<div class="fragment dds-cpp-code"><div class="line"><span class="keywordtype"><span data-cpp-color="keyword">void</span></span> <span data-cpp-color="function">print_next_batch</span><span data-cpp-color="punctuation">(</span><a class="code hl_class" href="classdds_1_1sub_1_1_data_reader.html"><span data-cpp-color="namespace">dds</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="namespace">sub</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="class-template">DataReader</span><span data-cpp-color="punctuation">&lt;</span><span data-cpp-color="namespace">Hello</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="type">Msg</span><span data-cpp-color="punctuation">&gt;</span></a><span data-cpp-color="punctuation">&amp;</span> <span data-cpp-color="parameter">reader</span><span data-cpp-color="punctuation">)</span></div>
+<div class="line"><span data-cpp-color="punctuation">{</span></div>
+<div class="line">    <span class="keyword"><span data-cpp-color="keyword">const</span></span> <span class="keyword"><span data-cpp-color="keyword">auto</span></span> <span data-cpp-color="local">samples</span> <span data-cpp-color="punctuation">=</span> <span data-cpp-color="parameter">reader</span><span data-cpp-color="punctuation">.</span><a class="code hl_function" href="classdds_1_1sub_1_1_data_reader.html#a01ee9d4461154984f4f87ba8af5d438c"><span data-cpp-color="method">take</span></a><span data-cpp-color="punctuation">();</span></div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow"><span data-cpp-color="control">for</span></span> <span data-cpp-color="punctuation">(</span><span class="keyword"><span data-cpp-color="keyword">const</span></span> <span class="keyword"><span data-cpp-color="keyword">auto</span></span><span data-cpp-color="punctuation">&amp;</span> <span data-cpp-color="local">sample</span> <span data-cpp-color="punctuation">:</span> <span data-cpp-color="local">samples</span><span data-cpp-color="punctuation">)</span></div>
+<div class="line">    <span data-cpp-color="punctuation">{</span></div>
+<div class="line">        <span class="keywordflow"><span data-cpp-color="control">if</span></span> <span data-cpp-color="punctuation">(!</span><span data-cpp-color="local">sample</span><span data-cpp-color="punctuation">.</span><span data-cpp-color="method">info</span><span data-cpp-color="punctuation">().</span><span data-cpp-color="method">valid</span><span data-cpp-color="punctuation">())</span></div>
+<div class="line">            <span class="keywordflow"><span data-cpp-color="control">continue</span></span><span data-cpp-color="punctuation">;</span></div>
+<div class="line"> </div>
+<div class="line">        <span data-cpp-color="namespace">std</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="global">cout</span> <span data-cpp-color="punctuation">&lt;&lt;</span> <span data-cpp-color="local">sample</span><span data-cpp-color="punctuation">.</span><span data-cpp-color="method">data</span><span data-cpp-color="punctuation">().</span><span data-cpp-color="field">userId</span> <span data-cpp-color="punctuation">&lt;&lt;</span> <span class="charliteral"><span data-cpp-color="string">' '</span></span> <span data-cpp-color="punctuation">&lt;&lt;</span> <span data-cpp-color="local">sample</span><span data-cpp-color="punctuation">.</span><span data-cpp-color="method">data</span><span data-cpp-color="punctuation">().</span><span data-cpp-color="field">message</span> <span data-cpp-color="punctuation">&lt;&lt;</span> <span class="charliteral"><span data-cpp-color="string">'\n'</span></span><span data-cpp-color="punctuation">;</span></div>
+<div class="line">    <span data-cpp-color="punctuation">}</span></div>
+<div class="line"><span data-cpp-color="punctuation">}</span></div>
+</div><!-- fragment --><p>Check <span class="tt">SampleInfo::valid()</span> before reading the payload. An instance state change can arrive without a payload.</p>
+<p>Keep the <a class="el" href="classdds_1_1sub_1_1_loaned_samples.html" title="dds::sub::LoanedSamples">dds::sub::LoanedSamples</a> collection alive while using a sample reference, iterator, or a pointer stored in a payload. Copy the fields your application needs into owned storage before the collection is destroyed. For example, construct a <span class="tt">std::string</span> from a valid <span class="tt">Hello::Msg::message</span> while the loan is alive if the application needs that text later.</p>
+<h2 class="doxsection"><a class="anchor" id="receiving_select"></a>
+Select a batch without changing the default filter</h2>
+<div class="image">
+<object data="dds-diagram-reader-selection-en.svg" style="pointer-events: none;" type="image/svg+xml"></object>
+<div class="caption">
+DataReader selection and returned samples</div></div>
+<p>Use a reader on a keyed topic with a <span class="tt">message</span> field, such as <span class="tt">Hello::Msg</span> in the keyed example. Pass a handle obtained from that reader to take up to eight unread records for one known instance. Checking for a nil handle avoids selecting all instances when a lookup did not find the requested key.</p>
+<div class="fragment dds-cpp-code"><div class="line"><span class="keywordtype"><span data-cpp-color="keyword">void</span></span> <span data-cpp-color="function">print_unread_instance</span><span data-cpp-color="punctuation">(</span><a class="code hl_class" href="classdds_1_1sub_1_1_data_reader.html"><span data-cpp-color="namespace">dds</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="namespace">sub</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="class-template">DataReader</span><span data-cpp-color="punctuation">&lt;</span><span data-cpp-color="namespace">Hello</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="type">Msg</span><span data-cpp-color="punctuation">&gt;</span></a><span data-cpp-color="punctuation">&amp;</span> <span data-cpp-color="parameter">reader</span><span data-cpp-color="punctuation">,</span> <span class="keyword"><span data-cpp-color="keyword">const</span></span> <a class="code hl_typedef" href="group__dds__core.html#ga8ee18acd2002fb15f2650f5c7cb055d0"><span data-cpp-color="namespace">dds</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="namespace">core</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="type">InstanceHandle</span></a><span data-cpp-color="punctuation">&amp;</span> <span data-cpp-color="parameter">handle</span><span data-cpp-color="punctuation">)</span></div>
+<div class="line"><span data-cpp-color="punctuation">{</span></div>
+<div class="line">    <span class="keywordflow"><span data-cpp-color="control">if</span></span> <span data-cpp-color="punctuation">(</span><span data-cpp-color="parameter">handle</span><span data-cpp-color="punctuation">.</span><span data-cpp-color="method">is_nil</span><span data-cpp-color="punctuation">())</span></div>
+<div class="line">        <span class="keywordflow"><span data-cpp-color="control">return</span></span><span data-cpp-color="punctuation">;</span></div>
+<div class="line"> </div>
+
+<div class="line">    <span class="keyword"><span data-cpp-color="keyword">const</span></span> <a class="code hl_class" href="classdds_1_1sub_1_1status_1_1_data_state.html"><span data-cpp-color="namespace">dds</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="namespace">sub</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="namespace">status</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="type">DataState</span></a> <span data-cpp-color="local">unread</span><span data-cpp-color="punctuation">(</span><a class="code hl_function" href="classdds_1_1sub_1_1status_1_1_sample_state.html#ad84dc3347fda6f76a38278e953f1e52e"><span data-cpp-color="namespace">dds</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="namespace">sub</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="namespace">status</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="type">SampleState</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="method">not_read</span></a><span data-cpp-color="punctuation">());</span></div>
+<div class="line">    <span class="keyword"><span data-cpp-color="keyword">const</span></span> <span class="keyword"><span data-cpp-color="keyword">auto</span></span> <span data-cpp-color="local">samples</span> <span data-cpp-color="punctuation">=</span> <span data-cpp-color="parameter">reader</span><span data-cpp-color="punctuation">.</span><a class="code hl_function" href="classdds_1_1sub_1_1_data_reader.html#a4c9879cf567d4d627f02cd90247794ac"><span data-cpp-color="method">select</span></a><span data-cpp-color="punctuation">().</span><a class="code hl_function" href="classdds_1_1sub_1_1_data_reader_1_1_selector.html#a4385e63265161ff676026a1aa36a7b43"><span data-cpp-color="method">instance</span></a><span data-cpp-color="punctuation">(</span><span data-cpp-color="parameter">handle</span><span data-cpp-color="punctuation">).</span><a class="code hl_function" href="classdds_1_1sub_1_1_data_reader_1_1_selector.html#af60e340287752e5facc7ba3e6a733bb1"><span data-cpp-color="method">state</span></a><span data-cpp-color="punctuation">(</span><span data-cpp-color="local">unread</span><span data-cpp-color="punctuation">).</span><a class="code hl_function" href="classdds_1_1sub_1_1_data_reader_1_1_selector.html#ae7e230bc8a985d2f0829115af34ef73e"><span data-cpp-color="method">max_samples</span></a><span data-cpp-color="punctuation">(</span><span data-cpp-color="number">8</span><span data-cpp-color="punctuation">).</span><a class="code hl_function" href="classdds_1_1sub_1_1_data_reader_1_1_selector.html#a8e3726a2c14c91ae076e04cbfdc70d4e"><span data-cpp-color="method">take</span></a><span data-cpp-color="punctuation">();</span></div>
+
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow"><span data-cpp-color="control">for</span></span> <span data-cpp-color="punctuation">(</span><span class="keyword"><span data-cpp-color="keyword">const</span></span> <span class="keyword"><span data-cpp-color="keyword">auto</span></span><span data-cpp-color="punctuation">&amp;</span> <span data-cpp-color="local">sample</span> <span data-cpp-color="punctuation">:</span> <span data-cpp-color="local">samples</span><span data-cpp-color="punctuation">)</span></div>
+<div class="line">    <span data-cpp-color="punctuation">{</span></div>
+<div class="line">        <span class="keywordflow"><span data-cpp-color="control">if</span></span> <span data-cpp-color="punctuation">(!</span><span data-cpp-color="local">sample</span><span data-cpp-color="punctuation">.</span><span data-cpp-color="method">info</span><span data-cpp-color="punctuation">().</span><span data-cpp-color="method">valid</span><span data-cpp-color="punctuation">())</span></div>
+<div class="line">            <span class="keywordflow"><span data-cpp-color="control">continue</span></span><span data-cpp-color="punctuation">;</span></div>
+<div class="line"> </div>
+<div class="line">        <span data-cpp-color="namespace">std</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="global">cout</span> <span data-cpp-color="punctuation">&lt;&lt;</span> <span data-cpp-color="local">sample</span><span data-cpp-color="punctuation">.</span><span data-cpp-color="method">data</span><span data-cpp-color="punctuation">().</span><span data-cpp-color="field">message</span> <span data-cpp-color="punctuation">&lt;&lt;</span> <span class="charliteral"><span data-cpp-color="string">'\n'</span></span><span data-cpp-color="punctuation">;</span></div>
+<div class="line">    <span data-cpp-color="punctuation">}</span></div>
+<div class="line"><span data-cpp-color="punctuation">}</span></div>
+</div><!-- fragment --><p>Use <span class="tt">lookup_instance()</span> for a known key. <span class="tt">sample.info().instance_handle()</span> identifies the instance of an incoming record.</p>
+<p>To filter on values in the payload, create the reader on a content-filtered topic. The <a class="el" href="dds_example_legacy_filtered.html" title="Content-filtered Subscriber">Content-filtered subscriber</a> shows a reader that accepts samples with <span class="tt">userId &gt; 5</span>.</p>
+<h2 class="doxsection"><a class="anchor" id="receiving_copy"></a>
+Choose a destination for copied records</h2>
+<p>The iterator overloads write records and metadata into application-provided storage. A call with <span class="tt">buffer.begin()</span> and a positive count uses existing writable slots. Ensure the buffer has at least that many slots before calling. A call with <span class="tt">std::back_inserter(buffer)</span> appends to a growable container and may allocate. Both forms return the number of records written.</p>
+<p>Use a topic type whose copy owns its payload fields. These functions use <span class="tt">IdlExample::Message</span> from <a class="el" href="group__dds__tutorial__idl__example.html" title="Generate and use C++ code from IDL">Generate and use C++ code from IDL</a>, which contains one integer. Both functions use the reader's default state filter.</p>
+<div class="fragment dds-cpp-code"><div class="line"><span class="preprocessor"><span data-cpp-color="directive">#include</span> <span data-cpp-color="header">&lt;gurumdds/dds.hpp&gt;</span></span></div>
+<div class="line"><span class="preprocessor"><span data-cpp-color="directive">#include</span> <span data-cpp-color="header">&lt;MessageTypeSupport.hpp&gt;</span></span></div>
+<div class="line"><span class="preprocessor"><span data-cpp-color="directive">#include</span> <span data-cpp-color="header">&lt;array&gt;</span></span></div>
+<div class="line"><span class="preprocessor"><span data-cpp-color="directive">#include</span> <span data-cpp-color="header">&lt;cstdint&gt;</span></span></div>
+<div class="line"><span class="preprocessor"><span data-cpp-color="directive">#include</span> <span data-cpp-color="header">&lt;iterator&gt;</span></span></div>
+<div class="line"><span class="preprocessor"><span data-cpp-color="directive">#include</span> <span data-cpp-color="header">&lt;vector&gt;</span></span></div>
+<div class="line"> </div>
+<div class="line"><span class="keyword"><span data-cpp-color="keyword">using</span> </span><span data-cpp-color="type">MessageSample</span> <span data-cpp-color="punctuation">=</span> <a class="code hl_class" href="classdds_1_1sub_1_1_sample.html"><span data-cpp-color="namespace">dds</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="namespace">sub</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="class-template">Sample</span><span data-cpp-color="punctuation">&lt;</span><span data-cpp-color="namespace">IdlExample</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="type">Message</span><span data-cpp-color="punctuation">,</span> <span data-cpp-color="namespace">dds</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="namespace">sub</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="type">SampleInfo</span><span data-cpp-color="punctuation">&gt;</span></a><span data-cpp-color="punctuation">;</span></div>
+<div class="line"> </div>
+<div class="line"><span data-cpp-color="namespace">std</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="keyword">uint32_t</span> <span data-cpp-color="function">read_into_buffer</span><span data-cpp-color="punctuation">(</span><a class="code hl_class" href="classdds_1_1sub_1_1_data_reader.html"><span data-cpp-color="namespace">dds</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="namespace">sub</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="class-template">DataReader</span><span data-cpp-color="punctuation">&lt;</span><span data-cpp-color="namespace">IdlExample</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="type">Message</span><span data-cpp-color="punctuation">&gt;</span></a><span data-cpp-color="punctuation">&amp;</span> <span data-cpp-color="parameter">reader</span><span data-cpp-color="punctuation">,</span> <span data-cpp-color="namespace">std</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="class-template">array</span><span data-cpp-color="punctuation">&lt;</span><span data-cpp-color="type">MessageSample</span><span data-cpp-color="punctuation">,</span> <span data-cpp-color="number">8</span><span data-cpp-color="punctuation">&gt;&amp;</span> <span data-cpp-color="parameter">buffer</span><span data-cpp-color="punctuation">)</span></div>
+<div class="line"><span data-cpp-color="punctuation">{</span></div>
+<div class="line">    <span class="keywordflow"><span data-cpp-color="control">return</span></span> <span data-cpp-color="parameter">reader</span><span data-cpp-color="punctuation">.</span><a class="code hl_function" href="classdds_1_1sub_1_1_data_reader.html#a9f2bc3c9b1817f4601a8ffff0698cca2"><span data-cpp-color="method">read</span></a><span data-cpp-color="punctuation">(</span><span data-cpp-color="parameter">buffer</span><span data-cpp-color="punctuation">.</span><span data-cpp-color="method">begin</span><span data-cpp-color="punctuation">(),</span> <span class="keyword"><span data-cpp-color="keyword">static_cast</span><span data-cpp-color="punctuation">&lt;</span></span><span data-cpp-color="namespace">std</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="keyword">uint32_t</span><span class="keyword"><span data-cpp-color="punctuation">&gt;</span></span><span data-cpp-color="punctuation">(</span><span data-cpp-color="parameter">buffer</span><span data-cpp-color="punctuation">.</span><span data-cpp-color="method">size</span><span data-cpp-color="punctuation">()));</span></div>
+<div class="line"><span data-cpp-color="punctuation">}</span></div>
+<div class="line"> </div>
+<div class="line"><span data-cpp-color="namespace">std</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="keyword">uint32_t</span> <span data-cpp-color="function">append_taken_records</span><span data-cpp-color="punctuation">(</span><a class="code hl_class" href="classdds_1_1sub_1_1_data_reader.html"><span data-cpp-color="namespace">dds</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="namespace">sub</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="class-template">DataReader</span><span data-cpp-color="punctuation">&lt;</span><span data-cpp-color="namespace">IdlExample</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="type">Message</span><span data-cpp-color="punctuation">&gt;</span></a><span data-cpp-color="punctuation">&amp;</span> <span data-cpp-color="parameter">reader</span><span data-cpp-color="punctuation">,</span> <span data-cpp-color="namespace">std</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="class-template">vector</span><span data-cpp-color="punctuation">&lt;</span><span data-cpp-color="type">MessageSample</span><span data-cpp-color="punctuation">&gt;&amp;</span> <span data-cpp-color="parameter">buffer</span><span data-cpp-color="punctuation">)</span></div>
+<div class="line"><span data-cpp-color="punctuation">{</span></div>
+<div class="line">    <span class="keywordflow"><span data-cpp-color="control">return</span></span> <span data-cpp-color="parameter">reader</span><span data-cpp-color="punctuation">.</span><a class="code hl_function" href="classdds_1_1sub_1_1_data_reader.html#a01ee9d4461154984f4f87ba8af5d438c"><span data-cpp-color="method">take</span></a><span data-cpp-color="punctuation">(</span><span data-cpp-color="namespace">std</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="function">back_inserter</span><span data-cpp-color="punctuation">(</span><span data-cpp-color="parameter">buffer</span><span data-cpp-color="punctuation">));</span></div>
+<div class="line"><span data-cpp-color="punctuation">}</span></div>
+</div><!-- fragment --><p>If the topic type contains borrowed pointers, use the loan and copy the needed values into owned fields while it is alive. Copying the record with an iterator uses the topic type's C++ copy semantics.</p>
+<p>Set <span class="tt">max_samples(n)</span> on the selector itself when copying a bounded selection. The selector's forward-iterator overload uses this setting. For fixed-capacity storage, choose a positive limit no larger than the number of writable slots.</p>
+<dl class="section warning"><dt>Warning</dt><dd>Iterator-based <span class="tt">take()</span> removes records from history before copying. If assignment or insertion throws, the destination may contain only part of the batch, and the removed records stay out of history.</dd></dl>
+<h2 class="doxsection"><a class="anchor" id="receiving_keyed"></a>
+Follow an instance through disposal and unregister</h2>
+<p>Build the <span class="tt">example_cpp_helloworld_keyed_subscriber</span> and <span class="tt">example_cpp_helloworld_keyed_publisher</span> targets with the example build from <a class="el" href="group__dds__domain.html#getting_started" title="Send and receive your first sample">Send and receive your first sample</a>. Start the subscriber first. Both programs use domain <span class="tt">79</span>, topic <span class="tt">HelloWorld</span>, and a type keyed by <span class="tt">userId</span>.</p>
+<p>The <a class="el" href="dds_example_legacy_keyed.html#dds_example_legacy_keyed_publisher" title="Keyed Publisher">keyed publisher</a> writes three keys. For <span class="tt">userId</span> 1, it registers and writes <span class="tt">hello</span>, explicitly disposes the instance, writes <span class="tt">world</span> for the same key, and unregisters that key. The <a class="el" href="dds_example_legacy_keyed.html#dds_example_legacy_keyed_subscriber" title="Keyed Subscriber">keyed subscriber</a> reads batches of up to eight unread records and prints the key and instance state.</p>
+<div class="dds-table-scroll"><table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Publisher action for key 1  </th><th class="markdownTableHeadNone">What to look for on the subscriber  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Write <span class="tt">hello</span>  </td><td class="markdownTableBodyNone"><span class="tt">ALIVE</span> with the value <span class="tt">hello</span>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Dispose the instance  </td><td class="markdownTableBodyNone"><span class="tt">NOT_ALIVE_DISPOSED</span>  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Write <span class="tt">world</span>  </td><td class="markdownTableBodyNone"><span class="tt">ALIVE</span> with the value <span class="tt">world</span>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Unregister the last writer for the key  </td><td class="markdownTableBodyNone"><span class="tt">NOT_ALIVE_NO_WRITERS</span>  </td></tr>
+</table></div>
+<div class="image">
+<object data="dds-diagram-keyed-instance-en.svg" style="pointer-events: none;" type="image/svg+xml"></object>
+<div class="caption">
+Instance state changes for one key</div></div>
+<div class="image">
+<object data="dds-diagram-reader-purge-delay-en.svg" style="pointer-events: none;" type="image/svg+xml"></object>
+<div class="caption">
+Instance state and Reader purge delays</div></div>
+<p>This sequence assumes the example is the only writer for that key and the subscriber reads while the publisher is running. The publisher disables automatic disposal on unregister so the final unregister can be observed as loss of the last writer. With automatic disposal enabled, unregistering also requests disposal.</p>
+<p>The subscriber gets the key for a state notification through <span class="tt">key_value()</span> using the record's <span class="tt">instance_handle()</span>. It reads payload fields only when <span class="tt">valid()</span> returns true. After observing <span class="tt">NOT_ALIVE_NO_WRITERS</span>, it uses a selector to take records still retained for the saved handle. Check <a class="el" href="group__dds__qos.html#matching_guide" title="Diagnose a writer and reader that do not exchange data">Diagnose a writer and reader that do not exchange data</a> if the subscriber receives no records. </p>
+</div><div class="dds-table-scroll"><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-nested-classes"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:dds_3A_3Asub_3A_3AAnyDataReader" id="r_dds_3A_3Asub_3A_3AAnyDataReader"><td class="memItemLeft">class  </td><td class="memItemRight"><a class="el" href="classdds_1_1sub_1_1_any_data_reader.html">dds::sub::AnyDataReader</a></td></tr>
@@ -196,7 +322,7 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft"> </td><td class="mdescRight">Describes a received sample and its instance state.  <a href="classdds_1_1sub_1_1_t_sample_info.html#details">More...</a><br/></td></tr>
 <tr class="memitem:dds_3A_3Asub_3A_3ATSubscriber_3C_20DELEGATE_20_3E" id="r_dds_3A_3Asub_3A_3ATSubscriber_3C_20DELEGATE_20_3E"><td class="memItemLeft">class  </td><td class="memItemRight"><a class="el" href="classdds_1_1sub_1_1_t_subscriber.html">dds::sub::Subscriber</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft"> </td><td class="mdescRight">Owns readers and configures subscription defaults.  <a href="classdds_1_1sub_1_1_t_subscriber.html#details">More...</a><br/></td></tr>
-</table><table class="memberdecls">
+</table></div><div class="dds-table-scroll"><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-typedef-members"><a id="typedef-members" name="typedef-members"></a>
 Typedefs</h2></td></tr>
 <tr class="memitem:ga1a326dc6ca679ff7cbe0ad659b4aebff" id="r_ga1a326dc6ca679ff7cbe0ad659b4aebff"><td class="memItemLeft">typedef dds::sub::detail::CoherentAccess </td><td class="memItemRight"><a class="el" href="#ga1a326dc6ca679ff7cbe0ad659b4aebff">dds::sub::CoherentAccess</a></td></tr>
@@ -215,152 +341,9 @@ Typedefs</h2></td></tr>
 <tr class="memdesc:ga8ce43296febeef280d08d5b58541ee65"><td class="mdescLeft"> </td><td class="mdescRight">Metadata indicating payload validity, instance state, and sample origin.  <br/></td></tr>
 <tr class="memitem:ga9a6d78b2a23f864211da5bd2edf28750" id="r_ga9a6d78b2a23f864211da5bd2edf28750"><td class="memItemLeft">typedef dds::sub::detail::Subscriber </td><td class="memItemRight"><a class="el" href="#ga9a6d78b2a23f864211da5bd2edf28750">dds::sub::Subscriber</a></td></tr>
 <tr class="memdesc:ga9a6d78b2a23f864211da5bd2edf28750"><td class="mdescLeft"> </td><td class="mdescRight"><a class="el" href="#ga9a6d78b2a23f864211da5bd2edf28750" title="Subscriber handle used to own readers and set their defaults.">Subscriber</a> handle used to own readers and set their defaults.  <br/></td></tr>
-</table>
-<a id="details" name="details"></a><h2 class="groupheader" id="header-details">Detailed Description</h2>
-<div class="textblock"><p>Subscribers, readers, sample selection, and received data Use a reader to read or take samples and inspect their states and metadata. </p>
-<h1 class="doxsection"><a class="anchor" id="receiving_guide"></a>
-Receive and select samples</h1>
-<p>Start with <a class="el" href="group__dds__domain.html#getting_started" title="Send and receive your first sample">Send and receive your first sample</a> to create a matched writer and reader. This guide uses a typed <a class="el" href="classdds_1_1sub_1_1_data_reader.html" title="dds::sub::DataReader">dds::sub::DataReader&lt;T&gt;</a> and shows when to read, take, or select records from its history.</p>
-<h2 class="doxsection"><a class="anchor" id="receiving_choose"></a>
-Choose how to access the reader history</h2>
-<table class="markdownTable">
-<tr class="markdownTableHead">
-<th class="markdownTableHeadNone">Goal  </th><th class="markdownTableHeadNone">Call  </th><th class="markdownTableHeadNone">What happens to the matching records  </th></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">Inspect records and keep them available  </td><td class="markdownTableBodyNone"><span class="tt">reader.read()</span>  </td><td class="markdownTableBodyNone">The reader retains the records and marks them as read. An unread-only filter skips them on later calls.  </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">Consume a batch  </td><td class="markdownTableBodyNone"><span class="tt">reader.take()</span>  </td><td class="markdownTableBodyNone">The reader removes the records it returns. Later reads and takes cannot retrieve those same records.  </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">Limit a batch by state, instance, or count  </td><td class="markdownTableBodyNone"><span class="tt">reader.select()</span> followed by <span class="tt">read()</span> or <span class="tt">take()</span>  </td><td class="markdownTableBodyNone">The selector applies the requested filters. The final operation determines whether records are retained or removed.  </td></tr>
-</table>
-<p>The direct calls use the reader's <span class="tt">default_filter_state()</span>. A new selector starts with its own state filter that matches all sample, view, and instance states. Set the selector's state explicitly when the application needs a narrower selection. See <a class="el" href="classdds_1_1sub_1_1status_1_1_data_state.html" title="dds::sub::status::DataState">dds::sub::status::DataState</a> for the three state masks.</p>
-<h2 class="doxsection"><a class="anchor" id="receiving_empty"></a>
-Diagnose an empty result</h2>
-<p>An empty <span class="tt">read()</span> or <span class="tt">take()</span> result can mean no matching records, an allocation failure, or an error from the C library. Use <span class="tt">subscription_matched_status().current_count()</span> to confirm a writer is matched. Then send a fresh sample and check the content filter, instance handle, and sample-state mask. For example, an unread-only filter skips a sample after <span class="tt">read()</span> marks it as read. See <a class="el" href="group__dds__qos.html#matching_guide" title="Diagnose a writer and reader that do not exchange data">Diagnose a writer and reader that do not exchange data</a> when the endpoints do not match.</p>
-<p>With a match and a fresh write, compare the default-state read with an explicit selector that accepts all states. If both are empty, check loss and rejection before assuming the filter is the cause.</p>
-<h2 class="doxsection"><a class="anchor" id="receiving_loss"></a>
-Diagnose lost and rejected samples</h2>
-<p>Read <span class="tt">sample_lost_status()</span> to check for losses before delivery. Read <span class="tt">sample_rejected_status()</span> to inspect samples the reader rejected and the latest rejection reason. Check <span class="tt">last_reason()</span> for a limit on instances, samples, or samples per instance, then compare it with the reader's <span class="tt">History</span> and <span class="tt">ResourceLimits</span>. <span class="tt">last_instance_handle()</span> identifies the instance in the last rejection. Keep one status snapshot if several parts of the application need its change count.</p>
-<h2 class="doxsection"><a class="anchor" id="receiving_instance_timeline"></a>
-Follow one keyed instance</h2>
-<p>Send a sample for a new key. Look at its instance handle and view state. A read marks the returned record as read. A take removes it. Then dispose the instance as shown in <a class="el" href="group__dds__tutorial__reader.html#dds_tutorial_reader_dispose" title="Detect a disposed instance">Detect a disposed instance</a> and check <span class="tt">SampleInfo::valid()</span> before accessing its payload.</p>
-<p>Read <span class="tt">rank()</span> for the returned batch. See <a class="el" href="group__dds__tutorial__reader.html#dds_tutorial_reader_ranks" title="Inspect ranks across instance generations">Inspect ranks across instance generations</a> for how the ranks change across two generations.</p>
-<h2 class="doxsection"><a class="anchor" id="receiving_loan"></a>
-Process a loaned batch</h2>
-<div class="image">
-<object data="dds-diagram-loan-lifetime-en.svg" style="pointer-events: none;" type="image/svg+xml"></object>
-<div class="caption">
-Reader history and sample loan lifetime</div></div>
- <p>Pass a typed reader whose topic type has <span class="tt">userId</span> and <span class="tt">message</span> fields, such as the <span class="tt">HelloWorldData_Msg</span> reader in the Hello World example.</p>
-<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;gurumdds/dds.hpp&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;iostream&gt;</span></div>
-<div class="line"> </div>
-<div class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><span class="keywordtype">void</span> print_next_batch(<a class="code hl_class" href="classdds_1_1sub_1_1_data_reader.html">dds::sub::DataReader&lt;T&gt;</a>&amp; reader)</div>
-<div class="line">{</div>
-<div class="line">    <span class="keyword">const</span> <span class="keyword">auto</span> samples = reader.<a class="code hl_function" href="classdds_1_1sub_1_1_data_reader.html#a01ee9d4461154984f4f87ba8af5d438c">take</a>();</div>
-<div class="line"> </div>
-<div class="line">    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; sample : samples)</div>
-<div class="line">    {</div>
-<div class="line">        <span class="keywordflow">if</span> (!sample.info().valid())</div>
-<div class="line">            <span class="keywordflow">continue</span>;</div>
-<div class="line"> </div>
-<div class="line">        std::cout &lt;&lt; sample.data().userId &lt;&lt; <span class="charliteral">' '</span> &lt;&lt; sample.data().message &lt;&lt; <span class="charliteral">'\n'</span>;</div>
-<div class="line">    }</div>
-<div class="line">}</div>
-<div class="ttc" id="aclassdds_1_1sub_1_1_data_reader_html"><div class="ttname"><a href="classdds_1_1sub_1_1_data_reader.html">dds::sub::DataReader&lt;T&gt;</a></div><div class="ttdoc">Receives typed samples for a topic.</div><div class="ttdef"><b>Definition</b> TDataReader.hpp:76</div></div>
-<div class="ttc" id="aclassdds_1_1sub_1_1_data_reader_html_a01ee9d4461154984f4f87ba8af5d438c"><div class="ttname"><a href="classdds_1_1sub_1_1_data_reader.html#a01ee9d4461154984f4f87ba8af5d438c">dds::sub::DataReader::take</a></div><div class="ttdeci">LoanedSamples&lt; T &gt; take()</div><div class="ttdoc">Takes samples that match the default state filter.</div><div class="ttdef"><b>Definition</b> TDataReader.hpp:607</div></div>
-</div><!-- fragment --><p>Check <span class="tt">SampleInfo::valid()</span> before reading the payload. An instance state change can arrive without a payload.</p>
-<p>Keep the <a class="el" href="classdds_1_1sub_1_1_loaned_samples.html" title="dds::sub::LoanedSamples">dds::sub::LoanedSamples</a> collection alive while using a sample reference, iterator, or a pointer stored in a payload. Copy the fields your application needs into owned storage before the collection is destroyed. For example, construct a <span class="tt">std::string</span> from a valid <span class="tt">HelloWorldData_Msg::message</span> while the loan is alive if the application needs that text later.</p>
-<h2 class="doxsection"><a class="anchor" id="receiving_select"></a>
-Select a batch without changing the default filter</h2>
-<div class="image">
-<object data="dds-diagram-reader-selection-en.svg" style="pointer-events: none;" type="image/svg+xml"></object>
-<div class="caption">
-DataReader selection and returned samples</div></div>
- <p>Use a reader on a keyed topic with a <span class="tt">message</span> field, such as <span class="tt">Hello::Msg</span> in the keyed example. Pass a handle obtained from that reader to take up to eight unread records for one known instance. Checking for a nil handle avoids selecting all instances when a lookup did not find the requested key.</p>
-<div class="fragment"><div class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><span class="keywordtype">void</span> print_unread_instance(<a class="code hl_class" href="classdds_1_1sub_1_1_data_reader.html">dds::sub::DataReader&lt;T&gt;</a>&amp; reader, <span class="keyword">const</span> <a class="code hl_typedef" href="group__dds__core.html#ga8ee18acd2002fb15f2650f5c7cb055d0">dds::core::InstanceHandle</a>&amp; handle)</div>
-<div class="line">{</div>
-<div class="line">    <span class="keywordflow">if</span> (handle.is_nil())</div>
-<div class="line">        <span class="keywordflow">return</span>;</div>
-<div class="line"> </div>
-<div class="line">    <span class="keyword">const</span> <a class="code hl_class" href="classdds_1_1sub_1_1status_1_1_data_state.html">dds::sub::status::DataState</a> unread(<a class="code hl_function" href="classdds_1_1sub_1_1status_1_1_sample_state.html#ad84dc3347fda6f76a38278e953f1e52e">dds::sub::status::SampleState::not_read</a>());</div>
-<div class="line">    <span class="keyword">const</span> <span class="keyword">auto</span> samples = reader.<a class="code hl_function" href="classdds_1_1sub_1_1_data_reader.html#a4c9879cf567d4d627f02cd90247794ac">select</a>().<a class="code hl_function" href="classdds_1_1sub_1_1_data_reader_1_1_selector.html#a4385e63265161ff676026a1aa36a7b43">instance</a>(handle).<a class="code hl_function" href="classdds_1_1sub_1_1_data_reader_1_1_selector.html#af60e340287752e5facc7ba3e6a733bb1">state</a>(unread).<a class="code hl_function" href="classdds_1_1sub_1_1_data_reader_1_1_selector.html#ae7e230bc8a985d2f0829115af34ef73e">max_samples</a>(8).<a class="code hl_function" href="classdds_1_1sub_1_1_data_reader_1_1_selector.html#a8e3726a2c14c91ae076e04cbfdc70d4e">take</a>();</div>
-<div class="line"> </div>
-<div class="line">    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; sample : samples)</div>
-<div class="line">    {</div>
-<div class="line">        <span class="keywordflow">if</span> (!sample.info().valid())</div>
-<div class="line">            <span class="keywordflow">continue</span>;</div>
-<div class="line"> </div>
-<div class="line">        std::cout &lt;&lt; sample.data().message &lt;&lt; <span class="charliteral">'\n'</span>;</div>
-<div class="line">    }</div>
-<div class="line">}</div>
-<div class="ttc" id="aclassdds_1_1sub_1_1_data_reader_1_1_selector_html_a4385e63265161ff676026a1aa36a7b43"><div class="ttname"><a href="classdds_1_1sub_1_1_data_reader_1_1_selector.html#a4385e63265161ff676026a1aa36a7b43">dds::sub::DataReader::Selector::instance</a></div><div class="ttdeci">Selector &amp; instance(const dds::core::InstanceHandle &amp;h)</div><div class="ttdoc">Restricts the selection to a specific instance.</div><div class="ttdef"><b>Definition</b> TDataReader.hpp:109</div></div>
-<div class="ttc" id="aclassdds_1_1sub_1_1_data_reader_1_1_selector_html_a8e3726a2c14c91ae076e04cbfdc70d4e"><div class="ttname"><a href="classdds_1_1sub_1_1_data_reader_1_1_selector.html#a8e3726a2c14c91ae076e04cbfdc70d4e">dds::sub::DataReader::Selector::take</a></div><div class="ttdeci">dds::sub::LoanedSamples&lt; T, ::dds::sub::detail::SampleInfo &gt; take()</div><div class="ttdoc">Takes samples that match this selection.</div><div class="ttdef"><b>Definition</b> TDataReader.hpp:167</div></div>
-<div class="ttc" id="aclassdds_1_1sub_1_1_data_reader_1_1_selector_html_ae7e230bc8a985d2f0829115af34ef73e"><div class="ttname"><a href="classdds_1_1sub_1_1_data_reader_1_1_selector.html#ae7e230bc8a985d2f0829115af34ef73e">dds::sub::DataReader::Selector::max_samples</a></div><div class="ttdeci">Selector &amp; max_samples(uint32_t n)</div><div class="ttdoc">Limits the number of samples selected.</div><div class="ttdef"><b>Definition</b> TDataReader.hpp:147</div></div>
-<div class="ttc" id="aclassdds_1_1sub_1_1_data_reader_1_1_selector_html_af60e340287752e5facc7ba3e6a733bb1"><div class="ttname"><a href="classdds_1_1sub_1_1_data_reader_1_1_selector.html#af60e340287752e5facc7ba3e6a733bb1">dds::sub::DataReader::Selector::state</a></div><div class="ttdeci">Selector &amp; state(const dds::sub::status::DataState &amp;s)</div><div class="ttdoc">Sets the sample, view, and instance masks for the selection.</div><div class="ttdef"><b>Definition</b> TDataReader.hpp:120</div></div>
-<div class="ttc" id="aclassdds_1_1sub_1_1_data_reader_html_a4c9879cf567d4d627f02cd90247794ac"><div class="ttname"><a href="classdds_1_1sub_1_1_data_reader.html#a4c9879cf567d4d627f02cd90247794ac">dds::sub::DataReader::select</a></div><div class="ttdeci">Selector select()</div><div class="ttdoc">Starts a new selection on this reader.</div><div class="ttdef"><b>Definition</b> TDataReader.hpp:747</div></div>
-<div class="ttc" id="aclassdds_1_1sub_1_1status_1_1_data_state_html"><div class="ttname"><a href="classdds_1_1sub_1_1status_1_1_data_state.html">dds::sub::status::DataState</a></div><div class="ttdoc">Combines sample, view, and instance state masks.</div><div class="ttdef"><b>Definition</b> DataState.hpp:235</div></div>
-<div class="ttc" id="aclassdds_1_1sub_1_1status_1_1_sample_state_html_ad84dc3347fda6f76a38278e953f1e52e"><div class="ttname"><a href="classdds_1_1sub_1_1status_1_1_sample_state.html#ad84dc3347fda6f76a38278e953f1e52e">dds::sub::status::SampleState::not_read</a></div><div class="ttdeci">static const SampleState not_read()</div><div class="ttdoc">Creates a filter for samples the reader has not yet read.</div><div class="ttdef"><b>Definition</b> DataState.hpp:81</div></div>
-<div class="ttc" id="agroup__dds__core_html_ga8ee18acd2002fb15f2650f5c7cb055d0"><div class="ttname"><a href="group__dds__core.html#ga8ee18acd2002fb15f2650f5c7cb055d0">dds::core::InstanceHandle</a></div><div class="ttdeci">dds::core::detail::InstanceHandle InstanceHandle</div><div class="ttdoc">Identifier for a DDS entity or data instance.</div><div class="ttdef"><b>Definition</b> InstanceHandle.hpp:36</div></div>
-</div><!-- fragment --><p>Use <span class="tt">lookup_instance()</span> for a known key. <span class="tt">sample.info().instance_handle()</span> identifies the instance of an incoming record.</p>
-<p>To filter on values in the payload, create the reader on a content-filtered topic. The <a class="el" href="dds_example_legacy_filtered.html" title="Content-filtered Subscriber">Content-filtered subscriber</a> shows a reader that accepts samples with <span class="tt">userId &gt; 5</span>.</p>
-<h2 class="doxsection"><a class="anchor" id="receiving_copy"></a>
-Choose a destination for copied records</h2>
-<p>The iterator overloads write records and metadata into application-provided storage. A call with <span class="tt">buffer.begin()</span> and a positive count uses existing writable slots. Ensure the buffer has at least that many slots before calling. A call with <span class="tt">std::back_inserter(buffer)</span> appends to a growable container and may allocate. Both forms return the number of records written.</p>
-<p>For a topic type <span class="tt">T</span> whose copy owns its payload fields, use containers with the element type <span class="tt"><a class="el" href="classdds_1_1sub_1_1_sample.html" title="This class encapsulate the data and meta-data associated with DDS samples.">dds::sub::Sample</a>&lt;T, <a class="el" href="#ga8ce43296febeef280d08d5b58541ee65" title="Metadata indicating payload validity, instance state, and sample origin.">dds::sub::SampleInfo</a>&gt;</span>. The two functions below are alternatives. Each uses the reader's default state filter.</p>
-<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;gurumdds/dds.hpp&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;array&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;cstdint&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;iterator&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;vector&gt;</span></div>
-<div class="line"> </div>
-<div class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line">std::uint32_t read_into_buffer(<a class="code hl_class" href="classdds_1_1sub_1_1_data_reader.html">dds::sub::DataReader&lt;T&gt;</a>&amp; reader,</div>
-<div class="line">                               std::array&lt;<a class="code hl_class" href="classdds_1_1sub_1_1_sample.html">dds::sub::Sample&lt;T, dds::sub::SampleInfo&gt;</a>, 8&gt;&amp; buffer)</div>
-<div class="line">{</div>
-<div class="line">    <span class="keywordflow">return</span> reader.<a class="code hl_function" href="classdds_1_1sub_1_1_data_reader.html#a9f2bc3c9b1817f4601a8ffff0698cca2">read</a>(buffer.begin(), <span class="keyword">static_cast&lt;</span>std::uint32_t<span class="keyword">&gt;</span>(buffer.size()));</div>
-<div class="line">}</div>
-<div class="line"> </div>
-<div class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line">std::uint32_t append_taken_records(<a class="code hl_class" href="classdds_1_1sub_1_1_data_reader.html">dds::sub::DataReader&lt;T&gt;</a>&amp; reader,</div>
-<div class="line">                                   std::vector&lt;<a class="code hl_class" href="classdds_1_1sub_1_1_sample.html">dds::sub::Sample&lt;T, dds::sub::SampleInfo&gt;</a>&gt;&amp; buffer)</div>
-<div class="line">{</div>
-<div class="line">    <span class="keywordflow">return</span> reader.<a class="code hl_function" href="classdds_1_1sub_1_1_data_reader.html#a01ee9d4461154984f4f87ba8af5d438c">take</a>(std::back_inserter(buffer));</div>
-<div class="line">}</div>
-<div class="ttc" id="aclassdds_1_1sub_1_1_data_reader_html_a9f2bc3c9b1817f4601a8ffff0698cca2"><div class="ttname"><a href="classdds_1_1sub_1_1_data_reader.html#a9f2bc3c9b1817f4601a8ffff0698cca2">dds::sub::DataReader::read</a></div><div class="ttdeci">LoanedSamples&lt; T &gt; read()</div><div class="ttdoc">Reads samples that match the default state filter.</div><div class="ttdef"><b>Definition</b> TDataReader.hpp:592</div></div>
-<div class="ttc" id="aclassdds_1_1sub_1_1_sample_html"><div class="ttname"><a href="classdds_1_1sub_1_1_sample.html">dds::sub::Sample</a></div><div class="ttdoc">This class encapsulate the data and meta-data associated with DDS samples.</div><div class="ttdef"><b>Definition</b> TSample.hpp:39</div></div>
-</div><!-- fragment --><p>If the topic type contains borrowed pointers, use the loan and copy the needed values into owned fields while it is alive. Copying the record with an iterator uses the topic type's C++ copy semantics.</p>
-<p>Set <span class="tt">max_samples(n)</span> on the selector itself when copying a bounded selection. The selector's forward-iterator overload uses this setting. For fixed-capacity storage, choose a positive limit no larger than the number of writable slots.</p>
-<dl class="section warning"><dt>Warning</dt><dd>Iterator-based <span class="tt">take()</span> removes records from history before copying. If assignment or insertion throws, the destination may contain only part of the batch, and the removed records stay out of history.</dd></dl>
-<h2 class="doxsection"><a class="anchor" id="receiving_keyed"></a>
-Follow an instance through disposal and unregister</h2>
-<p>Build the <span class="tt">example_cpp_helloworld_keyed_subscriber</span> and <span class="tt">example_cpp_helloworld_keyed_publisher</span> targets with the example build from <a class="el" href="group__dds__domain.html#getting_started" title="Send and receive your first sample">Send and receive your first sample</a>. Start the subscriber first. Both programs use domain <span class="tt">79</span>, topic <span class="tt">HelloWorld</span>, and a type keyed by <span class="tt">userId</span>.</p>
-<p>The <a class="el" href="dds_example_legacy_keyed.html#dds_example_legacy_keyed_publisher" title="Keyed Publisher">keyed publisher</a> writes three keys. For <span class="tt">userId</span> 1, it registers and writes <span class="tt">hello</span>, explicitly disposes the instance, writes <span class="tt">world</span> for the same key, and unregisters that key. The <a class="el" href="dds_example_legacy_keyed.html#dds_example_legacy_keyed_subscriber" title="Keyed Subscriber">keyed subscriber</a> reads batches of up to eight unread records and prints the key and instance state.</p>
-<table class="markdownTable">
-<tr class="markdownTableHead">
-<th class="markdownTableHeadNone">Publisher action for key 1  </th><th class="markdownTableHeadNone">What to look for on the subscriber  </th></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">Write <span class="tt">hello</span>  </td><td class="markdownTableBodyNone"><span class="tt">ALIVE</span> with the value <span class="tt">hello</span>  </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">Dispose the instance  </td><td class="markdownTableBodyNone"><span class="tt">NOT_ALIVE_DISPOSED</span>  </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">Write <span class="tt">world</span>  </td><td class="markdownTableBodyNone"><span class="tt">ALIVE</span> with the value <span class="tt">world</span>  </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">Unregister the last writer for the key  </td><td class="markdownTableBodyNone"><span class="tt">NOT_ALIVE_NO_WRITERS</span>  </td></tr>
-</table>
-<div class="image">
-<object data="dds-diagram-keyed-instance-en.svg" style="pointer-events: none;" type="image/svg+xml"></object>
-<div class="caption">
-Instance state changes for one key</div></div>
- <div class="image">
-<object data="dds-diagram-reader-purge-delay-en.svg" style="pointer-events: none;" type="image/svg+xml"></object>
-<div class="caption">
-Instance state and Reader purge delays</div></div>
- <p>This sequence assumes the example is the only writer for that key and the subscriber reads while the publisher is running. The publisher disables automatic disposal on unregister so the final unregister can be observed as loss of the last writer. With automatic disposal enabled, unregistering also requests disposal.</p>
-<p>The subscriber gets the key for a state notification through <span class="tt">key_value()</span> using the record's <span class="tt">instance_handle()</span>. It reads payload fields only when <span class="tt">valid()</span> returns true. After observing <span class="tt">NOT_ALIVE_NO_WRITERS</span>, it uses a selector to take records still retained for the saved handle. Check <a class="el" href="group__dds__qos.html#matching_guide" title="Diagnose a writer and reader that do not exchange data">Diagnose a writer and reader that do not exchange data</a> if the subscriber receives no records. </p>
-</div><a id="doc-typedef-members" name="doc-typedef-members"></a><h2 class="groupheader" id="header-doc-typedef-members">Typedef Documentation</h2>
+</table></div>
+
+<a id="doc-typedef-members" name="doc-typedef-members"></a><h2 class="groupheader" id="header-doc-typedef-members">Typedef Documentation</h2>
 <a id="ga1a326dc6ca679ff7cbe0ad659b4aebff" name="ga1a326dc6ca679ff7cbe0ad659b4aebff"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga1a326dc6ca679ff7cbe0ad659b4aebff">◆ </a></span>CoherentAccess</h2>
 

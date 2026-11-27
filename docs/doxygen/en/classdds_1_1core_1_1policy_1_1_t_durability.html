@@ -18,7 +18,7 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script src="search/searchdata.js" type="text/javascript"></script>
 <script src="search/search.js" type="text/javascript"></script>
-<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+<script src="../theme.js" type="text/javascript"></script><link href="doxygen.css" rel="stylesheet" type="text/css"/>
 <link href="ReferenceBranding.css" rel="stylesheet" type="text/css"/>
 <script defer="True" src="ReferenceUi.js"></script><link href="../en/classdds_1_1core_1_1policy_1_1_t_durability.html" hreflang="en" rel="alternate"/><link href="../ko/classdds_1_1core_1_1policy_1_1_t_durability.html" hreflang="ko" rel="alternate"/><link href="../language.css" rel="stylesheet"/><script defer="defer" src="../language.js"></script></head>
 <body>
@@ -31,7 +31,7 @@
    <div id="projectname">GurumDDS C++ API Reference<span id="projectnumber"> 1.3.2</span>
    </div>
   </td>
- <td class="doc-language-cell"><label class="doc-language"><select aria-label="Documentation language" data-current="0"><option lang="en" selected="selected" value="../en/classdds_1_1core_1_1policy_1_1_t_durability.html">English</option><option lang="en" value="../ko/classdds_1_1core_1_1policy_1_1_t_durability.html">Korean</option></select></label></td></tr>
+ <td class="doc-language-cell"><div class="doc-header-controls"><button aria-pressed="false" class="doc-theme" type="button">Dark mode</button><label class="doc-language"><select aria-label="Documentation language" data-current="0"><option lang="en" selected="selected" value="../en/classdds_1_1core_1_1policy_1_1_t_durability.html">English</option><option lang="en" value="../ko/classdds_1_1core_1_1policy_1_1_t_durability.html">Korean</option></select></label></div></td></tr>
  </tbody>
 </table>
 </div>
@@ -117,14 +117,13 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('classdds_1_1co
 
 <p class="dds-class-include"><code>#include &lt;gurumdds/cpp/core/policy/CorePolicy.hpp&gt;</code></p>
 
-<p>Controls whether samples written before a reader matches can reach that reader.  
- <a href="#details">More...</a></p>
+
 <a id="details" name="details"></a><h2 class="groupheader" id="header-details">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename D&gt;<br/>
 class dds::core::policy::TDurability&lt; D &gt;</div><p>Controls whether samples written before a reader matches can reach that reader. </p>
 <p><code>VOLATILE</code> durability does not request historical samples. With <code>TRANSIENT_LOCAL</code>, the writer can supply retained samples to a compatible reader that matches later. <a class="el" href="group__dds__qos.html#gac131ef99ba345cff7ae780d5d30ff130" title="Controls retention of samples for each instance.">History</a>, resource limits, and sample lifespan govern which samples remain available.</p>
 <p>The C++ binding stores <code>VOLATILE</code> and <code>TRANSIENT_LOCAL</code>. Both <code><a class="el" href="#afd0b4cfa8d45b4c37a8572181446da22" title="Creates the fallback for transient durability.">Transient()</a></code> and <code><a class="el" href="#a791d08023ccfc0b43761598f79874fda" title="Creates the fallback for persistent durability.">Persistent()</a></code> return <code>TRANSIENT_LOCAL</code> in this binding. These factories do not preserve samples after the writer is removed. </p>
-</div><table class="memberdecls">
+</div><div class="dds-table-scroll"><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-pub-methods"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a39daf54e56acf12357bbb67c76772e7f" id="r_a39daf54e56acf12357bbb67c76772e7f"><td class="memItemLeft"><a id="a39daf54e56acf12357bbb67c76772e7f" name="a39daf54e56acf12357bbb67c76772e7f"></a>
@@ -172,7 +171,7 @@ D &amp; </td><td class="memItemRight"><b>delegate</b> ()</td></tr>
 <tr class="memitem:a3b691bb7dfa340e55660b78ac9951b22 inherit pub_methods_classdds_1_1core_1_1_value" id="r_a3b691bb7dfa340e55660b78ac9951b22"><td class="memItemLeft">
  </td><td class="memItemRight"><b>operator const D &amp;</b> () const</td></tr>
 <tr class="memdesc:a3b691bb7dfa340e55660b78ac9951b22 inherit pub_methods_classdds_1_1core_1_1_value"><td class="mdescLeft"> </td><td class="mdescRight">Cast Operator. <br/></td></tr>
-</table><table class="memberdecls">
+</table></div><div class="dds-table-scroll"><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-pub-static-methods"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a4e4da1f14cad6ba6a7d3b140ff1a2f4a" id="r_a4e4da1f14cad6ba6a7d3b140ff1a2f4a"><td class="memItemLeft">static <a class="el" href="#a39daf54e56acf12357bbb67c76772e7f">TDurability</a> </td><td class="memItemRight"><a class="el" href="#a4e4da1f14cad6ba6a7d3b140ff1a2f4a">Volatile</a> ()</td></tr>
@@ -183,7 +182,7 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memdesc:afd0b4cfa8d45b4c37a8572181446da22"><td class="mdescLeft"> </td><td class="mdescRight">Creates the fallback for transient durability.  <br/></td></tr>
 <tr class="memitem:a791d08023ccfc0b43761598f79874fda" id="r_a791d08023ccfc0b43761598f79874fda"><td class="memItemLeft">static <a class="el" href="#a39daf54e56acf12357bbb67c76772e7f">TDurability</a> </td><td class="memItemRight"><a class="el" href="#a791d08023ccfc0b43761598f79874fda">Persistent</a> ()</td></tr>
 <tr class="memdesc:a791d08023ccfc0b43761598f79874fda"><td class="mdescLeft"> </td><td class="mdescRight">Creates the fallback for persistent durability.  <br/></td></tr>
-</table><table class="memberdecls">
+</table></div><div class="dds-table-scroll"><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-inherited"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_methods_classdds_1_1core_1_1_value"><td class="dyn-inherit" colspan="2"><span class="dynarrow"><span class="arrowhead closed"></span></span>Protected Member Functions inherited from <a class="el" href="classdds_1_1core_1_1_value.html">dds::core::Value&lt; D &gt;</a></td></tr>
@@ -192,7 +191,7 @@ Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_attribs_classdds_1_1core_1_1_value"><td class="dyn-inherit" colspan="2"><span class="dynarrow"><span class="arrowhead closed"></span></span>Protected Attributes inherited from <a class="el" href="classdds_1_1core_1_1_value.html">dds::core::Value&lt; D &gt;</a></td></tr>
 <tr class="memitem:a524bb581d6961d26653838488712edf4 inherit pro_attribs_classdds_1_1core_1_1_value" id="r_a524bb581d6961d26653838488712edf4"><td class="memItemLeft">
 D </td><td class="memItemRight"><b>d_</b></td></tr>
-</table>
+</table></div>
 <a id="doc-constructors" name="doc-constructors"></a><h2 class="groupheader" id="header-doc-constructors">Constructors and Destructors</h2>
 <a id="a23147584f76637e83c76f698e1b000d8" name="a23147584f76637e83c76f698e1b000d8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a23147584f76637e83c76f698e1b000d8">◆ </a></span>TDurability() <span class="overload">[1/2]</span></h2>
@@ -221,9 +220,9 @@ template&lt;typename D&gt; </div>
 
 <p>Constructs the durability policy with explicit settings. </p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">the_kind</td><td><a class="el" href="group__dds__qos.html#gaa70a30964093541160b34558877d3438" title="Controls whether samples written before a reader matches can reach that reader.">Durability</a> kind </td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 
@@ -248,9 +247,9 @@ template&lt;typename D&gt; </div>
 
 <p>Copies the durability policy. </p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">other</td><td>Policy to copy </td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 
@@ -298,9 +297,9 @@ template&lt;typename D&gt; </div>
 
 <p>Sets the durability kind. </p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">the_kind</td><td>Policy setting to store</td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>This policy </dd></dl>

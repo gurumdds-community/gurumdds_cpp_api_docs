@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['요약_0',['QoS 정책 요약',['../group__dds__qos.html#qos_policy_summary',1,'']]]
+  ['오류와_20스레드_0',['오류와 스레드',['../group__dds__core.html#api_usage_notes',1,'']]]
 ];

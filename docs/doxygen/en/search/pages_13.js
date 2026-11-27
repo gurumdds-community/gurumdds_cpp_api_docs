@@ -11,7 +11,7 @@ var searchData=
   ['samples_20separately_8',['Take read and unread samples separately',['../group__dds__tutorial__reader.html#dds_tutorial_reader_state_masks',1,'']]],
   ['scope_20and_20release_20it_9',['Choose the listener scope and release it',['../group__dds__core.html#listener_lifecycle',1,'']]],
   ['scope_20of_20a_20qos_20change_10',['Choose the scope of a QoS change',['../group__dds__tutorial__participant.html#participant_qos_sources',1,'']]],
-  ['sdk_11',['Build against the installed SDK',['../group__dds__domain.html#installed_cpp_project',1,'']]],
+  ['sdk_11',['Build against an installed SDK',['../group__dds__domain.html#installed_cpp_project',1,'']]],
   ['select_20a_20batch_20without_20changing_20the_20default_20filter_12',['Select a batch without changing the default filter',['../group__dds__subscription.html#receiving_select',1,'']]],
   ['select_20one_20sample_20for_20a_20key_13',['Select one sample for a key',['../group__dds__tutorial__reader.html#dds_tutorial_reader_instance',1,'']]],
   ['select_20samples_14',['Select samples',['../group__dds__subscription.html#subscription_selection',1,'']]],

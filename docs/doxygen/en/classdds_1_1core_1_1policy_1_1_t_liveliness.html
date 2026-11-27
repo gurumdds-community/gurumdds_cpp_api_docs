@@ -18,7 +18,7 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script src="search/searchdata.js" type="text/javascript"></script>
 <script src="search/search.js" type="text/javascript"></script>
-<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+<script src="../theme.js" type="text/javascript"></script><link href="doxygen.css" rel="stylesheet" type="text/css"/>
 <link href="ReferenceBranding.css" rel="stylesheet" type="text/css"/>
 <script defer="True" src="ReferenceUi.js"></script><link href="../en/classdds_1_1core_1_1policy_1_1_t_liveliness.html" hreflang="en" rel="alternate"/><link href="../ko/classdds_1_1core_1_1policy_1_1_t_liveliness.html" hreflang="ko" rel="alternate"/><link href="../language.css" rel="stylesheet"/><script defer="defer" src="../language.js"></script></head>
 <body>
@@ -31,7 +31,7 @@
    <div id="projectname">GurumDDS C++ API Reference<span id="projectnumber"> 1.3.2</span>
    </div>
   </td>
- <td class="doc-language-cell"><label class="doc-language"><select aria-label="Documentation language" data-current="0"><option lang="en" selected="selected" value="../en/classdds_1_1core_1_1policy_1_1_t_liveliness.html">English</option><option lang="en" value="../ko/classdds_1_1core_1_1policy_1_1_t_liveliness.html">Korean</option></select></label></td></tr>
+ <td class="doc-language-cell"><div class="doc-header-controls"><button aria-pressed="false" class="doc-theme" type="button">Dark mode</button><label class="doc-language"><select aria-label="Documentation language" data-current="0"><option lang="en" selected="selected" value="../en/classdds_1_1core_1_1policy_1_1_t_liveliness.html">English</option><option lang="en" value="../ko/classdds_1_1core_1_1policy_1_1_t_liveliness.html">Korean</option></select></label></div></td></tr>
  </tbody>
 </table>
 </div>
@@ -117,14 +117,13 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('classdds_1_1co
 
 <p class="dds-class-include"><code>#include &lt;gurumdds/cpp/core/policy/CorePolicy.hpp&gt;</code></p>
 
-<p>Controls how writers assert activity and how readers detect its loss.  
- <a href="#details">More...</a></p>
+
 <a id="details" name="details"></a><h2 class="groupheader" id="header-details">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename D&gt;<br/>
 class dds::core::policy::TLiveliness&lt; D &gt;</div><p>Controls how writers assert activity and how readers detect its loss. </p>
 <p>The lease duration sets the maximum interval between assertions. In <code>AUTOMATIC</code> mode, DDS asserts liveliness. In <code>MANUAL_BY_PARTICIPANT</code> mode, the application can call the participant's <code>assert_liveliness()</code> for its writers using that mode. In <code>MANUAL_BY_TOPIC</code> mode, the application can call <code>assert_liveliness()</code> on the individual writer. Writing data also asserts liveliness.</p>
 <p>For this policy to be compatible, the writer's offered lease must be less than or equal to the reader's requested lease. The offered kind must be at least as strong as the request, in increasing order <code>AUTOMATIC</code>, <code>MANUAL_BY_PARTICIPANT</code>, and <code>MANUAL_BY_TOPIC</code>. </p>
-</div><table class="memberdecls">
+</div><div class="dds-table-scroll"><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-pub-methods"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a5a4662c6ecaf67859927d50771ad87ec" id="r_a5a4662c6ecaf67859927d50771ad87ec"><td class="memItemLeft"><a id="a5a4662c6ecaf67859927d50771ad87ec" name="a5a4662c6ecaf67859927d50771ad87ec"></a>
@@ -176,7 +175,7 @@ D &amp; </td><td class="memItemRight"><b>delegate</b> ()</td></tr>
 <tr class="memitem:a3b691bb7dfa340e55660b78ac9951b22 inherit pub_methods_classdds_1_1core_1_1_value" id="r_a3b691bb7dfa340e55660b78ac9951b22"><td class="memItemLeft">
  </td><td class="memItemRight"><b>operator const D &amp;</b> () const</td></tr>
 <tr class="memdesc:a3b691bb7dfa340e55660b78ac9951b22 inherit pub_methods_classdds_1_1core_1_1_value"><td class="mdescLeft"> </td><td class="mdescRight">Cast Operator. <br/></td></tr>
-</table><table class="memberdecls">
+</table></div><div class="dds-table-scroll"><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-pub-static-methods"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a790f43fe42a61b59de1e051813c523e9" id="r_a790f43fe42a61b59de1e051813c523e9"><td class="memItemLeft">static <a class="el" href="#a5a4662c6ecaf67859927d50771ad87ec">TLiveliness</a> </td><td class="memItemRight"><a class="el" href="#a790f43fe42a61b59de1e051813c523e9">Automatic</a> ()</td></tr>
@@ -185,7 +184,7 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memdesc:a307d41b30b1826522b18c1c3c11fa193"><td class="mdescLeft"> </td><td class="mdescRight">Creates a policy with liveliness asserted by the participant.  <br/></td></tr>
 <tr class="memitem:ade788aa933887f35f0842233d51bc3d8" id="r_ade788aa933887f35f0842233d51bc3d8"><td class="memItemLeft">static <a class="el" href="#a5a4662c6ecaf67859927d50771ad87ec">TLiveliness</a> </td><td class="memItemRight"><a class="el" href="#ade788aa933887f35f0842233d51bc3d8">ManualByTopic</a> (const <a class="el" href="classdds_1_1core_1_1_duration.html">dds::core::Duration</a> &amp;lease=<a class="el" href="classdds_1_1core_1_1_duration.html#a5a1d1924d04f70d5bc3bab5b1de521b2">dds::core::Duration::infinite</a>())</td></tr>
 <tr class="memdesc:ade788aa933887f35f0842233d51bc3d8"><td class="mdescLeft"> </td><td class="mdescRight">Creates a policy with liveliness asserted by the writer for its topic.  <br/></td></tr>
-</table><table class="memberdecls">
+</table></div><div class="dds-table-scroll"><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-inherited"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_methods_classdds_1_1core_1_1_value"><td class="dyn-inherit" colspan="2"><span class="dynarrow"><span class="arrowhead closed"></span></span>Protected Member Functions inherited from <a class="el" href="classdds_1_1core_1_1_value.html">dds::core::Value&lt; D &gt;</a></td></tr>
@@ -194,7 +193,7 @@ Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_attribs_classdds_1_1core_1_1_value"><td class="dyn-inherit" colspan="2"><span class="dynarrow"><span class="arrowhead closed"></span></span>Protected Attributes inherited from <a class="el" href="classdds_1_1core_1_1_value.html">dds::core::Value&lt; D &gt;</a></td></tr>
 <tr class="memitem:a524bb581d6961d26653838488712edf4 inherit pro_attribs_classdds_1_1core_1_1_value" id="r_a524bb581d6961d26653838488712edf4"><td class="memItemLeft">
 D </td><td class="memItemRight"><b>d_</b></td></tr>
-</table>
+</table></div>
 <a id="doc-constructors" name="doc-constructors"></a><h2 class="groupheader" id="header-doc-constructors">Constructors and Destructors</h2>
 <a id="abc3a3c42b0fbf8105eedc71041d557f7" name="abc3a3c42b0fbf8105eedc71041d557f7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abc3a3c42b0fbf8105eedc71041d557f7">◆ </a></span>TLiveliness() <span class="overload">[1/2]</span></h2>
@@ -219,10 +218,10 @@ template&lt;typename D&gt; </div>
 
 <p>Constructs the liveliness policy with explicit settings. </p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">the_kind</td><td>Mode used to assert liveliness </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">the_lease_duration</td><td>Maximum interval between liveliness assertions </td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 
@@ -247,9 +246,9 @@ template&lt;typename D&gt; </div>
 
 <p>Copies the liveliness policy. </p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">other</td><td>Policy to copy </td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 
@@ -327,9 +326,9 @@ template&lt;typename D&gt; </div>
 
 <p>Sets the liveliness assertion kind. </p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">the_kind</td><td>Policy setting to store</td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>This policy </dd></dl>
@@ -377,9 +376,9 @@ template&lt;typename D&gt; </div>
 
 <p>Sets the maximum interval between liveliness assertions. </p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">the_lease_duration</td><td>Policy setting to store</td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>This policy </dd></dl>
@@ -413,9 +412,9 @@ template&lt;typename D&gt; </div>
 
 <p>Creates a policy with liveliness asserted by the participant. </p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">lease</td><td>Maximum interval between assertions</td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Configured liveliness policy </dd></dl>
@@ -449,9 +448,9 @@ template&lt;typename D&gt; </div>
 
 <p>Creates a policy with liveliness asserted by the writer for its topic. </p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">lease</td><td>Maximum interval between assertions</td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Configured liveliness policy </dd></dl>

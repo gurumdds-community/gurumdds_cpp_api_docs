@@ -18,739 +18,737 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script src="search/searchdata.js" type="text/javascript"></script>
 <script src="search/search.js" type="text/javascript"></script>
-<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+<script src="../theme.js" type="text/javascript"></script><link href="doxygen.css" rel="stylesheet" type="text/css"/>
 <link href="ReferenceBranding.css" rel="stylesheet" type="text/css"/>
 <script defer="True" src="ReferenceUi.js"></script><link href="../en/group__dds__qos.html" hreflang="en" rel="alternate"/><link href="../ko/group__dds__qos.html" hreflang="ko" rel="alternate"/><link href="../language.css" rel="stylesheet"/><script defer="defer" src="../language.js"></script></head>
 <body>
-<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
-<div id="titlearea">
-<table cellpadding="0" cellspacing="0">
- <tbody>
- <tr id="projectrow">
-  <td id="projectalign">
-   <div id="projectname">GurumDDS C++ API Reference<span id="projectnumber"> 1.3.2</span>
-   </div>
-  </td>
- <td class="doc-language-cell"><label class="doc-language"><select aria-label="문서 언어" data-current="1"><option lang="en" value="../en/group__dds__qos.html">English</option><option lang="en" selected="selected" value="../ko/group__dds__qos.html">Korean</option></select></label></td></tr>
- </tbody>
-</table>
-</div>
-<!-- end header part -->
-<!-- 다음에 의해 생성됨 :  Doxygen 1.18.0 -->
-<script type="text/javascript">
-let searchBox = new SearchBox("searchBox", "search/",'.html');
-</script>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', codefold.init);
-</script>
-<script id="doxygen-config" type="application/json">
-{
-  "relPath": "",
-  "generateTreeView": true,
-  "searchEngine": true,
-  "serverBasedSearch": false,
-  "disableIndex": false,
-  "dynamicMenus": true,
-  "fullSidebar": false
-}
-</script>
-<script src="menudata.js" type="text/javascript"></script>
-<script src="menu.js" type="text/javascript"></script>
-<div id="main-nav-mobile">
-<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
-<label class="main-menu-btn" for="main-menu-state">
-<span class="main-menu-btn-icon"></span> 주 메뉴 표시 전환</label>
-<span id="searchBoxPos1"></span>
-</div>
-</div><!-- main-nav-mobile -->
-<div id="main-nav">
-  <ul class="sm sm-dox" id="main-menu">
-    <li id="searchBoxPos2">
-        <div class="MSearchBoxInactive" id="MSearchBox">
-        <span class="left">
-          <span class="search-icon" id="MSearchSelect"><span class="search-icon-dropdown"></span></span>
-          <input accesskey="S" id="MSearchField" placeholder="검색" type="text" value=""/>
-          </span><span class="right">
-            <a href="javascript:searchBox.CloseResultsWindow()" id="MSearchClose"><div class="close-icon" id="MSearchCloseImg"></div></a>
-          </span>
-        </div>
-    </li>
-  </ul>
-</div><!-- main-nav -->
-</div><!-- top -->
-<div class="ui-resizable side-nav-resizable" id="side-nav">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div class="sync" id="nav-sync"></div>
-    </div>
-  </div>
-  <div class="ui-resizable-handle" id="splitbar">
-  </div>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellpadding="0" cellspacing="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">GurumDDS C++ API Reference<span id="projectnumber"> 1.3.2</span>
+   </div>
+  </td>
+ <td class="doc-language-cell"><div class="doc-header-controls"><button aria-pressed="false" class="doc-theme" type="button">다크 모드</button><label class="doc-language"><select aria-label="문서 언어" data-current="1"><option lang="en" value="../en/group__dds__qos.html">English</option><option lang="en" selected="selected" value="../ko/group__dds__qos.html">Korean</option></select></label></div></td></tr>
+ </tbody>
+</table>
 </div>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded',() => { initNavTree('group__dds__qos.html','',''); });
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
 </script>
-<div id="container">
-<div id="doc-content">
-<!-- window showing the filter options -->
-<div id="MSearchSelectWindow">
-</div>
-
-<!-- iframe showing the search results (closed by default) -->
-<div id="MSearchResultsWindow">
-<div id="MSearchResults">
-<div class="SRPage">
-<div id="SRIndex">
-<div id="SRResults"></div>
-<div class="SRStatus" id="Loading">로딩중...</div>
-<div class="SRStatus" id="Searching">검색중...</div>
-<div class="SRStatus" id="NoMatches">일치하는것 없음</div>
-</div>
-</div>
-</div>
-</div>
-
-<div class="header">
-  <div class="headertitle"><div class="title">Quality of Service <div class="ingroups"><a class="el" href="group__dds__api__modules.html">API 모듈</a> » <a class="el" href="group__dds__core.html">Core</a></div></div></div>
-</div><!--header-->
-<div class="contents">
-
-<p>Entity 설정과 endpoint 호환성에 쓰는 정책입니다.  
-<a href="#details">더 자세히 ...</a></p>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-nested-classes"><a id="nested-classes" name="nested-classes"></a>
-클래스</h2></td></tr>
-<tr class="memitem:dds_3A_3Acore_3A_3Apolicy_3A_3ATLatencyBudget_3C_20D_20_3E" id="r_dds_3A_3Acore_3A_3Apolicy_3A_3ATLatencyBudget_3C_20D_20_3E"><td class="memItemLeft">클래스  </td><td class="memItemRight"><a class="el" href="classdds_1_1core_1_1policy_1_1_t_latency_budget.html">dds::core::policy::TLatencyBudget&lt; D &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft"> </td><td class="mdescRight">미들웨어의 전송 결정을 위한 <a class="el" href="#ga50f7bda0cda1b76fbd4e374627540e7c" title="미들웨어의 전송 결정을 위한 LatencyBudget 제공">LatencyBudget</a> 제공  <a href="classdds_1_1core_1_1policy_1_1_t_latency_budget.html#details">더 자세히 ...</a><br/></td></tr>
-<tr class="memitem:dds_3A_3Acore_3A_3Apolicy_3A_3ATTimeBasedFilter_3C_20D_20_3E" id="r_dds_3A_3Acore_3A_3Apolicy_3A_3ATTimeBasedFilter_3C_20D_20_3E"><td class="memItemLeft">클래스  </td><td class="memItemRight"><a class="el" href="classdds_1_1core_1_1policy_1_1_t_time_based_filter.html">dds::core::policy::TTimeBasedFilter&lt; D &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft"> </td><td class="mdescRight">DataReader가 선택하는 sample 간 최소 간격을 설정합니다  <a href="classdds_1_1core_1_1policy_1_1_t_time_based_filter.html#details">더 자세히 ...</a><br/></td></tr>
-<tr class="memitem:dds_3A_3Acore_3A_3Apolicy_3A_3ATPartition_3C_20D_20_3E" id="r_dds_3A_3Acore_3A_3Apolicy_3A_3ATPartition_3C_20D_20_3E"><td class="memItemLeft">클래스  </td><td class="memItemRight"><a class="el" href="classdds_1_1core_1_1policy_1_1_t_partition.html">dds::core::policy::TPartition&lt; D &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft"> </td><td class="mdescRight">domain 내에서 논리적 Publisher 및 Subscriber 일치 제어  <a href="classdds_1_1core_1_1policy_1_1_t_partition.html#details">더 자세히 ...</a><br/></td></tr>
-<tr class="memitem:dds_3A_3Acore_3A_3Apolicy_3A_3ATOwnership_3C_20D_20_3E" id="r_dds_3A_3Acore_3A_3Apolicy_3A_3ATOwnership_3C_20D_20_3E"><td class="memItemLeft">클래스  </td><td class="memItemRight"><a class="el" href="classdds_1_1core_1_1policy_1_1_t_ownership.html">dds::core::policy::TOwnership&lt; D &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft"> </td><td class="mdescRight">여러 쓰기자가 동일한 instance를 업데이트할 수 있는 방법을 선택합니다.  <a href="classdds_1_1core_1_1policy_1_1_t_ownership.html#details">더 자세히 ...</a><br/></td></tr>
-<tr class="memitem:dds_3A_3Acore_3A_3Apolicy_3A_3ATOwnershipStrength_3C_20D_20_3E" id="r_dds_3A_3Acore_3A_3Apolicy_3A_3ATOwnershipStrength_3C_20D_20_3E"><td class="memItemLeft">클래스  </td><td class="memItemRight"><a class="el" href="classdds_1_1core_1_1policy_1_1_t_ownership_strength.html">dds::core::policy::TOwnershipStrength&lt; D &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft"> </td><td class="mdescRight">독점 소유권을 위한 DataWriter의 우선순위를 지정합니다  <a href="classdds_1_1core_1_1policy_1_1_t_ownership_strength.html#details">더 자세히 ...</a><br/></td></tr>
-<tr class="memitem:dds_3A_3Acore_3A_3Apolicy_3A_3ATWriterDataLifecycle_3C_20D_20_3E" id="r_dds_3A_3Acore_3A_3Apolicy_3A_3ATWriterDataLifecycle_3C_20D_20_3E"><td class="memItemLeft">클래스  </td><td class="memItemRight"><a class="el" href="classdds_1_1core_1_1policy_1_1_t_writer_data_lifecycle.html">dds::core::policy::TWriterDataLifecycle&lt; D &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft"> </td><td class="mdescRight">instance를 등록 해제하면 자동으로 삭제되는지 여부 제어  <a href="classdds_1_1core_1_1policy_1_1_t_writer_data_lifecycle.html#details">더 자세히 ...</a><br/></td></tr>
-<tr class="memitem:dds_3A_3Acore_3A_3Apolicy_3A_3ATReaderDataLifecycle_3C_20D_20_3E" id="r_dds_3A_3Acore_3A_3Apolicy_3A_3ATReaderDataLifecycle_3C_20D_20_3E"><td class="memItemLeft">클래스  </td><td class="memItemRight"><a class="el" href="classdds_1_1core_1_1policy_1_1_t_reader_data_lifecycle.html">dds::core::policy::TReaderDataLifecycle&lt; D &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft"> </td><td class="mdescRight">DataReader가 처분된 instance와 기록되지 않은 instance sample을 정리할 때 설정  <a href="classdds_1_1core_1_1policy_1_1_t_reader_data_lifecycle.html#details">더 자세히 ...</a><br/></td></tr>
-<tr class="memitem:dds_3A_3Acore_3A_3Apolicy_3A_3ATDurability_3C_20D_20_3E" id="r_dds_3A_3Acore_3A_3Apolicy_3A_3ATDurability_3C_20D_20_3E"><td class="memItemLeft">클래스  </td><td class="memItemRight"><a class="el" href="classdds_1_1core_1_1policy_1_1_t_durability.html">dds::core::policy::TDurability&lt; D &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft"> </td><td class="mdescRight">DataReader가 일치하기 전에 작성된 sample이 해당 DataReader에 도달할 수 있는지 여부를 제어합니다.  <a href="classdds_1_1core_1_1policy_1_1_t_durability.html#details">더 자세히 ...</a><br/></td></tr>
-<tr class="memitem:dds_3A_3Acore_3A_3Apolicy_3A_3ATPresentation_3C_20D_20_3E" id="r_dds_3A_3Acore_3A_3Apolicy_3A_3ATPresentation_3C_20D_20_3E"><td class="memItemLeft">클래스  </td><td class="memItemRight"><a class="el" href="classdds_1_1core_1_1policy_1_1_t_presentation.html">dds::core::policy::TPresentation&lt; D &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft"> </td><td class="mdescRight"><a class="el" href="#ga2b52bb5f851fa675b14a1d1ac57d6b15" title="Presentation 범위를 구성하고 일관된 또는 정렬된 액세스 요청">Presentation</a> 범위를 구성하고 일관된 또는 정렬된 액세스 요청  <a href="classdds_1_1core_1_1policy_1_1_t_presentation.html#details">더 자세히 ...</a><br/></td></tr>
-<tr class="memitem:dds_3A_3Acore_3A_3Apolicy_3A_3ATReliability_3C_20D_20_3E" id="r_dds_3A_3Acore_3A_3Apolicy_3A_3ATReliability_3C_20D_20_3E"><td class="memItemLeft">클래스  </td><td class="memItemRight"><a class="el" href="classdds_1_1core_1_1policy_1_1_t_reliability.html">dds::core::policy::TReliability&lt; D &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft"> </td><td class="mdescRight">DataWriter가 제공하거나 DataReader가 요청하는 전달 Reliability를 제어합니다.  <a href="classdds_1_1core_1_1policy_1_1_t_reliability.html#details">더 자세히 ...</a><br/></td></tr>
-<tr class="memitem:dds_3A_3Acore_3A_3Apolicy_3A_3ATDestinationOrder_3C_20D_20_3E" id="r_dds_3A_3Acore_3A_3Apolicy_3A_3ATDestinationOrder_3C_20D_20_3E"><td class="memItemLeft">클래스  </td><td class="memItemRight"><a class="el" href="classdds_1_1core_1_1policy_1_1_t_destination_order.html">dds::core::policy::TDestinationOrder&lt; D &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft"> </td><td class="mdescRight">DDS가 수신 timestamp와 source timestamp 중 어느 쪽으로 sample을 정렬할지 선택합니다.  <a href="classdds_1_1core_1_1policy_1_1_t_destination_order.html#details">더 자세히 ...</a><br/></td></tr>
-<tr class="memitem:dds_3A_3Acore_3A_3Apolicy_3A_3ATHistory_3C_20D_20_3E" id="r_dds_3A_3Acore_3A_3Apolicy_3A_3ATHistory_3C_20D_20_3E"><td class="memItemLeft">클래스  </td><td class="memItemRight"><a class="el" href="classdds_1_1core_1_1policy_1_1_t_history.html">dds::core::policy::THistory&lt; D &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft"> </td><td class="mdescRight">각 instance에 대한 sample 보유 제어  <a href="classdds_1_1core_1_1policy_1_1_t_history.html#details">더 자세히 ...</a><br/></td></tr>
-<tr class="memitem:dds_3A_3Acore_3A_3Apolicy_3A_3ATResourceLimits_3C_20D_20_3E" id="r_dds_3A_3Acore_3A_3Apolicy_3A_3ATResourceLimits_3C_20D_20_3E"><td class="memItemLeft">클래스  </td><td class="memItemRight"><a class="el" href="classdds_1_1core_1_1policy_1_1_t_resource_limits.html">dds::core::policy::TResourceLimits&lt; D &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft"> </td><td class="mdescRight">Entity가 유지할 수 있는 sample과 instance를 제한합니다.  <a href="classdds_1_1core_1_1policy_1_1_t_resource_limits.html#details">더 자세히 ...</a><br/></td></tr>
-<tr class="memitem:dds_3A_3Acore_3A_3Apolicy_3A_3ATLiveliness_3C_20D_20_3E" id="r_dds_3A_3Acore_3A_3Apolicy_3A_3ATLiveliness_3C_20D_20_3E"><td class="memItemLeft">클래스  </td><td class="memItemRight"><a class="el" href="classdds_1_1core_1_1policy_1_1_t_liveliness.html">dds::core::policy::TLiveliness&lt; D &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft"> </td><td class="mdescRight">DataWriter가 활동을 주장하는 방법과 DataReader가 그 손실을 감지하는 방법을 제어합니다.  <a href="classdds_1_1core_1_1policy_1_1_t_liveliness.html#details">더 자세히 ...</a><br/></td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-typedef-members"><a id="typedef-members" name="typedef-members"></a>
-타입정의</h2></td></tr>
-<tr class="memitem:gaaa67e0ee7026fecfed9eb32f2c425721" id="r_gaaa67e0ee7026fecfed9eb32f2c425721"><td class="memItemLeft">typedef dds::core::policy::detail::Deadline </td><td class="memItemRight"><a class="el" href="#gaaa67e0ee7026fecfed9eb32f2c425721">dds::core::policy::Deadline</a></td></tr>
-<tr class="memdesc:gaaa67e0ee7026fecfed9eb32f2c425721"><td class="mdescLeft"> </td><td class="mdescRight">instance의 업데이트 사이에 예상되는 최대 간격을 설정합니다  <br/></td></tr>
-<tr class="memitem:gac7ed58b137ff6a6ddcb2c7d8690169c5" id="r_gac7ed58b137ff6a6ddcb2c7d8690169c5"><td class="memItemLeft">typedef dds::core::policy::detail::DestinationOrder </td><td class="memItemRight"><a class="el" href="#gac7ed58b137ff6a6ddcb2c7d8690169c5">dds::core::policy::DestinationOrder</a></td></tr>
-<tr class="memdesc:gac7ed58b137ff6a6ddcb2c7d8690169c5"><td class="mdescLeft"> </td><td class="mdescRight">DDS가 수신 timestamp와 source timestamp 중 어느 쪽으로 sample을 정렬할지 선택합니다.  <br/></td></tr>
-<tr class="memitem:gaa70a30964093541160b34558877d3438" id="r_gaa70a30964093541160b34558877d3438"><td class="memItemLeft">typedef dds::core::policy::detail::Durability </td><td class="memItemRight"><a class="el" href="#gaa70a30964093541160b34558877d3438">dds::core::policy::Durability</a></td></tr>
-<tr class="memdesc:gaa70a30964093541160b34558877d3438"><td class="mdescLeft"> </td><td class="mdescRight">DataReader가 일치하기 전에 작성된 sample이 해당 DataReader에 도달할 수 있는지 여부를 제어합니다.  <br/></td></tr>
-<tr class="memitem:ga8cd8b50090e916a2a494b23c8592a721" id="r_ga8cd8b50090e916a2a494b23c8592a721"><td class="memItemLeft">typedef dds::core::policy::detail::EntityFactory </td><td class="memItemRight"><a class="el" href="#ga8cd8b50090e916a2a494b23c8592a721">dds::core::policy::EntityFactory</a></td></tr>
-<tr class="memdesc:ga8cd8b50090e916a2a494b23c8592a721"><td class="mdescLeft"> </td><td class="mdescRight">팩토리가 생성한 Entity를 자동으로 사용할지 여부를 제어합니다.  <br/></td></tr>
-<tr class="memitem:ga1bcd7764c7126aa6ac3edcc8c5231433" id="r_ga1bcd7764c7126aa6ac3edcc8c5231433"><td class="memItemLeft">typedef dds::core::policy::detail::GroupData </td><td class="memItemRight"><a class="el" href="#ga1bcd7764c7126aa6ac3edcc8c5231433">dds::core::policy::GroupData</a></td></tr>
-<tr class="memdesc:ga1bcd7764c7126aa6ac3edcc8c5231433"><td class="mdescLeft"> </td><td class="mdescRight">Publisher 또는 Subscriber에 애플리케이션 정의 데이터를 전송합니다.  <br/></td></tr>
-<tr class="memitem:gac131ef99ba345cff7ae780d5d30ff130" id="r_gac131ef99ba345cff7ae780d5d30ff130"><td class="memItemLeft">typedef dds::core::policy::detail::History </td><td class="memItemRight"><a class="el" href="#gac131ef99ba345cff7ae780d5d30ff130">dds::core::policy::History</a></td></tr>
-<tr class="memdesc:gac131ef99ba345cff7ae780d5d30ff130"><td class="mdescLeft"> </td><td class="mdescRight">각 instance에 대한 sample 보유 제어  <br/></td></tr>
-<tr class="memitem:ga50f7bda0cda1b76fbd4e374627540e7c" id="r_ga50f7bda0cda1b76fbd4e374627540e7c"><td class="memItemLeft">typedef dds::core::policy::detail::LatencyBudget </td><td class="memItemRight"><a class="el" href="#ga50f7bda0cda1b76fbd4e374627540e7c">dds::core::policy::LatencyBudget</a></td></tr>
-<tr class="memdesc:ga50f7bda0cda1b76fbd4e374627540e7c"><td class="mdescLeft"> </td><td class="mdescRight">미들웨어의 전송 결정을 위한 <a class="el" href="#ga50f7bda0cda1b76fbd4e374627540e7c" title="미들웨어의 전송 결정을 위한 LatencyBudget 제공">LatencyBudget</a> 제공  <br/></td></tr>
-<tr class="memitem:ga32f298a740cb29ba2d6bfec2bf4871b9" id="r_ga32f298a740cb29ba2d6bfec2bf4871b9"><td class="memItemLeft">typedef dds::core::policy::detail::Lifespan </td><td class="memItemRight"><a class="el" href="#ga32f298a740cb29ba2d6bfec2bf4871b9">dds::core::policy::Lifespan</a></td></tr>
-<tr class="memdesc:ga32f298a740cb29ba2d6bfec2bf4871b9"><td class="mdescLeft"> </td><td class="mdescRight">기록한 sample을 전달할 수 있는 기간을 설정합니다.  <br/></td></tr>
-<tr class="memitem:ga6d270a5e784d2fc600382fdd467d6a56" id="r_ga6d270a5e784d2fc600382fdd467d6a56"><td class="memItemLeft">typedef dds::core::policy::detail::Liveliness </td><td class="memItemRight"><a class="el" href="#ga6d270a5e784d2fc600382fdd467d6a56">dds::core::policy::Liveliness</a></td></tr>
-<tr class="memdesc:ga6d270a5e784d2fc600382fdd467d6a56"><td class="mdescLeft"> </td><td class="mdescRight">DataWriter가 활동을 주장하는 방법과 DataReader가 그 손실을 감지하는 방법을 제어합니다.  <br/></td></tr>
-<tr class="memitem:ga2b55aa93f052e74de626f42665c5785f" id="r_ga2b55aa93f052e74de626f42665c5785f"><td class="memItemLeft">typedef dds::core::policy::detail::Ownership </td><td class="memItemRight"><a class="el" href="#ga2b55aa93f052e74de626f42665c5785f">dds::core::policy::Ownership</a></td></tr>
-<tr class="memdesc:ga2b55aa93f052e74de626f42665c5785f"><td class="mdescLeft"> </td><td class="mdescRight">여러 쓰기자가 동일한 instance를 업데이트할 수 있는 방법을 선택합니다.  <br/></td></tr>
-<tr class="memitem:gac074ac347c0a510da871ae3949551efa" id="r_gac074ac347c0a510da871ae3949551efa"><td class="memItemLeft">typedef dds::core::policy::detail::OwnershipStrength </td><td class="memItemRight"><a class="el" href="#gac074ac347c0a510da871ae3949551efa">dds::core::policy::OwnershipStrength</a></td></tr>
-<tr class="memdesc:gac074ac347c0a510da871ae3949551efa"><td class="mdescLeft"> </td><td class="mdescRight">독점 소유권을 위한 DataWriter의 우선순위를 지정합니다  <br/></td></tr>
-<tr class="memitem:ga9676f77e95c6e5d1c732604d9e7ead38" id="r_ga9676f77e95c6e5d1c732604d9e7ead38"><td class="memItemLeft">typedef dds::core::policy::detail::Partition </td><td class="memItemRight"><a class="el" href="#ga9676f77e95c6e5d1c732604d9e7ead38">dds::core::policy::Partition</a></td></tr>
-<tr class="memdesc:ga9676f77e95c6e5d1c732604d9e7ead38"><td class="mdescLeft"> </td><td class="mdescRight">domain 내에서 논리적 Publisher 및 Subscriber 일치 제어  <br/></td></tr>
-<tr class="memitem:ga2b52bb5f851fa675b14a1d1ac57d6b15" id="r_ga2b52bb5f851fa675b14a1d1ac57d6b15"><td class="memItemLeft">typedef dds::core::policy::detail::Presentation </td><td class="memItemRight"><a class="el" href="#ga2b52bb5f851fa675b14a1d1ac57d6b15">dds::core::policy::Presentation</a></td></tr>
-<tr class="memdesc:ga2b52bb5f851fa675b14a1d1ac57d6b15"><td class="mdescLeft"> </td><td class="mdescRight"><a class="el" href="#ga2b52bb5f851fa675b14a1d1ac57d6b15" title="Presentation 범위를 구성하고 일관된 또는 정렬된 액세스 요청">Presentation</a> 범위를 구성하고 일관된 또는 정렬된 액세스 요청  <br/></td></tr>
-<tr class="memitem:ga96baccf815251c55c31cbe36b3a139e2" id="r_ga96baccf815251c55c31cbe36b3a139e2"><td class="memItemLeft">typedef dds::core::policy::detail::ReaderDataLifecycle </td><td class="memItemRight"><a class="el" href="#ga96baccf815251c55c31cbe36b3a139e2">dds::core::policy::ReaderDataLifecycle</a></td></tr>
-<tr class="memdesc:ga96baccf815251c55c31cbe36b3a139e2"><td class="mdescLeft"> </td><td class="mdescRight">DataReader가 처분된 instance와 기록되지 않은 instance sample을 정리할 때 설정  <br/></td></tr>
-<tr class="memitem:gae1ee89c57fc5fa311721b4511e559783" id="r_gae1ee89c57fc5fa311721b4511e559783"><td class="memItemLeft">typedef dds::core::policy::detail::Reliability </td><td class="memItemRight"><a class="el" href="#gae1ee89c57fc5fa311721b4511e559783">dds::core::policy::Reliability</a></td></tr>
-<tr class="memdesc:gae1ee89c57fc5fa311721b4511e559783"><td class="mdescLeft"> </td><td class="mdescRight">DataWriter가 제공하거나 DataReader가 요청하는 전달 Reliability를 제어합니다.  <br/></td></tr>
-<tr class="memitem:gabeeea78bb9eaac8652578f9addc33372" id="r_gabeeea78bb9eaac8652578f9addc33372"><td class="memItemLeft">typedef dds::core::policy::detail::ResourceLimits </td><td class="memItemRight"><a class="el" href="#gabeeea78bb9eaac8652578f9addc33372">dds::core::policy::ResourceLimits</a></td></tr>
-<tr class="memdesc:gabeeea78bb9eaac8652578f9addc33372"><td class="mdescLeft"> </td><td class="mdescRight">Entity가 유지할 수 있는 sample과 instance를 제한합니다.  <br/></td></tr>
-<tr class="memitem:ga25ed9d287d76401671576ec64559df07" id="r_ga25ed9d287d76401671576ec64559df07"><td class="memItemLeft">typedef dds::core::policy::detail::TimeBasedFilter </td><td class="memItemRight"><a class="el" href="#ga25ed9d287d76401671576ec64559df07">dds::core::policy::TimeBasedFilter</a></td></tr>
-<tr class="memdesc:ga25ed9d287d76401671576ec64559df07"><td class="mdescLeft"> </td><td class="mdescRight">DataReader가 선택하는 sample 간 최소 간격을 설정합니다  <br/></td></tr>
-<tr class="memitem:ga15f95e2eef1f4dd215378d04701b71c9" id="r_ga15f95e2eef1f4dd215378d04701b71c9"><td class="memItemLeft">typedef dds::core::policy::detail::TopicData </td><td class="memItemRight"><a class="el" href="#ga15f95e2eef1f4dd215378d04701b71c9">dds::core::policy::TopicData</a></td></tr>
-<tr class="memdesc:ga15f95e2eef1f4dd215378d04701b71c9"><td class="mdescLeft"> </td><td class="mdescRight">Topic과 관련된 애플리케이션 정의 데이터를 수행합니다.  <br/></td></tr>
-<tr class="memitem:ga9bfb28a8f810b731fc10a3506d687ea0" id="r_ga9bfb28a8f810b731fc10a3506d687ea0"><td class="memItemLeft">typedef dds::core::policy::detail::TransportPriority </td><td class="memItemRight"><a class="el" href="#ga9bfb28a8f810b731fc10a3506d687ea0">dds::core::policy::TransportPriority</a></td></tr>
-<tr class="memdesc:ga9bfb28a8f810b731fc10a3506d687ea0"><td class="mdescLeft"> </td><td class="mdescRight">상대적 전송 우선순위 힌트를 제공합니다  <br/></td></tr>
-<tr class="memitem:ga3082013b21e53c2cb3c462fcd1151d77" id="r_ga3082013b21e53c2cb3c462fcd1151d77"><td class="memItemLeft">typedef dds::core::policy::detail::UserData </td><td class="memItemRight"><a class="el" href="#ga3082013b21e53c2cb3c462fcd1151d77">dds::core::policy::UserData</a></td></tr>
-<tr class="memdesc:ga3082013b21e53c2cb3c462fcd1151d77"><td class="mdescLeft"> </td><td class="mdescRight">검색을 위한 애플리케이션 정의 데이터 수행  <br/></td></tr>
-<tr class="memitem:gadd857380ad57a062aa880b3d612671dd" id="r_gadd857380ad57a062aa880b3d612671dd"><td class="memItemLeft">typedef dds::core::policy::detail::WriterDataLifecycle </td><td class="memItemRight"><a class="el" href="#gadd857380ad57a062aa880b3d612671dd">dds::core::policy::WriterDataLifecycle</a></td></tr>
-<tr class="memdesc:gadd857380ad57a062aa880b3d612671dd"><td class="mdescLeft"> </td><td class="mdescRight">instance를 등록 해제하면 자동으로 삭제되는지 여부 제어  <br/></td></tr>
-</table>
-<a id="details" name="details"></a><h2 class="groupheader" id="header-details">상세한 설명</h2>
-<div class="textblock"><p>Entity 설정과 endpoint 호환성에 쓰는 정책입니다. </p>
-<p>Entity마다 지원하는 QoS 정책이 다릅니다. 생성 전에 정책을 설정하거나 생성 후 QoS 설정 함수를 호출하세요.</p>
-<p>호환성은 <a class="el" href="#qos_matching_policies" title="매칭 정책">매칭 정책</a> 에서, 설정이 적용된 경로는 <a class="el" href="#qos_defaults_source" title="Entity의 QoS 출처">Entity의 QoS 출처</a> 에서, 연결 진단은 <a class="el" href="#matching_guide" title="DataWriter와 DataReader가 데이터를 교환하지 못할 때 진단하기">DataWriter와 DataReader가 데이터를 교환하지 못할 때 진단하기</a> 에서 확인하세요.</p>
-<h1 class="doxsection"><a class="anchor" id="qos_policy_summary"></a>
-QoS 정책 요약</h1>
-<p>표는 초기 기본값입니다. 설정이나 Publisher 및 Subscriber의 기본 QoS에 따라 달라질 수 있습니다. 실제 값은 각 Entity의 QoS에서 확인하세요.</p>
-<p>매칭 영향은 DataWriter와 DataReader의 호환 여부를 기준으로 합니다. DataWriter는 생성할 때 정책을 설정하세요.</p>
-<h2 class="doxsection"><a class="anchor" id="qos_matching_policies"></a>
-매칭 정책</h2>
-<table class="markdownTable">
-<tr class="markdownTableHead">
-<th class="markdownTableHeadNone">정책  </th><th class="markdownTableHeadNone">적용 대상  </th><th class="markdownTableHeadNone">초기 기본값  </th><th class="markdownTableHeadNone">설정 시점  </th><th class="markdownTableHeadNone">매칭 영향  </th></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone"><a class="el" href="classdds_1_1core_1_1policy_1_1_t_reliability.html" title="dds::core::policy::TReliability">Reliability</a>  </td><td class="markdownTableBodyNone">Topic, DataWriter, DataReader  </td><td class="markdownTableBodyNone">DataWriter는 <span class="tt">RELIABLE</span>, Topic과 DataReader는 <span class="tt">BEST_EFFORT</span>.  </td><td class="markdownTableBodyNone">생성 시  </td><td class="markdownTableBodyNone">있음  </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone"><a class="el" href="classdds_1_1core_1_1policy_1_1_t_durability.html" title="dds::core::policy::TDurability">Durability</a>  </td><td class="markdownTableBodyNone">Topic, DataWriter, DataReader  </td><td class="markdownTableBodyNone"><span class="tt">VOLATILE</span>  </td><td class="markdownTableBodyNone">생성 시  </td><td class="markdownTableBodyNone">있음  </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone"><a class="el" href="classdds_1_1core_1_1policy_1_1_t_deadline.html" title="dds::core::policy::TDeadline">Deadline</a>  </td><td class="markdownTableBodyNone">Topic, DataWriter, DataReader  </td><td class="markdownTableBodyNone">무한 주기  </td><td class="markdownTableBodyNone">Topic의 QoS setter. Endpoint 타이머는 생성 시 설정.  </td><td class="markdownTableBodyNone">있음  </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone"><a class="el" href="classdds_1_1core_1_1policy_1_1_t_destination_order.html" title="dds::core::policy::TDestinationOrder">DestinationOrder</a>  </td><td class="markdownTableBodyNone">Topic, DataWriter, DataReader  </td><td class="markdownTableBodyNone"><span class="tt">BY_RECEPTION_TIMESTAMP</span>  </td><td class="markdownTableBodyNone">생성 시  </td><td class="markdownTableBodyNone">있음  </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone"><a class="el" href="classdds_1_1core_1_1policy_1_1_t_latency_budget.html" title="dds::core::policy::TLatencyBudget">LatencyBudget</a>  </td><td class="markdownTableBodyNone">Topic, DataWriter, DataReader  </td><td class="markdownTableBodyNone">0초  </td><td class="markdownTableBodyNone">Topic과 DataReader의 QoS setter. DataWriter는 생성 시 설정.  </td><td class="markdownTableBodyNone">있음  </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone"><a class="el" href="classdds_1_1core_1_1policy_1_1_t_liveliness.html" title="dds::core::policy::TLiveliness">Liveliness</a>  </td><td class="markdownTableBodyNone">Topic, DataWriter, DataReader  </td><td class="markdownTableBodyNone"><span class="tt">AUTOMATIC</span>, 무한 lease  </td><td class="markdownTableBodyNone">생성 시  </td><td class="markdownTableBodyNone">있음  </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone"><a class="el" href="classdds_1_1core_1_1policy_1_1_t_ownership.html" title="dds::core::policy::TOwnership">Ownership</a>  </td><td class="markdownTableBodyNone">Topic, DataWriter, DataReader  </td><td class="markdownTableBodyNone"><span class="tt">SHARED</span>  </td><td class="markdownTableBodyNone">생성 시  </td><td class="markdownTableBodyNone">있음  </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone"><a class="el" href="classdds_1_1core_1_1policy_1_1_t_partition.html" title="dds::core::policy::TPartition">Partition</a>  </td><td class="markdownTableBodyNone">Publisher, Subscriber  </td><td class="markdownTableBodyNone">기본 partition(빈 이름)  </td><td class="markdownTableBodyNone">QoS setter  </td><td class="markdownTableBodyNone">있음  </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone"><a class="el" href="classdds_1_1core_1_1policy_1_1_t_presentation.html" title="dds::core::policy::TPresentation">Presentation</a>  </td><td class="markdownTableBodyNone">Publisher, Subscriber  </td><td class="markdownTableBodyNone"><span class="tt">INSTANCE</span>. Coherent access와 ordered access는 비활성화.  </td><td class="markdownTableBodyNone">생성 시  </td><td class="markdownTableBodyNone">있음  </td></tr>
-</table>
-<div class="image">
-<object data="dds-diagram-offered-requested-ko.svg" style="pointer-events: none;" type="image/svg+xml"></object>
-<div class="caption">
-제공 QoS와 요청 QoS의 호환 조건</div></div>
- <p>DataReader의 QoS를 변경하면 상대 endpoint에 알리는 <span class="tt">Deadline</span> 값도 바뀔 수 있습니다. Reader의 deadline 타이머에는 생성 시 설정한 주기가 적용됩니다.</p>
-<p>DDS Security를 사용하면 DataWriter를 만들기 전에 Publisher의 partition을 설정하세요.</p>
-<h2 class="doxsection"><a class="anchor" id="qos_delivery_policies"></a>
-보관 및 전달 정책</h2>
-<table class="markdownTable">
-<tr class="markdownTableHead">
-<th class="markdownTableHeadNone">정책  </th><th class="markdownTableHeadNone">적용 대상  </th><th class="markdownTableHeadNone">초기 기본값  </th><th class="markdownTableHeadNone">설정 시점  </th><th class="markdownTableHeadNone">매칭 영향  </th></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone"><a class="el" href="classdds_1_1core_1_1policy_1_1_t_history.html" title="dds::core::policy::THistory">History</a>  </td><td class="markdownTableBodyNone">Topic, DataWriter, DataReader  </td><td class="markdownTableBodyNone"><span class="tt">KEEP_LAST</span>, depth는 <span class="tt">LENGTH_UNLIMITED</span>  </td><td class="markdownTableBodyNone">생성 시  </td><td class="markdownTableBodyNone">없음  </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone"><a class="el" href="classdds_1_1core_1_1policy_1_1_t_resource_limits.html" title="dds::core::policy::TResourceLimits">ResourceLimits</a>  </td><td class="markdownTableBodyNone">Topic, DataWriter, DataReader  </td><td class="markdownTableBodyNone">한도 세 가지 모두 <span class="tt">LENGTH_UNLIMITED</span>  </td><td class="markdownTableBodyNone">생성 시  </td><td class="markdownTableBodyNone">없음  </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone"><a class="el" href="classdds_1_1core_1_1policy_1_1_t_lifespan.html" title="dds::core::policy::TLifespan">Lifespan</a>  </td><td class="markdownTableBodyNone">Topic, DataWriter  </td><td class="markdownTableBodyNone">무한 시간  </td><td class="markdownTableBodyNone">Topic의 QoS setter. DataWriter는 생성 시 설정.  </td><td class="markdownTableBodyNone">없음  </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone"><a class="el" href="classdds_1_1core_1_1policy_1_1_t_ownership_strength.html" title="dds::core::policy::TOwnershipStrength">OwnershipStrength</a>  </td><td class="markdownTableBodyNone">DataWriter  </td><td class="markdownTableBodyNone"><span class="tt">0</span>  </td><td class="markdownTableBodyNone">생성 시  </td><td class="markdownTableBodyNone">없음  </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone"><a class="el" href="classdds_1_1core_1_1policy_1_1_t_reader_data_lifecycle.html" title="dds::core::policy::TReaderDataLifecycle">ReaderDataLifecycle</a>  </td><td class="markdownTableBodyNone">DataReader  </td><td class="markdownTableBodyNone">writer가 없으면 무한, dispose 시 0  </td><td class="markdownTableBodyNone">생성 시  </td><td class="markdownTableBodyNone">없음  </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone"><a class="el" href="classdds_1_1core_1_1policy_1_1_t_time_based_filter.html" title="dds::core::policy::TTimeBasedFilter">TimeBasedFilter</a>  </td><td class="markdownTableBodyNone">DataReader  </td><td class="markdownTableBodyNone">최소 간격 0초  </td><td class="markdownTableBodyNone">생성 시  </td><td class="markdownTableBodyNone">없음  </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone"><a class="el" href="classdds_1_1core_1_1policy_1_1_t_writer_data_lifecycle.html" title="dds::core::policy::TWriterDataLifecycle">WriterDataLifecycle</a>  </td><td class="markdownTableBodyNone">DataWriter  </td><td class="markdownTableBodyNone">등록 해제 시 자동 dispose  </td><td class="markdownTableBodyNone">생성 시  </td><td class="markdownTableBodyNone">없음  </td></tr>
-</table>
-<p><span class="tt">OwnershipStrength</span>는 매칭된 writer 중 <span class="tt">EXCLUSIVE</span> instance를 담당할 writer를 결정합니다. 필터와 삭제 지연을 적용하려면 reader를 생성할 때 <span class="tt">TimeBasedFilter</span>와 <span class="tt">ReaderDataLifecycle</span>을 설정하세요.</p>
-<h2 class="doxsection"><a class="anchor" id="qos_metadata_policies"></a>
-메타데이터와 Entity 생성 정책</h2>
-<table class="markdownTable">
-<tr class="markdownTableHead">
-<th class="markdownTableHeadNone">정책  </th><th class="markdownTableHeadNone">적용 대상  </th><th class="markdownTableHeadNone">초기 기본값  </th><th class="markdownTableHeadNone">설정 시점  </th><th class="markdownTableHeadNone">매칭 영향  </th></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone"><a class="el" href="classdds_1_1core_1_1policy_1_1_t_entity_factory.html" title="dds::core::policy::TEntityFactory">EntityFactory</a>  </td><td class="markdownTableBodyNone">DomainParticipant, Publisher, Subscriber  </td><td class="markdownTableBodyNone">새 하위 Entity 자동 활성화  </td><td class="markdownTableBodyNone">QoS setter. 이후 생성하는 하위 Entity에 적용.  </td><td class="markdownTableBodyNone">없음  </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone"><a class="el" href="classdds_1_1core_1_1policy_1_1_t_group_data.html" title="dds::core::policy::TGroupData">GroupData</a>  </td><td class="markdownTableBodyNone">Publisher, Subscriber  </td><td class="markdownTableBodyNone">빈 바이트 시퀀스  </td><td class="markdownTableBodyNone">QoS setter  </td><td class="markdownTableBodyNone">없음  </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone"><a class="el" href="classdds_1_1core_1_1policy_1_1_t_topic_data.html" title="dds::core::policy::TTopicData">TopicData</a>  </td><td class="markdownTableBodyNone">Topic  </td><td class="markdownTableBodyNone">빈 바이트 시퀀스  </td><td class="markdownTableBodyNone">QoS setter  </td><td class="markdownTableBodyNone">없음  </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone"><a class="el" href="classdds_1_1core_1_1policy_1_1_t_user_data.html" title="dds::core::policy::TUserData">UserData</a>  </td><td class="markdownTableBodyNone">DomainParticipant, DataWriter, DataReader  </td><td class="markdownTableBodyNone">빈 바이트 시퀀스  </td><td class="markdownTableBodyNone">DomainParticipant와 DataReader의 QoS setter. DataWriter는 생성 시 설정.  </td><td class="markdownTableBodyNone">없음  </td></tr>
-</table>
-<h2 class="doxsection"><a class="anchor" id="qos_defaults_source"></a>
-Entity의 QoS 출처</h2>
-<div class="image">
-<object data="dds-diagram-qos-defaults-ko.svg" style="pointer-events: none;" type="image/svg+xml"></object>
-<div class="caption">
-새 Entity의 QoS 선택</div></div>
- <table class="markdownTable">
-<tr class="markdownTableHead">
-<th class="markdownTableHeadNone">생성 방식  </th><th class="markdownTableHeadNone">정책 출처  </th></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">QoS를 지정하지 않고 <span class="tt">DataWriter</span> 또는 <span class="tt">DataReader</span> 생성  </td><td class="markdownTableBodyNone">해당 Endpoint에 대한 Publisher 또는 Subscriber의 현재 기본값입니다.  </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone"><span class="tt">Topic&lt;T&gt;(participant, name)</span> 생성  </td><td class="markdownTableBodyNone">기본 생성한 <span class="tt">TopicQos</span>입니다. Participant의 Topic 기본값을 사용하려면 <span class="tt">participant.default_topic_qos()</span>를 명시적으로 전달하세요.  </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">Topic, Publisher, Subscriber, DataWriter, DataReader를 명시적인 QoS로 생성  </td><td class="markdownTableBodyNone">전달한 값을 사용합니다. 바꾸지 않을 정책을 유지하려면 부모의 기본값에서 시작합니다.  </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">DomainParticipant 생성  </td><td class="markdownTableBodyNone">Factory 기본값을 사용합니다. 이 릴리스에서는 QoS 인수가 있는 생성자도 factory 기본값을 사용합니다. <a class="el" href="group__dds__tutorial__participant.html#participant_qos_sources" title="QoS 설정 범위 선택">QoS 설정 범위 선택</a> 를 참조하세요.  </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone"><span class="tt">TopicQos</span>로 <span class="tt">DataWriterQos</span> 또는 <span class="tt">DataReaderQos</span> 생성  </td><td class="markdownTableBodyNone">Endpoint 기본값에 대응하는 Topic 정책을 복사합니다. Endpoint에만 있는 정책은 기본값을 유지합니다.  </td></tr>
-</table>
-<p>정책을 수정하기 전에 사용할 기본값을 선택하세요. 상위 Entity의 기본값을 바꾸면 이후 QoS를 명시하지 않고 생성하는 하위 Entity에 새 기본값을 적용합니다.</p>
-<p>호환 조건은 <a class="el" href="#matching_guide" title="DataWriter와 DataReader가 데이터를 교환하지 못할 때 진단하기">DataWriter와 DataReader가 데이터를 교환하지 못할 때 진단하기</a> 에서, 예제는 <a class="el" href="group__dds__howto__qos.html" title="QoS와 sample 전달">QoS와 sample 전달</a> 에서 확인하세요.</p>
-<h1 class="doxsection"><a class="anchor" id="matching_guide"></a>
-DataWriter와 DataReader가 데이터를 교환하지 못할 때 진단하기</h1>
-<p>DDS가 discovery를 마칠 때까지 DataWriter와 DataReader를 하나씩 실행해 두세요. 빌드와 실행 명령은 <a class="el" href="group__dds__domain.html#getting_started" title="첫 번째 sample 송수신">첫 번째 sample 송수신</a> 에 있습니다.</p>
-<div class="image">
-<object data="dds-diagram-matching-flow-ko.svg" style="pointer-events: none;" type="image/svg+xml"></object>
-<div class="caption">
-Endpoint 매칭과 샘플 선택 조건 확인</div></div>
- <h2 class="doxsection"><a class="anchor" id="matching_checks"></a>
-endpoint 구성 확인</h2>
-<ol type="1">
-<li>DomainParticipant의 domain ID를 비교하세요. Publisher와 Subscriber는 같은 DDS domain에 참여해야 합니다. 두 프로세스가 실행 중이며 지정한 네트워크에서 서로를 발견할 수 있는지 확인하세요.</li>
-<li>양쪽의 Topic 이름, 등록한 타입, 필드 정의, key를 비교하세요.</li>
-<li>Publisher와 Subscriber의 <span class="tt">Partition</span> 목록에 일치하는 이름이 하나 이상 있어야 합니다. 빈 목록은 이름이 빈 기본 Partition을 사용합니다.</li>
-<li>endpoint의 QoS를 비교하세요. DataWriter는 서비스 수준을 제공하고 DataReader는 서비스 수준을 요청합니다. 아래의 matching 횟수와 비호환 QoS 횟수를 확인해 DDS가 두 endpoint를 연결했는지 판단합니다.</li>
-<li>endpoint가 연결됐다면 새 sample을 기록하고 DataReader가 어떤 sample을 선택하는지 확인하세요. content filter는 sample을 제외할 수 있습니다. 상태 또는 instance 필터에 따라 특정 읽기나 가져오기 연산에서 sample이 빠질 수도 있습니다. payload에 접근하기 전에 <span class="tt">sample.info().valid()</span>를 확인하세요. 수신 연산은 <a class="el" href="group__dds__subscription.html#receiving_guide" title="sample 수신과 선택">sample 수신과 선택</a> 항목을 참조해 선택하세요.</li>
-</ol>
-<p>두 프로세스에서 <span class="tt">topic.name()</span>과 <span class="tt">topic.type_name()</span>을 출력하세요. Topic 이름이 같으면 등록 타입과 IDL의 필드 및 key를 따로 비교합니다.</p>
-<h2 class="doxsection"><a class="anchor" id="matching_hosts"></a>
-두 PC에서 실행할 때 진단</h2>
-<p>먼저 한 PC에서 두 프로세스 예제를 실행하세요. 각 PC에서 실행 파일이 의도한 SDK와 바인딩을 로드하는지 확인하고, PC마다 endpoint 하나씩 실행합니다. 매칭 수가 0이면 인터페이스와 네트워크 규칙이 DDS discovery를 허용하는지 확인하세요. 매칭 뒤에는 새 sample을 보내고 DataReader의 필터와 상태를 확인합니다.</p>
-<h2 class="doxsection"><a class="anchor" id="matching_policies"></a>
-관련 QoS 정책 비교</h2>
-<table class="markdownTable">
-<tr class="markdownTableHead">
-<th class="markdownTableHeadNone">정책  </th><th class="markdownTableHeadNone">설정 대상  </th><th class="markdownTableHeadNone">비교 항목  </th></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">Partition  </td><td class="markdownTableBodyNone">Publisher 및 Subscriber  </td><td class="markdownTableBodyNone">적어도 하나의 일치하는 Partition 이름이 있습니다.  </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">Reliability  </td><td class="markdownTableBodyNone">DataWriter 및 DataReader  </td><td class="markdownTableBodyNone"><span class="tt">RELIABLE</span> DataReader에는 <span class="tt">RELIABLE</span> DataWriter가 필요합니다. <span class="tt">BEST_EFFORT</span> DataReader는 두 종류의 DataWriter와 모두 연결할 수 있습니다.  </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">Durability  </td><td class="markdownTableBodyNone">DataWriter 및 DataReader  </td><td class="markdownTableBodyNone"><span class="tt">TRANSIENT_LOCAL</span> DataReader에는 <span class="tt">TRANSIENT_LOCAL</span> DataWriter가 필요합니다. <span class="tt">VOLATILE</span> DataReader는 두 종류의 DataWriter와 모두 연결할 수 있습니다.  </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">Deadline  </td><td class="markdownTableBodyNone">DataWriter 및 DataReader  </td><td class="markdownTableBodyNone">DataWriter가 제공하는 갱신 주기는 DataReader가 요청한 주기보다 작거나 같아야 합니다.  </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">History  </td><td class="markdownTableBodyNone">DataWriter 및 DataReader  </td><td class="markdownTableBodyNone">instance별 sample 보존을 제어합니다. 각 endpoint는 history 종류와 깊이를 개별 설정할 수 있습니다.  </td></tr>
-</table>
-<p>이 점검에서는 endpoint를 만들 때 사용할 정책을 명시하세요. Reliability, Durability 또는 History를 변경하려면 DataReader나 DataWriter를 다시 생성합니다. 기록 이후에 연결된 DataReader에도 보존한 sample을 전달하려면 양쪽에 <span class="tt">TRANSIENT_LOCAL</span>을 지정하고 sample 보존을 설정하세요. 정책별 설명은 <a class="el" href="group__dds__qos.html" title="Quality of Service">Quality of Service</a> 항목을 참조하세요.</p>
-<h2 class="doxsection"><a class="anchor" id="matching_status"></a>
-상태 스냅샷 읽기</h2>
-<p>DataReader에서는 <span class="tt">subscription_matched_status().current_count()</span>를, DataWriter에서는 <span class="tt">publication_matched_status().current_count()</span>를 확인하세요. 값이 양수이면 현재 연결된 상대 endpoint가 하나 이상 있습니다. 누적 matching 횟수는 상대 endpoint가 종료한 뒤에도 양수로 남을 수 있습니다.</p>
-<p>DataReader의 <span class="tt">requested_incompatible_qos_status()</span>와 DataWriter의 <span class="tt">offered_incompatible_qos_staus()</span>를 확인하세요. 새 시험에서 <span class="tt">total_count()</span>가 양수이면 DDS가 호환되지 않는 QoS 설정을 발견한 것입니다. <span class="tt">last_policy_id()</span>로 가장 최근에 보고된 정책을 확인할 수 있습니다. 횟수가 계속 0이면 발견, Topic, Partition 설정을 계속 점검하세요. 둘 이상의 구성 요소에서 변화량이 필요하면 반환된 스냅샷을 보관합니다. 상태를 읽으면 해당 변화량은 0으로 초기화되고 Entity의 해당 변경 플래그가 해제됩니다.</p>
-<p><span class="tt">wait_for_acknowledgments()</span>는 이미 발행한 sample을 대상으로 합니다. 연결된 reliable DataReader가 없어도 예외 없이 반환할 수 있으므로, 상대 endpoint의 존재 여부는 매칭 상태를 확인하세요. 예외 처리와 다른 방식으로 실패를 보고하는 호출은 <a class="el" href="group__dds__core.html#api_usage_notes" title="오류와 스레드">오류와 스레드</a> 항목을 참조하세요.</p>
-<h2 class="doxsection"><a class="anchor" id="matching_reliability_example"></a>
-Reliability 불일치를 재현하고 수정</h2>
-<p>Hello World Publisher에서 DataWriter 선언을 아래 코드로 바꾸세요. 기존 <span class="tt">pub</span> 및 <span class="tt">topic</span> 변수를 사용합니다.</p>
-<div class="fragment"><div class="line"><a class="code hl_typedef" href="group__dds__publication.html#ga35ad9728577d4bdccfe8677bba0bcf5d">dds::pub::qos::DataWriterQos</a> writer_qos;</div>
-<div class="line">writer_qos &lt;&lt; dds::core::policy::Reliability::BestEffort();</div>
-<div class="line"><a class="code hl_class" href="classdds_1_1pub_1_1_data_writer.html">dds::pub::DataWriter&lt;T&gt;</a> dw(pub, topic, writer_qos);</div>
-<div class="ttc" id="aclassdds_1_1pub_1_1_data_writer_html"><div class="ttname"><a href="classdds_1_1pub_1_1_data_writer.html">dds::pub::DataWriter&lt;T&gt;</a></div><div class="ttdoc">데이터 타입이 지정된 Topic에 sample을 쓰고 instance를 관리합니다.</div><div class="ttdef"><b>정의</b> DataWriter.hpp:73</div></div>
-<div class="ttc" id="agroup__dds__publication_html_ga35ad9728577d4bdccfe8677bba0bcf5d"><div class="ttname"><a href="group__dds__publication.html#ga35ad9728577d4bdccfe8677bba0bcf5d">dds::pub::qos::DataWriterQos</a></div><div class="ttdeci">dds::pub::qos::detail::DataWriterQos DataWriterQos</div><div class="ttdoc">QoS DataWriter를 구성하는 데 사용되는 정책 세트</div><div class="ttdef"><b>정의</b> DataWriterQos.hpp:30</div></div>
-</div><!-- fragment --><p>Subscriber에서 DataReader 선언을 아래 코드로 바꾸세요.</p>
-<div class="fragment"><div class="line"><a class="code hl_typedef" href="group__dds__subscription.html#gac759142c11b5f0cb2b2a8f6c41405966">dds::sub::qos::DataReaderQos</a> reader_qos;</div>
-<div class="line">reader_qos &lt;&lt; dds::core::policy::Reliability::Reliable(<a class="code hl_function" href="classdds_1_1core_1_1_duration.html#ac4d51447780d8cedf9ee0ebb78863c98">dds::core::Duration::from_millisecs</a>(100));</div>
-<div class="line"><a class="code hl_class" href="classdds_1_1sub_1_1_data_reader.html">dds::sub::DataReader&lt;T&gt;</a> dr(sub, topic, reader_qos);</div>
-<div class="ttc" id="aclassdds_1_1core_1_1_duration_html_ac4d51447780d8cedf9ee0ebb78863c98"><div class="ttname"><a href="classdds_1_1core_1_1_duration.html#ac4d51447780d8cedf9ee0ebb78863c98">dds::core::Duration::from_millisecs</a></div><div class="ttdeci">static const Duration from_millisecs(int64_t milliseconds)</div><div class="ttdoc">밀리초 단위 값으로 기간을 생성합니다.</div></div>
-<div class="ttc" id="aclassdds_1_1sub_1_1_data_reader_html"><div class="ttname"><a href="classdds_1_1sub_1_1_data_reader.html">dds::sub::DataReader&lt;T&gt;</a></div><div class="ttdoc">Topic에서 지정된 타입의 sample을 수신합니다.</div><div class="ttdef"><b>정의</b> TDataReader.hpp:76</div></div>
-<div class="ttc" id="agroup__dds__subscription_html_gac759142c11b5f0cb2b2a8f6c41405966"><div class="ttname"><a href="group__dds__subscription.html#gac759142c11b5f0cb2b2a8f6c41405966">dds::sub::qos::DataReaderQos</a></div><div class="ttdeci">dds::sub::qos::detail::DataReaderQos DataReaderQos</div><div class="ttdoc">QoS DataReader를 구성하는 데 사용되는 정책 세트</div><div class="ttdef"><b>정의</b> DataReaderQos.hpp:12</div></div>
-</div><!-- fragment --><p>두 소스 파일에 <span class="tt">&lt;chrono&gt;</span>와 <span class="tt">&lt;thread&gt;</span>를 추가하세요. 점검하는 동안 Publisher가 실행 상태를 유지하도록 기록 호출 뒤에 <span class="tt">std::this_thread::sleep_for(std::chrono::seconds(10));</span>을 추가합니다. Subscriber의 무한 수신 루프를 아래 진단 루프로 바꾸세요. 5초의 진단 시간 안에 Subscriber를 먼저, Publisher를 나중에 시작합니다.</p>
-<div class="fragment"><div class="line"><span class="keyword">const</span> <span class="keyword">auto</span> end = std::chrono::steady_clock::now() + std::chrono::seconds(5);</div>
-<div class="line"><span class="keywordtype">bool</span> has_reported = <span class="keyword">false</span>;</div>
-<div class="line"><span class="keywordflow">while</span> (std::chrono::steady_clock::now() &lt; end)</div>
-<div class="line">{</div>
-<div class="line">    <span class="keywordflow">if</span> (dr.subscription_matched_status().current_count() &gt; 0)</div>
-<div class="line">    {</div>
-<div class="line">        std::cout &lt;&lt; <span class="stringliteral">"Reader matched a writer\n"</span>;</div>
-<div class="line">        has_reported = <span class="keyword">true</span>;</div>
-<div class="line">        <span class="keywordflow">break</span>;</div>
-<div class="line">    }</div>
-<div class="line"> </div>
-<div class="line">    <span class="keyword">const</span> <span class="keyword">auto</span> incompatible = dr.requested_incompatible_qos_status();</div>
-<div class="line">    <span class="keywordflow">if</span> (incompatible.total_count() &gt; 0)</div>
-<div class="line">    {</div>
-<div class="line">        <span class="keyword">const</span> <span class="keyword">auto</span> policy = incompatible.last_policy_id();</div>
-<div class="line">        <span class="keywordflow">if</span> (policy == <a class="code hl_class" href="classdds_1_1core_1_1policy_1_1policy__id.html">dds::core::policy::policy_id&lt;dds::core::policy::Reliability&gt;::value</a>)</div>
-<div class="line">            std::cout &lt;&lt; <span class="stringliteral">"Reliability mismatch\n"</span>;</div>
-<div class="line">        <span class="keywordflow">else</span></div>
-<div class="line">            std::cout &lt;&lt; <span class="stringliteral">"Incompatible QoS policy "</span> &lt;&lt; policy &lt;&lt; <span class="charliteral">'\n'</span>;</div>
-<div class="line"> </div>
-<div class="line">        has_reported = <span class="keyword">true</span>;</div>
-<div class="line">        <span class="keywordflow">break</span>;</div>
-<div class="line">    }</div>
-<div class="line"> </div>
-<div class="line">    std::this_thread::sleep_for(std::chrono::milliseconds(100));</div>
-<div class="line">}</div>
-<div class="line"> </div>
-<div class="line"><span class="keywordflow">if</span> (!has_reported)</div>
-<div class="line">    std::cout &lt;&lt; <span class="stringliteral">"No match or incompatible QoS reported within five seconds\n"</span>;</div>
-<div class="ttc" id="aclassdds_1_1core_1_1policy_1_1policy__id_html"><div class="ttname"><a href="classdds_1_1core_1_1policy_1_1policy__id.html">dds::core::policy::policy_id</a></div><div class="ttdef"><b>정의</b> CorePolicy.hpp:56</div></div>
-</div><!-- fragment --><p>best-effort DataWriter와 reliable DataReader를 사용하면 상대 발견 후 <span class="tt">Reliability mismatch</span>가 출력됩니다. Publisher의 <span class="tt">BestEffort()</span>를 <span class="tt">Reliable(dds::core::Duration::from_millisecs(100))</span>으로 바꾼 뒤 빌드하고 두 프로세스를 다시 실행하세요. 나머지 설정이 같으면 <span class="tt">Reader matched a writer</span>가 출력됩니다. 데이터 수신을 확인하려면 <a class="el" href="dds_example_legacy_sub.html" title="Hello World Subscriber">Hello World Subscriber</a> 의 수신 루프를 복구하고 호환되는 DataWriter와 함께 실행합니다. </p>
-</div><a id="doc-typedef-members" name="doc-typedef-members"></a><h2 class="groupheader" id="header-doc-typedef-members">타입정의 문서화</h2>
-<a id="gaaa67e0ee7026fecfed9eb32f2c425721" name="gaaa67e0ee7026fecfed9eb32f2c425721"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaaa67e0ee7026fecfed9eb32f2c425721">◆ </a></span>Deadline</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef dds::core::policy::detail::Deadline <a class="el" href="#gaaa67e0ee7026fecfed9eb32f2c425721">dds::core::policy::Deadline</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>instance의 업데이트 사이에 예상되는 최대 간격을 설정합니다 </p>
-<dl class="section see"><dt>참고</dt><dd><a class="el" href="classdds_1_1core_1_1policy_1_1_t_deadline.html" title="Deadline은 각 instance의 갱신 주기를 정합니다.">dds::core::policy::TDeadline</a> </dd></dl>
-
-</div>
-</div>
-<a id="gac7ed58b137ff6a6ddcb2c7d8690169c5" name="gac7ed58b137ff6a6ddcb2c7d8690169c5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gac7ed58b137ff6a6ddcb2c7d8690169c5">◆ </a></span>DestinationOrder</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef dds::core::policy::detail::DestinationOrder <a class="el" href="#gac7ed58b137ff6a6ddcb2c7d8690169c5">dds::core::policy::DestinationOrder</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>DDS가 수신 timestamp와 source timestamp 중 어느 쪽으로 sample을 정렬할지 선택합니다. </p>
-<dl class="section see"><dt>참고</dt><dd><a class="el" href="classdds_1_1core_1_1policy_1_1_t_destination_order.html" title="DDS가 수신 timestamp와 source timestamp 중 어느 쪽으로 sample을 정렬할지 선택합니다.">dds::core::policy::TDestinationOrder</a> </dd></dl>
-
-</div>
-</div>
-<a id="gaa70a30964093541160b34558877d3438" name="gaa70a30964093541160b34558877d3438"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaa70a30964093541160b34558877d3438">◆ </a></span>Durability</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef dds::core::policy::detail::Durability <a class="el" href="#gaa70a30964093541160b34558877d3438">dds::core::policy::Durability</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>DataReader가 일치하기 전에 작성된 sample이 해당 DataReader에 도달할 수 있는지 여부를 제어합니다. </p>
-<dl class="section see"><dt>참고</dt><dd><a class="el" href="classdds_1_1core_1_1policy_1_1_t_durability.html" title="DataReader가 일치하기 전에 작성된 sample이 해당 DataReader에 도달할 수 있는지 여부를 제어합니다.">dds::core::policy::TDurability</a> </dd></dl>
-
-</div>
-</div>
-<a id="ga8cd8b50090e916a2a494b23c8592a721" name="ga8cd8b50090e916a2a494b23c8592a721"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga8cd8b50090e916a2a494b23c8592a721">◆ </a></span>EntityFactory</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef dds::core::policy::detail::EntityFactory <a class="el" href="#ga8cd8b50090e916a2a494b23c8592a721">dds::core::policy::EntityFactory</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>팩토리가 생성한 Entity를 자동으로 사용할지 여부를 제어합니다. </p>
-<dl class="section see"><dt>참고</dt><dd><a class="el" href="classdds_1_1core_1_1policy_1_1_t_entity_factory.html" title="이 정책은 Entity가 다른 Entity를 생성할 때의 동작을 제어합니다.">dds::core::policy::TEntityFactory</a> </dd></dl>
-
-</div>
-</div>
-<a id="ga1bcd7764c7126aa6ac3edcc8c5231433" name="ga1bcd7764c7126aa6ac3edcc8c5231433"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga1bcd7764c7126aa6ac3edcc8c5231433">◆ </a></span>GroupData</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef dds::core::policy::detail::GroupData <a class="el" href="#ga1bcd7764c7126aa6ac3edcc8c5231433">dds::core::policy::GroupData</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Publisher 또는 Subscriber에 애플리케이션 정의 데이터를 전송합니다. </p>
-<dl class="section see"><dt>참고</dt><dd><a class="el" href="classdds_1_1core_1_1policy_1_1_t_group_data.html" title="애플리케이션에서 생성한 Publisher 또는 Subscriber에 추가 정보를 붙일 수 있는 QoS입니다.">dds::core::policy::TGroupData</a> </dd></dl>
-
-</div>
-</div>
-<a id="gac131ef99ba345cff7ae780d5d30ff130" name="gac131ef99ba345cff7ae780d5d30ff130"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gac131ef99ba345cff7ae780d5d30ff130">◆ </a></span>History</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef dds::core::policy::detail::History <a class="el" href="#gac131ef99ba345cff7ae780d5d30ff130">dds::core::policy::History</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>각 instance에 대한 sample 보유 제어 </p>
-<dl class="section see"><dt>참고</dt><dd><a class="el" href="classdds_1_1core_1_1policy_1_1_t_history.html" title="각 instance에 대한 sample 보유 제어">dds::core::policy::THistory</a> </dd></dl>
-
-</div>
-</div>
-<a id="ga50f7bda0cda1b76fbd4e374627540e7c" name="ga50f7bda0cda1b76fbd4e374627540e7c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga50f7bda0cda1b76fbd4e374627540e7c">◆ </a></span>LatencyBudget</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef dds::core::policy::detail::LatencyBudget <a class="el" href="#ga50f7bda0cda1b76fbd4e374627540e7c">dds::core::policy::LatencyBudget</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>미들웨어의 전송 결정을 위한 <a class="el" href="#ga50f7bda0cda1b76fbd4e374627540e7c" title="미들웨어의 전송 결정을 위한 LatencyBudget 제공">LatencyBudget</a> 제공 </p>
-<dl class="section see"><dt>참고</dt><dd><a class="el" href="classdds_1_1core_1_1policy_1_1_t_latency_budget.html" title="미들웨어의 전송 결정을 위한 LatencyBudget 제공">dds::core::policy::TLatencyBudget</a> </dd></dl>
-
-</div>
-</div>
-<a id="ga32f298a740cb29ba2d6bfec2bf4871b9" name="ga32f298a740cb29ba2d6bfec2bf4871b9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga32f298a740cb29ba2d6bfec2bf4871b9">◆ </a></span>Lifespan</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef dds::core::policy::detail::Lifespan <a class="el" href="#ga32f298a740cb29ba2d6bfec2bf4871b9">dds::core::policy::Lifespan</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>기록한 sample을 전달할 수 있는 기간을 설정합니다. </p>
-<dl class="section see"><dt>참고</dt><dd><a class="el" href="classdds_1_1core_1_1policy_1_1_t_lifespan.html" title="이 QoS는 오래된 데이터가 애플리케이션에 전달되지 않도록 합니다.">dds::core::policy::TLifespan</a> </dd></dl>
-
-</div>
-</div>
-<a id="ga6d270a5e784d2fc600382fdd467d6a56" name="ga6d270a5e784d2fc600382fdd467d6a56"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga6d270a5e784d2fc600382fdd467d6a56">◆ </a></span>Liveliness</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef dds::core::policy::detail::Liveliness <a class="el" href="#ga6d270a5e784d2fc600382fdd467d6a56">dds::core::policy::Liveliness</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>DataWriter가 활동을 주장하는 방법과 DataReader가 그 손실을 감지하는 방법을 제어합니다. </p>
-<dl class="section see"><dt>참고</dt><dd><a class="el" href="classdds_1_1core_1_1policy_1_1_t_liveliness.html" title="DataWriter가 활동을 주장하는 방법과 DataReader가 그 손실을 감지하는 방법을 제어합니다.">dds::core::policy::TLiveliness</a> </dd></dl>
-
-</div>
-</div>
-<a id="ga2b55aa93f052e74de626f42665c5785f" name="ga2b55aa93f052e74de626f42665c5785f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga2b55aa93f052e74de626f42665c5785f">◆ </a></span>Ownership</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef dds::core::policy::detail::Ownership <a class="el" href="#ga2b55aa93f052e74de626f42665c5785f">dds::core::policy::Ownership</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>여러 쓰기자가 동일한 instance를 업데이트할 수 있는 방법을 선택합니다. </p>
-<dl class="section see"><dt>참고</dt><dd><a class="el" href="classdds_1_1core_1_1policy_1_1_t_ownership.html" title="여러 쓰기자가 동일한 instance를 업데이트할 수 있는 방법을 선택합니다.">dds::core::policy::TOwnership</a> </dd></dl>
-
-</div>
-</div>
-<a id="gac074ac347c0a510da871ae3949551efa" name="gac074ac347c0a510da871ae3949551efa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gac074ac347c0a510da871ae3949551efa">◆ </a></span>OwnershipStrength</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef dds::core::policy::detail::OwnershipStrength <a class="el" href="#gac074ac347c0a510da871ae3949551efa">dds::core::policy::OwnershipStrength</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>독점 소유권을 위한 DataWriter의 우선순위를 지정합니다 </p>
-<dl class="section see"><dt>참고</dt><dd><a class="el" href="classdds_1_1core_1_1policy_1_1_t_ownership_strength.html" title="독점 소유권을 위한 DataWriter의 우선순위를 지정합니다">dds::core::policy::TOwnershipStrength</a> </dd></dl>
-
-</div>
-</div>
-<a id="ga9676f77e95c6e5d1c732604d9e7ead38" name="ga9676f77e95c6e5d1c732604d9e7ead38"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga9676f77e95c6e5d1c732604d9e7ead38">◆ </a></span>Partition</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef dds::core::policy::detail::Partition <a class="el" href="#ga9676f77e95c6e5d1c732604d9e7ead38">dds::core::policy::Partition</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>domain 내에서 논리적 Publisher 및 Subscriber 일치 제어 </p>
-<dl class="section see"><dt>참고</dt><dd><a class="el" href="classdds_1_1core_1_1policy_1_1_t_partition.html" title="domain 내에서 논리적 Publisher 및 Subscriber 일치 제어">dds::core::policy::TPartition</a> </dd></dl>
-
-</div>
-</div>
-<a id="ga2b52bb5f851fa675b14a1d1ac57d6b15" name="ga2b52bb5f851fa675b14a1d1ac57d6b15"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga2b52bb5f851fa675b14a1d1ac57d6b15">◆ </a></span>Presentation</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef dds::core::policy::detail::Presentation <a class="el" href="#ga2b52bb5f851fa675b14a1d1ac57d6b15">dds::core::policy::Presentation</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p><a class="el" href="#ga2b52bb5f851fa675b14a1d1ac57d6b15" title="Presentation 범위를 구성하고 일관된 또는 정렬된 액세스 요청">Presentation</a> 범위를 구성하고 일관된 또는 정렬된 액세스 요청 </p>
-<dl class="section see"><dt>참고</dt><dd><a class="el" href="classdds_1_1core_1_1policy_1_1_t_presentation.html" title="Presentation 범위를 구성하고 일관된 또는 정렬된 액세스 요청">dds::core::policy::TPresentation</a> </dd></dl>
-
-</div>
-</div>
-<a id="ga96baccf815251c55c31cbe36b3a139e2" name="ga96baccf815251c55c31cbe36b3a139e2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga96baccf815251c55c31cbe36b3a139e2">◆ </a></span>ReaderDataLifecycle</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef dds::core::policy::detail::ReaderDataLifecycle <a class="el" href="#ga96baccf815251c55c31cbe36b3a139e2">dds::core::policy::ReaderDataLifecycle</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>DataReader가 처분된 instance와 기록되지 않은 instance sample을 정리할 때 설정 </p>
-<dl class="section see"><dt>참고</dt><dd><a class="el" href="classdds_1_1core_1_1policy_1_1_t_reader_data_lifecycle.html" title="DataReader가 처분된 instance와 기록되지 않은 instance sample을 정리할 때 설정">dds::core::policy::TReaderDataLifecycle</a> </dd></dl>
-
-</div>
-</div>
-<a id="gae1ee89c57fc5fa311721b4511e559783" name="gae1ee89c57fc5fa311721b4511e559783"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gae1ee89c57fc5fa311721b4511e559783">◆ </a></span>Reliability</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef dds::core::policy::detail::Reliability <a class="el" href="#gae1ee89c57fc5fa311721b4511e559783">dds::core::policy::Reliability</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>DataWriter가 제공하거나 DataReader가 요청하는 전달 Reliability를 제어합니다. </p>
-<dl class="section see"><dt>참고</dt><dd><a class="el" href="classdds_1_1core_1_1policy_1_1_t_reliability.html" title="DataWriter가 제공하거나 DataReader가 요청하는 전달 Reliability를 제어합니다.">dds::core::policy::TReliability</a> </dd></dl>
-
-</div>
-</div>
-<a id="gabeeea78bb9eaac8652578f9addc33372" name="gabeeea78bb9eaac8652578f9addc33372"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gabeeea78bb9eaac8652578f9addc33372">◆ </a></span>ResourceLimits</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef dds::core::policy::detail::ResourceLimits <a class="el" href="#gabeeea78bb9eaac8652578f9addc33372">dds::core::policy::ResourceLimits</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Entity가 유지할 수 있는 sample과 instance를 제한합니다. </p>
-<dl class="section see"><dt>참고</dt><dd><a class="el" href="classdds_1_1core_1_1policy_1_1_t_resource_limits.html" title="Entity가 유지할 수 있는 sample과 instance를 제한합니다.">dds::core::policy::TResourceLimits</a> </dd></dl>
-
-</div>
-</div>
-<a id="ga25ed9d287d76401671576ec64559df07" name="ga25ed9d287d76401671576ec64559df07"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga25ed9d287d76401671576ec64559df07">◆ </a></span>TimeBasedFilter</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef dds::core::policy::detail::TimeBasedFilter <a class="el" href="#ga25ed9d287d76401671576ec64559df07">dds::core::policy::TimeBasedFilter</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>DataReader가 선택하는 sample 간 최소 간격을 설정합니다 </p>
-<dl class="section see"><dt>참고</dt><dd><a class="el" href="classdds_1_1core_1_1policy_1_1_t_time_based_filter.html" title="DataReader가 선택하는 sample 간 최소 간격을 설정합니다">dds::core::policy::TTimeBasedFilter</a> </dd></dl>
-
-</div>
-</div>
-<a id="ga15f95e2eef1f4dd215378d04701b71c9" name="ga15f95e2eef1f4dd215378d04701b71c9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga15f95e2eef1f4dd215378d04701b71c9">◆ </a></span>TopicData</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef dds::core::policy::detail::TopicData <a class="el" href="#ga15f95e2eef1f4dd215378d04701b71c9">dds::core::policy::TopicData</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Topic과 관련된 애플리케이션 정의 데이터를 수행합니다. </p>
-<dl class="section see"><dt>참고</dt><dd><a class="el" href="classdds_1_1core_1_1policy_1_1_t_topic_data.html" title="애플리케이션에서 생성한 Topic에 추가 정보를 붙일 수 있는 QoS입니다.">dds::core::policy::TTopicData</a> </dd></dl>
-
-</div>
-</div>
-<a id="ga9bfb28a8f810b731fc10a3506d687ea0" name="ga9bfb28a8f810b731fc10a3506d687ea0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga9bfb28a8f810b731fc10a3506d687ea0">◆ </a></span>TransportPriority</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef dds::core::policy::detail::TransportPriority <a class="el" href="#ga9bfb28a8f810b731fc10a3506d687ea0">dds::core::policy::TransportPriority</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>상대적 전송 우선순위 힌트를 제공합니다 </p>
-<dl class="section see"><dt>참고</dt><dd><a class="el" href="classdds_1_1core_1_1policy_1_1_t_transport_priority.html" title="이 QoS를 사용하면 서로 다른 우선순위로 메시지를 보낼 수 있는 전송 기능을 활용할 수 있습니다.">dds::core::policy::TTransportPriority</a> </dd></dl>
-
-</div>
-</div>
-<a id="ga3082013b21e53c2cb3c462fcd1151d77" name="ga3082013b21e53c2cb3c462fcd1151d77"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga3082013b21e53c2cb3c462fcd1151d77">◆ </a></span>UserData</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef dds::core::policy::detail::UserData <a class="el" href="#ga3082013b21e53c2cb3c462fcd1151d77">dds::core::policy::UserData</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>검색을 위한 애플리케이션 정의 데이터 수행 </p>
-<dl class="section see"><dt>참고</dt><dd><a class="el" href="classdds_1_1core_1_1policy_1_1_t_user_data.html" title="애플리케이션에서 생성한 Entity에 추가 정보를 붙일 수 있는 QoS입니다.">dds::core::policy::TUserData</a> </dd></dl>
-
-</div>
-</div>
-<a id="gadd857380ad57a062aa880b3d612671dd" name="gadd857380ad57a062aa880b3d612671dd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gadd857380ad57a062aa880b3d612671dd">◆ </a></span>WriterDataLifecycle</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef dds::core::policy::detail::WriterDataLifecycle <a class="el" href="#gadd857380ad57a062aa880b3d612671dd">dds::core::policy::WriterDataLifecycle</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>instance를 등록 해제하면 자동으로 삭제되는지 여부 제어 </p>
-<dl class="section see"><dt>참고</dt><dd><a class="el" href="classdds_1_1core_1_1policy_1_1_t_writer_data_lifecycle.html" title="instance를 등록 해제하면 자동으로 삭제되는지 여부 제어">dds::core::policy::TWriterDataLifecycle</a> </dd></dl>
-
-</div>
-</div>
-</div><!-- contents -->
-</div><!-- doc-content -->
-<div class="page-nav-panel" id="page-nav">
-<div id="page-nav-resize-handle"></div>
-<div id="page-nav-tree">
-<div id="page-nav-contents">
-</div><!-- page-nav-contents -->
-</div><!-- page-nav-tree -->
-</div><!-- page-nav -->
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script id="doxygen-config" type="application/json">
+{
+  "relPath": "",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script src="menudata.js" type="text/javascript"></script>
+<script src="menu.js" type="text/javascript"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> 주 메뉴 표시 전환</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div class="MSearchBoxInactive" id="MSearchBox">
+        <span class="left">
+          <span class="search-icon" id="MSearchSelect"><span class="search-icon-dropdown"></span></span>
+          <input accesskey="S" id="MSearchField" placeholder="검색" type="text" value=""/>
+          </span><span class="right">
+            <a href="javascript:searchBox.CloseResultsWindow()" id="MSearchClose"><div class="close-icon" id="MSearchCloseImg"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div class="ui-resizable side-nav-resizable" id="side-nav">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div class="sync" id="nav-sync"></div>
+    </div>
+  </div>
+  <div class="ui-resizable-handle" id="splitbar">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('group__dds__qos.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">로딩중...</div>
+<div class="SRStatus" id="Searching">검색중...</div>
+<div class="SRStatus" id="NoMatches">일치하는것 없음</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Quality of Service <div class="ingroups"><a class="el" href="group__dds__api__modules.html">API 모듈</a> » <a class="el" href="group__dds__core.html">Core</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+
+<a id="details" name="details"></a><h2 class="groupheader" id="header-details">상세한 설명</h2><div class="textblock"><p>Entity 설정과 endpoint 호환성에 쓰는 정책입니다. </p>
+<p>Entity마다 지원하는 QoS 정책이 다릅니다. 생성 전에 정책을 설정하거나 생성 후 QoS 설정 함수를 호출하세요.</p>
+<p>호환성은 <a class="el" href="#qos_matching_policies" title="매칭 정책">매칭 정책</a> 에서, 설정이 적용된 경로는 <a class="el" href="#qos_defaults_source" title="Entity의 QoS 출처">Entity의 QoS 출처</a> 에서, 연결 진단은 <a class="el" href="#matching_guide" title="DataWriter와 DataReader가 데이터를 교환하지 못할 때 진단하기">DataWriter와 DataReader가 데이터를 교환하지 못할 때 진단하기</a> 에서 확인하세요.</p>
+<h1 class="doxsection"><a class="anchor" id="qos_policy_summary"></a>
+QoS 정책 요약</h1>
+<p>표는 초기 기본값입니다. 설정이나 Publisher 및 Subscriber의 기본 QoS에 따라 달라질 수 있습니다. 실제 값은 각 Entity의 QoS에서 확인하세요.</p>
+<p>매칭 영향은 DataWriter와 DataReader의 호환 여부를 기준으로 합니다. DataWriter는 생성할 때 정책을 설정하세요.</p>
+<h2 class="doxsection"><a class="anchor" id="qos_matching_policies"></a>
+매칭 정책</h2>
+<div class="dds-table-scroll"><table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">정책  </th><th class="markdownTableHeadNone">적용 대상  </th><th class="markdownTableHeadNone">초기 기본값  </th><th class="markdownTableHeadNone">설정 시점  </th><th class="markdownTableHeadNone">매칭 영향  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a class="el" href="classdds_1_1core_1_1policy_1_1_t_reliability.html" title="dds::core::policy::TReliability">Reliability</a>  </td><td class="markdownTableBodyNone">Topic, DataWriter, DataReader  </td><td class="markdownTableBodyNone">DataWriter는 <span class="tt">RELIABLE</span>, Topic과 DataReader는 <span class="tt">BEST_EFFORT</span>.  </td><td class="markdownTableBodyNone">생성 시  </td><td class="markdownTableBodyNone">있음  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a class="el" href="classdds_1_1core_1_1policy_1_1_t_durability.html" title="dds::core::policy::TDurability">Durability</a>  </td><td class="markdownTableBodyNone">Topic, DataWriter, DataReader  </td><td class="markdownTableBodyNone"><span class="tt">VOLATILE</span>  </td><td class="markdownTableBodyNone">생성 시  </td><td class="markdownTableBodyNone">있음  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a class="el" href="classdds_1_1core_1_1policy_1_1_t_deadline.html" title="dds::core::policy::TDeadline">Deadline</a>  </td><td class="markdownTableBodyNone">Topic, DataWriter, DataReader  </td><td class="markdownTableBodyNone">무한 주기  </td><td class="markdownTableBodyNone">Topic의 QoS setter. Endpoint 타이머는 생성 시 설정.  </td><td class="markdownTableBodyNone">있음  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a class="el" href="classdds_1_1core_1_1policy_1_1_t_destination_order.html" title="dds::core::policy::TDestinationOrder">DestinationOrder</a>  </td><td class="markdownTableBodyNone">Topic, DataWriter, DataReader  </td><td class="markdownTableBodyNone"><span class="tt">BY_RECEPTION_TIMESTAMP</span>  </td><td class="markdownTableBodyNone">생성 시  </td><td class="markdownTableBodyNone">있음  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a class="el" href="classdds_1_1core_1_1policy_1_1_t_latency_budget.html" title="dds::core::policy::TLatencyBudget">LatencyBudget</a>  </td><td class="markdownTableBodyNone">Topic, DataWriter, DataReader  </td><td class="markdownTableBodyNone">0초  </td><td class="markdownTableBodyNone">Topic과 DataReader의 QoS setter. DataWriter는 생성 시 설정.  </td><td class="markdownTableBodyNone">있음  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a class="el" href="classdds_1_1core_1_1policy_1_1_t_liveliness.html" title="dds::core::policy::TLiveliness">Liveliness</a>  </td><td class="markdownTableBodyNone">Topic, DataWriter, DataReader  </td><td class="markdownTableBodyNone"><span class="tt">AUTOMATIC</span>, 무한 lease  </td><td class="markdownTableBodyNone">생성 시  </td><td class="markdownTableBodyNone">있음  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a class="el" href="classdds_1_1core_1_1policy_1_1_t_ownership.html" title="dds::core::policy::TOwnership">Ownership</a>  </td><td class="markdownTableBodyNone">Topic, DataWriter, DataReader  </td><td class="markdownTableBodyNone"><span class="tt">SHARED</span>  </td><td class="markdownTableBodyNone">생성 시  </td><td class="markdownTableBodyNone">있음  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a class="el" href="classdds_1_1core_1_1policy_1_1_t_partition.html" title="dds::core::policy::TPartition">Partition</a>  </td><td class="markdownTableBodyNone">Publisher, Subscriber  </td><td class="markdownTableBodyNone">기본 partition(빈 이름)  </td><td class="markdownTableBodyNone">QoS setter  </td><td class="markdownTableBodyNone">있음  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a class="el" href="classdds_1_1core_1_1policy_1_1_t_presentation.html" title="dds::core::policy::TPresentation">Presentation</a>  </td><td class="markdownTableBodyNone">Publisher, Subscriber  </td><td class="markdownTableBodyNone"><span class="tt">INSTANCE</span>. Coherent access와 ordered access는 비활성화.  </td><td class="markdownTableBodyNone">생성 시  </td><td class="markdownTableBodyNone">있음  </td></tr>
+</table></div>
+<div class="image">
+<object data="dds-diagram-offered-requested-ko.svg" style="pointer-events: none;" type="image/svg+xml"></object>
+<div class="caption">
+제공 QoS와 요청 QoS의 호환 조건</div></div>
+<p>DataReader의 QoS를 변경하면 상대 endpoint에 알리는 <span class="tt">Deadline</span> 값도 바뀔 수 있습니다. Reader의 deadline 타이머에는 생성 시 설정한 주기가 적용됩니다.</p>
+<p>DDS Security를 사용하면 DataWriter를 만들기 전에 Publisher의 partition을 설정하세요.</p>
+<h2 class="doxsection"><a class="anchor" id="qos_delivery_policies"></a>
+보관 및 전달 정책</h2>
+<div class="dds-table-scroll"><table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">정책  </th><th class="markdownTableHeadNone">적용 대상  </th><th class="markdownTableHeadNone">초기 기본값  </th><th class="markdownTableHeadNone">설정 시점  </th><th class="markdownTableHeadNone">매칭 영향  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a class="el" href="classdds_1_1core_1_1policy_1_1_t_history.html" title="dds::core::policy::THistory">History</a>  </td><td class="markdownTableBodyNone">Topic, DataWriter, DataReader  </td><td class="markdownTableBodyNone"><span class="tt">KEEP_LAST</span>, depth는 <span class="tt">LENGTH_UNLIMITED</span>  </td><td class="markdownTableBodyNone">생성 시  </td><td class="markdownTableBodyNone">없음  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a class="el" href="classdds_1_1core_1_1policy_1_1_t_resource_limits.html" title="dds::core::policy::TResourceLimits">ResourceLimits</a>  </td><td class="markdownTableBodyNone">Topic, DataWriter, DataReader  </td><td class="markdownTableBodyNone">한도 세 가지 모두 <span class="tt">LENGTH_UNLIMITED</span>  </td><td class="markdownTableBodyNone">생성 시  </td><td class="markdownTableBodyNone">없음  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a class="el" href="classdds_1_1core_1_1policy_1_1_t_lifespan.html" title="dds::core::policy::TLifespan">Lifespan</a>  </td><td class="markdownTableBodyNone">Topic, DataWriter  </td><td class="markdownTableBodyNone">무한 시간  </td><td class="markdownTableBodyNone">Topic의 QoS setter. DataWriter는 생성 시 설정.  </td><td class="markdownTableBodyNone">없음  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a class="el" href="classdds_1_1core_1_1policy_1_1_t_ownership_strength.html" title="dds::core::policy::TOwnershipStrength">OwnershipStrength</a>  </td><td class="markdownTableBodyNone">DataWriter  </td><td class="markdownTableBodyNone"><span class="tt">0</span>  </td><td class="markdownTableBodyNone">생성 시  </td><td class="markdownTableBodyNone">없음  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a class="el" href="classdds_1_1core_1_1policy_1_1_t_reader_data_lifecycle.html" title="dds::core::policy::TReaderDataLifecycle">ReaderDataLifecycle</a>  </td><td class="markdownTableBodyNone">DataReader  </td><td class="markdownTableBodyNone">writer가 없으면 무한, dispose 시 0  </td><td class="markdownTableBodyNone">생성 시  </td><td class="markdownTableBodyNone">없음  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a class="el" href="classdds_1_1core_1_1policy_1_1_t_time_based_filter.html" title="dds::core::policy::TTimeBasedFilter">TimeBasedFilter</a>  </td><td class="markdownTableBodyNone">DataReader  </td><td class="markdownTableBodyNone">최소 간격 0초  </td><td class="markdownTableBodyNone">생성 시  </td><td class="markdownTableBodyNone">없음  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a class="el" href="classdds_1_1core_1_1policy_1_1_t_writer_data_lifecycle.html" title="dds::core::policy::TWriterDataLifecycle">WriterDataLifecycle</a>  </td><td class="markdownTableBodyNone">DataWriter  </td><td class="markdownTableBodyNone">등록 해제 시 자동 dispose  </td><td class="markdownTableBodyNone">생성 시  </td><td class="markdownTableBodyNone">없음  </td></tr>
+</table></div>
+<p><span class="tt">OwnershipStrength</span>는 매칭된 writer 중 <span class="tt">EXCLUSIVE</span> instance를 담당할 writer를 결정합니다. 필터와 삭제 지연을 적용하려면 reader를 생성할 때 <span class="tt">TimeBasedFilter</span>와 <span class="tt">ReaderDataLifecycle</span>을 설정하세요.</p>
+<h2 class="doxsection"><a class="anchor" id="qos_metadata_policies"></a>
+메타데이터와 Entity 생성 정책</h2>
+<div class="dds-table-scroll"><table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">정책  </th><th class="markdownTableHeadNone">적용 대상  </th><th class="markdownTableHeadNone">초기 기본값  </th><th class="markdownTableHeadNone">설정 시점  </th><th class="markdownTableHeadNone">매칭 영향  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a class="el" href="classdds_1_1core_1_1policy_1_1_t_entity_factory.html" title="dds::core::policy::TEntityFactory">EntityFactory</a>  </td><td class="markdownTableBodyNone">DomainParticipant, Publisher, Subscriber  </td><td class="markdownTableBodyNone">새 하위 Entity 자동 활성화  </td><td class="markdownTableBodyNone">QoS setter. 이후 생성하는 하위 Entity에 적용.  </td><td class="markdownTableBodyNone">없음  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a class="el" href="classdds_1_1core_1_1policy_1_1_t_group_data.html" title="dds::core::policy::TGroupData">GroupData</a>  </td><td class="markdownTableBodyNone">Publisher, Subscriber  </td><td class="markdownTableBodyNone">빈 바이트 시퀀스  </td><td class="markdownTableBodyNone">QoS setter  </td><td class="markdownTableBodyNone">없음  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a class="el" href="classdds_1_1core_1_1policy_1_1_t_topic_data.html" title="dds::core::policy::TTopicData">TopicData</a>  </td><td class="markdownTableBodyNone">Topic  </td><td class="markdownTableBodyNone">빈 바이트 시퀀스  </td><td class="markdownTableBodyNone">QoS setter  </td><td class="markdownTableBodyNone">없음  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a class="el" href="classdds_1_1core_1_1policy_1_1_t_user_data.html" title="dds::core::policy::TUserData">UserData</a>  </td><td class="markdownTableBodyNone">DomainParticipant, DataWriter, DataReader  </td><td class="markdownTableBodyNone">빈 바이트 시퀀스  </td><td class="markdownTableBodyNone">DomainParticipant와 DataReader의 QoS setter. DataWriter는 생성 시 설정.  </td><td class="markdownTableBodyNone">없음  </td></tr>
+</table></div>
+<h2 class="doxsection"><a class="anchor" id="qos_defaults_source"></a>
+Entity의 QoS 출처</h2>
+<div class="image">
+<object data="dds-diagram-qos-defaults-ko.svg" style="pointer-events: none;" type="image/svg+xml"></object>
+<div class="caption">
+새 Entity의 QoS 선택</div></div>
+<div class="dds-table-scroll"><table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">생성 방식  </th><th class="markdownTableHeadNone">정책 출처  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">QoS를 지정하지 않고 <span class="tt">DataWriter</span> 또는 <span class="tt">DataReader</span> 생성  </td><td class="markdownTableBodyNone">해당 Endpoint에 대한 Publisher 또는 Subscriber의 현재 기본값입니다.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><span class="tt">Topic&lt;T&gt;(participant, name)</span> 생성  </td><td class="markdownTableBodyNone">기본 생성한 <span class="tt">TopicQos</span>입니다. Participant의 Topic 기본값을 사용하려면 <span class="tt">participant.default_topic_qos()</span>를 명시적으로 전달하세요.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Topic, Publisher, Subscriber, DataWriter, DataReader를 명시적인 QoS로 생성  </td><td class="markdownTableBodyNone">전달한 값을 사용합니다. 바꾸지 않을 정책을 유지하려면 부모의 기본값에서 시작합니다.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">DomainParticipant 생성  </td><td class="markdownTableBodyNone">Factory 기본값을 사용합니다. 이 릴리스에서는 QoS 인수가 있는 생성자도 factory 기본값을 사용합니다. <a class="el" href="group__dds__tutorial__participant.html#participant_qos_sources" title="QoS 설정 범위 선택">QoS 설정 범위 선택</a> 를 참조하세요.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">TopicQos</span>로 <span class="tt">DataWriterQos</span> 또는 <span class="tt">DataReaderQos</span> 생성  </td><td class="markdownTableBodyNone">Endpoint 기본값에 대응하는 Topic 정책을 복사합니다. Endpoint에만 있는 정책은 기본값을 유지합니다.  </td></tr>
+</table></div>
+<p>정책을 수정하기 전에 사용할 기본값을 선택하세요. 상위 Entity의 기본값을 바꾸면 이후 QoS를 명시하지 않고 생성하는 하위 Entity에 새 기본값을 적용합니다.</p>
+<p>호환 조건은 <a class="el" href="#matching_guide" title="DataWriter와 DataReader가 데이터를 교환하지 못할 때 진단하기">DataWriter와 DataReader가 데이터를 교환하지 못할 때 진단하기</a> 에서, 예제는 <a class="el" href="group__dds__howto__qos.html" title="QoS와 sample 전달">QoS와 sample 전달</a> 에서 확인하세요.</p>
+<h1 class="doxsection"><a class="anchor" id="matching_guide"></a>
+DataWriter와 DataReader가 데이터를 교환하지 못할 때 진단하기</h1>
+<p>DDS가 discovery를 마칠 때까지 DataWriter와 DataReader를 하나씩 실행해 두세요. 빌드와 실행 명령은 <a class="el" href="group__dds__domain.html#getting_started" title="첫 번째 sample 송수신">첫 번째 sample 송수신</a> 에 있습니다.</p>
+<div class="image">
+<object data="dds-diagram-matching-flow-ko.svg" style="pointer-events: none;" type="image/svg+xml"></object>
+<div class="caption">
+Endpoint 매칭과 샘플 선택 조건 확인</div></div>
+<h2 class="doxsection"><a class="anchor" id="matching_checks"></a>
+endpoint 구성 확인</h2>
+<ol type="1">
+<li>DomainParticipant의 domain ID를 비교하세요. Publisher와 Subscriber는 같은 DDS domain에 참여해야 합니다. 두 프로세스가 실행 중이며 지정한 네트워크에서 서로를 발견할 수 있는지 확인하세요.</li>
+<li>양쪽의 Topic 이름, 등록한 타입, 필드 정의, key를 비교하세요.</li>
+<li>Publisher와 Subscriber의 <span class="tt">Partition</span>을 비교합니다. 양쪽에서 일치하는 항목이 하나 이상 있어야 합니다. 어느 쪽이든 와일드카드를 사용할 수 있습니다. 예를 들어 <span class="tt">plant.*</span>는 <span class="tt">plant.line1</span>과 일치합니다. 목록이 비어 있으면 이름이 빈 문자열인 기본 Partition을 사용합니다.</li>
+<li>endpoint의 QoS를 비교하세요. DataWriter는 서비스 수준을 제공하고 DataReader는 서비스 수준을 요청합니다. 아래의 matching 횟수와 비호환 QoS 횟수를 확인해 DDS가 두 endpoint를 연결했는지 판단합니다.</li>
+<li>endpoint가 연결됐다면 새 sample을 기록하고 DataReader가 어떤 sample을 선택하는지 확인하세요. content filter는 sample을 제외할 수 있습니다. 상태 또는 instance 필터에 따라 특정 읽기나 가져오기 연산에서 sample이 빠질 수도 있습니다. payload에 접근하기 전에 <span class="tt">sample.info().valid()</span>를 확인하세요. 수신 연산은 <a class="el" href="group__dds__subscription.html#receiving_guide" title="sample 수신과 선택">sample 수신과 선택</a> 항목을 참조해 선택하세요.</li>
+</ol>
+<p>두 프로세스에서 <span class="tt">topic.name()</span>과 <span class="tt">topic.type_name()</span>을 출력하세요. Topic 이름이 같으면 등록 타입과 IDL의 필드 및 key를 따로 비교합니다.</p>
+<h2 class="doxsection"><a class="anchor" id="matching_hosts"></a>
+두 PC에서 실행할 때 진단</h2>
+<p>먼저 한 PC에서 두 프로세스 예제를 실행하세요. 각 PC에서 실행 파일이 의도한 SDK와 바인딩을 로드하는지 확인하고, PC마다 endpoint 하나씩 실행합니다. 매칭 수가 0이면 인터페이스와 네트워크 규칙이 DDS discovery를 허용하는지 확인하세요. 매칭 뒤에는 새 sample을 보내고 DataReader의 필터와 상태를 확인합니다.</p>
+<h2 class="doxsection"><a class="anchor" id="matching_policies"></a>
+관련 QoS 정책 비교</h2>
+<div class="dds-table-scroll"><table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">정책  </th><th class="markdownTableHeadNone">설정 대상  </th><th class="markdownTableHeadNone">비교 항목  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Partition  </td><td class="markdownTableBodyNone">Publisher 및 Subscriber  </td><td class="markdownTableBodyNone">양쪽 항목이 이름이나 와일드카드로 하나 이상 일치합니다.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Reliability  </td><td class="markdownTableBodyNone">DataWriter 및 DataReader  </td><td class="markdownTableBodyNone"><span class="tt">RELIABLE</span> DataReader에는 <span class="tt">RELIABLE</span> DataWriter가 필요합니다. <span class="tt">BEST_EFFORT</span> DataReader는 두 종류의 DataWriter와 모두 연결할 수 있습니다.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Durability  </td><td class="markdownTableBodyNone">DataWriter 및 DataReader  </td><td class="markdownTableBodyNone"><span class="tt">TRANSIENT_LOCAL</span> DataReader에는 <span class="tt">TRANSIENT_LOCAL</span> DataWriter가 필요합니다. <span class="tt">VOLATILE</span> DataReader는 두 종류의 DataWriter와 모두 연결할 수 있습니다.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Deadline  </td><td class="markdownTableBodyNone">DataWriter 및 DataReader  </td><td class="markdownTableBodyNone">DataWriter가 제공하는 갱신 주기는 DataReader가 요청한 주기보다 작거나 같아야 합니다.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">History  </td><td class="markdownTableBodyNone">DataWriter 및 DataReader  </td><td class="markdownTableBodyNone">instance별 sample 보존을 제어합니다. 각 endpoint는 history 종류와 깊이를 개별 설정할 수 있습니다.  </td></tr>
+</table></div>
+<p>이 점검에서는 endpoint를 만들 때 사용할 정책을 명시하세요. Reliability, Durability 또는 History를 변경하려면 DataReader나 DataWriter를 다시 생성합니다. 기록 이후에 연결된 DataReader에도 보존한 sample을 전달하려면 양쪽에 <span class="tt">TRANSIENT_LOCAL</span>을 지정하고 sample 보존을 설정하세요. 정책별 설명은 <a class="el" href="group__dds__qos.html" title="Quality of Service">Quality of Service</a> 항목을 참조하세요.</p>
+<h2 class="doxsection"><a class="anchor" id="matching_status"></a>
+상태 스냅샷 읽기</h2>
+<p>DataReader에서는 <span class="tt">subscription_matched_status().current_count()</span>를, DataWriter에서는 <span class="tt">publication_matched_status().current_count()</span>를 확인하세요. 값이 양수이면 현재 연결된 상대 endpoint가 하나 이상 있습니다. 누적 matching 횟수는 상대 endpoint가 종료한 뒤에도 양수로 남을 수 있습니다.</p>
+<p>DataReader의 <span class="tt">requested_incompatible_qos_status()</span>와 DataWriter의 <span class="tt">offered_incompatible_qos_staus()</span>를 확인하세요. 새 시험에서 <span class="tt">total_count()</span>가 양수이면 DDS가 호환되지 않는 QoS 설정을 발견한 것입니다. <span class="tt">last_policy_id()</span>로 가장 최근에 보고된 정책을 확인할 수 있습니다. 횟수가 계속 0이면 발견, Topic, Partition 설정을 계속 점검하세요. 둘 이상의 구성 요소에서 변화량이 필요하면 반환된 스냅샷을 보관합니다. 상태를 읽으면 해당 변화량은 0으로 초기화되고 Entity의 해당 변경 플래그가 해제됩니다.</p>
+<p><span class="tt">wait_for_acknowledgments()</span>는 이미 발행한 sample을 대상으로 합니다. 연결된 reliable DataReader가 없어도 예외 없이 반환할 수 있으므로, 상대 endpoint의 존재 여부는 매칭 상태를 확인하세요. 예외 처리와 다른 방식으로 실패를 보고하는 호출은 <a class="el" href="group__dds__core.html#api_usage_notes" title="오류와 스레드">오류와 스레드</a> 항목을 참조하세요.</p>
+<h2 class="doxsection"><a class="anchor" id="matching_reliability_example"></a>
+Reliability 불일치를 재현하고 수정</h2>
+<p>Hello World Publisher에서 DataWriter 선언을 아래 코드로 바꾸세요. 기존 <span class="tt">pub</span> 및 <span class="tt">topic</span> 변수를 사용합니다.</p>
+<div class="fragment dds-cpp-code"><div class="line"><a class="code hl_typedef" href="group__dds__publication.html#ga35ad9728577d4bdccfe8677bba0bcf5d"><span data-cpp-color="namespace">dds</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="namespace">pub</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="namespace">qos</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="type">DataWriterQos</span></a> <span data-cpp-color="local">writer_qos</span><span data-cpp-color="punctuation">;</span></div>
+<div class="line"><span data-cpp-color="local">writer_qos</span> <span data-cpp-color="punctuation">&lt;&lt;</span> <span data-cpp-color="namespace">dds</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="namespace">core</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="namespace">policy</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="type">Reliability</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="method">BestEffort</span><span data-cpp-color="punctuation">();</span></div>
+<div class="line"><a class="code hl_class" href="classdds_1_1pub_1_1_data_writer.html"><span data-cpp-color="namespace">dds</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="namespace">pub</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="class-template">DataWriter</span><span data-cpp-color="punctuation">&lt;</span><span data-cpp-color="type">HelloWorldData_Msg</span><span data-cpp-color="punctuation">&gt;</span></a> <span data-cpp-color="local">dw</span><span data-cpp-color="punctuation">(</span><span data-cpp-color="parameter">pub</span><span data-cpp-color="punctuation">,</span> <span data-cpp-color="parameter">topic</span><span data-cpp-color="punctuation">,</span> <span data-cpp-color="local">writer_qos</span><span data-cpp-color="punctuation">);</span></div>
+<div class="ttc" id="aclassdds_1_1pub_1_1_data_writer_html"><div class="ttname"><a href="classdds_1_1pub_1_1_data_writer.html">dds::pub::DataWriter&lt;T&gt;</a></div><div class="ttdoc">데이터 타입이 지정된 Topic에 sample을 쓰고 instance를 관리합니다.</div><div class="ttdef"><b>정의</b> DataWriter.hpp:73</div></div>
+<div class="ttc" id="agroup__dds__publication_html_ga35ad9728577d4bdccfe8677bba0bcf5d"><div class="ttname"><a href="group__dds__publication.html#ga35ad9728577d4bdccfe8677bba0bcf5d">dds::pub::qos::DataWriterQos</a></div><div class="ttdeci">dds::pub::qos::detail::DataWriterQos DataWriterQos</div><div class="ttdoc">QoS DataWriter를 구성하는 데 사용되는 정책 세트</div><div class="ttdef"><b>정의</b> DataWriterQos.hpp:30</div></div>
+</div><!-- fragment --><p>Subscriber에서 DataReader 선언을 아래 코드로 바꾸세요.</p>
+<div class="fragment dds-cpp-code"><div class="line"><a class="code hl_typedef" href="group__dds__subscription.html#gac759142c11b5f0cb2b2a8f6c41405966"><span data-cpp-color="namespace">dds</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="namespace">sub</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="namespace">qos</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="type">DataReaderQos</span></a> <span data-cpp-color="local">reader_qos</span><span data-cpp-color="punctuation">;</span></div>
+<div class="line"><span data-cpp-color="local">reader_qos</span> <span data-cpp-color="punctuation">&lt;&lt;</span> <span data-cpp-color="namespace">dds</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="namespace">core</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="namespace">policy</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="type">Reliability</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="method">Reliable</span><span data-cpp-color="punctuation">(</span><a class="code hl_function" href="classdds_1_1core_1_1_duration.html#ac4d51447780d8cedf9ee0ebb78863c98"><span data-cpp-color="namespace">dds</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="namespace">core</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="type">Duration</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="method">from_millisecs</span></a><span data-cpp-color="punctuation">(</span><span data-cpp-color="number">100</span><span data-cpp-color="punctuation">));</span></div>
+<div class="line"><a class="code hl_class" href="classdds_1_1sub_1_1_data_reader.html"><span data-cpp-color="namespace">dds</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="namespace">sub</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="class-template">DataReader</span><span data-cpp-color="punctuation">&lt;</span><span data-cpp-color="type">HelloWorldData_Msg</span><span data-cpp-color="punctuation">&gt;</span></a> <span data-cpp-color="local">dr</span><span data-cpp-color="punctuation">(</span><span data-cpp-color="parameter">sub</span><span data-cpp-color="punctuation">,</span> <span data-cpp-color="parameter">topic</span><span data-cpp-color="punctuation">,</span> <span data-cpp-color="local">reader_qos</span><span data-cpp-color="punctuation">);</span></div>
+<div class="ttc" id="aclassdds_1_1core_1_1_duration_html_ac4d51447780d8cedf9ee0ebb78863c98"><div class="ttname"><a href="classdds_1_1core_1_1_duration.html#ac4d51447780d8cedf9ee0ebb78863c98">dds::core::Duration::from_millisecs</a></div><div class="ttdeci">static const Duration from_millisecs(int64_t milliseconds)</div><div class="ttdoc">밀리초 단위 값으로 기간을 생성합니다.</div></div>
+<div class="ttc" id="aclassdds_1_1sub_1_1_data_reader_html"><div class="ttname"><a href="classdds_1_1sub_1_1_data_reader.html">dds::sub::DataReader&lt;T&gt;</a></div><div class="ttdoc">Topic에서 지정된 타입의 sample을 수신합니다.</div><div class="ttdef"><b>정의</b> TDataReader.hpp:76</div></div>
+<div class="ttc" id="agroup__dds__subscription_html_gac759142c11b5f0cb2b2a8f6c41405966"><div class="ttname"><a href="group__dds__subscription.html#gac759142c11b5f0cb2b2a8f6c41405966">dds::sub::qos::DataReaderQos</a></div><div class="ttdeci">dds::sub::qos::detail::DataReaderQos DataReaderQos</div><div class="ttdoc">QoS DataReader를 구성하는 데 사용되는 정책 세트</div><div class="ttdef"><b>정의</b> DataReaderQos.hpp:12</div></div>
+</div><!-- fragment --><p>두 소스 파일에 <span class="tt">&lt;chrono&gt;</span>와 <span class="tt">&lt;thread&gt;</span>를 추가하세요. 점검하는 동안 Publisher가 실행 상태를 유지하도록 기록 호출 뒤에 <span class="tt">std::this_thread::sleep_for(std::chrono::seconds(10));</span>을 추가합니다. Subscriber의 무한 수신 루프를 아래 진단 루프로 바꾸세요. 5초의 진단 시간 안에 Subscriber를 먼저, Publisher를 나중에 시작합니다.</p>
+<div class="fragment dds-cpp-code"><div class="line"><span class="keyword"><span data-cpp-color="keyword">const</span></span> <span class="keyword"><span data-cpp-color="keyword">auto</span></span> <a class="code hl_function" href="namespacedds_1_1sub.html#a16b8566b8d863b4d3279960b72b58d09"><span data-cpp-color="local">end</span></a> <span data-cpp-color="punctuation">=</span> <span data-cpp-color="namespace">std</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="namespace">chrono</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="type">steady_clock</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="method">now</span><span data-cpp-color="punctuation">()</span> <span data-cpp-color="punctuation">+</span> <span data-cpp-color="namespace">std</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="namespace">chrono</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="type">seconds</span><span data-cpp-color="punctuation">(</span><span data-cpp-color="number">5</span><span data-cpp-color="punctuation">);</span></div>
+<div class="line"><span class="keywordtype"><span data-cpp-color="keyword">bool</span></span> <span data-cpp-color="local">has_reported</span> <span data-cpp-color="punctuation">=</span> <span class="keyword">false</span><span data-cpp-color="punctuation">;</span></div>
+<div class="line"><span class="keywordflow"><span data-cpp-color="control">while</span></span> <span data-cpp-color="punctuation">(</span><span data-cpp-color="namespace">std</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="namespace">chrono</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="type">steady_clock</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="method">now</span><span data-cpp-color="punctuation">()</span> <span data-cpp-color="punctuation">&lt;</span> <span data-cpp-color="local">end</span><span data-cpp-color="punctuation">)</span></div>
+<div class="line"><span data-cpp-color="punctuation">{</span></div>
+<div class="line">    <span class="keywordflow"><span data-cpp-color="control">if</span></span> <span data-cpp-color="punctuation">(</span><span data-cpp-color="parameter">dr</span><span data-cpp-color="punctuation">.</span><a class="code hl_function" href="classdds_1_1sub_1_1_data_reader.html#a08c009efb49a3ad883d17b9ede60ed6c"><span data-cpp-color="method">subscription_matched_status</span></a><span data-cpp-color="punctuation">().</span><span data-cpp-color="method">current_count</span><span data-cpp-color="punctuation">()</span> <span data-cpp-color="punctuation">&gt;</span> <span data-cpp-color="number">0</span><span data-cpp-color="punctuation">)</span></div>
+<div class="line">    <span data-cpp-color="punctuation">{</span></div>
+<div class="line">        <span data-cpp-color="namespace">std</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="global">cout</span> <span data-cpp-color="punctuation">&lt;&lt;</span> <span class="stringliteral"><span data-cpp-color="string">"Reader matched a writer</span><span data-cpp-color="escape">\n</span><span data-cpp-color="string">"</span></span><span data-cpp-color="punctuation">;</span></div>
+<div class="line">        <span data-cpp-color="local">has_reported</span> <span data-cpp-color="punctuation">=</span> <span class="keyword">true</span><span data-cpp-color="punctuation">;</span></div>
+<div class="line">        <span class="keywordflow"><span data-cpp-color="control">break</span></span><span data-cpp-color="punctuation">;</span></div>
+<div class="line">    <span data-cpp-color="punctuation">}</span></div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword"><span data-cpp-color="keyword">const</span></span> <span class="keyword"><span data-cpp-color="keyword">auto</span></span> <span data-cpp-color="local">incompatible</span> <span data-cpp-color="punctuation">=</span> <span data-cpp-color="parameter">dr</span><span data-cpp-color="punctuation">.</span><a class="code hl_function" href="classdds_1_1sub_1_1_data_reader.html#a8852e493189251094bc58f6b220712c6"><span data-cpp-color="method">requested_incompatible_qos_status</span></a><span data-cpp-color="punctuation">();</span></div>
+<div class="line">    <span class="keywordflow"><span data-cpp-color="control">if</span></span> <span data-cpp-color="punctuation">(</span><span data-cpp-color="local">incompatible</span><span data-cpp-color="punctuation">.</span><span data-cpp-color="method">total_count</span><span data-cpp-color="punctuation">()</span> <span data-cpp-color="punctuation">&gt;</span> <span data-cpp-color="number">0</span><span data-cpp-color="punctuation">)</span></div>
+<div class="line">    <span data-cpp-color="punctuation">{</span></div>
+<div class="line">        <span class="keyword"><span data-cpp-color="keyword">const</span></span> <span class="keyword"><span data-cpp-color="keyword">auto</span></span> <span data-cpp-color="local">policy</span> <span data-cpp-color="punctuation">=</span> <span data-cpp-color="local">incompatible</span><span data-cpp-color="punctuation">.</span><span data-cpp-color="method">last_policy_id</span><span data-cpp-color="punctuation">();</span></div>
+<div class="line">        <span class="keywordflow"><span data-cpp-color="control">if</span></span> <span data-cpp-color="punctuation">(</span><span data-cpp-color="local">policy</span> <span data-cpp-color="punctuation">==</span> <a class="code hl_class" href="classdds_1_1core_1_1policy_1_1policy__id.html"><span data-cpp-color="namespace">dds</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="namespace">core</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="namespace">policy</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="class-template">policy_id</span><span data-cpp-color="punctuation">&lt;</span><span data-cpp-color="namespace">dds</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="namespace">core</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="namespace">policy</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="type">Reliability</span><span data-cpp-color="punctuation">&gt;::</span><span data-cpp-color="field">value</span></a><span data-cpp-color="punctuation">)</span></div>
+<div class="line">            <span data-cpp-color="namespace">std</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="global">cout</span> <span data-cpp-color="punctuation">&lt;&lt;</span> <span class="stringliteral"><span data-cpp-color="string">"Reliability mismatch</span><span data-cpp-color="escape">\n</span><span data-cpp-color="string">"</span></span><span data-cpp-color="punctuation">;</span></div>
+<div class="line">        <span class="keywordflow"><span data-cpp-color="control">else</span></span></div>
+<div class="line">            <span data-cpp-color="namespace">std</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="global">cout</span> <span data-cpp-color="punctuation">&lt;&lt;</span> <span class="stringliteral"><span data-cpp-color="string">"Incompatible QoS policy "</span></span> <span data-cpp-color="punctuation">&lt;&lt;</span> <span data-cpp-color="local">policy</span> <span data-cpp-color="punctuation">&lt;&lt;</span> <span class="charliteral"><span data-cpp-color="string">'\n'</span></span><span data-cpp-color="punctuation">;</span></div>
+<div class="line"> </div>
+<div class="line">        <span data-cpp-color="local">has_reported</span> <span data-cpp-color="punctuation">=</span> <span class="keyword">true</span><span data-cpp-color="punctuation">;</span></div>
+<div class="line">        <span class="keywordflow"><span data-cpp-color="control">break</span></span><span data-cpp-color="punctuation">;</span></div>
+<div class="line">    <span data-cpp-color="punctuation">}</span></div>
+<div class="line"> </div>
+<div class="line">    <span data-cpp-color="namespace">std</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="namespace">this_thread</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="function">sleep_for</span><span data-cpp-color="punctuation">(</span><span data-cpp-color="namespace">std</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="namespace">chrono</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="type">milliseconds</span><span data-cpp-color="punctuation">(</span><span data-cpp-color="number">100</span><span data-cpp-color="punctuation">));</span></div>
+<div class="line"><span data-cpp-color="punctuation">}</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keywordflow"><span data-cpp-color="control">if</span></span> <span data-cpp-color="punctuation">(!</span><span data-cpp-color="local">has_reported</span><span data-cpp-color="punctuation">)</span></div>
+<div class="line">    <span data-cpp-color="namespace">std</span><span data-cpp-color="punctuation">::</span><span data-cpp-color="global">cout</span> <span data-cpp-color="punctuation">&lt;&lt;</span> <span class="stringliteral"><span data-cpp-color="string">"No match or incompatible QoS reported within five seconds</span><span data-cpp-color="escape">\n</span><span data-cpp-color="string">"</span></span><span data-cpp-color="punctuation">;</span></div>
+</div><!-- fragment --><p>best-effort DataWriter와 reliable DataReader를 사용하면 상대 발견 후 <span class="tt">Reliability mismatch</span>가 출력됩니다. Publisher의 <span class="tt">BestEffort()</span>를 <span class="tt">Reliable(dds::core::Duration::from_millisecs(100))</span>으로 바꾼 뒤 빌드하고 두 프로세스를 다시 실행하세요. 나머지 설정이 같으면 <span class="tt">Reader matched a writer</span>가 출력됩니다. 데이터 수신을 확인하려면 <a class="el" href="dds_example_legacy_sub.html" title="Hello World Subscriber">Hello World Subscriber</a> 의 수신 루프를 복구하고 호환되는 DataWriter와 함께 실행합니다. </p>
+</div><div class="dds-table-scroll"><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-nested-classes"><a id="nested-classes" name="nested-classes"></a>
+클래스</h2></td></tr>
+<tr class="memitem:dds_3A_3Acore_3A_3Apolicy_3A_3ATLatencyBudget_3C_20D_20_3E" id="r_dds_3A_3Acore_3A_3Apolicy_3A_3ATLatencyBudget_3C_20D_20_3E"><td class="memItemLeft">클래스  </td><td class="memItemRight"><a class="el" href="classdds_1_1core_1_1policy_1_1_t_latency_budget.html">dds::core::policy::TLatencyBudget&lt; D &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft"> </td><td class="mdescRight">미들웨어의 전송 결정을 위한 <a class="el" href="#ga50f7bda0cda1b76fbd4e374627540e7c" title="미들웨어의 전송 결정을 위한 LatencyBudget 제공">LatencyBudget</a> 제공  <a href="classdds_1_1core_1_1policy_1_1_t_latency_budget.html#details">더 자세히 ...</a><br/></td></tr>
+<tr class="memitem:dds_3A_3Acore_3A_3Apolicy_3A_3ATTimeBasedFilter_3C_20D_20_3E" id="r_dds_3A_3Acore_3A_3Apolicy_3A_3ATTimeBasedFilter_3C_20D_20_3E"><td class="memItemLeft">클래스  </td><td class="memItemRight"><a class="el" href="classdds_1_1core_1_1policy_1_1_t_time_based_filter.html">dds::core::policy::TTimeBasedFilter&lt; D &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft"> </td><td class="mdescRight">DataReader가 선택하는 sample 간 최소 간격을 설정합니다  <a href="classdds_1_1core_1_1policy_1_1_t_time_based_filter.html#details">더 자세히 ...</a><br/></td></tr>
+<tr class="memitem:dds_3A_3Acore_3A_3Apolicy_3A_3ATPartition_3C_20D_20_3E" id="r_dds_3A_3Acore_3A_3Apolicy_3A_3ATPartition_3C_20D_20_3E"><td class="memItemLeft">클래스  </td><td class="memItemRight"><a class="el" href="classdds_1_1core_1_1policy_1_1_t_partition.html">dds::core::policy::TPartition&lt; D &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft"> </td><td class="mdescRight">domain 내에서 논리적 Publisher 및 Subscriber 일치 제어  <a href="classdds_1_1core_1_1policy_1_1_t_partition.html#details">더 자세히 ...</a><br/></td></tr>
+<tr class="memitem:dds_3A_3Acore_3A_3Apolicy_3A_3ATOwnership_3C_20D_20_3E" id="r_dds_3A_3Acore_3A_3Apolicy_3A_3ATOwnership_3C_20D_20_3E"><td class="memItemLeft">클래스  </td><td class="memItemRight"><a class="el" href="classdds_1_1core_1_1policy_1_1_t_ownership.html">dds::core::policy::TOwnership&lt; D &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft"> </td><td class="mdescRight">여러 쓰기자가 동일한 instance를 업데이트할 수 있는 방법을 선택합니다.  <a href="classdds_1_1core_1_1policy_1_1_t_ownership.html#details">더 자세히 ...</a><br/></td></tr>
+<tr class="memitem:dds_3A_3Acore_3A_3Apolicy_3A_3ATOwnershipStrength_3C_20D_20_3E" id="r_dds_3A_3Acore_3A_3Apolicy_3A_3ATOwnershipStrength_3C_20D_20_3E"><td class="memItemLeft">클래스  </td><td class="memItemRight"><a class="el" href="classdds_1_1core_1_1policy_1_1_t_ownership_strength.html">dds::core::policy::TOwnershipStrength&lt; D &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft"> </td><td class="mdescRight">독점 소유권을 위한 DataWriter의 우선순위를 지정합니다  <a href="classdds_1_1core_1_1policy_1_1_t_ownership_strength.html#details">더 자세히 ...</a><br/></td></tr>
+<tr class="memitem:dds_3A_3Acore_3A_3Apolicy_3A_3ATWriterDataLifecycle_3C_20D_20_3E" id="r_dds_3A_3Acore_3A_3Apolicy_3A_3ATWriterDataLifecycle_3C_20D_20_3E"><td class="memItemLeft">클래스  </td><td class="memItemRight"><a class="el" href="classdds_1_1core_1_1policy_1_1_t_writer_data_lifecycle.html">dds::core::policy::TWriterDataLifecycle&lt; D &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft"> </td><td class="mdescRight">instance를 등록 해제하면 자동으로 삭제되는지 여부 제어  <a href="classdds_1_1core_1_1policy_1_1_t_writer_data_lifecycle.html#details">더 자세히 ...</a><br/></td></tr>
+<tr class="memitem:dds_3A_3Acore_3A_3Apolicy_3A_3ATReaderDataLifecycle_3C_20D_20_3E" id="r_dds_3A_3Acore_3A_3Apolicy_3A_3ATReaderDataLifecycle_3C_20D_20_3E"><td class="memItemLeft">클래스  </td><td class="memItemRight"><a class="el" href="classdds_1_1core_1_1policy_1_1_t_reader_data_lifecycle.html">dds::core::policy::TReaderDataLifecycle&lt; D &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft"> </td><td class="mdescRight">DataReader가 처분된 instance와 기록되지 않은 instance sample을 정리할 때 설정  <a href="classdds_1_1core_1_1policy_1_1_t_reader_data_lifecycle.html#details">더 자세히 ...</a><br/></td></tr>
+<tr class="memitem:dds_3A_3Acore_3A_3Apolicy_3A_3ATDurability_3C_20D_20_3E" id="r_dds_3A_3Acore_3A_3Apolicy_3A_3ATDurability_3C_20D_20_3E"><td class="memItemLeft">클래스  </td><td class="memItemRight"><a class="el" href="classdds_1_1core_1_1policy_1_1_t_durability.html">dds::core::policy::TDurability&lt; D &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft"> </td><td class="mdescRight">DataReader가 일치하기 전에 작성된 sample이 해당 DataReader에 도달할 수 있는지 여부를 제어합니다.  <a href="classdds_1_1core_1_1policy_1_1_t_durability.html#details">더 자세히 ...</a><br/></td></tr>
+<tr class="memitem:dds_3A_3Acore_3A_3Apolicy_3A_3ATPresentation_3C_20D_20_3E" id="r_dds_3A_3Acore_3A_3Apolicy_3A_3ATPresentation_3C_20D_20_3E"><td class="memItemLeft">클래스  </td><td class="memItemRight"><a class="el" href="classdds_1_1core_1_1policy_1_1_t_presentation.html">dds::core::policy::TPresentation&lt; D &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft"> </td><td class="mdescRight"><a class="el" href="#ga2b52bb5f851fa675b14a1d1ac57d6b15" title="Presentation 범위를 구성하고 일관된 또는 정렬된 액세스 요청">Presentation</a> 범위를 구성하고 일관된 또는 정렬된 액세스 요청  <a href="classdds_1_1core_1_1policy_1_1_t_presentation.html#details">더 자세히 ...</a><br/></td></tr>
+<tr class="memitem:dds_3A_3Acore_3A_3Apolicy_3A_3ATReliability_3C_20D_20_3E" id="r_dds_3A_3Acore_3A_3Apolicy_3A_3ATReliability_3C_20D_20_3E"><td class="memItemLeft">클래스  </td><td class="memItemRight"><a class="el" href="classdds_1_1core_1_1policy_1_1_t_reliability.html">dds::core::policy::TReliability&lt; D &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft"> </td><td class="mdescRight">DataWriter가 제공하거나 DataReader가 요청하는 전달 Reliability를 제어합니다.  <a href="classdds_1_1core_1_1policy_1_1_t_reliability.html#details">더 자세히 ...</a><br/></td></tr>
+<tr class="memitem:dds_3A_3Acore_3A_3Apolicy_3A_3ATDestinationOrder_3C_20D_20_3E" id="r_dds_3A_3Acore_3A_3Apolicy_3A_3ATDestinationOrder_3C_20D_20_3E"><td class="memItemLeft">클래스  </td><td class="memItemRight"><a class="el" href="classdds_1_1core_1_1policy_1_1_t_destination_order.html">dds::core::policy::TDestinationOrder&lt; D &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft"> </td><td class="mdescRight">DDS가 수신 timestamp와 source timestamp 중 어느 쪽으로 sample을 정렬할지 선택합니다.  <a href="classdds_1_1core_1_1policy_1_1_t_destination_order.html#details">더 자세히 ...</a><br/></td></tr>
+<tr class="memitem:dds_3A_3Acore_3A_3Apolicy_3A_3ATHistory_3C_20D_20_3E" id="r_dds_3A_3Acore_3A_3Apolicy_3A_3ATHistory_3C_20D_20_3E"><td class="memItemLeft">클래스  </td><td class="memItemRight"><a class="el" href="classdds_1_1core_1_1policy_1_1_t_history.html">dds::core::policy::THistory&lt; D &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft"> </td><td class="mdescRight">각 instance에 대한 sample 보유 제어  <a href="classdds_1_1core_1_1policy_1_1_t_history.html#details">더 자세히 ...</a><br/></td></tr>
+<tr class="memitem:dds_3A_3Acore_3A_3Apolicy_3A_3ATResourceLimits_3C_20D_20_3E" id="r_dds_3A_3Acore_3A_3Apolicy_3A_3ATResourceLimits_3C_20D_20_3E"><td class="memItemLeft">클래스  </td><td class="memItemRight"><a class="el" href="classdds_1_1core_1_1policy_1_1_t_resource_limits.html">dds::core::policy::TResourceLimits&lt; D &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft"> </td><td class="mdescRight">Entity가 유지할 수 있는 sample과 instance를 제한합니다.  <a href="classdds_1_1core_1_1policy_1_1_t_resource_limits.html#details">더 자세히 ...</a><br/></td></tr>
+<tr class="memitem:dds_3A_3Acore_3A_3Apolicy_3A_3ATLiveliness_3C_20D_20_3E" id="r_dds_3A_3Acore_3A_3Apolicy_3A_3ATLiveliness_3C_20D_20_3E"><td class="memItemLeft">클래스  </td><td class="memItemRight"><a class="el" href="classdds_1_1core_1_1policy_1_1_t_liveliness.html">dds::core::policy::TLiveliness&lt; D &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft"> </td><td class="mdescRight">DataWriter가 활동을 주장하는 방법과 DataReader가 그 손실을 감지하는 방법을 제어합니다.  <a href="classdds_1_1core_1_1policy_1_1_t_liveliness.html#details">더 자세히 ...</a><br/></td></tr>
+</table></div><div class="dds-table-scroll"><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-typedef-members"><a id="typedef-members" name="typedef-members"></a>
+타입정의</h2></td></tr>
+<tr class="memitem:gaaa67e0ee7026fecfed9eb32f2c425721" id="r_gaaa67e0ee7026fecfed9eb32f2c425721"><td class="memItemLeft">typedef dds::core::policy::detail::Deadline </td><td class="memItemRight"><a class="el" href="#gaaa67e0ee7026fecfed9eb32f2c425721">dds::core::policy::Deadline</a></td></tr>
+<tr class="memdesc:gaaa67e0ee7026fecfed9eb32f2c425721"><td class="mdescLeft"> </td><td class="mdescRight">instance의 업데이트 사이에 예상되는 최대 간격을 설정합니다  <br/></td></tr>
+<tr class="memitem:gac7ed58b137ff6a6ddcb2c7d8690169c5" id="r_gac7ed58b137ff6a6ddcb2c7d8690169c5"><td class="memItemLeft">typedef dds::core::policy::detail::DestinationOrder </td><td class="memItemRight"><a class="el" href="#gac7ed58b137ff6a6ddcb2c7d8690169c5">dds::core::policy::DestinationOrder</a></td></tr>
+<tr class="memdesc:gac7ed58b137ff6a6ddcb2c7d8690169c5"><td class="mdescLeft"> </td><td class="mdescRight">DDS가 수신 timestamp와 source timestamp 중 어느 쪽으로 sample을 정렬할지 선택합니다.  <br/></td></tr>
+<tr class="memitem:gaa70a30964093541160b34558877d3438" id="r_gaa70a30964093541160b34558877d3438"><td class="memItemLeft">typedef dds::core::policy::detail::Durability </td><td class="memItemRight"><a class="el" href="#gaa70a30964093541160b34558877d3438">dds::core::policy::Durability</a></td></tr>
+<tr class="memdesc:gaa70a30964093541160b34558877d3438"><td class="mdescLeft"> </td><td class="mdescRight">DataReader가 일치하기 전에 작성된 sample이 해당 DataReader에 도달할 수 있는지 여부를 제어합니다.  <br/></td></tr>
+<tr class="memitem:ga8cd8b50090e916a2a494b23c8592a721" id="r_ga8cd8b50090e916a2a494b23c8592a721"><td class="memItemLeft">typedef dds::core::policy::detail::EntityFactory </td><td class="memItemRight"><a class="el" href="#ga8cd8b50090e916a2a494b23c8592a721">dds::core::policy::EntityFactory</a></td></tr>
+<tr class="memdesc:ga8cd8b50090e916a2a494b23c8592a721"><td class="mdescLeft"> </td><td class="mdescRight">팩토리가 생성한 Entity를 자동으로 사용할지 여부를 제어합니다.  <br/></td></tr>
+<tr class="memitem:ga1bcd7764c7126aa6ac3edcc8c5231433" id="r_ga1bcd7764c7126aa6ac3edcc8c5231433"><td class="memItemLeft">typedef dds::core::policy::detail::GroupData </td><td class="memItemRight"><a class="el" href="#ga1bcd7764c7126aa6ac3edcc8c5231433">dds::core::policy::GroupData</a></td></tr>
+<tr class="memdesc:ga1bcd7764c7126aa6ac3edcc8c5231433"><td class="mdescLeft"> </td><td class="mdescRight">Publisher 또는 Subscriber에 애플리케이션 정의 데이터를 전송합니다.  <br/></td></tr>
+<tr class="memitem:gac131ef99ba345cff7ae780d5d30ff130" id="r_gac131ef99ba345cff7ae780d5d30ff130"><td class="memItemLeft">typedef dds::core::policy::detail::History </td><td class="memItemRight"><a class="el" href="#gac131ef99ba345cff7ae780d5d30ff130">dds::core::policy::History</a></td></tr>
+<tr class="memdesc:gac131ef99ba345cff7ae780d5d30ff130"><td class="mdescLeft"> </td><td class="mdescRight">각 instance에 대한 sample 보유 제어  <br/></td></tr>
+<tr class="memitem:ga50f7bda0cda1b76fbd4e374627540e7c" id="r_ga50f7bda0cda1b76fbd4e374627540e7c"><td class="memItemLeft">typedef dds::core::policy::detail::LatencyBudget </td><td class="memItemRight"><a class="el" href="#ga50f7bda0cda1b76fbd4e374627540e7c">dds::core::policy::LatencyBudget</a></td></tr>
+<tr class="memdesc:ga50f7bda0cda1b76fbd4e374627540e7c"><td class="mdescLeft"> </td><td class="mdescRight">미들웨어의 전송 결정을 위한 <a class="el" href="#ga50f7bda0cda1b76fbd4e374627540e7c" title="미들웨어의 전송 결정을 위한 LatencyBudget 제공">LatencyBudget</a> 제공  <br/></td></tr>
+<tr class="memitem:ga32f298a740cb29ba2d6bfec2bf4871b9" id="r_ga32f298a740cb29ba2d6bfec2bf4871b9"><td class="memItemLeft">typedef dds::core::policy::detail::Lifespan </td><td class="memItemRight"><a class="el" href="#ga32f298a740cb29ba2d6bfec2bf4871b9">dds::core::policy::Lifespan</a></td></tr>
+<tr class="memdesc:ga32f298a740cb29ba2d6bfec2bf4871b9"><td class="mdescLeft"> </td><td class="mdescRight">기록한 sample을 전달할 수 있는 기간을 설정합니다.  <br/></td></tr>
+<tr class="memitem:ga6d270a5e784d2fc600382fdd467d6a56" id="r_ga6d270a5e784d2fc600382fdd467d6a56"><td class="memItemLeft">typedef dds::core::policy::detail::Liveliness </td><td class="memItemRight"><a class="el" href="#ga6d270a5e784d2fc600382fdd467d6a56">dds::core::policy::Liveliness</a></td></tr>
+<tr class="memdesc:ga6d270a5e784d2fc600382fdd467d6a56"><td class="mdescLeft"> </td><td class="mdescRight">DataWriter가 활동을 주장하는 방법과 DataReader가 그 손실을 감지하는 방법을 제어합니다.  <br/></td></tr>
+<tr class="memitem:ga2b55aa93f052e74de626f42665c5785f" id="r_ga2b55aa93f052e74de626f42665c5785f"><td class="memItemLeft">typedef dds::core::policy::detail::Ownership </td><td class="memItemRight"><a class="el" href="#ga2b55aa93f052e74de626f42665c5785f">dds::core::policy::Ownership</a></td></tr>
+<tr class="memdesc:ga2b55aa93f052e74de626f42665c5785f"><td class="mdescLeft"> </td><td class="mdescRight">여러 쓰기자가 동일한 instance를 업데이트할 수 있는 방법을 선택합니다.  <br/></td></tr>
+<tr class="memitem:gac074ac347c0a510da871ae3949551efa" id="r_gac074ac347c0a510da871ae3949551efa"><td class="memItemLeft">typedef dds::core::policy::detail::OwnershipStrength </td><td class="memItemRight"><a class="el" href="#gac074ac347c0a510da871ae3949551efa">dds::core::policy::OwnershipStrength</a></td></tr>
+<tr class="memdesc:gac074ac347c0a510da871ae3949551efa"><td class="mdescLeft"> </td><td class="mdescRight">독점 소유권을 위한 DataWriter의 우선순위를 지정합니다  <br/></td></tr>
+<tr class="memitem:ga9676f77e95c6e5d1c732604d9e7ead38" id="r_ga9676f77e95c6e5d1c732604d9e7ead38"><td class="memItemLeft">typedef dds::core::policy::detail::Partition </td><td class="memItemRight"><a class="el" href="#ga9676f77e95c6e5d1c732604d9e7ead38">dds::core::policy::Partition</a></td></tr>
+<tr class="memdesc:ga9676f77e95c6e5d1c732604d9e7ead38"><td class="mdescLeft"> </td><td class="mdescRight">domain 내에서 논리적 Publisher 및 Subscriber 일치 제어  <br/></td></tr>
+<tr class="memitem:ga2b52bb5f851fa675b14a1d1ac57d6b15" id="r_ga2b52bb5f851fa675b14a1d1ac57d6b15"><td class="memItemLeft">typedef dds::core::policy::detail::Presentation </td><td class="memItemRight"><a class="el" href="#ga2b52bb5f851fa675b14a1d1ac57d6b15">dds::core::policy::Presentation</a></td></tr>
+<tr class="memdesc:ga2b52bb5f851fa675b14a1d1ac57d6b15"><td class="mdescLeft"> </td><td class="mdescRight"><a class="el" href="#ga2b52bb5f851fa675b14a1d1ac57d6b15" title="Presentation 범위를 구성하고 일관된 또는 정렬된 액세스 요청">Presentation</a> 범위를 구성하고 일관된 또는 정렬된 액세스 요청  <br/></td></tr>
+<tr class="memitem:ga96baccf815251c55c31cbe36b3a139e2" id="r_ga96baccf815251c55c31cbe36b3a139e2"><td class="memItemLeft">typedef dds::core::policy::detail::ReaderDataLifecycle </td><td class="memItemRight"><a class="el" href="#ga96baccf815251c55c31cbe36b3a139e2">dds::core::policy::ReaderDataLifecycle</a></td></tr>
+<tr class="memdesc:ga96baccf815251c55c31cbe36b3a139e2"><td class="mdescLeft"> </td><td class="mdescRight">DataReader가 처분된 instance와 기록되지 않은 instance sample을 정리할 때 설정  <br/></td></tr>
+<tr class="memitem:gae1ee89c57fc5fa311721b4511e559783" id="r_gae1ee89c57fc5fa311721b4511e559783"><td class="memItemLeft">typedef dds::core::policy::detail::Reliability </td><td class="memItemRight"><a class="el" href="#gae1ee89c57fc5fa311721b4511e559783">dds::core::policy::Reliability</a></td></tr>
+<tr class="memdesc:gae1ee89c57fc5fa311721b4511e559783"><td class="mdescLeft"> </td><td class="mdescRight">DataWriter가 제공하거나 DataReader가 요청하는 전달 Reliability를 제어합니다.  <br/></td></tr>
+<tr class="memitem:gabeeea78bb9eaac8652578f9addc33372" id="r_gabeeea78bb9eaac8652578f9addc33372"><td class="memItemLeft">typedef dds::core::policy::detail::ResourceLimits </td><td class="memItemRight"><a class="el" href="#gabeeea78bb9eaac8652578f9addc33372">dds::core::policy::ResourceLimits</a></td></tr>
+<tr class="memdesc:gabeeea78bb9eaac8652578f9addc33372"><td class="mdescLeft"> </td><td class="mdescRight">Entity가 유지할 수 있는 sample과 instance를 제한합니다.  <br/></td></tr>
+<tr class="memitem:ga25ed9d287d76401671576ec64559df07" id="r_ga25ed9d287d76401671576ec64559df07"><td class="memItemLeft">typedef dds::core::policy::detail::TimeBasedFilter </td><td class="memItemRight"><a class="el" href="#ga25ed9d287d76401671576ec64559df07">dds::core::policy::TimeBasedFilter</a></td></tr>
+<tr class="memdesc:ga25ed9d287d76401671576ec64559df07"><td class="mdescLeft"> </td><td class="mdescRight">DataReader가 선택하는 sample 간 최소 간격을 설정합니다  <br/></td></tr>
+<tr class="memitem:ga15f95e2eef1f4dd215378d04701b71c9" id="r_ga15f95e2eef1f4dd215378d04701b71c9"><td class="memItemLeft">typedef dds::core::policy::detail::TopicData </td><td class="memItemRight"><a class="el" href="#ga15f95e2eef1f4dd215378d04701b71c9">dds::core::policy::TopicData</a></td></tr>
+<tr class="memdesc:ga15f95e2eef1f4dd215378d04701b71c9"><td class="mdescLeft"> </td><td class="mdescRight">Topic과 관련된 애플리케이션 정의 데이터를 수행합니다.  <br/></td></tr>
+<tr class="memitem:ga9bfb28a8f810b731fc10a3506d687ea0" id="r_ga9bfb28a8f810b731fc10a3506d687ea0"><td class="memItemLeft">typedef dds::core::policy::detail::TransportPriority </td><td class="memItemRight"><a class="el" href="#ga9bfb28a8f810b731fc10a3506d687ea0">dds::core::policy::TransportPriority</a></td></tr>
+<tr class="memdesc:ga9bfb28a8f810b731fc10a3506d687ea0"><td class="mdescLeft"> </td><td class="mdescRight">상대적 전송 우선순위 힌트를 제공합니다  <br/></td></tr>
+<tr class="memitem:ga3082013b21e53c2cb3c462fcd1151d77" id="r_ga3082013b21e53c2cb3c462fcd1151d77"><td class="memItemLeft">typedef dds::core::policy::detail::UserData </td><td class="memItemRight"><a class="el" href="#ga3082013b21e53c2cb3c462fcd1151d77">dds::core::policy::UserData</a></td></tr>
+<tr class="memdesc:ga3082013b21e53c2cb3c462fcd1151d77"><td class="mdescLeft"> </td><td class="mdescRight">검색을 위한 애플리케이션 정의 데이터 수행  <br/></td></tr>
+<tr class="memitem:gadd857380ad57a062aa880b3d612671dd" id="r_gadd857380ad57a062aa880b3d612671dd"><td class="memItemLeft">typedef dds::core::policy::detail::WriterDataLifecycle </td><td class="memItemRight"><a class="el" href="#gadd857380ad57a062aa880b3d612671dd">dds::core::policy::WriterDataLifecycle</a></td></tr>
+<tr class="memdesc:gadd857380ad57a062aa880b3d612671dd"><td class="mdescLeft"> </td><td class="mdescRight">instance를 등록 해제하면 자동으로 삭제되는지 여부 제어  <br/></td></tr>
+</table></div>
+
+<a id="doc-typedef-members" name="doc-typedef-members"></a><h2 class="groupheader" id="header-doc-typedef-members">타입정의 문서화</h2>
+<a id="gaaa67e0ee7026fecfed9eb32f2c425721" name="gaaa67e0ee7026fecfed9eb32f2c425721"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaaa67e0ee7026fecfed9eb32f2c425721">◆ </a></span>Deadline</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef dds::core::policy::detail::Deadline <a class="el" href="#gaaa67e0ee7026fecfed9eb32f2c425721">dds::core::policy::Deadline</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>instance의 업데이트 사이에 예상되는 최대 간격을 설정합니다 </p>
+<dl class="section see"><dt>참고</dt><dd><a class="el" href="classdds_1_1core_1_1policy_1_1_t_deadline.html" title="Deadline은 각 instance의 갱신 주기를 정합니다.">dds::core::policy::TDeadline</a> </dd></dl>
+
+</div>
+</div>
+<a id="gac7ed58b137ff6a6ddcb2c7d8690169c5" name="gac7ed58b137ff6a6ddcb2c7d8690169c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac7ed58b137ff6a6ddcb2c7d8690169c5">◆ </a></span>DestinationOrder</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef dds::core::policy::detail::DestinationOrder <a class="el" href="#gac7ed58b137ff6a6ddcb2c7d8690169c5">dds::core::policy::DestinationOrder</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>DDS가 수신 timestamp와 source timestamp 중 어느 쪽으로 sample을 정렬할지 선택합니다. </p>
+<dl class="section see"><dt>참고</dt><dd><a class="el" href="classdds_1_1core_1_1policy_1_1_t_destination_order.html" title="DDS가 수신 timestamp와 source timestamp 중 어느 쪽으로 sample을 정렬할지 선택합니다.">dds::core::policy::TDestinationOrder</a> </dd></dl>
+
+</div>
+</div>
+<a id="gaa70a30964093541160b34558877d3438" name="gaa70a30964093541160b34558877d3438"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa70a30964093541160b34558877d3438">◆ </a></span>Durability</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef dds::core::policy::detail::Durability <a class="el" href="#gaa70a30964093541160b34558877d3438">dds::core::policy::Durability</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>DataReader가 일치하기 전에 작성된 sample이 해당 DataReader에 도달할 수 있는지 여부를 제어합니다. </p>
+<dl class="section see"><dt>참고</dt><dd><a class="el" href="classdds_1_1core_1_1policy_1_1_t_durability.html" title="DataReader가 일치하기 전에 작성된 sample이 해당 DataReader에 도달할 수 있는지 여부를 제어합니다.">dds::core::policy::TDurability</a> </dd></dl>
+
+</div>
+</div>
+<a id="ga8cd8b50090e916a2a494b23c8592a721" name="ga8cd8b50090e916a2a494b23c8592a721"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8cd8b50090e916a2a494b23c8592a721">◆ </a></span>EntityFactory</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef dds::core::policy::detail::EntityFactory <a class="el" href="#ga8cd8b50090e916a2a494b23c8592a721">dds::core::policy::EntityFactory</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>팩토리가 생성한 Entity를 자동으로 사용할지 여부를 제어합니다. </p>
+<dl class="section see"><dt>참고</dt><dd><a class="el" href="classdds_1_1core_1_1policy_1_1_t_entity_factory.html" title="이 정책은 Entity가 다른 Entity를 생성할 때의 동작을 제어합니다.">dds::core::policy::TEntityFactory</a> </dd></dl>
+
+</div>
+</div>
+<a id="ga1bcd7764c7126aa6ac3edcc8c5231433" name="ga1bcd7764c7126aa6ac3edcc8c5231433"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1bcd7764c7126aa6ac3edcc8c5231433">◆ </a></span>GroupData</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef dds::core::policy::detail::GroupData <a class="el" href="#ga1bcd7764c7126aa6ac3edcc8c5231433">dds::core::policy::GroupData</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Publisher 또는 Subscriber에 애플리케이션 정의 데이터를 전송합니다. </p>
+<dl class="section see"><dt>참고</dt><dd><a class="el" href="classdds_1_1core_1_1policy_1_1_t_group_data.html" title="애플리케이션에서 생성한 Publisher 또는 Subscriber에 추가 정보를 붙일 수 있는 QoS입니다.">dds::core::policy::TGroupData</a> </dd></dl>
+
+</div>
+</div>
+<a id="gac131ef99ba345cff7ae780d5d30ff130" name="gac131ef99ba345cff7ae780d5d30ff130"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac131ef99ba345cff7ae780d5d30ff130">◆ </a></span>History</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef dds::core::policy::detail::History <a class="el" href="#gac131ef99ba345cff7ae780d5d30ff130">dds::core::policy::History</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>각 instance에 대한 sample 보유 제어 </p>
+<dl class="section see"><dt>참고</dt><dd><a class="el" href="classdds_1_1core_1_1policy_1_1_t_history.html" title="각 instance에 대한 sample 보유 제어">dds::core::policy::THistory</a> </dd></dl>
+
+</div>
+</div>
+<a id="ga50f7bda0cda1b76fbd4e374627540e7c" name="ga50f7bda0cda1b76fbd4e374627540e7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga50f7bda0cda1b76fbd4e374627540e7c">◆ </a></span>LatencyBudget</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef dds::core::policy::detail::LatencyBudget <a class="el" href="#ga50f7bda0cda1b76fbd4e374627540e7c">dds::core::policy::LatencyBudget</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>미들웨어의 전송 결정을 위한 <a class="el" href="#ga50f7bda0cda1b76fbd4e374627540e7c" title="미들웨어의 전송 결정을 위한 LatencyBudget 제공">LatencyBudget</a> 제공 </p>
+<dl class="section see"><dt>참고</dt><dd><a class="el" href="classdds_1_1core_1_1policy_1_1_t_latency_budget.html" title="미들웨어의 전송 결정을 위한 LatencyBudget 제공">dds::core::policy::TLatencyBudget</a> </dd></dl>
+
+</div>
+</div>
+<a id="ga32f298a740cb29ba2d6bfec2bf4871b9" name="ga32f298a740cb29ba2d6bfec2bf4871b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga32f298a740cb29ba2d6bfec2bf4871b9">◆ </a></span>Lifespan</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef dds::core::policy::detail::Lifespan <a class="el" href="#ga32f298a740cb29ba2d6bfec2bf4871b9">dds::core::policy::Lifespan</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>기록한 sample을 전달할 수 있는 기간을 설정합니다. </p>
+<dl class="section see"><dt>참고</dt><dd><a class="el" href="classdds_1_1core_1_1policy_1_1_t_lifespan.html" title="이 QoS는 오래된 데이터가 애플리케이션에 전달되지 않도록 합니다.">dds::core::policy::TLifespan</a> </dd></dl>
+
+</div>
+</div>
+<a id="ga6d270a5e784d2fc600382fdd467d6a56" name="ga6d270a5e784d2fc600382fdd467d6a56"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6d270a5e784d2fc600382fdd467d6a56">◆ </a></span>Liveliness</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef dds::core::policy::detail::Liveliness <a class="el" href="#ga6d270a5e784d2fc600382fdd467d6a56">dds::core::policy::Liveliness</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>DataWriter가 활동을 주장하는 방법과 DataReader가 그 손실을 감지하는 방법을 제어합니다. </p>
+<dl class="section see"><dt>참고</dt><dd><a class="el" href="classdds_1_1core_1_1policy_1_1_t_liveliness.html" title="DataWriter가 활동을 주장하는 방법과 DataReader가 그 손실을 감지하는 방법을 제어합니다.">dds::core::policy::TLiveliness</a> </dd></dl>
+
+</div>
+</div>
+<a id="ga2b55aa93f052e74de626f42665c5785f" name="ga2b55aa93f052e74de626f42665c5785f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2b55aa93f052e74de626f42665c5785f">◆ </a></span>Ownership</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef dds::core::policy::detail::Ownership <a class="el" href="#ga2b55aa93f052e74de626f42665c5785f">dds::core::policy::Ownership</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>여러 쓰기자가 동일한 instance를 업데이트할 수 있는 방법을 선택합니다. </p>
+<dl class="section see"><dt>참고</dt><dd><a class="el" href="classdds_1_1core_1_1policy_1_1_t_ownership.html" title="여러 쓰기자가 동일한 instance를 업데이트할 수 있는 방법을 선택합니다.">dds::core::policy::TOwnership</a> </dd></dl>
+
+</div>
+</div>
+<a id="gac074ac347c0a510da871ae3949551efa" name="gac074ac347c0a510da871ae3949551efa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac074ac347c0a510da871ae3949551efa">◆ </a></span>OwnershipStrength</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef dds::core::policy::detail::OwnershipStrength <a class="el" href="#gac074ac347c0a510da871ae3949551efa">dds::core::policy::OwnershipStrength</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>독점 소유권을 위한 DataWriter의 우선순위를 지정합니다 </p>
+<dl class="section see"><dt>참고</dt><dd><a class="el" href="classdds_1_1core_1_1policy_1_1_t_ownership_strength.html" title="독점 소유권을 위한 DataWriter의 우선순위를 지정합니다">dds::core::policy::TOwnershipStrength</a> </dd></dl>
+
+</div>
+</div>
+<a id="ga9676f77e95c6e5d1c732604d9e7ead38" name="ga9676f77e95c6e5d1c732604d9e7ead38"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9676f77e95c6e5d1c732604d9e7ead38">◆ </a></span>Partition</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef dds::core::policy::detail::Partition <a class="el" href="#ga9676f77e95c6e5d1c732604d9e7ead38">dds::core::policy::Partition</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>domain 내에서 논리적 Publisher 및 Subscriber 일치 제어 </p>
+<dl class="section see"><dt>참고</dt><dd><a class="el" href="classdds_1_1core_1_1policy_1_1_t_partition.html" title="domain 내에서 논리적 Publisher 및 Subscriber 일치 제어">dds::core::policy::TPartition</a> </dd></dl>
+
+</div>
+</div>
+<a id="ga2b52bb5f851fa675b14a1d1ac57d6b15" name="ga2b52bb5f851fa675b14a1d1ac57d6b15"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2b52bb5f851fa675b14a1d1ac57d6b15">◆ </a></span>Presentation</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef dds::core::policy::detail::Presentation <a class="el" href="#ga2b52bb5f851fa675b14a1d1ac57d6b15">dds::core::policy::Presentation</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="#ga2b52bb5f851fa675b14a1d1ac57d6b15" title="Presentation 범위를 구성하고 일관된 또는 정렬된 액세스 요청">Presentation</a> 범위를 구성하고 일관된 또는 정렬된 액세스 요청 </p>
+<dl class="section see"><dt>참고</dt><dd><a class="el" href="classdds_1_1core_1_1policy_1_1_t_presentation.html" title="Presentation 범위를 구성하고 일관된 또는 정렬된 액세스 요청">dds::core::policy::TPresentation</a> </dd></dl>
+
+</div>
+</div>
+<a id="ga96baccf815251c55c31cbe36b3a139e2" name="ga96baccf815251c55c31cbe36b3a139e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga96baccf815251c55c31cbe36b3a139e2">◆ </a></span>ReaderDataLifecycle</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef dds::core::policy::detail::ReaderDataLifecycle <a class="el" href="#ga96baccf815251c55c31cbe36b3a139e2">dds::core::policy::ReaderDataLifecycle</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>DataReader가 처분된 instance와 기록되지 않은 instance sample을 정리할 때 설정 </p>
+<dl class="section see"><dt>참고</dt><dd><a class="el" href="classdds_1_1core_1_1policy_1_1_t_reader_data_lifecycle.html" title="DataReader가 처분된 instance와 기록되지 않은 instance sample을 정리할 때 설정">dds::core::policy::TReaderDataLifecycle</a> </dd></dl>
+
+</div>
+</div>
+<a id="gae1ee89c57fc5fa311721b4511e559783" name="gae1ee89c57fc5fa311721b4511e559783"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae1ee89c57fc5fa311721b4511e559783">◆ </a></span>Reliability</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef dds::core::policy::detail::Reliability <a class="el" href="#gae1ee89c57fc5fa311721b4511e559783">dds::core::policy::Reliability</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>DataWriter가 제공하거나 DataReader가 요청하는 전달 Reliability를 제어합니다. </p>
+<dl class="section see"><dt>참고</dt><dd><a class="el" href="classdds_1_1core_1_1policy_1_1_t_reliability.html" title="DataWriter가 제공하거나 DataReader가 요청하는 전달 Reliability를 제어합니다.">dds::core::policy::TReliability</a> </dd></dl>
+
+</div>
+</div>
+<a id="gabeeea78bb9eaac8652578f9addc33372" name="gabeeea78bb9eaac8652578f9addc33372"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gabeeea78bb9eaac8652578f9addc33372">◆ </a></span>ResourceLimits</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef dds::core::policy::detail::ResourceLimits <a class="el" href="#gabeeea78bb9eaac8652578f9addc33372">dds::core::policy::ResourceLimits</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Entity가 유지할 수 있는 sample과 instance를 제한합니다. </p>
+<dl class="section see"><dt>참고</dt><dd><a class="el" href="classdds_1_1core_1_1policy_1_1_t_resource_limits.html" title="Entity가 유지할 수 있는 sample과 instance를 제한합니다.">dds::core::policy::TResourceLimits</a> </dd></dl>
+
+</div>
+</div>
+<a id="ga25ed9d287d76401671576ec64559df07" name="ga25ed9d287d76401671576ec64559df07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga25ed9d287d76401671576ec64559df07">◆ </a></span>TimeBasedFilter</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef dds::core::policy::detail::TimeBasedFilter <a class="el" href="#ga25ed9d287d76401671576ec64559df07">dds::core::policy::TimeBasedFilter</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>DataReader가 선택하는 sample 간 최소 간격을 설정합니다 </p>
+<dl class="section see"><dt>참고</dt><dd><a class="el" href="classdds_1_1core_1_1policy_1_1_t_time_based_filter.html" title="DataReader가 선택하는 sample 간 최소 간격을 설정합니다">dds::core::policy::TTimeBasedFilter</a> </dd></dl>
+
+</div>
+</div>
+<a id="ga15f95e2eef1f4dd215378d04701b71c9" name="ga15f95e2eef1f4dd215378d04701b71c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga15f95e2eef1f4dd215378d04701b71c9">◆ </a></span>TopicData</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef dds::core::policy::detail::TopicData <a class="el" href="#ga15f95e2eef1f4dd215378d04701b71c9">dds::core::policy::TopicData</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Topic과 관련된 애플리케이션 정의 데이터를 수행합니다. </p>
+<dl class="section see"><dt>참고</dt><dd><a class="el" href="classdds_1_1core_1_1policy_1_1_t_topic_data.html" title="애플리케이션에서 생성한 Topic에 추가 정보를 붙일 수 있는 QoS입니다.">dds::core::policy::TTopicData</a> </dd></dl>
+
+</div>
+</div>
+<a id="ga9bfb28a8f810b731fc10a3506d687ea0" name="ga9bfb28a8f810b731fc10a3506d687ea0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9bfb28a8f810b731fc10a3506d687ea0">◆ </a></span>TransportPriority</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef dds::core::policy::detail::TransportPriority <a class="el" href="#ga9bfb28a8f810b731fc10a3506d687ea0">dds::core::policy::TransportPriority</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>상대적 전송 우선순위 힌트를 제공합니다 </p>
+<dl class="section see"><dt>참고</dt><dd><a class="el" href="classdds_1_1core_1_1policy_1_1_t_transport_priority.html" title="이 QoS를 사용하면 서로 다른 우선순위로 메시지를 보낼 수 있는 전송 기능을 활용할 수 있습니다.">dds::core::policy::TTransportPriority</a> </dd></dl>
+
+</div>
+</div>
+<a id="ga3082013b21e53c2cb3c462fcd1151d77" name="ga3082013b21e53c2cb3c462fcd1151d77"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3082013b21e53c2cb3c462fcd1151d77">◆ </a></span>UserData</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef dds::core::policy::detail::UserData <a class="el" href="#ga3082013b21e53c2cb3c462fcd1151d77">dds::core::policy::UserData</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>검색을 위한 애플리케이션 정의 데이터 수행 </p>
+<dl class="section see"><dt>참고</dt><dd><a class="el" href="classdds_1_1core_1_1policy_1_1_t_user_data.html" title="애플리케이션에서 생성한 Entity에 추가 정보를 붙일 수 있는 QoS입니다.">dds::core::policy::TUserData</a> </dd></dl>
+
+</div>
+</div>
+<a id="gadd857380ad57a062aa880b3d612671dd" name="gadd857380ad57a062aa880b3d612671dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gadd857380ad57a062aa880b3d612671dd">◆ </a></span>WriterDataLifecycle</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef dds::core::policy::detail::WriterDataLifecycle <a class="el" href="#gadd857380ad57a062aa880b3d612671dd">dds::core::policy::WriterDataLifecycle</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>instance를 등록 해제하면 자동으로 삭제되는지 여부 제어 </p>
+<dl class="section see"><dt>참고</dt><dd><a class="el" href="classdds_1_1core_1_1policy_1_1_t_writer_data_lifecycle.html" title="instance를 등록 해제하면 자동으로 삭제되는지 여부 제어">dds::core::policy::TWriterDataLifecycle</a> </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div class="page-nav-panel" id="page-nav">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
 </div><!-- container -->
 <!-- start footer part -->
-<div class="navpath" id="nav-path"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="footer">다음에 의해 생성됨 :  <a href="https://www.doxygen.org/index.html"><img alt="doxygen" class="footer" height="31" src="doxygen.svg" width="104"/></a> 1.18.0 </li>
-  </ul>
+<div class="navpath" id="nav-path"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">다음에 의해 생성됨 :  <a href="https://www.doxygen.org/index.html"><img alt="doxygen" class="footer" height="31" src="doxygen.svg" width="104"/></a> 1.18.0 </li>
+  </ul>
 </div>
 </body>
 </html>

@@ -12,7 +12,7 @@ var searchData=
   ['inspect_20ranks_20across_20instance_20generations_9',['Inspect ranks across instance generations',['../group__dds__tutorial__reader.html#dds_tutorial_reader_ranks',1,'']]],
   ['inspect_20source_20timestamps_20and_20payload_20validity_10',['Inspect source timestamps and payload validity',['../group__dds__tutorial__reader.html#dds_tutorial_reader_metadata',1,'']]],
   ['inspect_20subscription_20data_11',['List matched readers and inspect subscription data',['../group__dds__tutorial__discovery.html#dds_tutorial_discovery_readers',1,'']]],
-  ['installed_20sdk_12',['Build against the installed SDK',['../group__dds__domain.html#installed_cpp_project',1,'']]],
+  ['installed_20sdk_12',['Build against an installed SDK',['../group__dds__domain.html#installed_cpp_project',1,'']]],
   ['instance_13',['instance',['../group__dds__tutorial__reader.html#dds_tutorial_reader_dispose',1,'Detect a disposed instance'],['../group__dds__tutorial__writer.html#dds_tutorial_writer_lifecycle',1,'Dispose and unregister an instance'],['../group__dds__subscription.html#receiving_instance_timeline',1,'Follow one keyed instance'],['../group__dds__tutorial__writer.html#dds_tutorial_writer_register',1,'Register a keyed instance']]],
   ['instance_20generations_14',['Inspect ranks across instance generations',['../group__dds__tutorial__reader.html#dds_tutorial_reader_ranks',1,'']]],
   ['instance_20through_20disposal_20and_20unregister_15',['Follow an instance through disposal and unregister',['../group__dds__subscription.html#receiving_keyed',1,'']]],

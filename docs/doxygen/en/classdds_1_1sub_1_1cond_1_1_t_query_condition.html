@@ -18,7 +18,7 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script src="search/searchdata.js" type="text/javascript"></script>
 <script src="search/search.js" type="text/javascript"></script>
-<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+<script src="../theme.js" type="text/javascript"></script><link href="doxygen.css" rel="stylesheet" type="text/css"/>
 <link href="ReferenceBranding.css" rel="stylesheet" type="text/css"/>
 <script defer="True" src="ReferenceUi.js"></script><link href="../en/classdds_1_1sub_1_1cond_1_1_t_query_condition.html" hreflang="en" rel="alternate"/><link href="../ko/classdds_1_1sub_1_1cond_1_1_t_query_condition.html" hreflang="ko" rel="alternate"/><link href="../language.css" rel="stylesheet"/><script defer="defer" src="../language.js"></script></head>
 <body>
@@ -31,7 +31,7 @@
    <div id="projectname">GurumDDS C++ API Reference<span id="projectnumber"> 1.3.2</span>
    </div>
   </td>
- <td class="doc-language-cell"><label class="doc-language"><select aria-label="Documentation language" data-current="0"><option lang="en" selected="selected" value="../en/classdds_1_1sub_1_1cond_1_1_t_query_condition.html">English</option><option lang="en" value="../ko/classdds_1_1sub_1_1cond_1_1_t_query_condition.html">Korean</option></select></label></td></tr>
+ <td class="doc-language-cell"><div class="doc-header-controls"><button aria-pressed="false" class="doc-theme" type="button">Dark mode</button><label class="doc-language"><select aria-label="Documentation language" data-current="0"><option lang="en" selected="selected" value="../en/classdds_1_1sub_1_1cond_1_1_t_query_condition.html">English</option><option lang="en" value="../ko/classdds_1_1sub_1_1cond_1_1_t_query_condition.html">Korean</option></select></label></div></td></tr>
  </tbody>
 </table>
 </div>
@@ -117,13 +117,12 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('classdds_1_1su
 
 <p class="dds-class-include"><code>#include &lt;gurumdds/cpp/sub/cond/TQueryCondition.hpp&gt;</code></p>
 
-<p><a class="el" href="group__dds__subscription.html#ga29994a5bb9146e584461a7c13e08fa29" title="Condition that filters a reader's samples by state.">ReadCondition</a> objects are conditions specifically dedicated to read operations and attached to one <a class="el" href="classdds_1_1sub_1_1_data_reader.html" title="Receives typed samples for a topic.">DataReader&lt;T&gt;</a>.  
- <a href="#details">More...</a></p>
+
 <a id="details" name="details"></a><h2 class="groupheader" id="header-details">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="group__dds__subscription.html#ga29994a5bb9146e584461a7c13e08fa29" title="Condition that filters a reader's samples by state.">ReadCondition</a> objects are conditions specifically dedicated to read operations and attached to one <a class="el" href="classdds_1_1sub_1_1_data_reader.html" title="Receives typed samples for a topic.">DataReader&lt;T&gt;</a>. </p>
 <p><br/>
  <a class="el" href="group__dds__subscription.html#ga29994a5bb9146e584461a7c13e08fa29" title="Condition that filters a reader's samples by state.">ReadCondition</a> objects allow an application to specify the data samples it is interested in (by specifying the desired sample states, view states, and instance states). See the parameter definitions for <a class="el" href="classdds_1_1sub_1_1_data_reader.html" title="Receives typed samples for a topic.">DataReader&lt;T&gt;</a>'s read/take operations.) This allows the middleware to enable the condition only when suitable information is available. They are to be used in conjunction with a WaitSet as normal conditions. More than one <a class="el" href="group__dds__subscription.html#ga29994a5bb9146e584461a7c13e08fa29" title="Condition that filters a reader's samples by state.">ReadCondition</a> may be attached to the same <a class="el" href="classdds_1_1sub_1_1_data_reader.html" title="Receives typed samples for a topic.">DataReader&lt;T&gt;</a>. </p>
-</div><table class="memberdecls">
+</div><div class="dds-table-scroll"><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-pub-types"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
 <tr class="memitem:ac2cadf3e09efbcb0485228c9b7c91e6c" id="r_ac2cadf3e09efbcb0485228c9b7c91e6c"><td class="memItemLeft"><a id="ac2cadf3e09efbcb0485228c9b7c91e6c" name="ac2cadf3e09efbcb0485228c9b7c91e6c"></a>
@@ -132,7 +131,7 @@ typedef detail::QueryCondition </td><td class="memItemRight"><b>DELEGATE</b></t
 typedef DELEGATE::iterator </td><td class="memItemRight"><b>iterator</b></td></tr>
 <tr class="memitem:a0593feefc75f2f3d29952bc0e3512243" id="r_a0593feefc75f2f3d29952bc0e3512243"><td class="memItemLeft"><a id="a0593feefc75f2f3d29952bc0e3512243" name="a0593feefc75f2f3d29952bc0e3512243"></a>
 typedef DELEGATE::const_iterator </td><td class="memItemRight"><b>const_iterator</b></td></tr>
-</table><table class="memberdecls">
+</table></div><div class="dds-table-scroll"><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-pub-methods"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ae234d1454ead19e6339830c2fd7f8ae1" id="r_ae234d1454ead19e6339830c2fd7f8ae1"><td class="memItemLeft"> </td><td class="memItemRight"><a class="el" href="#ae234d1454ead19e6339830c2fd7f8ae1">TQueryCondition</a> (const <a class="el" href="classdds_1_1sub_1_1_query.html">dds::sub::Query</a> &amp;query, const <a class="el" href="classdds_1_1sub_1_1status_1_1_data_state.html">dds::sub::status::DataState</a> &amp;status)</td></tr>
@@ -206,13 +205,13 @@ bool </td><td class="memItemRight"><b>is_nil</b> () const</td></tr>
 <tr class="memdesc:a6e30d68985ca187b16562617d4a7b9f9 inherit pub_methods_classdds_1_1core_1_1_reference"><td class="mdescLeft"> </td><td class="mdescRight">Accesses the stored delegate pointer.  <br/></td></tr>
 <tr class="memitem:a373c3aa4c921f21eabdf3a020ac8ef0c inherit pub_methods_classdds_1_1core_1_1_reference" id="r_a373c3aa4c921f21eabdf3a020ac8ef0c"><td class="memItemLeft"> </td><td class="memItemRight"><a class="el" href="classdds_1_1core_1_1_reference.html#a373c3aa4c921f21eabdf3a020ac8ef0c">operator const DELEGATE_REF_T &amp;</a> () const</td></tr>
 <tr class="memdesc:a373c3aa4c921f21eabdf3a020ac8ef0c inherit pub_methods_classdds_1_1core_1_1_reference"><td class="mdescLeft"> </td><td class="mdescRight">Accesses the stored delegate pointer.  <br/></td></tr>
-</table><table class="memberdecls">
+</table></div><div class="dds-table-scroll"><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-inherited"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_attribs_classdds_1_1core_1_1_reference"><td class="dyn-inherit" colspan="2"><span class="dynarrow"><span class="arrowhead closed"></span></span>Protected Attributes inherited from <a class="el" href="classdds_1_1core_1_1_reference.html">dds::core::Reference&lt; detail::QueryCondition &gt;</a></td></tr>
 <tr class="memitem:ab3a71f25696efba22cf3744cf5826839 inherit pro_attribs_classdds_1_1core_1_1_reference" id="r_ab3a71f25696efba22cf3744cf5826839"><td class="memItemLeft">
 DELEGATE_REF_T </td><td class="memItemRight"><b>impl_</b></td></tr>
-</table>
+</table></div>
 <a id="doc-constructors" name="doc-constructors"></a><h2 class="groupheader" id="header-doc-constructors">Constructors and Destructors</h2>
 <a id="ae234d1454ead19e6339830c2fd7f8ae1" name="ae234d1454ead19e6339830c2fd7f8ae1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae234d1454ead19e6339830c2fd7f8ae1">◆ </a></span>TQueryCondition()</h2>
@@ -236,10 +235,10 @@ DELEGATE_REF_T </td><td class="memItemRight"><b>impl_</b></td></tr>
 <p>Declares construction of a query condition from a query and data-state masks. </p>
 <p>The current repository does not define this constructor. Use a content-filtered topic to filter incoming samples.</p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">query</td><td><a class="el" href="classdds_1_1sub_1_1_query.html" title="Stores a reader, query expression, and expression parameters.">Query</a> to evaluate </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">status</td><td>State masks to match </td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 
@@ -284,9 +283,9 @@ DELEGATE_REF_T </td><td class="memItemRight"><b>impl_</b></td></tr>
 <p>Adds a parameter string to the expression. </p>
 <p>The current repository declares this overload without a definition.</p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">param</td><td>New string to append in placeholder order </td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 
@@ -331,9 +330,9 @@ DELEGATE_REF_T </td><td class="memItemRight"><b>impl_</b></td></tr>
 <p>Sets the query expression. </p>
 <p>The current repository declares this overload without a definition.</p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">expr</td><td>Replacement expression </td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 
@@ -363,10 +362,10 @@ template&lt;typename FWIterator&gt; </div>
 <p>Declares an iterator-range parameter operation. </p>
 <p>The current repository declares this overload without a definition.</p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">begin</td><td>First iterator of the supplied range </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">end</td><td>Iterator one past the range </td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 

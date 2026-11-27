@@ -18,7 +18,7 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script src="search/searchdata.js" type="text/javascript"></script>
 <script src="search/search.js" type="text/javascript"></script>
-<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+<script src="../theme.js" type="text/javascript"></script><link href="doxygen.css" rel="stylesheet" type="text/css"/>
 <link href="ReferenceBranding.css" rel="stylesheet" type="text/css"/>
 <script defer="True" src="ReferenceUi.js"></script><link href="../en/classdds_1_1sub_1_1_t_subscriber.html" hreflang="en" rel="alternate"/><link href="../ko/classdds_1_1sub_1_1_t_subscriber.html" hreflang="ko" rel="alternate"/><link href="../language.css" rel="stylesheet"/><script defer="defer" src="../language.js"></script></head>
 <body>
@@ -31,7 +31,7 @@
    <div id="projectname">GurumDDS C++ API Reference<span id="projectnumber"> 1.3.2</span>
    </div>
   </td>
- <td class="doc-language-cell"><label class="doc-language"><select aria-label="Documentation language" data-current="0"><option lang="en" selected="selected" value="../en/classdds_1_1sub_1_1_t_subscriber.html">English</option><option lang="en" value="../ko/classdds_1_1sub_1_1_t_subscriber.html">Korean</option></select></label></td></tr>
+ <td class="doc-language-cell"><div class="doc-header-controls"><button aria-pressed="false" class="doc-theme" type="button">Dark mode</button><label class="doc-language"><select aria-label="Documentation language" data-current="0"><option lang="en" selected="selected" value="../en/classdds_1_1sub_1_1_t_subscriber.html">English</option><option lang="en" value="../ko/classdds_1_1sub_1_1_t_subscriber.html">Korean</option></select></label></div></td></tr>
  </tbody>
 </table>
 </div>
@@ -117,8 +117,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('classdds_1_1su
 
 <p class="dds-class-include"><code>#include &lt;gurumdds/cpp/sub/Subscriber.hpp&gt;</code></p>
 
-<p>Owns readers and configures subscription defaults.  
- <a href="#details">More...</a></p>
+
 <a id="details" name="details"></a><h2 class="groupheader" id="header-details">Detailed Description</h2>
 <div class="textblock"><p>Owns readers and configures subscription defaults. </p>
 <p>Create readers through this subscriber on topics in the associated participant's domain.</p>
@@ -132,9 +131,9 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('classdds_1_1su
 <a class="el" href="dds_example_new_helloworld_listener.html" title="DataReader listener">DataReader listener</a> </dd></dl>
 <details class="dds-reference-details" data-dds-signatures=""><summary>Full template declaration</summary><div class="compoundTemplParams">template&lt;typename DELEGATE&gt;<br/>
 class dds::sub::TSubscriber&lt; DELEGATE &gt;</div><dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
+  <div class="dds-table-scroll"><table class="tparams">
     <tr><td class="paramname">DELEGATE</td><td><a class="el" href="group__dds__subscription.html#ga9a6d78b2a23f864211da5bd2edf28750" title="Subscriber handle used to own readers and set their defaults.">Subscriber</a> implementation type</td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl></details></div>
 
@@ -194,12 +193,12 @@ class dds::sub::TSubscriber&lt; DELEGATE &gt;</div><dl class="tparams"><dt>Templ
 </g>
 </g>
 </svg></div><figcaption>Inheritance diagram</figcaption></figure>
-<table class="memberdecls">
+<div class="dds-table-scroll"><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-pub-types"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
 <tr class="memitem:a321b8b14709b1104efc2c72e11b406cf" id="r_a321b8b14709b1104efc2c72e11b406cf"><td class="memItemLeft"><a id="a321b8b14709b1104efc2c72e11b406cf" name="a321b8b14709b1104efc2c72e11b406cf"></a>
 typedef <a class="el" href="classdds_1_1sub_1_1_subscriber_listener.html">dds::sub::SubscriberListener</a> </td><td class="memItemRight"><b>Listener</b></td></tr>
-</table><table class="memberdecls">
+</table></div><div class="dds-table-scroll"><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-pub-methods"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a86131beb0b953fc4974345cf9a88a7e4" id="r_a86131beb0b953fc4974345cf9a88a7e4"><td class="memItemLeft"> </td><td class="memItemRight"><a class="el" href="#a86131beb0b953fc4974345cf9a88a7e4">TSubscriber</a> (const <a class="el" href="group__dds__domain.html#gab1bd86ffa9ac0869166a446dd0120f3d">::dds::domain::DomainParticipant</a> &amp;dp)</td></tr>
@@ -293,13 +292,13 @@ bool </td><td class="memItemRight"><b>is_nil</b> () const</td></tr>
 <tr class="memdesc:a6e30d68985ca187b16562617d4a7b9f9 inherit pub_methods_classdds_1_1core_1_1_reference"><td class="mdescLeft"> </td><td class="mdescRight">Accesses the stored delegate pointer.  <br/></td></tr>
 <tr class="memitem:a373c3aa4c921f21eabdf3a020ac8ef0c inherit pub_methods_classdds_1_1core_1_1_reference" id="r_a373c3aa4c921f21eabdf3a020ac8ef0c"><td class="memItemLeft"> </td><td class="memItemRight"><a class="el" href="classdds_1_1core_1_1_reference.html#a373c3aa4c921f21eabdf3a020ac8ef0c">operator const DELEGATE_REF_T &amp;</a> () const</td></tr>
 <tr class="memdesc:a373c3aa4c921f21eabdf3a020ac8ef0c inherit pub_methods_classdds_1_1core_1_1_reference"><td class="mdescLeft"> </td><td class="mdescRight">Accesses the stored delegate pointer.  <br/></td></tr>
-</table><table class="memberdecls">
+</table></div><div class="dds-table-scroll"><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-inherited"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_attribs_classdds_1_1core_1_1_reference"><td class="dyn-inherit" colspan="2"><span class="dynarrow"><span class="arrowhead closed"></span></span>Protected Attributes inherited from <a class="el" href="classdds_1_1core_1_1_reference.html">dds::core::Reference&lt; DELEGATE &gt;</a></td></tr>
 <tr class="memitem:ab3a71f25696efba22cf3744cf5826839 inherit pro_attribs_classdds_1_1core_1_1_reference" id="r_ab3a71f25696efba22cf3744cf5826839"><td class="memItemLeft">
 DELEGATE_REF_T </td><td class="memItemRight"><b>impl_</b></td></tr>
-</table>
+</table></div>
 <a id="doc-constructors" name="doc-constructors"></a><h2 class="groupheader" id="header-doc-constructors">Constructors and Destructors</h2>
 <a id="a86131beb0b953fc4974345cf9a88a7e4" name="a86131beb0b953fc4974345cf9a88a7e4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a86131beb0b953fc4974345cf9a88a7e4">◆ </a></span>TSubscriber(dp) <span class="overload">[1/2]</span></h2>
@@ -321,9 +320,9 @@ template&lt;typename DELEGATE&gt; </div>
 <p>Create a <code><a class="el" href="group__dds__subscription.html#ga9a6d78b2a23f864211da5bd2edf28750" title="Subscriber handle used to own readers and set their defaults.">Subscriber</a></code> attached to the given domain participant. </p>
 <p>The subscriber QoS will be set to the default as provided by the domain participant.</p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramname">dp</td><td>the domain participant that will own this subscriber. </td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 
@@ -362,12 +361,12 @@ template&lt;typename DELEGATE&gt; </div>
 
 <p>Create a <code><a class="el" href="group__dds__subscription.html#ga9a6d78b2a23f864211da5bd2edf28750" title="Subscriber handle used to own readers and set their defaults.">Subscriber</a></code> attached to the given domain participant. </p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramname">dp</td><td>the domain participant that will own this subscriber. </td></tr>
     <tr><td class="paramname">qos</td><td>the subscriber qos </td></tr>
     <tr><td class="paramname">listener</td><td>the subscriber listener. </td></tr>
     <tr><td class="paramname">mask</td><td>the listener event mask. </td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 
@@ -394,16 +393,16 @@ template&lt;typename DELEGATE&gt; </div>
 <p>Sets the default QoS for readers created without explicit policies. </p>
 <p>The new defaults apply to subsequent reader creation. Existing readers keep their own QoS.</p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">qos</td><td>Default policies to apply to subsequently created readers</td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>This subscriber</dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
+  <div class="dds-table-scroll"><table class="exception">
     <tr><td class="paramname"><a class="el" href="classdds_1_1core_1_1_inconsistent_policy_error.html" title="Reports a conflicting combination of QoS policies.">dds::core::InconsistentPolicyError</a></td><td>The C library detected conflicting policies </td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 
@@ -433,9 +432,9 @@ template&lt;typename DELEGATE&gt; </div>
 <p>Sets the <a class="el" href="group__dds__subscription.html#ga9a6d78b2a23f864211da5bd2edf28750" title="Subscriber handle used to own readers and set their defaults.">Subscriber</a> listener and status mask. </p>
 <p>Pass an application-owned listener that remains alive while registered, or pass <span class="tt">nullptr</span> to clear it.</p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">event_mask</td><td>Statuses delivered to the listener </td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 
@@ -461,9 +460,9 @@ template&lt;typename DELEGATE&gt; </div>
 <p>Requests data-available callbacks for this subscriber's readers. </p>
 <p>The default delegate forwards the request to the native subscriber. The native subscriber schedules <span class="tt">on_data_available()</span> for each contained reader that has records in its history and a registered data-available callback. Use this operation in a subscriber-level <span class="tt">on_data_on_readers()</span> callback to hand processing to the individual reader callbacks.</p>
 <dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
+  <div class="dds-table-scroll"><table class="exception">
     <tr><td class="paramname"><a class="el" href="classdds_1_1core_1_1_exception.html" title="Base interface for DDS exceptions.">dds::core::Exception</a></td><td>The C library returned an error </td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 
@@ -510,9 +509,9 @@ template&lt;typename DELEGATE&gt; </div>
 
 <p>Updates this <a class="el" href="group__dds__subscription.html#ga9a6d78b2a23f864211da5bd2edf28750" title="Subscriber handle used to own readers and set their defaults.">Subscriber</a>'s QoS. </p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">the_qos</td><td>Policies to apply </td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 

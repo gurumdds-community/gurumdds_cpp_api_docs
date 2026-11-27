@@ -18,131 +18,131 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script src="search/searchdata.js" type="text/javascript"></script>
 <script src="search/search.js" type="text/javascript"></script>
-<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+<script src="../theme.js" type="text/javascript"></script><link href="doxygen.css" rel="stylesheet" type="text/css"/>
 <link href="ReferenceBranding.css" rel="stylesheet" type="text/css"/>
 <script defer="True" src="ReferenceUi.js"></script><link href="../en/index.html" hreflang="en" rel="alternate"/><link href="../ko/index.html" hreflang="ko" rel="alternate"/><link href="../language.css" rel="stylesheet"/><script defer="defer" src="../language.js"></script></head>
 <body>
-<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
-<div id="titlearea">
-<table cellpadding="0" cellspacing="0">
- <tbody>
- <tr id="projectrow">
-  <td id="projectalign">
-   <div id="projectname">GurumDDS C++ API Reference<span id="projectnumber"> 1.3.2</span>
-   </div>
-  </td>
- <td class="doc-language-cell"><label class="doc-language"><select aria-label="문서 언어" data-current="1"><option lang="en" value="../en/index.html">English</option><option lang="en" selected="selected" value="../ko/index.html">Korean</option></select></label></td></tr>
- </tbody>
-</table>
-</div>
-<!-- end header part -->
-<!-- 다음에 의해 생성됨 :  Doxygen 1.18.0 -->
-<script type="text/javascript">
-let searchBox = new SearchBox("searchBox", "search/",'.html');
-</script>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', codefold.init);
-</script>
-<script id="doxygen-config" type="application/json">
-{
-  "relPath": "",
-  "generateTreeView": true,
-  "searchEngine": true,
-  "serverBasedSearch": false,
-  "disableIndex": false,
-  "dynamicMenus": true,
-  "fullSidebar": false
-}
-</script>
-<script src="menudata.js" type="text/javascript"></script>
-<script src="menu.js" type="text/javascript"></script>
-<div id="main-nav-mobile">
-<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
-<label class="main-menu-btn" for="main-menu-state">
-<span class="main-menu-btn-icon"></span> 주 메뉴 표시 전환</label>
-<span id="searchBoxPos1"></span>
-</div>
-</div><!-- main-nav-mobile -->
-<div id="main-nav">
-  <ul class="sm sm-dox" id="main-menu">
-    <li id="searchBoxPos2">
-        <div class="MSearchBoxInactive" id="MSearchBox">
-        <span class="left">
-          <span class="search-icon" id="MSearchSelect"><span class="search-icon-dropdown"></span></span>
-          <input accesskey="S" id="MSearchField" placeholder="검색" type="text" value=""/>
-          </span><span class="right">
-            <a href="javascript:searchBox.CloseResultsWindow()" id="MSearchClose"><div class="close-icon" id="MSearchCloseImg"></div></a>
-          </span>
-        </div>
-    </li>
-  </ul>
-</div><!-- main-nav -->
-</div><!-- top -->
-<div class="ui-resizable side-nav-resizable" id="side-nav">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div class="sync" id="nav-sync"></div>
-    </div>
-  </div>
-  <div class="ui-resizable-handle" id="splitbar">
-  </div>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellpadding="0" cellspacing="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">GurumDDS C++ API Reference<span id="projectnumber"> 1.3.2</span>
+   </div>
+  </td>
+ <td class="doc-language-cell"><div class="doc-header-controls"><button aria-pressed="false" class="doc-theme" type="button">다크 모드</button><label class="doc-language"><select aria-label="문서 언어" data-current="1"><option lang="en" value="../en/index.html">English</option><option lang="en" selected="selected" value="../ko/index.html">Korean</option></select></label></div></td></tr>
+ </tbody>
+</table>
 </div>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded',() => { initNavTree('index.html','',''); });
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
 </script>
-<div id="container">
-<div id="doc-content">
-<!-- window showing the filter options -->
-<div id="MSearchSelectWindow">
-</div>
-
-<!-- iframe showing the search results (closed by default) -->
-<div id="MSearchResultsWindow">
-<div id="MSearchResults">
-<div class="SRPage">
-<div id="SRIndex">
-<div id="SRResults"></div>
-<div class="SRStatus" id="Loading">로딩중...</div>
-<div class="SRStatus" id="Searching">검색중...</div>
-<div class="SRStatus" id="NoMatches">일치하는것 없음</div>
-</div>
-</div>
-</div>
-</div>
-
-<div><div class="header">
-  <div class="headertitle"><div class="title">GurumDDS C++ API Reference </div></div>
-</div><!--header-->
-<div class="contents">
-<div class="textblock"><p>GurumDDS는 C 라이브러리 위에 DDS C++ Platform-Specific Model을 구현합니다. 애플리케이션은 타입을 지정한 Topic, DataWriter, DataReader로 sample을 주고받습니다. 전체 API는 <span class="tt">&lt;gurumdds/dds.hpp&gt;</span>를, 개별 API는 각 레퍼런스에 표시된 설치 헤더를 포함하세요.</p>
-<p>이 API는 <b>C++11</b>을 요구합니다. New 예제는 <b>C++17</b>이 필요합니다.</p>
-<p><a class="anchor" id="home_api_modules"></a></p><h2>API 모듈</h2>
-<ul>
-<li><a class="el" href="group__dds__domain.html" title="Domain">Domain</a>. domain에 참여하고 DomainParticipant와 발견된 endpoint를 조회합니다.</li>
-<li><a class="el" href="group__dds__topic.html" title="Topic">Topic</a>. Topic 이름을 데이터 타입에 연결하고 content filter를 설정합니다.</li>
-<li><a class="el" href="group__dds__publication.html" title="Publication">Publication</a>. Publisher와 DataWriter를 만들고 sample을 발행하며 instance를 관리합니다.</li>
-<li><a class="el" href="group__dds__subscription.html" title="Subscription">Subscription</a>. Subscriber와 DataReader를 만들고 sample을 선택하며 데이터와 메타데이터에 접근합니다.</li>
-<li><a class="el" href="group__dds__core.html" title="Core">Core</a>. Entity handle, 시간, 조건, QoS, 예외를 다룹니다.</li>
-</ul>
-<p><a class="anchor" id="home_conventions"></a></p><h2>사용 규칙</h2>
-<p>handle, sample, QoS, 오류에 대한 설명은 <a class="el" href="group__dds__conventions.html" title="사용 규칙">사용 규칙</a> 항목을 참조하세요.</p>
-<h2>Programming Tutorials</h2>
-<p>작업별 코드 예제는 <a class="el" href="group__dds__howto.html" title="Programming Tutorials">Programming Tutorials</a> 항목을 참조하세요.</p>
-<h2>예제</h2>
-<ul>
-<li><a class="el" href="dds_examples_new.html" title="New(C++17)">New(C++17)</a></li>
-<li><a class="el" href="dds_examples_legacy.html" title="Legacy">Legacy</a> </li>
-</ul>
-</div></div><!-- PageDoc -->
-<a href="doxygen_crawl.html"></a>
-</div><!-- contents -->
-</div><!-- doc-content -->
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script id="doxygen-config" type="application/json">
+{
+  "relPath": "",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script src="menudata.js" type="text/javascript"></script>
+<script src="menu.js" type="text/javascript"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> 주 메뉴 표시 전환</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div class="MSearchBoxInactive" id="MSearchBox">
+        <span class="left">
+          <span class="search-icon" id="MSearchSelect"><span class="search-icon-dropdown"></span></span>
+          <input accesskey="S" id="MSearchField" placeholder="검색" type="text" value=""/>
+          </span><span class="right">
+            <a href="javascript:searchBox.CloseResultsWindow()" id="MSearchClose"><div class="close-icon" id="MSearchCloseImg"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div class="ui-resizable side-nav-resizable" id="side-nav">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div class="sync" id="nav-sync"></div>
+    </div>
+  </div>
+  <div class="ui-resizable-handle" id="splitbar">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('index.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">로딩중...</div>
+<div class="SRStatus" id="Searching">검색중...</div>
+<div class="SRStatus" id="NoMatches">일치하는것 없음</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">GurumDDS C++ API Reference </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p>GurumDDS는 C 라이브러리 위에 DDS C++ Platform-Specific Model을 구현합니다. 애플리케이션은 타입을 지정한 Topic, DataWriter, DataReader로 sample을 주고받습니다. 전체 API는 <span class="tt">&lt;gurumdds/dds.hpp&gt;</span>를, 개별 API는 각 레퍼런스에 표시된 설치 헤더를 포함하세요.</p>
+<p>이 API는 <b>C++11</b>을 요구합니다. New 예제는 <b>C++17</b>이 필요합니다.</p>
+<p><a class="anchor" id="home_api_modules"></a></p><h2>API 모듈</h2>
+<ul>
+<li><a class="el" href="group__dds__domain.html" title="Domain">Domain</a>. domain에 참여하고 DomainParticipant와 발견된 endpoint를 조회합니다.</li>
+<li><a class="el" href="group__dds__topic.html" title="Topic">Topic</a>. Topic 이름을 데이터 타입에 연결하고 content filter를 설정합니다.</li>
+<li><a class="el" href="group__dds__publication.html" title="Publication">Publication</a>. Publisher와 DataWriter를 만들고 sample을 발행하며 instance를 관리합니다.</li>
+<li><a class="el" href="group__dds__subscription.html" title="Subscription">Subscription</a>. Subscriber와 DataReader를 만들고 sample을 선택하며 데이터와 메타데이터에 접근합니다.</li>
+<li><a class="el" href="group__dds__core.html" title="Core">Core</a>. Entity handle, 시간, 조건, QoS, 예외를 다룹니다.</li>
+</ul>
+<p><a class="anchor" id="home_conventions"></a></p><h2>사용 규칙</h2>
+<p>handle, sample, QoS, 오류에 대한 설명은 <a class="el" href="group__dds__conventions.html" title="사용 규칙">사용 규칙</a> 항목을 참조하세요.</p>
+<h2>Programming Tutorials</h2>
+<p>작업별 코드 예제는 <a class="el" href="group__dds__howto.html" title="Programming Tutorials">Programming Tutorials</a> 항목을 참조하세요.</p>
+<h2>예제</h2>
+<ul>
+<li><a class="el" href="dds_examples_new.html" title="New(C++17)">New(C++17)</a></li>
+<li><a class="el" href="dds_examples_legacy.html" title="Legacy">Legacy</a> </li>
+</ul>
+</div></div><!-- PageDoc -->
+<a href="doxygen_crawl.html"></a>
+</div><!-- contents -->
+</div><!-- doc-content -->
 </div><!-- container -->
 <!-- start footer part -->
-<div class="navpath" id="nav-path"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="footer">다음에 의해 생성됨 :  <a href="https://www.doxygen.org/index.html"><img alt="doxygen" class="footer" height="31" src="doxygen.svg" width="104"/></a> 1.18.0 </li>
-  </ul>
+<div class="navpath" id="nav-path"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">다음에 의해 생성됨 :  <a href="https://www.doxygen.org/index.html"><img alt="doxygen" class="footer" height="31" src="doxygen.svg" width="104"/></a> 1.18.0 </li>
+  </ul>
 </div>
 </body>
 </html>

@@ -18,7 +18,7 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script src="search/searchdata.js" type="text/javascript"></script>
 <script src="search/search.js" type="text/javascript"></script>
-<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+<script src="../theme.js" type="text/javascript"></script><link href="doxygen.css" rel="stylesheet" type="text/css"/>
 <link href="ReferenceBranding.css" rel="stylesheet" type="text/css"/>
 <script defer="True" src="ReferenceUi.js"></script><link href="../en/classdds_1_1sub_1_1_data_reader_listener.html" hreflang="en" rel="alternate"/><link href="../ko/classdds_1_1sub_1_1_data_reader_listener.html" hreflang="ko" rel="alternate"/><link href="../language.css" rel="stylesheet"/><script defer="defer" src="../language.js"></script></head>
 <body>
@@ -31,7 +31,7 @@
    <div id="projectname">GurumDDS C++ API Reference<span id="projectnumber"> 1.3.2</span>
    </div>
   </td>
- <td class="doc-language-cell"><label class="doc-language"><select aria-label="Documentation language" data-current="0"><option lang="en" selected="selected" value="../en/classdds_1_1sub_1_1_data_reader_listener.html">English</option><option lang="en" value="../ko/classdds_1_1sub_1_1_data_reader_listener.html">Korean</option></select></label></td></tr>
+ <td class="doc-language-cell"><div class="doc-header-controls"><button aria-pressed="false" class="doc-theme" type="button">Dark mode</button><label class="doc-language"><select aria-label="Documentation language" data-current="0"><option lang="en" selected="selected" value="../en/classdds_1_1sub_1_1_data_reader_listener.html">English</option><option lang="en" value="../ko/classdds_1_1sub_1_1_data_reader_listener.html">Korean</option></select></label></div></td></tr>
  </tbody>
 </table>
 </div>
@@ -117,30 +117,29 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('classdds_1_1su
 
 <p class="dds-class-include"><code>#include &lt;gurumdds/cpp/sub/DataReaderListener.hpp&gt;</code></p>
 
-<p>Receives data availability and status notifications from a typed reader.  
- <a href="#details">More...</a></p>
+
 <a id="details" name="details"></a><h2 class="groupheader" id="header-details">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename T&gt;<br/>
 class dds::sub::DataReaderListener&lt; T &gt;</div><p>Receives data availability and status notifications from a typed reader. </p>
 <dl class="section user"><dt>Callback summary</dt><dd></dd></dl>
-<table class="markdownTable">
+<div class="dds-table-scroll"><table class="markdownTable">
 <tr class="markdownTableHead">
 <th class="markdownTableHeadNone">Callback  </th><th class="markdownTableHeadNone">When it runs  </th><th class="markdownTableHeadNone">Status argument  </th></tr>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone"><a class="el" href="#a0f840a4ac4fab10c8f9be30a6b78b57a" title="dds::sub::DataReaderListener::on_data_available">on_data_available()</a>  </td><td class="markdownTableBodyNone">The reader has samples available.  </td><td class="markdownTableBodyNone">—  </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone"><a class="el" href="#a2c2e3f3391a82d18787bf31303ab752a" title="dds::sub::DataReaderListener::on_requested_deadline_missed">on_requested_deadline_missed()</a>  </td><td class="markdownTableBodyNone">An instance misses its requested update interval.  </td><td class="markdownTableBodyNone">dds::core::status::RequestedDeadlineMissedStatus  </td></tr>
+<td class="markdownTableBodyNone"><a class="el" href="#a2c2e3f3391a82d18787bf31303ab752a" title="dds::sub::DataReaderListener::on_requested_deadline_missed">on_requested_deadline_missed()</a>  </td><td class="markdownTableBodyNone">An instance misses its requested update interval.  </td><td class="markdownTableBodyNone"><a class="el" href="namespacedds_1_1core_1_1status.html#afe3225b6689c6d6c32f99642822c2b0d" title="dds::core::status::RequestedDeadlineMissedStatus">dds::core::status::RequestedDeadlineMissedStatus</a>  </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone"><a class="el" href="#a17235d451399c2b40cf239af40739bf6" title="dds::sub::DataReaderListener::on_requested_incompatible_qos">on_requested_incompatible_qos()</a>  </td><td class="markdownTableBodyNone">A discovered writer offers incompatible QoS.  </td><td class="markdownTableBodyNone">dds::core::status::RequestedIncompatibleQosStatus  </td></tr>
+<td class="markdownTableBodyNone"><a class="el" href="#a17235d451399c2b40cf239af40739bf6" title="dds::sub::DataReaderListener::on_requested_incompatible_qos">on_requested_incompatible_qos()</a>  </td><td class="markdownTableBodyNone">A discovered writer offers incompatible QoS.  </td><td class="markdownTableBodyNone"><a class="el" href="namespacedds_1_1core_1_1status.html#a5eff3bdd977e5b923e3610f347a64449" title="dds::core::status::RequestedIncompatibleQosStatus">dds::core::status::RequestedIncompatibleQosStatus</a>  </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone"><a class="el" href="#ac987e52b19334036638c322430197eb0" title="dds::sub::DataReaderListener::on_sample_rejected">on_sample_rejected()</a>  </td><td class="markdownTableBodyNone">The reader rejects an incoming sample.  </td><td class="markdownTableBodyNone">dds::core::status::SampleRejectedStatus  </td></tr>
+<td class="markdownTableBodyNone"><a class="el" href="#ac987e52b19334036638c322430197eb0" title="dds::sub::DataReaderListener::on_sample_rejected">on_sample_rejected()</a>  </td><td class="markdownTableBodyNone">The reader rejects an incoming sample.  </td><td class="markdownTableBodyNone"><a class="el" href="namespacedds_1_1core_1_1status.html#a545c7d7cb2c055ebffb2f1770f76da01" title="dds::core::status::SampleRejectedStatus">dds::core::status::SampleRejectedStatus</a>  </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone"><a class="el" href="#a3306227890d68aab66ae958479d987cd" title="dds::sub::DataReaderListener::on_liveliness_changed">on_liveliness_changed()</a>  </td><td class="markdownTableBodyNone">A matched writer changes liveliness state.  </td><td class="markdownTableBodyNone">dds::core::status::LivelinessChangedStatus  </td></tr>
+<td class="markdownTableBodyNone"><a class="el" href="#a3306227890d68aab66ae958479d987cd" title="dds::sub::DataReaderListener::on_liveliness_changed">on_liveliness_changed()</a>  </td><td class="markdownTableBodyNone">A matched writer changes liveliness state.  </td><td class="markdownTableBodyNone"><a class="el" href="namespacedds_1_1core_1_1status.html#a5314c4075763105161d295a7933db13d" title="dds::core::status::LivelinessChangedStatus">dds::core::status::LivelinessChangedStatus</a>  </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone"><a class="el" href="#a34bc826502d02eeac3e68c9d5937ea1f" title="dds::sub::DataReaderListener::on_subscription_matched">on_subscription_matched()</a>  </td><td class="markdownTableBodyNone">The set of matched publications changes.  </td><td class="markdownTableBodyNone">dds::core::status::SubscriptionMatchedStatus  </td></tr>
+<td class="markdownTableBodyNone"><a class="el" href="#a34bc826502d02eeac3e68c9d5937ea1f" title="dds::sub::DataReaderListener::on_subscription_matched">on_subscription_matched()</a>  </td><td class="markdownTableBodyNone">The set of matched publications changes.  </td><td class="markdownTableBodyNone"><a class="el" href="namespacedds_1_1core_1_1status.html#abb43166d32256fc63bd26ce34140090d" title="dds::core::status::SubscriptionMatchedStatus">dds::core::status::SubscriptionMatchedStatus</a>  </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone"><a class="el" href="#a273e4a156cd5544a25f7e1a80f126fa7" title="dds::sub::DataReaderListener::on_sample_lost">on_sample_lost()</a>  </td><td class="markdownTableBodyNone">The reader reports a sample loss.  </td><td class="markdownTableBodyNone">dds::core::status::SampleLostStatus  </td></tr>
-</table>
+<td class="markdownTableBodyNone"><a class="el" href="#a273e4a156cd5544a25f7e1a80f126fa7" title="dds::sub::DataReaderListener::on_sample_lost">on_sample_lost()</a>  </td><td class="markdownTableBodyNone">The reader reports a sample loss.  </td><td class="markdownTableBodyNone"><a class="el" href="namespacedds_1_1core_1_1status.html#a04af02f4c95b6f099b2eee842879808b" title="dds::core::status::SampleLostStatus">dds::core::status::SampleLostStatus</a>  </td></tr>
+</table></div>
 </div>
 
 <figure class="dds-inheritance"><div class="dds-inheritance-graph"><svg height="40pt" viewbox="0.00 0.00 335.00 40.00" width="335pt" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -178,31 +177,31 @@ class dds::sub::DataReaderListener&lt; T &gt;</div><p>Receives data availability
 </g>
 </g>
 </svg></div><figcaption>Inheritance diagram</figcaption></figure>
-<table class="memberdecls">
+<div class="dds-table-scroll"><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-pub-types"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
 <tr class="memitem:aa8c2c61c8961c7f1d455993852799863" id="r_aa8c2c61c8961c7f1d455993852799863"><td class="memItemLeft"><a id="aa8c2c61c8961c7f1d455993852799863" name="aa8c2c61c8961c7f1d455993852799863"></a>
 typedef <a class="el" href="structdds_1_1core_1_1smart__ptr__traits.html">::dds::core::smart_ptr_traits</a>&lt; <a class="el" href="classdds_1_1sub_1_1_data_reader_listener.html">DataReaderListener</a> &gt;::ref_type </td><td class="memItemRight"><b>ref_type</b></td></tr>
-</table><table class="memberdecls">
+</table></div><div class="dds-table-scroll"><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-pub-methods"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aa79e6d8c08e599feb6d3909b5d0d4a12" id="r_aa79e6d8c08e599feb6d3909b5d0d4a12"><td class="memItemLeft">virtual </td><td class="memItemRight"><a class="el" href="#aa79e6d8c08e599feb6d3909b5d0d4a12">~DataReaderListener</a> ()</td></tr>
 <tr class="memdesc:aa79e6d8c08e599feb6d3909b5d0d4a12"><td class="mdescLeft"> </td><td class="mdescRight">Destroys the listener object.  <br/></td></tr>
-<tr class="memitem:a2c2e3f3391a82d18787bf31303ab752a" id="r_a2c2e3f3391a82d18787bf31303ab752a"><td class="memItemLeft">virtual void </td><td class="memItemRight"><a class="el" href="#a2c2e3f3391a82d18787bf31303ab752a">on_requested_deadline_missed</a> (<a class="el" href="classdds_1_1sub_1_1_data_reader.html">DataReader&lt;T&gt;</a>&lt; T &gt; &amp;the_reader, const dds::core::status::RequestedDeadlineMissedStatus &amp;status)=0</td></tr>
+<tr class="memitem:a2c2e3f3391a82d18787bf31303ab752a" id="r_a2c2e3f3391a82d18787bf31303ab752a"><td class="memItemLeft">virtual void </td><td class="memItemRight"><a class="el" href="#a2c2e3f3391a82d18787bf31303ab752a">on_requested_deadline_missed</a> (<a class="el" href="classdds_1_1sub_1_1_data_reader.html">DataReader&lt;T&gt;</a>&lt; T &gt; &amp;the_reader, const <a class="el" href="namespacedds_1_1core_1_1status.html#afe3225b6689c6d6c32f99642822c2b0d">dds::core::status::RequestedDeadlineMissedStatus</a> &amp;status)=0</td></tr>
 <tr class="memdesc:a2c2e3f3391a82d18787bf31303ab752a"><td class="mdescLeft"> </td><td class="mdescRight">Called when a reader misses its requested update interval for an instance.  <br/></td></tr>
-<tr class="memitem:a17235d451399c2b40cf239af40739bf6" id="r_a17235d451399c2b40cf239af40739bf6"><td class="memItemLeft">virtual void </td><td class="memItemRight"><a class="el" href="#a17235d451399c2b40cf239af40739bf6">on_requested_incompatible_qos</a> (<a class="el" href="classdds_1_1sub_1_1_data_reader.html">DataReader&lt;T&gt;</a>&lt; T &gt; &amp;the_reader, const dds::core::status::RequestedIncompatibleQosStatus &amp;status)=0</td></tr>
+<tr class="memitem:a17235d451399c2b40cf239af40739bf6" id="r_a17235d451399c2b40cf239af40739bf6"><td class="memItemLeft">virtual void </td><td class="memItemRight"><a class="el" href="#a17235d451399c2b40cf239af40739bf6">on_requested_incompatible_qos</a> (<a class="el" href="classdds_1_1sub_1_1_data_reader.html">DataReader&lt;T&gt;</a>&lt; T &gt; &amp;the_reader, const <a class="el" href="namespacedds_1_1core_1_1status.html#a5eff3bdd977e5b923e3610f347a64449">dds::core::status::RequestedIncompatibleQosStatus</a> &amp;status)=0</td></tr>
 <tr class="memdesc:a17235d451399c2b40cf239af40739bf6"><td class="mdescLeft"> </td><td class="mdescRight">Called when a discovered writer offers incompatible QoS.  <br/></td></tr>
-<tr class="memitem:ac987e52b19334036638c322430197eb0" id="r_ac987e52b19334036638c322430197eb0"><td class="memItemLeft">virtual void </td><td class="memItemRight"><a class="el" href="#ac987e52b19334036638c322430197eb0">on_sample_rejected</a> (<a class="el" href="classdds_1_1sub_1_1_data_reader.html">DataReader&lt;T&gt;</a>&lt; T &gt; &amp;the_reader, const dds::core::status::SampleRejectedStatus &amp;status)=0</td></tr>
+<tr class="memitem:ac987e52b19334036638c322430197eb0" id="r_ac987e52b19334036638c322430197eb0"><td class="memItemLeft">virtual void </td><td class="memItemRight"><a class="el" href="#ac987e52b19334036638c322430197eb0">on_sample_rejected</a> (<a class="el" href="classdds_1_1sub_1_1_data_reader.html">DataReader&lt;T&gt;</a>&lt; T &gt; &amp;the_reader, const <a class="el" href="namespacedds_1_1core_1_1status.html#a545c7d7cb2c055ebffb2f1770f76da01">dds::core::status::SampleRejectedStatus</a> &amp;status)=0</td></tr>
 <tr class="memdesc:ac987e52b19334036638c322430197eb0"><td class="mdescLeft"> </td><td class="mdescRight">Called when the reader rejects a received sample.  <br/></td></tr>
-<tr class="memitem:a3306227890d68aab66ae958479d987cd" id="r_a3306227890d68aab66ae958479d987cd"><td class="memItemLeft">virtual void </td><td class="memItemRight"><a class="el" href="#a3306227890d68aab66ae958479d987cd">on_liveliness_changed</a> (<a class="el" href="classdds_1_1sub_1_1_data_reader.html">DataReader&lt;T&gt;</a>&lt; T &gt; &amp;the_reader, const dds::core::status::LivelinessChangedStatus &amp;status)=0</td></tr>
+<tr class="memitem:a3306227890d68aab66ae958479d987cd" id="r_a3306227890d68aab66ae958479d987cd"><td class="memItemLeft">virtual void </td><td class="memItemRight"><a class="el" href="#a3306227890d68aab66ae958479d987cd">on_liveliness_changed</a> (<a class="el" href="classdds_1_1sub_1_1_data_reader.html">DataReader&lt;T&gt;</a>&lt; T &gt; &amp;the_reader, const <a class="el" href="namespacedds_1_1core_1_1status.html#a5314c4075763105161d295a7933db13d">dds::core::status::LivelinessChangedStatus</a> &amp;status)=0</td></tr>
 <tr class="memdesc:a3306227890d68aab66ae958479d987cd"><td class="mdescLeft"> </td><td class="mdescRight">Called when a matched writer changes liveliness state.  <br/></td></tr>
 <tr class="memitem:a0f840a4ac4fab10c8f9be30a6b78b57a" id="r_a0f840a4ac4fab10c8f9be30a6b78b57a"><td class="memItemLeft">virtual void </td><td class="memItemRight"><a class="el" href="#a0f840a4ac4fab10c8f9be30a6b78b57a">on_data_available</a> (<a class="el" href="classdds_1_1sub_1_1_data_reader.html">DataReader&lt;T&gt;</a>&lt; T &gt; &amp;the_reader)=0</td></tr>
 <tr class="memdesc:a0f840a4ac4fab10c8f9be30a6b78b57a"><td class="mdescLeft"> </td><td class="mdescRight">Called when the reader reports data available.  <br/></td></tr>
-<tr class="memitem:a34bc826502d02eeac3e68c9d5937ea1f" id="r_a34bc826502d02eeac3e68c9d5937ea1f"><td class="memItemLeft">virtual void </td><td class="memItemRight"><a class="el" href="#a34bc826502d02eeac3e68c9d5937ea1f">on_subscription_matched</a> (<a class="el" href="classdds_1_1sub_1_1_data_reader.html">DataReader&lt;T&gt;</a>&lt; T &gt; &amp;the_reader, const dds::core::status::SubscriptionMatchedStatus &amp;status)=0</td></tr>
+<tr class="memitem:a34bc826502d02eeac3e68c9d5937ea1f" id="r_a34bc826502d02eeac3e68c9d5937ea1f"><td class="memItemLeft">virtual void </td><td class="memItemRight"><a class="el" href="#a34bc826502d02eeac3e68c9d5937ea1f">on_subscription_matched</a> (<a class="el" href="classdds_1_1sub_1_1_data_reader.html">DataReader&lt;T&gt;</a>&lt; T &gt; &amp;the_reader, const <a class="el" href="namespacedds_1_1core_1_1status.html#abb43166d32256fc63bd26ce34140090d">dds::core::status::SubscriptionMatchedStatus</a> &amp;status)=0</td></tr>
 <tr class="memdesc:a34bc826502d02eeac3e68c9d5937ea1f"><td class="mdescLeft"> </td><td class="mdescRight">Called when the set of publications matched to a reader changes.  <br/></td></tr>
-<tr class="memitem:a273e4a156cd5544a25f7e1a80f126fa7" id="r_a273e4a156cd5544a25f7e1a80f126fa7"><td class="memItemLeft">virtual void </td><td class="memItemRight"><a class="el" href="#a273e4a156cd5544a25f7e1a80f126fa7">on_sample_lost</a> (<a class="el" href="classdds_1_1sub_1_1_data_reader.html">DataReader&lt;T&gt;</a>&lt; T &gt; &amp;the_reader, const dds::core::status::SampleLostStatus &amp;status)=0</td></tr>
+<tr class="memitem:a273e4a156cd5544a25f7e1a80f126fa7" id="r_a273e4a156cd5544a25f7e1a80f126fa7"><td class="memItemLeft">virtual void </td><td class="memItemRight"><a class="el" href="#a273e4a156cd5544a25f7e1a80f126fa7">on_sample_lost</a> (<a class="el" href="classdds_1_1sub_1_1_data_reader.html">DataReader&lt;T&gt;</a>&lt; T &gt; &amp;the_reader, const <a class="el" href="namespacedds_1_1core_1_1status.html#a04af02f4c95b6f099b2eee842879808b">dds::core::status::SampleLostStatus</a> &amp;status)=0</td></tr>
 <tr class="memdesc:a273e4a156cd5544a25f7e1a80f126fa7"><td class="mdescLeft"> </td><td class="mdescRight">Called when the reader reports a sample loss.  <br/></td></tr>
-</table>
+</table></div>
 <a id="doc-constructors" name="doc-constructors"></a><h2 class="groupheader" id="header-doc-constructors">Constructors and Destructors</h2>
 <a id="aa79e6d8c08e599feb6d3909b5d0d4a12" name="aa79e6d8c08e599feb6d3909b5d0d4a12"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa79e6d8c08e599feb6d3909b5d0d4a12">◆ </a></span>~DataReaderListener()</h2>
@@ -263,9 +262,9 @@ template&lt;typename T&gt; </div>
 <p>Called when the reader reports data available. </p>
 <p>If the subscriber enables <code>on_data_on_readers()</code>, that callback receives the notification. It can call <code>notify_datareaders()</code> to schedule enabled data-available callbacks for readers with samples still in their history.</p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[in,out]</td><td class="paramname">the_reader</td><td>Reader reporting the event</td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classdds_1_1sub_1_1_subscriber_listener.html#aae00b846fbc662df45e99e45e90da70c" title="Called when one or more readers under a subscriber have data available.">dds::sub::SubscriberListener::on_data_on_readers()</a> </dd>
@@ -295,7 +294,7 @@ template&lt;typename T&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const dds::core::status::LivelinessChangedStatus &amp;</td>          <td class="paramname"><span class="paramname"><em>status</em></span> )</td>
+          <td class="paramtype">const <a class="el" href="namespacedds_1_1core_1_1status.html#a5314c4075763105161d295a7933db13d">dds::core::status::LivelinessChangedStatus</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>status</em></span> )</td>
         </tr>
       </table>
   </td>
@@ -308,10 +307,10 @@ template&lt;typename T&gt; </div>
 <p>Called when a matched writer changes liveliness state. </p>
 <p>The entity and status references are provided for use during the callback.</p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[in,out]</td><td class="paramname">the_reader</td><td>Reader reporting the event </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">status</td><td>Status snapshot for the event </td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 
@@ -338,7 +337,7 @@ template&lt;typename T&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const dds::core::status::RequestedDeadlineMissedStatus &amp;</td>          <td class="paramname"><span class="paramname"><em>status</em></span> )</td>
+          <td class="paramtype">const <a class="el" href="namespacedds_1_1core_1_1status.html#afe3225b6689c6d6c32f99642822c2b0d">dds::core::status::RequestedDeadlineMissedStatus</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>status</em></span> )</td>
         </tr>
       </table>
   </td>
@@ -351,10 +350,10 @@ template&lt;typename T&gt; </div>
 <p>Called when a reader misses its requested update interval for an instance. </p>
 <p>The entity and status references are provided for use during the callback.</p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[in,out]</td><td class="paramname">the_reader</td><td>Reader reporting the event </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">status</td><td>Status snapshot for the event </td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 
@@ -381,7 +380,7 @@ template&lt;typename T&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const dds::core::status::RequestedIncompatibleQosStatus &amp;</td>          <td class="paramname"><span class="paramname"><em>status</em></span> )</td>
+          <td class="paramtype">const <a class="el" href="namespacedds_1_1core_1_1status.html#a5eff3bdd977e5b923e3610f347a64449">dds::core::status::RequestedIncompatibleQosStatus</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>status</em></span> )</td>
         </tr>
       </table>
   </td>
@@ -394,10 +393,10 @@ template&lt;typename T&gt; </div>
 <p>Called when a discovered writer offers incompatible QoS. </p>
 <p>The entity and status references are provided for use during the callback.</p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[in,out]</td><td class="paramname">the_reader</td><td>Reader reporting the event </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">status</td><td>Status snapshot for the event </td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 
@@ -424,7 +423,7 @@ template&lt;typename T&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const dds::core::status::SampleLostStatus &amp;</td>          <td class="paramname"><span class="paramname"><em>status</em></span> )</td>
+          <td class="paramtype">const <a class="el" href="namespacedds_1_1core_1_1status.html#a04af02f4c95b6f099b2eee842879808b">dds::core::status::SampleLostStatus</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>status</em></span> )</td>
         </tr>
       </table>
   </td>
@@ -437,10 +436,10 @@ template&lt;typename T&gt; </div>
 <p>Called when the reader reports a sample loss. </p>
 <p>The entity and status references are provided for use during the callback.</p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[in,out]</td><td class="paramname">the_reader</td><td>Reader reporting the event </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">status</td><td>Status snapshot for the event </td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 
@@ -467,7 +466,7 @@ template&lt;typename T&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const dds::core::status::SampleRejectedStatus &amp;</td>          <td class="paramname"><span class="paramname"><em>status</em></span> )</td>
+          <td class="paramtype">const <a class="el" href="namespacedds_1_1core_1_1status.html#a545c7d7cb2c055ebffb2f1770f76da01">dds::core::status::SampleRejectedStatus</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>status</em></span> )</td>
         </tr>
       </table>
   </td>
@@ -480,10 +479,10 @@ template&lt;typename T&gt; </div>
 <p>Called when the reader rejects a received sample. </p>
 <p>The entity and status references are provided for use during the callback.</p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[in,out]</td><td class="paramname">the_reader</td><td>Reader reporting the event </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">status</td><td>Status snapshot for the event </td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 
@@ -510,7 +509,7 @@ template&lt;typename T&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const dds::core::status::SubscriptionMatchedStatus &amp;</td>          <td class="paramname"><span class="paramname"><em>status</em></span> )</td>
+          <td class="paramtype">const <a class="el" href="namespacedds_1_1core_1_1status.html#abb43166d32256fc63bd26ce34140090d">dds::core::status::SubscriptionMatchedStatus</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>status</em></span> )</td>
         </tr>
       </table>
   </td>
@@ -523,10 +522,10 @@ template&lt;typename T&gt; </div>
 <p>Called when the set of publications matched to a reader changes. </p>
 <p>The entity and status references are provided for use during the callback.</p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[in,out]</td><td class="paramname">the_reader</td><td>Reader reporting the event </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">status</td><td>Status snapshot for the event </td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 

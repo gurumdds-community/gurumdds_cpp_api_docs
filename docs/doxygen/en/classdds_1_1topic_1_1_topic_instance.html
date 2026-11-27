@@ -18,7 +18,7 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script src="search/searchdata.js" type="text/javascript"></script>
 <script src="search/search.js" type="text/javascript"></script>
-<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+<script src="../theme.js" type="text/javascript"></script><link href="doxygen.css" rel="stylesheet" type="text/css"/>
 <link href="ReferenceBranding.css" rel="stylesheet" type="text/css"/>
 <script defer="True" src="ReferenceUi.js"></script><link href="../en/classdds_1_1topic_1_1_topic_instance.html" hreflang="en" rel="alternate"/><link href="../ko/classdds_1_1topic_1_1_topic_instance.html" hreflang="ko" rel="alternate"/><link href="../language.css" rel="stylesheet"/><script defer="defer" src="../language.js"></script></head>
 <body>
@@ -31,7 +31,7 @@
    <div id="projectname">GurumDDS C++ API Reference<span id="projectnumber"> 1.3.2</span>
    </div>
   </td>
- <td class="doc-language-cell"><label class="doc-language"><select aria-label="Documentation language" data-current="0"><option lang="en" selected="selected" value="../en/classdds_1_1topic_1_1_topic_instance.html">English</option><option lang="en" value="../ko/classdds_1_1topic_1_1_topic_instance.html">Korean</option></select></label></td></tr>
+ <td class="doc-language-cell"><div class="doc-header-controls"><button aria-pressed="false" class="doc-theme" type="button">Dark mode</button><label class="doc-language"><select aria-label="Documentation language" data-current="0"><option lang="en" selected="selected" value="../en/classdds_1_1topic_1_1_topic_instance.html">English</option><option lang="en" value="../ko/classdds_1_1topic_1_1_topic_instance.html">Korean</option></select></label></div></td></tr>
  </tbody>
 </table>
 </div>
@@ -117,12 +117,11 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('classdds_1_1to
 
 <p class="dds-class-include"><code>#include &lt;gurumdds/cpp/topic/TopicInstance.hpp&gt;</code></p>
 
-<p>Pairs a typed sample with its instance handle.  
- <a href="#details">More...</a></p>
+
 <a id="details" name="details"></a><h2 class="groupheader" id="header-details">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename T&gt;<br/>
 class dds::topic::TopicInstance&lt; T &gt;</div><p>Pairs a typed sample with its instance handle. </p>
-</div><table class="memberdecls">
+</div><div class="dds-table-scroll"><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-pub-methods"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a3d5ac4ae8617647b7f481ad3f015aac4" id="r_a3d5ac4ae8617647b7f481ad3f015aac4"><td class="memItemLeft"> </td><td class="memItemRight"><a class="el" href="#a3d5ac4ae8617647b7f481ad3f015aac4">TopicInstance</a> ()</td></tr>
@@ -143,7 +142,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a6a3804d01556c5ef9d06e8a6e440c911"><td class="mdescLeft"> </td><td class="mdescRight">Gets the stored sample value.  <br/></td></tr>
 <tr class="memitem:a34c6307012e599dc898993f90ee2a066" id="r_a34c6307012e599dc898993f90ee2a066"><td class="memItemLeft">void </td><td class="memItemRight"><a class="el" href="#a34c6307012e599dc898993f90ee2a066">sample</a> (const T &amp;the_sample)</td></tr>
 <tr class="memdesc:a34c6307012e599dc898993f90ee2a066"><td class="mdescLeft"> </td><td class="mdescRight">Replaces the stored sample.  <br/></td></tr>
-</table>
+</table></div>
 <a id="doc-constructors" name="doc-constructors"></a><h2 class="groupheader" id="header-doc-constructors">Constructors and Destructors</h2>
 <a id="a3d5ac4ae8617647b7f481ad3f015aac4" name="a3d5ac4ae8617647b7f481ad3f015aac4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3d5ac4ae8617647b7f481ad3f015aac4">◆ </a></span>TopicInstance() <span class="overload">[1/3]</span></h2>
@@ -202,9 +201,9 @@ template&lt;typename T&gt; </div>
 
 <p>Associates an instance with a supplied handle. </p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">h</td><td>Handle of the topic instance </td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 
@@ -241,10 +240,10 @@ template&lt;typename T&gt; </div>
 
 <p>Associates an instance handle with a sample. </p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">h</td><td>Handle of the topic instance </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">the_sample</td><td>Sample to copy into this instance </td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 
@@ -308,9 +307,9 @@ template&lt;typename T&gt; </div>
 
 <p>Updates the handle associated with the sample. </p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">h</td><td>New instance handle </td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 
@@ -433,9 +432,9 @@ template&lt;typename T&gt; </div>
 
 <p>Replaces the stored sample. </p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">the_sample</td><td>New sample to copy </td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 

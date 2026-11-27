@@ -18,7 +18,7 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script src="search/searchdata.js" type="text/javascript"></script>
 <script src="search/search.js" type="text/javascript"></script>
-<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+<script src="../theme.js" type="text/javascript"></script><link href="doxygen.css" rel="stylesheet" type="text/css"/>
 <link href="ReferenceBranding.css" rel="stylesheet" type="text/css"/>
 <script defer="True" src="ReferenceUi.js"></script><link href="../en/classdds_1_1pub_1_1_data_writer.html" hreflang="en" rel="alternate"/><link href="../ko/classdds_1_1pub_1_1_data_writer.html" hreflang="ko" rel="alternate"/><link href="../language.css" rel="stylesheet"/><script defer="defer" src="../language.js"></script></head>
 <body>
@@ -31,7 +31,7 @@
    <div id="projectname">GurumDDS C++ API Reference<span id="projectnumber"> 1.3.2</span>
    </div>
   </td>
- <td class="doc-language-cell"><label class="doc-language"><select aria-label="Documentation language" data-current="0"><option lang="en" selected="selected" value="../en/classdds_1_1pub_1_1_data_writer.html">English</option><option lang="en" value="../ko/classdds_1_1pub_1_1_data_writer.html">Korean</option></select></label></td></tr>
+ <td class="doc-language-cell"><div class="doc-header-controls"><button aria-pressed="false" class="doc-theme" type="button">Dark mode</button><label class="doc-language"><select aria-label="Documentation language" data-current="0"><option lang="en" selected="selected" value="../en/classdds_1_1pub_1_1_data_writer.html">English</option><option lang="en" value="../ko/classdds_1_1pub_1_1_data_writer.html">Korean</option></select></label></div></td></tr>
  </tbody>
 </table>
 </div>
@@ -117,14 +117,13 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('classdds_1_1pu
 
 <p class="dds-class-include"><code>#include &lt;gurumdds/cpp/pub/DataWriter.hpp&gt;</code></p>
 
-<p>Publishes samples and manages instances for a typed topic.  
- <a href="#details">More...</a></p>
+
 <a id="details" name="details"></a><h2 class="groupheader" id="header-details">Detailed Description</h2>
 <div class="textblock"><p>Publishes samples and manages instances for a typed topic. </p>
 <p>A writer publishes on one typed topic through a <a class="el" href="group__dds__publication.html#gada2751fd8ce0e148138e6950f7ef7d37" title="Publisher handle used to own writers and set their defaults.">Publisher</a> in the same domain. The default delegate retains copies of the <a class="el" href="group__dds__publication.html#gada2751fd8ce0e148138e6950f7ef7d37" title="Publisher handle used to own writers and set their defaults.">Publisher</a> and Topic handles.</p>
 <p>On a keyed topic, each distinct key identifies an instance. Write a sample with its key, or register the key and reuse the returned instance handle for subsequent writes. Set the keyed fields consistently when reusing a handle.</p>
 <dl class="section user"><dt>Choose a write operation</dt><dd></dd></dl>
-<table class="markdownTable">
+<div class="dds-table-scroll"><table class="markdownTable">
 <tr class="markdownTableHead">
 <th class="markdownTableHeadNone">Goal  </th><th class="markdownTableHeadNone">Call  </th><th class="markdownTableHeadNone">When to use it  </th></tr>
 <tr class="markdownTableRowOdd">
@@ -135,13 +134,13 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('classdds_1_1pu
 <td class="markdownTableBodyNone">Set source time  </td><td class="markdownTableBodyNone"><span class="tt">write(sample, timestamp)</span>  </td><td class="markdownTableBodyNone">Supply the time to put in the sample metadata.  </td></tr>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone">Write a range  </td><td class="markdownTableBodyNone"><span class="tt">write(begin, end)</span>  </td><td class="markdownTableBodyNone">Write the records in the iterator range.  </td></tr>
-</table>
+</table></div>
 
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classdds_1_1pub_1_1_t_publisher.html" title="Owns writers and configures publication defaults.">dds::pub::Publisher</a> </dd>
 <dd>
 <a class="el" href="group__dds__publication.html#ga35ad9728577d4bdccfe8677bba0bcf5d" title="QoS policy set used to configure a data writer.">dds::pub::qos::DataWriterQos</a> </dd>
 <dd>
-dds::core::status::PublicationMatchedStatus </dd>
+<a class="el" href="namespacedds_1_1core_1_1status.html#afab9a639df23ee8ec7c0f006482e5a0d" title="Current and cumulative subscription matches for a writer.">dds::core::status::PublicationMatchedStatus</a> </dd>
 <dd>
 <a class="el" href="classdds_1_1pub_1_1_data_writer_listener.html" title="Receives status notifications from a typed writer.">dds::pub::DataWriterListener</a> </dd>
 <dd>
@@ -152,10 +151,10 @@ dds::core::status::PublicationMatchedStatus </dd>
 <a class="el" href="dds_example_new_helloworld_keyed.html" title="Keyed samples">Keyed samples</a> </dd></dl>
 <details class="dds-reference-details" data-dds-signatures=""><summary>Full template declaration</summary><div class="compoundTemplParams">template&lt;typename T, template&lt; typename Q &gt; class DELEGATE&gt;<br/>
 class dds::pub::DataWriter&lt; T, DELEGATE &gt;</div><dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
+  <div class="dds-table-scroll"><table class="tparams">
     <tr><td class="paramname">T</td><td>Type associated with the topic </td></tr>
     <tr><td class="paramname">DELEGATE</td><td>Writer implementation template</td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl></details></div>
 
@@ -215,12 +214,12 @@ class dds::pub::DataWriter&lt; T, DELEGATE &gt;</div><dl class="tparams"><dt>Tem
 </g>
 </g>
 </svg></div><figcaption>Inheritance diagram</figcaption></figure>
-<table class="memberdecls">
+<div class="dds-table-scroll"><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-pub-types"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
 <tr class="memitem:acad30fd2c1cc23fcd73b9a799743727f" id="r_acad30fd2c1cc23fcd73b9a799743727f"><td class="memItemLeft"><a id="acad30fd2c1cc23fcd73b9a799743727f" name="acad30fd2c1cc23fcd73b9a799743727f"></a>
 typedef <a class="el" href="classdds_1_1pub_1_1_data_writer_listener.html">dds::pub::DataWriterListener</a>&lt; T &gt; </td><td class="memItemRight"><b>Listener</b></td></tr>
-</table><table class="memberdecls">
+</table></div><div class="dds-table-scroll"><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-pub-methods"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ae97634478fb88516bd4193196ed3a412" id="r_ae97634478fb88516bd4193196ed3a412"><td class="memItemLeft"> </td><td class="memItemRight"><a class="el" href="#ae97634478fb88516bd4193196ed3a412">DataWriter</a> (const <a class="el" href="group__dds__publication.html#gada2751fd8ce0e148138e6950f7ef7d37">dds::pub::Publisher</a> &amp;pub, const <a class="el" href="classdds_1_1topic_1_1_topic.html">::dds::topic::Topic&lt;T&gt;</a>&lt; T &gt; &amp;topic)</td></tr>
@@ -308,16 +307,15 @@ const <a class="el" href="group__dds__publication.html#gada2751fd8ce0e148138e695
 <tr class="memdesc:a836579fac44f688b201b20a55891d558"><td class="mdescLeft"> </td><td class="mdescRight">Return the listener currently associated with this <code><a class="el" href="classdds_1_1pub_1_1_data_writer.html" title="Publishes samples and manages instances for a typed topic.">DataWriter&lt;T&gt;</a></code>.  <br/></td></tr>
 <tr class="groupHeader" id="pub-methods-6"><td colspan="2"><div class="groupHeader">Writer status and liveliness</div></td></tr>
 <tr class="memitem:a93e7f937152e2632ed22a367b7dff508" id="r_a93e7f937152e2632ed22a367b7dff508"><td class="memItemLeft"><a id="a93e7f937152e2632ed22a367b7dff508" name="a93e7f937152e2632ed22a367b7dff508"></a>
-const ::dds::core::status::LivelinessLostStatus </td><td class="memItemRight"><b>liveliness_lost_status</b> ()</td></tr>
+const <a class="el" href="namespacedds_1_1core_1_1status.html#aebef4a75ba7d826d09d17734e2f750dd">::dds::core::status::LivelinessLostStatus</a> </td><td class="memItemRight"><b>liveliness_lost_status</b> ()</td></tr>
 <tr class="memdesc:a93e7f937152e2632ed22a367b7dff508"><td class="mdescLeft"> </td><td class="mdescRight">Get the <code>LivelinessLostStatus</code>. <br/></td></tr>
 <tr class="memitem:a425ffdc62cb975fccfb970aaf468d0fb" id="r_a425ffdc62cb975fccfb970aaf468d0fb"><td class="memItemLeft"><a id="a425ffdc62cb975fccfb970aaf468d0fb" name="a425ffdc62cb975fccfb970aaf468d0fb"></a>
-const ::dds::core::status::OfferedDeadlineMissedStatus </td><td class="memItemRight"><b>offered_deadline_missed_status</b> ()</td></tr>
+const <a class="el" href="namespacedds_1_1core_1_1status.html#a6d37f53b0381146e58ae3fe09e18039b">::dds::core::status::OfferedDeadlineMissedStatus</a> </td><td class="memItemRight"><b>offered_deadline_missed_status</b> ()</td></tr>
 <tr class="memdesc:a425ffdc62cb975fccfb970aaf468d0fb"><td class="mdescLeft"> </td><td class="mdescRight">Get the <code>OfferedDeadlineMissedStatus</code>. <br/></td></tr>
-<tr class="memitem:a39b1cd4c5a39f815b1f0e50334ca167c" id="r_a39b1cd4c5a39f815b1f0e50334ca167c"><td class="memItemLeft"><a id="a39b1cd4c5a39f815b1f0e50334ca167c" name="a39b1cd4c5a39f815b1f0e50334ca167c"></a>
-const ::dds::core::status::OfferedIncompatibleQosStatus </td><td class="memItemRight"><b>offered_incompatible_qos_staus</b> ()</td></tr>
-<tr class="memdesc:a39b1cd4c5a39f815b1f0e50334ca167c"><td class="mdescLeft"> </td><td class="mdescRight">Get the <code>OfferedIncompatibleQosStatus</code>. <br/></td></tr>
+<tr class="memitem:a39b1cd4c5a39f815b1f0e50334ca167c" id="r_a39b1cd4c5a39f815b1f0e50334ca167c"><td class="memItemLeft">const <a class="el" href="namespacedds_1_1core_1_1status.html#a2c4ab6bc72a7028757b34ea215563354">::dds::core::status::OfferedIncompatibleQosStatus</a> </td><td class="memItemRight"><a class="el" href="#a39b1cd4c5a39f815b1f0e50334ca167c">offered_incompatible_qos_staus</a> ()</td></tr>
+<tr class="memdesc:a39b1cd4c5a39f815b1f0e50334ca167c"><td class="mdescLeft"> </td><td class="mdescRight">Gets the writer's offered incompatible QoS status.  <br/></td></tr>
 <tr class="memitem:a240dae5bf8da60439c4284a762ce6b7e" id="r_a240dae5bf8da60439c4284a762ce6b7e"><td class="memItemLeft"><a id="a240dae5bf8da60439c4284a762ce6b7e" name="a240dae5bf8da60439c4284a762ce6b7e"></a>
-const ::dds::core::status::PublicationMatchedStatus </td><td class="memItemRight"><b>publication_matched_status</b> ()</td></tr>
+const <a class="el" href="namespacedds_1_1core_1_1status.html#afab9a639df23ee8ec7c0f006482e5a0d">::dds::core::status::PublicationMatchedStatus</a> </td><td class="memItemRight"><b>publication_matched_status</b> ()</td></tr>
 <tr class="memdesc:a240dae5bf8da60439c4284a762ce6b7e"><td class="mdescLeft"> </td><td class="mdescRight">Get the <code>PublicationMatchedStatus</code>. <br/></td></tr>
 <tr class="memitem:a906117803b9d584a8320b895e8ca1361" id="r_a906117803b9d584a8320b895e8ca1361"><td class="memItemLeft">void </td><td class="memItemRight"><a class="el" href="#a906117803b9d584a8320b895e8ca1361">assert_liveliness</a> ()</td></tr>
 <tr class="memdesc:a906117803b9d584a8320b895e8ca1361"><td class="mdescLeft"> </td><td class="mdescRight">Manually asserts liveliness through this writer.  <br/></td></tr>
@@ -386,13 +384,13 @@ bool </td><td class="memItemRight"><b>is_nil</b> () const</td></tr>
 <tr class="memdesc:a6e30d68985ca187b16562617d4a7b9f9 inherit pub_methods_classdds_1_1core_1_1_reference"><td class="mdescLeft"> </td><td class="mdescRight">Accesses the stored delegate pointer.  <br/></td></tr>
 <tr class="memitem:a373c3aa4c921f21eabdf3a020ac8ef0c inherit pub_methods_classdds_1_1core_1_1_reference" id="r_a373c3aa4c921f21eabdf3a020ac8ef0c"><td class="memItemLeft"> </td><td class="memItemRight"><a class="el" href="classdds_1_1core_1_1_reference.html#a373c3aa4c921f21eabdf3a020ac8ef0c">operator const DELEGATE_REF_T &amp;</a> () const</td></tr>
 <tr class="memdesc:a373c3aa4c921f21eabdf3a020ac8ef0c inherit pub_methods_classdds_1_1core_1_1_reference"><td class="mdescLeft"> </td><td class="mdescRight">Accesses the stored delegate pointer.  <br/></td></tr>
-</table><table class="memberdecls">
+</table></div><div class="dds-table-scroll"><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-inherited"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_attribs_classdds_1_1core_1_1_reference"><td class="dyn-inherit" colspan="2"><span class="dynarrow"><span class="arrowhead closed"></span></span>Protected Attributes inherited from <a class="el" href="classdds_1_1core_1_1_reference.html">dds::core::Reference&lt; DELEGATE &gt;</a></td></tr>
 <tr class="memitem:ab3a71f25696efba22cf3744cf5826839 inherit pro_attribs_classdds_1_1core_1_1_reference" id="r_ab3a71f25696efba22cf3744cf5826839"><td class="memItemLeft">
 DELEGATE_REF_T </td><td class="memItemRight"><b>impl_</b></td></tr>
-</table>
+</table></div>
 <a id="doc-constructors" name="doc-constructors"></a><h2 class="groupheader" id="header-doc-constructors">Constructors and Destructors</h2>
 <a id="ae97634478fb88516bd4193196ed3a412" name="ae97634478fb88516bd4193196ed3a412"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae97634478fb88516bd4193196ed3a412">◆ </a></span>DataWriter(pub, topic) <span class="overload">[1/2]</span></h2>
@@ -425,10 +423,10 @@ template&lt;typename T, template&lt; typename Q &gt; class DELEGATE&gt; </div>
 
 <p>Creates a <a class="el" href="classdds_1_1pub_1_1_data_writer.html" title="Publishes samples and manages instances for a typed topic.">DataWriter&lt;T&gt;</a> with the <a class="el" href="group__dds__publication.html#gada2751fd8ce0e148138e6950f7ef7d37" title="Publisher handle used to own writers and set their defaults.">Publisher</a>'s default <a class="el" href="classdds_1_1pub_1_1_data_writer.html" title="Publishes samples and manages instances for a typed topic.">DataWriter&lt;T&gt;</a> QoS. </p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">pub</td><td><a class="el" href="group__dds__publication.html#gada2751fd8ce0e148138e6950f7ef7d37" title="Publisher handle used to own writers and set their defaults.">Publisher</a> that owns the new writer </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">topic</td><td>Typed topic to publish </td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 
@@ -480,13 +478,13 @@ template&lt;typename T, template&lt; typename Q &gt; class DELEGATE&gt; </div>
 
 <p>Creates a <code><a class="el" href="classdds_1_1pub_1_1_data_writer.html" title="Publishes samples and manages instances for a typed topic.">DataWriter&lt;T&gt;</a></code> with the specified QoS. </p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramname">pub</td><td>the publisher </td></tr>
     <tr><td class="paramname">topic</td><td>the <code>Topic</code> associated with this <code><a class="el" href="classdds_1_1pub_1_1_data_writer.html" title="Publishes samples and manages instances for a typed topic.">DataWriter&lt;T&gt;</a></code> </td></tr>
     <tr><td class="paramname">qos</td><td>the <code><a class="el" href="classdds_1_1pub_1_1_data_writer.html" title="Publishes samples and manages instances for a typed topic.">DataWriter&lt;T&gt;</a></code> qos. </td></tr>
     <tr><td class="paramname">listener</td><td>the <code><a class="el" href="classdds_1_1pub_1_1_data_writer.html" title="Publishes samples and manages instances for a typed topic.">DataWriter&lt;T&gt;</a></code> listener. </td></tr>
     <tr><td class="paramname">mask</td><td>the listener event mask. </td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 
@@ -547,17 +545,17 @@ template&lt;typename T, template&lt; typename Q &gt; class DELEGATE&gt; </div>
 <p>Writes a sample and lets DDS resolve its instance from its key. </p>
 <p>If a reliable writer's send buffer is full, the call can block for up to the maximum blocking time configured by the Reliability QoS policy. Use <a class="el" href="#aaa79bd56ae4e8980a39f8c8a331df4b7" title="Waits for outstanding reliable data to be acknowledged.">wait_for_acknowledgments()</a> to check for DDS acknowledgments.</p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">sample</td><td>Sample to publish, including the key fields</td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
+  <div class="dds-table-scroll"><table class="exception">
     <tr><td class="paramname"><a class="el" href="classdds_1_1core_1_1_timeout_error.html" title="Reports that a time-limited DDS operation did not finish.">dds::core::TimeoutError</a></td><td>The writer could not queue the sample within the configured blocking time </td></tr>
     <tr><td class="paramname"><a class="el" href="classdds_1_1core_1_1_not_enabled_error.html" title="Reports an operation requiring an enabled entity.">dds::core::NotEnabledError</a></td><td>The writer is disabled </td></tr>
     <tr><td class="paramname"><a class="el" href="classdds_1_1core_1_1_out_of_resources_error.html" title="Reports that DDS cannot allocate resources for an operation.">dds::core::OutOfResourcesError</a></td><td>DDS could not allocate resources or queue the sample without waiting</td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#a52e24acfe59249c86980ca181d110711" title="Registers a keyed instance with the writer.">register_instance()</a> </dd>
@@ -594,10 +592,10 @@ template&lt;typename T, template&lt; typename Q &gt; class DELEGATE&gt; </div>
 <p>Writes a sample with an application-supplied source timestamp. </p>
 <p>The writer passes the timestamp to DDS in seconds and nanoseconds. DDS resolves the instance from the sample key.</p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">sample</td><td>Sample to publish, including the key fields </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">timestamp</td><td>Source timestamp to associate with the sample</td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#ab4131332cd4d7d1d0598cdce2fede459" title="Writes a sample and lets DDS resolve its instance from its key.">write(const T&amp;)</a> for the blocking behavior and common exceptions </dd></dl>
@@ -632,10 +630,10 @@ template&lt;typename T, template&lt; typename Q &gt; class DELEGATE&gt; </div>
 <p>Writes a sample for a specified instance. </p>
 <p>Reuse the handle returned by <a class="el" href="#a52e24acfe59249c86980ca181d110711" title="Registers a keyed instance with the writer.">register_instance()</a> or <a class="el" href="#a422994290a921a200f8232726d3a2184" title="Looks up a keyed instance without registering it.">lookup_instance()</a> on this writer. Pass dds::core::InstanceHandle::nil() to resolve the instance from the sample key.</p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">data</td><td>Sample with the key corresponding to the chosen instance </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">instance</td><td>Handle for the sample's instance</td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#ab4131332cd4d7d1d0598cdce2fede459" title="Writes a sample and lets DDS resolve its instance from its key.">write(const T&amp;)</a> for the blocking behavior and common exceptions </dd></dl>
@@ -674,11 +672,11 @@ template&lt;typename T, template&lt; typename Q &gt; class DELEGATE&gt; </div>
 
 <p>Writes a sample for a specified instance and source timestamp. </p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">data</td><td>Sample to publish </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">instance</td><td>Handle for the sample's instance </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">timestamp</td><td>Source timestamp for the sample</td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#ab4131332cd4d7d1d0598cdce2fede459" title="Writes a sample and lets DDS resolve its instance from its key.">write(const T&amp;)</a> for the blocking behavior and common exceptions </dd></dl>
@@ -708,9 +706,9 @@ template&lt;typename T, template&lt; typename Q &gt; class DELEGATE&gt; </div>
 
 <p>Writes the sample associated with a topic instance. </p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">i</td><td>Sample and its instance handle</td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#ab4131332cd4d7d1d0598cdce2fede459" title="Writes a sample and lets DDS resolve its instance from its key.">write(const T&amp;)</a> for the blocking behavior and common exceptions </dd></dl>
@@ -744,10 +742,10 @@ template&lt;typename T, template&lt; typename Q &gt; class DELEGATE&gt; </div>
 
 <p>Writes the sample associated with a topic instance using a source timestamp. </p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">i</td><td>Sample and its instance handle </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">timestamp</td><td>Source timestamp for the sample</td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#ab4131332cd4d7d1d0598cdce2fede459" title="Writes a sample and lets DDS resolve its instance from its key.">write(const T&amp;)</a> for the blocking behavior and common exceptions </dd></dl>
@@ -784,10 +782,10 @@ template&lt;typename FWIterator&gt; </div>
 <p>Writes each element in an iterator range. </p>
 <p>The writer visits <span class="tt">[begin, end)</span> in iterator order and calls the single-element overload for each sample or <span class="tt">TopicInstance</span>. If a write throws, the writer stops at that element and earlier successful writes remain effective.</p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">begin</td><td>Iterator to the first element </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">end</td><td>Iterator one past the last element </td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 
@@ -828,11 +826,11 @@ template&lt;typename FWIterator&gt; </div>
 <p>Writes each element in an iterator range with the same source timestamp. </p>
 <p>Each element in <span class="tt">[begin, end)</span> is written separately. If a write throws, earlier successful writes remain effective.</p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">begin</td><td>Iterator to the first element </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">end</td><td>Iterator one past the last element </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">timestamp</td><td>Source timestamp supplied to every write </td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 
@@ -878,12 +876,12 @@ template&lt;typename SamplesFWIterator, typename HandlesFWIterator&gt; </div>
 <p>Writes samples with their corresponding instance handles. </p>
 <p>The ranges advance together in iterator order. The writer stops when either range ends, so use ranges of equal length to write every sample. Each pair is written separately and a later failure leaves earlier writes in effect.</p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">data_begin</td><td>Iterator to the first sample </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">data_end</td><td>Iterator one past the last sample </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">handle_begin</td><td>Iterator to the first instance handle </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">handle_end</td><td>Iterator one past the last instance handle </td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 
@@ -934,13 +932,13 @@ template&lt;typename SamplesFWIterator, typename HandlesFWIterator&gt; </div>
 <p>Writes samples with corresponding instance handles and a common source timestamp. </p>
 <p>The ranges advance together until either one ends. The writer applies the timestamp to each write. If a write throws, the writer stops and earlier successful writes remain effective.</p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">data_begin</td><td>Iterator to the first sample </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">data_end</td><td>Iterator one past the last sample </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">handle_begin</td><td>Iterator to the first instance handle </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">handle_end</td><td>Iterator one past the last instance handle </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">timestamp</td><td>Source timestamp supplied to every write </td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 
@@ -974,10 +972,10 @@ template&lt;typename T, template&lt; typename Q &gt; class DELEGATE&gt; </div>
 <p>Writes a sample with extended source metadata. </p>
 <p>The current delegate passes the extended metadata to the native writer.</p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">data</td><td>Sample payload </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">sample_info</td><td>Extended metadata associated with the write </td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 
@@ -1006,9 +1004,9 @@ template&lt;typename T, template&lt; typename Q &gt; class DELEGATE&gt; </div>
 
 <p>Writes a sample using the insertion operator. </p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">data</td><td>Sample to write</td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>This writer so that writes can be chained </dd></dl>
@@ -1038,9 +1036,9 @@ template&lt;typename T, template&lt; typename Q &gt; class DELEGATE&gt; </div>
 
 <p>Writes a sample using the insertion operator. </p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">data</td><td>Sample and explicit source timestamp</td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>This writer so that writes can be chained </dd></dl>
@@ -1070,9 +1068,9 @@ template&lt;typename T, template&lt; typename Q &gt; class DELEGATE&gt; </div>
 
 <p>Writes a sample using the insertion operator. </p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">data</td><td>Sample and instance handle</td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>This writer so that writes can be chained </dd></dl>
@@ -1103,9 +1101,9 @@ template&lt;typename T, template&lt; typename Q &gt; class DELEGATE&gt; </div>
 <p>Registers a keyed instance with the writer. </p>
 <p>Reuse the returned handle with <a class="el" href="#ab4131332cd4d7d1d0598cdce2fede459" title="Writes a sample and lets DDS resolve its instance from its key.">write()</a>, <a class="el" href="#a868c7b52885cb7cacf0b1020a3fab066" title="Marks a keyed instance as disposed.">dispose_instance()</a>, and <a class="el" href="#a3d1745b1899b5d91737d0c3366d98354" title="Stops this writer from maintaining a keyed instance.">unregister_instance()</a>. Check for a nil handle before using it. This operation registers the key without publishing a sample.</p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">key</td><td>Sample whose key fields identify the instance</td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Instance handle, or a nil handle when DDS cannot register the instance </dd></dl>
@@ -1140,10 +1138,10 @@ template&lt;typename T, template&lt; typename Q &gt; class DELEGATE&gt; </div>
 <p>Registers a keyed instance with a source timestamp. </p>
 <p>This overload passes the application-supplied timestamp to the native registration call.</p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">key</td><td>Sample whose key fields identify the instance </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">ts</td><td>Source timestamp for registration</td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Instance handle, or a nil handle when DDS cannot register the instance </dd></dl>
@@ -1174,9 +1172,9 @@ template&lt;typename T, template&lt; typename Q &gt; class DELEGATE&gt; </div>
 <p>Stops this writer from maintaining a keyed instance. </p>
 <p>The WriterDataLifecycle policy controls whether DDS also disposes the instance on unregister. With automatic disposal disabled, other writers can continue to maintain the same instance.</p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">i</td><td>Instance handle known to this writer</td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>This writer</dd></dl>
@@ -1211,10 +1209,10 @@ template&lt;typename T, template&lt; typename Q &gt; class DELEGATE&gt; </div>
 
 <p>Unregister an instance with timestamp. </p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramname">i</td><td>the instance to unregister. </td></tr>
     <tr><td class="paramname">ts</td><td>Source timestamp for this instance operation </td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 
@@ -1244,9 +1242,9 @@ template&lt;typename T, template&lt; typename Q &gt; class DELEGATE&gt; </div>
 <p>Marks a keyed instance as disposed. </p>
 <p>Use this operation to announce that the instance is no longer alive. The writer may later publish another sample for the same key. To relinquish the writer's registration, call <a class="el" href="#a3d1745b1899b5d91737d0c3366d98354" title="Stops this writer from maintaining a keyed instance.">unregister_instance()</a>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">i</td><td>Instance handle known to this writer</td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>This writer </dd></dl>
@@ -1280,10 +1278,10 @@ template&lt;typename T, template&lt; typename Q &gt; class DELEGATE&gt; </div>
 
 <p>Dispose an instance with a timestamp. </p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramname">i</td><td>the instance to dispose. </td></tr>
     <tr><td class="paramname">ts</td><td>the timestamp. </td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 
@@ -1317,17 +1315,17 @@ template&lt;typename T, template&lt; typename Q &gt; class DELEGATE&gt; </div>
 <p>Looks up a key by handle and replaces the supplied instance object. </p>
 <p>The writer constructs a TopicInstance with the handle and key fields returned by DDS. Only the key fields contain retrieved values.</p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[out]</td><td class="paramname">i</td><td>Destination instance object </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">h</td><td>Handle known to this writer</td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Reference to <span class="tt">i</span></dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
+  <div class="dds-table-scroll"><table class="exception">
     <tr><td class="paramname"><a class="el" href="classdds_1_1core_1_1_invalid_argument_error.html" title="Reports an invalid argument passed to a DDS operation.">dds::core::InvalidArgumentError</a></td><td>The native lookup reports an invalid argument </td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 
@@ -1361,17 +1359,17 @@ template&lt;typename T, template&lt; typename Q &gt; class DELEGATE&gt; </div>
 <p>Fills the key fields in an existing sample. </p>
 <p>DDS uses a handle known to this writer. Only key fields receive values.</p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[out]</td><td class="paramname">sample</td><td>Destination for the key fields </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">h</td><td>Handle known to this writer</td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Reference to <span class="tt">sample</span></dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
+  <div class="dds-table-scroll"><table class="exception">
     <tr><td class="paramname"><a class="el" href="classdds_1_1core_1_1_invalid_argument_error.html" title="Reports an invalid argument passed to a DDS operation.">dds::core::InvalidArgumentError</a></td><td>The native lookup reports an invalid argument </td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 
@@ -1401,9 +1399,9 @@ template&lt;typename T, template&lt; typename Q &gt; class DELEGATE&gt; </div>
 <p>Looks up a keyed instance without registering it. </p>
 <p>DDS examines only the sample's key fields. To register an instance when lookup returns a nil handle, use <a class="el" href="#a52e24acfe59249c86980ca181d110711" title="Registers a keyed instance with the writer.">register_instance()</a>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">key</td><td>Sample whose key fields identify the instance</td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Handle known to this writer, or a nil handle if DDS cannot resolve the key </dd></dl>
@@ -1434,9 +1432,9 @@ template&lt;typename T, template&lt; typename Q &gt; class DELEGATE&gt; </div>
 <p>Updates the QoS value stored in the C++ writer delegate. </p>
 <p>Set policies at construction when they need to affect the native writer. This setter updates the value returned by <a class="el" href="namespacedds_1_1pub_1_1qos.html" title="QoS for Publisher and DataWriter.">qos()</a> without calling the native QoS setter.</p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">the_qos</td><td>Replacement for the stored QoS value </td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 
@@ -1466,9 +1464,9 @@ template&lt;typename T, template&lt; typename Q &gt; class DELEGATE&gt; </div>
 <p>Updates the writer's stored QoS using stream syntax. </p>
 <p>Applies the same update as <a class="el" href="#a6637f6545bd1ea7926f26d1bc921d5ac" title="Updates the QoS value stored in the C++ writer delegate.">qos(const ::dds::pub::qos::DataWriterQos&amp;)</a>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">the_qos</td><td>Replacement for the stored QoS value</td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>This writer </dd></dl>
@@ -1498,9 +1496,9 @@ template&lt;typename T, template&lt; typename Q &gt; class DELEGATE&gt; </div>
 
 <p>Copies the writer's stored QoS using stream syntax. </p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[out]</td><td class="paramname">the_qos</td><td>Destination for the policy values</td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>This writer </dd></dl>
@@ -1532,16 +1530,16 @@ template&lt;typename T, template&lt; typename Q &gt; class DELEGATE&gt; </div>
 <p>For a reliable writer and a positive timeout, the wait covers writes through the sequence number captured when the wait begins. The call can succeed with no matched reliable readers. DDS acknowledgments establish receipt. Application processing requires separate confirmation.</p>
 <p>An enabled best-effort writer returns immediately. For an enabled writer, a zero timeout also returns immediately without checking outstanding acknowledgments.</p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">timeout</td><td>Maximum wait duration</td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
+  <div class="dds-table-scroll"><table class="exception">
     <tr><td class="paramname"><a class="el" href="classdds_1_1core_1_1_timeout_error.html" title="Reports that a time-limited DDS operation did not finish.">dds::core::TimeoutError</a></td><td>The wait expired before all required acknowledgments arrived </td></tr>
     <tr><td class="paramname"><a class="el" href="classdds_1_1core_1_1_not_enabled_error.html" title="Reports an operation requiring an enabled entity.">dds::core::NotEnabledError</a></td><td>DDS reports that this writer is disabled</td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="group__dds__core.html#api_usage_notes" title="Errors and threading">Errors and threading</a> </dd>
@@ -1579,10 +1577,10 @@ template&lt;typename T, template&lt; typename Q &gt; class DELEGATE&gt; </div>
 <p>Keep the listener alive while it is registered. Pass <span class="tt">nullptr</span> to clear it.</p>
 <dl class="section user"><dt>Threading</dt><dd>Protect application state shared between callbacks and other threads. Keep the listener alive until any callback using it has finished.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">the_listener</td><td>Application-owned listener </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">mask</td><td>Statuses delivered to the listener</td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="group__dds__core.html#api_usage_notes" title="Errors and threading">Errors and threading</a> </dd></dl>
@@ -1614,7 +1612,34 @@ template&lt;typename T, template&lt; typename Q &gt; class DELEGATE&gt; </div>
 <dl class="section return"><dt>Returns</dt><dd>the <code><a class="el" href="classdds_1_1pub_1_1_data_writer_listener.html" title="Receives status notifications from a typed writer.">DataWriterListener</a></code>. </dd></dl>
 
 </div>
-</div><h2 class="groupheader" id="details-pub-methods-6">Writer status and liveliness</h2><a id="a906117803b9d584a8320b895e8ca1361" name="a906117803b9d584a8320b895e8ca1361"></a><h2 class="memtitle"><span class="permalink"><a href="#a906117803b9d584a8320b895e8ca1361">◆ </a></span>assert_liveliness()</h2><div class="memitem">
+</div><h2 class="groupheader" id="details-pub-methods-6">Writer status and liveliness</h2><a id="a39b1cd4c5a39f815b1f0e50334ca167c" name="a39b1cd4c5a39f815b1f0e50334ca167c"></a><h2 class="memtitle"><span class="permalink"><a href="#a39b1cd4c5a39f815b1f0e50334ca167c">◆ </a></span>offered_incompatible_qos_staus()</h2><div class="memitem">
+<div class="memproto">
+<div class="memtemplate dds-full-signature">
+template&lt;typename T, template&lt; typename Q &gt; class DELEGATE&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="namespacedds_1_1core_1_1status.html#a2c4ab6bc72a7028757b34ea215563354">::dds::core::status::OfferedIncompatibleQosStatus</a> <a class="el" href="classdds_1_1pub_1_1_data_writer.html">dds::pub::DataWriter&lt;T&gt;</a><span class="dds-short-signature">&lt;T&gt;</span><span class="dds-full-signature">&lt; T, DELEGATE &gt;</span>::offered_incompatible_qos_staus </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets the writer's offered incompatible QoS status. </p>
+<p>The function name in this binding is <span class="tt"><a class="el" href="#a39b1cd4c5a39f815b1f0e50334ca167c" title="Gets the writer's offered incompatible QoS status.">offered_incompatible_qos_staus()</a></span>. Use the returned status to identify the latest incompatible QoS policy.</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__dds__qos.html#matching_status" title="Read the status snapshots">Read the status snapshots</a> </dd></dl>
+
+</div>
+</div><a id="a906117803b9d584a8320b895e8ca1361" name="a906117803b9d584a8320b895e8ca1361"></a><h2 class="memtitle"><span class="permalink"><a href="#a906117803b9d584a8320b895e8ca1361">◆ </a></span>assert_liveliness()</h2><div class="memitem">
 <div class="memproto">
 <div class="memtemplate dds-full-signature">
 template&lt;typename T, template&lt; typename Q &gt; class DELEGATE&gt; </div>
@@ -1639,15 +1664,19 @@ template&lt;typename T, template&lt; typename Q &gt; class DELEGATE&gt; </div>
 <p>Manually asserts liveliness through this writer. </p>
 <p>Use this call with <span class="tt">MANUAL_BY_TOPIC</span> liveliness to maintain this writer during periods without writes. Call it within the lease duration so matching readers can continue to consider the writer alive. For <span class="tt">MANUAL_BY_PARTICIPANT</span> liveliness, the participant can assert on behalf of its writers.</p>
 <dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
+  <div class="dds-table-scroll"><table class="exception">
     <tr><td class="paramname"><a class="el" href="classdds_1_1core_1_1_not_enabled_error.html" title="Reports an operation requiring an enabled entity.">dds::core::NotEnabledError</a></td><td>DDS reports that this writer is disabled</td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classdds_1_1domain_1_1_t_domain_participant.html#a0c8284e8c38a5bfbab96fd73c34fe2e1" title="Manually asserts liveliness through the participant.">dds::domain::TDomainParticipant::assert_liveliness()</a> </dd></dl>
 
 </div>
 </div>
+
+
+
+
 
 
 

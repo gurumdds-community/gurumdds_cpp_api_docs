@@ -18,7 +18,7 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script src="search/searchdata.js" type="text/javascript"></script>
 <script src="search/search.js" type="text/javascript"></script>
-<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+<script src="../theme.js" type="text/javascript"></script><link href="doxygen.css" rel="stylesheet" type="text/css"/>
 <link href="ReferenceBranding.css" rel="stylesheet" type="text/css"/>
 <script defer="True" src="ReferenceUi.js"></script><link href="../en/classdds_1_1core_1_1policy_1_1_t_partition.html" hreflang="en" rel="alternate"/><link href="../ko/classdds_1_1core_1_1policy_1_1_t_partition.html" hreflang="ko" rel="alternate"/><link href="../language.css" rel="stylesheet"/><script defer="defer" src="../language.js"></script></head>
 <body>
@@ -31,7 +31,7 @@
    <div id="projectname">GurumDDS C++ API Reference<span id="projectnumber"> 1.3.2</span>
    </div>
   </td>
- <td class="doc-language-cell"><label class="doc-language"><select aria-label="Documentation language" data-current="0"><option lang="en" selected="selected" value="../en/classdds_1_1core_1_1policy_1_1_t_partition.html">English</option><option lang="en" value="../ko/classdds_1_1core_1_1policy_1_1_t_partition.html">Korean</option></select></label></td></tr>
+ <td class="doc-language-cell"><div class="doc-header-controls"><button aria-pressed="false" class="doc-theme" type="button">Dark mode</button><label class="doc-language"><select aria-label="Documentation language" data-current="0"><option lang="en" selected="selected" value="../en/classdds_1_1core_1_1policy_1_1_t_partition.html">English</option><option lang="en" value="../ko/classdds_1_1core_1_1policy_1_1_t_partition.html">Korean</option></select></label></div></td></tr>
  </tbody>
 </table>
 </div>
@@ -117,13 +117,12 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('classdds_1_1co
 
 <p class="dds-class-include"><code>#include &lt;gurumdds/cpp/core/policy/CorePolicy.hpp&gt;</code></p>
 
-<p>Controls logical publisher and subscriber matching within a domain.  
- <a href="#details">More...</a></p>
+
 <a id="details" name="details"></a><h2 class="groupheader" id="header-details">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename D&gt;<br/>
 class dds::core::policy::TPartition&lt; D &gt;</div><p>Controls logical publisher and subscriber matching within a domain. </p>
-<p>Set partition names on the publisher and subscriber. DDS uses them when matching their writers and readers. A match requires at least one matching partition name in addition to topic and endpoint QoS compatibility. An empty partition list selects the default partition, whose name is the empty string. </p>
-</div><table class="memberdecls">
+<p>Set partition names on the publisher and subscriber. DDS uses them when matching their writers and readers. In addition to a compatible topic and endpoint QoS, a Publisher and Subscriber need at least one pair of matching partition entries. Either side can use a wildcard. For example, <span class="tt">plant.*</span> matches <span class="tt">plant.line1</span>. An empty partition list selects the default partition, whose name is the empty string. </p>
+</div><div class="dds-table-scroll"><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-pub-methods"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a36fd371f993a0cd30c4ed9046a1f4380" id="r_a36fd371f993a0cd30c4ed9046a1f4380"><td class="memItemLeft"><a id="a36fd371f993a0cd30c4ed9046a1f4380" name="a36fd371f993a0cd30c4ed9046a1f4380"></a>
@@ -178,7 +177,7 @@ D &amp; </td><td class="memItemRight"><b>delegate</b> ()</td></tr>
 <tr class="memitem:a3b691bb7dfa340e55660b78ac9951b22 inherit pub_methods_classdds_1_1core_1_1_value" id="r_a3b691bb7dfa340e55660b78ac9951b22"><td class="memItemLeft">
  </td><td class="memItemRight"><b>operator const D &amp;</b> () const</td></tr>
 <tr class="memdesc:a3b691bb7dfa340e55660b78ac9951b22 inherit pub_methods_classdds_1_1core_1_1_value"><td class="mdescLeft"> </td><td class="mdescRight">Cast Operator. <br/></td></tr>
-</table><table class="memberdecls">
+</table></div><div class="dds-table-scroll"><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-inherited"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_methods_classdds_1_1core_1_1_value"><td class="dyn-inherit" colspan="2"><span class="dynarrow"><span class="arrowhead closed"></span></span>Protected Member Functions inherited from <a class="el" href="classdds_1_1core_1_1_value.html">dds::core::Value&lt; D &gt;</a></td></tr>
@@ -187,7 +186,7 @@ Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_attribs_classdds_1_1core_1_1_value"><td class="dyn-inherit" colspan="2"><span class="dynarrow"><span class="arrowhead closed"></span></span>Protected Attributes inherited from <a class="el" href="classdds_1_1core_1_1_value.html">dds::core::Value&lt; D &gt;</a></td></tr>
 <tr class="memitem:a524bb581d6961d26653838488712edf4 inherit pro_attribs_classdds_1_1core_1_1_value" id="r_a524bb581d6961d26653838488712edf4"><td class="memItemLeft">
 D </td><td class="memItemRight"><b>d_</b></td></tr>
-</table>
+</table></div>
 <a id="doc-constructors" name="doc-constructors"></a><h2 class="groupheader" id="header-doc-constructors">Constructors and Destructors</h2>
 <a id="aee18325ab54adf832282417ee2beb8df" name="aee18325ab54adf832282417ee2beb8df"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aee18325ab54adf832282417ee2beb8df">◆ </a></span>TPartition() <span class="overload">[1/3]</span></h2>
@@ -216,9 +215,9 @@ template&lt;typename D&gt; </div>
 
 <p>Constructs the partition policy with explicit settings. </p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">partition</td><td><a class="el" href="group__dds__qos.html#ga9676f77e95c6e5d1c732604d9e7ead38" title="Controls logical publisher and subscriber matching within a domain.">Partition</a> name or matching expression </td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 
@@ -251,9 +250,9 @@ template&lt;typename D&gt; </div>
 
 <p>Constructs the partition policy with explicit settings. </p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">partitions</td><td><a class="el" href="group__dds__qos.html#ga9676f77e95c6e5d1c732604d9e7ead38" title="Controls logical publisher and subscriber matching within a domain.">Partition</a> names or matching expressions </td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 
@@ -278,9 +277,9 @@ template&lt;typename D&gt; </div>
 
 <p>Copies the partition policy. </p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">other</td><td>Policy to copy </td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 
@@ -328,9 +327,9 @@ template&lt;typename D&gt; </div>
 
 <p>Sets the partition names or matching expressions. </p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">partitions</td><td>Policy setting to store</td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>This policy </dd></dl>
@@ -356,9 +355,9 @@ template&lt;typename D&gt; </div>
 
 <p>Copies the partition names into a caller-supplied sequence. </p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[out]</td><td class="paramname">dst</td><td>Destination sequence</td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="classdds_1_1core_1_1_reference.html" title="Defines shared-handle operations for DDS reference types.">Reference</a> to the destination sequence </dd></dl>

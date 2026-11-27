@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['보관_20및_20전달_20정책_0',['보관 및 전달 정책',['../group__dds__qos.html#qos_delivery_policies',1,'']]],
-  ['보관_20한도_20publisher_20acknowledgment_20ownership_1',['보관 한도, Publisher acknowledgment, Ownership',['../group__dds__howto__qos.html#dds_tutorial_src_delivery_limits',1,'']]]
+  ['변경량을_20함께_20확인_0',['현재 매칭 수와 변경량을 함께 확인',['../group__dds__tutorial__discovery.html#dds_tutorial_discovery_status_snapshot',1,'']]],
+  ['변경하기_1',['이후 sample에 적용할 필터 매개변수 변경하기',['../group__dds__tutorial__filter.html#dds_tutorial_filter_update',1,'']]],
+  ['변경하지_20않고_20일괄_20선택_2',['기본 필터를 변경하지 않고 일괄 선택',['../group__dds__subscription.html#receiving_select',1,'']]]
 ];

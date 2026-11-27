@@ -18,7 +18,7 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script src="search/searchdata.js" type="text/javascript"></script>
 <script src="search/search.js" type="text/javascript"></script>
-<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+<script src="../theme.js" type="text/javascript"></script><link href="doxygen.css" rel="stylesheet" type="text/css"/>
 <link href="ReferenceBranding.css" rel="stylesheet" type="text/css"/>
 <script defer="True" src="ReferenceUi.js"></script><link href="../en/classdds_1_1core_1_1policy_1_1_t_ownership_strength.html" hreflang="en" rel="alternate"/><link href="../ko/classdds_1_1core_1_1policy_1_1_t_ownership_strength.html" hreflang="ko" rel="alternate"/><link href="../language.css" rel="stylesheet"/><script defer="defer" src="../language.js"></script></head>
 <body>
@@ -31,7 +31,7 @@
    <div id="projectname">GurumDDS C++ API Reference<span id="projectnumber"> 1.3.2</span>
    </div>
   </td>
- <td class="doc-language-cell"><label class="doc-language"><select aria-label="Documentation language" data-current="0"><option lang="en" selected="selected" value="../en/classdds_1_1core_1_1policy_1_1_t_ownership_strength.html">English</option><option lang="en" value="../ko/classdds_1_1core_1_1policy_1_1_t_ownership_strength.html">Korean</option></select></label></td></tr>
+ <td class="doc-language-cell"><div class="doc-header-controls"><button aria-pressed="false" class="doc-theme" type="button">Dark mode</button><label class="doc-language"><select aria-label="Documentation language" data-current="0"><option lang="en" selected="selected" value="../en/classdds_1_1core_1_1policy_1_1_t_ownership_strength.html">English</option><option lang="en" value="../ko/classdds_1_1core_1_1policy_1_1_t_ownership_strength.html">Korean</option></select></label></div></td></tr>
  </tbody>
 </table>
 </div>
@@ -117,13 +117,12 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('classdds_1_1co
 
 <p class="dds-class-include"><code>#include &lt;gurumdds/cpp/core/policy/CorePolicy.hpp&gt;</code></p>
 
-<p>Assigns the writer's priority for exclusive ownership.  
- <a href="#details">More...</a></p>
+
 <a id="details" name="details"></a><h2 class="groupheader" id="header-details">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename D&gt;<br/>
 class dds::core::policy::TOwnershipStrength&lt; D &gt;</div><p>Assigns the writer's priority for exclusive ownership. </p>
 <p>Set a nonnegative strength on writers that use <code>EXCLUSIVE</code> ownership. For a given instance, a writer with a higher strength takes precedence over an eligible writer with a lower strength. Changing this value has no effect on instances using <code>SHARED</code> ownership. </p>
-</div><table class="memberdecls">
+</div><div class="dds-table-scroll"><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-pub-methods"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a56a7b9ab1aeb159c1580775d19dc34ef" id="r_a56a7b9ab1aeb159c1580775d19dc34ef"><td class="memItemLeft"> </td><td class="memItemRight"><a class="el" href="#a56a7b9ab1aeb159c1580775d19dc34ef">TOwnershipStrength</a> (int32_t s)</td></tr>
@@ -168,7 +167,7 @@ D &amp; </td><td class="memItemRight"><b>delegate</b> ()</td></tr>
 <tr class="memitem:a3b691bb7dfa340e55660b78ac9951b22 inherit pub_methods_classdds_1_1core_1_1_value" id="r_a3b691bb7dfa340e55660b78ac9951b22"><td class="memItemLeft">
  </td><td class="memItemRight"><b>operator const D &amp;</b> () const</td></tr>
 <tr class="memdesc:a3b691bb7dfa340e55660b78ac9951b22 inherit pub_methods_classdds_1_1core_1_1_value"><td class="mdescLeft"> </td><td class="mdescRight">Cast Operator. <br/></td></tr>
-</table><table class="memberdecls">
+</table></div><div class="dds-table-scroll"><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-inherited"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_methods_classdds_1_1core_1_1_value"><td class="dyn-inherit" colspan="2"><span class="dynarrow"><span class="arrowhead closed"></span></span>Protected Member Functions inherited from <a class="el" href="classdds_1_1core_1_1_value.html">dds::core::Value&lt; D &gt;</a></td></tr>
@@ -177,7 +176,7 @@ Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_attribs_classdds_1_1core_1_1_value"><td class="dyn-inherit" colspan="2"><span class="dynarrow"><span class="arrowhead closed"></span></span>Protected Attributes inherited from <a class="el" href="classdds_1_1core_1_1_value.html">dds::core::Value&lt; D &gt;</a></td></tr>
 <tr class="memitem:a524bb581d6961d26653838488712edf4 inherit pro_attribs_classdds_1_1core_1_1_value" id="r_a524bb581d6961d26653838488712edf4"><td class="memItemLeft">
 D </td><td class="memItemRight"><b>d_</b></td></tr>
-</table>
+</table></div>
 <a id="doc-constructors" name="doc-constructors"></a><h2 class="groupheader" id="header-doc-constructors">Constructors and Destructors</h2>
 <a id="a56a7b9ab1aeb159c1580775d19dc34ef" name="a56a7b9ab1aeb159c1580775d19dc34ef"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a56a7b9ab1aeb159c1580775d19dc34ef">◆ </a></span>TOwnershipStrength() <span class="overload">[1/2]</span></h2>
@@ -206,9 +205,9 @@ template&lt;typename D&gt; </div>
 
 <p>Constructs the ownership-strength policy with explicit settings. </p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">s</td><td>Strength used to rank writers for an exclusively owned instance </td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 
@@ -233,9 +232,9 @@ template&lt;typename D&gt; </div>
 
 <p>Copies the ownership-strength policy. </p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">other</td><td>Policy to copy </td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 
@@ -283,9 +282,9 @@ template&lt;typename D&gt; </div>
 
 <p>Sets the writer strength used for exclusive ownership. </p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">s</td><td>Policy setting to store</td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>This policy </dd></dl>

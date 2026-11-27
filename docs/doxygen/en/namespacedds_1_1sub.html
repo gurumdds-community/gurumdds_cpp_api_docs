@@ -18,7 +18,7 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script src="search/searchdata.js" type="text/javascript"></script>
 <script src="search/search.js" type="text/javascript"></script>
-<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+<script src="../theme.js" type="text/javascript"></script><link href="doxygen.css" rel="stylesheet" type="text/css"/>
 <link href="ReferenceBranding.css" rel="stylesheet" type="text/css"/>
 <script defer="True" src="ReferenceUi.js"></script><link href="../en/namespacedds_1_1sub.html" hreflang="en" rel="alternate"/><link href="../ko/namespacedds_1_1sub.html" hreflang="ko" rel="alternate"/><link href="../language.css" rel="stylesheet"/><script defer="defer" src="../language.js"></script></head>
 <body>
@@ -31,7 +31,7 @@
    <div id="projectname">GurumDDS C++ API Reference<span id="projectnumber"> 1.3.2</span>
    </div>
   </td>
- <td class="doc-language-cell"><label class="doc-language"><select aria-label="Documentation language" data-current="0"><option lang="en" selected="selected" value="../en/namespacedds_1_1sub.html">English</option><option lang="en" value="../ko/namespacedds_1_1sub.html">Korean</option></select></label></td></tr>
+ <td class="doc-language-cell"><div class="doc-header-controls"><button aria-pressed="false" class="doc-theme" type="button">Dark mode</button><label class="doc-language"><select aria-label="Documentation language" data-current="0"><option lang="en" selected="selected" value="../en/namespacedds_1_1sub.html">English</option><option lang="en" value="../ko/namespacedds_1_1sub.html">Korean</option></select></label></div></td></tr>
  </tbody>
 </table>
 </div>
@@ -115,9 +115,10 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('namespacedds_1
 </div><!--header-->
 <div class="contents">
 
-<p>Subscribers, DataReaders, and received samples.  
-<a href="#details">More...</a></p>
-<table class="memberdecls">
+
+<a id="details" name="details"></a><h2 class="groupheader" id="header-details">Detailed Description</h2><div class="textblock"><p>Subscribers, DataReaders, and received samples. </p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__dds__subscription.html" title="Subscription">Subscription</a> </dd></dl>
+</div><div class="dds-table-scroll"><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-namespaces"><a id="namespaces" name="namespaces"></a>
 Namespaces</h2></td></tr>
 <tr class="memitem:cond" id="r_cond"><td class="memItemLeft">namespace  </td><td class="memItemRight"><a class="el" href="namespacedds_1_1sub_1_1cond.html">cond</a></td></tr>
@@ -126,7 +127,7 @@ Namespaces</h2></td></tr>
 <tr class="memdesc:namespacedds_1_1sub_1_1qos"><td class="mdescLeft"> </td><td class="mdescRight">QoS for <a class="el" href="group__dds__subscription.html#ga9a6d78b2a23f864211da5bd2edf28750" title="Subscriber handle used to own readers and set their defaults.">Subscriber</a> and <a class="el" href="classdds_1_1sub_1_1_data_reader.html" title="Receives typed samples for a topic.">DataReader&lt;T&gt;</a>. <br/></td></tr>
 <tr class="memitem:status" id="r_status"><td class="memItemLeft">namespace  </td><td class="memItemRight"><a class="el" href="namespacedds_1_1sub_1_1status.html">status</a></td></tr>
 <tr class="memdesc:namespacedds_1_1sub_1_1status"><td class="mdescLeft"> </td><td class="mdescRight"><a class="el" href="classdds_1_1sub_1_1_sample.html" title="This class encapsulate the data and meta-data associated with DDS samples.">Sample</a> states, view states, and instance states for reading data. <br/></td></tr>
-</table><table class="memberdecls">
+</table></div><div class="dds-table-scroll"><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-nested-classes"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:AnyDataReader" id="r_AnyDataReader"><td class="memItemLeft">class  </td><td class="memItemRight"><a class="el" href="classdds_1_1sub_1_1_any_data_reader.html">AnyDataReader</a></td></tr>
@@ -160,7 +161,7 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft"> </td><td class="mdescRight">Describes a received sample and its instance state.  <a href="classdds_1_1sub_1_1_t_sample_info.html#details">More...</a><br/></td></tr>
 <tr class="memitem:TSubscriber" id="r_TSubscriber"><td class="memItemLeft">class  </td><td class="memItemRight"><a class="el" href="classdds_1_1sub_1_1_t_subscriber.html">Subscriber</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft"> </td><td class="mdescRight">Owns readers and configures subscription defaults.  <a href="classdds_1_1sub_1_1_t_subscriber.html#details">More...</a><br/></td></tr>
-</table><table class="memberdecls">
+</table></div><div class="dds-table-scroll"><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-typedef-members"><a id="typedef-members" name="typedef-members"></a>
 Typedefs</h2></td></tr>
 <tr class="memitem:ga1a326dc6ca679ff7cbe0ad659b4aebff" id="r_ga1a326dc6ca679ff7cbe0ad659b4aebff"><td class="memItemLeft">typedef dds::sub::detail::CoherentAccess </td><td class="memItemRight"><a class="el" href="group__dds__subscription.html#ga1a326dc6ca679ff7cbe0ad659b4aebff">CoherentAccess</a></td></tr>
@@ -176,7 +177,7 @@ template&lt;typename T, template&lt; typename Q, typename W &gt; class DELEGATE 
 <tr class="memdesc:ga8ce43296febeef280d08d5b58541ee65"><td class="mdescLeft"> </td><td class="mdescRight">Metadata indicating payload validity, instance state, and sample origin.  <br/></td></tr>
 <tr class="memitem:ga9a6d78b2a23f864211da5bd2edf28750" id="r_ga9a6d78b2a23f864211da5bd2edf28750"><td class="memItemLeft">typedef dds::sub::detail::Subscriber </td><td class="memItemRight"><a class="el" href="group__dds__subscription.html#ga9a6d78b2a23f864211da5bd2edf28750">Subscriber</a></td></tr>
 <tr class="memdesc:ga9a6d78b2a23f864211da5bd2edf28750"><td class="mdescLeft"> </td><td class="mdescRight"><a class="el" href="group__dds__subscription.html#ga9a6d78b2a23f864211da5bd2edf28750" title="Subscriber handle used to own readers and set their defaults.">Subscriber</a> handle used to own readers and set their defaults.  <br/></td></tr>
-</table><table class="memberdecls">
+</table></div><div class="dds-table-scroll"><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-func-members"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:aff0805b74d79331461b7e12d19660f84" id="r_aff0805b74d79331461b7e12d19660f84"><td class="memTemplParams" colspan="2">template&lt;typename SELECTOR&gt; </td></tr>
@@ -244,11 +245,9 @@ template&lt;typename READER, typename BinIterator&gt; </td></tr>
 <tr class="memitem:a2b1eba80422c7d0d997cbe140d977ad3" id="r_a2b1eba80422c7d0d997cbe140d977ad3"><td class="memTemplParams" colspan="2">template&lt;typename T, typename TInfo, template&lt; typename Q, typename W &gt; class D&gt; </td></tr>
 <tr class="memitem:a2b1eba80422c7d0d997cbe140d977ad3 template"><td class="memItemLeft"><a class="el" href="classdds_1_1sub_1_1_loaned_samples.html">LoanedSamples</a>&lt; T, D&lt; T, TInfo &gt; &gt; </td><td class="memItemRight"><a class="el" href="#a2b1eba80422c7d0d997cbe140d977ad3">move</a> (<a class="el" href="classdds_1_1sub_1_1_loaned_samples.html">LoanedSamples</a>&lt; T, D&lt; T, TInfo &gt; &gt; &amp;a)</td></tr>
 <tr class="memdesc:a2b1eba80422c7d0d997cbe140d977ad3"><td class="mdescLeft"> </td><td class="mdescRight">Transfers the stored delegate between loan handles.  <br/></td></tr>
-</table>
-<a id="details" name="details"></a><h2 class="groupheader" id="header-details">Detailed Description</h2>
-<div class="textblock"><p>Subscribers, DataReaders, and received samples. </p>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__dds__subscription.html" title="Subscription">Subscription</a> </dd></dl>
-</div><a id="doc-func-members" name="doc-func-members"></a><h2 class="groupheader" id="header-doc-func-members">Function Documentation</h2>
+</table></div>
+
+<a id="doc-func-members" name="doc-func-members"></a><h2 class="groupheader" id="header-doc-func-members">Functions</h2>
 <a id="a9c5c3d55fd9edd11aa59e262a5e0a2d3" name="a9c5c3d55fd9edd11aa59e262a5e0a2d3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9c5c3d55fd9edd11aa59e262a5e0a2d3">◆ </a></span>begin()</h2>
 
@@ -269,9 +268,9 @@ template&lt;typename T&gt; </div>
 <p>Gets the first sample iterator. </p>
 <p>Keep a collection owner alive while using its iterators.</p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">t</td><td><a class="el" href="classdds_1_1sub_1_1_sample.html" title="This class encapsulate the data and meta-data associated with DDS samples.">Sample</a> collection to iterate</td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Iterator to the first sample, or the end iterator if empty </dd></dl>
@@ -295,9 +294,9 @@ template&lt;typename T&gt; </div>
 
 <p>Retrieves the built-in subscriber for the given domain participant. </p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramname">dp</td><td>the domain participant. </td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 
@@ -323,9 +322,9 @@ template&lt;typename T&gt; </div>
 <p>Gets the first sample iterator. </p>
 <p>Keep a collection owner alive while using its iterators.</p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">t</td><td><a class="el" href="classdds_1_1sub_1_1_sample.html" title="This class encapsulate the data and meta-data associated with DDS samples.">Sample</a> collection to iterate</td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Iterator to the first sample, or the end iterator if empty </dd></dl>
@@ -352,9 +351,9 @@ template&lt;typename T&gt; </div>
 <p>Gets the end iterator. </p>
 <p>Keep a collection owner alive while using its iterators.</p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">t</td><td><a class="el" href="classdds_1_1sub_1_1_sample.html" title="This class encapsulate the data and meta-data associated with DDS samples.">Sample</a> collection to iterate</td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Iterator one past the last record </dd></dl>
@@ -381,9 +380,9 @@ template&lt;typename T&gt; </div>
 <p>Gets the end iterator. </p>
 <p>Keep a collection owner alive while using its iterators.</p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">t</td><td><a class="el" href="classdds_1_1sub_1_1_sample.html" title="This class encapsulate the data and meta-data associated with DDS samples.">Sample</a> collection to iterate</td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Iterator one past the last record </dd></dl>
@@ -547,10 +546,10 @@ template&lt;typename READER, typename FwdIterator&gt; </div>
 
 <p>Ignore subscriptions. </p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramname">dp</td><td>the <code>DomainParticipant</code> for which the remote entity will be ignored</td></tr>
     <tr><td class="paramname">handle</td><td>the <code>InstanceHandle</code> of the remote entity that has to be ignored </td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 
@@ -585,11 +584,11 @@ template&lt;typename FwdIterator&gt; </div>
 <p>Applies the range ignore operation. </p>
 <p>The current range implementation calls the C publication-ignore operation for each handle. Use the single-handle overload to ignore subscriptions.</p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">dp</td><td>Participant for which the publications are ignored </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">begin</td><td>Iterator to the first handle </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">end</td><td>Iterator one past the last handle </td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 
@@ -620,9 +619,9 @@ template&lt;typename FwdIterator&gt; </div>
 
 <p>Creates a streaming manipulator for instance. </p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">h</td><td>Handle of the instance to select</td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A manipulator that applies this setting to a reader selector </dd></dl>
@@ -734,9 +733,9 @@ template&lt;typename T&gt; </div>
 
 <p>Creates a streaming manipulator for max samples. </p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">n</td><td>Maximum record count, or zero for no explicit limit</td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A manipulator that applies this setting to a reader selector </dd></dl>
@@ -762,9 +761,9 @@ template&lt;typename T, typename TInfo, template&lt; typename Q, typename W &gt;
 
 <p>Transfers the stored delegate between loan handles. </p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[in,out]</td><td class="paramname">a</td><td>Loan handle whose delegate is cleared</td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A handle to the transferred delegate </dd></dl>
@@ -796,9 +795,9 @@ template&lt;typename T, typename TInfo, template&lt; typename Q, typename W &gt;
 
 <p>Creates a streaming manipulator for next instance. </p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">h</td><td>Handle preceding the instance to select</td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A manipulator that applies this setting to a reader selector </dd></dl>
@@ -825,9 +824,9 @@ template&lt;typename SELECTOR&gt; </div>
 <p>Selects read mode in a streaming expression. </p>
 <p>Samples are accessed by subsequent extraction.</p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">selector</td><td>Selector whose mode is changed</td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The supplied selector </dd></dl>
@@ -859,9 +858,9 @@ template&lt;typename SELECTOR&gt; </div>
 
 <p>Creates a streaming manipulator for state. </p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">s</td><td><a class="el" href="classdds_1_1sub_1_1_sample.html" title="This class encapsulate the data and meta-data associated with DDS samples.">Sample</a>, view, and instance state masks</td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A manipulator that applies this setting to a reader selector </dd></dl>
@@ -888,9 +887,9 @@ template&lt;typename SELECTOR&gt; </div>
 <p>Selects take mode in a streaming expression. </p>
 <p>Samples are accessed by subsequent extraction.</p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">selector</td><td>Selector whose mode is changed</td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The supplied selector </dd></dl>

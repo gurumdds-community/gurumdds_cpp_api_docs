@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['비교_0',['관련 QoS 정책 비교',['../group__dds__qos.html#matching_policies',1,'']]],
-  ['비어_20있는지_20확인_1',['Entity handle이 비어 있는지 확인',['../group__dds__tutorial__entity.html#dds_tutorial_entity_nil',1,'']]]
+  ['불일치를_20재현하고_20수정_0',['Reliability 불일치를 재현하고 수정',['../group__dds__qos.html#matching_reliability_example',1,'']]],
+  ['불일치_20확인하기_1',['Reliability 불일치 확인하기',['../group__dds__howto__qos.html#dds_tutorial_qos_incompatible',1,'']]]
 ];

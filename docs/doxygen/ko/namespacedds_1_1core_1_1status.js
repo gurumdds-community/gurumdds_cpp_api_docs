@@ -15,5 +15,16 @@ var namespacedds_1_1core_1_1status =
     [ "TSampleLostStatus", "classdds_1_1core_1_1status_1_1_t_sample_lost_status.html", "classdds_1_1core_1_1status_1_1_t_sample_lost_status" ],
     [ "TSampleRejectedStatus", "classdds_1_1core_1_1status_1_1_t_sample_rejected_status.html", "classdds_1_1core_1_1status_1_1_t_sample_rejected_status" ],
     [ "TSubscriptionMatchedStatus", "classdds_1_1core_1_1status_1_1_t_subscription_matched_status.html", "classdds_1_1core_1_1status_1_1_t_subscription_matched_status" ],
+    [ "InconsistentTopicStatus", "namespacedds_1_1core_1_1status.html#abe411539687fdab9d40418fd9ab8e3e2", null ],
+    [ "LivelinessChangedStatus", "namespacedds_1_1core_1_1status.html#a5314c4075763105161d295a7933db13d", null ],
+    [ "LivelinessLostStatus", "namespacedds_1_1core_1_1status.html#aebef4a75ba7d826d09d17734e2f750dd", null ],
+    [ "OfferedDeadlineMissedStatus", "namespacedds_1_1core_1_1status.html#a6d37f53b0381146e58ae3fe09e18039b", null ],
+    [ "OfferedIncompatibleQosStatus", "namespacedds_1_1core_1_1status.html#a2c4ab6bc72a7028757b34ea215563354", null ],
+    [ "PublicationMatchedStatus", "namespacedds_1_1core_1_1status.html#afab9a639df23ee8ec7c0f006482e5a0d", null ],
+    [ "RequestedDeadlineMissedStatus", "namespacedds_1_1core_1_1status.html#afe3225b6689c6d6c32f99642822c2b0d", null ],
+    [ "RequestedIncompatibleQosStatus", "namespacedds_1_1core_1_1status.html#a5eff3bdd977e5b923e3610f347a64449", null ],
+    [ "SampleLostStatus", "namespacedds_1_1core_1_1status.html#a04af02f4c95b6f099b2eee842879808b", null ],
+    [ "SampleRejectedStatus", "namespacedds_1_1core_1_1status.html#a545c7d7cb2c055ebffb2f1770f76da01", null ],
+    [ "SubscriptionMatchedStatus", "namespacedds_1_1core_1_1status.html#abb43166d32256fc63bd26ce34140090d", null ],
     [ "get_status", "namespacedds_1_1core_1_1status.html#a71e44a652febc680d41a32d99cda5bff", null ]
 ];

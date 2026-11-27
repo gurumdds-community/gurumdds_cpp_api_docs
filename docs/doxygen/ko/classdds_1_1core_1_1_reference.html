@@ -18,822 +18,821 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script src="search/searchdata.js" type="text/javascript"></script>
 <script src="search/search.js" type="text/javascript"></script>
-<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+<script src="../theme.js" type="text/javascript"></script><link href="doxygen.css" rel="stylesheet" type="text/css"/>
 <link href="ReferenceBranding.css" rel="stylesheet" type="text/css"/>
 <script defer="True" src="ReferenceUi.js"></script><link href="../en/classdds_1_1core_1_1_reference.html" hreflang="en" rel="alternate"/><link href="../ko/classdds_1_1core_1_1_reference.html" hreflang="ko" rel="alternate"/><link href="../language.css" rel="stylesheet"/><script defer="defer" src="../language.js"></script></head>
 <body>
-<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
-<div id="titlearea">
-<table cellpadding="0" cellspacing="0">
- <tbody>
- <tr id="projectrow">
-  <td id="projectalign">
-   <div id="projectname">GurumDDS C++ API Reference<span id="projectnumber"> 1.3.2</span>
-   </div>
-  </td>
- <td class="doc-language-cell"><label class="doc-language"><select aria-label="문서 언어" data-current="1"><option lang="en" value="../en/classdds_1_1core_1_1_reference.html">English</option><option lang="en" selected="selected" value="../ko/classdds_1_1core_1_1_reference.html">Korean</option></select></label></td></tr>
- </tbody>
-</table>
-</div>
-<!-- end header part -->
-<!-- 다음에 의해 생성됨 :  Doxygen 1.18.0 -->
-<script type="text/javascript">
-let searchBox = new SearchBox("searchBox", "search/",'.html');
-</script>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', codefold.init);
-</script>
-<script id="doxygen-config" type="application/json">
-{
-  "relPath": "",
-  "generateTreeView": true,
-  "searchEngine": true,
-  "serverBasedSearch": false,
-  "disableIndex": false,
-  "dynamicMenus": true,
-  "fullSidebar": false
-}
-</script>
-<script src="menudata.js" type="text/javascript"></script>
-<script src="menu.js" type="text/javascript"></script>
-<div id="main-nav-mobile">
-<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
-<label class="main-menu-btn" for="main-menu-state">
-<span class="main-menu-btn-icon"></span> 주 메뉴 표시 전환</label>
-<span id="searchBoxPos1"></span>
-</div>
-</div><!-- main-nav-mobile -->
-<div id="main-nav">
-  <ul class="sm sm-dox" id="main-menu">
-    <li id="searchBoxPos2">
-        <div class="MSearchBoxInactive" id="MSearchBox">
-        <span class="left">
-          <span class="search-icon" id="MSearchSelect"><span class="search-icon-dropdown"></span></span>
-          <input accesskey="S" id="MSearchField" placeholder="검색" type="text" value=""/>
-          </span><span class="right">
-            <a href="javascript:searchBox.CloseResultsWindow()" id="MSearchClose"><div class="close-icon" id="MSearchCloseImg"></div></a>
-          </span>
-        </div>
-    </li>
-  </ul>
-</div><!-- main-nav -->
-</div><!-- top -->
-<div class="ui-resizable side-nav-resizable" id="side-nav">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div class="sync" id="nav-sync"></div>
-    </div>
-  </div>
-  <div class="ui-resizable-handle" id="splitbar">
-  </div>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellpadding="0" cellspacing="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">GurumDDS C++ API Reference<span id="projectnumber"> 1.3.2</span>
+   </div>
+  </td>
+ <td class="doc-language-cell"><div class="doc-header-controls"><button aria-pressed="false" class="doc-theme" type="button">다크 모드</button><label class="doc-language"><select aria-label="문서 언어" data-current="1"><option lang="en" value="../en/classdds_1_1core_1_1_reference.html">English</option><option lang="en" selected="selected" value="../ko/classdds_1_1core_1_1_reference.html">Korean</option></select></label></div></td></tr>
+ </tbody>
+</table>
 </div>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded',() => { initNavTree('classdds_1_1core_1_1_reference.html','','classdds_1_1core_1_1_reference-members'); });
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
 </script>
-<div id="container">
-<div id="doc-content">
-<!-- window showing the filter options -->
-<div id="MSearchSelectWindow">
-</div>
-
-<!-- iframe showing the search results (closed by default) -->
-<div id="MSearchResultsWindow">
-<div id="MSearchResults">
-<div class="SRPage">
-<div id="SRIndex">
-<div id="SRResults"></div>
-<div class="SRStatus" id="Loading">로딩중...</div>
-<div class="SRStatus" id="Searching">검색중...</div>
-<div class="SRStatus" id="NoMatches">일치하는것 없음</div>
-</div>
-</div>
-</div>
-</div>
-
-<div class="header">
-  <div class="headertitle"><div class="title">dds::core::Reference&lt; DELEGATE &gt; 클래스 템플릿</div></div>
-</div><!--header-->
-<div class="contents">
-
-<p class="dds-class-include"><code>#include &lt;gurumdds/cpp/core/Reference.hpp&gt;</code></p>
-
-<p>DDS 참조 타입에 대한 공유-handle 연산을 정의합니다.  
- <a href="#details">더 자세히 ...</a></p>
-<a id="details" name="details"></a><h2 class="groupheader" id="header-details">상세한 설명</h2>
-<div class="textblock"><div class="compoundTemplParams">template&lt;typename DELEGATE&gt;<br/>
-class dds::core::Reference&lt; DELEGATE &gt;</div><p>DDS 참조 타입에 대한 공유-handle 연산을 정의합니다. </p>
-<p>복사한 참조는 원본의 구현 객체를 공유합니다. <span class="tt"><a class="el" href="namespacedds_1_1core.html#a22c3217bb51dfe3db2887417da74d917" title="빈 DDS 참조를 나타내는 값">dds::core::null</a></span>을 대입하면 해당 참조를 비웁니다. 다른 소유자는 계속 사용할 수 있으며, 마지막 소유자가 참조를 놓으면 공유 포인터가 구현 객체를 소멸시킵니다. 네이티브 리소스 정리는 구체적인 구현 객체의 수명 규칙을 따릅니다.</p>
-<p>handle 동등성은 저장된 구현 객체 포인터를 비교합니다. 구현 객체를 언급하지 않는 작업을 호출하기 전에, <span class="tt"><a class="el" href="namespacedds_1_1core.html#a22c3217bb51dfe3db2887417da74d917" title="빈 DDS 참조를 나타내는 값">dds::core::null</a></span>와 비어 있는 handle을 확인하십시오.</p>
-<dl class="tparams"><dt>템플릿 파라메터</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">DELEGATE</td><td>handle에 의해 공유되는 구현 개체의 타입 </td></tr>
-  </table>
-  </dd>
-</dl>
-</div><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-pub-methods"><a id="pub-methods" name="pub-methods"></a>
-공개 멤버 함수</h2></td></tr>
-<tr class="memitem:a299077d89db9f6d7bd5ab89066fdf204" id="r_a299077d89db9f6d7bd5ab89066fdf204"><td class="memItemLeft"><a id="a299077d89db9f6d7bd5ab89066fdf204" name="a299077d89db9f6d7bd5ab89066fdf204"></a>
- </td><td class="memItemRight"><b>Reference</b> (<a class="el" href="classdds_1_1core_1_1null__type.html">dds::core::null_type</a> &amp;)</td></tr>
-<tr class="memdesc:a299077d89db9f6d7bd5ab89066fdf204"><td class="mdescLeft"> </td><td class="mdescRight">"null" 참조를 만듭니다. <br/></td></tr>
-<tr class="memitem:a547cbbc6b49a439af09a48d638bea36a" id="r_a547cbbc6b49a439af09a48d638bea36a"><td class="memItemLeft"> </td><td class="memItemRight"><a class="el" href="#a547cbbc6b49a439af09a48d638bea36a">Reference</a> (const Reference &amp;ref)</td></tr>
-<tr class="memdesc:a547cbbc6b49a439af09a48d638bea36a"><td class="mdescLeft"> </td><td class="mdescRight">다른 참조에서 참조를 만듭니다.  <br/></td></tr>
-<tr class="memitem:a42a02521893ec09e752fe04ebce0d71b" id="r_a42a02521893ec09e752fe04ebce0d71b"><td class="memItemLeft"> </td><td class="memItemRight"><a class="el" href="#a42a02521893ec09e752fe04ebce0d71b">Reference</a> (const DELEGATE_REF_T &amp;ref)</td></tr>
-<tr class="memdesc:a42a02521893ec09e752fe04ebce0d71b"><td class="mdescLeft"> </td><td class="mdescRight">기존 구현 객체를 공유합니다  <br/></td></tr>
-<tr class="memitem:a0c9d73c46fbb46f5c401181874097827" id="r_a0c9d73c46fbb46f5c401181874097827"><td class="memTemplParams" colspan="2">template&lt;typename D&gt; </td></tr>
-<tr class="memitem:a0c9d73c46fbb46f5c401181874097827 template"><td class="memItemLeft"> </td><td class="memItemRight"><a class="el" href="#a0c9d73c46fbb46f5c401181874097827">Reference</a> (const Reference&lt; D &gt; &amp;ref)</td></tr>
-<tr class="memdesc:a0c9d73c46fbb46f5c401181874097827"><td class="mdescLeft"> </td><td class="mdescRight">다른 참조 타입에서 안전하게 할당할 수 있습니다.  <br/></td></tr>
-<tr class="memitem:ad454b33cbde908eac2c5a3a2091be564" id="r_ad454b33cbde908eac2c5a3a2091be564"><td class="memItemLeft"> </td><td class="memItemRight"><a class="el" href="#ad454b33cbde908eac2c5a3a2091be564">Reference</a> (DELEGATE_T *p)</td></tr>
-<tr class="memdesc:ad454b33cbde908eac2c5a3a2091be564"><td class="mdescLeft"> </td><td class="mdescRight">구현 객체 포인터의 소유권을 가집니다  <br/></td></tr>
-<tr class="memitem:a211079c559cbe5c2e7d9ce47a2df888f" id="r_a211079c559cbe5c2e7d9ce47a2df888f"><td class="memItemLeft"><a id="a211079c559cbe5c2e7d9ce47a2df888f" name="a211079c559cbe5c2e7d9ce47a2df888f"></a>
- </td><td class="memItemRight"><b>~Reference</b> ()</td></tr>
-<tr class="memdesc:a211079c559cbe5c2e7d9ce47a2df888f"><td class="mdescLeft"> </td><td class="mdescRight">참조를 파괴합니다. <br/></td></tr>
-<tr class="memitem:a80cff5eadf8554d3b5772b352c518fe8" id="r_a80cff5eadf8554d3b5772b352c518fe8"><td class="memItemLeft"> </td><td class="memItemRight"><a class="el" href="#a80cff5eadf8554d3b5772b352c518fe8">operator DELEGATE_REF_T</a> () const</td></tr>
-<tr class="memdesc:a80cff5eadf8554d3b5772b352c518fe8"><td class="mdescLeft"> </td><td class="mdescRight">저장된 구현 객체 포인터에 접근합니다  <br/></td></tr>
-<tr class="memitem:a4a3c2a0f5c12439fef21afa0cd189735" id="r_a4a3c2a0f5c12439fef21afa0cd189735"><td class="memTemplParams" colspan="2">template&lt;typename R&gt; </td></tr>
-<tr class="memitem:a4a3c2a0f5c12439fef21afa0cd189735 template"><td class="memItemLeft">bool </td><td class="memItemRight"><a class="el" href="#a4a3c2a0f5c12439fef21afa0cd189735">operator==</a> (const R &amp;ref) const</td></tr>
-<tr class="memdesc:a4a3c2a0f5c12439fef21afa0cd189735"><td class="mdescLeft"> </td><td class="mdescRight">두 개체를 비교하고, 동일한 경우 true 를 반환합니다.  <br/></td></tr>
-<tr class="memitem:ac0f06ae1197b8ccec9d35cbe20302797" id="r_ac0f06ae1197b8ccec9d35cbe20302797"><td class="memTemplParams" colspan="2">template&lt;typename R&gt; </td></tr>
-<tr class="memitem:ac0f06ae1197b8ccec9d35cbe20302797 template"><td class="memItemLeft">bool </td><td class="memItemRight"><a class="el" href="#ac0f06ae1197b8ccec9d35cbe20302797">operator!=</a> (const R &amp;ref) const</td></tr>
-<tr class="memdesc:ac0f06ae1197b8ccec9d35cbe20302797"><td class="mdescLeft"> </td><td class="mdescRight">두 참조 개체를 비교하고, 만약 이들이 동등하지 않다면 true 를 반환합니다.  <br/></td></tr>
-<tr class="memitem:a26021420314ef6ce4db8fbc15bfc4d58" id="r_a26021420314ef6ce4db8fbc15bfc4d58"><td class="memTemplParams" colspan="2">template&lt;typename D&gt; </td></tr>
-<tr class="memitem:a26021420314ef6ce4db8fbc15bfc4d58 template"><td class="memItemLeft"><a class="el" href="#a299077d89db9f6d7bd5ab89066fdf204">Reference</a> &amp; </td><td class="memItemRight"><a class="el" href="#a26021420314ef6ce4db8fbc15bfc4d58">operator=</a> (const <a class="el" href="#a299077d89db9f6d7bd5ab89066fdf204">Reference</a>&lt; D &gt; &amp;that)</td></tr>
-<tr class="memdesc:a26021420314ef6ce4db8fbc15bfc4d58"><td class="mdescLeft"> </td><td class="mdescRight">다른 호환 참조의 구현 객체를 공유합니다  <br/></td></tr>
-<tr class="memitem:a0ba0eb41c3176127f03565ca26f070ae" id="r_a0ba0eb41c3176127f03565ca26f070ae"><td class="memTemplParams" colspan="2">template&lt;typename R&gt; </td></tr>
-<tr class="memitem:a0ba0eb41c3176127f03565ca26f070ae template"><td class="memItemLeft"><a class="el" href="#a299077d89db9f6d7bd5ab89066fdf204">Reference</a> &amp; </td><td class="memItemRight"><a class="el" href="#a0ba0eb41c3176127f03565ca26f070ae">operator=</a> (const R &amp;rhs)</td></tr>
-<tr class="memdesc:a0ba0eb41c3176127f03565ca26f070ae"><td class="mdescLeft"> </td><td class="mdescRight">다른 호환 참조의 구현 객체를 공유합니다  <br/></td></tr>
-<tr class="memitem:a3d961eb34773ad539eafc25c8bbc9247" id="r_a3d961eb34773ad539eafc25c8bbc9247"><td class="memItemLeft"><a class="el" href="#a299077d89db9f6d7bd5ab89066fdf204">Reference</a> &amp; </td><td class="memItemRight"><a class="el" href="#a3d961eb34773ad539eafc25c8bbc9247">operator=</a> (const <a class="el" href="classdds_1_1core_1_1null__type.html">null_type</a>)</td></tr>
-<tr class="memdesc:a3d961eb34773ad539eafc25c8bbc9247"><td class="mdescLeft"> </td><td class="mdescRight">이 handle의 구현 객체 소유권을 지웁니다  <br/></td></tr>
-<tr class="memitem:aba3a3901a14d7999e39e0bdd7efc1023" id="r_aba3a3901a14d7999e39e0bdd7efc1023"><td class="memItemLeft"><a id="aba3a3901a14d7999e39e0bdd7efc1023" name="aba3a3901a14d7999e39e0bdd7efc1023"></a>
-bool </td><td class="memItemRight"><b>is_nil</b> () const</td></tr>
-<tr class="memdesc:aba3a3901a14d7999e39e0bdd7efc1023"><td class="mdescLeft"> </td><td class="mdescRight">이 참조 개체가 nil이면 true를 반환한다. <br/></td></tr>
-<tr class="memitem:a253245a76f79b7415030ae5f00313651" id="r_a253245a76f79b7415030ae5f00313651"><td class="memItemLeft">bool </td><td class="memItemRight"><a class="el" href="#a253245a76f79b7415030ae5f00313651">operator==</a> (const <a class="el" href="classdds_1_1core_1_1null__type.html">null_type</a>) const</td></tr>
-<tr class="memdesc:a253245a76f79b7415030ae5f00313651"><td class="mdescLeft"> </td><td class="mdescRight">이 참조 객체가 <code>null</code> 참조와 같은지 검사하는 <code>operator==</code>입니다.  <br/></td></tr>
-<tr class="memitem:abb281aa6cfee0f470c311d420525e8b9" id="r_abb281aa6cfee0f470c311d420525e8b9"><td class="memItemLeft">bool </td><td class="memItemRight"><a class="el" href="#abb281aa6cfee0f470c311d420525e8b9">operator!=</a> (const <a class="el" href="classdds_1_1core_1_1null__type.html">null_type</a> nil) const</td></tr>
-<tr class="memdesc:abb281aa6cfee0f470c311d420525e8b9"><td class="mdescLeft"> </td><td class="mdescRight">이 handle에 구현 객체가 있는지 확인합니다  <br/></td></tr>
-<tr class="memitem:a0a024fbfa03682004825f278ad114d7c" id="r_a0a024fbfa03682004825f278ad114d7c"><td class="memItemLeft">const DELEGATE_REF_T &amp; </td><td class="memItemRight"><a class="el" href="#a0a024fbfa03682004825f278ad114d7c">delegate</a> () const</td></tr>
-<tr class="memdesc:a0a024fbfa03682004825f278ad114d7c"><td class="mdescLeft"> </td><td class="mdescRight">delegate의 참조를 반환합니다.  <br/></td></tr>
-<tr class="memitem:a0da9a614a6f6158cd7f0a7ba491cf127" id="r_a0da9a614a6f6158cd7f0a7ba491cf127"><td class="memItemLeft">DELEGATE_REF_T &amp; </td><td class="memItemRight"><a class="el" href="#a0da9a614a6f6158cd7f0a7ba491cf127">delegate</a> ()</td></tr>
-<tr class="memdesc:a0da9a614a6f6158cd7f0a7ba491cf127"><td class="mdescLeft"> </td><td class="mdescRight">delegate의 참조를 반환합니다.  <br/></td></tr>
-<tr class="memitem:a5719abf42970dad5751f69531de91fb3" id="r_a5719abf42970dad5751f69531de91fb3"><td class="memItemLeft">DELEGATE * </td><td class="memItemRight"><a class="el" href="#a5719abf42970dad5751f69531de91fb3">operator-&gt;</a> ()</td></tr>
-<tr class="memdesc:a5719abf42970dad5751f69531de91fb3"><td class="mdescLeft"> </td><td class="mdescRight"><code><a class="el" href="#a5719abf42970dad5751f69531de91fb3" title="operator-&gt;()로 구현 객체의 메서드를 직접 호출할 수 있습니다.">operator-&gt;()</a></code>로 구현 객체의 메서드를 직접 호출할 수 있습니다.  <br/></td></tr>
-<tr class="memitem:a35437fb6e2e4e139ff2394c73d8dbb3a" id="r_a35437fb6e2e4e139ff2394c73d8dbb3a"><td class="memItemLeft">const DELEGATE * </td><td class="memItemRight"><a class="el" href="#a35437fb6e2e4e139ff2394c73d8dbb3a">operator-&gt;</a> () const</td></tr>
-<tr class="memdesc:a35437fb6e2e4e139ff2394c73d8dbb3a"><td class="mdescLeft"> </td><td class="mdescRight"><code><a class="el" href="#a5719abf42970dad5751f69531de91fb3" title="operator-&gt;()로 구현 객체의 메서드를 직접 호출할 수 있습니다.">operator-&gt;()</a></code>로 구현 객체의 메서드를 직접 호출할 수 있습니다.  <br/></td></tr>
-<tr class="memitem:a6e30d68985ca187b16562617d4a7b9f9" id="r_a6e30d68985ca187b16562617d4a7b9f9"><td class="memItemLeft"> </td><td class="memItemRight"><a class="el" href="#a6e30d68985ca187b16562617d4a7b9f9">operator DELEGATE_REF_T &amp;</a> ()</td></tr>
-<tr class="memdesc:a6e30d68985ca187b16562617d4a7b9f9"><td class="mdescLeft"> </td><td class="mdescRight">저장된 구현 객체 포인터에 접근합니다  <br/></td></tr>
-<tr class="memitem:a373c3aa4c921f21eabdf3a020ac8ef0c" id="r_a373c3aa4c921f21eabdf3a020ac8ef0c"><td class="memItemLeft"> </td><td class="memItemRight"><a class="el" href="#a373c3aa4c921f21eabdf3a020ac8ef0c">operator const DELEGATE_REF_T &amp;</a> () const</td></tr>
-<tr class="memdesc:a373c3aa4c921f21eabdf3a020ac8ef0c"><td class="mdescLeft"> </td><td class="mdescRight">저장된 구현 객체 포인터에 접근합니다  <br/></td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-pro-attribs"><a id="pro-attribs" name="pro-attribs"></a>
-보호된 속성</h2></td></tr>
-<tr class="memitem:ab3a71f25696efba22cf3744cf5826839" id="r_ab3a71f25696efba22cf3744cf5826839"><td class="memItemLeft"><a id="ab3a71f25696efba22cf3744cf5826839" name="ab3a71f25696efba22cf3744cf5826839"></a>
-DELEGATE_REF_T </td><td class="memItemRight"><b>impl_</b></td></tr>
-</table>
-<a id="doc-constructors" name="doc-constructors"></a><h2 class="groupheader" id="header-doc-constructors">생성자와 소멸자</h2>
-<a id="a547cbbc6b49a439af09a48d638bea36a" name="a547cbbc6b49a439af09a48d638bea36a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a547cbbc6b49a439af09a48d638bea36a">◆ </a></span>Reference() <span class="overload">[1/4]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename DELEGATE&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classdds_1_1core_1_1_reference.html">dds::core::Reference</a>&lt; DELEGATE &gt;::Reference </td>
-          <td>(</td>
-          <td class="paramtype">const Reference&lt; DELEGATE &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>ref</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel explicit">explicit</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>다른 참조에서 참조를 만듭니다. </p>
-<dl class="params"><dt>매개변수</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">ref</td><td>다른 참조 </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="a42a02521893ec09e752fe04ebce0d71b" name="a42a02521893ec09e752fe04ebce0d71b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a42a02521893ec09e752fe04ebce0d71b">◆ </a></span>Reference() <span class="overload">[2/4]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename DELEGATE&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classdds_1_1core_1_1_reference.html">dds::core::Reference</a>&lt; DELEGATE &gt;::Reference </td>
-          <td>(</td>
-          <td class="paramtype">const DELEGATE_REF_T &amp;</td>          <td class="paramname"><span class="paramname"><em>ref</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel explicit">explicit</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>기존 구현 객체를 공유합니다 </p>
-<dl class="params"><dt>매개변수</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[입력]</td><td class="paramname">ref</td><td>복사할 공유 위임인 참조 </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="a0c9d73c46fbb46f5c401181874097827" name="a0c9d73c46fbb46f5c401181874097827"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0c9d73c46fbb46f5c401181874097827">◆ </a></span>Reference() <span class="overload">[3/4]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename DELEGATE&gt; </div>
-<div class="memtemplate">
-template&lt;typename D&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classdds_1_1core_1_1_reference.html">dds::core::Reference</a>&lt; DELEGATE &gt;::Reference </td>
-          <td>(</td>
-          <td class="paramtype">const Reference&lt; D &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>ref</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel explicit">explicit</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>다른 참조 타입에서 안전하게 할당할 수 있습니다. </p>
-<dl class="params"><dt>매개변수</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">ref</td><td>다른 참조 </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="ad454b33cbde908eac2c5a3a2091be564" name="ad454b33cbde908eac2c5a3a2091be564"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad454b33cbde908eac2c5a3a2091be564">◆ </a></span>Reference() <span class="overload">[4/4]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename DELEGATE&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classdds_1_1core_1_1_reference.html">dds::core::Reference</a>&lt; DELEGATE &gt;::Reference </td>
-          <td>(</td>
-          <td class="paramtype">DELEGATE_T *</td>          <td class="paramname"><span class="paramname"><em>p</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel explicit">explicit</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>구현 객체 포인터의 소유권을 가집니다 </p>
-<p>이 호출 후에 구현 객체는 공유 포인터에 의해 관리됩니다. 소유자가 아닌 포인터를 제공합니다.</p>
-<dl class="params"><dt>매개변수</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[입력]</td><td class="paramname">p</td><td>채택 포인터, 또는 nullptr </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="doc-func-members" name="doc-func-members"></a><h2 class="groupheader" id="header-doc-func-members">멤버 함수</h2>
-<a id="a0da9a614a6f6158cd7f0a7ba491cf127" name="a0da9a614a6f6158cd7f0a7ba491cf127"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0da9a614a6f6158cd7f0a7ba491cf127">◆ </a></span>delegate() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename DELEGATE&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">DELEGATE_REF_T &amp; <a class="el" href="classdds_1_1core_1_1_reference.html">dds::core::Reference</a>&lt; DELEGATE &gt;::delegate </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>delegate의 참조를 반환합니다. </p>
-<p>DDS의 비표준 확장은 delegate를 통해 호출하세요.</p>
-<dl class="section return"><dt>반환값</dt><dd>delegate 에 대한 참조. </dd></dl>
-
-</div>
-</div>
-<a id="a0a024fbfa03682004825f278ad114d7c" name="a0a024fbfa03682004825f278ad114d7c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0a024fbfa03682004825f278ad114d7c">◆ </a></span>delegate() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename DELEGATE&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const DELEGATE_REF_T &amp; <a class="el" href="classdds_1_1core_1_1_reference.html">dds::core::Reference</a>&lt; DELEGATE &gt;::delegate </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>delegate의 참조를 반환합니다. </p>
-<p>DDS의 비표준 확장은 delegate를 통해 호출하세요.</p>
-<dl class="section return"><dt>반환값</dt><dd>delegate 에 대한 참조. </dd></dl>
-
-</div>
-</div>
-<a id="a373c3aa4c921f21eabdf3a020ac8ef0c" name="a373c3aa4c921f21eabdf3a020ac8ef0c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a373c3aa4c921f21eabdf3a020ac8ef0c">◆ </a></span>operator const DELEGATE_REF_T &amp;()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename DELEGATE&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classdds_1_1core_1_1_reference.html">dds::core::Reference</a>&lt; DELEGATE &gt;::operator const DELEGATE_REF_T &amp; </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>저장된 구현 객체 포인터에 접근합니다 </p>
-<dl class="section return"><dt>반환값</dt><dd>저장된 공유 포인터에 대한 const 참조 </dd></dl>
-
-</div>
-</div>
-<a id="a80cff5eadf8554d3b5772b352c518fe8" name="a80cff5eadf8554d3b5772b352c518fe8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a80cff5eadf8554d3b5772b352c518fe8">◆ </a></span>operator DELEGATE_REF_T()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename DELEGATE&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classdds_1_1core_1_1_reference.html">dds::core::Reference</a>&lt; DELEGATE &gt;::operator DELEGATE_REF_T </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>저장된 구현 객체 포인터에 접근합니다 </p>
-<dl class="section return"><dt>반환값</dt><dd>공유 포인터의 복사본 </dd></dl>
-
-</div>
-</div>
-<a id="a6e30d68985ca187b16562617d4a7b9f9" name="a6e30d68985ca187b16562617d4a7b9f9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6e30d68985ca187b16562617d4a7b9f9">◆ </a></span>operator DELEGATE_REF_T &amp;()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename DELEGATE&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classdds_1_1core_1_1_reference.html">dds::core::Reference</a>&lt; DELEGATE &gt;::operator DELEGATE_REF_T &amp; </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>저장된 구현 객체 포인터에 접근합니다 </p>
-<p>포인터를 바꾸면 이 handle에 의해 사용되는 구현 객체가 바뀝니다.</p>
-<dl class="section return"><dt>반환값</dt><dd>저장된 공유 포인터에 대한 변경 가능한 참조 </dd></dl>
-
-</div>
-</div>
-<a id="abb281aa6cfee0f470c311d420525e8b9" name="abb281aa6cfee0f470c311d420525e8b9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abb281aa6cfee0f470c311d420525e8b9">◆ </a></span>operator!=() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename DELEGATE&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool <a class="el" href="classdds_1_1core_1_1_reference.html">dds::core::Reference</a>&lt; DELEGATE &gt;::operator!= </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdds_1_1core_1_1null__type.html">null_type</a></td>          <td class="paramname"><span class="paramname"><em>nil</em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>이 handle에 구현 객체가 있는지 확인합니다 </p>
-<dl class="params"><dt>매개변수</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[입력]</td><td class="paramname">nil</td><td>누적 참조 마커, 일반적으로 <span class="tt"><a class="el" href="namespacedds_1_1core.html#a22c3217bb51dfe3db2887417da74d917" title="빈 DDS 참조를 나타내는 값">dds::core::null</a></span></td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="retval"><dt>반환값</dt><dd>
-  <table class="retval">
-    <tr><td class="paramname">true</td><td>handle에 구현 객체이 포함되어 있습니다 </td></tr>
-    <tr><td class="paramname">false</td><td>handle이 null입니다 </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="ac0f06ae1197b8ccec9d35cbe20302797" name="ac0f06ae1197b8ccec9d35cbe20302797"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac0f06ae1197b8ccec9d35cbe20302797">◆ </a></span>operator!=() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename DELEGATE&gt; </div>
-<div class="memtemplate">
-template&lt;typename R&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool <a class="el" href="classdds_1_1core_1_1_reference.html">dds::core::Reference</a>&lt; DELEGATE &gt;::operator!= </td>
-          <td>(</td>
-          <td class="paramtype">const R &amp;</td>          <td class="paramname"><span class="paramname"><em>ref</em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>두 참조 개체를 비교하고, 만약 이들이 동등하지 않다면 true 를 반환합니다. </p>
-<p>불평등은 가리키는 개체의 참조 불평등을 기반으로 합니다.</p>
-<dl class="params"><dt>매개변수</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">ref</td><td>다른 참조 개체 </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="a5719abf42970dad5751f69531de91fb3" name="a5719abf42970dad5751f69531de91fb3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5719abf42970dad5751f69531de91fb3">◆ </a></span>operator-&gt;() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename DELEGATE&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">DELEGATE * <a class="el" href="classdds_1_1core_1_1_reference.html">dds::core::Reference</a>&lt; DELEGATE &gt;::operator-&gt; </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p><code><a class="el" href="#a5719abf42970dad5751f69531de91fb3" title="operator-&gt;()로 구현 객체의 메서드를 직접 호출할 수 있습니다.">operator-&gt;()</a></code>로 구현 객체의 메서드를 직접 호출할 수 있습니다. </p>
-<p>CXXDDS API를 변경하지 않고 공급업체 확장 기능에 접근할 수 있도록 구현 객체에 대한 직접 접근을 제공합니다. 다음과 같이 Reference와 모든 파생 클래스에서 공급업체 확장 기능을 호출할 수 있습니다.</p>
-<p><code>
-     my_dds_entity.standard_method();
-     my_dds_entity-&gt;vendor_specific_extension();
- </code></p>
-<dl class="section return"><dt>반환값</dt><dd>delegate 에 대한 참조. </dd></dl>
-
-</div>
-</div>
-<a id="a35437fb6e2e4e139ff2394c73d8dbb3a" name="a35437fb6e2e4e139ff2394c73d8dbb3a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a35437fb6e2e4e139ff2394c73d8dbb3a">◆ </a></span>operator-&gt;() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename DELEGATE&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const DELEGATE * <a class="el" href="classdds_1_1core_1_1_reference.html">dds::core::Reference</a>&lt; DELEGATE &gt;::operator-&gt; </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p><code><a class="el" href="#a5719abf42970dad5751f69531de91fb3" title="operator-&gt;()로 구현 객체의 메서드를 직접 호출할 수 있습니다.">operator-&gt;()</a></code>로 구현 객체의 메서드를 직접 호출할 수 있습니다. </p>
-<p>CXXDDS API를 변경하지 않고 공급업체 확장 기능에 접근할 수 있도록 구현 객체에 대한 직접 접근을 제공합니다. 다음과 같이 Reference와 모든 파생 클래스에서 공급업체 확장 기능을 호출할 수 있습니다.</p>
-<p><code>
-     my_dds_entity.standard_method();
-     my_dds_entity-&gt;vendor_specific_extension();
- </code></p>
-<dl class="section return"><dt>반환값</dt><dd>delegate 에 대한 참조. </dd></dl>
-
-</div>
-</div>
-<a id="a3d961eb34773ad539eafc25c8bbc9247" name="a3d961eb34773ad539eafc25c8bbc9247"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3d961eb34773ad539eafc25c8bbc9247">◆ </a></span>operator=() <span class="overload">[1/3]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename DELEGATE&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="#a299077d89db9f6d7bd5ab89066fdf204">Reference</a> &amp; <a class="el" href="classdds_1_1core_1_1_reference.html">dds::core::Reference</a>&lt; DELEGATE &gt;::operator= </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdds_1_1core_1_1null__type.html">null_type</a></td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>이 handle의 구현 객체 소유권을 지웁니다 </p>
-<p><span class="tt">handle = <a class="el" href="namespacedds_1_1core.html#a22c3217bb51dfe3db2887417da74d917" title="빈 DDS 참조를 나타내는 값">dds::core::null</a></span> 로 handle이 범위에서 나가기 전에 참조를 해제합니다. 같은 구현 객체의 다른 참조는 계속해서 그것을 소유합니다.</p>
-<dl class="section return"><dt>반환값</dt><dd>이 handle, 지금 <span class="tt"><a class="el" href="namespacedds_1_1core.html#a22c3217bb51dfe3db2887417da74d917" title="빈 DDS 참조를 나타내는 값">dds::core::null</a></span>와 동일 비교 </dd></dl>
-
-</div>
-</div>
-<a id="a0ba0eb41c3176127f03565ca26f070ae" name="a0ba0eb41c3176127f03565ca26f070ae"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0ba0eb41c3176127f03565ca26f070ae">◆ </a></span>operator=() <span class="overload">[2/3]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename DELEGATE&gt; </div>
-<div class="memtemplate">
-template&lt;typename R&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="#a299077d89db9f6d7bd5ab89066fdf204">Reference</a> &amp; <a class="el" href="classdds_1_1core_1_1_reference.html">dds::core::Reference</a>&lt; DELEGATE &gt;::operator= </td>
-          <td>(</td>
-          <td class="paramtype">const R &amp;</td>          <td class="paramname"><span class="paramname"><em>rhs</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>다른 호환 참조의 구현 객체를 공유합니다 </p>
-<p>원본 구현 객체의 타입은 대상 구현 객체의 타입과 호환되어야 합니다.</p>
-<dl class="params"><dt>매개변수</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[입력]</td><td class="paramname">rhs</td><td>복사할 참조</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>반환값</dt><dd>이 참조 </dd></dl>
-
-</div>
-</div>
-<a id="a26021420314ef6ce4db8fbc15bfc4d58" name="a26021420314ef6ce4db8fbc15bfc4d58"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a26021420314ef6ce4db8fbc15bfc4d58">◆ </a></span>operator=() <span class="overload">[3/3]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename DELEGATE&gt; </div>
-<div class="memtemplate">
-template&lt;typename D&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="#a299077d89db9f6d7bd5ab89066fdf204">Reference</a> &amp; <a class="el" href="classdds_1_1core_1_1_reference.html">dds::core::Reference</a>&lt; DELEGATE &gt;::operator= </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="#a299077d89db9f6d7bd5ab89066fdf204">Reference</a>&lt; D &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>that</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>다른 호환 참조의 구현 객체를 공유합니다 </p>
-<p>원본 구현 객체의 타입은 대상 구현 객체의 타입과 호환되어야 합니다.</p>
-<dl class="params"><dt>매개변수</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[입력]</td><td class="paramname">that</td><td>복사할 참조</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>반환값</dt><dd>이 참조 </dd></dl>
-
-</div>
-</div>
-<a id="a253245a76f79b7415030ae5f00313651" name="a253245a76f79b7415030ae5f00313651"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a253245a76f79b7415030ae5f00313651">◆ </a></span>operator==() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename DELEGATE&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool <a class="el" href="classdds_1_1core_1_1_reference.html">dds::core::Reference</a>&lt; DELEGATE &gt;::operator== </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdds_1_1core_1_1null__type.html">null_type</a></td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>이 참조 객체가 <code>null</code> 참조와 같은지 검사하는 <code>operator==</code>입니다. </p>
-<p><code> bool is_null = (r == dds::null); </code>와 같이 비교할 수 있습니다. r이 널 참조이면 <code> is_null</code>의 값은 <b>true</b>입니다.</p>
-<dl class="section return"><dt>반환값</dt><dd>이 참조가 null인 경우 true. </dd></dl>
-
-</div>
-</div>
-<a id="a4a3c2a0f5c12439fef21afa0cd189735" name="a4a3c2a0f5c12439fef21afa0cd189735"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4a3c2a0f5c12439fef21afa0cd189735">◆ </a></span>operator==() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename DELEGATE&gt; </div>
-<div class="memtemplate">
-template&lt;typename R&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool <a class="el" href="classdds_1_1core_1_1_reference.html">dds::core::Reference</a>&lt; DELEGATE &gt;::operator== </td>
-          <td>(</td>
-          <td class="paramtype">const R &amp;</td>          <td class="paramname"><span class="paramname"><em>ref</em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>두 개체를 비교하고, 동일한 경우 true 를 반환합니다. </p>
-<p>평등은 가리키는 개체의 참조적 평등에 기반을 두고 있습니다.</p>
-<dl class="params"><dt>매개변수</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">ref</td><td>다른 참조 개체 </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<hr/>이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.:<ul>
-<li>include/gurumdds/cpp/core/<a class="el" href="_reference_8hpp.html">Reference.hpp</a></li>
-</ul>
-</div><!-- contents -->
-</div><!-- doc-content -->
-<div class="page-nav-panel" id="page-nav">
-<div id="page-nav-resize-handle"></div>
-<div id="page-nav-tree">
-<div id="page-nav-contents">
-</div><!-- page-nav-contents -->
-</div><!-- page-nav-tree -->
-</div><!-- page-nav -->
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script id="doxygen-config" type="application/json">
+{
+  "relPath": "",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script src="menudata.js" type="text/javascript"></script>
+<script src="menu.js" type="text/javascript"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> 주 메뉴 표시 전환</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div class="MSearchBoxInactive" id="MSearchBox">
+        <span class="left">
+          <span class="search-icon" id="MSearchSelect"><span class="search-icon-dropdown"></span></span>
+          <input accesskey="S" id="MSearchField" placeholder="검색" type="text" value=""/>
+          </span><span class="right">
+            <a href="javascript:searchBox.CloseResultsWindow()" id="MSearchClose"><div class="close-icon" id="MSearchCloseImg"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div class="ui-resizable side-nav-resizable" id="side-nav">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div class="sync" id="nav-sync"></div>
+    </div>
+  </div>
+  <div class="ui-resizable-handle" id="splitbar">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('classdds_1_1core_1_1_reference.html','','classdds_1_1core_1_1_reference-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">로딩중...</div>
+<div class="SRStatus" id="Searching">검색중...</div>
+<div class="SRStatus" id="NoMatches">일치하는것 없음</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">dds::core::Reference&lt; DELEGATE &gt; 클래스 템플릿</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p class="dds-class-include"><code>#include &lt;gurumdds/cpp/core/Reference.hpp&gt;</code></p>
+
+
+<a id="details" name="details"></a><h2 class="groupheader" id="header-details">상세한 설명</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename DELEGATE&gt;<br/>
+class dds::core::Reference&lt; DELEGATE &gt;</div><p>DDS 참조 타입에 대한 공유-handle 연산을 정의합니다. </p>
+<p>복사한 참조는 원본의 구현 객체를 공유합니다. <span class="tt"><a class="el" href="namespacedds_1_1core.html#a22c3217bb51dfe3db2887417da74d917" title="빈 DDS 참조를 나타내는 값">dds::core::null</a></span>을 대입하면 해당 참조를 비웁니다. 다른 소유자는 계속 사용할 수 있으며, 마지막 소유자가 참조를 놓으면 공유 포인터가 구현 객체를 소멸시킵니다. 네이티브 리소스 정리는 구체적인 구현 객체의 수명 규칙을 따릅니다.</p>
+<p>handle 동등성은 저장된 구현 객체 포인터를 비교합니다. 구현 객체를 언급하지 않는 작업을 호출하기 전에, <span class="tt"><a class="el" href="namespacedds_1_1core.html#a22c3217bb51dfe3db2887417da74d917" title="빈 DDS 참조를 나타내는 값">dds::core::null</a></span>와 비어 있는 handle을 확인하십시오.</p>
+<dl class="tparams"><dt>템플릿 파라메터</dt><dd>
+  <div class="dds-table-scroll"><table class="tparams">
+    <tr><td class="paramname">DELEGATE</td><td>handle에 의해 공유되는 구현 개체의 타입 </td></tr>
+  </table></div>
+  </dd>
+</dl>
+</div><div class="dds-table-scroll"><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-pub-methods"><a id="pub-methods" name="pub-methods"></a>
+공개 멤버 함수</h2></td></tr>
+<tr class="memitem:a299077d89db9f6d7bd5ab89066fdf204" id="r_a299077d89db9f6d7bd5ab89066fdf204"><td class="memItemLeft"><a id="a299077d89db9f6d7bd5ab89066fdf204" name="a299077d89db9f6d7bd5ab89066fdf204"></a>
+ </td><td class="memItemRight"><b>Reference</b> (<a class="el" href="classdds_1_1core_1_1null__type.html">dds::core::null_type</a> &amp;)</td></tr>
+<tr class="memdesc:a299077d89db9f6d7bd5ab89066fdf204"><td class="mdescLeft"> </td><td class="mdescRight">"null" 참조를 만듭니다. <br/></td></tr>
+<tr class="memitem:a547cbbc6b49a439af09a48d638bea36a" id="r_a547cbbc6b49a439af09a48d638bea36a"><td class="memItemLeft"> </td><td class="memItemRight"><a class="el" href="#a547cbbc6b49a439af09a48d638bea36a">Reference</a> (const Reference &amp;ref)</td></tr>
+<tr class="memdesc:a547cbbc6b49a439af09a48d638bea36a"><td class="mdescLeft"> </td><td class="mdescRight">다른 참조에서 참조를 만듭니다.  <br/></td></tr>
+<tr class="memitem:a42a02521893ec09e752fe04ebce0d71b" id="r_a42a02521893ec09e752fe04ebce0d71b"><td class="memItemLeft"> </td><td class="memItemRight"><a class="el" href="#a42a02521893ec09e752fe04ebce0d71b">Reference</a> (const DELEGATE_REF_T &amp;ref)</td></tr>
+<tr class="memdesc:a42a02521893ec09e752fe04ebce0d71b"><td class="mdescLeft"> </td><td class="mdescRight">기존 구현 객체를 공유합니다  <br/></td></tr>
+<tr class="memitem:a0c9d73c46fbb46f5c401181874097827" id="r_a0c9d73c46fbb46f5c401181874097827"><td class="memTemplParams" colspan="2">template&lt;typename D&gt; </td></tr>
+<tr class="memitem:a0c9d73c46fbb46f5c401181874097827 template"><td class="memItemLeft"> </td><td class="memItemRight"><a class="el" href="#a0c9d73c46fbb46f5c401181874097827">Reference</a> (const Reference&lt; D &gt; &amp;ref)</td></tr>
+<tr class="memdesc:a0c9d73c46fbb46f5c401181874097827"><td class="mdescLeft"> </td><td class="mdescRight">다른 참조 타입에서 안전하게 할당할 수 있습니다.  <br/></td></tr>
+<tr class="memitem:ad454b33cbde908eac2c5a3a2091be564" id="r_ad454b33cbde908eac2c5a3a2091be564"><td class="memItemLeft"> </td><td class="memItemRight"><a class="el" href="#ad454b33cbde908eac2c5a3a2091be564">Reference</a> (DELEGATE_T *p)</td></tr>
+<tr class="memdesc:ad454b33cbde908eac2c5a3a2091be564"><td class="mdescLeft"> </td><td class="mdescRight">구현 객체 포인터의 소유권을 가집니다  <br/></td></tr>
+<tr class="memitem:a211079c559cbe5c2e7d9ce47a2df888f" id="r_a211079c559cbe5c2e7d9ce47a2df888f"><td class="memItemLeft"><a id="a211079c559cbe5c2e7d9ce47a2df888f" name="a211079c559cbe5c2e7d9ce47a2df888f"></a>
+ </td><td class="memItemRight"><b>~Reference</b> ()</td></tr>
+<tr class="memdesc:a211079c559cbe5c2e7d9ce47a2df888f"><td class="mdescLeft"> </td><td class="mdescRight">참조를 파괴합니다. <br/></td></tr>
+<tr class="memitem:a80cff5eadf8554d3b5772b352c518fe8" id="r_a80cff5eadf8554d3b5772b352c518fe8"><td class="memItemLeft"> </td><td class="memItemRight"><a class="el" href="#a80cff5eadf8554d3b5772b352c518fe8">operator DELEGATE_REF_T</a> () const</td></tr>
+<tr class="memdesc:a80cff5eadf8554d3b5772b352c518fe8"><td class="mdescLeft"> </td><td class="mdescRight">저장된 구현 객체 포인터에 접근합니다  <br/></td></tr>
+<tr class="memitem:a4a3c2a0f5c12439fef21afa0cd189735" id="r_a4a3c2a0f5c12439fef21afa0cd189735"><td class="memTemplParams" colspan="2">template&lt;typename R&gt; </td></tr>
+<tr class="memitem:a4a3c2a0f5c12439fef21afa0cd189735 template"><td class="memItemLeft">bool </td><td class="memItemRight"><a class="el" href="#a4a3c2a0f5c12439fef21afa0cd189735">operator==</a> (const R &amp;ref) const</td></tr>
+<tr class="memdesc:a4a3c2a0f5c12439fef21afa0cd189735"><td class="mdescLeft"> </td><td class="mdescRight">두 개체를 비교하고, 동일한 경우 true 를 반환합니다.  <br/></td></tr>
+<tr class="memitem:ac0f06ae1197b8ccec9d35cbe20302797" id="r_ac0f06ae1197b8ccec9d35cbe20302797"><td class="memTemplParams" colspan="2">template&lt;typename R&gt; </td></tr>
+<tr class="memitem:ac0f06ae1197b8ccec9d35cbe20302797 template"><td class="memItemLeft">bool </td><td class="memItemRight"><a class="el" href="#ac0f06ae1197b8ccec9d35cbe20302797">operator!=</a> (const R &amp;ref) const</td></tr>
+<tr class="memdesc:ac0f06ae1197b8ccec9d35cbe20302797"><td class="mdescLeft"> </td><td class="mdescRight">두 참조 개체를 비교하고, 만약 이들이 동등하지 않다면 true 를 반환합니다.  <br/></td></tr>
+<tr class="memitem:a26021420314ef6ce4db8fbc15bfc4d58" id="r_a26021420314ef6ce4db8fbc15bfc4d58"><td class="memTemplParams" colspan="2">template&lt;typename D&gt; </td></tr>
+<tr class="memitem:a26021420314ef6ce4db8fbc15bfc4d58 template"><td class="memItemLeft"><a class="el" href="#a299077d89db9f6d7bd5ab89066fdf204">Reference</a> &amp; </td><td class="memItemRight"><a class="el" href="#a26021420314ef6ce4db8fbc15bfc4d58">operator=</a> (const <a class="el" href="#a299077d89db9f6d7bd5ab89066fdf204">Reference</a>&lt; D &gt; &amp;that)</td></tr>
+<tr class="memdesc:a26021420314ef6ce4db8fbc15bfc4d58"><td class="mdescLeft"> </td><td class="mdescRight">다른 호환 참조의 구현 객체를 공유합니다  <br/></td></tr>
+<tr class="memitem:a0ba0eb41c3176127f03565ca26f070ae" id="r_a0ba0eb41c3176127f03565ca26f070ae"><td class="memTemplParams" colspan="2">template&lt;typename R&gt; </td></tr>
+<tr class="memitem:a0ba0eb41c3176127f03565ca26f070ae template"><td class="memItemLeft"><a class="el" href="#a299077d89db9f6d7bd5ab89066fdf204">Reference</a> &amp; </td><td class="memItemRight"><a class="el" href="#a0ba0eb41c3176127f03565ca26f070ae">operator=</a> (const R &amp;rhs)</td></tr>
+<tr class="memdesc:a0ba0eb41c3176127f03565ca26f070ae"><td class="mdescLeft"> </td><td class="mdescRight">다른 호환 참조의 구현 객체를 공유합니다  <br/></td></tr>
+<tr class="memitem:a3d961eb34773ad539eafc25c8bbc9247" id="r_a3d961eb34773ad539eafc25c8bbc9247"><td class="memItemLeft"><a class="el" href="#a299077d89db9f6d7bd5ab89066fdf204">Reference</a> &amp; </td><td class="memItemRight"><a class="el" href="#a3d961eb34773ad539eafc25c8bbc9247">operator=</a> (const <a class="el" href="classdds_1_1core_1_1null__type.html">null_type</a>)</td></tr>
+<tr class="memdesc:a3d961eb34773ad539eafc25c8bbc9247"><td class="mdescLeft"> </td><td class="mdescRight">이 handle의 구현 객체 소유권을 지웁니다  <br/></td></tr>
+<tr class="memitem:aba3a3901a14d7999e39e0bdd7efc1023" id="r_aba3a3901a14d7999e39e0bdd7efc1023"><td class="memItemLeft"><a id="aba3a3901a14d7999e39e0bdd7efc1023" name="aba3a3901a14d7999e39e0bdd7efc1023"></a>
+bool </td><td class="memItemRight"><b>is_nil</b> () const</td></tr>
+<tr class="memdesc:aba3a3901a14d7999e39e0bdd7efc1023"><td class="mdescLeft"> </td><td class="mdescRight">이 참조 개체가 nil이면 true를 반환한다. <br/></td></tr>
+<tr class="memitem:a253245a76f79b7415030ae5f00313651" id="r_a253245a76f79b7415030ae5f00313651"><td class="memItemLeft">bool </td><td class="memItemRight"><a class="el" href="#a253245a76f79b7415030ae5f00313651">operator==</a> (const <a class="el" href="classdds_1_1core_1_1null__type.html">null_type</a>) const</td></tr>
+<tr class="memdesc:a253245a76f79b7415030ae5f00313651"><td class="mdescLeft"> </td><td class="mdescRight">이 참조 객체가 <code>null</code> 참조와 같은지 검사하는 <code>operator==</code>입니다.  <br/></td></tr>
+<tr class="memitem:abb281aa6cfee0f470c311d420525e8b9" id="r_abb281aa6cfee0f470c311d420525e8b9"><td class="memItemLeft">bool </td><td class="memItemRight"><a class="el" href="#abb281aa6cfee0f470c311d420525e8b9">operator!=</a> (const <a class="el" href="classdds_1_1core_1_1null__type.html">null_type</a> nil) const</td></tr>
+<tr class="memdesc:abb281aa6cfee0f470c311d420525e8b9"><td class="mdescLeft"> </td><td class="mdescRight">이 handle에 구현 객체가 있는지 확인합니다  <br/></td></tr>
+<tr class="memitem:a0a024fbfa03682004825f278ad114d7c" id="r_a0a024fbfa03682004825f278ad114d7c"><td class="memItemLeft">const DELEGATE_REF_T &amp; </td><td class="memItemRight"><a class="el" href="#a0a024fbfa03682004825f278ad114d7c">delegate</a> () const</td></tr>
+<tr class="memdesc:a0a024fbfa03682004825f278ad114d7c"><td class="mdescLeft"> </td><td class="mdescRight">delegate의 참조를 반환합니다.  <br/></td></tr>
+<tr class="memitem:a0da9a614a6f6158cd7f0a7ba491cf127" id="r_a0da9a614a6f6158cd7f0a7ba491cf127"><td class="memItemLeft">DELEGATE_REF_T &amp; </td><td class="memItemRight"><a class="el" href="#a0da9a614a6f6158cd7f0a7ba491cf127">delegate</a> ()</td></tr>
+<tr class="memdesc:a0da9a614a6f6158cd7f0a7ba491cf127"><td class="mdescLeft"> </td><td class="mdescRight">delegate의 참조를 반환합니다.  <br/></td></tr>
+<tr class="memitem:a5719abf42970dad5751f69531de91fb3" id="r_a5719abf42970dad5751f69531de91fb3"><td class="memItemLeft">DELEGATE * </td><td class="memItemRight"><a class="el" href="#a5719abf42970dad5751f69531de91fb3">operator-&gt;</a> ()</td></tr>
+<tr class="memdesc:a5719abf42970dad5751f69531de91fb3"><td class="mdescLeft"> </td><td class="mdescRight"><code><a class="el" href="#a5719abf42970dad5751f69531de91fb3" title="operator-&gt;()로 구현 객체의 메서드를 직접 호출할 수 있습니다.">operator-&gt;()</a></code>로 구현 객체의 메서드를 직접 호출할 수 있습니다.  <br/></td></tr>
+<tr class="memitem:a35437fb6e2e4e139ff2394c73d8dbb3a" id="r_a35437fb6e2e4e139ff2394c73d8dbb3a"><td class="memItemLeft">const DELEGATE * </td><td class="memItemRight"><a class="el" href="#a35437fb6e2e4e139ff2394c73d8dbb3a">operator-&gt;</a> () const</td></tr>
+<tr class="memdesc:a35437fb6e2e4e139ff2394c73d8dbb3a"><td class="mdescLeft"> </td><td class="mdescRight"><code><a class="el" href="#a5719abf42970dad5751f69531de91fb3" title="operator-&gt;()로 구현 객체의 메서드를 직접 호출할 수 있습니다.">operator-&gt;()</a></code>로 구현 객체의 메서드를 직접 호출할 수 있습니다.  <br/></td></tr>
+<tr class="memitem:a6e30d68985ca187b16562617d4a7b9f9" id="r_a6e30d68985ca187b16562617d4a7b9f9"><td class="memItemLeft"> </td><td class="memItemRight"><a class="el" href="#a6e30d68985ca187b16562617d4a7b9f9">operator DELEGATE_REF_T &amp;</a> ()</td></tr>
+<tr class="memdesc:a6e30d68985ca187b16562617d4a7b9f9"><td class="mdescLeft"> </td><td class="mdescRight">저장된 구현 객체 포인터에 접근합니다  <br/></td></tr>
+<tr class="memitem:a373c3aa4c921f21eabdf3a020ac8ef0c" id="r_a373c3aa4c921f21eabdf3a020ac8ef0c"><td class="memItemLeft"> </td><td class="memItemRight"><a class="el" href="#a373c3aa4c921f21eabdf3a020ac8ef0c">operator const DELEGATE_REF_T &amp;</a> () const</td></tr>
+<tr class="memdesc:a373c3aa4c921f21eabdf3a020ac8ef0c"><td class="mdescLeft"> </td><td class="mdescRight">저장된 구현 객체 포인터에 접근합니다  <br/></td></tr>
+</table></div><div class="dds-table-scroll"><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-pro-attribs"><a id="pro-attribs" name="pro-attribs"></a>
+보호된 속성</h2></td></tr>
+<tr class="memitem:ab3a71f25696efba22cf3744cf5826839" id="r_ab3a71f25696efba22cf3744cf5826839"><td class="memItemLeft"><a id="ab3a71f25696efba22cf3744cf5826839" name="ab3a71f25696efba22cf3744cf5826839"></a>
+DELEGATE_REF_T </td><td class="memItemRight"><b>impl_</b></td></tr>
+</table></div>
+<a id="doc-constructors" name="doc-constructors"></a><h2 class="groupheader" id="header-doc-constructors">생성자와 소멸자</h2>
+<a id="a547cbbc6b49a439af09a48d638bea36a" name="a547cbbc6b49a439af09a48d638bea36a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a547cbbc6b49a439af09a48d638bea36a">◆ </a></span>Reference() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename DELEGATE&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdds_1_1core_1_1_reference.html">dds::core::Reference</a>&lt; DELEGATE &gt;::Reference </td>
+          <td>(</td>
+          <td class="paramtype">const Reference&lt; DELEGATE &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>ref</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel explicit">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>다른 참조에서 참조를 만듭니다. </p>
+<dl class="params"><dt>매개변수</dt><dd>
+  <div class="dds-table-scroll"><table class="params">
+    <tr><td class="paramname">ref</td><td>다른 참조 </td></tr>
+  </table></div>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a42a02521893ec09e752fe04ebce0d71b" name="a42a02521893ec09e752fe04ebce0d71b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42a02521893ec09e752fe04ebce0d71b">◆ </a></span>Reference() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename DELEGATE&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdds_1_1core_1_1_reference.html">dds::core::Reference</a>&lt; DELEGATE &gt;::Reference </td>
+          <td>(</td>
+          <td class="paramtype">const DELEGATE_REF_T &amp;</td>          <td class="paramname"><span class="paramname"><em>ref</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel explicit">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>기존 구현 객체를 공유합니다 </p>
+<dl class="params"><dt>매개변수</dt><dd>
+  <div class="dds-table-scroll"><table class="params">
+    <tr><td class="paramdir">[입력]</td><td class="paramname">ref</td><td>복사할 공유 위임인 참조 </td></tr>
+  </table></div>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a0c9d73c46fbb46f5c401181874097827" name="a0c9d73c46fbb46f5c401181874097827"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c9d73c46fbb46f5c401181874097827">◆ </a></span>Reference() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename DELEGATE&gt; </div>
+<div class="memtemplate">
+template&lt;typename D&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdds_1_1core_1_1_reference.html">dds::core::Reference</a>&lt; DELEGATE &gt;::Reference </td>
+          <td>(</td>
+          <td class="paramtype">const Reference&lt; D &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>ref</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel explicit">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>다른 참조 타입에서 안전하게 할당할 수 있습니다. </p>
+<dl class="params"><dt>매개변수</dt><dd>
+  <div class="dds-table-scroll"><table class="params">
+    <tr><td class="paramname">ref</td><td>다른 참조 </td></tr>
+  </table></div>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ad454b33cbde908eac2c5a3a2091be564" name="ad454b33cbde908eac2c5a3a2091be564"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad454b33cbde908eac2c5a3a2091be564">◆ </a></span>Reference() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename DELEGATE&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdds_1_1core_1_1_reference.html">dds::core::Reference</a>&lt; DELEGATE &gt;::Reference </td>
+          <td>(</td>
+          <td class="paramtype">DELEGATE_T *</td>          <td class="paramname"><span class="paramname"><em>p</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel explicit">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>구현 객체 포인터의 소유권을 가집니다 </p>
+<p>이 호출 후에 구현 객체는 공유 포인터에 의해 관리됩니다. 소유자가 아닌 포인터를 제공합니다.</p>
+<dl class="params"><dt>매개변수</dt><dd>
+  <div class="dds-table-scroll"><table class="params">
+    <tr><td class="paramdir">[입력]</td><td class="paramname">p</td><td>채택 포인터, 또는 nullptr </td></tr>
+  </table></div>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="doc-func-members" name="doc-func-members"></a><h2 class="groupheader" id="header-doc-func-members">멤버 함수</h2>
+<a id="a0da9a614a6f6158cd7f0a7ba491cf127" name="a0da9a614a6f6158cd7f0a7ba491cf127"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0da9a614a6f6158cd7f0a7ba491cf127">◆ </a></span>delegate() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename DELEGATE&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">DELEGATE_REF_T &amp; <a class="el" href="classdds_1_1core_1_1_reference.html">dds::core::Reference</a>&lt; DELEGATE &gt;::delegate </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>delegate의 참조를 반환합니다. </p>
+<p>DDS의 비표준 확장은 delegate를 통해 호출하세요.</p>
+<dl class="section return"><dt>반환값</dt><dd>delegate 에 대한 참조. </dd></dl>
+
+</div>
+</div>
+<a id="a0a024fbfa03682004825f278ad114d7c" name="a0a024fbfa03682004825f278ad114d7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a024fbfa03682004825f278ad114d7c">◆ </a></span>delegate() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename DELEGATE&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const DELEGATE_REF_T &amp; <a class="el" href="classdds_1_1core_1_1_reference.html">dds::core::Reference</a>&lt; DELEGATE &gt;::delegate </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>delegate의 참조를 반환합니다. </p>
+<p>DDS의 비표준 확장은 delegate를 통해 호출하세요.</p>
+<dl class="section return"><dt>반환값</dt><dd>delegate 에 대한 참조. </dd></dl>
+
+</div>
+</div>
+<a id="a373c3aa4c921f21eabdf3a020ac8ef0c" name="a373c3aa4c921f21eabdf3a020ac8ef0c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a373c3aa4c921f21eabdf3a020ac8ef0c">◆ </a></span>operator const DELEGATE_REF_T &amp;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename DELEGATE&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdds_1_1core_1_1_reference.html">dds::core::Reference</a>&lt; DELEGATE &gt;::operator const DELEGATE_REF_T &amp; </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>저장된 구현 객체 포인터에 접근합니다 </p>
+<dl class="section return"><dt>반환값</dt><dd>저장된 공유 포인터에 대한 const 참조 </dd></dl>
+
+</div>
+</div>
+<a id="a80cff5eadf8554d3b5772b352c518fe8" name="a80cff5eadf8554d3b5772b352c518fe8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80cff5eadf8554d3b5772b352c518fe8">◆ </a></span>operator DELEGATE_REF_T()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename DELEGATE&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdds_1_1core_1_1_reference.html">dds::core::Reference</a>&lt; DELEGATE &gt;::operator DELEGATE_REF_T </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>저장된 구현 객체 포인터에 접근합니다 </p>
+<dl class="section return"><dt>반환값</dt><dd>공유 포인터의 복사본 </dd></dl>
+
+</div>
+</div>
+<a id="a6e30d68985ca187b16562617d4a7b9f9" name="a6e30d68985ca187b16562617d4a7b9f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e30d68985ca187b16562617d4a7b9f9">◆ </a></span>operator DELEGATE_REF_T &amp;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename DELEGATE&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdds_1_1core_1_1_reference.html">dds::core::Reference</a>&lt; DELEGATE &gt;::operator DELEGATE_REF_T &amp; </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>저장된 구현 객체 포인터에 접근합니다 </p>
+<p>포인터를 바꾸면 이 handle에 의해 사용되는 구현 객체가 바뀝니다.</p>
+<dl class="section return"><dt>반환값</dt><dd>저장된 공유 포인터에 대한 변경 가능한 참조 </dd></dl>
+
+</div>
+</div>
+<a id="abb281aa6cfee0f470c311d420525e8b9" name="abb281aa6cfee0f470c311d420525e8b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb281aa6cfee0f470c311d420525e8b9">◆ </a></span>operator!=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename DELEGATE&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classdds_1_1core_1_1_reference.html">dds::core::Reference</a>&lt; DELEGATE &gt;::operator!= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdds_1_1core_1_1null__type.html">null_type</a></td>          <td class="paramname"><span class="paramname"><em>nil</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>이 handle에 구현 객체가 있는지 확인합니다 </p>
+<dl class="params"><dt>매개변수</dt><dd>
+  <div class="dds-table-scroll"><table class="params">
+    <tr><td class="paramdir">[입력]</td><td class="paramname">nil</td><td>누적 참조 마커, 일반적으로 <span class="tt"><a class="el" href="namespacedds_1_1core.html#a22c3217bb51dfe3db2887417da74d917" title="빈 DDS 참조를 나타내는 값">dds::core::null</a></span></td></tr>
+  </table></div>
+  </dd>
+</dl>
+<dl class="retval"><dt>반환값</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">true</td><td>handle에 구현 객체이 포함되어 있습니다 </td></tr>
+    <tr><td class="paramname">false</td><td>handle이 null입니다 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ac0f06ae1197b8ccec9d35cbe20302797" name="ac0f06ae1197b8ccec9d35cbe20302797"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0f06ae1197b8ccec9d35cbe20302797">◆ </a></span>operator!=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename DELEGATE&gt; </div>
+<div class="memtemplate">
+template&lt;typename R&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classdds_1_1core_1_1_reference.html">dds::core::Reference</a>&lt; DELEGATE &gt;::operator!= </td>
+          <td>(</td>
+          <td class="paramtype">const R &amp;</td>          <td class="paramname"><span class="paramname"><em>ref</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>두 참조 개체를 비교하고, 만약 이들이 동등하지 않다면 true 를 반환합니다. </p>
+<p>불평등은 가리키는 개체의 참조 불평등을 기반으로 합니다.</p>
+<dl class="params"><dt>매개변수</dt><dd>
+  <div class="dds-table-scroll"><table class="params">
+    <tr><td class="paramname">ref</td><td>다른 참조 개체 </td></tr>
+  </table></div>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a5719abf42970dad5751f69531de91fb3" name="a5719abf42970dad5751f69531de91fb3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5719abf42970dad5751f69531de91fb3">◆ </a></span>operator-&gt;() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename DELEGATE&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">DELEGATE * <a class="el" href="classdds_1_1core_1_1_reference.html">dds::core::Reference</a>&lt; DELEGATE &gt;::operator-&gt; </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><code><a class="el" href="#a5719abf42970dad5751f69531de91fb3" title="operator-&gt;()로 구현 객체의 메서드를 직접 호출할 수 있습니다.">operator-&gt;()</a></code>로 구현 객체의 메서드를 직접 호출할 수 있습니다. </p>
+<p>CXXDDS API를 변경하지 않고 공급업체 확장 기능에 접근할 수 있도록 구현 객체에 대한 직접 접근을 제공합니다. 다음과 같이 Reference와 모든 파생 클래스에서 공급업체 확장 기능을 호출할 수 있습니다.</p>
+<p><code>
+     my_dds_entity.standard_method();
+     my_dds_entity-&gt;vendor_specific_extension();
+ </code></p>
+<dl class="section return"><dt>반환값</dt><dd>delegate 에 대한 참조. </dd></dl>
+
+</div>
+</div>
+<a id="a35437fb6e2e4e139ff2394c73d8dbb3a" name="a35437fb6e2e4e139ff2394c73d8dbb3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35437fb6e2e4e139ff2394c73d8dbb3a">◆ </a></span>operator-&gt;() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename DELEGATE&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const DELEGATE * <a class="el" href="classdds_1_1core_1_1_reference.html">dds::core::Reference</a>&lt; DELEGATE &gt;::operator-&gt; </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><code><a class="el" href="#a5719abf42970dad5751f69531de91fb3" title="operator-&gt;()로 구현 객체의 메서드를 직접 호출할 수 있습니다.">operator-&gt;()</a></code>로 구현 객체의 메서드를 직접 호출할 수 있습니다. </p>
+<p>CXXDDS API를 변경하지 않고 공급업체 확장 기능에 접근할 수 있도록 구현 객체에 대한 직접 접근을 제공합니다. 다음과 같이 Reference와 모든 파생 클래스에서 공급업체 확장 기능을 호출할 수 있습니다.</p>
+<p><code>
+     my_dds_entity.standard_method();
+     my_dds_entity-&gt;vendor_specific_extension();
+ </code></p>
+<dl class="section return"><dt>반환값</dt><dd>delegate 에 대한 참조. </dd></dl>
+
+</div>
+</div>
+<a id="a3d961eb34773ad539eafc25c8bbc9247" name="a3d961eb34773ad539eafc25c8bbc9247"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d961eb34773ad539eafc25c8bbc9247">◆ </a></span>operator=() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename DELEGATE&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a299077d89db9f6d7bd5ab89066fdf204">Reference</a> &amp; <a class="el" href="classdds_1_1core_1_1_reference.html">dds::core::Reference</a>&lt; DELEGATE &gt;::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdds_1_1core_1_1null__type.html">null_type</a></td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>이 handle의 구현 객체 소유권을 지웁니다 </p>
+<p><span class="tt">handle = <a class="el" href="namespacedds_1_1core.html#a22c3217bb51dfe3db2887417da74d917" title="빈 DDS 참조를 나타내는 값">dds::core::null</a></span> 로 handle이 범위에서 나가기 전에 참조를 해제합니다. 같은 구현 객체의 다른 참조는 계속해서 그것을 소유합니다.</p>
+<dl class="section return"><dt>반환값</dt><dd>이 handle, 지금 <span class="tt"><a class="el" href="namespacedds_1_1core.html#a22c3217bb51dfe3db2887417da74d917" title="빈 DDS 참조를 나타내는 값">dds::core::null</a></span>와 동일 비교 </dd></dl>
+
+</div>
+</div>
+<a id="a0ba0eb41c3176127f03565ca26f070ae" name="a0ba0eb41c3176127f03565ca26f070ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ba0eb41c3176127f03565ca26f070ae">◆ </a></span>operator=() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename DELEGATE&gt; </div>
+<div class="memtemplate">
+template&lt;typename R&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a299077d89db9f6d7bd5ab89066fdf204">Reference</a> &amp; <a class="el" href="classdds_1_1core_1_1_reference.html">dds::core::Reference</a>&lt; DELEGATE &gt;::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const R &amp;</td>          <td class="paramname"><span class="paramname"><em>rhs</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>다른 호환 참조의 구현 객체를 공유합니다 </p>
+<p>원본 구현 객체의 타입은 대상 구현 객체의 타입과 호환되어야 합니다.</p>
+<dl class="params"><dt>매개변수</dt><dd>
+  <div class="dds-table-scroll"><table class="params">
+    <tr><td class="paramdir">[입력]</td><td class="paramname">rhs</td><td>복사할 참조</td></tr>
+  </table></div>
+  </dd>
+</dl>
+<dl class="section return"><dt>반환값</dt><dd>이 참조 </dd></dl>
+
+</div>
+</div>
+<a id="a26021420314ef6ce4db8fbc15bfc4d58" name="a26021420314ef6ce4db8fbc15bfc4d58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26021420314ef6ce4db8fbc15bfc4d58">◆ </a></span>operator=() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename DELEGATE&gt; </div>
+<div class="memtemplate">
+template&lt;typename D&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a299077d89db9f6d7bd5ab89066fdf204">Reference</a> &amp; <a class="el" href="classdds_1_1core_1_1_reference.html">dds::core::Reference</a>&lt; DELEGATE &gt;::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a299077d89db9f6d7bd5ab89066fdf204">Reference</a>&lt; D &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>that</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>다른 호환 참조의 구현 객체를 공유합니다 </p>
+<p>원본 구현 객체의 타입은 대상 구현 객체의 타입과 호환되어야 합니다.</p>
+<dl class="params"><dt>매개변수</dt><dd>
+  <div class="dds-table-scroll"><table class="params">
+    <tr><td class="paramdir">[입력]</td><td class="paramname">that</td><td>복사할 참조</td></tr>
+  </table></div>
+  </dd>
+</dl>
+<dl class="section return"><dt>반환값</dt><dd>이 참조 </dd></dl>
+
+</div>
+</div>
+<a id="a253245a76f79b7415030ae5f00313651" name="a253245a76f79b7415030ae5f00313651"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a253245a76f79b7415030ae5f00313651">◆ </a></span>operator==() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename DELEGATE&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classdds_1_1core_1_1_reference.html">dds::core::Reference</a>&lt; DELEGATE &gt;::operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdds_1_1core_1_1null__type.html">null_type</a></td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>이 참조 객체가 <code>null</code> 참조와 같은지 검사하는 <code>operator==</code>입니다. </p>
+<p><code> bool is_null = (r == dds::null); </code>와 같이 비교할 수 있습니다. r이 널 참조이면 <code> is_null</code>의 값은 <b>true</b>입니다.</p>
+<dl class="section return"><dt>반환값</dt><dd>이 참조가 null인 경우 true. </dd></dl>
+
+</div>
+</div>
+<a id="a4a3c2a0f5c12439fef21afa0cd189735" name="a4a3c2a0f5c12439fef21afa0cd189735"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a3c2a0f5c12439fef21afa0cd189735">◆ </a></span>operator==() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename DELEGATE&gt; </div>
+<div class="memtemplate">
+template&lt;typename R&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classdds_1_1core_1_1_reference.html">dds::core::Reference</a>&lt; DELEGATE &gt;::operator== </td>
+          <td>(</td>
+          <td class="paramtype">const R &amp;</td>          <td class="paramname"><span class="paramname"><em>ref</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>두 개체를 비교하고, 동일한 경우 true 를 반환합니다. </p>
+<p>평등은 가리키는 개체의 참조적 평등에 기반을 두고 있습니다.</p>
+<dl class="params"><dt>매개변수</dt><dd>
+  <div class="dds-table-scroll"><table class="params">
+    <tr><td class="paramname">ref</td><td>다른 참조 개체 </td></tr>
+  </table></div>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.:<ul>
+<li>include/gurumdds/cpp/core/<a class="el" href="_reference_8hpp.html">Reference.hpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div class="page-nav-panel" id="page-nav">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
 </div><!-- container -->
 <!-- start footer part -->
-<div class="navpath" id="nav-path"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="navelem"><a href="namespacedds.html">dds</a></li><li class="navelem"><a href="namespacedds_1_1core.html">core</a></li><li class="navelem"><a href="classdds_1_1core_1_1_reference.html">Reference</a></li>
-    <li class="footer">다음에 의해 생성됨 :  <a href="https://www.doxygen.org/index.html"><img alt="doxygen" class="footer" height="31" src="doxygen.svg" width="104"/></a> 1.18.0 </li>
-  </ul>
+<div class="navpath" id="nav-path"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="namespacedds.html">dds</a></li><li class="navelem"><a href="namespacedds_1_1core.html">core</a></li><li class="navelem"><a href="classdds_1_1core_1_1_reference.html">Reference</a></li>
+    <li class="footer">다음에 의해 생성됨 :  <a href="https://www.doxygen.org/index.html"><img alt="doxygen" class="footer" height="31" src="doxygen.svg" width="104"/></a> 1.18.0 </li>
+  </ul>
 </div>
 </body>
 </html>

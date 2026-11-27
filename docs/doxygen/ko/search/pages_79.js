@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['한도_20publisher_20acknowledgment_20ownership_0',['보관 한도, Publisher acknowledgment, Ownership',['../group__dds__howto__qos.html#dds_tutorial_src_delivery_limits',1,'']]]
+  ['하나의_20keyed_20instance_20추적_0',['하나의 keyed instance 추적',['../group__dds__subscription.html#receiving_instance_timeline',1,'']]],
+  ['하나_20선택하기_1',['key로 sample 하나 선택하기',['../group__dds__tutorial__reader.html#dds_tutorial_reader_instance',1,'']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['최근_20sample_20두_20개_20유지_0',['key별 최근 sample 두 개 유지',['../group__dds__howto__qos.html#dds_tutorial_qos_keep_last',1,'']]]
+  ['첫_20번째_20sample_20송수신_0',['첫 번째 sample 송수신',['../group__dds__domain.html#getting_started',1,'']]]
 ];

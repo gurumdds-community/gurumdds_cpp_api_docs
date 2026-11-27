@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['진단하기_0',['DataWriter와 DataReader가 데이터를 교환하지 못할 때 진단하기',['../group__dds__qos.html#matching_guide',1,'']]],
-  ['진단_1',['진단',['../group__dds__qos.html#matching_hosts',1,'두 PC에서 실행할 때 진단'],['../group__dds__subscription.html#receiving_empty',1,'빈 결과 진단'],['../group__dds__subscription.html#receiving_loss',1,'유실 및 거부 샘플 진단']]]
+  ['지원_20코드_20생성_0',['C++ 타입과 타입 지원 코드 생성',['../group__dds__tutorial__idl__example.html#dds_tutorial_idl_example_generate',1,'']]],
+  ['지정해_20쓰기_1',['source timestamp를 지정해 쓰기',['../group__dds__tutorial__writer.html#dds_tutorial_writer_timestamp',1,'']]]
 ];

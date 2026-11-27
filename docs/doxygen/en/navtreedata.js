@@ -75,7 +75,7 @@ var NAVTREEINDEX =
 "classdds_1_1pub_1_1_data_writer_listener.html#a596ae45f77d965917789d61ffdc2a517",
 "classdds_1_1sub_1_1_t_generation_count.html",
 "classdds_1_1topic_1_1_t_topic_builtin_topic_data.html",
-"namespacedds_1_1sub.html#a846d12de3dd1b60fa20cd50fe63de37e"
+"namespacedds_1_1pub_1_1qos.html"
 ];
 
 const SYNCONMSG = 'click to disable panel synchronization';

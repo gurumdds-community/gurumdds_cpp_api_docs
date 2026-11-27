@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['액세스하는_20방법_20선택_0',['DataReader 기록에 액세스하는 방법 선택',['../group__dds__subscription.html#receiving_choose',1,'']]]
+  ['애플리케이션에_20알리기_0',['데이터 도착 시 애플리케이션에 알리기',['../group__dds__tutorial__filter.html#dds_tutorial_filter_listener',1,'']]]
 ];

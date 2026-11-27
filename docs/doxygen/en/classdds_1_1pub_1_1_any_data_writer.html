@@ -18,7 +18,7 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script src="search/searchdata.js" type="text/javascript"></script>
 <script src="search/search.js" type="text/javascript"></script>
-<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+<script src="../theme.js" type="text/javascript"></script><link href="doxygen.css" rel="stylesheet" type="text/css"/>
 <link href="ReferenceBranding.css" rel="stylesheet" type="text/css"/>
 <script defer="True" src="ReferenceUi.js"></script><link href="../en/classdds_1_1pub_1_1_any_data_writer.html" hreflang="en" rel="alternate"/><link href="../ko/classdds_1_1pub_1_1_any_data_writer.html" hreflang="ko" rel="alternate"/><link href="../language.css" rel="stylesheet"/><script defer="defer" src="../language.js"></script></head>
 <body>
@@ -31,7 +31,7 @@
    <div id="projectname">GurumDDS C++ API Reference<span id="projectnumber"> 1.3.2</span>
    </div>
   </td>
- <td class="doc-language-cell"><label class="doc-language"><select aria-label="Documentation language" data-current="0"><option lang="en" selected="selected" value="../en/classdds_1_1pub_1_1_any_data_writer.html">English</option><option lang="en" value="../ko/classdds_1_1pub_1_1_any_data_writer.html">Korean</option></select></label></td></tr>
+ <td class="doc-language-cell"><div class="doc-header-controls"><button aria-pressed="false" class="doc-theme" type="button">Dark mode</button><label class="doc-language"><select aria-label="Documentation language" data-current="0"><option lang="en" selected="selected" value="../en/classdds_1_1pub_1_1_any_data_writer.html">English</option><option lang="en" value="../ko/classdds_1_1pub_1_1_any_data_writer.html">Korean</option></select></label></div></td></tr>
  </tbody>
 </table>
 </div>
@@ -117,11 +117,10 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('classdds_1_1pu
 
 <p class="dds-class-include"><code>#include &lt;gurumdds/cpp/pub/AnyDataWriter.hpp&gt;</code></p>
 
-<p>This class provides an holder for representing a generic DDS <code><a class="el" href="classdds_1_1pub_1_1_data_writer.html" title="Publishes samples and manages instances for a typed topic.">DataWriter&lt;T&gt;</a></code>.  
- <a href="#details">More...</a></p>
+
 <a id="details" name="details"></a><h2 class="groupheader" id="header-details">Detailed Description</h2>
 <div class="textblock"><p>This class provides an holder for representing a generic DDS <code><a class="el" href="classdds_1_1pub_1_1_data_writer.html" title="Publishes samples and manages instances for a typed topic.">DataWriter&lt;T&gt;</a></code>. </p>
-</div><table class="memberdecls">
+</div><div class="dds-table-scroll"><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-pub-methods"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ae2f11a8ee233306831e7645738194050" id="r_ae2f11a8ee233306831e7645738194050"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
@@ -161,7 +160,7 @@ template&lt;typename T&gt; </td></tr>
 <tr class="memdesc:a5e58cb2bdc2c3a3249b46d16e7283c4d"><td class="mdescLeft"> </td><td class="mdescRight">Direct access to methods available on the delegate.  <br/></td></tr>
 <tr class="memitem:a5dfa408dc76560846313062ea96e4073" id="r_a5dfa408dc76560846313062ea96e4073"><td class="memItemLeft">detail::DWHolderBase * </td><td class="memItemRight"><a class="el" href="#a5dfa408dc76560846313062ea96e4073">operator-&gt;</a> ()</td></tr>
 <tr class="memdesc:a5dfa408dc76560846313062ea96e4073"><td class="mdescLeft"> </td><td class="mdescRight">Direct access to methods available on the delegate.  <br/></td></tr>
-</table>
+</table></div>
 <a id="doc-constructors" name="doc-constructors"></a><h2 class="groupheader" id="header-doc-constructors">Constructors and Destructors</h2>
 <a id="ae2f11a8ee233306831e7645738194050" name="ae2f11a8ee233306831e7645738194050"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae2f11a8ee233306831e7645738194050">◆ </a></span>AnyDataWriter()</h2>
@@ -190,9 +189,9 @@ template&lt;typename T&gt; </div>
 
 <p>Creates a type-erased view of a typed writer. </p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">dw</td><td>Typed writer whose delegate is shared </td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 
@@ -309,9 +308,9 @@ template&lt;typename T&gt; </div>
 <p>Replaces this handle with another writer. </p>
 <p>The destination shares the source’s underlying DDS entity after assignment.</p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">rhs</td><td>Source handle</td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>This handle </dd></dl>
@@ -346,9 +345,9 @@ template&lt;typename T&gt; </div>
 <p>Replaces this handle with another writer. </p>
 <p>The destination shares the source’s underlying DDS entity after assignment.</p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">rhs</td><td>Source handle</td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>This handle </dd></dl>
@@ -383,9 +382,9 @@ template&lt;typename T&gt; </div>
 <p>Replaces this handle with another writer. </p>
 <p>The destination shares the source’s underlying DDS entity after assignment.</p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">rhs</td><td>Source handle</td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>This handle </dd></dl>
@@ -473,9 +472,9 @@ template&lt;typename T&gt; </div>
 
 <p>Applies new QoS settings to the underlying writer. </p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">q</td><td>QoS policies to apply </td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 
@@ -507,9 +506,9 @@ template&lt;typename T&gt; </div>
 <p>Exposes retention control for the type-erased writer. </p>
 <p>The current GurumDDS holder ignores this flag.</p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">b</td><td>Requested retention flag </td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 
@@ -540,9 +539,9 @@ template&lt;typename T&gt; </div>
 
 <p>Exchanges the stored handles. </p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[in,out]</td><td class="paramname">rhs</td><td>Other type-erased writer whose holder is exchanged</td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>This handle </dd></dl>
@@ -630,15 +629,15 @@ template&lt;typename T&gt; </div>
 
 <p>Waits for the underlying writer’s reliable acknowledgments. </p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">timeout</td><td>Maximum wait duration</td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
+  <div class="dds-table-scroll"><table class="exception">
     <tr><td class="paramname"><a class="el" href="classdds_1_1core_1_1_timeout_error.html" title="Reports that a time-limited DDS operation did not finish.">dds::core::TimeoutError</a></td><td>The wait expired before the required acknowledgments arrived </td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 

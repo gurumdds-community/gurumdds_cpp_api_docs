@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['이벤트_20처리_0',['이벤트 처리',['../group__dds__publication.html#publication_notifications',1,'Publication 이벤트 처리'],['../group__dds__subscription.html#subscription_notifications',1,'Subscription 이벤트 처리']]],
-  ['이후_20sample에_20적용할_20필터_20매개변수_20변경하기_1',['이후 sample에 적용할 필터 매개변수 변경하기',['../group__dds__tutorial__filter.html#dds_tutorial_filter_update',1,'']]]
+  ['유실_20및_20거부_20샘플_20진단_0',['유실 및 거부 샘플 진단',['../group__dds__subscription.html#receiving_loss',1,'']]],
+  ['유지_1',['key별 최근 sample 두 개 유지',['../group__dds__howto__qos.html#dds_tutorial_qos_keep_last',1,'']]],
+  ['유효성_20확인하기_2',['source timestamp 및 payload 유효성 확인하기',['../group__dds__tutorial__reader.html#dds_tutorial_reader_metadata',1,'']]]
 ];

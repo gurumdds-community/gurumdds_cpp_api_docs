@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['소스_20파일_0',['소스 파일',['../dds_example_new_helloworld.html#dds_example_new_helloworld_source',1,'소스 파일'],['../dds_example_new_helloworld_keyed.html#dds_example_new_helloworld_keyed_source',1,'소스 파일'],['../dds_example_new_helloworld_listener.html#dds_example_new_helloworld_listener_source',1,'소스 파일'],['../dds_example_new_helloworld_contentfiltered.html#dds_example_new_helloworld_contentfiltered_source',1,'소스 파일'],['../dds_example_new_helloworld_qosprofile.html#dds_example_new_helloworld_qosprofile_source',1,'소스 파일'],['../dds_example_new_helloworld_lifespan.html#dds_example_new_helloworld_lifespan_source',1,'소스 파일'],['../dds_example_new_helloworld_deadline.html#dds_example_new_helloworld_deadline_source',1,'소스 파일'],['../dds_example_new_helloworld_timebasedfilter.html#dds_example_new_helloworld_timebasedfilter_source',1,'소스 파일'],['../dds_example_new_helloworld_liveliness.html#dds_example_new_helloworld_liveliness_source',1,'소스 파일']]],
-  ['소유권_1',['생성한 타입과 필드 소유권',['../group__dds__tutorial__reader.html#dds_tutorial_src_idl',1,'']]]
+  ['세대별_20rank_20확인_0',['instance 세대별 rank 확인',['../group__dds__tutorial__reader.html#dds_tutorial_reader_ranks',1,'']]]
 ];

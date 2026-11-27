@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['해제를_20통해_20instance_20추적_0',['처리 및 등록 해제를 통해 instance 추적',['../group__dds__subscription.html#receiving_keyed',1,'']]],
-  ['해제하기_1',['instance 폐기 및 등록 해제하기',['../group__dds__tutorial__writer.html#dds_tutorial_writer_lifecycle',1,'']]],
-  ['해제_2',['Listener 등록 범위와 해제',['../group__dds__core.html#listener_lifecycle',1,'']]]
+  ['함께_20작업하기_0',['listener와 함께 작업하기',['../group__dds__core.html#api_usage_callbacks',1,'']]],
+  ['함께_20확인_1',['현재 매칭 수와 변경량을 함께 확인',['../group__dds__tutorial__discovery.html#dds_tutorial_discovery_status_snapshot',1,'']]],
+  ['함수_20연결_2',['Status와 콜백·조회 함수 연결',['../group__dds__core.html#status_checklist',1,'']]]
 ];

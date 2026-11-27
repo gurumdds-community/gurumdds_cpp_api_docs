@@ -18,7 +18,7 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script src="search/searchdata.js" type="text/javascript"></script>
 <script src="search/search.js" type="text/javascript"></script>
-<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+<script src="../theme.js" type="text/javascript"></script><link href="doxygen.css" rel="stylesheet" type="text/css"/>
 <link href="ReferenceBranding.css" rel="stylesheet" type="text/css"/>
 <script defer="True" src="ReferenceUi.js"></script><link href="../en/classdds_1_1core_1_1policy_1_1_t_group_data.html" hreflang="en" rel="alternate"/><link href="../ko/classdds_1_1core_1_1policy_1_1_t_group_data.html" hreflang="ko" rel="alternate"/><link href="../language.css" rel="stylesheet"/><script defer="defer" src="../language.js"></script></head>
 <body>
@@ -31,7 +31,7 @@
    <div id="projectname">GurumDDS C++ API Reference<span id="projectnumber"> 1.3.2</span>
    </div>
   </td>
- <td class="doc-language-cell"><label class="doc-language"><select aria-label="Documentation language" data-current="0"><option lang="en" selected="selected" value="../en/classdds_1_1core_1_1policy_1_1_t_group_data.html">English</option><option lang="en" value="../ko/classdds_1_1core_1_1policy_1_1_t_group_data.html">Korean</option></select></label></td></tr>
+ <td class="doc-language-cell"><div class="doc-header-controls"><button aria-pressed="false" class="doc-theme" type="button">Dark mode</button><label class="doc-language"><select aria-label="Documentation language" data-current="0"><option lang="en" selected="selected" value="../en/classdds_1_1core_1_1policy_1_1_t_group_data.html">English</option><option lang="en" value="../ko/classdds_1_1core_1_1policy_1_1_t_group_data.html">Korean</option></select></label></div></td></tr>
  </tbody>
 </table>
 </div>
@@ -117,13 +117,12 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('classdds_1_1co
 
 <p class="dds-class-include"><code>#include &lt;gurumdds/cpp/core/policy/TCorePolicy.hpp&gt;</code></p>
 
-<p>This QoS lets the application attach additional information to the created Publisher or Subscriber.  
- <a href="#details">More...</a></p>
+
 <a id="details" name="details"></a><h2 class="groupheader" id="header-details">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename D&gt;<br/>
 class dds::core::policy::TGroupData&lt; D &gt;</div><p>This QoS lets the application attach additional information to the created Publisher or Subscriber. </p>
 <p>The value of the GROUP_DATA is available to the application on the DataReader and DataWriter entities and is propagated by means of the built-in topics. This QoS can be used by an application combination with the DataReaderListener and DataWriterListener to implement matching policies similar to those of the PARTITION QoS except the decision can be made based on an application-defined policy. </p>
-</div><table class="memberdecls">
+</div><div class="dds-table-scroll"><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-pub-methods"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aea54e725e54aef6277aee8609894f322" id="r_aea54e725e54aef6277aee8609894f322"><td class="memItemLeft"><a id="aea54e725e54aef6277aee8609894f322" name="aea54e725e54aef6277aee8609894f322"></a>
@@ -184,7 +183,7 @@ D &amp; </td><td class="memItemRight"><b>delegate</b> ()</td></tr>
 <tr class="memitem:a3b691bb7dfa340e55660b78ac9951b22 inherit pub_methods_classdds_1_1core_1_1_value" id="r_a3b691bb7dfa340e55660b78ac9951b22"><td class="memItemLeft">
  </td><td class="memItemRight"><b>operator const D &amp;</b> () const</td></tr>
 <tr class="memdesc:a3b691bb7dfa340e55660b78ac9951b22 inherit pub_methods_classdds_1_1core_1_1_value"><td class="mdescLeft"> </td><td class="mdescRight">Cast Operator. <br/></td></tr>
-</table><table class="memberdecls">
+</table></div><div class="dds-table-scroll"><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader" id="header-inherited"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_methods_classdds_1_1core_1_1_value"><td class="dyn-inherit" colspan="2"><span class="dynarrow"><span class="arrowhead closed"></span></span>Protected Member Functions inherited from <a class="el" href="classdds_1_1core_1_1_value.html">dds::core::Value&lt; D &gt;</a></td></tr>
@@ -193,7 +192,7 @@ Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_attribs_classdds_1_1core_1_1_value"><td class="dyn-inherit" colspan="2"><span class="dynarrow"><span class="arrowhead closed"></span></span>Protected Attributes inherited from <a class="el" href="classdds_1_1core_1_1_value.html">dds::core::Value&lt; D &gt;</a></td></tr>
 <tr class="memitem:a524bb581d6961d26653838488712edf4 inherit pro_attribs_classdds_1_1core_1_1_value" id="r_a524bb581d6961d26653838488712edf4"><td class="memItemLeft">
 D </td><td class="memItemRight"><b>d_</b></td></tr>
-</table>
+</table></div>
 <a id="doc-constructors" name="doc-constructors"></a><h2 class="groupheader" id="header-doc-constructors">Constructors and Destructors</h2>
 <a id="abd0cc2374c0962852656e2a7434a0411" name="abd0cc2374c0962852656e2a7434a0411"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abd0cc2374c0962852656e2a7434a0411">◆ </a></span>TGroupData() <span class="overload">[1/3]</span></h2>
@@ -222,9 +221,9 @@ template&lt;typename D&gt; </div>
 
 <p>Create a <span class="tt"><a class="el" href="group__dds__qos.html#ga1bcd7764c7126aa6ac3edcc8c5231433" title="Carries application-defined data on a publisher or subscriber.">GroupData</a></span> instance. </p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramname">seq</td><td>the group data value </td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 
@@ -249,9 +248,9 @@ template&lt;typename D&gt; </div>
 
 <p>Copies the group-data policy. </p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">other</td><td>Policy to copy </td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 
@@ -280,10 +279,10 @@ template&lt;typename D&gt; </div>
 
 <p>Constructs the group-data policy from application-supplied bytes. </p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">value_begin</td><td>First byte in the range </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">value_end</td><td>One past the last byte </td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 
@@ -377,9 +376,9 @@ template&lt;typename D&gt; </div>
 
 <p>Set the value for this <code><a class="el" href="group__dds__qos.html#ga1bcd7764c7126aa6ac3edcc8c5231433" title="Carries application-defined data on a publisher or subscriber.">GroupData</a></code>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+  <div class="dds-table-scroll"><table class="params">
     <tr><td class="paramname">seq</td><td>the group data value </td></tr>
-  </table>
+  </table></div>
   </dd>
 </dl>
 
